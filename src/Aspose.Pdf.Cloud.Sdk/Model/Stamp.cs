@@ -49,7 +49,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Stamp" /> class.
         /// </summary>
-        /// <param name="Type">Gets the stamp type..</param>
+        [JsonConstructorAttribute]
+        protected Stamp() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Stamp" /> class.
+        /// </summary>
+        /// <param name="Type">Gets the stamp type. (required).</param>
         /// <param name="Background">Sets or gets a bool value that indicates the content is stamped as background. If the value is true, the stamp content is layed at the bottom. By defalt, the value is false, the stamp content is layed at the top..</param>
         /// <param name="BottomMargin">Gets or sets bottom margin of stamp..</param>
         /// <param name="HorizontalAlignment">Gets or sets Horizontal alignment of stamp on the page. .</param>
@@ -73,7 +78,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="StartingNumber">Gets or sets value of the number of starting page. Other pages will be numbered starting from this value..</param>
         public Stamp(StampType Type = default(StampType), bool? Background = default(bool?), double? BottomMargin = default(double?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), double? LeftMargin = default(double?), double? Opacity = default(double?), double? RightMargin = default(double?), Rotation Rotate = default(Rotation), double? RotateAngle = default(double?), double? TopMargin = default(double?), VerticalAlignment VerticalAlignment = default(VerticalAlignment), double? XIndent = default(double?), double? YIndent = default(double?), double? Zoom = default(double?), HorizontalAlignment TextAlignment = default(HorizontalAlignment), string Value = default(string), TextState TextState = default(TextState), string FileName = default(string), double? Width = default(double?), double? Height = default(double?), int? PageIndex = default(int?), int? StartingNumber = default(int?))
         {
-            this.Type = Type;
+            // to ensure "Type" is required (not null)
+            if (Type == null)
+            {
+                throw new InvalidDataException("Type is a required property for Stamp and cannot be null");
+            }
+            else
+            {
+                this.Type = Type;
+            }
             this.Background = Background;
             this.BottomMargin = BottomMargin;
             this.HorizontalAlignment = HorizontalAlignment;

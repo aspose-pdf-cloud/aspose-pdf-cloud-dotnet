@@ -81,6 +81,8 @@ OpenAPI spec version: 1.1
     <Compile Include="ImagesTests.cs" />
     <Compile Include="LinksTests.cs" />
     <Compile Include="MergeTests.cs" />
+    <Compile Include="TextTests.cs" />
+    <Compile Include="OcrTests.cs" />
     <Compile Include="PagesTests.cs" />
     <Compile Include="ParagraphsTests.cs" />
     <Compile Include="TextItemsTests.cs" />
@@ -93,11 +95,11 @@ OpenAPI spec version: 1.1
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Aspose.Pdf.Cloud.Sdk\Aspose.Pdf.Cloud.Sdk.csproj">
-      <Project>{B1853033-7014-4AA7-8DEA-6BB6E76EDF8B}</Project>
+      <Project>{ef4ce7ef-dd3c-4654-8b0a-4bf813184ee4}</Project>
       <Name>Aspose.Pdf.Cloud.Sdk</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

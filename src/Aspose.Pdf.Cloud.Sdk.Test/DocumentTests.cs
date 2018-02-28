@@ -23,6 +23,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using Aspose.Pdf.Cloud.Sdk.Model;
@@ -122,6 +123,30 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 folder: TempFolder,
                 templateFile: Path.Combine(TempFolder, templateName),
                 templateType: "html");
+            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+        }
+
+        /// <summary>
+        /// Test PutCreateDocumentFromImages
+        /// </summary>
+        [Test]
+        public void PutCreateDocumentFromImagesTest()
+        {
+            const string image1 = "33539.jpg";
+            UploadFile(image1, "pdfimages/" + image1);
+
+            const string image2 = "44781.jpg";
+            UploadFile(image2, "pdfimages/" + image2);
+
+            const string name = "pdffromimagesinquery.pdf";
+
+            var request = new ImagesListRequest(new List<string>
+            {
+                Path.Combine(TempFolder, image1),
+                Path.Combine(TempFolder, image2)
+            });
+
+            var response = PdfApi.PutCreateDocumentFromImages(name, request, false, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
         }
     }

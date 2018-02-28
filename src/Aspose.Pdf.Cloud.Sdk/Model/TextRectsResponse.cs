@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="TextReplaceListRequest.cs">
+// <copyright company="Aspose" file="TextRectsResponse.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -41,63 +41,56 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Multiple text replacements request.
+    /// TextRectsResponse
     /// </summary>
     [DataContract]
-    public partial class TextReplaceListRequest :  IEquatable<TextReplaceListRequest>, IValidatableObject
+    public partial class TextRectsResponse : SaaSposeResponse,  IEquatable<TextRectsResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TextReplaceListRequest" /> class.
+        /// Initializes a new instance of the <see cref="TextRectsResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected TextReplaceListRequest() { }
+        protected TextRectsResponse() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TextReplaceListRequest" /> class.
+        /// Initializes a new instance of the <see cref="TextRectsResponse" /> class.
         /// </summary>
-        /// <param name="TextReplaces">A list of text replacement settings. (required).</param>
-        /// <param name="DefaultFont">DefaultFont.</param>
-        /// <param name="StartIndex">StartIndex.</param>
-        /// <param name="CountReplace">CountReplace.</param>
-        public TextReplaceListRequest(List<TextReplace> TextReplaces = default(List<TextReplace>), string DefaultFont = default(string), int? StartIndex = default(int?), int? CountReplace = default(int?))
+        /// <param name="Code">Response status code. (required).</param>
+        /// <param name="Status">Response status..</param>
+        /// <param name="TextOccurences">TextOccurences.</param>
+        public TextRectsResponse(HttpStatusCode Code = default(HttpStatusCode), string Status = default(string), TextRects TextOccurences = default(TextRects))
         {
-            // to ensure "TextReplaces" is required (not null)
-            if (TextReplaces == null)
+            // to ensure "Code" is required (not null)
+            if (Code == null)
             {
-                throw new InvalidDataException("TextReplaces is a required property for TextReplaceListRequest and cannot be null");
+                throw new InvalidDataException("Code is a required property for TextRectsResponse and cannot be null");
             }
             else
             {
-                this.TextReplaces = TextReplaces;
+                this.Code = Code;
             }
-            this.DefaultFont = DefaultFont;
-            this.StartIndex = StartIndex;
-            this.CountReplace = CountReplace;
+            this.Status = Status;
+            this.TextOccurences = TextOccurences;
         }
         
         /// <summary>
-        /// A list of text replacement settings.
+        /// Response status code.
         /// </summary>
-        /// <value>A list of text replacement settings.</value>
-        [DataMember(Name="TextReplaces", EmitDefaultValue=false)]
-        public List<TextReplace> TextReplaces { get; set; }
+        /// <value>Response status code.</value>
+        [DataMember(Name="Code", EmitDefaultValue=false)]
+        public HttpStatusCode Code { get; set; }
 
         /// <summary>
-        /// Gets or Sets DefaultFont
+        /// Response status.
         /// </summary>
-        [DataMember(Name="DefaultFont", EmitDefaultValue=false)]
-        public string DefaultFont { get; set; }
+        /// <value>Response status.</value>
+        [DataMember(Name="Status", EmitDefaultValue=false)]
+        public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets StartIndex
+        /// Gets or Sets TextOccurences
         /// </summary>
-        [DataMember(Name="StartIndex", EmitDefaultValue=false)]
-        public int? StartIndex { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CountReplace
-        /// </summary>
-        [DataMember(Name="CountReplace", EmitDefaultValue=false)]
-        public int? CountReplace { get; set; }
+        [DataMember(Name="TextOccurences", EmitDefaultValue=false)]
+        public TextRects TextOccurences { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -106,11 +99,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TextReplaceListRequest {\n");
-            sb.Append("  TextReplaces: ").Append(TextReplaces).Append("\n");
-            sb.Append("  DefaultFont: ").Append(DefaultFont).Append("\n");
-            sb.Append("  StartIndex: ").Append(StartIndex).Append("\n");
-            sb.Append("  CountReplace: ").Append(CountReplace).Append("\n");
+            sb.Append("class TextRectsResponse {\n");
+            sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  TextOccurences: ").Append(TextOccurences).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -119,7 +111,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public  new string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -132,15 +124,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TextReplaceListRequest);
+            return this.Equals(obj as TextRectsResponse);
         }
 
         /// <summary>
-        /// Returns true if TextReplaceListRequest instances are equal
+        /// Returns true if TextRectsResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TextReplaceListRequest to be compared</param>
+        /// <param name="other">Instance of TextRectsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TextReplaceListRequest other)
+        public bool Equals(TextRectsResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -148,24 +140,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
 
             return 
                 (
-                    this.TextReplaces == other.TextReplaces ||
-                    this.TextReplaces != null &&
-                    this.TextReplaces.SequenceEqual(other.TextReplaces)
+                    this.Code == other.Code ||
+                    this.Code != null &&
+                    this.Code.Equals(other.Code)
                 ) && 
                 (
-                    this.DefaultFont == other.DefaultFont ||
-                    this.DefaultFont != null &&
-                    this.DefaultFont.Equals(other.DefaultFont)
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
                 ) && 
                 (
-                    this.StartIndex == other.StartIndex ||
-                    this.StartIndex != null &&
-                    this.StartIndex.Equals(other.StartIndex)
-                ) && 
-                (
-                    this.CountReplace == other.CountReplace ||
-                    this.CountReplace != null &&
-                    this.CountReplace.Equals(other.CountReplace)
+                    this.TextOccurences == other.TextOccurences ||
+                    this.TextOccurences != null &&
+                    this.TextOccurences.Equals(other.TextOccurences)
                 );
         }
 
@@ -180,14 +167,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.TextReplaces != null)
-                    hash = hash * 59 + this.TextReplaces.GetHashCode();
-                if (this.DefaultFont != null)
-                    hash = hash * 59 + this.DefaultFont.GetHashCode();
-                if (this.StartIndex != null)
-                    hash = hash * 59 + this.StartIndex.GetHashCode();
-                if (this.CountReplace != null)
-                    hash = hash * 59 + this.CountReplace.GetHashCode();
+                if (this.Code != null)
+                    hash = hash * 59 + this.Code.GetHashCode();
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
+                if (this.TextOccurences != null)
+                    hash = hash * 59 + this.TextOccurences.GetHashCode();
                 return hash;
             }
         }

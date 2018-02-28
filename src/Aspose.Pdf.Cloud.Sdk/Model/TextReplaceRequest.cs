@@ -54,13 +54,32 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextReplaceRequest" /> class.
         /// </summary>
-        /// <param name="OldValue">Original text..</param>
-        /// <param name="NewValue">New text..</param>
+        /// <param name="OldValue">Original text. (required).</param>
+        /// <param name="NewValue">New text. (required).</param>
         /// <param name="Regex">Gets or sets a value indicating whether search text is regular expression. (required).</param>
         /// <param name="TextState">Text properties of a new text..</param>
+        /// <param name="Rect">Rectangle area where searched original text..</param>
         /// <param name="DefaultFont">DefaultFont.</param>
-        public TextReplaceRequest(string OldValue = default(string), string NewValue = default(string), bool? Regex = default(bool?), TextState TextState = default(TextState), string DefaultFont = default(string))
+        public TextReplaceRequest(string OldValue = default(string), string NewValue = default(string), bool? Regex = default(bool?), TextState TextState = default(TextState), Rectangle Rect = default(Rectangle), string DefaultFont = default(string))
         {
+            // to ensure "OldValue" is required (not null)
+            if (OldValue == null)
+            {
+                throw new InvalidDataException("OldValue is a required property for TextReplaceRequest and cannot be null");
+            }
+            else
+            {
+                this.OldValue = OldValue;
+            }
+            // to ensure "NewValue" is required (not null)
+            if (NewValue == null)
+            {
+                throw new InvalidDataException("NewValue is a required property for TextReplaceRequest and cannot be null");
+            }
+            else
+            {
+                this.NewValue = NewValue;
+            }
             // to ensure "Regex" is required (not null)
             if (Regex == null)
             {
@@ -70,9 +89,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 this.Regex = Regex;
             }
-            this.OldValue = OldValue;
-            this.NewValue = NewValue;
             this.TextState = TextState;
+            this.Rect = Rect;
             this.DefaultFont = DefaultFont;
         }
         
@@ -105,6 +123,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public TextState TextState { get; set; }
 
         /// <summary>
+        /// Rectangle area where searched original text.
+        /// </summary>
+        /// <value>Rectangle area where searched original text.</value>
+        [DataMember(Name="Rect", EmitDefaultValue=false)]
+        public Rectangle Rect { get; set; }
+
+        /// <summary>
         /// Gets or Sets DefaultFont
         /// </summary>
         [DataMember(Name="DefaultFont", EmitDefaultValue=false)]
@@ -122,6 +147,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  NewValue: ").Append(NewValue).Append("\n");
             sb.Append("  Regex: ").Append(Regex).Append("\n");
             sb.Append("  TextState: ").Append(TextState).Append("\n");
+            sb.Append("  Rect: ").Append(Rect).Append("\n");
             sb.Append("  DefaultFont: ").Append(DefaultFont).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -180,6 +206,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.TextState.Equals(other.TextState)
                 ) && 
                 (
+                    this.Rect == other.Rect ||
+                    this.Rect != null &&
+                    this.Rect.Equals(other.Rect)
+                ) && 
+                (
                     this.DefaultFont == other.DefaultFont ||
                     this.DefaultFont != null &&
                     this.DefaultFont.Equals(other.DefaultFont)
@@ -205,6 +236,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Regex.GetHashCode();
                 if (this.TextState != null)
                     hash = hash * 59 + this.TextState.GetHashCode();
+                if (this.Rect != null)
+                    hash = hash * 59 + this.Rect.GetHashCode();
                 if (this.DefaultFont != null)
                     hash = hash * 59 + this.DefaultFont.GetHashCode();
                 return hash;

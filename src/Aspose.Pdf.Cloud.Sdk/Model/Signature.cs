@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// The Signature
+    /// Signature
     /// </summary>
     [DataContract]
     public partial class Signature :  IEquatable<Signature>, IValidatableObject
@@ -54,18 +54,30 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Signature" /> class.
         /// </summary>
-        /// <param name="SignaturePath">The SignaturePath.</param>
-        /// <param name="SignatureType">The SignatureType.</param>
-        /// <param name="Password">The Password.</param>
-        /// <param name="Contact">The Contact.</param>
-        /// <param name="Location">The Location.</param>
-        /// <param name="Visible">The Visible (required).</param>
-        /// <param name="Rectangle">The Rectangle.</param>
-        /// <param name="FormFieldName">The FormFieldName.</param>
-        /// <param name="Authority">The Authority.</param>
-        /// <param name="Date">The Date.</param>
-        public Signature(string SignaturePath = default(string), string SignatureType = default(string), string Password = default(string), string Contact = default(string), string Location = default(string), bool? Visible = default(bool?), Rectangle2 Rectangle = default(Rectangle2), string FormFieldName = default(string), string Authority = default(string), string Date = default(string))
+        /// <param name="SignaturePath">Gets or sets the signature path..</param>
+        /// <param name="SignatureType">Gets or sets the type of the signature. (required).</param>
+        /// <param name="Password">Gets or sets the signature password..</param>
+        /// <param name="Appearance">Sets or gets a graphic appearance for the signature. Property value represents an image file name..</param>
+        /// <param name="Reason">Gets or sets the reason of the signature..</param>
+        /// <param name="Contact">Gets or sets the contact of the signature..</param>
+        /// <param name="Location">Gets or sets the location of the signature..</param>
+        /// <param name="Visible">Gets or sets a value indicating whether this  is visible. Supports only when signing particular page. (required).</param>
+        /// <param name="Rectangle">Gets or sets the visible rectangle of the signature. Supports only when signing particular page..</param>
+        /// <param name="FormFieldName">Gets or sets the name of the signature field. Supports only when signing document with particular form field..</param>
+        /// <param name="Authority">Gets or sets the name of the person or authority signing the document...</param>
+        /// <param name="Date">Gets or sets the time of signing..</param>
+        /// <param name="ShowProperties">Gets or sets the showproperties in signature field (required).</param>
+        public Signature(string SignaturePath = default(string), SignatureType SignatureType = default(SignatureType), string Password = default(string), string Appearance = default(string), string Reason = default(string), string Contact = default(string), string Location = default(string), bool? Visible = default(bool?), Rectangle Rectangle = default(Rectangle), string FormFieldName = default(string), string Authority = default(string), string Date = default(string), bool? ShowProperties = default(bool?))
         {
+            // to ensure "SignatureType" is required (not null)
+            if (SignatureType == null)
+            {
+                throw new InvalidDataException("SignatureType is a required property for Signature and cannot be null");
+            }
+            else
+            {
+                this.SignatureType = SignatureType;
+            }
             // to ensure "Visible" is required (not null)
             if (Visible == null)
             {
@@ -75,9 +87,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 this.Visible = Visible;
             }
+            // to ensure "ShowProperties" is required (not null)
+            if (ShowProperties == null)
+            {
+                throw new InvalidDataException("ShowProperties is a required property for Signature and cannot be null");
+            }
+            else
+            {
+                this.ShowProperties = ShowProperties;
+            }
             this.SignaturePath = SignaturePath;
-            this.SignatureType = SignatureType;
             this.Password = Password;
+            this.Appearance = Appearance;
+            this.Reason = Reason;
             this.Contact = Contact;
             this.Location = Location;
             this.Rectangle = Rectangle;
@@ -87,74 +109,95 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         }
         
         /// <summary>
-        /// The SignaturePath
+        /// Gets or sets the signature path.
         /// </summary>
-        /// <value>The SignaturePath</value>
+        /// <value>Gets or sets the signature path.</value>
         [DataMember(Name="SignaturePath", EmitDefaultValue=false)]
         public string SignaturePath { get; set; }
 
         /// <summary>
-        /// The SignatureType
+        /// Gets or sets the type of the signature.
         /// </summary>
-        /// <value>The SignatureType</value>
+        /// <value>Gets or sets the type of the signature.</value>
         [DataMember(Name="SignatureType", EmitDefaultValue=false)]
-        public string SignatureType { get; set; }
+        public SignatureType SignatureType { get; set; }
 
         /// <summary>
-        /// The Password
+        /// Gets or sets the signature password.
         /// </summary>
-        /// <value>The Password</value>
+        /// <value>Gets or sets the signature password.</value>
         [DataMember(Name="Password", EmitDefaultValue=false)]
         public string Password { get; set; }
 
         /// <summary>
-        /// The Contact
+        /// Sets or gets a graphic appearance for the signature. Property value represents an image file name.
         /// </summary>
-        /// <value>The Contact</value>
+        /// <value>Sets or gets a graphic appearance for the signature. Property value represents an image file name.</value>
+        [DataMember(Name="Appearance", EmitDefaultValue=false)]
+        public string Appearance { get; set; }
+
+        /// <summary>
+        /// Gets or sets the reason of the signature.
+        /// </summary>
+        /// <value>Gets or sets the reason of the signature.</value>
+        [DataMember(Name="Reason", EmitDefaultValue=false)]
+        public string Reason { get; set; }
+
+        /// <summary>
+        /// Gets or sets the contact of the signature.
+        /// </summary>
+        /// <value>Gets or sets the contact of the signature.</value>
         [DataMember(Name="Contact", EmitDefaultValue=false)]
         public string Contact { get; set; }
 
         /// <summary>
-        /// The Location
+        /// Gets or sets the location of the signature.
         /// </summary>
-        /// <value>The Location</value>
+        /// <value>Gets or sets the location of the signature.</value>
         [DataMember(Name="Location", EmitDefaultValue=false)]
         public string Location { get; set; }
 
         /// <summary>
-        /// The Visible
+        /// Gets or sets a value indicating whether this  is visible. Supports only when signing particular page.
         /// </summary>
-        /// <value>The Visible</value>
+        /// <value>Gets or sets a value indicating whether this  is visible. Supports only when signing particular page.</value>
         [DataMember(Name="Visible", EmitDefaultValue=false)]
         public bool? Visible { get; set; }
 
         /// <summary>
-        /// The Rectangle
+        /// Gets or sets the visible rectangle of the signature. Supports only when signing particular page.
         /// </summary>
-        /// <value>The Rectangle</value>
+        /// <value>Gets or sets the visible rectangle of the signature. Supports only when signing particular page.</value>
         [DataMember(Name="Rectangle", EmitDefaultValue=false)]
-        public Rectangle2 Rectangle { get; set; }
+        public Rectangle Rectangle { get; set; }
 
         /// <summary>
-        /// The FormFieldName
+        /// Gets or sets the name of the signature field. Supports only when signing document with particular form field.
         /// </summary>
-        /// <value>The FormFieldName</value>
+        /// <value>Gets or sets the name of the signature field. Supports only when signing document with particular form field.</value>
         [DataMember(Name="FormFieldName", EmitDefaultValue=false)]
         public string FormFieldName { get; set; }
 
         /// <summary>
-        /// The Authority
+        /// Gets or sets the name of the person or authority signing the document..
         /// </summary>
-        /// <value>The Authority</value>
+        /// <value>Gets or sets the name of the person or authority signing the document..</value>
         [DataMember(Name="Authority", EmitDefaultValue=false)]
         public string Authority { get; set; }
 
         /// <summary>
-        /// The Date
+        /// Gets or sets the time of signing.
         /// </summary>
-        /// <value>The Date</value>
+        /// <value>Gets or sets the time of signing.</value>
         [DataMember(Name="Date", EmitDefaultValue=false)]
         public string Date { get; set; }
+
+        /// <summary>
+        /// Gets or sets the showproperties in signature field
+        /// </summary>
+        /// <value>Gets or sets the showproperties in signature field</value>
+        [DataMember(Name="ShowProperties", EmitDefaultValue=false)]
+        public bool? ShowProperties { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -167,6 +210,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  SignaturePath: ").Append(SignaturePath).Append("\n");
             sb.Append("  SignatureType: ").Append(SignatureType).Append("\n");
             sb.Append("  Password: ").Append(Password).Append("\n");
+            sb.Append("  Appearance: ").Append(Appearance).Append("\n");
+            sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("  Contact: ").Append(Contact).Append("\n");
             sb.Append("  Location: ").Append(Location).Append("\n");
             sb.Append("  Visible: ").Append(Visible).Append("\n");
@@ -174,6 +219,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  FormFieldName: ").Append(FormFieldName).Append("\n");
             sb.Append("  Authority: ").Append(Authority).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
+            sb.Append("  ShowProperties: ").Append(ShowProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -226,6 +272,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Password.Equals(other.Password)
                 ) && 
                 (
+                    this.Appearance == other.Appearance ||
+                    this.Appearance != null &&
+                    this.Appearance.Equals(other.Appearance)
+                ) && 
+                (
+                    this.Reason == other.Reason ||
+                    this.Reason != null &&
+                    this.Reason.Equals(other.Reason)
+                ) && 
+                (
                     this.Contact == other.Contact ||
                     this.Contact != null &&
                     this.Contact.Equals(other.Contact)
@@ -259,6 +315,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Date == other.Date ||
                     this.Date != null &&
                     this.Date.Equals(other.Date)
+                ) && 
+                (
+                    this.ShowProperties == other.ShowProperties ||
+                    this.ShowProperties != null &&
+                    this.ShowProperties.Equals(other.ShowProperties)
                 );
         }
 
@@ -279,6 +340,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.SignatureType.GetHashCode();
                 if (this.Password != null)
                     hash = hash * 59 + this.Password.GetHashCode();
+                if (this.Appearance != null)
+                    hash = hash * 59 + this.Appearance.GetHashCode();
+                if (this.Reason != null)
+                    hash = hash * 59 + this.Reason.GetHashCode();
                 if (this.Contact != null)
                     hash = hash * 59 + this.Contact.GetHashCode();
                 if (this.Location != null)
@@ -293,6 +358,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Authority.GetHashCode();
                 if (this.Date != null)
                     hash = hash * 59 + this.Date.GetHashCode();
+                if (this.ShowProperties != null)
+                    hash = hash * 59 + this.ShowProperties.GetHashCode();
                 return hash;
             }
         }

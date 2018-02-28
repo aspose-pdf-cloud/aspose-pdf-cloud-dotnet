@@ -119,30 +119,34 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of SaaSposeResponse</returns>
         ApiResponse<SaaSposeResponse> DeletePropertyWithHttpInfo (string name, string propertyName, string storage = null, string folder = null);
         /// <summary>
-        /// Read common document info.
+        /// Read common document info or convert to some format if the format specified.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="format">The format to convert. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="outPath">Path to save result (optional)</param>
         /// <returns>System.IO.Stream</returns>
-        System.IO.Stream GetDocument (string name, string storage = null, string folder = null);
+        System.IO.Stream GetDocument (string name, string format = null, string storage = null, string folder = null, string outPath = null);
 
         /// <summary>
-        /// Read common document info.
+        /// Read common document info or convert to some format if the format specified.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="format">The format to convert. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="outPath">Path to save result (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        ApiResponse<System.IO.Stream> GetDocumentWithHttpInfo (string name, string storage = null, string folder = null);
+        ApiResponse<System.IO.Stream> GetDocumentWithHttpInfo (string name, string format = null, string storage = null, string folder = null, string outPath = null);
         /// <summary>
         /// Read document attachment info by its index.
         /// </summary>
@@ -644,6 +648,45 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>TextRectsResponse</returns>
+        TextRectsResponse GetPageText (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read page text items.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>ApiResponse of TextRectsResponse</returns>
+        ApiResponse<TextRectsResponse> GetPageTextWithHttpInfo (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+        /// <summary>
+        /// Read page text items.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
         /// <param name="withEmpty"> (optional)</param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
@@ -783,6 +826,43 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of TextItemsResponse</returns>
         ApiResponse<TextItemsResponse> GetSegmentsWithHttpInfo (string name, int? pageNumber, int? fragmentNumber, string withEmpty = null, string storage = null, string folder = null);
         /// <summary>
+        /// Read document text.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>TextRectsResponse</returns>
+        TextRectsResponse GetText (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document text.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>ApiResponse of TextRectsResponse</returns>
+        ApiResponse<TextRectsResponse> GetTextWithHttpInfo (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+        /// <summary>
         /// Read document text items.
         /// </summary>
         /// <remarks>
@@ -897,6 +977,60 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of SaaSposeResponse</returns>
         ApiResponse<SaaSposeResponse> PostCreateFieldWithHttpInfo (string name, int? page, Field field = null, string storage = null, string folder = null);
         /// <summary>
+        /// Document&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="textReplace"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>DocumentTextReplaceResponse</returns>
+        DocumentTextReplaceResponse PostDocumentReplaceText (string name, TextReplaceRequest textReplace, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Document&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="textReplace"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>ApiResponse of DocumentTextReplaceResponse</returns>
+        ApiResponse<DocumentTextReplaceResponse> PostDocumentReplaceTextWithHttpInfo (string name, TextReplaceRequest textReplace, string storage = null, string folder = null);
+        /// <summary>
+        /// Document&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="textReplaceListRequest"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>DocumentTextReplaceResponse</returns>
+        DocumentTextReplaceResponse PostDocumentReplaceTextList (string name, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Document&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="textReplaceListRequest"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>ApiResponse of DocumentTextReplaceResponse</returns>
+        ApiResponse<DocumentTextReplaceResponse> PostDocumentReplaceTextListWithHttpInfo (string name, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null);
+        /// <summary>
         /// Document&#39;s replace text method.
         /// </summary>
         /// <remarks>
@@ -904,11 +1038,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplace"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
-        /// <returns>DocumentTextReplaceResponse</returns>
-        DocumentTextReplaceResponse PostDocumentReplaceText (string name, TextReplaceRequest textReplace = null, string storage = null, string folder = null);
+        /// <returns>TextReplaceResponse</returns>
+        TextReplaceResponse PostDocumentTextReplace (string name, TextReplaceListRequest textReplace, string storage = null, string folder = null);
 
         /// <summary>
         /// Document&#39;s replace text method.
@@ -918,38 +1052,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplace"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
-        /// <returns>ApiResponse of DocumentTextReplaceResponse</returns>
-        ApiResponse<DocumentTextReplaceResponse> PostDocumentReplaceTextWithHttpInfo (string name, TextReplaceRequest textReplace = null, string storage = null, string folder = null);
-        /// <summary>
-        /// Document&#39;s replace text method.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
-        /// <returns>DocumentTextReplaceResponse</returns>
-        DocumentTextReplaceResponse PostDocumentReplaceTextList (string name, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null);
-
-        /// <summary>
-        /// Document&#39;s replace text method.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
-        /// <returns>ApiResponse of DocumentTextReplaceResponse</returns>
-        ApiResponse<DocumentTextReplaceResponse> PostDocumentReplaceTextListWithHttpInfo (string name, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null);
+        /// <returns>ApiResponse of TextReplaceResponse</returns>
+        ApiResponse<TextReplaceResponse> PostDocumentTextReplaceWithHttpInfo (string name, TextReplaceListRequest textReplace, string storage = null, string folder = null);
         /// <summary>
         /// Move page to new position.
         /// </summary>
@@ -1007,6 +1114,64 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of SaaSposeResponse</returns>
         ApiResponse<SaaSposeResponse> PostOptimizeDocumentWithHttpInfo (string name, OptimizeOptions options = null, string storage = null, string folder = null);
         /// <summary>
+        /// Page&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="textReplace"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>PageTextReplaceResponse</returns>
+        PageTextReplaceResponse PostPageReplaceText (string name, int? pageNumber, TextReplaceRequest textReplace, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Page&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="textReplace"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>ApiResponse of PageTextReplaceResponse</returns>
+        ApiResponse<PageTextReplaceResponse> PostPageReplaceTextWithHttpInfo (string name, int? pageNumber, TextReplaceRequest textReplace, string storage = null, string folder = null);
+        /// <summary>
+        /// Page&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="textReplaceListRequest"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>PageTextReplaceResponse</returns>
+        PageTextReplaceResponse PostPageReplaceTextList (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Page&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="textReplaceListRequest"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>ApiResponse of PageTextReplaceResponse</returns>
+        ApiResponse<PageTextReplaceResponse> PostPageReplaceTextListWithHttpInfo (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null);
+        /// <summary>
         /// Page&#39;s replace text method.
         /// </summary>
         /// <remarks>
@@ -1015,11 +1180,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplaceListRequest"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
-        /// <returns>PageTextReplaceResponse</returns>
-        PageTextReplaceResponse PostPageReplaceText (string name, int? pageNumber, TextReplaceRequest textReplace = null, string storage = null, string folder = null);
+        /// <returns>TextReplaceResponse</returns>
+        TextReplaceResponse PostPageTextReplace (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null);
 
         /// <summary>
         /// Page&#39;s replace text method.
@@ -1030,40 +1195,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplaceListRequest"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
-        /// <returns>ApiResponse of PageTextReplaceResponse</returns>
-        ApiResponse<PageTextReplaceResponse> PostPageReplaceTextWithHttpInfo (string name, int? pageNumber, TextReplaceRequest textReplace = null, string storage = null, string folder = null);
-        /// <summary>
-        /// Page&#39;s replace text method.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="pageNumber"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
-        /// <returns>PageTextReplaceResponse</returns>
-        PageTextReplaceResponse PostPageReplaceTextList (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null);
-
-        /// <summary>
-        /// Page&#39;s replace text method.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="pageNumber"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
-        /// <returns>ApiResponse of PageTextReplaceResponse</returns>
-        ApiResponse<PageTextReplaceResponse> PostPageReplaceTextListWithHttpInfo (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null);
+        /// <returns>ApiResponse of TextReplaceResponse</returns>
+        ApiResponse<TextReplaceResponse> PostPageTextReplaceWithHttpInfo (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null);
         /// <summary>
         /// Replace document image.
         /// </summary>
@@ -1103,7 +1239,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>SaaSposeResponse</returns>
@@ -1117,7 +1253,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of SaaSposeResponse</returns>
@@ -1131,7 +1267,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>SaaSposeResponse</returns>
@@ -1146,7 +1282,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of SaaSposeResponse</returns>
@@ -1207,6 +1343,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of DocumentPagesResponse</returns>
         ApiResponse<DocumentPagesResponse> PutAddNewPageWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
+        /// Add text to PDF document page. Deprecate
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the document to which text should be added.</param>
+        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="paragraph">Paragraph data. (optional)</param>
+        /// <param name="storage">File storage to be used. (optional)</param>
+        /// <param name="folder">Document folder. (optional)</param>
+        /// <returns>SaaSposeResponse</returns>
+        SaaSposeResponse PutAddParagraph (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Add text to PDF document page. Deprecate
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the document to which text should be added.</param>
+        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="paragraph">Paragraph data. (optional)</param>
+        /// <param name="storage">File storage to be used. (optional)</param>
+        /// <param name="folder">Document folder. (optional)</param>
+        /// <returns>ApiResponse of SaaSposeResponse</returns>
+        ApiResponse<SaaSposeResponse> PutAddParagraphWithHttpInfo (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null);
         /// <summary>
         /// Add text to PDF document page.
         /// </summary>
@@ -1296,6 +1461,37 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="fitSize">Draw a margin around content in resulting pdf. (optional, default to false)</param>
         /// <returns>ApiResponse of DocumentResponse</returns>
         ApiResponse<DocumentResponse> PutCreateDocumentWithHttpInfo (string name, string templateFile = null, string dataFile = null, string templateType = null, string storage = null, string folder = null, string url = null, bool? fitSize = null);
+        /// <summary>
+        /// Create new document from images.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new document name.</param>
+        /// <param name="images">The images file paths set.   (optional)</param>
+        /// <param name="ocr">To create OCR layer for image or not. (optional, default to false)</param>
+        /// <param name="ocrLang">The language which is defined for OCR engine. Default is eng. (optional, default to eng)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The new document folder. (optional)</param>
+        /// <returns>DocumentResponse</returns>
+        DocumentResponse PutCreateDocumentFromImages (string name, ImagesListRequest images = null, bool? ocr = null, string ocrLang = null, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Create new document from images.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new document name.</param>
+        /// <param name="images">The images file paths set.   (optional)</param>
+        /// <param name="ocr">To create OCR layer for image or not. (optional, default to false)</param>
+        /// <param name="ocrLang">The language which is defined for OCR engine. Default is eng. (optional, default to eng)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The new document folder. (optional)</param>
+        /// <returns>ApiResponse of DocumentResponse</returns>
+        ApiResponse<DocumentResponse> PutCreateDocumentFromImagesWithHttpInfo (string name, ImagesListRequest images = null, bool? ocr = null, string ocrLang = null, string storage = null, string folder = null);
         /// <summary>
         /// Save document as Tiff image.
         /// </summary>
@@ -1391,11 +1587,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="stamp">with data. (optional)</param>
+        /// <param name="stamp">with data.</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>SaaSposeResponse</returns>
-        SaaSposeResponse PutPageAddStamp (string name, int? pageNumber, Stamp stamp = null, string storage = null, string folder = null);
+        SaaSposeResponse PutPageAddStamp (string name, int? pageNumber, Stamp stamp, string storage = null, string folder = null);
 
         /// <summary>
         /// Add page stamp.
@@ -1406,11 +1602,38 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="stamp">with data. (optional)</param>
+        /// <param name="stamp">with data.</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of SaaSposeResponse</returns>
-        ApiResponse<SaaSposeResponse> PutPageAddStampWithHttpInfo (string name, int? pageNumber, Stamp stamp = null, string storage = null, string folder = null);
+        ApiResponse<SaaSposeResponse> PutPageAddStampWithHttpInfo (string name, int? pageNumber, Stamp stamp, string storage = null, string folder = null);
+        /// <summary>
+        /// Create searchable PDF document. Generate OCR layer for images in input PDF document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="lang">language for OCR engine. Possible values: eng, ara, bel, ben, bul, ces, dan, deu, ell, fin, fra, heb, hin, ind, isl, ita, jpn, kor, nld, nor, pol, por, ron, rus, spa, swe, tha, tur, ukr, vie, chi_sim, chi_tra or thier combination e.g. eng,rus  (optional)</param>
+        /// <returns>SaaSposeResponse</returns>
+        SaaSposeResponse PutSearchableDocument (string name, string storage = null, string folder = null, string lang = null);
+
+        /// <summary>
+        /// Create searchable PDF document. Generate OCR layer for images in input PDF document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="lang">language for OCR engine. Possible values: eng, ara, bel, ben, bul, ces, dan, deu, ell, fin, fra, heb, hin, ind, isl, ita, jpn, kor, nld, nor, pol, por, ron, rus, spa, swe, tha, tur, ukr, vie, chi_sim, chi_tra or thier combination e.g. eng,rus  (optional)</param>
+        /// <returns>ApiResponse of SaaSposeResponse</returns>
+        ApiResponse<SaaSposeResponse> PutSearchableDocumentWithHttpInfo (string name, string storage = null, string folder = null, string lang = null);
         /// <summary>
         /// Add/update document property.
         /// </summary>
@@ -1448,7 +1671,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">Field name.</param>
+        /// <param name="fieldName">The field name/</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
@@ -1463,7 +1686,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">Field name.</param>
+        /// <param name="fieldName">The field name/</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
@@ -1551,30 +1774,34 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> DeletePropertyAsyncWithHttpInfo (string name, string propertyName, string storage = null, string folder = null);
         /// <summary>
-        /// Read common document info.
+        /// Read common document info or convert to some format if the format specified.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="format">The format to convert. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="outPath">Path to save result (optional)</param>
         /// <returns>Task of System.IO.Stream</returns>
-        System.Threading.Tasks.Task<System.IO.Stream> GetDocumentAsync (string name, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<System.IO.Stream> GetDocumentAsync (string name, string format = null, string storage = null, string folder = null, string outPath = null);
 
         /// <summary>
-        /// Read common document info.
+        /// Read common document info or convert to some format if the format specified.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="format">The format to convert. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="outPath">Path to save result (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetDocumentAsyncWithHttpInfo (string name, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetDocumentAsyncWithHttpInfo (string name, string format = null, string storage = null, string folder = null, string outPath = null);
         /// <summary>
         /// Read document attachment info by its index.
         /// </summary>
@@ -2076,6 +2303,45 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of TextRectsResponse</returns>
+        System.Threading.Tasks.Task<TextRectsResponse> GetPageTextAsync (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read page text items.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of ApiResponse (TextRectsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TextRectsResponse>> GetPageTextAsyncWithHttpInfo (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+        /// <summary>
+        /// Read page text items.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
         /// <param name="withEmpty"> (optional)</param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
@@ -2215,6 +2481,43 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (TextItemsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TextItemsResponse>> GetSegmentsAsyncWithHttpInfo (string name, int? pageNumber, int? fragmentNumber, string withEmpty = null, string storage = null, string folder = null);
         /// <summary>
+        /// Read document text.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of TextRectsResponse</returns>
+        System.Threading.Tasks.Task<TextRectsResponse> GetTextAsync (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document text.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of ApiResponse (TextRectsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TextRectsResponse>> GetTextAsyncWithHttpInfo (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+        /// <summary>
         /// Read document text items.
         /// </summary>
         /// <remarks>
@@ -2329,6 +2632,60 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PostCreateFieldAsyncWithHttpInfo (string name, int? page, Field field = null, string storage = null, string folder = null);
         /// <summary>
+        /// Document&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="textReplace"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of DocumentTextReplaceResponse</returns>
+        System.Threading.Tasks.Task<DocumentTextReplaceResponse> PostDocumentReplaceTextAsync (string name, TextReplaceRequest textReplace, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Document&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="textReplace"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of ApiResponse (DocumentTextReplaceResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentTextReplaceResponse>> PostDocumentReplaceTextAsyncWithHttpInfo (string name, TextReplaceRequest textReplace, string storage = null, string folder = null);
+        /// <summary>
+        /// Document&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="textReplaceListRequest"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of DocumentTextReplaceResponse</returns>
+        System.Threading.Tasks.Task<DocumentTextReplaceResponse> PostDocumentReplaceTextListAsync (string name, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Document&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="textReplaceListRequest"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of ApiResponse (DocumentTextReplaceResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentTextReplaceResponse>> PostDocumentReplaceTextListAsyncWithHttpInfo (string name, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null);
+        /// <summary>
         /// Document&#39;s replace text method.
         /// </summary>
         /// <remarks>
@@ -2336,11 +2693,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplace"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
-        /// <returns>Task of DocumentTextReplaceResponse</returns>
-        System.Threading.Tasks.Task<DocumentTextReplaceResponse> PostDocumentReplaceTextAsync (string name, TextReplaceRequest textReplace = null, string storage = null, string folder = null);
+        /// <returns>Task of TextReplaceResponse</returns>
+        System.Threading.Tasks.Task<TextReplaceResponse> PostDocumentTextReplaceAsync (string name, TextReplaceListRequest textReplace, string storage = null, string folder = null);
 
         /// <summary>
         /// Document&#39;s replace text method.
@@ -2350,38 +2707,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplace"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
-        /// <returns>Task of ApiResponse (DocumentTextReplaceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentTextReplaceResponse>> PostDocumentReplaceTextAsyncWithHttpInfo (string name, TextReplaceRequest textReplace = null, string storage = null, string folder = null);
-        /// <summary>
-        /// Document&#39;s replace text method.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
-        /// <returns>Task of DocumentTextReplaceResponse</returns>
-        System.Threading.Tasks.Task<DocumentTextReplaceResponse> PostDocumentReplaceTextListAsync (string name, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null);
-
-        /// <summary>
-        /// Document&#39;s replace text method.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
-        /// <returns>Task of ApiResponse (DocumentTextReplaceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DocumentTextReplaceResponse>> PostDocumentReplaceTextListAsyncWithHttpInfo (string name, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null);
+        /// <returns>Task of ApiResponse (TextReplaceResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TextReplaceResponse>> PostDocumentTextReplaceAsyncWithHttpInfo (string name, TextReplaceListRequest textReplace, string storage = null, string folder = null);
         /// <summary>
         /// Move page to new position.
         /// </summary>
@@ -2439,6 +2769,64 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PostOptimizeDocumentAsyncWithHttpInfo (string name, OptimizeOptions options = null, string storage = null, string folder = null);
         /// <summary>
+        /// Page&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="textReplace"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of PageTextReplaceResponse</returns>
+        System.Threading.Tasks.Task<PageTextReplaceResponse> PostPageReplaceTextAsync (string name, int? pageNumber, TextReplaceRequest textReplace, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Page&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="textReplace"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of ApiResponse (PageTextReplaceResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTextReplaceResponse>> PostPageReplaceTextAsyncWithHttpInfo (string name, int? pageNumber, TextReplaceRequest textReplace, string storage = null, string folder = null);
+        /// <summary>
+        /// Page&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="textReplaceListRequest"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of PageTextReplaceResponse</returns>
+        System.Threading.Tasks.Task<PageTextReplaceResponse> PostPageReplaceTextListAsync (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Page&#39;s replace text method. Deprecated
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="textReplaceListRequest"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of ApiResponse (PageTextReplaceResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PageTextReplaceResponse>> PostPageReplaceTextListAsyncWithHttpInfo (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null);
+        /// <summary>
         /// Page&#39;s replace text method.
         /// </summary>
         /// <remarks>
@@ -2447,11 +2835,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplaceListRequest"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
-        /// <returns>Task of PageTextReplaceResponse</returns>
-        System.Threading.Tasks.Task<PageTextReplaceResponse> PostPageReplaceTextAsync (string name, int? pageNumber, TextReplaceRequest textReplace = null, string storage = null, string folder = null);
+        /// <returns>Task of TextReplaceResponse</returns>
+        System.Threading.Tasks.Task<TextReplaceResponse> PostPageTextReplaceAsync (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null);
 
         /// <summary>
         /// Page&#39;s replace text method.
@@ -2462,40 +2850,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplaceListRequest"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
-        /// <returns>Task of ApiResponse (PageTextReplaceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTextReplaceResponse>> PostPageReplaceTextAsyncWithHttpInfo (string name, int? pageNumber, TextReplaceRequest textReplace = null, string storage = null, string folder = null);
-        /// <summary>
-        /// Page&#39;s replace text method.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="pageNumber"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
-        /// <returns>Task of PageTextReplaceResponse</returns>
-        System.Threading.Tasks.Task<PageTextReplaceResponse> PostPageReplaceTextListAsync (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null);
-
-        /// <summary>
-        /// Page&#39;s replace text method.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="pageNumber"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
-        /// <returns>Task of ApiResponse (PageTextReplaceResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PageTextReplaceResponse>> PostPageReplaceTextListAsyncWithHttpInfo (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null);
+        /// <returns>Task of ApiResponse (TextReplaceResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TextReplaceResponse>> PostPageTextReplaceAsyncWithHttpInfo (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null);
         /// <summary>
         /// Replace document image.
         /// </summary>
@@ -2535,7 +2894,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of SaaSposeResponse</returns>
@@ -2549,7 +2908,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
@@ -2563,7 +2922,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of SaaSposeResponse</returns>
@@ -2578,7 +2937,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
@@ -2639,6 +2998,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (DocumentPagesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentPagesResponse>> PutAddNewPageAsyncWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
+        /// Add text to PDF document page. Deprecate
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the document to which text should be added.</param>
+        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="paragraph">Paragraph data. (optional)</param>
+        /// <param name="storage">File storage to be used. (optional)</param>
+        /// <param name="folder">Document folder. (optional)</param>
+        /// <returns>Task of SaaSposeResponse</returns>
+        System.Threading.Tasks.Task<SaaSposeResponse> PutAddParagraphAsync (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Add text to PDF document page. Deprecate
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the document to which text should be added.</param>
+        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="paragraph">Paragraph data. (optional)</param>
+        /// <param name="storage">File storage to be used. (optional)</param>
+        /// <param name="folder">Document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutAddParagraphAsyncWithHttpInfo (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null);
         /// <summary>
         /// Add text to PDF document page.
         /// </summary>
@@ -2728,6 +3116,37 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="fitSize">Draw a margin around content in resulting pdf. (optional, default to false)</param>
         /// <returns>Task of ApiResponse (DocumentResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> PutCreateDocumentAsyncWithHttpInfo (string name, string templateFile = null, string dataFile = null, string templateType = null, string storage = null, string folder = null, string url = null, bool? fitSize = null);
+        /// <summary>
+        /// Create new document from images.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new document name.</param>
+        /// <param name="images">The images file paths set.   (optional)</param>
+        /// <param name="ocr">To create OCR layer for image or not. (optional, default to false)</param>
+        /// <param name="ocrLang">The language which is defined for OCR engine. Default is eng. (optional, default to eng)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The new document folder. (optional)</param>
+        /// <returns>Task of DocumentResponse</returns>
+        System.Threading.Tasks.Task<DocumentResponse> PutCreateDocumentFromImagesAsync (string name, ImagesListRequest images = null, bool? ocr = null, string ocrLang = null, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Create new document from images.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new document name.</param>
+        /// <param name="images">The images file paths set.   (optional)</param>
+        /// <param name="ocr">To create OCR layer for image or not. (optional, default to false)</param>
+        /// <param name="ocrLang">The language which is defined for OCR engine. Default is eng. (optional, default to eng)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The new document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (DocumentResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> PutCreateDocumentFromImagesAsyncWithHttpInfo (string name, ImagesListRequest images = null, bool? ocr = null, string ocrLang = null, string storage = null, string folder = null);
         /// <summary>
         /// Save document as Tiff image.
         /// </summary>
@@ -2823,11 +3242,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="stamp">with data. (optional)</param>
+        /// <param name="stamp">with data.</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of SaaSposeResponse</returns>
-        System.Threading.Tasks.Task<SaaSposeResponse> PutPageAddStampAsync (string name, int? pageNumber, Stamp stamp = null, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<SaaSposeResponse> PutPageAddStampAsync (string name, int? pageNumber, Stamp stamp, string storage = null, string folder = null);
 
         /// <summary>
         /// Add page stamp.
@@ -2838,11 +3257,38 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="stamp">with data. (optional)</param>
+        /// <param name="stamp">with data.</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutPageAddStampAsyncWithHttpInfo (string name, int? pageNumber, Stamp stamp = null, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutPageAddStampAsyncWithHttpInfo (string name, int? pageNumber, Stamp stamp, string storage = null, string folder = null);
+        /// <summary>
+        /// Create searchable PDF document. Generate OCR layer for images in input PDF document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="lang">language for OCR engine. Possible values: eng, ara, bel, ben, bul, ces, dan, deu, ell, fin, fra, heb, hin, ind, isl, ita, jpn, kor, nld, nor, pol, por, ron, rus, spa, swe, tha, tur, ukr, vie, chi_sim, chi_tra or thier combination e.g. eng,rus  (optional)</param>
+        /// <returns>Task of SaaSposeResponse</returns>
+        System.Threading.Tasks.Task<SaaSposeResponse> PutSearchableDocumentAsync (string name, string storage = null, string folder = null, string lang = null);
+
+        /// <summary>
+        /// Create searchable PDF document. Generate OCR layer for images in input PDF document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="lang">language for OCR engine. Possible values: eng, ara, bel, ben, bul, ces, dan, deu, ell, fin, fra, heb, hin, ind, isl, ita, jpn, kor, nld, nor, pol, por, ron, rus, spa, swe, tha, tur, ukr, vie, chi_sim, chi_tra or thier combination e.g. eng,rus  (optional)</param>
+        /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutSearchableDocumentAsyncWithHttpInfo (string name, string storage = null, string folder = null, string lang = null);
         /// <summary>
         /// Add/update document property.
         /// </summary>
@@ -2880,7 +3326,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">Field name.</param>
+        /// <param name="fieldName">The field name/</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
@@ -2895,7 +3341,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">Field name.</param>
+        /// <param name="fieldName">The field name/</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
@@ -3463,28 +3909,32 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Read common document info. 
+        /// Read common document info or convert to some format if the format specified. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="format">The format to convert. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="outPath">Path to save result (optional)</param>
         /// <returns>System.IO.Stream</returns>
-        public System.IO.Stream GetDocument (string name, string storage = null, string folder = null)
+        public System.IO.Stream GetDocument (string name, string format = null, string storage = null, string folder = null, string outPath = null)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = GetDocumentWithHttpInfo(name, storage, folder);
+             ApiResponse<System.IO.Stream> localVarResponse = GetDocumentWithHttpInfo(name, format, storage, folder, outPath);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Read common document info. 
+        /// Read common document info or convert to some format if the format specified. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="format">The format to convert. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="outPath">Path to save result (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        public ApiResponse< System.IO.Stream > GetDocumentWithHttpInfo (string name, string storage = null, string folder = null)
+        public ApiResponse< System.IO.Stream > GetDocumentWithHttpInfo (string name, string format = null, string storage = null, string folder = null, string outPath = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -3513,8 +3963,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
             if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
 
 
             // make the HTTP request
@@ -3536,29 +3988,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Read common document info. 
+        /// Read common document info or convert to some format if the format specified. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="format">The format to convert. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="outPath">Path to save result (optional)</param>
         /// <returns>Task of System.IO.Stream</returns>
-        public async System.Threading.Tasks.Task<System.IO.Stream> GetDocumentAsync (string name, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetDocumentAsync (string name, string format = null, string storage = null, string folder = null, string outPath = null)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = await GetDocumentAsyncWithHttpInfo(name, storage, folder);
+             ApiResponse<System.IO.Stream> localVarResponse = await GetDocumentAsyncWithHttpInfo(name, format, storage, folder, outPath);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Read common document info. 
+        /// Read common document info or convert to some format if the format specified. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="format">The format to convert. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="outPath">Path to save result (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetDocumentAsyncWithHttpInfo (string name, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetDocumentAsyncWithHttpInfo (string name, string format = null, string storage = null, string folder = null, string outPath = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -3587,8 +4043,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
             if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
 
 
             // make the HTTP request
@@ -6501,6 +6959,225 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>TextRectsResponse</returns>
+        public TextRectsResponse GetPageText (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        {
+             ApiResponse<TextRectsResponse> localVarResponse = GetPageTextWithHttpInfo(name, pageNumber, X, Y, width, height, format, regex, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read page text items. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>ApiResponse of TextRectsResponse</returns>
+        public ApiResponse< TextRectsResponse > GetPageTextWithHttpInfo (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPageText");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->GetPageText");
+            // verify the required parameter 'X' is set
+            if (X == null)
+                throw new ApiException(400, "Missing required parameter 'X' when calling PdfApi->GetPageText");
+            // verify the required parameter 'Y' is set
+            if (Y == null)
+                throw new ApiException(400, "Missing required parameter 'Y' when calling PdfApi->GetPageText");
+            // verify the required parameter 'width' is set
+            if (width == null)
+                throw new ApiException(400, "Missing required parameter 'width' when calling PdfApi->GetPageText");
+            // verify the required parameter 'height' is set
+            if (height == null)
+                throw new ApiException(400, "Missing required parameter 'height' when calling PdfApi->GetPageText");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/text";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
+            if (regex != null) localVarQueryParams.Add("regex", ApiClient.ParameterToString(regex)); // query parameter
+            if (X != null) localVarQueryParams.Add("X", ApiClient.ParameterToString(X)); // query parameter
+            if (Y != null) localVarQueryParams.Add("Y", ApiClient.ParameterToString(Y)); // query parameter
+            if (width != null) localVarQueryParams.Add("Width", ApiClient.ParameterToString(width)); // query parameter
+            if (height != null) localVarQueryParams.Add("Height", ApiClient.ParameterToString(height)); // query parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPageText", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextRectsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextRectsResponse) ApiClient.Deserialize(localVarResponse, typeof(TextRectsResponse)));
+        }
+
+        /// <summary>
+        /// Read page text items. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of TextRectsResponse</returns>
+        public async System.Threading.Tasks.Task<TextRectsResponse> GetPageTextAsync (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        {
+             ApiResponse<TextRectsResponse> localVarResponse = await GetPageTextAsyncWithHttpInfo(name, pageNumber, X, Y, width, height, format, regex, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read page text items. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of ApiResponse (TextRectsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TextRectsResponse>> GetPageTextAsyncWithHttpInfo (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPageText");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->GetPageText");
+            // verify the required parameter 'X' is set
+            if (X == null)
+                throw new ApiException(400, "Missing required parameter 'X' when calling PdfApi->GetPageText");
+            // verify the required parameter 'Y' is set
+            if (Y == null)
+                throw new ApiException(400, "Missing required parameter 'Y' when calling PdfApi->GetPageText");
+            // verify the required parameter 'width' is set
+            if (width == null)
+                throw new ApiException(400, "Missing required parameter 'width' when calling PdfApi->GetPageText");
+            // verify the required parameter 'height' is set
+            if (height == null)
+                throw new ApiException(400, "Missing required parameter 'height' when calling PdfApi->GetPageText");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/text";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
+            if (regex != null) localVarQueryParams.Add("regex", ApiClient.ParameterToString(regex)); // query parameter
+            if (X != null) localVarQueryParams.Add("X", ApiClient.ParameterToString(X)); // query parameter
+            if (Y != null) localVarQueryParams.Add("Y", ApiClient.ParameterToString(Y)); // query parameter
+            if (width != null) localVarQueryParams.Add("Width", ApiClient.ParameterToString(width)); // query parameter
+            if (height != null) localVarQueryParams.Add("Height", ApiClient.ParameterToString(height)); // query parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPageText", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextRectsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextRectsResponse) ApiClient.Deserialize(localVarResponse, typeof(TextRectsResponse)));
+        }
+
+        /// <summary>
+        /// Read page text items. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
         /// <param name="withEmpty"> (optional)</param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
@@ -7351,6 +8028,213 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Read document text. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>TextRectsResponse</returns>
+        public TextRectsResponse GetText (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        {
+             ApiResponse<TextRectsResponse> localVarResponse = GetTextWithHttpInfo(name, X, Y, width, height, format, regex, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document text. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>ApiResponse of TextRectsResponse</returns>
+        public ApiResponse< TextRectsResponse > GetTextWithHttpInfo (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetText");
+            // verify the required parameter 'X' is set
+            if (X == null)
+                throw new ApiException(400, "Missing required parameter 'X' when calling PdfApi->GetText");
+            // verify the required parameter 'Y' is set
+            if (Y == null)
+                throw new ApiException(400, "Missing required parameter 'Y' when calling PdfApi->GetText");
+            // verify the required parameter 'width' is set
+            if (width == null)
+                throw new ApiException(400, "Missing required parameter 'width' when calling PdfApi->GetText");
+            // verify the required parameter 'height' is set
+            if (height == null)
+                throw new ApiException(400, "Missing required parameter 'height' when calling PdfApi->GetText");
+
+            var localVarPath = "/pdf/{name}/text";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
+            if (regex != null) localVarQueryParams.Add("regex", ApiClient.ParameterToString(regex)); // query parameter
+            if (X != null) localVarQueryParams.Add("X", ApiClient.ParameterToString(X)); // query parameter
+            if (Y != null) localVarQueryParams.Add("Y", ApiClient.ParameterToString(Y)); // query parameter
+            if (width != null) localVarQueryParams.Add("Width", ApiClient.ParameterToString(width)); // query parameter
+            if (height != null) localVarQueryParams.Add("Height", ApiClient.ParameterToString(height)); // query parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetText", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextRectsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextRectsResponse) ApiClient.Deserialize(localVarResponse, typeof(TextRectsResponse)));
+        }
+
+        /// <summary>
+        /// Read document text. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of TextRectsResponse</returns>
+        public async System.Threading.Tasks.Task<TextRectsResponse> GetTextAsync (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        {
+             ApiResponse<TextRectsResponse> localVarResponse = await GetTextAsyncWithHttpInfo(name, X, Y, width, height, format, regex, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document text. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="X"></param>
+        /// <param name="Y"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="format"> (optional)</param>
+        /// <param name="regex"> (optional)</param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of ApiResponse (TextRectsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TextRectsResponse>> GetTextAsyncWithHttpInfo (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetText");
+            // verify the required parameter 'X' is set
+            if (X == null)
+                throw new ApiException(400, "Missing required parameter 'X' when calling PdfApi->GetText");
+            // verify the required parameter 'Y' is set
+            if (Y == null)
+                throw new ApiException(400, "Missing required parameter 'Y' when calling PdfApi->GetText");
+            // verify the required parameter 'width' is set
+            if (width == null)
+                throw new ApiException(400, "Missing required parameter 'width' when calling PdfApi->GetText");
+            // verify the required parameter 'height' is set
+            if (height == null)
+                throw new ApiException(400, "Missing required parameter 'height' when calling PdfApi->GetText");
+
+            var localVarPath = "/pdf/{name}/text";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
+            if (regex != null) localVarQueryParams.Add("regex", ApiClient.ParameterToString(regex)); // query parameter
+            if (X != null) localVarQueryParams.Add("X", ApiClient.ParameterToString(X)); // query parameter
+            if (Y != null) localVarQueryParams.Add("Y", ApiClient.ParameterToString(Y)); // query parameter
+            if (width != null) localVarQueryParams.Add("Width", ApiClient.ParameterToString(width)); // query parameter
+            if (height != null) localVarQueryParams.Add("Height", ApiClient.ParameterToString(height)); // query parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetText", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextRectsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextRectsResponse) ApiClient.Deserialize(localVarResponse, typeof(TextRectsResponse)));
+        }
+
+        /// <summary>
         /// Read document text items. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8015,34 +8899,37 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Document&#39;s replace text method. 
+        /// Document&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplace"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>DocumentTextReplaceResponse</returns>
-        public DocumentTextReplaceResponse PostDocumentReplaceText (string name, TextReplaceRequest textReplace = null, string storage = null, string folder = null)
+        public DocumentTextReplaceResponse PostDocumentReplaceText (string name, TextReplaceRequest textReplace, string storage = null, string folder = null)
         {
              ApiResponse<DocumentTextReplaceResponse> localVarResponse = PostDocumentReplaceTextWithHttpInfo(name, textReplace, storage, folder);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Document&#39;s replace text method. 
+        /// Document&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplace"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>ApiResponse of DocumentTextReplaceResponse</returns>
-        public ApiResponse< DocumentTextReplaceResponse > PostDocumentReplaceTextWithHttpInfo (string name, TextReplaceRequest textReplace = null, string storage = null, string folder = null)
+        public ApiResponse< DocumentTextReplaceResponse > PostDocumentReplaceTextWithHttpInfo (string name, TextReplaceRequest textReplace, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostDocumentReplaceText");
+            // verify the required parameter 'textReplace' is set
+            if (textReplace == null)
+                throw new ApiException(400, "Missing required parameter 'textReplace' when calling PdfApi->PostDocumentReplaceText");
 
             var localVarPath = "/pdf/{name}/replaceText";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8098,15 +8985,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Document&#39;s replace text method. 
+        /// Document&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplace"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>Task of DocumentTextReplaceResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentTextReplaceResponse> PostDocumentReplaceTextAsync (string name, TextReplaceRequest textReplace = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<DocumentTextReplaceResponse> PostDocumentReplaceTextAsync (string name, TextReplaceRequest textReplace, string storage = null, string folder = null)
         {
              ApiResponse<DocumentTextReplaceResponse> localVarResponse = await PostDocumentReplaceTextAsyncWithHttpInfo(name, textReplace, storage, folder);
              return localVarResponse.Data;
@@ -8114,19 +9001,22 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Document&#39;s replace text method. 
+        /// Document&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplace"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>Task of ApiResponse (DocumentTextReplaceResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentTextReplaceResponse>> PostDocumentReplaceTextAsyncWithHttpInfo (string name, TextReplaceRequest textReplace = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentTextReplaceResponse>> PostDocumentReplaceTextAsyncWithHttpInfo (string name, TextReplaceRequest textReplace, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostDocumentReplaceText");
+            // verify the required parameter 'textReplace' is set
+            if (textReplace == null)
+                throw new ApiException(400, "Missing required parameter 'textReplace' when calling PdfApi->PostDocumentReplaceText");
 
             var localVarPath = "/pdf/{name}/replaceText";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8182,34 +9072,37 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Document&#39;s replace text method. 
+        /// Document&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
+        /// <param name="textReplaceListRequest"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>DocumentTextReplaceResponse</returns>
-        public DocumentTextReplaceResponse PostDocumentReplaceTextList (string name, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null)
+        public DocumentTextReplaceResponse PostDocumentReplaceTextList (string name, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null)
         {
              ApiResponse<DocumentTextReplaceResponse> localVarResponse = PostDocumentReplaceTextListWithHttpInfo(name, textReplaceListRequest, storage, folder);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Document&#39;s replace text method. 
+        /// Document&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
+        /// <param name="textReplaceListRequest"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>ApiResponse of DocumentTextReplaceResponse</returns>
-        public ApiResponse< DocumentTextReplaceResponse > PostDocumentReplaceTextListWithHttpInfo (string name, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null)
+        public ApiResponse< DocumentTextReplaceResponse > PostDocumentReplaceTextListWithHttpInfo (string name, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostDocumentReplaceTextList");
+            // verify the required parameter 'textReplaceListRequest' is set
+            if (textReplaceListRequest == null)
+                throw new ApiException(400, "Missing required parameter 'textReplaceListRequest' when calling PdfApi->PostDocumentReplaceTextList");
 
             var localVarPath = "/pdf/{name}/replaceTextList";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8265,15 +9158,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Document&#39;s replace text method. 
+        /// Document&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
+        /// <param name="textReplaceListRequest"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>Task of DocumentTextReplaceResponse</returns>
-        public async System.Threading.Tasks.Task<DocumentTextReplaceResponse> PostDocumentReplaceTextListAsync (string name, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<DocumentTextReplaceResponse> PostDocumentReplaceTextListAsync (string name, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null)
         {
              ApiResponse<DocumentTextReplaceResponse> localVarResponse = await PostDocumentReplaceTextListAsyncWithHttpInfo(name, textReplaceListRequest, storage, folder);
              return localVarResponse.Data;
@@ -8281,19 +9174,22 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Document&#39;s replace text method. 
+        /// Document&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
+        /// <param name="textReplaceListRequest"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>Task of ApiResponse (DocumentTextReplaceResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DocumentTextReplaceResponse>> PostDocumentReplaceTextListAsyncWithHttpInfo (string name, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentTextReplaceResponse>> PostDocumentReplaceTextListAsyncWithHttpInfo (string name, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostDocumentReplaceTextList");
+            // verify the required parameter 'textReplaceListRequest' is set
+            if (textReplaceListRequest == null)
+                throw new ApiException(400, "Missing required parameter 'textReplaceListRequest' when calling PdfApi->PostDocumentReplaceTextList");
 
             var localVarPath = "/pdf/{name}/replaceTextList";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8346,6 +9242,179 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<DocumentTextReplaceResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DocumentTextReplaceResponse) ApiClient.Deserialize(localVarResponse, typeof(DocumentTextReplaceResponse)));
+        }
+
+        /// <summary>
+        /// Document&#39;s replace text method. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="textReplace"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>TextReplaceResponse</returns>
+        public TextReplaceResponse PostDocumentTextReplace (string name, TextReplaceListRequest textReplace, string storage = null, string folder = null)
+        {
+             ApiResponse<TextReplaceResponse> localVarResponse = PostDocumentTextReplaceWithHttpInfo(name, textReplace, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Document&#39;s replace text method. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="textReplace"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>ApiResponse of TextReplaceResponse</returns>
+        public ApiResponse< TextReplaceResponse > PostDocumentTextReplaceWithHttpInfo (string name, TextReplaceListRequest textReplace, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostDocumentTextReplace");
+            // verify the required parameter 'textReplace' is set
+            if (textReplace == null)
+                throw new ApiException(400, "Missing required parameter 'textReplace' when calling PdfApi->PostDocumentTextReplace");
+
+            var localVarPath = "/pdf/{name}/text/replace";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (textReplace != null && textReplace.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(textReplace); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = textReplace; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostDocumentTextReplace", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextReplaceResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextReplaceResponse) ApiClient.Deserialize(localVarResponse, typeof(TextReplaceResponse)));
+        }
+
+        /// <summary>
+        /// Document&#39;s replace text method. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="textReplace"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of TextReplaceResponse</returns>
+        public async System.Threading.Tasks.Task<TextReplaceResponse> PostDocumentTextReplaceAsync (string name, TextReplaceListRequest textReplace, string storage = null, string folder = null)
+        {
+             ApiResponse<TextReplaceResponse> localVarResponse = await PostDocumentTextReplaceAsyncWithHttpInfo(name, textReplace, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Document&#39;s replace text method. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="textReplace"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of ApiResponse (TextReplaceResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TextReplaceResponse>> PostDocumentTextReplaceAsyncWithHttpInfo (string name, TextReplaceListRequest textReplace, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostDocumentTextReplace");
+            // verify the required parameter 'textReplace' is set
+            if (textReplace == null)
+                throw new ApiException(400, "Missing required parameter 'textReplace' when calling PdfApi->PostDocumentTextReplace");
+
+            var localVarPath = "/pdf/{name}/text/replace";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (textReplace != null && textReplace.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(textReplace); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = textReplace; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostDocumentTextReplace", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextReplaceResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextReplaceResponse) ApiClient.Deserialize(localVarResponse, typeof(TextReplaceResponse)));
         }
 
         /// <summary>
@@ -8687,32 +9756,32 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Page&#39;s replace text method. 
+        /// Page&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplace"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>PageTextReplaceResponse</returns>
-        public PageTextReplaceResponse PostPageReplaceText (string name, int? pageNumber, TextReplaceRequest textReplace = null, string storage = null, string folder = null)
+        public PageTextReplaceResponse PostPageReplaceText (string name, int? pageNumber, TextReplaceRequest textReplace, string storage = null, string folder = null)
         {
              ApiResponse<PageTextReplaceResponse> localVarResponse = PostPageReplaceTextWithHttpInfo(name, pageNumber, textReplace, storage, folder);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Page&#39;s replace text method. 
+        /// Page&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplace"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>ApiResponse of PageTextReplaceResponse</returns>
-        public ApiResponse< PageTextReplaceResponse > PostPageReplaceTextWithHttpInfo (string name, int? pageNumber, TextReplaceRequest textReplace = null, string storage = null, string folder = null)
+        public ApiResponse< PageTextReplaceResponse > PostPageReplaceTextWithHttpInfo (string name, int? pageNumber, TextReplaceRequest textReplace, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8720,6 +9789,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             // verify the required parameter 'pageNumber' is set
             if (pageNumber == null)
                 throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPageReplaceText");
+            // verify the required parameter 'textReplace' is set
+            if (textReplace == null)
+                throw new ApiException(400, "Missing required parameter 'textReplace' when calling PdfApi->PostPageReplaceText");
 
             var localVarPath = "/pdf/{name}/pages/{pageNumber}/replaceText";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8776,16 +9848,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Page&#39;s replace text method. 
+        /// Page&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplace"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>Task of PageTextReplaceResponse</returns>
-        public async System.Threading.Tasks.Task<PageTextReplaceResponse> PostPageReplaceTextAsync (string name, int? pageNumber, TextReplaceRequest textReplace = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<PageTextReplaceResponse> PostPageReplaceTextAsync (string name, int? pageNumber, TextReplaceRequest textReplace, string storage = null, string folder = null)
         {
              ApiResponse<PageTextReplaceResponse> localVarResponse = await PostPageReplaceTextAsyncWithHttpInfo(name, pageNumber, textReplace, storage, folder);
              return localVarResponse.Data;
@@ -8793,16 +9865,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Page&#39;s replace text method. 
+        /// Page&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
-        /// <param name="textReplace"> (optional)</param>
+        /// <param name="textReplace"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>Task of ApiResponse (PageTextReplaceResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTextReplaceResponse>> PostPageReplaceTextAsyncWithHttpInfo (string name, int? pageNumber, TextReplaceRequest textReplace = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTextReplaceResponse>> PostPageReplaceTextAsyncWithHttpInfo (string name, int? pageNumber, TextReplaceRequest textReplace, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8810,6 +9882,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             // verify the required parameter 'pageNumber' is set
             if (pageNumber == null)
                 throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPageReplaceText");
+            // verify the required parameter 'textReplace' is set
+            if (textReplace == null)
+                throw new ApiException(400, "Missing required parameter 'textReplace' when calling PdfApi->PostPageReplaceText");
 
             var localVarPath = "/pdf/{name}/pages/{pageNumber}/replaceText";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8866,32 +9941,32 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Page&#39;s replace text method. 
+        /// Page&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
+        /// <param name="textReplaceListRequest"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>PageTextReplaceResponse</returns>
-        public PageTextReplaceResponse PostPageReplaceTextList (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null)
+        public PageTextReplaceResponse PostPageReplaceTextList (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null)
         {
              ApiResponse<PageTextReplaceResponse> localVarResponse = PostPageReplaceTextListWithHttpInfo(name, pageNumber, textReplaceListRequest, storage, folder);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Page&#39;s replace text method. 
+        /// Page&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
+        /// <param name="textReplaceListRequest"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>ApiResponse of PageTextReplaceResponse</returns>
-        public ApiResponse< PageTextReplaceResponse > PostPageReplaceTextListWithHttpInfo (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null)
+        public ApiResponse< PageTextReplaceResponse > PostPageReplaceTextListWithHttpInfo (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8899,6 +9974,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             // verify the required parameter 'pageNumber' is set
             if (pageNumber == null)
                 throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPageReplaceTextList");
+            // verify the required parameter 'textReplaceListRequest' is set
+            if (textReplaceListRequest == null)
+                throw new ApiException(400, "Missing required parameter 'textReplaceListRequest' when calling PdfApi->PostPageReplaceTextList");
 
             var localVarPath = "/pdf/{name}/pages/{pageNumber}/replaceTextList";
             var localVarPathParams = new Dictionary<String, String>();
@@ -8955,16 +10033,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Page&#39;s replace text method. 
+        /// Page&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
+        /// <param name="textReplaceListRequest"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>Task of PageTextReplaceResponse</returns>
-        public async System.Threading.Tasks.Task<PageTextReplaceResponse> PostPageReplaceTextListAsync (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<PageTextReplaceResponse> PostPageReplaceTextListAsync (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null)
         {
              ApiResponse<PageTextReplaceResponse> localVarResponse = await PostPageReplaceTextListAsyncWithHttpInfo(name, pageNumber, textReplaceListRequest, storage, folder);
              return localVarResponse.Data;
@@ -8972,16 +10050,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Page&#39;s replace text method. 
+        /// Page&#39;s replace text method. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name"></param>
         /// <param name="pageNumber"></param>
-        /// <param name="textReplaceListRequest"> (optional)</param>
+        /// <param name="textReplaceListRequest"></param>
         /// <param name="storage"> (optional)</param>
         /// <param name="folder"> (optional)</param>
         /// <returns>Task of ApiResponse (PageTextReplaceResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PageTextReplaceResponse>> PostPageReplaceTextListAsyncWithHttpInfo (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PageTextReplaceResponse>> PostPageReplaceTextListAsyncWithHttpInfo (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8989,6 +10067,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             // verify the required parameter 'pageNumber' is set
             if (pageNumber == null)
                 throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPageReplaceTextList");
+            // verify the required parameter 'textReplaceListRequest' is set
+            if (textReplaceListRequest == null)
+                throw new ApiException(400, "Missing required parameter 'textReplaceListRequest' when calling PdfApi->PostPageReplaceTextList");
 
             var localVarPath = "/pdf/{name}/pages/{pageNumber}/replaceTextList";
             var localVarPathParams = new Dictionary<String, String>();
@@ -9042,6 +10123,191 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<PageTextReplaceResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageTextReplaceResponse) ApiClient.Deserialize(localVarResponse, typeof(PageTextReplaceResponse)));
+        }
+
+        /// <summary>
+        /// Page&#39;s replace text method. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="textReplaceListRequest"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>TextReplaceResponse</returns>
+        public TextReplaceResponse PostPageTextReplace (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null)
+        {
+             ApiResponse<TextReplaceResponse> localVarResponse = PostPageTextReplaceWithHttpInfo(name, pageNumber, textReplaceListRequest, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Page&#39;s replace text method. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="textReplaceListRequest"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>ApiResponse of TextReplaceResponse</returns>
+        public ApiResponse< TextReplaceResponse > PostPageTextReplaceWithHttpInfo (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostPageTextReplace");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPageTextReplace");
+            // verify the required parameter 'textReplaceListRequest' is set
+            if (textReplaceListRequest == null)
+                throw new ApiException(400, "Missing required parameter 'textReplaceListRequest' when calling PdfApi->PostPageTextReplace");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/text/replace";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (textReplaceListRequest != null && textReplaceListRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(textReplaceListRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = textReplaceListRequest; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostPageTextReplace", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextReplaceResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextReplaceResponse) ApiClient.Deserialize(localVarResponse, typeof(TextReplaceResponse)));
+        }
+
+        /// <summary>
+        /// Page&#39;s replace text method. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="textReplaceListRequest"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of TextReplaceResponse</returns>
+        public async System.Threading.Tasks.Task<TextReplaceResponse> PostPageTextReplaceAsync (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null)
+        {
+             ApiResponse<TextReplaceResponse> localVarResponse = await PostPageTextReplaceAsyncWithHttpInfo(name, pageNumber, textReplaceListRequest, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Page&#39;s replace text method. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name"></param>
+        /// <param name="pageNumber"></param>
+        /// <param name="textReplaceListRequest"></param>
+        /// <param name="storage"> (optional)</param>
+        /// <param name="folder"> (optional)</param>
+        /// <returns>Task of ApiResponse (TextReplaceResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TextReplaceResponse>> PostPageTextReplaceAsyncWithHttpInfo (string name, int? pageNumber, TextReplaceListRequest textReplaceListRequest, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostPageTextReplace");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPageTextReplace");
+            // verify the required parameter 'textReplaceListRequest' is set
+            if (textReplaceListRequest == null)
+                throw new ApiException(400, "Missing required parameter 'textReplaceListRequest' when calling PdfApi->PostPageTextReplace");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/text/replace";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (textReplaceListRequest != null && textReplaceListRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(textReplaceListRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = textReplaceListRequest; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostPageTextReplace", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TextReplaceResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TextReplaceResponse) ApiClient.Deserialize(localVarResponse, typeof(TextReplaceResponse)));
         }
 
         /// <summary>
@@ -9226,7 +10492,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>SaaSposeResponse</returns>
@@ -9241,7 +10507,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of SaaSposeResponse</returns>
@@ -9309,7 +10575,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of SaaSposeResponse</returns>
@@ -9325,7 +10591,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
@@ -9394,7 +10660,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>SaaSposeResponse</returns>
@@ -9410,7 +10676,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of SaaSposeResponse</returns>
@@ -9483,7 +10749,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of SaaSposeResponse</returns>
@@ -9500,7 +10766,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="signature"> (optional)</param>
+        /// <param name="signature">Signature object containing signature data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
@@ -9880,6 +11146,185 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Add text to PDF document page. Deprecate 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the document to which text should be added.</param>
+        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="paragraph">Paragraph data. (optional)</param>
+        /// <param name="storage">File storage to be used. (optional)</param>
+        /// <param name="folder">Document folder. (optional)</param>
+        /// <returns>SaaSposeResponse</returns>
+        public SaaSposeResponse PutAddParagraph (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null)
+        {
+             ApiResponse<SaaSposeResponse> localVarResponse = PutAddParagraphWithHttpInfo(name, pageNumber, paragraph, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add text to PDF document page. Deprecate 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the document to which text should be added.</param>
+        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="paragraph">Paragraph data. (optional)</param>
+        /// <param name="storage">File storage to be used. (optional)</param>
+        /// <param name="folder">Document folder. (optional)</param>
+        /// <returns>ApiResponse of SaaSposeResponse</returns>
+        public ApiResponse< SaaSposeResponse > PutAddParagraphWithHttpInfo (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutAddParagraph");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PutAddParagraph");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/paragraph";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (paragraph != null && paragraph.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(paragraph); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = paragraph; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutAddParagraph", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SaaSposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SaaSposeResponse) ApiClient.Deserialize(localVarResponse, typeof(SaaSposeResponse)));
+        }
+
+        /// <summary>
+        /// Add text to PDF document page. Deprecate 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the document to which text should be added.</param>
+        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="paragraph">Paragraph data. (optional)</param>
+        /// <param name="storage">File storage to be used. (optional)</param>
+        /// <param name="folder">Document folder. (optional)</param>
+        /// <returns>Task of SaaSposeResponse</returns>
+        public async System.Threading.Tasks.Task<SaaSposeResponse> PutAddParagraphAsync (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null)
+        {
+             ApiResponse<SaaSposeResponse> localVarResponse = await PutAddParagraphAsyncWithHttpInfo(name, pageNumber, paragraph, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add text to PDF document page. Deprecate 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">Name of the document to which text should be added.</param>
+        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="paragraph">Paragraph data. (optional)</param>
+        /// <param name="storage">File storage to be used. (optional)</param>
+        /// <param name="folder">Document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutAddParagraphAsyncWithHttpInfo (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutAddParagraph");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PutAddParagraph");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/paragraph";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (paragraph != null && paragraph.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(paragraph); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = paragraph; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutAddParagraph", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SaaSposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SaaSposeResponse) ApiClient.Deserialize(localVarResponse, typeof(SaaSposeResponse)));
+        }
+
+        /// <summary>
         /// Add text to PDF document page. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9914,7 +11359,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (pageNumber == null)
                 throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PutAddText");
 
-            var localVarPath = "/pdf/{name}/pages/{pageNumber}/paragraph";
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/text";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10004,7 +11449,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (pageNumber == null)
                 throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PutAddText");
 
-            var localVarPath = "/pdf/{name}/pages/{pageNumber}/paragraph";
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/text";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new Dictionary<String, String>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
@@ -10368,6 +11813,185 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("PutCreateDocument", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentResponse) ApiClient.Deserialize(localVarResponse, typeof(DocumentResponse)));
+        }
+
+        /// <summary>
+        /// Create new document from images. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new document name.</param>
+        /// <param name="images">The images file paths set.   (optional)</param>
+        /// <param name="ocr">To create OCR layer for image or not. (optional, default to false)</param>
+        /// <param name="ocrLang">The language which is defined for OCR engine. Default is eng. (optional, default to eng)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The new document folder. (optional)</param>
+        /// <returns>DocumentResponse</returns>
+        public DocumentResponse PutCreateDocumentFromImages (string name, ImagesListRequest images = null, bool? ocr = null, string ocrLang = null, string storage = null, string folder = null)
+        {
+             ApiResponse<DocumentResponse> localVarResponse = PutCreateDocumentFromImagesWithHttpInfo(name, images, ocr, ocrLang, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create new document from images. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new document name.</param>
+        /// <param name="images">The images file paths set.   (optional)</param>
+        /// <param name="ocr">To create OCR layer for image or not. (optional, default to false)</param>
+        /// <param name="ocrLang">The language which is defined for OCR engine. Default is eng. (optional, default to eng)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The new document folder. (optional)</param>
+        /// <returns>ApiResponse of DocumentResponse</returns>
+        public ApiResponse< DocumentResponse > PutCreateDocumentFromImagesWithHttpInfo (string name, ImagesListRequest images = null, bool? ocr = null, string ocrLang = null, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutCreateDocumentFromImages");
+
+            var localVarPath = "/pdf/{name}/fromimages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (ocr != null) localVarQueryParams.Add("ocr", ApiClient.ParameterToString(ocr)); // query parameter
+            if (ocrLang != null) localVarQueryParams.Add("ocrLang", ApiClient.ParameterToString(ocrLang)); // query parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (images != null && images.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(images); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = images; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutCreateDocumentFromImages", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<DocumentResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (DocumentResponse) ApiClient.Deserialize(localVarResponse, typeof(DocumentResponse)));
+        }
+
+        /// <summary>
+        /// Create new document from images. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new document name.</param>
+        /// <param name="images">The images file paths set.   (optional)</param>
+        /// <param name="ocr">To create OCR layer for image or not. (optional, default to false)</param>
+        /// <param name="ocrLang">The language which is defined for OCR engine. Default is eng. (optional, default to eng)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The new document folder. (optional)</param>
+        /// <returns>Task of DocumentResponse</returns>
+        public async System.Threading.Tasks.Task<DocumentResponse> PutCreateDocumentFromImagesAsync (string name, ImagesListRequest images = null, bool? ocr = null, string ocrLang = null, string storage = null, string folder = null)
+        {
+             ApiResponse<DocumentResponse> localVarResponse = await PutCreateDocumentFromImagesAsyncWithHttpInfo(name, images, ocr, ocrLang, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create new document from images. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The new document name.</param>
+        /// <param name="images">The images file paths set.   (optional)</param>
+        /// <param name="ocr">To create OCR layer for image or not. (optional, default to false)</param>
+        /// <param name="ocrLang">The language which is defined for OCR engine. Default is eng. (optional, default to eng)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The new document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (DocumentResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DocumentResponse>> PutCreateDocumentFromImagesAsyncWithHttpInfo (string name, ImagesListRequest images = null, bool? ocr = null, string ocrLang = null, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutCreateDocumentFromImages");
+
+            var localVarPath = "/pdf/{name}/fromimages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (ocr != null) localVarQueryParams.Add("ocr", ApiClient.ParameterToString(ocr)); // query parameter
+            if (ocrLang != null) localVarQueryParams.Add("ocrLang", ApiClient.ParameterToString(ocrLang)); // query parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (images != null && images.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(images); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = images; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutCreateDocumentFromImages", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -10812,11 +12436,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="stamp">with data. (optional)</param>
+        /// <param name="stamp">with data.</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>SaaSposeResponse</returns>
-        public SaaSposeResponse PutPageAddStamp (string name, int? pageNumber, Stamp stamp = null, string storage = null, string folder = null)
+        public SaaSposeResponse PutPageAddStamp (string name, int? pageNumber, Stamp stamp, string storage = null, string folder = null)
         {
              ApiResponse<SaaSposeResponse> localVarResponse = PutPageAddStampWithHttpInfo(name, pageNumber, stamp, storage, folder);
              return localVarResponse.Data;
@@ -10828,11 +12452,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="stamp">with data. (optional)</param>
+        /// <param name="stamp">with data.</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of SaaSposeResponse</returns>
-        public ApiResponse< SaaSposeResponse > PutPageAddStampWithHttpInfo (string name, int? pageNumber, Stamp stamp = null, string storage = null, string folder = null)
+        public ApiResponse< SaaSposeResponse > PutPageAddStampWithHttpInfo (string name, int? pageNumber, Stamp stamp, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10840,6 +12464,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             // verify the required parameter 'pageNumber' is set
             if (pageNumber == null)
                 throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PutPageAddStamp");
+            // verify the required parameter 'stamp' is set
+            if (stamp == null)
+                throw new ApiException(400, "Missing required parameter 'stamp' when calling PdfApi->PutPageAddStamp");
 
             var localVarPath = "/pdf/{name}/pages/{pageNumber}/stamp";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10901,11 +12528,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="stamp">with data. (optional)</param>
+        /// <param name="stamp">with data.</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of SaaSposeResponse</returns>
-        public async System.Threading.Tasks.Task<SaaSposeResponse> PutPageAddStampAsync (string name, int? pageNumber, Stamp stamp = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<SaaSposeResponse> PutPageAddStampAsync (string name, int? pageNumber, Stamp stamp, string storage = null, string folder = null)
         {
              ApiResponse<SaaSposeResponse> localVarResponse = await PutPageAddStampAsyncWithHttpInfo(name, pageNumber, stamp, storage, folder);
              return localVarResponse.Data;
@@ -10918,11 +12545,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
-        /// <param name="stamp">with data. (optional)</param>
+        /// <param name="stamp">with data.</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutPageAddStampAsyncWithHttpInfo (string name, int? pageNumber, Stamp stamp = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutPageAddStampAsyncWithHttpInfo (string name, int? pageNumber, Stamp stamp, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10930,6 +12557,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             // verify the required parameter 'pageNumber' is set
             if (pageNumber == null)
                 throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PutPageAddStamp");
+            // verify the required parameter 'stamp' is set
+            if (stamp == null)
+                throw new ApiException(400, "Missing required parameter 'stamp' when calling PdfApi->PutPageAddStamp");
 
             var localVarPath = "/pdf/{name}/pages/{pageNumber}/stamp";
             var localVarPathParams = new Dictionary<String, String>();
@@ -10977,6 +12607,159 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("PutPageAddStamp", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SaaSposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SaaSposeResponse) ApiClient.Deserialize(localVarResponse, typeof(SaaSposeResponse)));
+        }
+
+        /// <summary>
+        /// Create searchable PDF document. Generate OCR layer for images in input PDF document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="lang">language for OCR engine. Possible values: eng, ara, bel, ben, bul, ces, dan, deu, ell, fin, fra, heb, hin, ind, isl, ita, jpn, kor, nld, nor, pol, por, ron, rus, spa, swe, tha, tur, ukr, vie, chi_sim, chi_tra or thier combination e.g. eng,rus  (optional)</param>
+        /// <returns>SaaSposeResponse</returns>
+        public SaaSposeResponse PutSearchableDocument (string name, string storage = null, string folder = null, string lang = null)
+        {
+             ApiResponse<SaaSposeResponse> localVarResponse = PutSearchableDocumentWithHttpInfo(name, storage, folder, lang);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create searchable PDF document. Generate OCR layer for images in input PDF document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="lang">language for OCR engine. Possible values: eng, ara, bel, ben, bul, ces, dan, deu, ell, fin, fra, heb, hin, ind, isl, ita, jpn, kor, nld, nor, pol, por, ron, rus, spa, swe, tha, tur, ukr, vie, chi_sim, chi_tra or thier combination e.g. eng,rus  (optional)</param>
+        /// <returns>ApiResponse of SaaSposeResponse</returns>
+        public ApiResponse< SaaSposeResponse > PutSearchableDocumentWithHttpInfo (string name, string storage = null, string folder = null, string lang = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutSearchableDocument");
+
+            var localVarPath = "/pdf/{name}/ocr";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (lang != null) localVarQueryParams.Add("lang", ApiClient.ParameterToString(lang)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutSearchableDocument", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SaaSposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SaaSposeResponse) ApiClient.Deserialize(localVarResponse, typeof(SaaSposeResponse)));
+        }
+
+        /// <summary>
+        /// Create searchable PDF document. Generate OCR layer for images in input PDF document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="lang">language for OCR engine. Possible values: eng, ara, bel, ben, bul, ces, dan, deu, ell, fin, fra, heb, hin, ind, isl, ita, jpn, kor, nld, nor, pol, por, ron, rus, spa, swe, tha, tur, ukr, vie, chi_sim, chi_tra or thier combination e.g. eng,rus  (optional)</param>
+        /// <returns>Task of SaaSposeResponse</returns>
+        public async System.Threading.Tasks.Task<SaaSposeResponse> PutSearchableDocumentAsync (string name, string storage = null, string folder = null, string lang = null)
+        {
+             ApiResponse<SaaSposeResponse> localVarResponse = await PutSearchableDocumentAsyncWithHttpInfo(name, storage, folder, lang);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create searchable PDF document. Generate OCR layer for images in input PDF document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="lang">language for OCR engine. Possible values: eng, ara, bel, ben, bul, ces, dan, deu, ell, fin, fra, heb, hin, ind, isl, ita, jpn, kor, nld, nor, pol, por, ron, rus, spa, swe, tha, tur, ukr, vie, chi_sim, chi_tra or thier combination e.g. eng,rus  (optional)</param>
+        /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutSearchableDocumentAsyncWithHttpInfo (string name, string storage = null, string folder = null, string lang = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutSearchableDocument");
+
+            var localVarPath = "/pdf/{name}/ocr";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (lang != null) localVarQueryParams.Add("lang", ApiClient.ParameterToString(lang)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutSearchableDocument", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -11169,7 +12952,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">Field name.</param>
+        /// <param name="fieldName">The field name/</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
@@ -11185,7 +12968,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">Field name.</param>
+        /// <param name="fieldName">The field name/</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
@@ -11258,7 +13041,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">Field name.</param>
+        /// <param name="fieldName">The field name/</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
@@ -11275,7 +13058,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">Field name.</param>
+        /// <param name="fieldName">The field name/</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>

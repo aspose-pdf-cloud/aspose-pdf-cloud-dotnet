@@ -90,5 +90,41 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.PostPageReplaceTextList(Name, 1, ReplaceListRequest, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
         }
+
+        /// <summary>
+        /// Test PostDocumentTextReplace
+        /// </summary>
+        [Test]
+        public void PostDocumentTextReplaceTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            var rect = new Rectangle(100, 700, 300, 300);
+            var textReplace = new TextReplace("Page", "p_a_g_e", false, Rect: rect);
+            var textReplaceList = new TextReplaceListRequest(new List<TextReplace> { textReplace },
+                StartIndex: 0, CountReplace: 0);
+
+            var response = PdfApi.PostDocumentTextReplace(name, textReplaceList, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+        }
+
+        /// <summary>
+        /// Test PostPageTextReplace
+        /// </summary>
+        [Test]
+        public void PostPageTextReplaceTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            var rect = new Rectangle(100, 700, 300, 300);
+            var textReplace = new TextReplace("Page", "p_a_g_e", false, Rect: rect);
+            var textReplaceList = new TextReplaceListRequest(new List<TextReplace> { textReplace },
+                StartIndex: 0, CountReplace: 0);
+
+            var response = PdfApi.PostPageTextReplace(name, 1, textReplaceList, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+        }
     }
 }

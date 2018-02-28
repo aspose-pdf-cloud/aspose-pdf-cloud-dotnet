@@ -54,12 +54,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextReplace" /> class.
         /// </summary>
-        /// <param name="OldValue">Original text..</param>
-        /// <param name="NewValue">New text..</param>
+        /// <param name="OldValue">Original text. (required).</param>
+        /// <param name="NewValue">New text. (required).</param>
         /// <param name="Regex">Gets or sets a value indicating whether search text is regular expression. (required).</param>
         /// <param name="TextState">Text properties of a new text..</param>
-        public TextReplace(string OldValue = default(string), string NewValue = default(string), bool? Regex = default(bool?), TextState TextState = default(TextState))
+        /// <param name="Rect">Rectangle area where searched original text..</param>
+        public TextReplace(string OldValue = default(string), string NewValue = default(string), bool? Regex = default(bool?), TextState TextState = default(TextState), Rectangle Rect = default(Rectangle))
         {
+            // to ensure "OldValue" is required (not null)
+            if (OldValue == null)
+            {
+                throw new InvalidDataException("OldValue is a required property for TextReplace and cannot be null");
+            }
+            else
+            {
+                this.OldValue = OldValue;
+            }
+            // to ensure "NewValue" is required (not null)
+            if (NewValue == null)
+            {
+                throw new InvalidDataException("NewValue is a required property for TextReplace and cannot be null");
+            }
+            else
+            {
+                this.NewValue = NewValue;
+            }
             // to ensure "Regex" is required (not null)
             if (Regex == null)
             {
@@ -69,9 +88,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 this.Regex = Regex;
             }
-            this.OldValue = OldValue;
-            this.NewValue = NewValue;
             this.TextState = TextState;
+            this.Rect = Rect;
         }
         
         /// <summary>
@@ -103,6 +121,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public TextState TextState { get; set; }
 
         /// <summary>
+        /// Rectangle area where searched original text.
+        /// </summary>
+        /// <value>Rectangle area where searched original text.</value>
+        [DataMember(Name="Rect", EmitDefaultValue=false)]
+        public Rectangle Rect { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -114,6 +139,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  NewValue: ").Append(NewValue).Append("\n");
             sb.Append("  Regex: ").Append(Regex).Append("\n");
             sb.Append("  TextState: ").Append(TextState).Append("\n");
+            sb.Append("  Rect: ").Append(Rect).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -169,6 +195,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.TextState == other.TextState ||
                     this.TextState != null &&
                     this.TextState.Equals(other.TextState)
+                ) && 
+                (
+                    this.Rect == other.Rect ||
+                    this.Rect != null &&
+                    this.Rect.Equals(other.Rect)
                 );
         }
 
@@ -191,6 +222,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Regex.GetHashCode();
                 if (this.TextState != null)
                     hash = hash * 59 + this.TextState.GetHashCode();
+                if (this.Rect != null)
+                    hash = hash * 59 + this.Rect.GetHashCode();
                 return hash;
             }
         }

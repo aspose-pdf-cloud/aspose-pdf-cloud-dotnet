@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="Rectangle2.cs">
+// <copyright company="Aspose" file="TextRect.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -41,90 +41,54 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// The Rectangle
+    /// Represents text DTO.
     /// </summary>
     [DataContract]
-    public partial class Rectangle2 :  IEquatable<Rectangle2>, IValidatableObject
+    public partial class TextRect :  IEquatable<TextRect>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Rectangle2" /> class.
+        /// Initializes a new instance of the <see cref="TextRect" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected Rectangle2() { }
+        protected TextRect() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="Rectangle2" /> class.
+        /// Initializes a new instance of the <see cref="TextRect" /> class.
         /// </summary>
-        /// <param name="X">The x coord (required).</param>
-        /// <param name="Y">The y coord (required).</param>
-        /// <param name="Width">The width (required).</param>
-        /// <param name="Height">The height (required).</param>
-        public Rectangle2(int? X = default(int?), int? Y = default(int?), int? Width = default(int?), int? Height = default(int?))
+        /// <param name="Text">Text.</param>
+        /// <param name="Page">Page (required).</param>
+        /// <param name="Rect">Rect.</param>
+        public TextRect(string Text = default(string), int? Page = default(int?), Rectangle Rect = default(Rectangle))
         {
-            // to ensure "X" is required (not null)
-            if (X == null)
+            // to ensure "Page" is required (not null)
+            if (Page == null)
             {
-                throw new InvalidDataException("X is a required property for Rectangle2 and cannot be null");
+                throw new InvalidDataException("Page is a required property for TextRect and cannot be null");
             }
             else
             {
-                this.X = X;
+                this.Page = Page;
             }
-            // to ensure "Y" is required (not null)
-            if (Y == null)
-            {
-                throw new InvalidDataException("Y is a required property for Rectangle2 and cannot be null");
-            }
-            else
-            {
-                this.Y = Y;
-            }
-            // to ensure "Width" is required (not null)
-            if (Width == null)
-            {
-                throw new InvalidDataException("Width is a required property for Rectangle2 and cannot be null");
-            }
-            else
-            {
-                this.Width = Width;
-            }
-            // to ensure "Height" is required (not null)
-            if (Height == null)
-            {
-                throw new InvalidDataException("Height is a required property for Rectangle2 and cannot be null");
-            }
-            else
-            {
-                this.Height = Height;
-            }
+            this.Text = Text;
+            this.Rect = Rect;
         }
         
         /// <summary>
-        /// The x coord
+        /// Gets or Sets Text
         /// </summary>
-        /// <value>The x coord</value>
-        [DataMember(Name="X", EmitDefaultValue=false)]
-        public int? X { get; set; }
+        [DataMember(Name="Text", EmitDefaultValue=false)]
+        public string Text { get; set; }
 
         /// <summary>
-        /// The y coord
+        /// Gets or Sets Page
         /// </summary>
-        /// <value>The y coord</value>
-        [DataMember(Name="Y", EmitDefaultValue=false)]
-        public int? Y { get; set; }
+        [DataMember(Name="Page", EmitDefaultValue=false)]
+        public int? Page { get; set; }
 
         /// <summary>
-        /// The width
+        /// Gets or Sets Rect
         /// </summary>
-        /// <value>The width</value>
-        [DataMember(Name="Width", EmitDefaultValue=false)]
-        public int? Width { get; set; }
-
-        /// <summary>
-        /// The height
-        /// </summary>
-        /// <value>The height</value>
-        [DataMember(Name="Height", EmitDefaultValue=false)]
-        public int? Height { get; set; }
+        [DataMember(Name="Rect", EmitDefaultValue=false)]
+        public Rectangle Rect { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -133,11 +97,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Rectangle2 {\n");
-            sb.Append("  X: ").Append(X).Append("\n");
-            sb.Append("  Y: ").Append(Y).Append("\n");
-            sb.Append("  Width: ").Append(Width).Append("\n");
-            sb.Append("  Height: ").Append(Height).Append("\n");
+            sb.Append("class TextRect {\n");
+            sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  Page: ").Append(Page).Append("\n");
+            sb.Append("  Rect: ").Append(Rect).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -159,15 +122,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Rectangle2);
+            return this.Equals(obj as TextRect);
         }
 
         /// <summary>
-        /// Returns true if Rectangle2 instances are equal
+        /// Returns true if TextRect instances are equal
         /// </summary>
-        /// <param name="other">Instance of Rectangle2 to be compared</param>
+        /// <param name="other">Instance of TextRect to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Rectangle2 other)
+        public bool Equals(TextRect other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -175,24 +138,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
 
             return 
                 (
-                    this.X == other.X ||
-                    this.X != null &&
-                    this.X.Equals(other.X)
+                    this.Text == other.Text ||
+                    this.Text != null &&
+                    this.Text.Equals(other.Text)
                 ) && 
                 (
-                    this.Y == other.Y ||
-                    this.Y != null &&
-                    this.Y.Equals(other.Y)
+                    this.Page == other.Page ||
+                    this.Page != null &&
+                    this.Page.Equals(other.Page)
                 ) && 
                 (
-                    this.Width == other.Width ||
-                    this.Width != null &&
-                    this.Width.Equals(other.Width)
-                ) && 
-                (
-                    this.Height == other.Height ||
-                    this.Height != null &&
-                    this.Height.Equals(other.Height)
+                    this.Rect == other.Rect ||
+                    this.Rect != null &&
+                    this.Rect.Equals(other.Rect)
                 );
         }
 
@@ -207,14 +165,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.X != null)
-                    hash = hash * 59 + this.X.GetHashCode();
-                if (this.Y != null)
-                    hash = hash * 59 + this.Y.GetHashCode();
-                if (this.Width != null)
-                    hash = hash * 59 + this.Width.GetHashCode();
-                if (this.Height != null)
-                    hash = hash * 59 + this.Height.GetHashCode();
+                if (this.Text != null)
+                    hash = hash * 59 + this.Text.GetHashCode();
+                if (this.Page != null)
+                    hash = hash * 59 + this.Page.GetHashCode();
+                if (this.Rect != null)
+                    hash = hash * 59 + this.Rect.GetHashCode();
                 return hash;
             }
         }

@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="TextReplaceListRequest.cs">
+// <copyright company="Aspose" file="ImagesListRequest.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -41,63 +41,39 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Multiple text replacements request.
+    /// Create document from images request.
     /// </summary>
     [DataContract]
-    public partial class TextReplaceListRequest :  IEquatable<TextReplaceListRequest>, IValidatableObject
+    public partial class ImagesListRequest :  IEquatable<ImagesListRequest>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TextReplaceListRequest" /> class.
+        /// Initializes a new instance of the <see cref="ImagesListRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected TextReplaceListRequest() { }
+        protected ImagesListRequest() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TextReplaceListRequest" /> class.
+        /// Initializes a new instance of the <see cref="ImagesListRequest" /> class.
         /// </summary>
-        /// <param name="TextReplaces">A list of text replacement settings. (required).</param>
-        /// <param name="DefaultFont">DefaultFont.</param>
-        /// <param name="StartIndex">StartIndex.</param>
-        /// <param name="CountReplace">CountReplace.</param>
-        public TextReplaceListRequest(List<TextReplace> TextReplaces = default(List<TextReplace>), string DefaultFont = default(string), int? StartIndex = default(int?), int? CountReplace = default(int?))
+        /// <param name="ImagesList">A list of paths for images. (required).</param>
+        public ImagesListRequest(List<string> ImagesList = default(List<string>))
         {
-            // to ensure "TextReplaces" is required (not null)
-            if (TextReplaces == null)
+            // to ensure "ImagesList" is required (not null)
+            if (ImagesList == null)
             {
-                throw new InvalidDataException("TextReplaces is a required property for TextReplaceListRequest and cannot be null");
+                throw new InvalidDataException("ImagesList is a required property for ImagesListRequest and cannot be null");
             }
             else
             {
-                this.TextReplaces = TextReplaces;
+                this.ImagesList = ImagesList;
             }
-            this.DefaultFont = DefaultFont;
-            this.StartIndex = StartIndex;
-            this.CountReplace = CountReplace;
         }
         
         /// <summary>
-        /// A list of text replacement settings.
+        /// A list of paths for images.
         /// </summary>
-        /// <value>A list of text replacement settings.</value>
-        [DataMember(Name="TextReplaces", EmitDefaultValue=false)]
-        public List<TextReplace> TextReplaces { get; set; }
-
-        /// <summary>
-        /// Gets or Sets DefaultFont
-        /// </summary>
-        [DataMember(Name="DefaultFont", EmitDefaultValue=false)]
-        public string DefaultFont { get; set; }
-
-        /// <summary>
-        /// Gets or Sets StartIndex
-        /// </summary>
-        [DataMember(Name="StartIndex", EmitDefaultValue=false)]
-        public int? StartIndex { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CountReplace
-        /// </summary>
-        [DataMember(Name="CountReplace", EmitDefaultValue=false)]
-        public int? CountReplace { get; set; }
+        /// <value>A list of paths for images.</value>
+        [DataMember(Name="ImagesList", EmitDefaultValue=false)]
+        public List<string> ImagesList { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -106,11 +82,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TextReplaceListRequest {\n");
-            sb.Append("  TextReplaces: ").Append(TextReplaces).Append("\n");
-            sb.Append("  DefaultFont: ").Append(DefaultFont).Append("\n");
-            sb.Append("  StartIndex: ").Append(StartIndex).Append("\n");
-            sb.Append("  CountReplace: ").Append(CountReplace).Append("\n");
+            sb.Append("class ImagesListRequest {\n");
+            sb.Append("  ImagesList: ").Append(ImagesList).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -132,15 +105,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TextReplaceListRequest);
+            return this.Equals(obj as ImagesListRequest);
         }
 
         /// <summary>
-        /// Returns true if TextReplaceListRequest instances are equal
+        /// Returns true if ImagesListRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TextReplaceListRequest to be compared</param>
+        /// <param name="other">Instance of ImagesListRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TextReplaceListRequest other)
+        public bool Equals(ImagesListRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -148,24 +121,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
 
             return 
                 (
-                    this.TextReplaces == other.TextReplaces ||
-                    this.TextReplaces != null &&
-                    this.TextReplaces.SequenceEqual(other.TextReplaces)
-                ) && 
-                (
-                    this.DefaultFont == other.DefaultFont ||
-                    this.DefaultFont != null &&
-                    this.DefaultFont.Equals(other.DefaultFont)
-                ) && 
-                (
-                    this.StartIndex == other.StartIndex ||
-                    this.StartIndex != null &&
-                    this.StartIndex.Equals(other.StartIndex)
-                ) && 
-                (
-                    this.CountReplace == other.CountReplace ||
-                    this.CountReplace != null &&
-                    this.CountReplace.Equals(other.CountReplace)
+                    this.ImagesList == other.ImagesList ||
+                    this.ImagesList != null &&
+                    this.ImagesList.SequenceEqual(other.ImagesList)
                 );
         }
 
@@ -180,14 +138,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.TextReplaces != null)
-                    hash = hash * 59 + this.TextReplaces.GetHashCode();
-                if (this.DefaultFont != null)
-                    hash = hash * 59 + this.DefaultFont.GetHashCode();
-                if (this.StartIndex != null)
-                    hash = hash * 59 + this.StartIndex.GetHashCode();
-                if (this.CountReplace != null)
-                    hash = hash * 59 + this.CountReplace.GetHashCode();
+                if (this.ImagesList != null)
+                    hash = hash * 59 + this.ImagesList.GetHashCode();
                 return hash;
             }
         }

@@ -46,14 +46,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             FormFieldName: "Signature1",
             Location: "Ukraine",
             Password: "test1234",
-            Rectangle: new Rectangle2(
+            Rectangle: new Rectangle(
                 X: 100,
                 Y: 100,
                 Width: 400,
                 Height: 100),
             SignaturePath: Path.Combine(TempFolder, SignatureName),
-            SignatureType: "PKCS7",
-            Visible: true);
+            SignatureType: SignatureType.PKCS7,
+            Visible: true,
+            ShowProperties: false);
 
         /// <summary>
         /// Test DocumentPostSignDocument
