@@ -200,30 +200,32 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of AttachmentsResponse</returns>
         ApiResponse<AttachmentsResponse> GetDocumentAttachmentsWithHttpInfo (string name, string storage = null, string folder = null);
         /// <summary>
-        /// Read document bookmarks.
+        /// Read document bookmark/bookmarks (including children).
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="bookmarkPath">The bookmark path. Leave it empty if you want to get all the bookmarks in the document. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
-        /// <returns>BookmarksResponse</returns>
-        BookmarksResponse GetDocumentBookmarks (string name, string storage = null, string folder = null);
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream GetDocumentBookmarks (string name, string bookmarkPath = null, string storage = null, string folder = null);
 
         /// <summary>
-        /// Read document bookmarks.
+        /// Read document bookmark/bookmarks (including children).
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="bookmarkPath">The bookmark path. Leave it empty if you want to get all the bookmarks in the document. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
-        /// <returns>ApiResponse of BookmarksResponse</returns>
-        ApiResponse<BookmarksResponse> GetDocumentBookmarksWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> GetDocumentBookmarksWithHttpInfo (string name, string bookmarkPath = null, string storage = null, string folder = null);
         /// <summary>
         /// Read document properties.
         /// </summary>
@@ -445,7 +447,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of TextItemsResponse</returns>
         ApiResponse<TextItemsResponse> GetFragmentsWithHttpInfo (string name, int? pageNumber, string withEmpty = null, string storage = null, string folder = null);
         /// <summary>
-        /// Read document image by number.
+        /// Extract document image in format specified.
         /// </summary>
         /// <remarks>
         /// 
@@ -454,13 +456,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
         /// <param name="imageNumber">The image format.</param>
+        /// <param name="format">Image format to convert, if not specified the common image data is read. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>System.IO.Stream</returns>
-        System.IO.Stream GetImage (string name, int? pageNumber, int? imageNumber, string storage = null, string folder = null);
+        System.IO.Stream GetImage (string name, int? pageNumber, int? imageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null);
 
         /// <summary>
-        /// Read document image by number.
+        /// Extract document image in format specified.
         /// </summary>
         /// <remarks>
         /// 
@@ -469,10 +474,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
         /// <param name="imageNumber">The image format.</param>
+        /// <param name="format">Image format to convert, if not specified the common image data is read. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        ApiResponse<System.IO.Stream> GetImageWithHttpInfo (string name, int? pageNumber, int? imageNumber, string storage = null, string folder = null);
+        ApiResponse<System.IO.Stream> GetImageWithHttpInfo (string name, int? pageNumber, int? imageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null);
         /// <summary>
         /// Read document images.
         /// </summary>
@@ -501,7 +509,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of ImagesResponse</returns>
         ApiResponse<ImagesResponse> GetImagesWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
         /// <summary>
-        /// Read document page info.
+        /// Convert document page to format specified.
         /// </summary>
         /// <remarks>
         /// 
@@ -509,13 +517,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
+        /// <param name="format">The format to convert if specified. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>System.IO.Stream</returns>
-        System.IO.Stream GetPage (string name, int? pageNumber, string storage = null, string folder = null);
+        System.IO.Stream GetPage (string name, int? pageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null);
 
         /// <summary>
-        /// Read document page info.
+        /// Convert document page to format specified.
         /// </summary>
         /// <remarks>
         /// 
@@ -523,10 +534,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
+        /// <param name="format">The format to convert if specified. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        ApiResponse<System.IO.Stream> GetPageWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
+        ApiResponse<System.IO.Stream> GetPageWithHttpInfo (string name, int? pageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null);
         /// <summary>
         /// Read document page annotation by its number.
         /// </summary>
@@ -646,18 +660,18 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="pageNumber"></param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>TextRectsResponse</returns>
-        TextRectsResponse GetPageText (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+        TextRectsResponse GetPageText (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null);
 
         /// <summary>
         /// Read page text items.
@@ -666,18 +680,18 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="pageNumber"></param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of TextRectsResponse</returns>
-        ApiResponse<TextRectsResponse> GetPageTextWithHttpInfo (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+        ApiResponse<TextRectsResponse> GetPageTextWithHttpInfo (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null);
         /// <summary>
         /// Read page text items.
         /// </summary>
@@ -732,6 +746,202 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of DocumentPagesResponse</returns>
         ApiResponse<DocumentPagesResponse> GetPagesWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream GetPdfInStorageToDoc (string name, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> GetPdfInStorageToDocWithHttpInfo (string name, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream GetPdfInStorageToPdfA (string name, string type, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> GetPdfInStorageToPdfAWithHttpInfo (string name, string type, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream GetPdfInStorageToSvg (string name, bool? compressOutputToZipArchive = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> GetPdfInStorageToSvgWithHttpInfo (string name, bool? compressOutputToZipArchive = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream GetPdfInStorageToTiff (string name, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> GetPdfInStorageToTiffWithHttpInfo (string name, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream GetPdfInStorageToXls (string name, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> GetPdfInStorageToXlsWithHttpInfo (string name, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream GetPdfInStorageToXps (string name, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> GetPdfInStorageToXpsWithHttpInfo (string name, string folder = null);
         /// <summary>
         /// Read segment.
         /// </summary>
@@ -832,17 +1042,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
+        /// <param name="name">The document name.</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>TextRectsResponse</returns>
-        TextRectsResponse GetText (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+        TextRectsResponse GetText (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null);
 
         /// <summary>
         /// Read document text.
@@ -851,17 +1061,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
+        /// <param name="name">The document name.</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of TextRectsResponse</returns>
-        ApiResponse<TextRectsResponse> GetTextWithHttpInfo (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+        ApiResponse<TextRectsResponse> GetTextWithHttpInfo (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null);
         /// <summary>
         /// Read document text items.
         /// </summary>
@@ -1213,8 +1423,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="imageFile">Path to image file if specified. Request content is used otherwise. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="image">Image file. (optional)</param>
         /// <returns>ImageResponse</returns>
-        ImageResponse PostReplaceImage (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null);
+        ImageResponse PostReplaceImage (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null, System.IO.Stream image = null);
 
         /// <summary>
         /// Replace document image.
@@ -1229,8 +1440,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="imageFile">Path to image file if specified. Request content is used otherwise. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="image">Image file. (optional)</param>
         /// <returns>ApiResponse of ImageResponse</returns>
-        ApiResponse<ImageResponse> PostReplaceImageWithHttpInfo (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null);
+        ApiResponse<ImageResponse> PostReplaceImageWithHttpInfo (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null, System.IO.Stream image = null);
         /// <summary>
         /// Sign document.
         /// </summary>
@@ -1344,7 +1556,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of DocumentPagesResponse</returns>
         ApiResponse<DocumentPagesResponse> PutAddNewPageWithHttpInfo (string name, string storage = null, string folder = null);
         /// <summary>
-        /// Add text to PDF document page. Deprecate
+        /// Add text to PDF document page. Deprecated
         /// </summary>
         /// <remarks>
         /// 
@@ -1359,7 +1571,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         SaaSposeResponse PutAddParagraph (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null);
 
         /// <summary>
-        /// Add text to PDF document page. Deprecate
+        /// Add text to PDF document page. Deprecated
         /// </summary>
         /// <remarks>
         /// 
@@ -1379,13 +1591,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the document to which text should be added.</param>
-        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="paragraph">Paragraph data. (optional)</param>
-        /// <param name="storage">File storage to be used. (optional)</param>
         /// <param name="folder">Document folder. (optional)</param>
         /// <returns>SaaSposeResponse</returns>
-        SaaSposeResponse PutAddText (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null);
+        SaaSposeResponse PutAddText (string name, int? pageNumber, Paragraph paragraph = null, string folder = null);
 
         /// <summary>
         /// Add text to PDF document page.
@@ -1394,13 +1605,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the document to which text should be added.</param>
-        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="paragraph">Paragraph data. (optional)</param>
-        /// <param name="storage">File storage to be used. (optional)</param>
         /// <param name="folder">Document folder. (optional)</param>
         /// <returns>ApiResponse of SaaSposeResponse</returns>
-        ApiResponse<SaaSposeResponse> PutAddTextWithHttpInfo (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null);
+        ApiResponse<SaaSposeResponse> PutAddTextWithHttpInfo (string name, int? pageNumber, Paragraph paragraph = null, string folder = null);
         /// <summary>
         /// Convert document from request content to format specified.
         /// </summary>
@@ -1411,8 +1621,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="format">The format to convert. (optional)</param>
         /// <param name="url"> (optional)</param>
         /// <param name="outPath">Path to save result (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>System.IO.Stream</returns>
-        System.IO.Stream PutConvertDocument (string format = null, string url = null, string outPath = null);
+        System.IO.Stream PutConvertDocument (string format = null, string url = null, string outPath = null, System.IO.Stream file = null);
 
         /// <summary>
         /// Convert document from request content to format specified.
@@ -1424,8 +1635,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="format">The format to convert. (optional)</param>
         /// <param name="url"> (optional)</param>
         /// <param name="outPath">Path to save result (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        ApiResponse<System.IO.Stream> PutConvertDocumentWithHttpInfo (string format = null, string url = null, string outPath = null);
+        ApiResponse<System.IO.Stream> PutConvertDocumentWithHttpInfo (string format = null, string url = null, string outPath = null, System.IO.Stream file = null);
         /// <summary>
         /// Create new document.
         /// </summary>
@@ -1608,6 +1820,410 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of SaaSposeResponse</returns>
         ApiResponse<SaaSposeResponse> PutPageAddStampWithHttpInfo (string name, int? pageNumber, Stamp stamp, string storage = null, string folder = null);
         /// <summary>
+        /// Converts PDF document (in request content) to DOC format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInRequestToDoc (string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to DOC format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInRequestToDocWithHttpInfo (string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to PdfA format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInRequestToPdfA (string outPath, string type, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to PdfA format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInRequestToPdfAWithHttpInfo (string outPath, string type, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to SVG format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInRequestToSvg (string outPath, bool? compressOutputToZipArchive = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to SVG format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInRequestToSvgWithHttpInfo (string outPath, bool? compressOutputToZipArchive = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to TIFF format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInRequestToTiff (string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to TIFF format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInRequestToTiffWithHttpInfo (string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to XLS format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInRequestToXls (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XLS format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInRequestToXlsWithHttpInfo (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to XPS format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInRequestToXps (string outPath, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XPS format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInRequestToXpsWithHttpInfo (string outPath, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInStorageToDoc (string name, string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInStorageToDocWithHttpInfo (string name, string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInStorageToPdfA (string name, string outPath, string type, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInStorageToPdfAWithHttpInfo (string name, string outPath, string type, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInStorageToSvg (string name, string outPath, bool? compressOutputToZipArchive = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInStorageToSvgWithHttpInfo (string name, string outPath, bool? compressOutputToZipArchive = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInStorageToTiff (string name, string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInStorageToTiffWithHttpInfo (string name, string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInStorageToXls (string name, string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInStorageToXlsWithHttpInfo (string name, string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInStorageToXps (string name, string outPath, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInStorageToXpsWithHttpInfo (string name, string outPath, string folder = null);
+        /// <summary>
         /// Create searchable PDF document. Generate OCR layer for images in input PDF document.
         /// </summary>
         /// <remarks>
@@ -1671,7 +2287,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">The field name/</param>
+        /// <param name="fieldName">The name of a field to be updated.</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
@@ -1686,12 +2302,39 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">The field name/</param>
+        /// <param name="fieldName">The name of a field to be updated.</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of FieldResponse</returns>
         ApiResponse<FieldResponse> PutUpdateFieldWithHttpInfo (string name, string fieldName, Field field = null, string storage = null, string folder = null);
+        /// <summary>
+        /// Update fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fields">with the fields data. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>FieldsResponse</returns>
+        FieldsResponse PutUpdateFields (string name, Fields fields = null, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Update fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fields">with the fields data. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of FieldsResponse</returns>
+        ApiResponse<FieldsResponse> PutUpdateFieldsWithHttpInfo (string name, Fields fields = null, string storage = null, string folder = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -1855,30 +2498,32 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (AttachmentsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttachmentsResponse>> GetDocumentAttachmentsAsyncWithHttpInfo (string name, string storage = null, string folder = null);
         /// <summary>
-        /// Read document bookmarks.
+        /// Read document bookmark/bookmarks (including children).
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="bookmarkPath">The bookmark path. Leave it empty if you want to get all the bookmarks in the document. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
-        /// <returns>Task of BookmarksResponse</returns>
-        System.Threading.Tasks.Task<BookmarksResponse> GetDocumentBookmarksAsync (string name, string storage = null, string folder = null);
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> GetDocumentBookmarksAsync (string name, string bookmarkPath = null, string storage = null, string folder = null);
 
         /// <summary>
-        /// Read document bookmarks.
+        /// Read document bookmark/bookmarks (including children).
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="bookmarkPath">The bookmark path. Leave it empty if you want to get all the bookmarks in the document. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
-        /// <returns>Task of ApiResponse (BookmarksResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<BookmarksResponse>> GetDocumentBookmarksAsyncWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetDocumentBookmarksAsyncWithHttpInfo (string name, string bookmarkPath = null, string storage = null, string folder = null);
         /// <summary>
         /// Read document properties.
         /// </summary>
@@ -2100,7 +2745,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (TextItemsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TextItemsResponse>> GetFragmentsAsyncWithHttpInfo (string name, int? pageNumber, string withEmpty = null, string storage = null, string folder = null);
         /// <summary>
-        /// Read document image by number.
+        /// Extract document image in format specified.
         /// </summary>
         /// <remarks>
         /// 
@@ -2109,13 +2754,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
         /// <param name="imageNumber">The image format.</param>
+        /// <param name="format">Image format to convert, if not specified the common image data is read. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of System.IO.Stream</returns>
-        System.Threading.Tasks.Task<System.IO.Stream> GetImageAsync (string name, int? pageNumber, int? imageNumber, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<System.IO.Stream> GetImageAsync (string name, int? pageNumber, int? imageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null);
 
         /// <summary>
-        /// Read document image by number.
+        /// Extract document image in format specified.
         /// </summary>
         /// <remarks>
         /// 
@@ -2124,10 +2772,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
         /// <param name="imageNumber">The image format.</param>
+        /// <param name="format">Image format to convert, if not specified the common image data is read. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetImageAsyncWithHttpInfo (string name, int? pageNumber, int? imageNumber, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetImageAsyncWithHttpInfo (string name, int? pageNumber, int? imageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null);
         /// <summary>
         /// Read document images.
         /// </summary>
@@ -2156,7 +2807,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (ImagesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<ImagesResponse>> GetImagesAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
         /// <summary>
-        /// Read document page info.
+        /// Convert document page to format specified.
         /// </summary>
         /// <remarks>
         /// 
@@ -2164,13 +2815,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
+        /// <param name="format">The format to convert if specified. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of System.IO.Stream</returns>
-        System.Threading.Tasks.Task<System.IO.Stream> GetPageAsync (string name, int? pageNumber, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<System.IO.Stream> GetPageAsync (string name, int? pageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null);
 
         /// <summary>
-        /// Read document page info.
+        /// Convert document page to format specified.
         /// </summary>
         /// <remarks>
         /// 
@@ -2178,10 +2832,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
+        /// <param name="format">The format to convert if specified. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPageAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPageAsyncWithHttpInfo (string name, int? pageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null);
         /// <summary>
         /// Read document page annotation by its number.
         /// </summary>
@@ -2301,18 +2958,18 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="pageNumber"></param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of TextRectsResponse</returns>
-        System.Threading.Tasks.Task<TextRectsResponse> GetPageTextAsync (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<TextRectsResponse> GetPageTextAsync (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null);
 
         /// <summary>
         /// Read page text items.
@@ -2321,18 +2978,18 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="pageNumber"></param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (TextRectsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TextRectsResponse>> GetPageTextAsyncWithHttpInfo (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<ApiResponse<TextRectsResponse>> GetPageTextAsyncWithHttpInfo (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null);
         /// <summary>
         /// Read page text items.
         /// </summary>
@@ -2387,6 +3044,202 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (DocumentPagesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentPagesResponse>> GetPagesAsyncWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToDocAsync (string name, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToDocAsyncWithHttpInfo (string name, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToPdfAAsync (string name, string type, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToPdfAAsyncWithHttpInfo (string name, string type, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToSvgAsync (string name, bool? compressOutputToZipArchive = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToSvgAsyncWithHttpInfo (string name, bool? compressOutputToZipArchive = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToTiffAsync (string name, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToTiffAsyncWithHttpInfo (string name, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToXlsAsync (string name, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToXlsAsyncWithHttpInfo (string name, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToXpsAsync (string name, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToXpsAsyncWithHttpInfo (string name, string folder = null);
         /// <summary>
         /// Read segment.
         /// </summary>
@@ -2487,17 +3340,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
+        /// <param name="name">The document name.</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of TextRectsResponse</returns>
-        System.Threading.Tasks.Task<TextRectsResponse> GetTextAsync (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<TextRectsResponse> GetTextAsync (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null);
 
         /// <summary>
         /// Read document text.
@@ -2506,17 +3359,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
+        /// <param name="name">The document name.</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (TextRectsResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TextRectsResponse>> GetTextAsyncWithHttpInfo (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<ApiResponse<TextRectsResponse>> GetTextAsyncWithHttpInfo (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null);
         /// <summary>
         /// Read document text items.
         /// </summary>
@@ -2868,8 +3721,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="imageFile">Path to image file if specified. Request content is used otherwise. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="image">Image file. (optional)</param>
         /// <returns>Task of ImageResponse</returns>
-        System.Threading.Tasks.Task<ImageResponse> PostReplaceImageAsync (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<ImageResponse> PostReplaceImageAsync (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null, System.IO.Stream image = null);
 
         /// <summary>
         /// Replace document image.
@@ -2884,8 +3738,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="imageFile">Path to image file if specified. Request content is used otherwise. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="image">Image file. (optional)</param>
         /// <returns>Task of ApiResponse (ImageResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ImageResponse>> PostReplaceImageAsyncWithHttpInfo (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<ApiResponse<ImageResponse>> PostReplaceImageAsyncWithHttpInfo (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null, System.IO.Stream image = null);
         /// <summary>
         /// Sign document.
         /// </summary>
@@ -2999,7 +3854,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (DocumentPagesResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentPagesResponse>> PutAddNewPageAsyncWithHttpInfo (string name, string storage = null, string folder = null);
         /// <summary>
-        /// Add text to PDF document page. Deprecate
+        /// Add text to PDF document page. Deprecated
         /// </summary>
         /// <remarks>
         /// 
@@ -3014,7 +3869,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         System.Threading.Tasks.Task<SaaSposeResponse> PutAddParagraphAsync (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null);
 
         /// <summary>
-        /// Add text to PDF document page. Deprecate
+        /// Add text to PDF document page. Deprecated
         /// </summary>
         /// <remarks>
         /// 
@@ -3034,13 +3889,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the document to which text should be added.</param>
-        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="paragraph">Paragraph data. (optional)</param>
-        /// <param name="storage">File storage to be used. (optional)</param>
         /// <param name="folder">Document folder. (optional)</param>
         /// <returns>Task of SaaSposeResponse</returns>
-        System.Threading.Tasks.Task<SaaSposeResponse> PutAddTextAsync (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<SaaSposeResponse> PutAddTextAsync (string name, int? pageNumber, Paragraph paragraph = null, string folder = null);
 
         /// <summary>
         /// Add text to PDF document page.
@@ -3049,13 +3903,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// 
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the document to which text should be added.</param>
-        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="paragraph">Paragraph data. (optional)</param>
-        /// <param name="storage">File storage to be used. (optional)</param>
         /// <param name="folder">Document folder. (optional)</param>
         /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutAddTextAsyncWithHttpInfo (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null);
+        System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutAddTextAsyncWithHttpInfo (string name, int? pageNumber, Paragraph paragraph = null, string folder = null);
         /// <summary>
         /// Convert document from request content to format specified.
         /// </summary>
@@ -3066,8 +3919,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="format">The format to convert. (optional)</param>
         /// <param name="url"> (optional)</param>
         /// <param name="outPath">Path to save result (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>Task of System.IO.Stream</returns>
-        System.Threading.Tasks.Task<System.IO.Stream> PutConvertDocumentAsync (string format = null, string url = null, string outPath = null);
+        System.Threading.Tasks.Task<System.IO.Stream> PutConvertDocumentAsync (string format = null, string url = null, string outPath = null, System.IO.Stream file = null);
 
         /// <summary>
         /// Convert document from request content to format specified.
@@ -3079,8 +3933,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="format">The format to convert. (optional)</param>
         /// <param name="url"> (optional)</param>
         /// <param name="outPath">Path to save result (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutConvertDocumentAsyncWithHttpInfo (string format = null, string url = null, string outPath = null);
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutConvertDocumentAsyncWithHttpInfo (string format = null, string url = null, string outPath = null, System.IO.Stream file = null);
         /// <summary>
         /// Create new document.
         /// </summary>
@@ -3263,6 +4118,410 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutPageAddStampAsyncWithHttpInfo (string name, int? pageNumber, Stamp stamp, string storage = null, string folder = null);
         /// <summary>
+        /// Converts PDF document (in request content) to DOC format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToDocAsync (string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to DOC format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToDocAsyncWithHttpInfo (string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to PdfA format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToPdfAAsync (string outPath, string type, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to PdfA format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToPdfAAsyncWithHttpInfo (string outPath, string type, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to SVG format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToSvgAsync (string outPath, bool? compressOutputToZipArchive = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to SVG format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToSvgAsyncWithHttpInfo (string outPath, bool? compressOutputToZipArchive = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to TIFF format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToTiffAsync (string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to TIFF format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToTiffAsyncWithHttpInfo (string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to XLS format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToXlsAsync (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XLS format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToXlsAsyncWithHttpInfo (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to XPS format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToXpsAsync (string outPath, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XPS format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToXpsAsyncWithHttpInfo (string outPath, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToDocAsync (string name, string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToDocAsyncWithHttpInfo (string name, string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToPdfAAsync (string name, string outPath, string type, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToPdfAAsyncWithHttpInfo (string name, string outPath, string type, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToSvgAsync (string name, string outPath, bool? compressOutputToZipArchive = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToSvgAsyncWithHttpInfo (string name, string outPath, bool? compressOutputToZipArchive = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToTiffAsync (string name, string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToTiffAsyncWithHttpInfo (string name, string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToXlsAsync (string name, string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToXlsAsyncWithHttpInfo (string name, string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToXpsAsync (string name, string outPath, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToXpsAsyncWithHttpInfo (string name, string outPath, string folder = null);
+        /// <summary>
         /// Create searchable PDF document. Generate OCR layer for images in input PDF document.
         /// </summary>
         /// <remarks>
@@ -3326,7 +4585,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">The field name/</param>
+        /// <param name="fieldName">The name of a field to be updated.</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
@@ -3341,12 +4600,39 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">The field name/</param>
+        /// <param name="fieldName">The name of a field to be updated.</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (FieldResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<FieldResponse>> PutUpdateFieldAsyncWithHttpInfo (string name, string fieldName, Field field = null, string storage = null, string folder = null);
+        /// <summary>
+        /// Update fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fields">with the fields data. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of FieldsResponse</returns>
+        System.Threading.Tasks.Task<FieldsResponse> PutUpdateFieldsAsync (string name, Fields fields = null, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Update fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fields">with the fields data. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (FieldsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FieldsResponse>> PutUpdateFieldsAsyncWithHttpInfo (string name, Fields fields = null, string storage = null, string folder = null);
         #endregion Asynchronous Operations
     }
 
@@ -4374,28 +5660,30 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Read document bookmarks. 
+        /// Read document bookmark/bookmarks (including children). 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="bookmarkPath">The bookmark path. Leave it empty if you want to get all the bookmarks in the document. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
-        /// <returns>BookmarksResponse</returns>
-        public BookmarksResponse GetDocumentBookmarks (string name, string storage = null, string folder = null)
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream GetDocumentBookmarks (string name, string bookmarkPath = null, string storage = null, string folder = null)
         {
-             ApiResponse<BookmarksResponse> localVarResponse = GetDocumentBookmarksWithHttpInfo(name, storage, folder);
+             ApiResponse<System.IO.Stream> localVarResponse = GetDocumentBookmarksWithHttpInfo(name, bookmarkPath, storage, folder);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Read document bookmarks. 
+        /// Read document bookmark/bookmarks (including children). 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="bookmarkPath">The bookmark path. Leave it empty if you want to get all the bookmarks in the document. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
-        /// <returns>ApiResponse of BookmarksResponse</returns>
-        public ApiResponse< BookmarksResponse > GetDocumentBookmarksWithHttpInfo (string name, string storage = null, string folder = null)
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > GetDocumentBookmarksWithHttpInfo (string name, string bookmarkPath = null, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -4424,6 +5712,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (bookmarkPath != null) localVarQueryParams.Add("bookmarkPath", ApiClient.ParameterToString(bookmarkPath)); // query parameter
             if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
 
@@ -4441,35 +5730,37 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<BookmarksResponse>(localVarStatusCode,
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (BookmarksResponse) ApiClient.Deserialize(localVarResponse, typeof(BookmarksResponse)));
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
         }
 
         /// <summary>
-        /// Read document bookmarks. 
+        /// Read document bookmark/bookmarks (including children). 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="bookmarkPath">The bookmark path. Leave it empty if you want to get all the bookmarks in the document. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
-        /// <returns>Task of BookmarksResponse</returns>
-        public async System.Threading.Tasks.Task<BookmarksResponse> GetDocumentBookmarksAsync (string name, string storage = null, string folder = null)
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetDocumentBookmarksAsync (string name, string bookmarkPath = null, string storage = null, string folder = null)
         {
-             ApiResponse<BookmarksResponse> localVarResponse = await GetDocumentBookmarksAsyncWithHttpInfo(name, storage, folder);
+             ApiResponse<System.IO.Stream> localVarResponse = await GetDocumentBookmarksAsyncWithHttpInfo(name, bookmarkPath, storage, folder);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Read document bookmarks. 
+        /// Read document bookmark/bookmarks (including children). 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
+        /// <param name="bookmarkPath">The bookmark path. Leave it empty if you want to get all the bookmarks in the document. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
-        /// <returns>Task of ApiResponse (BookmarksResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<BookmarksResponse>> GetDocumentBookmarksAsyncWithHttpInfo (string name, string storage = null, string folder = null)
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetDocumentBookmarksAsyncWithHttpInfo (string name, string bookmarkPath = null, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -4498,6 +5789,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (bookmarkPath != null) localVarQueryParams.Add("bookmarkPath", ApiClient.ParameterToString(bookmarkPath)); // query parameter
             if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
 
@@ -4515,9 +5807,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<BookmarksResponse>(localVarStatusCode,
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (BookmarksResponse) ApiClient.Deserialize(localVarResponse, typeof(BookmarksResponse)));
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
         }
 
         /// <summary>
@@ -5805,32 +7097,38 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Read document image by number. 
+        /// Extract document image in format specified. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
         /// <param name="imageNumber">The image format.</param>
+        /// <param name="format">Image format to convert, if not specified the common image data is read. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>System.IO.Stream</returns>
-        public System.IO.Stream GetImage (string name, int? pageNumber, int? imageNumber, string storage = null, string folder = null)
+        public System.IO.Stream GetImage (string name, int? pageNumber, int? imageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = GetImageWithHttpInfo(name, pageNumber, imageNumber, storage, folder);
+             ApiResponse<System.IO.Stream> localVarResponse = GetImageWithHttpInfo(name, pageNumber, imageNumber, format, width, height, storage, folder);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Read document image by number. 
+        /// Extract document image in format specified. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
         /// <param name="imageNumber">The image format.</param>
+        /// <param name="format">Image format to convert, if not specified the common image data is read. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        public ApiResponse< System.IO.Stream > GetImageWithHttpInfo (string name, int? pageNumber, int? imageNumber, string storage = null, string folder = null)
+        public ApiResponse< System.IO.Stream > GetImageWithHttpInfo (string name, int? pageNumber, int? imageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5867,6 +7165,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
             if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
             if (imageNumber != null) localVarPathParams.Add("imageNumber", ApiClient.ParameterToString(imageNumber)); // path parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
+            if (width != null) localVarQueryParams.Add("width", ApiClient.ParameterToString(width)); // query parameter
+            if (height != null) localVarQueryParams.Add("height", ApiClient.ParameterToString(height)); // query parameter
             if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
 
@@ -5890,33 +7191,39 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Read document image by number. 
+        /// Extract document image in format specified. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
         /// <param name="imageNumber">The image format.</param>
+        /// <param name="format">Image format to convert, if not specified the common image data is read. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of System.IO.Stream</returns>
-        public async System.Threading.Tasks.Task<System.IO.Stream> GetImageAsync (string name, int? pageNumber, int? imageNumber, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetImageAsync (string name, int? pageNumber, int? imageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = await GetImageAsyncWithHttpInfo(name, pageNumber, imageNumber, storage, folder);
+             ApiResponse<System.IO.Stream> localVarResponse = await GetImageAsyncWithHttpInfo(name, pageNumber, imageNumber, format, width, height, storage, folder);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Read document image by number. 
+        /// Extract document image in format specified. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
         /// <param name="imageNumber">The image format.</param>
+        /// <param name="format">Image format to convert, if not specified the common image data is read. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetImageAsyncWithHttpInfo (string name, int? pageNumber, int? imageNumber, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetImageAsyncWithHttpInfo (string name, int? pageNumber, int? imageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -5953,6 +7260,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
             if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
             if (imageNumber != null) localVarPathParams.Add("imageNumber", ApiClient.ParameterToString(imageNumber)); // path parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
+            if (width != null) localVarQueryParams.Add("width", ApiClient.ParameterToString(width)); // query parameter
+            if (height != null) localVarQueryParams.Add("height", ApiClient.ParameterToString(height)); // query parameter
             if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
 
@@ -6135,30 +7445,36 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Read document page info. 
+        /// Convert document page to format specified. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
+        /// <param name="format">The format to convert if specified. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>System.IO.Stream</returns>
-        public System.IO.Stream GetPage (string name, int? pageNumber, string storage = null, string folder = null)
+        public System.IO.Stream GetPage (string name, int? pageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = GetPageWithHttpInfo(name, pageNumber, storage, folder);
+             ApiResponse<System.IO.Stream> localVarResponse = GetPageWithHttpInfo(name, pageNumber, format, width, height, storage, folder);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Read document page info. 
+        /// Convert document page to format specified. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
+        /// <param name="format">The format to convert if specified. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        public ApiResponse< System.IO.Stream > GetPageWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null)
+        public ApiResponse< System.IO.Stream > GetPageWithHttpInfo (string name, int? pageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6191,6 +7507,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
 
             if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
             if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
+            if (width != null) localVarQueryParams.Add("width", ApiClient.ParameterToString(width)); // query parameter
+            if (height != null) localVarQueryParams.Add("height", ApiClient.ParameterToString(height)); // query parameter
             if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
 
@@ -6214,31 +7533,37 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Read document page info. 
+        /// Convert document page to format specified. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
+        /// <param name="format">The format to convert if specified. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of System.IO.Stream</returns>
-        public async System.Threading.Tasks.Task<System.IO.Stream> GetPageAsync (string name, int? pageNumber, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetPageAsync (string name, int? pageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = await GetPageAsyncWithHttpInfo(name, pageNumber, storage, folder);
+             ApiResponse<System.IO.Stream> localVarResponse = await GetPageAsyncWithHttpInfo(name, pageNumber, format, width, height, storage, folder);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Read document page info. 
+        /// Convert document page to format specified. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">The page number.</param>
+        /// <param name="format">The format to convert if specified. (optional)</param>
+        /// <param name="width">The converted image width. (optional, default to 0)</param>
+        /// <param name="height">The converted image height. (optional, default to 0)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPageAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPageAsyncWithHttpInfo (string name, int? pageNumber, string format = null, int? width = null, int? height = null, string storage = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -6271,6 +7596,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
 
             if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
             if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
+            if (width != null) localVarQueryParams.Add("width", ApiClient.ParameterToString(width)); // query parameter
+            if (height != null) localVarQueryParams.Add("height", ApiClient.ParameterToString(height)); // query parameter
             if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
 
@@ -6957,20 +8285,20 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// Read page text items. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="pageNumber"></param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>TextRectsResponse</returns>
-        public TextRectsResponse GetPageText (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        public TextRectsResponse GetPageText (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null)
         {
-             ApiResponse<TextRectsResponse> localVarResponse = GetPageTextWithHttpInfo(name, pageNumber, X, Y, width, height, format, regex, storage, folder);
+             ApiResponse<TextRectsResponse> localVarResponse = GetPageTextWithHttpInfo(name, pageNumber, X, Y, width, height, format, regex, splitRects, folder);
              return localVarResponse.Data;
         }
 
@@ -6978,18 +8306,18 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// Read page text items. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="pageNumber"></param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of TextRectsResponse</returns>
-        public ApiResponse< TextRectsResponse > GetPageTextWithHttpInfo (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        public ApiResponse< TextRectsResponse > GetPageTextWithHttpInfo (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7040,7 +8368,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (Y != null) localVarQueryParams.Add("Y", ApiClient.ParameterToString(Y)); // query parameter
             if (width != null) localVarQueryParams.Add("Width", ApiClient.ParameterToString(width)); // query parameter
             if (height != null) localVarQueryParams.Add("Height", ApiClient.ParameterToString(height)); // query parameter
-            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (splitRects != null) localVarQueryParams.Add("splitRects", ApiClient.ParameterToString(splitRects)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
 
 
@@ -7066,20 +8394,20 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// Read page text items. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="pageNumber"></param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of TextRectsResponse</returns>
-        public async System.Threading.Tasks.Task<TextRectsResponse> GetPageTextAsync (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<TextRectsResponse> GetPageTextAsync (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null)
         {
-             ApiResponse<TextRectsResponse> localVarResponse = await GetPageTextAsyncWithHttpInfo(name, pageNumber, X, Y, width, height, format, regex, storage, folder);
+             ApiResponse<TextRectsResponse> localVarResponse = await GetPageTextAsyncWithHttpInfo(name, pageNumber, X, Y, width, height, format, regex, splitRects, folder);
              return localVarResponse.Data;
 
         }
@@ -7088,18 +8416,18 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// Read page text items. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
-        /// <param name="pageNumber"></param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (TextRectsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TextRectsResponse>> GetPageTextAsyncWithHttpInfo (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TextRectsResponse>> GetPageTextAsyncWithHttpInfo (string name, int? pageNumber, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -7150,7 +8478,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (Y != null) localVarQueryParams.Add("Y", ApiClient.ParameterToString(Y)); // query parameter
             if (width != null) localVarQueryParams.Add("Width", ApiClient.ParameterToString(width)); // query parameter
             if (height != null) localVarQueryParams.Add("Height", ApiClient.ParameterToString(height)); // query parameter
-            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (splitRects != null) localVarQueryParams.Add("splitRects", ApiClient.ParameterToString(splitRects)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
 
 
@@ -7482,6 +8810,1032 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<DocumentPagesResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DocumentPagesResponse) ApiClient.Deserialize(localVarResponse, typeof(DocumentPagesResponse)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream GetPdfInStorageToDoc (string name, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = GetPdfInStorageToDocWithHttpInfo(name, addReturnToLineEnd, format, imageResolutionX, imageResolutionY, maxDistanceBetweenTextLines, mode, recognizeBullets, relativeHorizontalProximity, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > GetPdfInStorageToDocWithHttpInfo (string name, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToDoc");
+
+            var localVarPath = "/pdf/{name}/convert/doc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (addReturnToLineEnd != null) localVarQueryParams.Add("addReturnToLineEnd", ApiClient.ParameterToString(addReturnToLineEnd)); // query parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
+            if (imageResolutionX != null) localVarQueryParams.Add("imageResolutionX", ApiClient.ParameterToString(imageResolutionX)); // query parameter
+            if (imageResolutionY != null) localVarQueryParams.Add("imageResolutionY", ApiClient.ParameterToString(imageResolutionY)); // query parameter
+            if (maxDistanceBetweenTextLines != null) localVarQueryParams.Add("maxDistanceBetweenTextLines", ApiClient.ParameterToString(maxDistanceBetweenTextLines)); // query parameter
+            if (mode != null) localVarQueryParams.Add("mode", ApiClient.ParameterToString(mode)); // query parameter
+            if (recognizeBullets != null) localVarQueryParams.Add("recognizeBullets", ApiClient.ParameterToString(recognizeBullets)); // query parameter
+            if (relativeHorizontalProximity != null) localVarQueryParams.Add("relativeHorizontalProximity", ApiClient.ParameterToString(relativeHorizontalProximity)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToDoc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToDocAsync (string name, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await GetPdfInStorageToDocAsyncWithHttpInfo(name, addReturnToLineEnd, format, imageResolutionX, imageResolutionY, maxDistanceBetweenTextLines, mode, recognizeBullets, relativeHorizontalProximity, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToDocAsyncWithHttpInfo (string name, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToDoc");
+
+            var localVarPath = "/pdf/{name}/convert/doc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (addReturnToLineEnd != null) localVarQueryParams.Add("addReturnToLineEnd", ApiClient.ParameterToString(addReturnToLineEnd)); // query parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
+            if (imageResolutionX != null) localVarQueryParams.Add("imageResolutionX", ApiClient.ParameterToString(imageResolutionX)); // query parameter
+            if (imageResolutionY != null) localVarQueryParams.Add("imageResolutionY", ApiClient.ParameterToString(imageResolutionY)); // query parameter
+            if (maxDistanceBetweenTextLines != null) localVarQueryParams.Add("maxDistanceBetweenTextLines", ApiClient.ParameterToString(maxDistanceBetweenTextLines)); // query parameter
+            if (mode != null) localVarQueryParams.Add("mode", ApiClient.ParameterToString(mode)); // query parameter
+            if (recognizeBullets != null) localVarQueryParams.Add("recognizeBullets", ApiClient.ParameterToString(recognizeBullets)); // query parameter
+            if (relativeHorizontalProximity != null) localVarQueryParams.Add("relativeHorizontalProximity", ApiClient.ParameterToString(relativeHorizontalProximity)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToDoc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream GetPdfInStorageToPdfA (string name, string type, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = GetPdfInStorageToPdfAWithHttpInfo(name, type, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > GetPdfInStorageToPdfAWithHttpInfo (string name, string type, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToPdfA");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling PdfApi->GetPdfInStorageToPdfA");
+
+            var localVarPath = "/pdf/{name}/convert/pdfa";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (type != null) localVarQueryParams.Add("type", ApiClient.ParameterToString(type)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToPdfA", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToPdfAAsync (string name, string type, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await GetPdfInStorageToPdfAAsyncWithHttpInfo(name, type, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToPdfAAsyncWithHttpInfo (string name, string type, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToPdfA");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling PdfApi->GetPdfInStorageToPdfA");
+
+            var localVarPath = "/pdf/{name}/convert/pdfa";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (type != null) localVarQueryParams.Add("type", ApiClient.ParameterToString(type)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToPdfA", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream GetPdfInStorageToSvg (string name, bool? compressOutputToZipArchive = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = GetPdfInStorageToSvgWithHttpInfo(name, compressOutputToZipArchive, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > GetPdfInStorageToSvgWithHttpInfo (string name, bool? compressOutputToZipArchive = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToSvg");
+
+            var localVarPath = "/pdf/{name}/convert/svg";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (compressOutputToZipArchive != null) localVarQueryParams.Add("compressOutputToZipArchive", ApiClient.ParameterToString(compressOutputToZipArchive)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToSvg", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToSvgAsync (string name, bool? compressOutputToZipArchive = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await GetPdfInStorageToSvgAsyncWithHttpInfo(name, compressOutputToZipArchive, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToSvgAsyncWithHttpInfo (string name, bool? compressOutputToZipArchive = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToSvg");
+
+            var localVarPath = "/pdf/{name}/convert/svg";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (compressOutputToZipArchive != null) localVarQueryParams.Add("compressOutputToZipArchive", ApiClient.ParameterToString(compressOutputToZipArchive)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToSvg", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream GetPdfInStorageToTiff (string name, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = GetPdfInStorageToTiffWithHttpInfo(name, brightness, compression, colorDepth, leftMargin, rightMargin, topMargin, bottomMargin, orientation, skipBlankPages, width, height, xResolution, yResolution, pageIndex, pageCount, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > GetPdfInStorageToTiffWithHttpInfo (string name, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToTiff");
+
+            var localVarPath = "/pdf/{name}/convert/tiff";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (brightness != null) localVarQueryParams.Add("brightness", ApiClient.ParameterToString(brightness)); // query parameter
+            if (compression != null) localVarQueryParams.Add("compression", ApiClient.ParameterToString(compression)); // query parameter
+            if (colorDepth != null) localVarQueryParams.Add("colorDepth", ApiClient.ParameterToString(colorDepth)); // query parameter
+            if (leftMargin != null) localVarQueryParams.Add("leftMargin", ApiClient.ParameterToString(leftMargin)); // query parameter
+            if (rightMargin != null) localVarQueryParams.Add("rightMargin", ApiClient.ParameterToString(rightMargin)); // query parameter
+            if (topMargin != null) localVarQueryParams.Add("topMargin", ApiClient.ParameterToString(topMargin)); // query parameter
+            if (bottomMargin != null) localVarQueryParams.Add("bottomMargin", ApiClient.ParameterToString(bottomMargin)); // query parameter
+            if (orientation != null) localVarQueryParams.Add("orientation", ApiClient.ParameterToString(orientation)); // query parameter
+            if (skipBlankPages != null) localVarQueryParams.Add("skipBlankPages", ApiClient.ParameterToString(skipBlankPages)); // query parameter
+            if (width != null) localVarQueryParams.Add("width", ApiClient.ParameterToString(width)); // query parameter
+            if (height != null) localVarQueryParams.Add("height", ApiClient.ParameterToString(height)); // query parameter
+            if (xResolution != null) localVarQueryParams.Add("xResolution", ApiClient.ParameterToString(xResolution)); // query parameter
+            if (yResolution != null) localVarQueryParams.Add("yResolution", ApiClient.ParameterToString(yResolution)); // query parameter
+            if (pageIndex != null) localVarQueryParams.Add("pageIndex", ApiClient.ParameterToString(pageIndex)); // query parameter
+            if (pageCount != null) localVarQueryParams.Add("pageCount", ApiClient.ParameterToString(pageCount)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToTiff", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToTiffAsync (string name, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await GetPdfInStorageToTiffAsyncWithHttpInfo(name, brightness, compression, colorDepth, leftMargin, rightMargin, topMargin, bottomMargin, orientation, skipBlankPages, width, height, xResolution, yResolution, pageIndex, pageCount, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToTiffAsyncWithHttpInfo (string name, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToTiff");
+
+            var localVarPath = "/pdf/{name}/convert/tiff";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (brightness != null) localVarQueryParams.Add("brightness", ApiClient.ParameterToString(brightness)); // query parameter
+            if (compression != null) localVarQueryParams.Add("compression", ApiClient.ParameterToString(compression)); // query parameter
+            if (colorDepth != null) localVarQueryParams.Add("colorDepth", ApiClient.ParameterToString(colorDepth)); // query parameter
+            if (leftMargin != null) localVarQueryParams.Add("leftMargin", ApiClient.ParameterToString(leftMargin)); // query parameter
+            if (rightMargin != null) localVarQueryParams.Add("rightMargin", ApiClient.ParameterToString(rightMargin)); // query parameter
+            if (topMargin != null) localVarQueryParams.Add("topMargin", ApiClient.ParameterToString(topMargin)); // query parameter
+            if (bottomMargin != null) localVarQueryParams.Add("bottomMargin", ApiClient.ParameterToString(bottomMargin)); // query parameter
+            if (orientation != null) localVarQueryParams.Add("orientation", ApiClient.ParameterToString(orientation)); // query parameter
+            if (skipBlankPages != null) localVarQueryParams.Add("skipBlankPages", ApiClient.ParameterToString(skipBlankPages)); // query parameter
+            if (width != null) localVarQueryParams.Add("width", ApiClient.ParameterToString(width)); // query parameter
+            if (height != null) localVarQueryParams.Add("height", ApiClient.ParameterToString(height)); // query parameter
+            if (xResolution != null) localVarQueryParams.Add("xResolution", ApiClient.ParameterToString(xResolution)); // query parameter
+            if (yResolution != null) localVarQueryParams.Add("yResolution", ApiClient.ParameterToString(yResolution)); // query parameter
+            if (pageIndex != null) localVarQueryParams.Add("pageIndex", ApiClient.ParameterToString(pageIndex)); // query parameter
+            if (pageCount != null) localVarQueryParams.Add("pageCount", ApiClient.ParameterToString(pageCount)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToTiff", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream GetPdfInStorageToXls (string name, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = GetPdfInStorageToXlsWithHttpInfo(name, insertBlankColumnAtFirst, minimizeTheNumberOfWorksheets, scaleFactor, uniformWorksheets, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > GetPdfInStorageToXlsWithHttpInfo (string name, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToXls");
+
+            var localVarPath = "/pdf/{name}/convert/xls";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (insertBlankColumnAtFirst != null) localVarQueryParams.Add("insertBlankColumnAtFirst", ApiClient.ParameterToString(insertBlankColumnAtFirst)); // query parameter
+            if (minimizeTheNumberOfWorksheets != null) localVarQueryParams.Add("minimizeTheNumberOfWorksheets", ApiClient.ParameterToString(minimizeTheNumberOfWorksheets)); // query parameter
+            if (scaleFactor != null) localVarQueryParams.Add("scaleFactor", ApiClient.ParameterToString(scaleFactor)); // query parameter
+            if (uniformWorksheets != null) localVarQueryParams.Add("uniformWorksheets", ApiClient.ParameterToString(uniformWorksheets)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToXls", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToXlsAsync (string name, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await GetPdfInStorageToXlsAsyncWithHttpInfo(name, insertBlankColumnAtFirst, minimizeTheNumberOfWorksheets, scaleFactor, uniformWorksheets, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToXlsAsyncWithHttpInfo (string name, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToXls");
+
+            var localVarPath = "/pdf/{name}/convert/xls";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (insertBlankColumnAtFirst != null) localVarQueryParams.Add("insertBlankColumnAtFirst", ApiClient.ParameterToString(insertBlankColumnAtFirst)); // query parameter
+            if (minimizeTheNumberOfWorksheets != null) localVarQueryParams.Add("minimizeTheNumberOfWorksheets", ApiClient.ParameterToString(minimizeTheNumberOfWorksheets)); // query parameter
+            if (scaleFactor != null) localVarQueryParams.Add("scaleFactor", ApiClient.ParameterToString(scaleFactor)); // query parameter
+            if (uniformWorksheets != null) localVarQueryParams.Add("uniformWorksheets", ApiClient.ParameterToString(uniformWorksheets)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToXls", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream GetPdfInStorageToXps (string name, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = GetPdfInStorageToXpsWithHttpInfo(name, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > GetPdfInStorageToXpsWithHttpInfo (string name, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToXps");
+
+            var localVarPath = "/pdf/{name}/convert/xps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToXps", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToXpsAsync (string name, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await GetPdfInStorageToXpsAsyncWithHttpInfo(name, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToXpsAsyncWithHttpInfo (string name, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToXps");
+
+            var localVarPath = "/pdf/{name}/convert/xps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToXps", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
         }
 
         /// <summary>
@@ -8031,19 +10385,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// Read document text. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
+        /// <param name="name">The document name.</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>TextRectsResponse</returns>
-        public TextRectsResponse GetText (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        public TextRectsResponse GetText (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null)
         {
-             ApiResponse<TextRectsResponse> localVarResponse = GetTextWithHttpInfo(name, X, Y, width, height, format, regex, storage, folder);
+             ApiResponse<TextRectsResponse> localVarResponse = GetTextWithHttpInfo(name, X, Y, width, height, format, regex, splitRects, folder);
              return localVarResponse.Data;
         }
 
@@ -8051,17 +10405,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// Read document text. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
+        /// <param name="name">The document name.</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of TextRectsResponse</returns>
-        public ApiResponse< TextRectsResponse > GetTextWithHttpInfo (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        public ApiResponse< TextRectsResponse > GetTextWithHttpInfo (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8108,7 +10462,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (Y != null) localVarQueryParams.Add("Y", ApiClient.ParameterToString(Y)); // query parameter
             if (width != null) localVarQueryParams.Add("Width", ApiClient.ParameterToString(width)); // query parameter
             if (height != null) localVarQueryParams.Add("Height", ApiClient.ParameterToString(height)); // query parameter
-            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (splitRects != null) localVarQueryParams.Add("splitRects", ApiClient.ParameterToString(splitRects)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
 
 
@@ -8134,19 +10488,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// Read document text. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
+        /// <param name="name">The document name.</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of TextRectsResponse</returns>
-        public async System.Threading.Tasks.Task<TextRectsResponse> GetTextAsync (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<TextRectsResponse> GetTextAsync (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null)
         {
-             ApiResponse<TextRectsResponse> localVarResponse = await GetTextAsyncWithHttpInfo(name, X, Y, width, height, format, regex, storage, folder);
+             ApiResponse<TextRectsResponse> localVarResponse = await GetTextAsyncWithHttpInfo(name, X, Y, width, height, format, regex, splitRects, folder);
              return localVarResponse.Data;
 
         }
@@ -8155,17 +10509,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// Read document text. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name"></param>
+        /// <param name="name">The document name.</param>
         /// <param name="X"></param>
         /// <param name="Y"></param>
         /// <param name="width"></param>
         /// <param name="height"></param>
-        /// <param name="format"> (optional)</param>
-        /// <param name="regex"> (optional)</param>
-        /// <param name="storage"> (optional)</param>
-        /// <param name="folder"> (optional)</param>
+        /// <param name="format">List of formats for search. (optional)</param>
+        /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
+        /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (TextRectsResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TextRectsResponse>> GetTextAsyncWithHttpInfo (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TextRectsResponse>> GetTextAsyncWithHttpInfo (string name, int? X, int? Y, int? width, int? height, List<string> format = null, string regex = null, bool? splitRects = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -8212,7 +10566,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (Y != null) localVarQueryParams.Add("Y", ApiClient.ParameterToString(Y)); // query parameter
             if (width != null) localVarQueryParams.Add("Width", ApiClient.ParameterToString(width)); // query parameter
             if (height != null) localVarQueryParams.Add("Height", ApiClient.ParameterToString(height)); // query parameter
-            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (splitRects != null) localVarQueryParams.Add("splitRects", ApiClient.ParameterToString(splitRects)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
 
 
@@ -10320,10 +12674,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="imageFile">Path to image file if specified. Request content is used otherwise. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="image">Image file. (optional)</param>
         /// <returns>ImageResponse</returns>
-        public ImageResponse PostReplaceImage (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null)
+        public ImageResponse PostReplaceImage (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null, System.IO.Stream image = null)
         {
-             ApiResponse<ImageResponse> localVarResponse = PostReplaceImageWithHttpInfo(name, pageNumber, imageNumber, imageFile, storage, folder);
+             ApiResponse<ImageResponse> localVarResponse = PostReplaceImageWithHttpInfo(name, pageNumber, imageNumber, imageFile, storage, folder, image);
              return localVarResponse.Data;
         }
 
@@ -10337,8 +12692,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="imageFile">Path to image file if specified. Request content is used otherwise. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="image">Image file. (optional)</param>
         /// <returns>ApiResponse of ImageResponse</returns>
-        public ApiResponse< ImageResponse > PostReplaceImageWithHttpInfo (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null)
+        public ApiResponse< ImageResponse > PostReplaceImageWithHttpInfo (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null, System.IO.Stream image = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10378,6 +12734,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (imageFile != null) localVarQueryParams.Add("imageFile", ApiClient.ParameterToString(imageFile)); // query parameter
             if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (image != null) localVarFileParams.Add("image", ApiClient.ParameterToFile("image", image));
 
 
             // make the HTTP request
@@ -10408,10 +12765,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="imageFile">Path to image file if specified. Request content is used otherwise. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="image">Image file. (optional)</param>
         /// <returns>Task of ImageResponse</returns>
-        public async System.Threading.Tasks.Task<ImageResponse> PostReplaceImageAsync (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<ImageResponse> PostReplaceImageAsync (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null, System.IO.Stream image = null)
         {
-             ApiResponse<ImageResponse> localVarResponse = await PostReplaceImageAsyncWithHttpInfo(name, pageNumber, imageNumber, imageFile, storage, folder);
+             ApiResponse<ImageResponse> localVarResponse = await PostReplaceImageAsyncWithHttpInfo(name, pageNumber, imageNumber, imageFile, storage, folder, image);
              return localVarResponse.Data;
 
         }
@@ -10426,8 +12784,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="imageFile">Path to image file if specified. Request content is used otherwise. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
+        /// <param name="image">Image file. (optional)</param>
         /// <returns>Task of ApiResponse (ImageResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ImageResponse>> PostReplaceImageAsyncWithHttpInfo (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ImageResponse>> PostReplaceImageAsyncWithHttpInfo (string name, int? pageNumber, int? imageNumber, string imageFile = null, string storage = null, string folder = null, System.IO.Stream image = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -10467,6 +12826,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (imageFile != null) localVarQueryParams.Add("imageFile", ApiClient.ParameterToString(imageFile)); // query parameter
             if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (image != null) localVarFileParams.Add("image", ApiClient.ParameterToFile("image", image));
 
 
             // make the HTTP request
@@ -11146,7 +13506,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Add text to PDF document page. Deprecate 
+        /// Add text to PDF document page. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the document to which text should be added.</param>
@@ -11162,7 +13522,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Add text to PDF document page. Deprecate 
+        /// Add text to PDF document page. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the document to which text should be added.</param>
@@ -11235,7 +13595,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Add text to PDF document page. Deprecate 
+        /// Add text to PDF document page. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the document to which text should be added.</param>
@@ -11252,7 +13612,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
-        /// Add text to PDF document page. Deprecate 
+        /// Add text to PDF document page. Deprecated 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">Name of the document to which text should be added.</param>
@@ -11328,15 +13688,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// Add text to PDF document page. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the document to which text should be added.</param>
-        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="paragraph">Paragraph data. (optional)</param>
-        /// <param name="storage">File storage to be used. (optional)</param>
         /// <param name="folder">Document folder. (optional)</param>
         /// <returns>SaaSposeResponse</returns>
-        public SaaSposeResponse PutAddText (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null)
+        public SaaSposeResponse PutAddText (string name, int? pageNumber, Paragraph paragraph = null, string folder = null)
         {
-             ApiResponse<SaaSposeResponse> localVarResponse = PutAddTextWithHttpInfo(name, pageNumber, paragraph, storage, folder);
+             ApiResponse<SaaSposeResponse> localVarResponse = PutAddTextWithHttpInfo(name, pageNumber, paragraph, folder);
              return localVarResponse.Data;
         }
 
@@ -11344,13 +13703,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// Add text to PDF document page. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the document to which text should be added.</param>
-        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="paragraph">Paragraph data. (optional)</param>
-        /// <param name="storage">File storage to be used. (optional)</param>
         /// <param name="folder">Document folder. (optional)</param>
         /// <returns>ApiResponse of SaaSposeResponse</returns>
-        public ApiResponse< SaaSposeResponse > PutAddTextWithHttpInfo (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null)
+        public ApiResponse< SaaSposeResponse > PutAddTextWithHttpInfo (string name, int? pageNumber, Paragraph paragraph = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -11383,7 +13741,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
 
             if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
             if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
-            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
             if (paragraph != null && paragraph.GetType() != typeof(byte[]))
             {
@@ -11417,15 +13774,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// Add text to PDF document page. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the document to which text should be added.</param>
-        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="paragraph">Paragraph data. (optional)</param>
-        /// <param name="storage">File storage to be used. (optional)</param>
         /// <param name="folder">Document folder. (optional)</param>
         /// <returns>Task of SaaSposeResponse</returns>
-        public async System.Threading.Tasks.Task<SaaSposeResponse> PutAddTextAsync (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<SaaSposeResponse> PutAddTextAsync (string name, int? pageNumber, Paragraph paragraph = null, string folder = null)
         {
-             ApiResponse<SaaSposeResponse> localVarResponse = await PutAddTextAsyncWithHttpInfo(name, pageNumber, paragraph, storage, folder);
+             ApiResponse<SaaSposeResponse> localVarResponse = await PutAddTextAsyncWithHttpInfo(name, pageNumber, paragraph, folder);
              return localVarResponse.Data;
 
         }
@@ -11434,13 +13790,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// Add text to PDF document page. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="name">Name of the document to which text should be added.</param>
-        /// <param name="pageNumber">Number of page (starting with 1) to which text should be added.</param>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">Number of page (starting from 1).</param>
         /// <param name="paragraph">Paragraph data. (optional)</param>
-        /// <param name="storage">File storage to be used. (optional)</param>
         /// <param name="folder">Document folder. (optional)</param>
         /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutAddTextAsyncWithHttpInfo (string name, int? pageNumber, Paragraph paragraph = null, string storage = null, string folder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutAddTextAsyncWithHttpInfo (string name, int? pageNumber, Paragraph paragraph = null, string folder = null)
         {
             // verify the required parameter 'name' is set
             if (name == null)
@@ -11473,7 +13828,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
 
             if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
             if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
-            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
             if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
             if (paragraph != null && paragraph.GetType() != typeof(byte[]))
             {
@@ -11510,10 +13864,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="format">The format to convert. (optional)</param>
         /// <param name="url"> (optional)</param>
         /// <param name="outPath">Path to save result (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>System.IO.Stream</returns>
-        public System.IO.Stream PutConvertDocument (string format = null, string url = null, string outPath = null)
+        public System.IO.Stream PutConvertDocument (string format = null, string url = null, string outPath = null, System.IO.Stream file = null)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = PutConvertDocumentWithHttpInfo(format, url, outPath);
+             ApiResponse<System.IO.Stream> localVarResponse = PutConvertDocumentWithHttpInfo(format, url, outPath, file);
              return localVarResponse.Data;
         }
 
@@ -11524,8 +13879,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="format">The format to convert. (optional)</param>
         /// <param name="url"> (optional)</param>
         /// <param name="outPath">Path to save result (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
-        public ApiResponse< System.IO.Stream > PutConvertDocumentWithHttpInfo (string format = null, string url = null, string outPath = null)
+        public ApiResponse< System.IO.Stream > PutConvertDocumentWithHttpInfo (string format = null, string url = null, string outPath = null, System.IO.Stream file = null)
         {
 
             var localVarPath = "/pdf/convert";
@@ -11553,6 +13909,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
             if (url != null) localVarQueryParams.Add("url", ApiClient.ParameterToString(url)); // query parameter
             if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
 
 
             // make the HTTP request
@@ -11580,10 +13937,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="format">The format to convert. (optional)</param>
         /// <param name="url"> (optional)</param>
         /// <param name="outPath">Path to save result (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>Task of System.IO.Stream</returns>
-        public async System.Threading.Tasks.Task<System.IO.Stream> PutConvertDocumentAsync (string format = null, string url = null, string outPath = null)
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutConvertDocumentAsync (string format = null, string url = null, string outPath = null, System.IO.Stream file = null)
         {
-             ApiResponse<System.IO.Stream> localVarResponse = await PutConvertDocumentAsyncWithHttpInfo(format, url, outPath);
+             ApiResponse<System.IO.Stream> localVarResponse = await PutConvertDocumentAsyncWithHttpInfo(format, url, outPath, file);
              return localVarResponse.Data;
 
         }
@@ -11595,8 +13953,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="format">The format to convert. (optional)</param>
         /// <param name="url"> (optional)</param>
         /// <param name="outPath">Path to save result (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutConvertDocumentAsyncWithHttpInfo (string format = null, string url = null, string outPath = null)
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutConvertDocumentAsyncWithHttpInfo (string format = null, string url = null, string outPath = null, System.IO.Stream file = null)
         {
 
             var localVarPath = "/pdf/convert";
@@ -11624,6 +13983,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
             if (url != null) localVarQueryParams.Add("url", ApiClient.ParameterToString(url)); // query parameter
             if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
 
 
             // make the HTTP request
@@ -12616,6 +14976,2130 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Converts PDF document (in request content) to DOC format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInRequestToDoc (string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInRequestToDocWithHttpInfo(outPath, addReturnToLineEnd, format, imageResolutionX, imageResolutionY, maxDistanceBetweenTextLines, mode, recognizeBullets, relativeHorizontalProximity, file);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to DOC format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInRequestToDocWithHttpInfo (string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToDoc");
+
+            var localVarPath = "/pdf/convert/doc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (addReturnToLineEnd != null) localVarQueryParams.Add("addReturnToLineEnd", ApiClient.ParameterToString(addReturnToLineEnd)); // query parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
+            if (imageResolutionX != null) localVarQueryParams.Add("imageResolutionX", ApiClient.ParameterToString(imageResolutionX)); // query parameter
+            if (imageResolutionY != null) localVarQueryParams.Add("imageResolutionY", ApiClient.ParameterToString(imageResolutionY)); // query parameter
+            if (maxDistanceBetweenTextLines != null) localVarQueryParams.Add("maxDistanceBetweenTextLines", ApiClient.ParameterToString(maxDistanceBetweenTextLines)); // query parameter
+            if (mode != null) localVarQueryParams.Add("mode", ApiClient.ParameterToString(mode)); // query parameter
+            if (recognizeBullets != null) localVarQueryParams.Add("recognizeBullets", ApiClient.ParameterToString(recognizeBullets)); // query parameter
+            if (relativeHorizontalProximity != null) localVarQueryParams.Add("relativeHorizontalProximity", ApiClient.ParameterToString(relativeHorizontalProximity)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToDoc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to DOC format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToDocAsync (string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInRequestToDocAsyncWithHttpInfo(outPath, addReturnToLineEnd, format, imageResolutionX, imageResolutionY, maxDistanceBetweenTextLines, mode, recognizeBullets, relativeHorizontalProximity, file);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to DOC format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToDocAsyncWithHttpInfo (string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToDoc");
+
+            var localVarPath = "/pdf/convert/doc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (addReturnToLineEnd != null) localVarQueryParams.Add("addReturnToLineEnd", ApiClient.ParameterToString(addReturnToLineEnd)); // query parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
+            if (imageResolutionX != null) localVarQueryParams.Add("imageResolutionX", ApiClient.ParameterToString(imageResolutionX)); // query parameter
+            if (imageResolutionY != null) localVarQueryParams.Add("imageResolutionY", ApiClient.ParameterToString(imageResolutionY)); // query parameter
+            if (maxDistanceBetweenTextLines != null) localVarQueryParams.Add("maxDistanceBetweenTextLines", ApiClient.ParameterToString(maxDistanceBetweenTextLines)); // query parameter
+            if (mode != null) localVarQueryParams.Add("mode", ApiClient.ParameterToString(mode)); // query parameter
+            if (recognizeBullets != null) localVarQueryParams.Add("recognizeBullets", ApiClient.ParameterToString(recognizeBullets)); // query parameter
+            if (relativeHorizontalProximity != null) localVarQueryParams.Add("relativeHorizontalProximity", ApiClient.ParameterToString(relativeHorizontalProximity)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToDoc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to PdfA format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInRequestToPdfA (string outPath, string type, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInRequestToPdfAWithHttpInfo(outPath, type, file);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to PdfA format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInRequestToPdfAWithHttpInfo (string outPath, string type, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToPdfA");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling PdfApi->PutPdfInRequestToPdfA");
+
+            var localVarPath = "/pdf/convert/pdfa";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (type != null) localVarQueryParams.Add("type", ApiClient.ParameterToString(type)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToPdfA", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to PdfA format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToPdfAAsync (string outPath, string type, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInRequestToPdfAAsyncWithHttpInfo(outPath, type, file);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to PdfA format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToPdfAAsyncWithHttpInfo (string outPath, string type, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToPdfA");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling PdfApi->PutPdfInRequestToPdfA");
+
+            var localVarPath = "/pdf/convert/pdfa";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (type != null) localVarQueryParams.Add("type", ApiClient.ParameterToString(type)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToPdfA", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to SVG format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInRequestToSvg (string outPath, bool? compressOutputToZipArchive = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInRequestToSvgWithHttpInfo(outPath, compressOutputToZipArchive, file);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to SVG format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInRequestToSvgWithHttpInfo (string outPath, bool? compressOutputToZipArchive = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToSvg");
+
+            var localVarPath = "/pdf/convert/svg";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (compressOutputToZipArchive != null) localVarQueryParams.Add("compressOutputToZipArchive", ApiClient.ParameterToString(compressOutputToZipArchive)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToSvg", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to SVG format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToSvgAsync (string outPath, bool? compressOutputToZipArchive = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInRequestToSvgAsyncWithHttpInfo(outPath, compressOutputToZipArchive, file);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to SVG format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToSvgAsyncWithHttpInfo (string outPath, bool? compressOutputToZipArchive = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToSvg");
+
+            var localVarPath = "/pdf/convert/svg";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (compressOutputToZipArchive != null) localVarQueryParams.Add("compressOutputToZipArchive", ApiClient.ParameterToString(compressOutputToZipArchive)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToSvg", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to TIFF format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInRequestToTiff (string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInRequestToTiffWithHttpInfo(outPath, brightness, compression, colorDepth, leftMargin, rightMargin, topMargin, bottomMargin, orientation, skipBlankPages, width, height, xResolution, yResolution, pageIndex, pageCount, file);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to TIFF format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInRequestToTiffWithHttpInfo (string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToTiff");
+
+            var localVarPath = "/pdf/convert/tiff";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (brightness != null) localVarQueryParams.Add("brightness", ApiClient.ParameterToString(brightness)); // query parameter
+            if (compression != null) localVarQueryParams.Add("compression", ApiClient.ParameterToString(compression)); // query parameter
+            if (colorDepth != null) localVarQueryParams.Add("colorDepth", ApiClient.ParameterToString(colorDepth)); // query parameter
+            if (leftMargin != null) localVarQueryParams.Add("leftMargin", ApiClient.ParameterToString(leftMargin)); // query parameter
+            if (rightMargin != null) localVarQueryParams.Add("rightMargin", ApiClient.ParameterToString(rightMargin)); // query parameter
+            if (topMargin != null) localVarQueryParams.Add("topMargin", ApiClient.ParameterToString(topMargin)); // query parameter
+            if (bottomMargin != null) localVarQueryParams.Add("bottomMargin", ApiClient.ParameterToString(bottomMargin)); // query parameter
+            if (orientation != null) localVarQueryParams.Add("orientation", ApiClient.ParameterToString(orientation)); // query parameter
+            if (skipBlankPages != null) localVarQueryParams.Add("skipBlankPages", ApiClient.ParameterToString(skipBlankPages)); // query parameter
+            if (width != null) localVarQueryParams.Add("width", ApiClient.ParameterToString(width)); // query parameter
+            if (height != null) localVarQueryParams.Add("height", ApiClient.ParameterToString(height)); // query parameter
+            if (xResolution != null) localVarQueryParams.Add("xResolution", ApiClient.ParameterToString(xResolution)); // query parameter
+            if (yResolution != null) localVarQueryParams.Add("yResolution", ApiClient.ParameterToString(yResolution)); // query parameter
+            if (pageIndex != null) localVarQueryParams.Add("pageIndex", ApiClient.ParameterToString(pageIndex)); // query parameter
+            if (pageCount != null) localVarQueryParams.Add("pageCount", ApiClient.ParameterToString(pageCount)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToTiff", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to TIFF format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToTiffAsync (string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInRequestToTiffAsyncWithHttpInfo(outPath, brightness, compression, colorDepth, leftMargin, rightMargin, topMargin, bottomMargin, orientation, skipBlankPages, width, height, xResolution, yResolution, pageIndex, pageCount, file);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to TIFF format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToTiffAsyncWithHttpInfo (string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToTiff");
+
+            var localVarPath = "/pdf/convert/tiff";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (brightness != null) localVarQueryParams.Add("brightness", ApiClient.ParameterToString(brightness)); // query parameter
+            if (compression != null) localVarQueryParams.Add("compression", ApiClient.ParameterToString(compression)); // query parameter
+            if (colorDepth != null) localVarQueryParams.Add("colorDepth", ApiClient.ParameterToString(colorDepth)); // query parameter
+            if (leftMargin != null) localVarQueryParams.Add("leftMargin", ApiClient.ParameterToString(leftMargin)); // query parameter
+            if (rightMargin != null) localVarQueryParams.Add("rightMargin", ApiClient.ParameterToString(rightMargin)); // query parameter
+            if (topMargin != null) localVarQueryParams.Add("topMargin", ApiClient.ParameterToString(topMargin)); // query parameter
+            if (bottomMargin != null) localVarQueryParams.Add("bottomMargin", ApiClient.ParameterToString(bottomMargin)); // query parameter
+            if (orientation != null) localVarQueryParams.Add("orientation", ApiClient.ParameterToString(orientation)); // query parameter
+            if (skipBlankPages != null) localVarQueryParams.Add("skipBlankPages", ApiClient.ParameterToString(skipBlankPages)); // query parameter
+            if (width != null) localVarQueryParams.Add("width", ApiClient.ParameterToString(width)); // query parameter
+            if (height != null) localVarQueryParams.Add("height", ApiClient.ParameterToString(height)); // query parameter
+            if (xResolution != null) localVarQueryParams.Add("xResolution", ApiClient.ParameterToString(xResolution)); // query parameter
+            if (yResolution != null) localVarQueryParams.Add("yResolution", ApiClient.ParameterToString(yResolution)); // query parameter
+            if (pageIndex != null) localVarQueryParams.Add("pageIndex", ApiClient.ParameterToString(pageIndex)); // query parameter
+            if (pageCount != null) localVarQueryParams.Add("pageCount", ApiClient.ParameterToString(pageCount)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToTiff", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XLS format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInRequestToXls (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInRequestToXlsWithHttpInfo(outPath, insertBlankColumnAtFirst, minimizeTheNumberOfWorksheets, scaleFactor, uniformWorksheets, file);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XLS format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInRequestToXlsWithHttpInfo (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToXls");
+
+            var localVarPath = "/pdf/convert/xls";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (insertBlankColumnAtFirst != null) localVarQueryParams.Add("insertBlankColumnAtFirst", ApiClient.ParameterToString(insertBlankColumnAtFirst)); // query parameter
+            if (minimizeTheNumberOfWorksheets != null) localVarQueryParams.Add("minimizeTheNumberOfWorksheets", ApiClient.ParameterToString(minimizeTheNumberOfWorksheets)); // query parameter
+            if (scaleFactor != null) localVarQueryParams.Add("scaleFactor", ApiClient.ParameterToString(scaleFactor)); // query parameter
+            if (uniformWorksheets != null) localVarQueryParams.Add("uniformWorksheets", ApiClient.ParameterToString(uniformWorksheets)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToXls", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XLS format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToXlsAsync (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInRequestToXlsAsyncWithHttpInfo(outPath, insertBlankColumnAtFirst, minimizeTheNumberOfWorksheets, scaleFactor, uniformWorksheets, file);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XLS format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToXlsAsyncWithHttpInfo (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToXls");
+
+            var localVarPath = "/pdf/convert/xls";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (insertBlankColumnAtFirst != null) localVarQueryParams.Add("insertBlankColumnAtFirst", ApiClient.ParameterToString(insertBlankColumnAtFirst)); // query parameter
+            if (minimizeTheNumberOfWorksheets != null) localVarQueryParams.Add("minimizeTheNumberOfWorksheets", ApiClient.ParameterToString(minimizeTheNumberOfWorksheets)); // query parameter
+            if (scaleFactor != null) localVarQueryParams.Add("scaleFactor", ApiClient.ParameterToString(scaleFactor)); // query parameter
+            if (uniformWorksheets != null) localVarQueryParams.Add("uniformWorksheets", ApiClient.ParameterToString(uniformWorksheets)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToXls", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XPS format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInRequestToXps (string outPath, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInRequestToXpsWithHttpInfo(outPath, file);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XPS format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInRequestToXpsWithHttpInfo (string outPath, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToXps");
+
+            var localVarPath = "/pdf/convert/xps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToXps", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XPS format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToXpsAsync (string outPath, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInRequestToXpsAsyncWithHttpInfo(outPath, file);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XPS format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToXpsAsyncWithHttpInfo (string outPath, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToXps");
+
+            var localVarPath = "/pdf/convert/xps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToXps", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInStorageToDoc (string name, string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInStorageToDocWithHttpInfo(name, outPath, addReturnToLineEnd, format, imageResolutionX, imageResolutionY, maxDistanceBetweenTextLines, mode, recognizeBullets, relativeHorizontalProximity, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInStorageToDocWithHttpInfo (string name, string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToDoc");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToDoc");
+
+            var localVarPath = "/pdf/{name}/convert/doc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (addReturnToLineEnd != null) localVarQueryParams.Add("addReturnToLineEnd", ApiClient.ParameterToString(addReturnToLineEnd)); // query parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
+            if (imageResolutionX != null) localVarQueryParams.Add("imageResolutionX", ApiClient.ParameterToString(imageResolutionX)); // query parameter
+            if (imageResolutionY != null) localVarQueryParams.Add("imageResolutionY", ApiClient.ParameterToString(imageResolutionY)); // query parameter
+            if (maxDistanceBetweenTextLines != null) localVarQueryParams.Add("maxDistanceBetweenTextLines", ApiClient.ParameterToString(maxDistanceBetweenTextLines)); // query parameter
+            if (mode != null) localVarQueryParams.Add("mode", ApiClient.ParameterToString(mode)); // query parameter
+            if (recognizeBullets != null) localVarQueryParams.Add("recognizeBullets", ApiClient.ParameterToString(recognizeBullets)); // query parameter
+            if (relativeHorizontalProximity != null) localVarQueryParams.Add("relativeHorizontalProximity", ApiClient.ParameterToString(relativeHorizontalProximity)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToDoc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToDocAsync (string name, string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInStorageToDocAsyncWithHttpInfo(name, outPath, addReturnToLineEnd, format, imageResolutionX, imageResolutionY, maxDistanceBetweenTextLines, mode, recognizeBullets, relativeHorizontalProximity, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to DOC format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.doc)</param>
+        /// <param name="addReturnToLineEnd">Add return to line end. (optional)</param>
+        /// <param name="format">Allows to specify .doc or .docx file format. (optional)</param>
+        /// <param name="imageResolutionX">Image resolution X. (optional)</param>
+        /// <param name="imageResolutionY">Image resolution Y. (optional)</param>
+        /// <param name="maxDistanceBetweenTextLines">Max distance between text lines. (optional)</param>
+        /// <param name="mode">Allows to control how a PDF document is converted into a word processing document. (optional)</param>
+        /// <param name="recognizeBullets">Recognize bullets. (optional)</param>
+        /// <param name="relativeHorizontalProximity">Relative horizontal proximity. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToDocAsyncWithHttpInfo (string name, string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToDoc");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToDoc");
+
+            var localVarPath = "/pdf/{name}/convert/doc";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (addReturnToLineEnd != null) localVarQueryParams.Add("addReturnToLineEnd", ApiClient.ParameterToString(addReturnToLineEnd)); // query parameter
+            if (format != null) localVarQueryParams.Add("format", ApiClient.ParameterToString(format)); // query parameter
+            if (imageResolutionX != null) localVarQueryParams.Add("imageResolutionX", ApiClient.ParameterToString(imageResolutionX)); // query parameter
+            if (imageResolutionY != null) localVarQueryParams.Add("imageResolutionY", ApiClient.ParameterToString(imageResolutionY)); // query parameter
+            if (maxDistanceBetweenTextLines != null) localVarQueryParams.Add("maxDistanceBetweenTextLines", ApiClient.ParameterToString(maxDistanceBetweenTextLines)); // query parameter
+            if (mode != null) localVarQueryParams.Add("mode", ApiClient.ParameterToString(mode)); // query parameter
+            if (recognizeBullets != null) localVarQueryParams.Add("recognizeBullets", ApiClient.ParameterToString(recognizeBullets)); // query parameter
+            if (relativeHorizontalProximity != null) localVarQueryParams.Add("relativeHorizontalProximity", ApiClient.ParameterToString(relativeHorizontalProximity)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToDoc", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInStorageToPdfA (string name, string outPath, string type, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInStorageToPdfAWithHttpInfo(name, outPath, type, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInStorageToPdfAWithHttpInfo (string name, string outPath, string type, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToPdfA");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToPdfA");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling PdfApi->PutPdfInStorageToPdfA");
+
+            var localVarPath = "/pdf/{name}/convert/pdfa";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (type != null) localVarQueryParams.Add("type", ApiClient.ParameterToString(type)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToPdfA", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToPdfAAsync (string name, string outPath, string type, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInStorageToPdfAAsyncWithHttpInfo(name, outPath, type, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="type">Type of PdfA format.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToPdfAAsyncWithHttpInfo (string name, string outPath, string type, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToPdfA");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToPdfA");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling PdfApi->PutPdfInStorageToPdfA");
+
+            var localVarPath = "/pdf/{name}/convert/pdfa";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (type != null) localVarQueryParams.Add("type", ApiClient.ParameterToString(type)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToPdfA", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInStorageToSvg (string name, string outPath, bool? compressOutputToZipArchive = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInStorageToSvgWithHttpInfo(name, outPath, compressOutputToZipArchive, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInStorageToSvgWithHttpInfo (string name, string outPath, bool? compressOutputToZipArchive = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToSvg");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToSvg");
+
+            var localVarPath = "/pdf/{name}/convert/svg";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (compressOutputToZipArchive != null) localVarQueryParams.Add("compressOutputToZipArchive", ApiClient.ParameterToString(compressOutputToZipArchive)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToSvg", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToSvgAsync (string name, string outPath, bool? compressOutputToZipArchive = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInStorageToSvgAsyncWithHttpInfo(name, outPath, compressOutputToZipArchive, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to SVG format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.svg)</param>
+        /// <param name="compressOutputToZipArchive">Specifies whether output will be created as one zip-archive. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToSvgAsyncWithHttpInfo (string name, string outPath, bool? compressOutputToZipArchive = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToSvg");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToSvg");
+
+            var localVarPath = "/pdf/{name}/convert/svg";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (compressOutputToZipArchive != null) localVarQueryParams.Add("compressOutputToZipArchive", ApiClient.ParameterToString(compressOutputToZipArchive)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToSvg", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInStorageToTiff (string name, string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInStorageToTiffWithHttpInfo(name, outPath, brightness, compression, colorDepth, leftMargin, rightMargin, topMargin, bottomMargin, orientation, skipBlankPages, width, height, xResolution, yResolution, pageIndex, pageCount, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInStorageToTiffWithHttpInfo (string name, string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToTiff");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToTiff");
+
+            var localVarPath = "/pdf/{name}/convert/tiff";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (brightness != null) localVarQueryParams.Add("brightness", ApiClient.ParameterToString(brightness)); // query parameter
+            if (compression != null) localVarQueryParams.Add("compression", ApiClient.ParameterToString(compression)); // query parameter
+            if (colorDepth != null) localVarQueryParams.Add("colorDepth", ApiClient.ParameterToString(colorDepth)); // query parameter
+            if (leftMargin != null) localVarQueryParams.Add("leftMargin", ApiClient.ParameterToString(leftMargin)); // query parameter
+            if (rightMargin != null) localVarQueryParams.Add("rightMargin", ApiClient.ParameterToString(rightMargin)); // query parameter
+            if (topMargin != null) localVarQueryParams.Add("topMargin", ApiClient.ParameterToString(topMargin)); // query parameter
+            if (bottomMargin != null) localVarQueryParams.Add("bottomMargin", ApiClient.ParameterToString(bottomMargin)); // query parameter
+            if (orientation != null) localVarQueryParams.Add("orientation", ApiClient.ParameterToString(orientation)); // query parameter
+            if (skipBlankPages != null) localVarQueryParams.Add("skipBlankPages", ApiClient.ParameterToString(skipBlankPages)); // query parameter
+            if (width != null) localVarQueryParams.Add("width", ApiClient.ParameterToString(width)); // query parameter
+            if (height != null) localVarQueryParams.Add("height", ApiClient.ParameterToString(height)); // query parameter
+            if (xResolution != null) localVarQueryParams.Add("xResolution", ApiClient.ParameterToString(xResolution)); // query parameter
+            if (yResolution != null) localVarQueryParams.Add("yResolution", ApiClient.ParameterToString(yResolution)); // query parameter
+            if (pageIndex != null) localVarQueryParams.Add("pageIndex", ApiClient.ParameterToString(pageIndex)); // query parameter
+            if (pageCount != null) localVarQueryParams.Add("pageCount", ApiClient.ParameterToString(pageCount)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToTiff", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToTiffAsync (string name, string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInStorageToTiffAsyncWithHttpInfo(name, outPath, brightness, compression, colorDepth, leftMargin, rightMargin, topMargin, bottomMargin, orientation, skipBlankPages, width, height, xResolution, yResolution, pageIndex, pageCount, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to TIFF format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tiff)</param>
+        /// <param name="brightness">Image brightness. (optional)</param>
+        /// <param name="compression">Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional)</param>
+        /// <param name="colorDepth">Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional)</param>
+        /// <param name="leftMargin">Left image margin. (optional)</param>
+        /// <param name="rightMargin">Right image margin. (optional)</param>
+        /// <param name="topMargin">Top image margin. (optional)</param>
+        /// <param name="bottomMargin">Bottom image margin. (optional)</param>
+        /// <param name="orientation">Image orientation. Possible values are: None, Landscape, Portait. (optional)</param>
+        /// <param name="skipBlankPages">Skip blank pages flag. (optional)</param>
+        /// <param name="width">Image width. (optional)</param>
+        /// <param name="height">Image height. (optional)</param>
+        /// <param name="xResolution">Horizontal resolution. (optional)</param>
+        /// <param name="yResolution">Vertical resolution. (optional)</param>
+        /// <param name="pageIndex">Start page to export. (optional)</param>
+        /// <param name="pageCount">Number of pages to export. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToTiffAsyncWithHttpInfo (string name, string outPath, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToTiff");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToTiff");
+
+            var localVarPath = "/pdf/{name}/convert/tiff";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (brightness != null) localVarQueryParams.Add("brightness", ApiClient.ParameterToString(brightness)); // query parameter
+            if (compression != null) localVarQueryParams.Add("compression", ApiClient.ParameterToString(compression)); // query parameter
+            if (colorDepth != null) localVarQueryParams.Add("colorDepth", ApiClient.ParameterToString(colorDepth)); // query parameter
+            if (leftMargin != null) localVarQueryParams.Add("leftMargin", ApiClient.ParameterToString(leftMargin)); // query parameter
+            if (rightMargin != null) localVarQueryParams.Add("rightMargin", ApiClient.ParameterToString(rightMargin)); // query parameter
+            if (topMargin != null) localVarQueryParams.Add("topMargin", ApiClient.ParameterToString(topMargin)); // query parameter
+            if (bottomMargin != null) localVarQueryParams.Add("bottomMargin", ApiClient.ParameterToString(bottomMargin)); // query parameter
+            if (orientation != null) localVarQueryParams.Add("orientation", ApiClient.ParameterToString(orientation)); // query parameter
+            if (skipBlankPages != null) localVarQueryParams.Add("skipBlankPages", ApiClient.ParameterToString(skipBlankPages)); // query parameter
+            if (width != null) localVarQueryParams.Add("width", ApiClient.ParameterToString(width)); // query parameter
+            if (height != null) localVarQueryParams.Add("height", ApiClient.ParameterToString(height)); // query parameter
+            if (xResolution != null) localVarQueryParams.Add("xResolution", ApiClient.ParameterToString(xResolution)); // query parameter
+            if (yResolution != null) localVarQueryParams.Add("yResolution", ApiClient.ParameterToString(yResolution)); // query parameter
+            if (pageIndex != null) localVarQueryParams.Add("pageIndex", ApiClient.ParameterToString(pageIndex)); // query parameter
+            if (pageCount != null) localVarQueryParams.Add("pageCount", ApiClient.ParameterToString(pageCount)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToTiff", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInStorageToXls (string name, string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInStorageToXlsWithHttpInfo(name, outPath, insertBlankColumnAtFirst, minimizeTheNumberOfWorksheets, scaleFactor, uniformWorksheets, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInStorageToXlsWithHttpInfo (string name, string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToXls");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToXls");
+
+            var localVarPath = "/pdf/{name}/convert/xls";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (insertBlankColumnAtFirst != null) localVarQueryParams.Add("insertBlankColumnAtFirst", ApiClient.ParameterToString(insertBlankColumnAtFirst)); // query parameter
+            if (minimizeTheNumberOfWorksheets != null) localVarQueryParams.Add("minimizeTheNumberOfWorksheets", ApiClient.ParameterToString(minimizeTheNumberOfWorksheets)); // query parameter
+            if (scaleFactor != null) localVarQueryParams.Add("scaleFactor", ApiClient.ParameterToString(scaleFactor)); // query parameter
+            if (uniformWorksheets != null) localVarQueryParams.Add("uniformWorksheets", ApiClient.ParameterToString(uniformWorksheets)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToXls", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToXlsAsync (string name, string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInStorageToXlsAsyncWithHttpInfo(name, outPath, insertBlankColumnAtFirst, minimizeTheNumberOfWorksheets, scaleFactor, uniformWorksheets, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XLS format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xls)</param>
+        /// <param name="insertBlankColumnAtFirst">Insert blank column at first (optional)</param>
+        /// <param name="minimizeTheNumberOfWorksheets">Minimize the number of worksheets (optional)</param>
+        /// <param name="scaleFactor">Scale factor (optional)</param>
+        /// <param name="uniformWorksheets">Uniform worksheets (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToXlsAsyncWithHttpInfo (string name, string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToXls");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToXls");
+
+            var localVarPath = "/pdf/{name}/convert/xls";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (insertBlankColumnAtFirst != null) localVarQueryParams.Add("insertBlankColumnAtFirst", ApiClient.ParameterToString(insertBlankColumnAtFirst)); // query parameter
+            if (minimizeTheNumberOfWorksheets != null) localVarQueryParams.Add("minimizeTheNumberOfWorksheets", ApiClient.ParameterToString(minimizeTheNumberOfWorksheets)); // query parameter
+            if (scaleFactor != null) localVarQueryParams.Add("scaleFactor", ApiClient.ParameterToString(scaleFactor)); // query parameter
+            if (uniformWorksheets != null) localVarQueryParams.Add("uniformWorksheets", ApiClient.ParameterToString(uniformWorksheets)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToXls", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInStorageToXps (string name, string outPath, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInStorageToXpsWithHttpInfo(name, outPath, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInStorageToXpsWithHttpInfo (string name, string outPath, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToXps");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToXps");
+
+            var localVarPath = "/pdf/{name}/convert/xps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToXps", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToXpsAsync (string name, string outPath, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInStorageToXpsAsyncWithHttpInfo(name, outPath, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XPS format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xps)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToXpsAsyncWithHttpInfo (string name, string outPath, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToXps");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToXps");
+
+            var localVarPath = "/pdf/{name}/convert/xps";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToXps", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
         /// Create searchable PDF document. Generate OCR layer for images in input PDF document. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12952,7 +17436,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">The field name/</param>
+        /// <param name="fieldName">The name of a field to be updated.</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
@@ -12968,7 +17452,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">The field name/</param>
+        /// <param name="fieldName">The name of a field to be updated.</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
@@ -13041,7 +17525,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">The field name/</param>
+        /// <param name="fieldName">The name of a field to be updated.</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
@@ -13058,7 +17542,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="fieldName">The field name/</param>
+        /// <param name="fieldName">The name of a field to be updated.</param>
         /// <param name="field">with the field data. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
@@ -13124,6 +17608,173 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<FieldResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (FieldResponse) ApiClient.Deserialize(localVarResponse, typeof(FieldResponse)));
+        }
+
+        /// <summary>
+        /// Update fields. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fields">with the fields data. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>FieldsResponse</returns>
+        public FieldsResponse PutUpdateFields (string name, Fields fields = null, string storage = null, string folder = null)
+        {
+             ApiResponse<FieldsResponse> localVarResponse = PutUpdateFieldsWithHttpInfo(name, fields, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update fields. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fields">with the fields data. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of FieldsResponse</returns>
+        public ApiResponse< FieldsResponse > PutUpdateFieldsWithHttpInfo (string name, Fields fields = null, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutUpdateFields");
+
+            var localVarPath = "/pdf/{name}/fields";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (fields != null && fields.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(fields); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = fields; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutUpdateFields", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FieldsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FieldsResponse) ApiClient.Deserialize(localVarResponse, typeof(FieldsResponse)));
+        }
+
+        /// <summary>
+        /// Update fields. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fields">with the fields data. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of FieldsResponse</returns>
+        public async System.Threading.Tasks.Task<FieldsResponse> PutUpdateFieldsAsync (string name, Fields fields = null, string storage = null, string folder = null)
+        {
+             ApiResponse<FieldsResponse> localVarResponse = await PutUpdateFieldsAsyncWithHttpInfo(name, fields, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update fields. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fields">with the fields data. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (FieldsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FieldsResponse>> PutUpdateFieldsAsyncWithHttpInfo (string name, Fields fields = null, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutUpdateFields");
+
+            var localVarPath = "/pdf/{name}/fields";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (fields != null && fields.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(fields); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = fields; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutUpdateFields", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<FieldsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (FieldsResponse) ApiClient.Deserialize(localVarResponse, typeof(FieldsResponse)));
         }
 
     }

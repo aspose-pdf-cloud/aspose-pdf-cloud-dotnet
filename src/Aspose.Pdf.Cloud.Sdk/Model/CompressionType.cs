@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="BookmarksTests.cs">
+// <copyright company="Aspose" file="CompressionType.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -23,28 +23,60 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
+using System.Linq;
+using System.IO;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System.Net;
-using NUnit.Framework;
+using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 
-namespace Aspose.Pdf.Cloud.Sdk.Test
+namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    ///  Class for testing Bookmarks Api
+    /// Used to specify the parameter value passed to a Tiff image device.
     /// </summary>
-    [TestFixture]
-    public class BookmarksTests : TestsBase
+    /// <value>Used to specify the parameter value passed to a Tiff image device.</value>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum CompressionType
     {
+        
         /// <summary>
-        /// Test GetDocumentBookmarks
+        /// Enum LZW for "LZW"
         /// </summary>
-        [Test]
-        public void GetDocumentBookmarksTest()
-        {
-            const string name = "PdfWithBookmarks.pdf";
-            UploadFile(name, name);
-
-            var response = PdfApi.GetDocumentBookmarks(name, folder: TempFolder);
-            Assert.That(response.Length, Is.GreaterThan(0));
-        }
+        [EnumMember(Value = "LZW")]
+        LZW,
+        
+        /// <summary>
+        /// Enum CCITT4 for "CCITT4"
+        /// </summary>
+        [EnumMember(Value = "CCITT4")]
+        CCITT4,
+        
+        /// <summary>
+        /// Enum CCITT3 for "CCITT3"
+        /// </summary>
+        [EnumMember(Value = "CCITT3")]
+        CCITT3,
+        
+        /// <summary>
+        /// Enum RLE for "RLE"
+        /// </summary>
+        [EnumMember(Value = "RLE")]
+        RLE,
+        
+        /// <summary>
+        /// Enum None for "None"
+        /// </summary>
+        [EnumMember(Value = "None")]
+        None
     }
+
 }

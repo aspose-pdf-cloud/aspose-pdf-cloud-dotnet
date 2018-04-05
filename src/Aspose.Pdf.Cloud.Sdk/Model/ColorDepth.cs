@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="BookmarksTests.cs">
+// <copyright company="Aspose" file="ColorDepth.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -23,28 +23,54 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
+using System.Linq;
+using System.IO;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System.Net;
-using NUnit.Framework;
+using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 
-namespace Aspose.Pdf.Cloud.Sdk.Test
+namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    ///  Class for testing Bookmarks Api
+    /// Used to specify the parameter value passed to a Tiff image device.
     /// </summary>
-    [TestFixture]
-    public class BookmarksTests : TestsBase
+    /// <value>Used to specify the parameter value passed to a Tiff image device.</value>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum ColorDepth
     {
+        
         /// <summary>
-        /// Test GetDocumentBookmarks
+        /// Enum Default for "Default"
         /// </summary>
-        [Test]
-        public void GetDocumentBookmarksTest()
-        {
-            const string name = "PdfWithBookmarks.pdf";
-            UploadFile(name, name);
-
-            var response = PdfApi.GetDocumentBookmarks(name, folder: TempFolder);
-            Assert.That(response.Length, Is.GreaterThan(0));
-        }
+        [EnumMember(Value = "Default")]
+        Default,
+        
+        /// <summary>
+        /// Enum Format8bpp for "Format8bpp"
+        /// </summary>
+        [EnumMember(Value = "Format8bpp")]
+        Format8bpp,
+        
+        /// <summary>
+        /// Enum Format4bpp for "Format4bpp"
+        /// </summary>
+        [EnumMember(Value = "Format4bpp")]
+        Format4bpp,
+        
+        /// <summary>
+        /// Enum Format1bpp for "Format1bpp"
+        /// </summary>
+        [EnumMember(Value = "Format1bpp")]
+        Format1bpp
     }
+
 }

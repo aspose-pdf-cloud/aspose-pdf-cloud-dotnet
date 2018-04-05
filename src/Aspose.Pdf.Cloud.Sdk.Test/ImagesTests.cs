@@ -52,7 +52,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.GetImage(Name, 1, 1, folder: TempFolder);
             Assert.That(response.Length, Is.GreaterThan(0));
         }
-        
+
+        /// <summary>
+        /// Test GetImageWithFormat
+        /// </summary>
+        [Test]
+        public void GetImageWithFormatTest()
+        {
+            var response = PdfApi.GetImage(Name, 1, 1, format: "jpeg", height: 100, width: 100, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
+
         /// <summary>
         /// Test GetImages
         /// </summary>
@@ -73,6 +83,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(imageName, imageName);
 
             var response = PdfApi.PostReplaceImage(Name, 1, 1, Path.Combine(TempFolder, imageName), folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+        }
+
+        /// <summary>
+        /// Test PostReplaceImageFromRequest
+        /// </summary>
+        [Test]
+        public void PostReplaceImageFromRequestTest()
+        {
+            const string imageName = "Koala.jpg";
+            Stream imageStream = File.OpenRead(Path.Combine(TestDataFolder, imageName));
+
+            var response = PdfApi.PostReplaceImage(Name, 1, 1, image: imageStream, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
         }
     }

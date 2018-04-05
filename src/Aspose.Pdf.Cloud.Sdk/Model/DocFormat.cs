@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="BookmarksTests.cs">
+// <copyright company="Aspose" file="DocFormat.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -23,28 +23,42 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
+using System.Linq;
+using System.IO;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System.Net;
-using NUnit.Framework;
+using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 
-namespace Aspose.Pdf.Cloud.Sdk.Test
+namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    ///  Class for testing Bookmarks Api
+    /// Allows to specify .doc or .docx file format.
     /// </summary>
-    [TestFixture]
-    public class BookmarksTests : TestsBase
+    /// <value>Allows to specify .doc or .docx file format.</value>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum DocFormat
     {
+        
         /// <summary>
-        /// Test GetDocumentBookmarks
+        /// Enum Doc for "Doc"
         /// </summary>
-        [Test]
-        public void GetDocumentBookmarksTest()
-        {
-            const string name = "PdfWithBookmarks.pdf";
-            UploadFile(name, name);
-
-            var response = PdfApi.GetDocumentBookmarks(name, folder: TempFolder);
-            Assert.That(response.Length, Is.GreaterThan(0));
-        }
+        [EnumMember(Value = "Doc")]
+        Doc,
+        
+        /// <summary>
+        /// Enum DocX for "DocX"
+        /// </summary>
+        [EnumMember(Value = "DocX")]
+        DocX
     }
+
 }

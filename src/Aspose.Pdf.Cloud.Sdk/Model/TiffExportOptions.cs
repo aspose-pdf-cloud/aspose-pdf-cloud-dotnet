@@ -65,7 +65,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="PageIndex">Start page to export..</param>
         /// <param name="PageCount">Number of pages to export..</param>
         /// <param name="ResultFile">Resulting image file..</param>
-        public TiffExportOptions(double? Brightness = default(double?), string Compression = default(string), string ColorDepth = default(string), int? LeftMargin = default(int?), int? RightMargin = default(int?), int? TopMargin = default(int?), int? BottomMargin = default(int?), string Orientation = default(string), bool? SkipBlankPages = default(bool?), int? Width = default(int?), int? Height = default(int?), int? XResolution = default(int?), int? YResolution = default(int?), int? PageIndex = default(int?), int? PageCount = default(int?), string ResultFile = default(string))
+        public TiffExportOptions(double? Brightness = default(double?), CompressionType Compression = default(CompressionType), ColorDepth ColorDepth = default(ColorDepth), int? LeftMargin = default(int?), int? RightMargin = default(int?), int? TopMargin = default(int?), int? BottomMargin = default(int?), ShapeType Orientation = default(ShapeType), bool? SkipBlankPages = default(bool?), int? Width = default(int?), int? Height = default(int?), int? XResolution = default(int?), int? YResolution = default(int?), int? PageIndex = default(int?), int? PageCount = default(int?), string ResultFile = default(string))
         {
             this.Brightness = Brightness;
             this.Compression = Compression;
@@ -97,14 +97,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None.</value>
         [DataMember(Name="Compression", EmitDefaultValue=false)]
-        public string Compression { get; set; }
+        public CompressionType Compression { get; set; }
 
         /// <summary>
         /// Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp.
         /// </summary>
         /// <value>Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp.</value>
         [DataMember(Name="ColorDepth", EmitDefaultValue=false)]
-        public string ColorDepth { get; set; }
+        public ColorDepth ColorDepth { get; set; }
 
         /// <summary>
         /// Left image margin.
@@ -139,7 +139,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Image orientation. Possible values are: None, Landscape, Portait.</value>
         [DataMember(Name="Orientation", EmitDefaultValue=false)]
-        public string Orientation { get; set; }
+        public ShapeType Orientation { get; set; }
 
         /// <summary>
         /// Skip blank pages flag.

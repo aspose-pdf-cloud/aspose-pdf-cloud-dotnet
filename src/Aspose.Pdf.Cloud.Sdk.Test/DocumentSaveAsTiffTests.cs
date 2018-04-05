@@ -33,7 +33,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     ///  Class for testing DocumentSaveAs Api
     /// </summary>
     [TestFixture]
-    public class DocumentSaveAsTests : TestsBase
+    public class DocumentSaveAsTiffTests : TestsBase
     {
         private const string Name = "4pages.pdf";
 
@@ -76,13 +76,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var options = new TiffExportOptions(
                 ResultFile: "4pages.tiff",
                 Brightness: 0.6,
-                Compression: "Ccitt4",
-                ColorDepth: "format1bpp",
+                Compression: CompressionType.CCITT4,
+                ColorDepth: ColorDepth.Format1bpp,
                 LeftMargin: 0,
                 RightMargin: 0,
                 TopMargin: 0,
                 BottomMargin: 0,
-                Orientation: "portait",
+                Orientation: ShapeType.Portrait,
                 SkipBlankPages: true,
                 Width: 1200,
                 Height: 1600,

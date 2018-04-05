@@ -28,7 +28,8 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Aspose.Pdf.Cloud.Sdk.Api;
 using Aspose.Pdf.Cloud.Sdk.Client;
-using Com.Aspose.Storage.Api;
+using Aspose.Storage.Cloud.Sdk.Api;
+using Aspose.Storage.Cloud.Sdk.Model.Requests;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using RestSharp.Extensions;
@@ -38,8 +39,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     public abstract class TestsBase
     {
         private const string BaseProductUri = @"http://api-dev.aspose.cloud";
-
-        private const string TestDataFolder = @"..\..\..\..\testData";
+        
+        protected const string TestDataFolder = @"..\..\..\..\testData";
         private const string ServerCredsFile = @"..\..\..\Settings\servercreds.json";
 
         protected const string TempFolder = "TempPdf";
@@ -50,7 +51,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public virtual void SetUp()
         {
             // To run tests with your own credentials please uncomment following line of code
-            // this.keys = new Keys { AppKey = "your app key", AppSid = "your app sid" };
+            // this.keys = new Keys { AppKey = "your app key", AppSID = "your app sid" };
 
             if (null == keys)
             {
@@ -62,7 +63,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 throw new FileNotFoundException("servercreds.json doesn't contain AppKey and AppSid");
             }
 
-            StorageApi = new StorageApi(keys.AppKey, keys.AppSID, BaseProductUri + "/v1.1");
+            var storageConfiguration = new global::Aspose.Storage.Cloud.Sdk.Configuration()
+            {
+                AppKey = keys.AppKey,
+                AppSid = keys.AppSID,
+                ApiBaseUrl = BaseProductUri + "/v1.1"
+            };
+
+            StorageApi = new StorageApi(storageConfiguration);
+
             Configuration = new Configuration(keys.AppKey, keys.AppSID, BaseProductUri, authType: AuthType.OAuth2);
             PdfApi = new PdfApi(Configuration);
         }
@@ -80,13 +89,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
         protected void UploadFile(string sourcePath, string serverFileName)
         {
-            byte[] data;
             using (var file = File.OpenRead(Path.Combine(TestDataFolder, sourcePath)))
             {
-                data = file.ReadAsBytes();
-            }
+                PutCreateRequest request = new PutCreateRequest(Path.Combine(TempFolder, serverFileName), file);
 
-            StorageApi.PutCreate(Path.Combine(TempFolder, serverFileName), null, null, data);
+                StorageApi.PutCreate(request);
+            }
         }
 
         private class Keys
