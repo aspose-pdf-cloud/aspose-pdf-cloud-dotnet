@@ -65,6 +65,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         }
 
         /// <summary>
+        /// Test GetPageWithFormat
+        /// </summary>
+        [Test]
+        public void GetPageWithFormatTest()
+        {
+            var response = PdfApi.GetPage(Name, 3, format: "jpeg", width: 100, height: 100, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
+
+        /// <summary>
         /// Test GetPages
         /// </summary>
         [Test]

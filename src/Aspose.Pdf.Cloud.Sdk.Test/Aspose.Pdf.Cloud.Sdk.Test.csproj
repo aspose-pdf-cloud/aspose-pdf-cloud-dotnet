@@ -37,8 +37,8 @@ OpenAPI spec version: 1.1
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Aspose.Storage-Cloud, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Aspose.Storage-Cloud.1.0.10\lib\Aspose.Storage-Cloud.dll</HintPath>
+    <Reference Include="Aspose.Storage.Cloud.Sdk, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Aspose.Storage-Cloud.18.3.0\lib\net20\Aspose.Storage.Cloud.Sdk.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -74,7 +74,8 @@ OpenAPI spec version: 1.1
     <Compile Include="AppendTests.cs" />
     <Compile Include="AttachmentsTests.cs" />
     <Compile Include="BookmarksTests.cs" />
-    <Compile Include="DocumentSaveAsApiTests.cs" />
+    <Compile Include="ConvertTests.cs" />
+    <Compile Include="DocumentSaveAsTiffTests.cs" />
     <Compile Include="DocumentTests.cs" />
     <Compile Include="FieldsTests.cs" />
     <Compile Include="FragmentsAndSegmentsTests.cs" />
@@ -100,6 +101,9 @@ OpenAPI spec version: 1.1
       <Project>{ef4ce7ef-dd3c-4654-8b0a-4bf813184ee4}</Project>
       <Name>Aspose.Pdf.Cloud.Sdk</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
