@@ -38,7 +38,6 @@ Aspose.Pdf for Cloud helps you manipulate elements of a PDF file like text, anno
 
         <!-- A readme.txt will be displayed when the package is installed -->
         <file src="..\..\README.md" target="" />
-        <file src="bin\Release\Aspose.Pdf.Cloud.Sdk.dll" target="lib" />
 
     </files>
 </package>
