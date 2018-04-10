@@ -39,11 +39,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     public abstract class TestsBase
     {
         private const string BaseProductUri = @"http://api-dev.aspose.cloud";
-        
+
         protected const string TestDataFolder = @"..\..\..\..\testData";
         private const string ServerCredsFile = @"..\..\..\Settings\servercreds.json";
 
-        protected const string TempFolder = "TempPdf";
+        protected const string TempFolder = "TempPdfCloud";
 
         private Keys keys;
 
@@ -65,9 +65,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var storageConfiguration = new global::Aspose.Storage.Cloud.Sdk.Configuration()
             {
+                AuthType = global::Aspose.Storage.Cloud.Sdk.Api.AuthType.OAuth2,
                 AppKey = keys.AppKey,
                 AppSid = keys.AppSID,
-                ApiBaseUrl = BaseProductUri + "/v1.1"
+                ApiBaseUrl = BaseProductUri
             };
 
             StorageApi = new StorageApi(storageConfiguration);
@@ -93,7 +94,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             {
                 PutCreateRequest request = new PutCreateRequest(Path.Combine(TempFolder, serverFileName), file);
 
-                StorageApi.PutCreate(request);
+                var response = StorageApi.PutCreate(request);
             }
         }
 
