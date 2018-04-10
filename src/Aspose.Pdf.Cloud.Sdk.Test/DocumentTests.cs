@@ -133,10 +133,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutCreateDocumentFromImagesTest()
         {
             const string image1 = "33539.jpg";
-            UploadFile(image1, "pdfimages/" + image1);
+            UploadFile(image1, image1);
 
             const string image2 = "44781.jpg";
-            UploadFile(image2, "pdfimages/" + image2);
+            UploadFile(image2, image2);
 
             const string name = "pdffromimagesinquery.pdf";
 

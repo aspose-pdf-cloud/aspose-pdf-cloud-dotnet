@@ -24,6 +24,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using Aspose.Pdf.Cloud.Sdk.Model;
 using NUnit.Framework;
@@ -49,7 +50,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             foreach (var name in names)
             {
                 UploadFile(name, name);
-                mergeDocuments.List.Add(name);
+                mergeDocuments.List.Add(Path.Combine(TempFolder, name));
             }
 
             var response = PdfApi.PutMergeDocuments(resultName, mergeDocuments, folder: TempFolder);
