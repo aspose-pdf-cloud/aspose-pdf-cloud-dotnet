@@ -237,7 +237,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             // add file parameter, if any
             foreach(var param in fileParams)
             {
-                request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentType);
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    param.Value.Writer(stream);
+                    request.AddParameter(param.Value.ContentType, stream.ToArray(), ParameterType.RequestBody);
+                }
             }
 
             if (postBody != null) // http body (model or byte[]) parameter
