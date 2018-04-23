@@ -189,7 +189,7 @@ project.lock.json
 *.vc.vc.opendb
 *.vc.db
 
-# Rider
+# IDE
 .idea/
 
 # Output folder used by Webpack or other FE stuff
@@ -202,3 +202,5 @@ project.lock.json
 *.Specs_*.html
 
 src/Settings/servercreds.json
+
+.swagger-codegen/

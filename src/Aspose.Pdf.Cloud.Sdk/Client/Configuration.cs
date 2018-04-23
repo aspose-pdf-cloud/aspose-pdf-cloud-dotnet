@@ -51,13 +51,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="userAgent">HTTP user agent</param>
         public Configuration(string apiKey,
                              string appSid,
-                             String basePath = "https://api.aspose.cloud/v1.1",
+                             String basePath = "https://api.aspose.cloud",
                              string version = "v1.1",
                              Dictionary<String, String> defaultHeader = null,
                              string tempFolderPath = null,
                              string dateTimeFormat = null,
                              int timeout = 100000,
-                             string userAgent = "Swagger-Codegen/1.0.0/csharp"
+                             string userAgent = "aspose pdf cloud sdk"
                             )
         {
             if (String.IsNullOrEmpty(basePath))
