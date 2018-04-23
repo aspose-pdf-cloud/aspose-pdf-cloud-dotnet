@@ -138,7 +138,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             const string image2 = "44781.jpg";
             UploadFile(image2, image2);
 
-            const string name = "pdffromimagesinquery.pdf";
+            const string name = "pdffromimagesinquery_net.pdf";
 
             var request = new ImagesListRequest(new List<string>
             {
@@ -146,7 +146,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 Path.Combine(TempFolder, image2)
             });
 
-            var response = PdfApi.PutCreateDocumentFromImages(name, request, false, folder: TempFolder);
+            var response = PdfApi.PutCreateDocumentFromImages(name, images: request, ocr: false, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
         }
     }

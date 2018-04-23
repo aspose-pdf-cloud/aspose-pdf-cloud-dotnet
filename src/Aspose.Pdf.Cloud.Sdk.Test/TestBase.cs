@@ -28,8 +28,6 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Aspose.Pdf.Cloud.Sdk.Api;
 using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Storage.Cloud.Sdk.Api;
-using Aspose.Storage.Cloud.Sdk.Model.Requests;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using RestSharp.Extensions;
@@ -39,7 +37,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     public abstract class TestsBase
     {
         private const string BaseProductUri = @"http://api-dev.aspose.cloud";
-
+        
         protected const string TestDataFolder = @"..\..\..\..\testData";
         private const string ServerCredsFile = @"..\..\..\Settings\servercreds.json";
 
@@ -52,7 +50,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             // To run tests with your own credentials please uncomment following line of code
             // this.keys = new Keys { AppKey = "your app key", AppSID = "your app sid" };
-
+            
+        
             if (null == keys)
             {
                 keys = JsonConvert.DeserializeObject<Keys>(File.ReadAllText(ServerCredsFile));
@@ -63,27 +62,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 throw new FileNotFoundException("servercreds.json doesn't contain AppKey and AppSid");
             }
 
-            var storageConfiguration = new global::Aspose.Storage.Cloud.Sdk.Configuration()
-            {
-                AuthType = global::Aspose.Storage.Cloud.Sdk.Api.AuthType.OAuth2,
-                AppKey = keys.AppKey,
-                AppSid = keys.AppSID,
-                ApiBaseUrl = BaseProductUri
-            };
-
-            StorageApi = new StorageApi(storageConfiguration);
-
-            Configuration = new Configuration(keys.AppKey, keys.AppSID, BaseProductUri, authType: AuthType.OAuth2);
+            Configuration = new Configuration(keys.AppKey, keys.AppSID, BaseProductUri);
             PdfApi = new PdfApi(Configuration);
         }
 
         [TearDown]
         public virtual void TearDown()
         {
-            StorageApi = null;
         }
 
-        protected StorageApi StorageApi { get; private set; }
         protected PdfApi PdfApi { get; set; }
         protected Configuration Configuration { get; private set; }
 
@@ -92,9 +79,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             using (var file = File.OpenRead(Path.Combine(TestDataFolder, sourcePath)))
             {
-                PutCreateRequest request = new PutCreateRequest(Path.Combine(TempFolder, serverFileName), file);
-
-                var response = StorageApi.PutCreate(request);
+                var response = PdfApi.PutCreate(Path.Combine(TempFolder, serverFileName), file);
             }
         }
 
