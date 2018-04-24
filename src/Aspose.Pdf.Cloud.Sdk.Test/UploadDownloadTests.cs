@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="AuthType.cs">
-//   Copyright (c) 2016 Aspose.Pdf for Cloud
+// <copyright company="Aspose" file="MergeTests.cs">
+//   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,21 +23,47 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace Aspose.Pdf.Cloud.Sdk
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using Aspose.Pdf.Cloud.Sdk.Model;
+using NUnit.Framework;
+
+
+namespace Aspose.Pdf.Cloud.Sdk.Test
 {
     /// <summary>
-    /// Supported types of authentification.
+    ///  Class for testing Storage Access Api
     /// </summary>
-    public enum AuthType
+    [TestFixture]
+    class UploadDownloadTests : TestsBase
     {
         /// <summary>
-        /// OAuth2.0
+        /// Test Upload file
         /// </summary>
-        OAuth2 = 0,
+        [Test]
+        public void PutCreateTest()
+        {
+            string name = "4pages.pdf";
+
+            using (var file = File.OpenRead(Path.Combine(TestDataFolder, name)))
+            {
+                var response = PdfApi.PutCreate(Path.Combine(TempFolder, name), file);
+                Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            }
+        }
 
         /// <summary>
-        /// Authentification with signing of url.
+        /// Test Upload file
         /// </summary>
-        RequestSignature = 1
+        [Test]
+        public void GetDonloadFileTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetDownload(Path.Combine(TempFolder, name));
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
     }
 }

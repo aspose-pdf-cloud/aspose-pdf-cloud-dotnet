@@ -23,6 +23,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.IO;
 using System.Net;
 using Aspose.Pdf.Cloud.Sdk.Model;
 using NUnit.Framework;
@@ -50,7 +51,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(AppendFile, AppendFile);
 
             var responce =
-                PdfApi.PostAppendDocument(Name, appendFile: AppendFile, startPage: StartPage, endPage: EndPage, folder: TempFolder);
+                PdfApi.PostAppendDocument(Name, appendFile: Path.Combine(TempFolder, AppendFile), startPage: StartPage, endPage: EndPage, folder: TempFolder);
             Assert.That(responce.Code, Is.EqualTo(HttpStatusCode.OK));
         }
 
@@ -63,7 +64,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(Name, Name);
             UploadFile(AppendFile, AppendFile);
 
-            var appendDocument = new AppendDocument(AppendFile, StartPage, EndPage);
+            var appendDocument = new AppendDocument(Path.Combine(TempFolder, AppendFile), StartPage, EndPage);
             var responce =
                 PdfApi.PostAppendDocument(Name, appendDocument, folder: TempFolder);
             Assert.That(responce.Code, Is.EqualTo(HttpStatusCode.OK));

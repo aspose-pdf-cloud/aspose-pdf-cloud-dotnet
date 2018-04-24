@@ -48,20 +48,21 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.PutDocumentSaveAsTiff(Name,
                 resultFile: "4pages.tiff",
                 brightness: 0.6,
-                compression: "Ccitt4",
-                colorDepth: "format1bpp",
+                compression: CompressionType.CCITT4.ToString(),
+                colorDepth: ColorDepth.Format1bpp.ToString(),
                 leftMargin: 0,
                 rightMargin: 0,
                 topMargin: 0,
                 bottomMargin: 0,
-                orientation: "portait",
+                orientation: ShapeType.Portrait.ToString(),
                 skipBlankPages: true,
                 width: 1200,
                 height: 1600,
                 xResolution: 200,
                 yResolution: 200,
                 pageIndex: 2,
-                pageCount: 2);
+                pageCount: 2,
+                folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
         }
 
@@ -91,7 +92,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 PageIndex: 2,
                 PageCount: 2);
 
-            var response = PdfApi.PutDocumentSaveAsTiff(Name, options);
+            var response = PdfApi.PutDocumentSaveAsTiff(Name, options, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
         }
     }

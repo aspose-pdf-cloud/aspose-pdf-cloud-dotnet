@@ -44,7 +44,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="appSid">The app SID.</param>
         /// <param name="version">The api version.</param>
         /// <param name="basePath">The base path.</param>
-        /// <param name="authType">Authentication type.</param>
         /// <param name="defaultHeader">Dictionary of default HTTP header</param>
         /// <param name="tempFolderPath">Temp folder path</param>
         /// <param name="dateTimeFormat">DateTime format string</param>
@@ -52,14 +51,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="userAgent">HTTP user agent</param>
         public Configuration(string apiKey,
                              string appSid,
-                             String basePath = "https://api.aspose.cloud/v1.1",
+                             String basePath = "https://api.aspose.cloud",
                              string version = "v1.1",
-                             AuthType authType = AuthType.RequestSignature,
                              Dictionary<String, String> defaultHeader = null,
                              string tempFolderPath = null,
                              string dateTimeFormat = null,
                              int timeout = 100000,
-                             string userAgent = "Swagger-Codegen/1.0.0/csharp"
+                             string userAgent = "aspose pdf cloud sdk"
                             )
         {
             if (String.IsNullOrEmpty(basePath))
@@ -69,7 +67,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             AppSid = appSid;
             BasePath = basePath;
             Version = version;
-            AuthType = authType;
 
             UserAgent = userAgent;
 
@@ -117,11 +114,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// Gets or sets the app sid.
         /// </summary>
         public string AppSid { get; set; }
-
-        /// <summary>
-        /// Gets or sets the authentification type.
-        /// </summary>
-        public AuthType AuthType { get; set; }
 
         private Dictionary<String, String> _defaultHeaderMap = new Dictionary<String, String>();
 

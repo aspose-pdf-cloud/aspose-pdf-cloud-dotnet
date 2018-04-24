@@ -58,18 +58,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="request">The RestSharp request object</param>
         private async System.Threading.Tasks.Task InterceptRequestAsync(IRestRequest request)
         {
-            if (Configuration.AuthType == AuthType.RequestSignature)
+            if (null == accessToken)
             {
-                Sign(request);
+                await RequestTokenAsync();
             }
-            else
-            {
-                if (null == accessToken)
-                {
-                    await RequestTokenAsync();
-                }
-                AddOAuthToken(request);
-            }
+            AddOAuthToken(request);
         }
         
         /// <summary>
@@ -78,46 +71,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="request">The RestSharp request object</param>
         private void InterceptRequest(IRestRequest request)
         {
-            if (Configuration.AuthType == AuthType.RequestSignature)
+            if (null == accessToken)
             {
-                Sign(request);
+                RequestToken();
             }
-            else
-            {
-                if (null == accessToken)
-                {
-                    RequestToken();
-                }
-                AddOAuthToken(request);
-            }
-        }
-
-        /// <summary>
-        /// Sign url using provided ApiKey and AppSID.
-        /// </summary>
-        /// <param name="request">The RestSharp request object</param>
-        /// <returns></returns>
-        private void Sign(IRestRequest request)
-        {
-            request.AddQueryParameter("appSID", Configuration.AppSid);
-            var url = RestClient.BuildUri(request).AbsoluteUri;
-
-            var encoding = new ASCIIEncoding();
-            // converting key to bytes will throw an exception, need to replace '-' and '_' characters first.
-            var usablePrivateKey = Configuration.ApiKey.Replace("-", "+").Replace("_", "/");
-            var privateKeyBytes = Convert.FromBase64String(usablePrivateKey);
-
-            var uri = new Uri(url);
-            var encodedPathAndQueryBytes = encoding.GetBytes(uri.LocalPath + uri.Query);
-
-            // compute the hash
-            var algorithm = new HMACSHA1(privateKeyBytes);
-            var hash = algorithm.ComputeHash(encodedPathAndQueryBytes);
-
-            // convert the bytes to string and make url-safe by replacing '+' and '/' characters
-            var result = Convert.ToBase64String(hash).Replace("+", "-").Replace("/", "_");
-
-            request.AddQueryParameter("signature", result);
+            AddOAuthToken(request);
         }
 
         private void AddOAuthToken(IRestRequest request)
@@ -202,7 +160,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="response">The RestSharp response object</param>
         private bool InterceptResponse(IRestRequest request, IRestResponse response)
         {
-            if (Configuration.AuthType == AuthType.OAuth2 && response.StatusCode == HttpStatusCode.Unauthorized)
+            if (response.StatusCode == HttpStatusCode.Unauthorized)
             {
                 RefreshToken();
                 return false;
@@ -218,7 +176,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="response">The RestSharp response object</param>
         private async System.Threading.Tasks.Task<bool> InterceptResponseAsync(IRestRequest request, IRestResponse response)
         {
-            if (Configuration.AuthType == AuthType.OAuth2 && response.StatusCode == HttpStatusCode.Unauthorized)
+            if (response.StatusCode == HttpStatusCode.Unauthorized)
             {
                 await RefreshTokenAsync();
                 return false;
@@ -279,7 +237,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             // add file parameter, if any
             foreach(var param in fileParams)
             {
-                request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentType);
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    param.Value.Writer(stream);
+                    request.AddParameter(param.Value.ContentType, stream.ToArray(), ParameterType.RequestBody);
+                }
             }
 
             if (postBody != null) // http body (model or byte[]) parameter
