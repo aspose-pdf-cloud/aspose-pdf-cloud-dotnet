@@ -85,6 +85,7 @@ OpenAPI spec version: 1.1
     <Compile Include="PropertiesTests.cs" />
     <Compile Include="SignTests.cs" />
     <Compile Include="TestBase.cs" />
+    <Compile Include="UploadDownloadTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
