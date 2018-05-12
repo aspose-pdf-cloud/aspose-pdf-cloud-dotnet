@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="BookmarksResponse.cs">
+// <copyright company="Aspose" file="SignatureVerifyResponse.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -41,35 +41,35 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// BookmarksResponse
+    /// Returns also a message.
     /// </summary>
     [DataContract]
-    public partial class BookmarksResponse : SaaSposeResponse,  IEquatable<BookmarksResponse>, IValidatableObject
+    public partial class SignatureVerifyResponse : SaaSposeResponse,  IEquatable<SignatureVerifyResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BookmarksResponse" /> class.
+        /// Initializes a new instance of the <see cref="SignatureVerifyResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected BookmarksResponse() { }
+        protected SignatureVerifyResponse() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="BookmarksResponse" /> class.
+        /// Initializes a new instance of the <see cref="SignatureVerifyResponse" /> class.
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Bookmarks">Bookmarks.</param>
-        public BookmarksResponse(HttpStatusCode Code = default(HttpStatusCode), string Status = default(string), Bookmarks Bookmarks = default(Bookmarks))
+        /// <param name="Valid">Valid sign..</param>
+        public SignatureVerifyResponse(HttpStatusCode Code = default(HttpStatusCode), string Status = default(string), bool? Valid = default(bool?))
         {
             // to ensure "Code" is required (not null)
             if (Code == null)
             {
-                throw new InvalidDataException("Code is a required property for BookmarksResponse and cannot be null");
+                throw new InvalidDataException("Code is a required property for SignatureVerifyResponse and cannot be null");
             }
             else
             {
                 this.Code = Code;
             }
             this.Status = Status;
-            this.Bookmarks = Bookmarks;
+            this.Valid = Valid;
         }
         
         /// <summary>
@@ -87,10 +87,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Bookmarks
+        /// Valid sign.
         /// </summary>
-        [DataMember(Name="Bookmarks", EmitDefaultValue=false)]
-        public Bookmarks Bookmarks { get; set; }
+        /// <value>Valid sign.</value>
+        [DataMember(Name="Valid", EmitDefaultValue=false)]
+        public bool? Valid { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,10 +100,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BookmarksResponse {\n");
+            sb.Append("class SignatureVerifyResponse {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  Bookmarks: ").Append(Bookmarks).Append("\n");
+            sb.Append("  Valid: ").Append(Valid).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,15 +125,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as BookmarksResponse);
+            return this.Equals(obj as SignatureVerifyResponse);
         }
 
         /// <summary>
-        /// Returns true if BookmarksResponse instances are equal
+        /// Returns true if SignatureVerifyResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of BookmarksResponse to be compared</param>
+        /// <param name="other">Instance of SignatureVerifyResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BookmarksResponse other)
+        public bool Equals(SignatureVerifyResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -150,9 +151,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Status.Equals(other.Status)
                 ) && 
                 (
-                    this.Bookmarks == other.Bookmarks ||
-                    this.Bookmarks != null &&
-                    this.Bookmarks.Equals(other.Bookmarks)
+                    this.Valid == other.Valid ||
+                    this.Valid != null &&
+                    this.Valid.Equals(other.Valid)
                 );
         }
 
@@ -171,8 +172,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Code.GetHashCode();
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                if (this.Bookmarks != null)
-                    hash = hash * 59 + this.Bookmarks.GetHashCode();
+                if (this.Valid != null)
+                    hash = hash * 59 + this.Valid.GetHashCode();
                 return hash;
             }
         }

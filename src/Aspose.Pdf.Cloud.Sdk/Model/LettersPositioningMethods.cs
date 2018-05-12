@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="WrapMode.cs">
+// <copyright company="Aspose" file="LettersPositioningMethods.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -41,30 +41,24 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// It enumerates possible modes of positioning of letters in words in result HTML             
     /// </summary>
-    /// <value></value>
+    /// <value>It enumerates possible modes of positioning of letters in words in result HTML             </value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum WrapMode
+    public enum LettersPositioningMethods
     {
         
         /// <summary>
-        /// Enum NoWrap for "NoWrap"
+        /// Enum UseEmUnitsAndCompensationOfRoundingErrorsInCss for "UseEmUnitsAndCompensationOfRoundingErrorsInCss"
         /// </summary>
-        [EnumMember(Value = "NoWrap")]
-        NoWrap,
+        [EnumMember(Value = "UseEmUnitsAndCompensationOfRoundingErrorsInCss")]
+        UseEmUnitsAndCompensationOfRoundingErrorsInCss,
         
         /// <summary>
-        /// Enum ByWords for "ByWords"
+        /// Enum UsePixelUnitsInCssLetterSpacingForIE for "UsePixelUnitsInCssLetterSpacingForIE"
         /// </summary>
-        [EnumMember(Value = "ByWords")]
-        ByWords,
-        
-        /// <summary>
-        /// Enum DiscretionaryHyphenation for "DiscretionaryHyphenation"
-        /// </summary>
-        [EnumMember(Value = "DiscretionaryHyphenation")]
-        DiscretionaryHyphenation
+        [EnumMember(Value = "UsePixelUnitsInCssLetterSpacingForIE")]
+        UsePixelUnitsInCssLetterSpacingForIE
     }
 
 }

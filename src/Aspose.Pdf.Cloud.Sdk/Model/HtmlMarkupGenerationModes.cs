@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="WrapMode.cs">
+// <copyright company="Aspose" file="HtmlMarkupGenerationModes.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -41,30 +41,24 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Sometimes specific reqirments to created HTML are present. This enum defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments.             
     /// </summary>
-    /// <value></value>
+    /// <value>Sometimes specific reqirments to created HTML are present. This enum defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments.             </value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum WrapMode
+    public enum HtmlMarkupGenerationModes
     {
         
         /// <summary>
-        /// Enum NoWrap for "NoWrap"
+        /// Enum WriteAllHtml for "WriteAllHtml"
         /// </summary>
-        [EnumMember(Value = "NoWrap")]
-        NoWrap,
+        [EnumMember(Value = "WriteAllHtml")]
+        WriteAllHtml,
         
         /// <summary>
-        /// Enum ByWords for "ByWords"
+        /// Enum WriteOnlyBodyContent for "WriteOnlyBodyContent"
         /// </summary>
-        [EnumMember(Value = "ByWords")]
-        ByWords,
-        
-        /// <summary>
-        /// Enum DiscretionaryHyphenation for "DiscretionaryHyphenation"
-        /// </summary>
-        [EnumMember(Value = "DiscretionaryHyphenation")]
-        DiscretionaryHyphenation
+        [EnumMember(Value = "WriteOnlyBodyContent")]
+        WriteOnlyBodyContent
     }
 
 }

@@ -81,5 +81,21 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.PostSignPage(Name, pageNumber: 1, signature: Signature, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
         }
+
+        /// <summary>
+        /// Test GetVerifySignature
+        /// </summary>
+        [Test]
+        public void GetVerifySignatureTest()
+        {
+            UploadFile(Name, Name);
+            UploadFile(SignatureName, SignatureName);
+
+            var responseSignature = PdfApi.PostSignDocument(Name, Signature, folder: TempFolder);
+            Assert.That(responseSignature.Code, Is.EqualTo(HttpStatusCode.OK));
+
+            var response = PdfApi.GetVerifySignature(Name, Signature.FormFieldName, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+        }
     }
 }

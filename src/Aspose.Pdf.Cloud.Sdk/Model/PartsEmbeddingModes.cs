@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="WrapMode.cs">
+// <copyright company="Aspose" file="PartsEmbeddingModes.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -41,30 +41,30 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// This enum enumerates possible modes of embedding of files referenced in HTML It allows to control whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities              
     /// </summary>
-    /// <value></value>
+    /// <value>This enum enumerates possible modes of embedding of files referenced in HTML It allows to control whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities              </value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum WrapMode
+    public enum PartsEmbeddingModes
     {
         
         /// <summary>
-        /// Enum NoWrap for "NoWrap"
+        /// Enum EmbedAllIntoHtml for "EmbedAllIntoHtml"
         /// </summary>
-        [EnumMember(Value = "NoWrap")]
-        NoWrap,
+        [EnumMember(Value = "EmbedAllIntoHtml")]
+        EmbedAllIntoHtml,
         
         /// <summary>
-        /// Enum ByWords for "ByWords"
+        /// Enum EmbedCssOnly for "EmbedCssOnly"
         /// </summary>
-        [EnumMember(Value = "ByWords")]
-        ByWords,
+        [EnumMember(Value = "EmbedCssOnly")]
+        EmbedCssOnly,
         
         /// <summary>
-        /// Enum DiscretionaryHyphenation for "DiscretionaryHyphenation"
+        /// Enum NoEmbedding for "NoEmbedding"
         /// </summary>
-        [EnumMember(Value = "DiscretionaryHyphenation")]
-        DiscretionaryHyphenation
+        [EnumMember(Value = "NoEmbedding")]
+        NoEmbedding
     }
 
 }

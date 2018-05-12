@@ -73,6 +73,7 @@ OpenAPI spec version: 1.1
     <Compile Include="ImagesTests.cs" />
     <Compile Include="LinksTests.cs" />
     <Compile Include="MergeTests.cs" />
+    <Compile Include="PrivilegesTests.cs" />
     <Compile Include="TextTests.cs" />
     <Compile Include="OcrTests.cs" />
     <Compile Include="PagesTests.cs" />

@@ -103,6 +103,34 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.PutUpdateField(name, fieldName, field, folder: TempFolder);
             Assert.That(response.Field, Is.Not.Null);
         }
+
+        /// <summary>
+        /// Test DeleteField
+        /// </summary>
+        [Test]
+        public void DeleteFieldTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var fieldName = "textField";
+
+            var response = PdfApi.DeleteField(name, fieldName, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+        }
+
+        /// <summary>
+        /// Test PutFieldsFlatten
+        /// </summary>
+        [Test]
+        public void PutFieldsFlattenTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.PutFieldsFlatten(name, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+        }
     }
 
 }

@@ -123,7 +123,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test GetPdfInStorageToTiff
         /// </summary>
         [Test]
-        public void GetPdfInStorageToTiffATest()
+        public void GetPdfInStorageToTiffTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
@@ -136,7 +136,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test PutPdfInStorageToTiff
         /// </summary>
         [Test]
-        public void PutPdfInStorageToTiffATest()
+        public void PutPdfInStorageToTiffTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
@@ -150,7 +150,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test PutPdfInRequestToTiff
         /// </summary>
         [Test]
-        public void PutPdfInRequestToTiffATest()
+        public void PutPdfInRequestToTiffTest()
         {
             string name = "4pages.pdf";
             Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name));
@@ -165,7 +165,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test GetPdfInStorageToSvg
         /// </summary>
         [Test]
-        public void GetPdfInStorageToSvgATest()
+        public void GetPdfInStorageToSvgTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
@@ -178,7 +178,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test PutPdfInStorageToSvg
         /// </summary>
         [Test]
-        public void PutPdfInStorageToSvgATest()
+        public void PutPdfInStorageToSvgTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
@@ -192,7 +192,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test PutPdfInRequestToSvg
         /// </summary>
         [Test]
-        public void PutPdfInRequestToSvgATest()
+        public void PutPdfInRequestToSvgTest()
         {
             string name = "4pages.pdf";
             Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name));
@@ -206,7 +206,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test GetPdfInStorageToXps
         /// </summary>
         [Test]
-        public void GetPdfInStorageToXpsATest()
+        public void GetPdfInStorageToXpsTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
@@ -219,7 +219,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test PutPdfInStorageToXps
         /// </summary>
         [Test]
-        public void PutPdfInStorageToXpsATest()
+        public void PutPdfInStorageToXpsTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
@@ -233,7 +233,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test PutPdfInRequestToXps
         /// </summary>
         [Test]
-        public void PutPdfInRequestToXpsATest()
+        public void PutPdfInRequestToXpsTest()
         {
             string name = "4pages.pdf";
             Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name));
@@ -247,7 +247,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test GetPdfInStorageToXls
         /// </summary>
         [Test]
-        public void GetPdfInStorageToXlsATest()
+        public void GetPdfInStorageToXlsTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
@@ -260,7 +260,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test PutPdfInStorageToXls
         /// </summary>
         [Test]
-        public void PutPdfInStorageToXlsATest()
+        public void PutPdfInStorageToXlsTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
@@ -274,13 +274,306 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test PutPdfInRequestToXls
         /// </summary>
         [Test]
-        public void PutPdfInRequestToXlsATest()
+        public void PutPdfInRequestToXlsTest()
         {
             string name = "4pages.pdf";
             Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name));
             string resFileName = "result.xls";
 
             var response = PdfApi.PutPdfInRequestToXls(Path.Combine(TempFolder, resFileName), file: stream);
+            Assert.IsNotNull(response);
+        }
+
+
+        /// <summary>
+        /// Test GetPdfInStorageToHtml
+        /// </summary>
+        [Test]
+        public void GetPdfInStorageToHtmlTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetPdfInStorageToHtml(name, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
+
+        /// <summary>
+        /// Test PutPdfInStorageToHtml
+        /// </summary>
+        [Test]
+        public void PutPdfInStorageToHtmlTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+            string resFileName = "result.html";
+
+            var response = PdfApi.PutPdfInStorageToHtml(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
+            Assert.IsNotNull(response);
+        }
+
+        /// <summary>
+        /// Test PutPdfInRequestToHtml
+        /// </summary>
+        [Test]
+        public void PutPdfInRequestToHtmlTest()
+        {
+            string name = "4pages.pdf";
+            Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name));
+            string resFileName = "result.html";
+
+            var response = PdfApi.PutPdfInRequestToHtml(Path.Combine(TempFolder, resFileName), file: stream);
+            Assert.IsNotNull(response);
+        }
+
+        /// <summary>
+        /// Test GetPdfInStorageToEpub
+        /// </summary>
+        [Test]
+        public void GetPdfInStorageToEpubTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetPdfInStorageToEpub(name, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
+
+        /// <summary>
+        /// Test PutPdfInStorageToEpub
+        /// </summary>
+        [Test]
+        public void PutPdfInStorageToEpubTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+            string resFileName = "result.epub";
+
+            var response = PdfApi.PutPdfInStorageToEpub(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
+            Assert.IsNotNull(response);
+        }
+
+        /// <summary>
+        /// Test PutPdfInRequestToEpub
+        /// </summary>
+        [Test]
+        public void PutPdfInRequestToEpubTest()
+        {
+            string name = "4pages.pdf";
+            Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name));
+            string resFileName = "result.epub";
+
+            var response = PdfApi.PutPdfInRequestToEpub(Path.Combine(TempFolder, resFileName), file: stream);
+            Assert.IsNotNull(response);
+        }
+
+
+        /// <summary>
+        /// Test GetPdfInStorageToPptx
+        /// </summary>
+        [Test]
+        public void GetPdfInStorageToPptxTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetPdfInStorageToPptx(name, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
+
+        /// <summary>
+        /// Test PutPdfInStorageToPptx
+        /// </summary>
+        [Test]
+        public void PutPdfInStorageToPptxTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+            string resFileName = "result.pptx";
+
+            var response = PdfApi.PutPdfInStorageToPptx(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
+            Assert.IsNotNull(response);
+        }
+
+        /// <summary>
+        /// Test PutPdfInRequestToPptx
+        /// </summary>
+        [Test]
+        public void PutPdfInRequestToPptxTest()
+        {
+            string name = "4pages.pdf";
+            Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name));
+            string resFileName = "result.pptx";
+
+            var response = PdfApi.PutPdfInRequestToPptx(Path.Combine(TempFolder, resFileName), file: stream);
+            Assert.IsNotNull(response);
+        }
+
+
+        /// <summary>
+        /// Test GetPdfInStorageToLaTeX
+        /// </summary>
+        [Test]
+        public void GetPdfInStorageToLaTeXTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetPdfInStorageToLaTeX(name, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
+
+        /// <summary>
+        /// Test PutPdfInStorageToLaTeX
+        /// </summary>
+        [Test]
+        public void PutPdfInStorageToLaTeXTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+            string resFileName = "result.latex";
+
+            var response = PdfApi.PutPdfInStorageToLaTeX(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
+            Assert.IsNotNull(response);
+        }
+
+        /// <summary>
+        /// Test PutPdfInRequestToLaTeX
+        /// </summary>
+        [Test]
+        public void PutPdfInRequestToLaTeXTest()
+        {
+            string name = "4pages.pdf";
+            Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name));
+            string resFileName = "result.latex";
+
+            var response = PdfApi.PutPdfInRequestToLaTeX(Path.Combine(TempFolder, resFileName), file: stream);
+            Assert.IsNotNull(response);
+        }
+
+
+        /// <summary>
+        /// Test GetPdfInStorageToMobiXml
+        /// </summary>
+        [Test]
+        public void GetPdfInStorageToMobiXmlTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetPdfInStorageToMobiXml(name, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
+
+        /// <summary>
+        /// Test PutPdfInStorageToMobiXml
+        /// </summary>
+        [Test]
+        public void PutPdfInStorageToMobiXmlTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+            string resFileName = "result.mobi";
+
+            var response = PdfApi.PutPdfInStorageToMobiXml(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
+            Assert.IsNotNull(response);
+        }
+
+        /// <summary>
+        /// Test PutPdfInRequestToMobiXml
+        /// </summary>
+        [Test]
+        public void PutPdfInRequestToMobiXmlTest()
+        {
+            string name = "4pages.pdf";
+            Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name));
+            string resFileName = "result.mobi";
+
+            var response = PdfApi.PutPdfInRequestToMobiXml(Path.Combine(TempFolder, resFileName), file: stream);
+            Assert.IsNotNull(response);
+        }
+
+
+        /// <summary>
+        /// Test GetPdfInStorageToAcroForm
+        /// </summary>
+        [Test]
+        public void GetXfaPdfInStorageToAcroFormTest()
+        {
+            string name = "PdfWithXfaForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetXfaPdfInStorageToAcroForm(name, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
+
+        /// <summary>
+        /// Test PutPdfInStorageToAcroForm
+        /// </summary>
+        [Test]
+        public void PutXfaPdfInStorageToAcroFormTest()
+        {
+            string name = "PdfWithXfaForm.pdf";
+            UploadFile(name, name);
+            string resFileName = "result.pdf";
+
+            var response = PdfApi.PutXfaPdfInStorageToAcroForm(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
+            Assert.IsNotNull(response);
+        }
+
+        /// <summary>
+        /// Test PutPdfInRequestToAcroForm
+        /// </summary>
+        [Test]
+        public void PutXfaPdfInRequestToAcroFormTest()
+        {
+            string name = "PdfWithXfaForm.pdf";
+            Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name));
+            string resFileName = "result.pdf";
+
+            var response = PdfApi.PutXfaPdfInRequestToAcroForm(Path.Combine(TempFolder, resFileName), file: stream);
+            Assert.IsNotNull(response);
+        }
+
+
+        /// <summary>
+        /// Test GetPdfInStorageToXml
+        /// </summary>
+        [Test]
+        public void GetPdfInStorageToXmlTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetPdfInStorageToXml(name, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
+
+        /// <summary>
+        /// Test PutPdfInStorageToXml
+        /// </summary>
+        [Test]
+        public void PutPdfInStorageToXmlTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+            string resFileName = "result.xml";
+
+            var response = PdfApi.PutPdfInStorageToXml(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
+            Assert.IsNotNull(response);
+        }
+
+        /// <summary>
+        /// Test PutPdfInRequestToXml
+        /// </summary>
+        [Test]
+        public void PutPdfInRequestToXmlTest()
+        {
+            string name = "4pages.pdf";
+            Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name));
+            string resFileName = "result.xml";
+
+            var response = PdfApi.PutPdfInRequestToXml(Path.Combine(TempFolder, resFileName), file: stream);
             Assert.IsNotNull(response);
         }
     }

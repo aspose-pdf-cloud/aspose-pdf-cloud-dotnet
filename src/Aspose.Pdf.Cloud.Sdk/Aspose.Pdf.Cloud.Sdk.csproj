@@ -11,7 +11,7 @@ OpenAPI spec version: 1.1
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2A08C54A-509C-4825-A1F1-CE338F0F8253}</ProjectGuid>
+    <ProjectGuid>{7AAE99B5-38CC-49C2-918C-B06E5E275C79}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Aspose.Pdf.Cloud.Sdk</RootNamespace>

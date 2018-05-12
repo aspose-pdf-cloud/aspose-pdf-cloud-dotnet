@@ -1,5 +1,5 @@
-// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="WrapMode.cs">
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright company="Aspose" file="SignTests.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -23,48 +23,36 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System;
-using System.Linq;
 using System.IO;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Runtime.Serialization;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using System.Net;
-using System.ComponentModel.DataAnnotations;
-using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
+using Aspose.Pdf.Cloud.Sdk.Model;
+using NUnit.Framework;
 
-namespace Aspose.Pdf.Cloud.Sdk.Model
+namespace Aspose.Pdf.Cloud.Sdk.Test
 {
     /// <summary>
-    /// 
+    ///     Class for testing PDF Privileges
     /// </summary>
-    /// <value></value>
-    [JsonConverter(typeof(StringEnumConverter))]
-    public enum WrapMode
+    [TestFixture]
+    public class PrivilegesTests : TestsBase
     {
-        
         /// <summary>
-        /// Enum NoWrap for "NoWrap"
+        /// Test PutPrivileges
         /// </summary>
-        [EnumMember(Value = "NoWrap")]
-        NoWrap,
-        
-        /// <summary>
-        /// Enum ByWords for "ByWords"
-        /// </summary>
-        [EnumMember(Value = "ByWords")]
-        ByWords,
-        
-        /// <summary>
-        /// Enum DiscretionaryHyphenation for "DiscretionaryHyphenation"
-        /// </summary>
-        [EnumMember(Value = "DiscretionaryHyphenation")]
-        DiscretionaryHyphenation
-    }
+        [Test]
+        public void PutPrivilegesTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
 
+            DocumentPrivilege documentPrivilege = new DocumentPrivilege()
+            {
+                AllowCopy = false,
+                AllowPrint = false
+            };
+
+            var response = PdfApi.PutPrivileges(name, documentPrivilege, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+        }
+    }
 }
