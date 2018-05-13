@@ -416,7 +416,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void GetPdfInStorageToLaTeXTest()
         {
-            string name = "4pages.pdf";
+            string name = "Hello world.pdf";
             UploadFile(name, name);
 
             var response = PdfApi.GetPdfInStorageToLaTeX(name, folder: TempFolder);
