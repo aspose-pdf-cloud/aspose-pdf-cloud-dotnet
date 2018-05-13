@@ -19,5 +19,44 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <OutputPath>..\..\build-out\bin\release\</OutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
+    <PackageReference Include="Microsoft.TestPlatform.TestHost" Version="15.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="NUnit.ConsoleRunner" Version="3.8.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aspose.Pdf.Cloud.Sdk\Aspose.Pdf.Cloud.Sdk.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="AnnotationsTests.cs" />
+    <Compile Include="AppendTests.cs" />
+    <Compile Include="AttachmentsTests.cs" />
+    <Compile Include="BookmarksTests.cs" />
+    <Compile Include="ConvertTests.cs" />
+    <Compile Include="DocumentSaveAsTiffTests.cs" />
+    <Compile Include="DocumentTests.cs" />
+    <Compile Include="FieldsTests.cs" />
+    <Compile Include="FragmentsAndSegmentsTests.cs" />
+    <Compile Include="ImagesTests.cs" />
+    <Compile Include="LinksTests.cs" />
+    <Compile Include="MergeTests.cs" />
+    <Compile Include="OcrTests.cs" />
+    <Compile Include="PagesTests.cs" />
+    <Compile Include="ParagraphsTests.cs" />
+    <Compile Include="PrivilegesTests.cs" />
+    <Compile Include="PropertiesTests.cs" />
+    <Compile Include="SignTests.cs" />
+    <Compile Include="TestBase.cs" />
+    <Compile Include="TextItemsTests.cs" />
+    <Compile Include="TextReplaceTests.cs" />
+    <Compile Include="TextTests.cs" />
+    <Compile Include="UploadDownloadTests.cs" />
+  </ItemGroup>
   
 </Project>
