@@ -542,7 +542,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void GetPdfInStorageToXmlTest()
         {
-            string name = "4pages.pdf";
+            string name = "Hello world.pdf";
             UploadFile(name, name);
 
             var response = PdfApi.GetPdfInStorageToXml(name, folder: TempFolder);
