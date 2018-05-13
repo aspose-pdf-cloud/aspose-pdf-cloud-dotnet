@@ -36,7 +36,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     ///  Class for testing Storage Access Api
     /// </summary>
     [TestFixture]
-    class UploadDownloadTests : TestsBase
+    public class UploadDownloadTests : TestsBase
     {
         /// <summary>
         /// Test Upload file

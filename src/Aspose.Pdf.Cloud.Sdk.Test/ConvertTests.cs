@@ -34,7 +34,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     ///  Class for testing Convert Api
     /// </summary>
     [TestFixture]
-    class ConvertTests : TestsBase
+    public class ConvertTests : TestsBase
     {
 
         /// <summary>
