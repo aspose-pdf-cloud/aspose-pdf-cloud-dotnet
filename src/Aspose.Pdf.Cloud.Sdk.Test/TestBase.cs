@@ -30,7 +30,6 @@ using Aspose.Pdf.Cloud.Sdk.Api;
 using Aspose.Pdf.Cloud.Sdk.Client;
 using Newtonsoft.Json;
 using NUnit.Framework;
-using RestSharp.Extensions;
 
 namespace Aspose.Pdf.Cloud.Sdk.Test
 {
@@ -50,8 +49,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             // To run tests with your own credentials please uncomment following line of code
             // this.keys = new Keys { AppKey = "your app key", AppSID = "your app sid" };
-            
-        
+
             if (null == keys)
             {
                 keys = JsonConvert.DeserializeObject<Keys>(File.ReadAllText(ServerCredsFile));
