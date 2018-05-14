@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="WrapMode.cs">
+// <copyright company="Aspose" file="RasterImagesSavingModes.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -41,30 +41,30 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Converted PDF can contain raster images(.png, *.jpeg etc.) This enum defines methods of how raster images can be handled during conversion of PDF to HTML             
     /// </summary>
-    /// <value></value>
+    /// <value>Converted PDF can contain raster images(.png, *.jpeg etc.) This enum defines methods of how raster images can be handled during conversion of PDF to HTML             </value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum WrapMode
+    public enum RasterImagesSavingModes
     {
         
         /// <summary>
-        /// Enum NoWrap for "NoWrap"
+        /// Enum AsPngImagesEmbeddedIntoSvg for "AsPngImagesEmbeddedIntoSvg"
         /// </summary>
-        [EnumMember(Value = "NoWrap")]
-        NoWrap,
+        [EnumMember(Value = "AsPngImagesEmbeddedIntoSvg")]
+        AsPngImagesEmbeddedIntoSvg,
         
         /// <summary>
-        /// Enum ByWords for "ByWords"
+        /// Enum AsExternalPngFilesReferencedViaSvg for "AsExternalPngFilesReferencedViaSvg"
         /// </summary>
-        [EnumMember(Value = "ByWords")]
-        ByWords,
+        [EnumMember(Value = "AsExternalPngFilesReferencedViaSvg")]
+        AsExternalPngFilesReferencedViaSvg,
         
         /// <summary>
-        /// Enum DiscretionaryHyphenation for "DiscretionaryHyphenation"
+        /// Enum AsEmbeddedPartsOfPngPageBackground for "AsEmbeddedPartsOfPngPageBackground"
         /// </summary>
-        [EnumMember(Value = "DiscretionaryHyphenation")]
-        DiscretionaryHyphenation
+        [EnumMember(Value = "AsEmbeddedPartsOfPngPageBackground")]
+        AsEmbeddedPartsOfPngPageBackground
     }
 
 }

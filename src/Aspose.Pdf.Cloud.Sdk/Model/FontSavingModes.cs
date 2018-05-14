@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="WrapMode.cs">
+// <copyright company="Aspose" file="FontSavingModes.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -41,30 +41,36 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Enumerates modes that can be used for saving of fonts referenced in saved PDF              
     /// </summary>
-    /// <value></value>
+    /// <value>Enumerates modes that can be used for saving of fonts referenced in saved PDF              </value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum WrapMode
+    public enum FontSavingModes
     {
         
         /// <summary>
-        /// Enum NoWrap for "NoWrap"
+        /// Enum AlwaysSaveAsWOFF for "AlwaysSaveAsWOFF"
         /// </summary>
-        [EnumMember(Value = "NoWrap")]
-        NoWrap,
+        [EnumMember(Value = "AlwaysSaveAsWOFF")]
+        AlwaysSaveAsWOFF,
         
         /// <summary>
-        /// Enum ByWords for "ByWords"
+        /// Enum AlwaysSaveAsTTF for "AlwaysSaveAsTTF"
         /// </summary>
-        [EnumMember(Value = "ByWords")]
-        ByWords,
+        [EnumMember(Value = "AlwaysSaveAsTTF")]
+        AlwaysSaveAsTTF,
         
         /// <summary>
-        /// Enum DiscretionaryHyphenation for "DiscretionaryHyphenation"
+        /// Enum AlwaysSaveAsEOT for "AlwaysSaveAsEOT"
         /// </summary>
-        [EnumMember(Value = "DiscretionaryHyphenation")]
-        DiscretionaryHyphenation
+        [EnumMember(Value = "AlwaysSaveAsEOT")]
+        AlwaysSaveAsEOT,
+        
+        /// <summary>
+        /// Enum SaveInAllFormats for "SaveInAllFormats"
+        /// </summary>
+        [EnumMember(Value = "SaveInAllFormats")]
+        SaveInAllFormats
     }
 
 }

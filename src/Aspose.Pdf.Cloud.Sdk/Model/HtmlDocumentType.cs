@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="WrapMode.cs">
+// <copyright company="Aspose" file="HtmlDocumentType.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -45,26 +45,18 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
     /// </summary>
     /// <value></value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum WrapMode
+    public enum HtmlDocumentType
     {
         
         /// <summary>
-        /// Enum NoWrap for "NoWrap"
+        /// Enum Xhtml for 0
         /// </summary>
-        [EnumMember(Value = "NoWrap")]
-        NoWrap,
+        Xhtml = 0,
         
         /// <summary>
-        /// Enum ByWords for "ByWords"
+        /// Enum Html5 for 1
         /// </summary>
-        [EnumMember(Value = "ByWords")]
-        ByWords,
-        
-        /// <summary>
-        /// Enum DiscretionaryHyphenation for "DiscretionaryHyphenation"
-        /// </summary>
-        [EnumMember(Value = "DiscretionaryHyphenation")]
-        DiscretionaryHyphenation
+        Html5 = 0
     }
 
 }

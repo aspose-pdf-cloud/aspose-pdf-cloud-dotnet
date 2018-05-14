@@ -11,6 +11,6 @@ if not exist ".\nuget.exe" powershell -Command "(new-object System.Net.WebClient
 if not exist ".\bin" mkdir bin
 
 copy packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll bin\Newtonsoft.Json.dll
-copy packages\RestSharp.105.1.0\lib\net45\RestSharp.dll bin\RestSharp.dll
+copy packages\RestSharp.106.2.2\lib\net45\RestSharp.dll bin\RestSharp.dll
 %CSCPATH%\csc  /reference:bin\Newtonsoft.Json.dll;bin\RestSharp.dll;System.ComponentModel.DataAnnotations.dll  /target:library /out:bin\Aspose.Pdf.Cloud.Sdk.dll /recurse:src\Aspose.Pdf.Cloud.Sdk\*.cs /doc:bin\Aspose.Pdf.Cloud.Sdk.xml
 

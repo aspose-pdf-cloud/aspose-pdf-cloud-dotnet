@@ -16,8 +16,9 @@ OpenAPI spec version: 1.1
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Aspose.Pdf.Cloud.Sdk.Test</RootNamespace>
     <AssemblyName>Aspose.Pdf.Cloud.Sdk.Test</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,9 +40,6 @@ OpenAPI spec version: 1.1
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="RestSharp, Version=105.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -73,6 +71,7 @@ OpenAPI spec version: 1.1
     <Compile Include="ImagesTests.cs" />
     <Compile Include="LinksTests.cs" />
     <Compile Include="MergeTests.cs" />
+    <Compile Include="PrivilegesTests.cs" />
     <Compile Include="TextTests.cs" />
     <Compile Include="OcrTests.cs" />
     <Compile Include="PagesTests.cs" />

@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="WrapMode.cs">
+// <copyright company="Aspose" file="RecognitionMode2.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -41,30 +41,30 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// When PDF file (that usually has fixed layout) is being converted,             the conversion engine tries to perform grouping and multi-level analysis to restore             the original document author&#39;s intent and produce result in flow layout.  This property tunes that conversion for this or that             desirable method of recognition of content.             
     /// </summary>
-    /// <value></value>
+    /// <value>When PDF file (that usually has fixed layout) is being converted,             the conversion engine tries to perform grouping and multi-level analysis to restore             the original document author&#39;s intent and produce result in flow layout.  This property tunes that conversion for this or that             desirable method of recognition of content.             </value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum WrapMode
+    public enum RecognitionMode2
     {
         
         /// <summary>
-        /// Enum NoWrap for "NoWrap"
+        /// Enum Flow for "Flow"
         /// </summary>
-        [EnumMember(Value = "NoWrap")]
-        NoWrap,
+        [EnumMember(Value = "Flow")]
+        Flow,
         
         /// <summary>
-        /// Enum ByWords for "ByWords"
+        /// Enum PdfFlow for "PdfFlow"
         /// </summary>
-        [EnumMember(Value = "ByWords")]
-        ByWords,
+        [EnumMember(Value = "PdfFlow")]
+        PdfFlow,
         
         /// <summary>
-        /// Enum DiscretionaryHyphenation for "DiscretionaryHyphenation"
+        /// Enum Fixed for "Fixed"
         /// </summary>
-        [EnumMember(Value = "DiscretionaryHyphenation")]
-        DiscretionaryHyphenation
+        [EnumMember(Value = "Fixed")]
+        Fixed
     }
 
 }

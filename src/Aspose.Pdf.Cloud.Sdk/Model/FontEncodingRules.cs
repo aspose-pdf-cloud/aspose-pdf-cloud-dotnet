@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="WrapMode.cs">
+// <copyright company="Aspose" file="FontEncodingRules.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -41,30 +41,24 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// This enumeration defines rules which tune encoding logic
     /// </summary>
-    /// <value></value>
+    /// <value>This enumeration defines rules which tune encoding logic</value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum WrapMode
+    public enum FontEncodingRules
     {
         
         /// <summary>
-        /// Enum NoWrap for "NoWrap"
+        /// Enum Default for "Default"
         /// </summary>
-        [EnumMember(Value = "NoWrap")]
-        NoWrap,
+        [EnumMember(Value = "Default")]
+        Default,
         
         /// <summary>
-        /// Enum ByWords for "ByWords"
+        /// Enum DecreaseToUnicodePriorityLevel for "DecreaseToUnicodePriorityLevel"
         /// </summary>
-        [EnumMember(Value = "ByWords")]
-        ByWords,
-        
-        /// <summary>
-        /// Enum DiscretionaryHyphenation for "DiscretionaryHyphenation"
-        /// </summary>
-        [EnumMember(Value = "DiscretionaryHyphenation")]
-        DiscretionaryHyphenation
+        [EnumMember(Value = "DecreaseToUnicodePriorityLevel")]
+        DecreaseToUnicodePriorityLevel
     }
 
 }

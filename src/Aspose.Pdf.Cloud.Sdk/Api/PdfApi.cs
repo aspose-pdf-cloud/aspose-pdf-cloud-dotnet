@@ -40,6 +40,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Delete document field by name.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fieldName">The field name/</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SaaSposeResponse</returns>
+        SaaSposeResponse DeleteField (string name, string fieldName, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Delete document field by name.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fieldName">The field name/</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SaaSposeResponse</returns>
+        ApiResponse<SaaSposeResponse> DeleteFieldWithHttpInfo (string name, string fieldName, string storage = null, string folder = null);
+        /// <summary>
         /// Delete document page by its number.
         /// </summary>
         /// <remarks>
@@ -811,6 +838,158 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> GetPdfInStorageToDocWithHttpInfo (string name, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null);
         /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream GetPdfInStorageToEpub (string name, string contentRecognitionMode = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> GetPdfInStorageToEpubWithHttpInfo (string name, string contentRecognitionMode = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream GetPdfInStorageToHtml (string name, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> GetPdfInStorageToHtmlWithHttpInfo (string name, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream GetPdfInStorageToLaTeX (string name, int? pagesCount = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> GetPdfInStorageToLaTeXWithHttpInfo (string name, int? pagesCount = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream GetPdfInStorageToMobiXml (string name, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> GetPdfInStorageToMobiXmlWithHttpInfo (string name, string folder = null);
+        /// <summary>
         /// Converts PDF document (located on storage) to PdfA format and returns resulting file in response content
         /// </summary>
         /// <remarks>
@@ -835,6 +1014,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> GetPdfInStorageToPdfAWithHttpInfo (string name, string type, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream GetPdfInStorageToPptx (string name, bool? separateImages = null, bool? slidesAsImages = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> GetPdfInStorageToPptxWithHttpInfo (string name, bool? separateImages = null, bool? slidesAsImages = null, string folder = null);
         /// <summary>
         /// Converts PDF document (located on storage) to SVG format and returns resulting file in response content
         /// </summary>
@@ -944,6 +1150,29 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> GetPdfInStorageToXlsWithHttpInfo (string name, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to XML format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream GetPdfInStorageToXml (string name, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XML format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> GetPdfInStorageToXmlWithHttpInfo (string name, string folder = null);
         /// <summary>
         /// Converts PDF document (located on storage) to XPS format and returns resulting file in response content
         /// </summary>
@@ -1125,6 +1354,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of TextItemsResponse</returns>
         ApiResponse<TextItemsResponse> GetTextItemsWithHttpInfo (string name, string withEmpty = null, string storage = null, string folder = null);
         /// <summary>
+        /// Verify signature document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="signName">Sign name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SignatureVerifyResponse</returns>
+        SignatureVerifyResponse GetVerifySignature (string name, string signName, string folder = null);
+
+        /// <summary>
+        /// Verify signature document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="signName">Sign name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SignatureVerifyResponse</returns>
+        ApiResponse<SignatureVerifyResponse> GetVerifySignatureWithHttpInfo (string name, string signName, string folder = null);
+        /// <summary>
         /// Get number of words per document page.
         /// </summary>
         /// <remarks>
@@ -1149,6 +1403,29 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of WordCountResponse</returns>
         ApiResponse<WordCountResponse> GetWordsPerPageWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and returns resulting file response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream GetXfaPdfInStorageToAcroForm (string name, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and returns resulting file response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> GetXfaPdfInStorageToAcroFormWithHttpInfo (string name, string folder = null);
         /// <summary>
         /// Append document to existing one.
         /// </summary>
@@ -1816,6 +2093,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of SaaSposeResponse</returns>
         ApiResponse<SaaSposeResponse> PutDocumentSaveAsTiffWithHttpInfo (string name, TiffExportOptions exportOptions = null, string resultFile = null, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string storage = null, string folder = null);
         /// <summary>
+        /// Flatten form fields in document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SaaSposeResponse</returns>
+        SaaSposeResponse PutFieldsFlatten (string name, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Flatten form fields in document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SaaSposeResponse</returns>
+        ApiResponse<SaaSposeResponse> PutFieldsFlattenWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
         /// Merge a list of documents.
         /// </summary>
         /// <remarks>
@@ -1911,6 +2213,158 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> PutPdfInRequestToDocWithHttpInfo (string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, System.IO.Stream file = null);
         /// <summary>
+        /// Converts PDF document (in request content) to EPUB format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInRequestToEpub (string outPath, string contentRecognitionMode = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to EPUB format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInRequestToEpubWithHttpInfo (string outPath, string contentRecognitionMode = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to Html format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInRequestToHtml (string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to Html format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInRequestToHtmlWithHttpInfo (string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to LaTeX format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInRequestToLaTeX (string outPath, int? pagesCount = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to LaTeX format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInRequestToLaTeXWithHttpInfo (string outPath, int? pagesCount = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to MOBIXML format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInRequestToMobiXml (string outPath, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to MOBIXML format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInRequestToMobiXmlWithHttpInfo (string outPath, System.IO.Stream file = null);
+        /// <summary>
         /// Converts PDF document (in request content) to PdfA format and uploads resulting file to storage.
         /// </summary>
         /// <remarks>
@@ -1935,6 +2389,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> PutPdfInRequestToPdfAWithHttpInfo (string outPath, string type, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to PPTX format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInRequestToPptx (string outPath, bool? separateImages = null, bool? slidesAsImages = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to PPTX format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInRequestToPptxWithHttpInfo (string outPath, bool? separateImages = null, bool? slidesAsImages = null, System.IO.Stream file = null);
         /// <summary>
         /// Converts PDF document (in request content) to SVG format and uploads resulting file to storage.
         /// </summary>
@@ -2045,6 +2526,29 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> PutPdfInRequestToXlsWithHttpInfo (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, System.IO.Stream file = null);
         /// <summary>
+        /// Converts PDF document (in request content) to XML format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInRequestToXml (string outPath, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XML format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInRequestToXmlWithHttpInfo (string outPath, System.IO.Stream file = null);
+        /// <summary>
         /// Converts PDF document (in request content) to XPS format and uploads resulting file to storage.
         /// </summary>
         /// <remarks>
@@ -2109,6 +2613,166 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> PutPdfInStorageToDocWithHttpInfo (string name, string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null);
         /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInStorageToEpub (string name, string outPath, string contentRecognitionMode = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInStorageToEpubWithHttpInfo (string name, string outPath, string contentRecognitionMode = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInStorageToHtml (string name, string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInStorageToHtmlWithHttpInfo (string name, string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInStorageToLaTeX (string name, string outPath, int? pagesCount = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInStorageToLaTeXWithHttpInfo (string name, string outPath, int? pagesCount = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInStorageToMobiXml (string name, string outPath, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInStorageToMobiXmlWithHttpInfo (string name, string outPath, string folder = null);
+        /// <summary>
         /// Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage
         /// </summary>
         /// <remarks>
@@ -2135,6 +2799,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> PutPdfInStorageToPdfAWithHttpInfo (string name, string outPath, string type, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInStorageToPptx (string name, string outPath, bool? separateImages = null, bool? slidesAsImages = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInStorageToPptxWithHttpInfo (string name, string outPath, bool? separateImages = null, bool? slidesAsImages = null, string folder = null);
         /// <summary>
         /// Converts PDF document (located on storage) to SVG format and uploads resulting file to storage
         /// </summary>
@@ -2251,6 +2944,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> PutPdfInStorageToXlsWithHttpInfo (string name, string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null);
         /// <summary>
+        /// Converts PDF document (located on storage) to XML format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutPdfInStorageToXml (string name, string outPath, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XML format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutPdfInStorageToXmlWithHttpInfo (string name, string outPath, string folder = null);
+        /// <summary>
         /// Converts PDF document (located on storage) to XPS format and uploads resulting file to storage
         /// </summary>
         /// <remarks>
@@ -2275,6 +2993,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> PutPdfInStorageToXpsWithHttpInfo (string name, string outPath, string folder = null);
+        /// <summary>
+        /// Update privilege document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="privileges">Document privileges.  (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SaaSposeResponse</returns>
+        SaaSposeResponse PutPrivileges (string name, DocumentPrivilege privileges = null, string folder = null);
+
+        /// <summary>
+        /// Update privilege document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="privileges">Document privileges.  (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SaaSposeResponse</returns>
+        ApiResponse<SaaSposeResponse> PutPrivilegesWithHttpInfo (string name, DocumentPrivilege privileges = null, string folder = null);
         /// <summary>
         /// Create searchable PDF document. Generate OCR layer for images in input PDF document.
         /// </summary>
@@ -2387,8 +3130,83 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of FieldsResponse</returns>
         ApiResponse<FieldsResponse> PutUpdateFieldsWithHttpInfo (string name, Fields fields = null, string storage = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (in request content) to PDF with AcroForm and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutXfaPdfInRequestToAcroForm (string outPath, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (in request content) to PDF with AcroForm and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutXfaPdfInRequestToAcroFormWithHttpInfo (string outPath, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        System.IO.Stream PutXfaPdfInStorageToAcroForm (string name, string outPath, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        ApiResponse<System.IO.Stream> PutXfaPdfInStorageToAcroFormWithHttpInfo (string name, string outPath, string folder = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Delete document field by name.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fieldName">The field name/</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SaaSposeResponse</returns>
+        System.Threading.Tasks.Task<SaaSposeResponse> DeleteFieldAsync (string name, string fieldName, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Delete document field by name.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fieldName">The field name/</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> DeleteFieldAsyncWithHttpInfo (string name, string fieldName, string storage = null, string folder = null);
         /// <summary>
         /// Delete document page by its number.
         /// </summary>
@@ -3161,6 +3979,158 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToDocAsyncWithHttpInfo (string name, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null);
         /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToEpubAsync (string name, string contentRecognitionMode = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToEpubAsyncWithHttpInfo (string name, string contentRecognitionMode = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToHtmlAsync (string name, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToHtmlAsyncWithHttpInfo (string name, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToLaTeXAsync (string name, int? pagesCount = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToLaTeXAsyncWithHttpInfo (string name, int? pagesCount = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToMobiXmlAsync (string name, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToMobiXmlAsyncWithHttpInfo (string name, string folder = null);
+        /// <summary>
         /// Converts PDF document (located on storage) to PdfA format and returns resulting file in response content
         /// </summary>
         /// <remarks>
@@ -3185,6 +4155,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToPdfAAsyncWithHttpInfo (string name, string type, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToPptxAsync (string name, bool? separateImages = null, bool? slidesAsImages = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToPptxAsyncWithHttpInfo (string name, bool? separateImages = null, bool? slidesAsImages = null, string folder = null);
         /// <summary>
         /// Converts PDF document (located on storage) to SVG format and returns resulting file in response content
         /// </summary>
@@ -3294,6 +4291,29 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToXlsAsyncWithHttpInfo (string name, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to XML format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToXmlAsync (string name, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XML format and returns resulting file in response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToXmlAsyncWithHttpInfo (string name, string folder = null);
         /// <summary>
         /// Converts PDF document (located on storage) to XPS format and returns resulting file in response content
         /// </summary>
@@ -3475,6 +4495,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (TextItemsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TextItemsResponse>> GetTextItemsAsyncWithHttpInfo (string name, string withEmpty = null, string storage = null, string folder = null);
         /// <summary>
+        /// Verify signature document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="signName">Sign name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SignatureVerifyResponse</returns>
+        System.Threading.Tasks.Task<SignatureVerifyResponse> GetVerifySignatureAsync (string name, string signName, string folder = null);
+
+        /// <summary>
+        /// Verify signature document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="signName">Sign name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SignatureVerifyResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SignatureVerifyResponse>> GetVerifySignatureAsyncWithHttpInfo (string name, string signName, string folder = null);
+        /// <summary>
         /// Get number of words per document page.
         /// </summary>
         /// <remarks>
@@ -3499,6 +4544,29 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (WordCountResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WordCountResponse>> GetWordsPerPageAsyncWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and returns resulting file response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> GetXfaPdfInStorageToAcroFormAsync (string name, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and returns resulting file response content
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetXfaPdfInStorageToAcroFormAsyncWithHttpInfo (string name, string folder = null);
         /// <summary>
         /// Append document to existing one.
         /// </summary>
@@ -4166,6 +5234,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutDocumentSaveAsTiffAsyncWithHttpInfo (string name, TiffExportOptions exportOptions = null, string resultFile = null, double? brightness = null, string compression = null, string colorDepth = null, int? leftMargin = null, int? rightMargin = null, int? topMargin = null, int? bottomMargin = null, string orientation = null, bool? skipBlankPages = null, int? width = null, int? height = null, int? xResolution = null, int? yResolution = null, int? pageIndex = null, int? pageCount = null, string storage = null, string folder = null);
         /// <summary>
+        /// Flatten form fields in document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SaaSposeResponse</returns>
+        System.Threading.Tasks.Task<SaaSposeResponse> PutFieldsFlattenAsync (string name, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Flatten form fields in document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutFieldsFlattenAsyncWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
         /// Merge a list of documents.
         /// </summary>
         /// <remarks>
@@ -4261,6 +5354,158 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToDocAsyncWithHttpInfo (string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, System.IO.Stream file = null);
         /// <summary>
+        /// Converts PDF document (in request content) to EPUB format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToEpubAsync (string outPath, string contentRecognitionMode = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to EPUB format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToEpubAsyncWithHttpInfo (string outPath, string contentRecognitionMode = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to Html format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToHtmlAsync (string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to Html format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToHtmlAsyncWithHttpInfo (string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to LaTeX format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToLaTeXAsync (string outPath, int? pagesCount = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to LaTeX format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToLaTeXAsyncWithHttpInfo (string outPath, int? pagesCount = null, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to MOBIXML format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToMobiXmlAsync (string outPath, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to MOBIXML format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToMobiXmlAsyncWithHttpInfo (string outPath, System.IO.Stream file = null);
+        /// <summary>
         /// Converts PDF document (in request content) to PdfA format and uploads resulting file to storage.
         /// </summary>
         /// <remarks>
@@ -4285,6 +5530,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToPdfAAsyncWithHttpInfo (string outPath, string type, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document (in request content) to PPTX format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToPptxAsync (string outPath, bool? separateImages = null, bool? slidesAsImages = null, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to PPTX format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToPptxAsyncWithHttpInfo (string outPath, bool? separateImages = null, bool? slidesAsImages = null, System.IO.Stream file = null);
         /// <summary>
         /// Converts PDF document (in request content) to SVG format and uploads resulting file to storage.
         /// </summary>
@@ -4395,6 +5667,29 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToXlsAsyncWithHttpInfo (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, System.IO.Stream file = null);
         /// <summary>
+        /// Converts PDF document (in request content) to XML format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToXmlAsync (string outPath, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XML format and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToXmlAsyncWithHttpInfo (string outPath, System.IO.Stream file = null);
+        /// <summary>
         /// Converts PDF document (in request content) to XPS format and uploads resulting file to storage.
         /// </summary>
         /// <remarks>
@@ -4459,6 +5754,166 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToDocAsyncWithHttpInfo (string name, string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, int? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null);
         /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToEpubAsync (string name, string outPath, string contentRecognitionMode = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToEpubAsyncWithHttpInfo (string name, string outPath, string contentRecognitionMode = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToHtmlAsync (string name, string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToHtmlAsyncWithHttpInfo (string name, string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToLaTeXAsync (string name, string outPath, int? pagesCount = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToLaTeXAsyncWithHttpInfo (string name, string outPath, int? pagesCount = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToMobiXmlAsync (string name, string outPath, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToMobiXmlAsyncWithHttpInfo (string name, string outPath, string folder = null);
+        /// <summary>
         /// Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage
         /// </summary>
         /// <remarks>
@@ -4485,6 +5940,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToPdfAAsyncWithHttpInfo (string name, string outPath, string type, string folder = null);
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToPptxAsync (string name, string outPath, bool? separateImages = null, bool? slidesAsImages = null, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToPptxAsyncWithHttpInfo (string name, string outPath, bool? separateImages = null, bool? slidesAsImages = null, string folder = null);
         /// <summary>
         /// Converts PDF document (located on storage) to SVG format and uploads resulting file to storage
         /// </summary>
@@ -4601,6 +6085,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToXlsAsyncWithHttpInfo (string name, string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null);
         /// <summary>
+        /// Converts PDF document (located on storage) to XML format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToXmlAsync (string name, string outPath, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XML format and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToXmlAsyncWithHttpInfo (string name, string outPath, string folder = null);
+        /// <summary>
         /// Converts PDF document (located on storage) to XPS format and uploads resulting file to storage
         /// </summary>
         /// <remarks>
@@ -4625,6 +6134,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToXpsAsyncWithHttpInfo (string name, string outPath, string folder = null);
+        /// <summary>
+        /// Update privilege document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="privileges">Document privileges.  (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SaaSposeResponse</returns>
+        System.Threading.Tasks.Task<SaaSposeResponse> PutPrivilegesAsync (string name, DocumentPrivilege privileges = null, string folder = null);
+
+        /// <summary>
+        /// Update privilege document.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="privileges">Document privileges.  (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutPrivilegesAsyncWithHttpInfo (string name, DocumentPrivilege privileges = null, string folder = null);
         /// <summary>
         /// Create searchable PDF document. Generate OCR layer for images in input PDF document.
         /// </summary>
@@ -4737,6 +6271,54 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (FieldsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<FieldsResponse>> PutUpdateFieldsAsyncWithHttpInfo (string name, Fields fields = null, string storage = null, string folder = null);
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (in request content) to PDF with AcroForm and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutXfaPdfInRequestToAcroFormAsync (string outPath, System.IO.Stream file = null);
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (in request content) to PDF with AcroForm and uploads resulting file to storage.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutXfaPdfInRequestToAcroFormAsyncWithHttpInfo (string outPath, System.IO.Stream file = null);
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        System.Threading.Tasks.Task<System.IO.Stream> PutXfaPdfInStorageToAcroFormAsync (string name, string outPath, string folder = null);
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and uploads resulting file to storage
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutXfaPdfInStorageToAcroFormAsyncWithHttpInfo (string name, string outPath, string folder = null);
         #endregion Asynchronous Operations
     }
 
@@ -4831,6 +6413,165 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Delete document field by name. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fieldName">The field name/</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SaaSposeResponse</returns>
+        public SaaSposeResponse DeleteField (string name, string fieldName, string storage = null, string folder = null)
+        {
+             ApiResponse<SaaSposeResponse> localVarResponse = DeleteFieldWithHttpInfo(name, fieldName, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete document field by name. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fieldName">The field name/</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SaaSposeResponse</returns>
+        public ApiResponse< SaaSposeResponse > DeleteFieldWithHttpInfo (string name, string fieldName, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->DeleteField");
+            // verify the required parameter 'fieldName' is set
+            if (fieldName == null)
+                throw new ApiException(400, "Missing required parameter 'fieldName' when calling PdfApi->DeleteField");
+
+            var localVarPath = "/pdf/{name}/fields/{fieldName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (fieldName != null) localVarPathParams.Add("fieldName", ApiClient.ParameterToString(fieldName)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteField", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SaaSposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SaaSposeResponse) ApiClient.Deserialize(localVarResponse, typeof(SaaSposeResponse)));
+        }
+
+        /// <summary>
+        /// Delete document field by name. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fieldName">The field name/</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SaaSposeResponse</returns>
+        public async System.Threading.Tasks.Task<SaaSposeResponse> DeleteFieldAsync (string name, string fieldName, string storage = null, string folder = null)
+        {
+             ApiResponse<SaaSposeResponse> localVarResponse = await DeleteFieldAsyncWithHttpInfo(name, fieldName, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete document field by name. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="fieldName">The field name/</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> DeleteFieldAsyncWithHttpInfo (string name, string fieldName, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->DeleteField");
+            // verify the required parameter 'fieldName' is set
+            if (fieldName == null)
+                throw new ApiException(400, "Missing required parameter 'fieldName' when calling PdfApi->DeleteField");
+
+            var localVarPath = "/pdf/{name}/fields/{fieldName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (fieldName != null) localVarPathParams.Add("fieldName", ApiClient.ParameterToString(fieldName)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteField", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SaaSposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SaaSposeResponse) ApiClient.Deserialize(localVarResponse, typeof(SaaSposeResponse)));
         }
 
         /// <summary>
@@ -9253,6 +10994,750 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream GetPdfInStorageToEpub (string name, string contentRecognitionMode = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = GetPdfInStorageToEpubWithHttpInfo(name, contentRecognitionMode, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > GetPdfInStorageToEpubWithHttpInfo (string name, string contentRecognitionMode = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToEpub");
+
+            var localVarPath = "/pdf/{name}/convert/epub";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (contentRecognitionMode != null) localVarQueryParams.Add("contentRecognitionMode", ApiClient.ParameterToString(contentRecognitionMode)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToEpub", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToEpubAsync (string name, string contentRecognitionMode = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await GetPdfInStorageToEpubAsyncWithHttpInfo(name, contentRecognitionMode, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToEpubAsyncWithHttpInfo (string name, string contentRecognitionMode = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToEpub");
+
+            var localVarPath = "/pdf/{name}/convert/epub";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (contentRecognitionMode != null) localVarQueryParams.Add("contentRecognitionMode", ApiClient.ParameterToString(contentRecognitionMode)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToEpub", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream GetPdfInStorageToHtml (string name, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = GetPdfInStorageToHtmlWithHttpInfo(name, additionalMarginWidthInPoints, compressSvgGraphicsIfAny, convertMarkedContentToLayers, defaultFontName, documentType, fixedLayout, imageResolution, minimalLineWidth, preventGlyphsGrouping, splitCssIntoPages, splitIntoPages, useZOrder, antialiasingProcessing, cssClassNamesPrefix, explicitListOfSavedPages, fontEncodingStrategy, fontSavingMode, htmlMarkupGenerationMode, lettersPositioningMethod, pagesFlowTypeDependsOnViewersScreenSize, partsEmbeddingMode, rasterImagesSavingMode, removeEmptyAreasOnTopAndBottom, saveShadowedTextsAsTransparentTexts, saveTransparentTexts, specialFolderForAllImages, specialFolderForSvgImages, trySaveTextUnderliningAndStrikeoutingInCss, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > GetPdfInStorageToHtmlWithHttpInfo (string name, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToHtml");
+
+            var localVarPath = "/pdf/{name}/convert/html";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (additionalMarginWidthInPoints != null) localVarQueryParams.Add("additionalMarginWidthInPoints", ApiClient.ParameterToString(additionalMarginWidthInPoints)); // query parameter
+            if (compressSvgGraphicsIfAny != null) localVarQueryParams.Add("compressSvgGraphicsIfAny", ApiClient.ParameterToString(compressSvgGraphicsIfAny)); // query parameter
+            if (convertMarkedContentToLayers != null) localVarQueryParams.Add("convertMarkedContentToLayers", ApiClient.ParameterToString(convertMarkedContentToLayers)); // query parameter
+            if (defaultFontName != null) localVarQueryParams.Add("defaultFontName", ApiClient.ParameterToString(defaultFontName)); // query parameter
+            if (documentType != null) localVarQueryParams.Add("documentType", ApiClient.ParameterToString(documentType)); // query parameter
+            if (fixedLayout != null) localVarQueryParams.Add("fixedLayout", ApiClient.ParameterToString(fixedLayout)); // query parameter
+            if (imageResolution != null) localVarQueryParams.Add("imageResolution", ApiClient.ParameterToString(imageResolution)); // query parameter
+            if (minimalLineWidth != null) localVarQueryParams.Add("minimalLineWidth", ApiClient.ParameterToString(minimalLineWidth)); // query parameter
+            if (preventGlyphsGrouping != null) localVarQueryParams.Add("preventGlyphsGrouping", ApiClient.ParameterToString(preventGlyphsGrouping)); // query parameter
+            if (splitCssIntoPages != null) localVarQueryParams.Add("splitCssIntoPages", ApiClient.ParameterToString(splitCssIntoPages)); // query parameter
+            if (splitIntoPages != null) localVarQueryParams.Add("splitIntoPages", ApiClient.ParameterToString(splitIntoPages)); // query parameter
+            if (useZOrder != null) localVarQueryParams.Add("useZOrder", ApiClient.ParameterToString(useZOrder)); // query parameter
+            if (antialiasingProcessing != null) localVarQueryParams.Add("antialiasingProcessing", ApiClient.ParameterToString(antialiasingProcessing)); // query parameter
+            if (cssClassNamesPrefix != null) localVarQueryParams.Add("cssClassNamesPrefix", ApiClient.ParameterToString(cssClassNamesPrefix)); // query parameter
+            if (explicitListOfSavedPages != null) localVarQueryParams.Add("explicitListOfSavedPages", ApiClient.ParameterToString(explicitListOfSavedPages)); // query parameter
+            if (fontEncodingStrategy != null) localVarQueryParams.Add("fontEncodingStrategy", ApiClient.ParameterToString(fontEncodingStrategy)); // query parameter
+            if (fontSavingMode != null) localVarQueryParams.Add("fontSavingMode", ApiClient.ParameterToString(fontSavingMode)); // query parameter
+            if (htmlMarkupGenerationMode != null) localVarQueryParams.Add("htmlMarkupGenerationMode", ApiClient.ParameterToString(htmlMarkupGenerationMode)); // query parameter
+            if (lettersPositioningMethod != null) localVarQueryParams.Add("lettersPositioningMethod", ApiClient.ParameterToString(lettersPositioningMethod)); // query parameter
+            if (pagesFlowTypeDependsOnViewersScreenSize != null) localVarQueryParams.Add("pagesFlowTypeDependsOnViewersScreenSize", ApiClient.ParameterToString(pagesFlowTypeDependsOnViewersScreenSize)); // query parameter
+            if (partsEmbeddingMode != null) localVarQueryParams.Add("partsEmbeddingMode", ApiClient.ParameterToString(partsEmbeddingMode)); // query parameter
+            if (rasterImagesSavingMode != null) localVarQueryParams.Add("rasterImagesSavingMode", ApiClient.ParameterToString(rasterImagesSavingMode)); // query parameter
+            if (removeEmptyAreasOnTopAndBottom != null) localVarQueryParams.Add("removeEmptyAreasOnTopAndBottom", ApiClient.ParameterToString(removeEmptyAreasOnTopAndBottom)); // query parameter
+            if (saveShadowedTextsAsTransparentTexts != null) localVarQueryParams.Add("saveShadowedTextsAsTransparentTexts", ApiClient.ParameterToString(saveShadowedTextsAsTransparentTexts)); // query parameter
+            if (saveTransparentTexts != null) localVarQueryParams.Add("saveTransparentTexts", ApiClient.ParameterToString(saveTransparentTexts)); // query parameter
+            if (specialFolderForAllImages != null) localVarQueryParams.Add("specialFolderForAllImages", ApiClient.ParameterToString(specialFolderForAllImages)); // query parameter
+            if (specialFolderForSvgImages != null) localVarQueryParams.Add("specialFolderForSvgImages", ApiClient.ParameterToString(specialFolderForSvgImages)); // query parameter
+            if (trySaveTextUnderliningAndStrikeoutingInCss != null) localVarQueryParams.Add("trySaveTextUnderliningAndStrikeoutingInCss", ApiClient.ParameterToString(trySaveTextUnderliningAndStrikeoutingInCss)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToHtml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToHtmlAsync (string name, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await GetPdfInStorageToHtmlAsyncWithHttpInfo(name, additionalMarginWidthInPoints, compressSvgGraphicsIfAny, convertMarkedContentToLayers, defaultFontName, documentType, fixedLayout, imageResolution, minimalLineWidth, preventGlyphsGrouping, splitCssIntoPages, splitIntoPages, useZOrder, antialiasingProcessing, cssClassNamesPrefix, explicitListOfSavedPages, fontEncodingStrategy, fontSavingMode, htmlMarkupGenerationMode, lettersPositioningMethod, pagesFlowTypeDependsOnViewersScreenSize, partsEmbeddingMode, rasterImagesSavingMode, removeEmptyAreasOnTopAndBottom, saveShadowedTextsAsTransparentTexts, saveTransparentTexts, specialFolderForAllImages, specialFolderForSvgImages, trySaveTextUnderliningAndStrikeoutingInCss, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToHtmlAsyncWithHttpInfo (string name, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToHtml");
+
+            var localVarPath = "/pdf/{name}/convert/html";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (additionalMarginWidthInPoints != null) localVarQueryParams.Add("additionalMarginWidthInPoints", ApiClient.ParameterToString(additionalMarginWidthInPoints)); // query parameter
+            if (compressSvgGraphicsIfAny != null) localVarQueryParams.Add("compressSvgGraphicsIfAny", ApiClient.ParameterToString(compressSvgGraphicsIfAny)); // query parameter
+            if (convertMarkedContentToLayers != null) localVarQueryParams.Add("convertMarkedContentToLayers", ApiClient.ParameterToString(convertMarkedContentToLayers)); // query parameter
+            if (defaultFontName != null) localVarQueryParams.Add("defaultFontName", ApiClient.ParameterToString(defaultFontName)); // query parameter
+            if (documentType != null) localVarQueryParams.Add("documentType", ApiClient.ParameterToString(documentType)); // query parameter
+            if (fixedLayout != null) localVarQueryParams.Add("fixedLayout", ApiClient.ParameterToString(fixedLayout)); // query parameter
+            if (imageResolution != null) localVarQueryParams.Add("imageResolution", ApiClient.ParameterToString(imageResolution)); // query parameter
+            if (minimalLineWidth != null) localVarQueryParams.Add("minimalLineWidth", ApiClient.ParameterToString(minimalLineWidth)); // query parameter
+            if (preventGlyphsGrouping != null) localVarQueryParams.Add("preventGlyphsGrouping", ApiClient.ParameterToString(preventGlyphsGrouping)); // query parameter
+            if (splitCssIntoPages != null) localVarQueryParams.Add("splitCssIntoPages", ApiClient.ParameterToString(splitCssIntoPages)); // query parameter
+            if (splitIntoPages != null) localVarQueryParams.Add("splitIntoPages", ApiClient.ParameterToString(splitIntoPages)); // query parameter
+            if (useZOrder != null) localVarQueryParams.Add("useZOrder", ApiClient.ParameterToString(useZOrder)); // query parameter
+            if (antialiasingProcessing != null) localVarQueryParams.Add("antialiasingProcessing", ApiClient.ParameterToString(antialiasingProcessing)); // query parameter
+            if (cssClassNamesPrefix != null) localVarQueryParams.Add("cssClassNamesPrefix", ApiClient.ParameterToString(cssClassNamesPrefix)); // query parameter
+            if (explicitListOfSavedPages != null) localVarQueryParams.Add("explicitListOfSavedPages", ApiClient.ParameterToString(explicitListOfSavedPages)); // query parameter
+            if (fontEncodingStrategy != null) localVarQueryParams.Add("fontEncodingStrategy", ApiClient.ParameterToString(fontEncodingStrategy)); // query parameter
+            if (fontSavingMode != null) localVarQueryParams.Add("fontSavingMode", ApiClient.ParameterToString(fontSavingMode)); // query parameter
+            if (htmlMarkupGenerationMode != null) localVarQueryParams.Add("htmlMarkupGenerationMode", ApiClient.ParameterToString(htmlMarkupGenerationMode)); // query parameter
+            if (lettersPositioningMethod != null) localVarQueryParams.Add("lettersPositioningMethod", ApiClient.ParameterToString(lettersPositioningMethod)); // query parameter
+            if (pagesFlowTypeDependsOnViewersScreenSize != null) localVarQueryParams.Add("pagesFlowTypeDependsOnViewersScreenSize", ApiClient.ParameterToString(pagesFlowTypeDependsOnViewersScreenSize)); // query parameter
+            if (partsEmbeddingMode != null) localVarQueryParams.Add("partsEmbeddingMode", ApiClient.ParameterToString(partsEmbeddingMode)); // query parameter
+            if (rasterImagesSavingMode != null) localVarQueryParams.Add("rasterImagesSavingMode", ApiClient.ParameterToString(rasterImagesSavingMode)); // query parameter
+            if (removeEmptyAreasOnTopAndBottom != null) localVarQueryParams.Add("removeEmptyAreasOnTopAndBottom", ApiClient.ParameterToString(removeEmptyAreasOnTopAndBottom)); // query parameter
+            if (saveShadowedTextsAsTransparentTexts != null) localVarQueryParams.Add("saveShadowedTextsAsTransparentTexts", ApiClient.ParameterToString(saveShadowedTextsAsTransparentTexts)); // query parameter
+            if (saveTransparentTexts != null) localVarQueryParams.Add("saveTransparentTexts", ApiClient.ParameterToString(saveTransparentTexts)); // query parameter
+            if (specialFolderForAllImages != null) localVarQueryParams.Add("specialFolderForAllImages", ApiClient.ParameterToString(specialFolderForAllImages)); // query parameter
+            if (specialFolderForSvgImages != null) localVarQueryParams.Add("specialFolderForSvgImages", ApiClient.ParameterToString(specialFolderForSvgImages)); // query parameter
+            if (trySaveTextUnderliningAndStrikeoutingInCss != null) localVarQueryParams.Add("trySaveTextUnderliningAndStrikeoutingInCss", ApiClient.ParameterToString(trySaveTextUnderliningAndStrikeoutingInCss)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToHtml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream GetPdfInStorageToLaTeX (string name, int? pagesCount = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = GetPdfInStorageToLaTeXWithHttpInfo(name, pagesCount, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > GetPdfInStorageToLaTeXWithHttpInfo (string name, int? pagesCount = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToLaTeX");
+
+            var localVarPath = "/pdf/{name}/convert/latex";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pagesCount != null) localVarQueryParams.Add("pagesCount", ApiClient.ParameterToString(pagesCount)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToLaTeX", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToLaTeXAsync (string name, int? pagesCount = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await GetPdfInStorageToLaTeXAsyncWithHttpInfo(name, pagesCount, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToLaTeXAsyncWithHttpInfo (string name, int? pagesCount = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToLaTeX");
+
+            var localVarPath = "/pdf/{name}/convert/latex";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pagesCount != null) localVarQueryParams.Add("pagesCount", ApiClient.ParameterToString(pagesCount)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToLaTeX", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream GetPdfInStorageToMobiXml (string name, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = GetPdfInStorageToMobiXmlWithHttpInfo(name, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > GetPdfInStorageToMobiXmlWithHttpInfo (string name, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToMobiXml");
+
+            var localVarPath = "/pdf/{name}/convert/mobixml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToMobiXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToMobiXmlAsync (string name, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await GetPdfInStorageToMobiXmlAsyncWithHttpInfo(name, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToMobiXmlAsyncWithHttpInfo (string name, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToMobiXml");
+
+            var localVarPath = "/pdf/{name}/convert/mobixml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToMobiXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
         /// Converts PDF document (located on storage) to PdfA format and returns resulting file in response content 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9397,6 +11882,159 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetPdfInStorageToPdfA", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream GetPdfInStorageToPptx (string name, bool? separateImages = null, bool? slidesAsImages = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = GetPdfInStorageToPptxWithHttpInfo(name, separateImages, slidesAsImages, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > GetPdfInStorageToPptxWithHttpInfo (string name, bool? separateImages = null, bool? slidesAsImages = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToPptx");
+
+            var localVarPath = "/pdf/{name}/convert/pptx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (separateImages != null) localVarQueryParams.Add("separateImages", ApiClient.ParameterToString(separateImages)); // query parameter
+            if (slidesAsImages != null) localVarQueryParams.Add("slidesAsImages", ApiClient.ParameterToString(slidesAsImages)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToPptx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToPptxAsync (string name, bool? separateImages = null, bool? slidesAsImages = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await GetPdfInStorageToPptxAsyncWithHttpInfo(name, separateImages, slidesAsImages, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToPptxAsyncWithHttpInfo (string name, bool? separateImages = null, bool? slidesAsImages = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToPptx");
+
+            var localVarPath = "/pdf/{name}/convert/pptx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (separateImages != null) localVarQueryParams.Add("separateImages", ApiClient.ParameterToString(separateImages)); // query parameter
+            if (slidesAsImages != null) localVarQueryParams.Add("slidesAsImages", ApiClient.ParameterToString(slidesAsImages)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToPptx", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -9940,6 +12578,147 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetPdfInStorageToXls", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XML format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream GetPdfInStorageToXml (string name, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = GetPdfInStorageToXmlWithHttpInfo(name, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XML format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > GetPdfInStorageToXmlWithHttpInfo (string name, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToXml");
+
+            var localVarPath = "/pdf/{name}/convert/xml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XML format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetPdfInStorageToXmlAsync (string name, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await GetPdfInStorageToXmlAsyncWithHttpInfo(name, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XML format and returns resulting file in response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToXmlAsyncWithHttpInfo (string name, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPdfInStorageToXml");
+
+            var localVarPath = "/pdf/{name}/convert/xml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPdfInStorageToXml", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -10993,6 +13772,159 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Verify signature document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="signName">Sign name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SignatureVerifyResponse</returns>
+        public SignatureVerifyResponse GetVerifySignature (string name, string signName, string folder = null)
+        {
+             ApiResponse<SignatureVerifyResponse> localVarResponse = GetVerifySignatureWithHttpInfo(name, signName, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Verify signature document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="signName">Sign name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SignatureVerifyResponse</returns>
+        public ApiResponse< SignatureVerifyResponse > GetVerifySignatureWithHttpInfo (string name, string signName, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetVerifySignature");
+            // verify the required parameter 'signName' is set
+            if (signName == null)
+                throw new ApiException(400, "Missing required parameter 'signName' when calling PdfApi->GetVerifySignature");
+
+            var localVarPath = "/pdf/{name}/verifySignature";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (signName != null) localVarQueryParams.Add("signName", ApiClient.ParameterToString(signName)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetVerifySignature", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SignatureVerifyResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SignatureVerifyResponse) ApiClient.Deserialize(localVarResponse, typeof(SignatureVerifyResponse)));
+        }
+
+        /// <summary>
+        /// Verify signature document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="signName">Sign name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SignatureVerifyResponse</returns>
+        public async System.Threading.Tasks.Task<SignatureVerifyResponse> GetVerifySignatureAsync (string name, string signName, string folder = null)
+        {
+             ApiResponse<SignatureVerifyResponse> localVarResponse = await GetVerifySignatureAsyncWithHttpInfo(name, signName, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Verify signature document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="signName">Sign name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SignatureVerifyResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SignatureVerifyResponse>> GetVerifySignatureAsyncWithHttpInfo (string name, string signName, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetVerifySignature");
+            // verify the required parameter 'signName' is set
+            if (signName == null)
+                throw new ApiException(400, "Missing required parameter 'signName' when calling PdfApi->GetVerifySignature");
+
+            var localVarPath = "/pdf/{name}/verifySignature";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (signName != null) localVarQueryParams.Add("signName", ApiClient.ParameterToString(signName)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetVerifySignature", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SignatureVerifyResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SignatureVerifyResponse) ApiClient.Deserialize(localVarResponse, typeof(SignatureVerifyResponse)));
+        }
+
+        /// <summary>
         /// Get number of words per document page. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11137,6 +14069,147 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<WordCountResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (WordCountResponse) ApiClient.Deserialize(localVarResponse, typeof(WordCountResponse)));
+        }
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and returns resulting file response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream GetXfaPdfInStorageToAcroForm (string name, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = GetXfaPdfInStorageToAcroFormWithHttpInfo(name, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and returns resulting file response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > GetXfaPdfInStorageToAcroFormWithHttpInfo (string name, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetXfaPdfInStorageToAcroForm");
+
+            var localVarPath = "/pdf/{name}/convert/xfatoacroform";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetXfaPdfInStorageToAcroForm", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and returns resulting file response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> GetXfaPdfInStorageToAcroFormAsync (string name, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await GetXfaPdfInStorageToAcroFormAsyncWithHttpInfo(name, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and returns resulting file response content 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetXfaPdfInStorageToAcroFormAsyncWithHttpInfo (string name, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetXfaPdfInStorageToAcroForm");
+
+            var localVarPath = "/pdf/{name}/convert/xfatoacroform";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetXfaPdfInStorageToAcroForm", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
         }
 
         /// <summary>
@@ -15034,6 +18107,153 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Flatten form fields in document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SaaSposeResponse</returns>
+        public SaaSposeResponse PutFieldsFlatten (string name, string storage = null, string folder = null)
+        {
+             ApiResponse<SaaSposeResponse> localVarResponse = PutFieldsFlattenWithHttpInfo(name, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Flatten form fields in document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SaaSposeResponse</returns>
+        public ApiResponse< SaaSposeResponse > PutFieldsFlattenWithHttpInfo (string name, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutFieldsFlatten");
+
+            var localVarPath = "/pdf/{name}/fields/flatten";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutFieldsFlatten", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SaaSposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SaaSposeResponse) ApiClient.Deserialize(localVarResponse, typeof(SaaSposeResponse)));
+        }
+
+        /// <summary>
+        /// Flatten form fields in document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SaaSposeResponse</returns>
+        public async System.Threading.Tasks.Task<SaaSposeResponse> PutFieldsFlattenAsync (string name, string storage = null, string folder = null)
+        {
+             ApiResponse<SaaSposeResponse> localVarResponse = await PutFieldsFlattenAsyncWithHttpInfo(name, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Flatten form fields in document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutFieldsFlattenAsyncWithHttpInfo (string name, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutFieldsFlatten");
+
+            var localVarPath = "/pdf/{name}/fields/flatten";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutFieldsFlatten", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SaaSposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SaaSposeResponse) ApiClient.Deserialize(localVarResponse, typeof(SaaSposeResponse)));
+        }
+
+        /// <summary>
         /// Merge a list of documents. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -15575,6 +18795,750 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Converts PDF document (in request content) to EPUB format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInRequestToEpub (string outPath, string contentRecognitionMode = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInRequestToEpubWithHttpInfo(outPath, contentRecognitionMode, file);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to EPUB format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInRequestToEpubWithHttpInfo (string outPath, string contentRecognitionMode = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToEpub");
+
+            var localVarPath = "/pdf/convert/epub";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (contentRecognitionMode != null) localVarQueryParams.Add("contentRecognitionMode", ApiClient.ParameterToString(contentRecognitionMode)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToEpub", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to EPUB format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToEpubAsync (string outPath, string contentRecognitionMode = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInRequestToEpubAsyncWithHttpInfo(outPath, contentRecognitionMode, file);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to EPUB format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToEpubAsyncWithHttpInfo (string outPath, string contentRecognitionMode = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToEpub");
+
+            var localVarPath = "/pdf/convert/epub";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (contentRecognitionMode != null) localVarQueryParams.Add("contentRecognitionMode", ApiClient.ParameterToString(contentRecognitionMode)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToEpub", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to Html format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInRequestToHtml (string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInRequestToHtmlWithHttpInfo(outPath, additionalMarginWidthInPoints, compressSvgGraphicsIfAny, convertMarkedContentToLayers, defaultFontName, documentType, fixedLayout, imageResolution, minimalLineWidth, preventGlyphsGrouping, splitCssIntoPages, splitIntoPages, useZOrder, antialiasingProcessing, cssClassNamesPrefix, explicitListOfSavedPages, fontEncodingStrategy, fontSavingMode, htmlMarkupGenerationMode, lettersPositioningMethod, pagesFlowTypeDependsOnViewersScreenSize, partsEmbeddingMode, rasterImagesSavingMode, removeEmptyAreasOnTopAndBottom, saveShadowedTextsAsTransparentTexts, saveTransparentTexts, specialFolderForAllImages, specialFolderForSvgImages, trySaveTextUnderliningAndStrikeoutingInCss, file);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to Html format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInRequestToHtmlWithHttpInfo (string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToHtml");
+
+            var localVarPath = "/pdf/convert/html";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (additionalMarginWidthInPoints != null) localVarQueryParams.Add("additionalMarginWidthInPoints", ApiClient.ParameterToString(additionalMarginWidthInPoints)); // query parameter
+            if (compressSvgGraphicsIfAny != null) localVarQueryParams.Add("compressSvgGraphicsIfAny", ApiClient.ParameterToString(compressSvgGraphicsIfAny)); // query parameter
+            if (convertMarkedContentToLayers != null) localVarQueryParams.Add("convertMarkedContentToLayers", ApiClient.ParameterToString(convertMarkedContentToLayers)); // query parameter
+            if (defaultFontName != null) localVarQueryParams.Add("defaultFontName", ApiClient.ParameterToString(defaultFontName)); // query parameter
+            if (documentType != null) localVarQueryParams.Add("documentType", ApiClient.ParameterToString(documentType)); // query parameter
+            if (fixedLayout != null) localVarQueryParams.Add("fixedLayout", ApiClient.ParameterToString(fixedLayout)); // query parameter
+            if (imageResolution != null) localVarQueryParams.Add("imageResolution", ApiClient.ParameterToString(imageResolution)); // query parameter
+            if (minimalLineWidth != null) localVarQueryParams.Add("minimalLineWidth", ApiClient.ParameterToString(minimalLineWidth)); // query parameter
+            if (preventGlyphsGrouping != null) localVarQueryParams.Add("preventGlyphsGrouping", ApiClient.ParameterToString(preventGlyphsGrouping)); // query parameter
+            if (splitCssIntoPages != null) localVarQueryParams.Add("splitCssIntoPages", ApiClient.ParameterToString(splitCssIntoPages)); // query parameter
+            if (splitIntoPages != null) localVarQueryParams.Add("splitIntoPages", ApiClient.ParameterToString(splitIntoPages)); // query parameter
+            if (useZOrder != null) localVarQueryParams.Add("useZOrder", ApiClient.ParameterToString(useZOrder)); // query parameter
+            if (antialiasingProcessing != null) localVarQueryParams.Add("antialiasingProcessing", ApiClient.ParameterToString(antialiasingProcessing)); // query parameter
+            if (cssClassNamesPrefix != null) localVarQueryParams.Add("cssClassNamesPrefix", ApiClient.ParameterToString(cssClassNamesPrefix)); // query parameter
+            if (explicitListOfSavedPages != null) localVarQueryParams.Add("explicitListOfSavedPages", ApiClient.ParameterToString(explicitListOfSavedPages)); // query parameter
+            if (fontEncodingStrategy != null) localVarQueryParams.Add("fontEncodingStrategy", ApiClient.ParameterToString(fontEncodingStrategy)); // query parameter
+            if (fontSavingMode != null) localVarQueryParams.Add("fontSavingMode", ApiClient.ParameterToString(fontSavingMode)); // query parameter
+            if (htmlMarkupGenerationMode != null) localVarQueryParams.Add("htmlMarkupGenerationMode", ApiClient.ParameterToString(htmlMarkupGenerationMode)); // query parameter
+            if (lettersPositioningMethod != null) localVarQueryParams.Add("lettersPositioningMethod", ApiClient.ParameterToString(lettersPositioningMethod)); // query parameter
+            if (pagesFlowTypeDependsOnViewersScreenSize != null) localVarQueryParams.Add("pagesFlowTypeDependsOnViewersScreenSize", ApiClient.ParameterToString(pagesFlowTypeDependsOnViewersScreenSize)); // query parameter
+            if (partsEmbeddingMode != null) localVarQueryParams.Add("partsEmbeddingMode", ApiClient.ParameterToString(partsEmbeddingMode)); // query parameter
+            if (rasterImagesSavingMode != null) localVarQueryParams.Add("rasterImagesSavingMode", ApiClient.ParameterToString(rasterImagesSavingMode)); // query parameter
+            if (removeEmptyAreasOnTopAndBottom != null) localVarQueryParams.Add("removeEmptyAreasOnTopAndBottom", ApiClient.ParameterToString(removeEmptyAreasOnTopAndBottom)); // query parameter
+            if (saveShadowedTextsAsTransparentTexts != null) localVarQueryParams.Add("saveShadowedTextsAsTransparentTexts", ApiClient.ParameterToString(saveShadowedTextsAsTransparentTexts)); // query parameter
+            if (saveTransparentTexts != null) localVarQueryParams.Add("saveTransparentTexts", ApiClient.ParameterToString(saveTransparentTexts)); // query parameter
+            if (specialFolderForAllImages != null) localVarQueryParams.Add("specialFolderForAllImages", ApiClient.ParameterToString(specialFolderForAllImages)); // query parameter
+            if (specialFolderForSvgImages != null) localVarQueryParams.Add("specialFolderForSvgImages", ApiClient.ParameterToString(specialFolderForSvgImages)); // query parameter
+            if (trySaveTextUnderliningAndStrikeoutingInCss != null) localVarQueryParams.Add("trySaveTextUnderliningAndStrikeoutingInCss", ApiClient.ParameterToString(trySaveTextUnderliningAndStrikeoutingInCss)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToHtml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to Html format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToHtmlAsync (string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInRequestToHtmlAsyncWithHttpInfo(outPath, additionalMarginWidthInPoints, compressSvgGraphicsIfAny, convertMarkedContentToLayers, defaultFontName, documentType, fixedLayout, imageResolution, minimalLineWidth, preventGlyphsGrouping, splitCssIntoPages, splitIntoPages, useZOrder, antialiasingProcessing, cssClassNamesPrefix, explicitListOfSavedPages, fontEncodingStrategy, fontSavingMode, htmlMarkupGenerationMode, lettersPositioningMethod, pagesFlowTypeDependsOnViewersScreenSize, partsEmbeddingMode, rasterImagesSavingMode, removeEmptyAreasOnTopAndBottom, saveShadowedTextsAsTransparentTexts, saveTransparentTexts, specialFolderForAllImages, specialFolderForSvgImages, trySaveTextUnderliningAndStrikeoutingInCss, file);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to Html format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToHtmlAsyncWithHttpInfo (string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToHtml");
+
+            var localVarPath = "/pdf/convert/html";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (additionalMarginWidthInPoints != null) localVarQueryParams.Add("additionalMarginWidthInPoints", ApiClient.ParameterToString(additionalMarginWidthInPoints)); // query parameter
+            if (compressSvgGraphicsIfAny != null) localVarQueryParams.Add("compressSvgGraphicsIfAny", ApiClient.ParameterToString(compressSvgGraphicsIfAny)); // query parameter
+            if (convertMarkedContentToLayers != null) localVarQueryParams.Add("convertMarkedContentToLayers", ApiClient.ParameterToString(convertMarkedContentToLayers)); // query parameter
+            if (defaultFontName != null) localVarQueryParams.Add("defaultFontName", ApiClient.ParameterToString(defaultFontName)); // query parameter
+            if (documentType != null) localVarQueryParams.Add("documentType", ApiClient.ParameterToString(documentType)); // query parameter
+            if (fixedLayout != null) localVarQueryParams.Add("fixedLayout", ApiClient.ParameterToString(fixedLayout)); // query parameter
+            if (imageResolution != null) localVarQueryParams.Add("imageResolution", ApiClient.ParameterToString(imageResolution)); // query parameter
+            if (minimalLineWidth != null) localVarQueryParams.Add("minimalLineWidth", ApiClient.ParameterToString(minimalLineWidth)); // query parameter
+            if (preventGlyphsGrouping != null) localVarQueryParams.Add("preventGlyphsGrouping", ApiClient.ParameterToString(preventGlyphsGrouping)); // query parameter
+            if (splitCssIntoPages != null) localVarQueryParams.Add("splitCssIntoPages", ApiClient.ParameterToString(splitCssIntoPages)); // query parameter
+            if (splitIntoPages != null) localVarQueryParams.Add("splitIntoPages", ApiClient.ParameterToString(splitIntoPages)); // query parameter
+            if (useZOrder != null) localVarQueryParams.Add("useZOrder", ApiClient.ParameterToString(useZOrder)); // query parameter
+            if (antialiasingProcessing != null) localVarQueryParams.Add("antialiasingProcessing", ApiClient.ParameterToString(antialiasingProcessing)); // query parameter
+            if (cssClassNamesPrefix != null) localVarQueryParams.Add("cssClassNamesPrefix", ApiClient.ParameterToString(cssClassNamesPrefix)); // query parameter
+            if (explicitListOfSavedPages != null) localVarQueryParams.Add("explicitListOfSavedPages", ApiClient.ParameterToString(explicitListOfSavedPages)); // query parameter
+            if (fontEncodingStrategy != null) localVarQueryParams.Add("fontEncodingStrategy", ApiClient.ParameterToString(fontEncodingStrategy)); // query parameter
+            if (fontSavingMode != null) localVarQueryParams.Add("fontSavingMode", ApiClient.ParameterToString(fontSavingMode)); // query parameter
+            if (htmlMarkupGenerationMode != null) localVarQueryParams.Add("htmlMarkupGenerationMode", ApiClient.ParameterToString(htmlMarkupGenerationMode)); // query parameter
+            if (lettersPositioningMethod != null) localVarQueryParams.Add("lettersPositioningMethod", ApiClient.ParameterToString(lettersPositioningMethod)); // query parameter
+            if (pagesFlowTypeDependsOnViewersScreenSize != null) localVarQueryParams.Add("pagesFlowTypeDependsOnViewersScreenSize", ApiClient.ParameterToString(pagesFlowTypeDependsOnViewersScreenSize)); // query parameter
+            if (partsEmbeddingMode != null) localVarQueryParams.Add("partsEmbeddingMode", ApiClient.ParameterToString(partsEmbeddingMode)); // query parameter
+            if (rasterImagesSavingMode != null) localVarQueryParams.Add("rasterImagesSavingMode", ApiClient.ParameterToString(rasterImagesSavingMode)); // query parameter
+            if (removeEmptyAreasOnTopAndBottom != null) localVarQueryParams.Add("removeEmptyAreasOnTopAndBottom", ApiClient.ParameterToString(removeEmptyAreasOnTopAndBottom)); // query parameter
+            if (saveShadowedTextsAsTransparentTexts != null) localVarQueryParams.Add("saveShadowedTextsAsTransparentTexts", ApiClient.ParameterToString(saveShadowedTextsAsTransparentTexts)); // query parameter
+            if (saveTransparentTexts != null) localVarQueryParams.Add("saveTransparentTexts", ApiClient.ParameterToString(saveTransparentTexts)); // query parameter
+            if (specialFolderForAllImages != null) localVarQueryParams.Add("specialFolderForAllImages", ApiClient.ParameterToString(specialFolderForAllImages)); // query parameter
+            if (specialFolderForSvgImages != null) localVarQueryParams.Add("specialFolderForSvgImages", ApiClient.ParameterToString(specialFolderForSvgImages)); // query parameter
+            if (trySaveTextUnderliningAndStrikeoutingInCss != null) localVarQueryParams.Add("trySaveTextUnderliningAndStrikeoutingInCss", ApiClient.ParameterToString(trySaveTextUnderliningAndStrikeoutingInCss)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToHtml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to LaTeX format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInRequestToLaTeX (string outPath, int? pagesCount = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInRequestToLaTeXWithHttpInfo(outPath, pagesCount, file);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to LaTeX format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInRequestToLaTeXWithHttpInfo (string outPath, int? pagesCount = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToLaTeX");
+
+            var localVarPath = "/pdf/convert/latex";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (pagesCount != null) localVarQueryParams.Add("pagesCount", ApiClient.ParameterToString(pagesCount)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToLaTeX", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to LaTeX format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToLaTeXAsync (string outPath, int? pagesCount = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInRequestToLaTeXAsyncWithHttpInfo(outPath, pagesCount, file);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to LaTeX format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToLaTeXAsyncWithHttpInfo (string outPath, int? pagesCount = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToLaTeX");
+
+            var localVarPath = "/pdf/convert/latex";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (pagesCount != null) localVarQueryParams.Add("pagesCount", ApiClient.ParameterToString(pagesCount)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToLaTeX", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to MOBIXML format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInRequestToMobiXml (string outPath, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInRequestToMobiXmlWithHttpInfo(outPath, file);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to MOBIXML format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInRequestToMobiXmlWithHttpInfo (string outPath, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToMobiXml");
+
+            var localVarPath = "/pdf/convert/mobixml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToMobiXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to MOBIXML format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToMobiXmlAsync (string outPath, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInRequestToMobiXmlAsyncWithHttpInfo(outPath, file);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to MOBIXML format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToMobiXmlAsyncWithHttpInfo (string outPath, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToMobiXml");
+
+            var localVarPath = "/pdf/convert/mobixml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToMobiXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
         /// Converts PDF document (in request content) to PdfA format and uploads resulting file to storage. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -15719,6 +19683,159 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("PutPdfInRequestToPdfA", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to PPTX format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInRequestToPptx (string outPath, bool? separateImages = null, bool? slidesAsImages = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInRequestToPptxWithHttpInfo(outPath, separateImages, slidesAsImages, file);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to PPTX format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInRequestToPptxWithHttpInfo (string outPath, bool? separateImages = null, bool? slidesAsImages = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToPptx");
+
+            var localVarPath = "/pdf/convert/pptx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (separateImages != null) localVarQueryParams.Add("separateImages", ApiClient.ParameterToString(separateImages)); // query parameter
+            if (slidesAsImages != null) localVarQueryParams.Add("slidesAsImages", ApiClient.ParameterToString(slidesAsImages)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToPptx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to PPTX format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToPptxAsync (string outPath, bool? separateImages = null, bool? slidesAsImages = null, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInRequestToPptxAsyncWithHttpInfo(outPath, separateImages, slidesAsImages, file);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to PPTX format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToPptxAsyncWithHttpInfo (string outPath, bool? separateImages = null, bool? slidesAsImages = null, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToPptx");
+
+            var localVarPath = "/pdf/convert/pptx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (separateImages != null) localVarQueryParams.Add("separateImages", ApiClient.ParameterToString(separateImages)); // query parameter
+            if (slidesAsImages != null) localVarQueryParams.Add("slidesAsImages", ApiClient.ParameterToString(slidesAsImages)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToPptx", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -16271,6 +20388,147 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Converts PDF document (in request content) to XML format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInRequestToXml (string outPath, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInRequestToXmlWithHttpInfo(outPath, file);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XML format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInRequestToXmlWithHttpInfo (string outPath, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToXml");
+
+            var localVarPath = "/pdf/convert/xml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XML format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInRequestToXmlAsync (string outPath, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInRequestToXmlAsyncWithHttpInfo(outPath, file);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (in request content) to XML format and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInRequestToXmlAsyncWithHttpInfo (string outPath, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInRequestToXml");
+
+            var localVarPath = "/pdf/convert/xml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInRequestToXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
         /// Converts PDF document (in request content) to XPS format and uploads resulting file to storage. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16613,6 +20871,798 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInStorageToEpub (string name, string outPath, string contentRecognitionMode = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInStorageToEpubWithHttpInfo(name, outPath, contentRecognitionMode, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInStorageToEpubWithHttpInfo (string name, string outPath, string contentRecognitionMode = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToEpub");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToEpub");
+
+            var localVarPath = "/pdf/{name}/convert/epub";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (contentRecognitionMode != null) localVarQueryParams.Add("contentRecognitionMode", ApiClient.ParameterToString(contentRecognitionMode)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToEpub", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToEpubAsync (string name, string outPath, string contentRecognitionMode = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInStorageToEpubAsyncWithHttpInfo(name, outPath, contentRecognitionMode, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to EPUB format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
+        /// <param name="contentRecognitionMode">�roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToEpubAsyncWithHttpInfo (string name, string outPath, string contentRecognitionMode = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToEpub");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToEpub");
+
+            var localVarPath = "/pdf/{name}/convert/epub";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (contentRecognitionMode != null) localVarQueryParams.Add("contentRecognitionMode", ApiClient.ParameterToString(contentRecognitionMode)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToEpub", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInStorageToHtml (string name, string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInStorageToHtmlWithHttpInfo(name, outPath, additionalMarginWidthInPoints, compressSvgGraphicsIfAny, convertMarkedContentToLayers, defaultFontName, documentType, fixedLayout, imageResolution, minimalLineWidth, preventGlyphsGrouping, splitCssIntoPages, splitIntoPages, useZOrder, antialiasingProcessing, cssClassNamesPrefix, explicitListOfSavedPages, fontEncodingStrategy, fontSavingMode, htmlMarkupGenerationMode, lettersPositioningMethod, pagesFlowTypeDependsOnViewersScreenSize, partsEmbeddingMode, rasterImagesSavingMode, removeEmptyAreasOnTopAndBottom, saveShadowedTextsAsTransparentTexts, saveTransparentTexts, specialFolderForAllImages, specialFolderForSvgImages, trySaveTextUnderliningAndStrikeoutingInCss, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInStorageToHtmlWithHttpInfo (string name, string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToHtml");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToHtml");
+
+            var localVarPath = "/pdf/{name}/convert/html";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (additionalMarginWidthInPoints != null) localVarQueryParams.Add("additionalMarginWidthInPoints", ApiClient.ParameterToString(additionalMarginWidthInPoints)); // query parameter
+            if (compressSvgGraphicsIfAny != null) localVarQueryParams.Add("compressSvgGraphicsIfAny", ApiClient.ParameterToString(compressSvgGraphicsIfAny)); // query parameter
+            if (convertMarkedContentToLayers != null) localVarQueryParams.Add("convertMarkedContentToLayers", ApiClient.ParameterToString(convertMarkedContentToLayers)); // query parameter
+            if (defaultFontName != null) localVarQueryParams.Add("defaultFontName", ApiClient.ParameterToString(defaultFontName)); // query parameter
+            if (documentType != null) localVarQueryParams.Add("documentType", ApiClient.ParameterToString(documentType)); // query parameter
+            if (fixedLayout != null) localVarQueryParams.Add("fixedLayout", ApiClient.ParameterToString(fixedLayout)); // query parameter
+            if (imageResolution != null) localVarQueryParams.Add("imageResolution", ApiClient.ParameterToString(imageResolution)); // query parameter
+            if (minimalLineWidth != null) localVarQueryParams.Add("minimalLineWidth", ApiClient.ParameterToString(minimalLineWidth)); // query parameter
+            if (preventGlyphsGrouping != null) localVarQueryParams.Add("preventGlyphsGrouping", ApiClient.ParameterToString(preventGlyphsGrouping)); // query parameter
+            if (splitCssIntoPages != null) localVarQueryParams.Add("splitCssIntoPages", ApiClient.ParameterToString(splitCssIntoPages)); // query parameter
+            if (splitIntoPages != null) localVarQueryParams.Add("splitIntoPages", ApiClient.ParameterToString(splitIntoPages)); // query parameter
+            if (useZOrder != null) localVarQueryParams.Add("useZOrder", ApiClient.ParameterToString(useZOrder)); // query parameter
+            if (antialiasingProcessing != null) localVarQueryParams.Add("antialiasingProcessing", ApiClient.ParameterToString(antialiasingProcessing)); // query parameter
+            if (cssClassNamesPrefix != null) localVarQueryParams.Add("cssClassNamesPrefix", ApiClient.ParameterToString(cssClassNamesPrefix)); // query parameter
+            if (explicitListOfSavedPages != null) localVarQueryParams.Add("explicitListOfSavedPages", ApiClient.ParameterToString(explicitListOfSavedPages)); // query parameter
+            if (fontEncodingStrategy != null) localVarQueryParams.Add("fontEncodingStrategy", ApiClient.ParameterToString(fontEncodingStrategy)); // query parameter
+            if (fontSavingMode != null) localVarQueryParams.Add("fontSavingMode", ApiClient.ParameterToString(fontSavingMode)); // query parameter
+            if (htmlMarkupGenerationMode != null) localVarQueryParams.Add("htmlMarkupGenerationMode", ApiClient.ParameterToString(htmlMarkupGenerationMode)); // query parameter
+            if (lettersPositioningMethod != null) localVarQueryParams.Add("lettersPositioningMethod", ApiClient.ParameterToString(lettersPositioningMethod)); // query parameter
+            if (pagesFlowTypeDependsOnViewersScreenSize != null) localVarQueryParams.Add("pagesFlowTypeDependsOnViewersScreenSize", ApiClient.ParameterToString(pagesFlowTypeDependsOnViewersScreenSize)); // query parameter
+            if (partsEmbeddingMode != null) localVarQueryParams.Add("partsEmbeddingMode", ApiClient.ParameterToString(partsEmbeddingMode)); // query parameter
+            if (rasterImagesSavingMode != null) localVarQueryParams.Add("rasterImagesSavingMode", ApiClient.ParameterToString(rasterImagesSavingMode)); // query parameter
+            if (removeEmptyAreasOnTopAndBottom != null) localVarQueryParams.Add("removeEmptyAreasOnTopAndBottom", ApiClient.ParameterToString(removeEmptyAreasOnTopAndBottom)); // query parameter
+            if (saveShadowedTextsAsTransparentTexts != null) localVarQueryParams.Add("saveShadowedTextsAsTransparentTexts", ApiClient.ParameterToString(saveShadowedTextsAsTransparentTexts)); // query parameter
+            if (saveTransparentTexts != null) localVarQueryParams.Add("saveTransparentTexts", ApiClient.ParameterToString(saveTransparentTexts)); // query parameter
+            if (specialFolderForAllImages != null) localVarQueryParams.Add("specialFolderForAllImages", ApiClient.ParameterToString(specialFolderForAllImages)); // query parameter
+            if (specialFolderForSvgImages != null) localVarQueryParams.Add("specialFolderForSvgImages", ApiClient.ParameterToString(specialFolderForSvgImages)); // query parameter
+            if (trySaveTextUnderliningAndStrikeoutingInCss != null) localVarQueryParams.Add("trySaveTextUnderliningAndStrikeoutingInCss", ApiClient.ParameterToString(trySaveTextUnderliningAndStrikeoutingInCss)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToHtml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToHtmlAsync (string name, string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInStorageToHtmlAsyncWithHttpInfo(name, outPath, additionalMarginWidthInPoints, compressSvgGraphicsIfAny, convertMarkedContentToLayers, defaultFontName, documentType, fixedLayout, imageResolution, minimalLineWidth, preventGlyphsGrouping, splitCssIntoPages, splitIntoPages, useZOrder, antialiasingProcessing, cssClassNamesPrefix, explicitListOfSavedPages, fontEncodingStrategy, fontSavingMode, htmlMarkupGenerationMode, lettersPositioningMethod, pagesFlowTypeDependsOnViewersScreenSize, partsEmbeddingMode, rasterImagesSavingMode, removeEmptyAreasOnTopAndBottom, saveShadowedTextsAsTransparentTexts, saveTransparentTexts, specialFolderForAllImages, specialFolderForSvgImages, trySaveTextUnderliningAndStrikeoutingInCss, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to Html format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.html)</param>
+        /// <param name="additionalMarginWidthInPoints">Defines width of margin that will be forcibly left around that output HTML-areas. (optional)</param>
+        /// <param name="compressSvgGraphicsIfAny">The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional)</param>
+        /// <param name="convertMarkedContentToLayers">If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional)</param>
+        /// <param name="defaultFontName">Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional)</param>
+        /// <param name="documentType">Result document type. (optional)</param>
+        /// <param name="fixedLayout">The value indicating whether that HTML is created as fixed layout. (optional)</param>
+        /// <param name="imageResolution">Resolution for image rendering. (optional)</param>
+        /// <param name="minimalLineWidth">This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional)</param>
+        /// <param name="preventGlyphsGrouping">This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional)</param>
+        /// <param name="splitCssIntoPages">When multipage-mode selected(i.e &#39;SplitIntoPages&#39; is &#39;true&#39;), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional)</param>
+        /// <param name="splitIntoPages">The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional)</param>
+        /// <param name="useZOrder">If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional)</param>
+        /// <param name="antialiasingProcessing">The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional)</param>
+        /// <param name="cssClassNamesPrefix">When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional)</param>
+        /// <param name="explicitListOfSavedPages">With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional)</param>
+        /// <param name="fontEncodingStrategy">Defines encoding special rule to tune PDF decoding for current document. (optional)</param>
+        /// <param name="fontSavingMode">Defines font saving mode that will be used during saving of PDF to desirable format. (optional)</param>
+        /// <param name="htmlMarkupGenerationMode">Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional)</param>
+        /// <param name="lettersPositioningMethod">The mode of positioning of letters in words in result HTML. (optional)</param>
+        /// <param name="pagesFlowTypeDependsOnViewersScreenSize">If attribute &#39;SplitOnPages&#x3D;false&#39;, than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional)</param>
+        /// <param name="partsEmbeddingMode">It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional)</param>
+        /// <param name="rasterImagesSavingMode">Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional)</param>
+        /// <param name="removeEmptyAreasOnTopAndBottom">Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional)</param>
+        /// <param name="saveShadowedTextsAsTransparentTexts">Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional)</param>
+        /// <param name="saveTransparentTexts">Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional)</param>
+        /// <param name="specialFolderForAllImages">The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="specialFolderForSvgImages">The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional)</param>
+        /// <param name="trySaveTextUnderliningAndStrikeoutingInCss">PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text&#39;s underlining and put this info into CSS instead of drawing of underlining graphically. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToHtmlAsyncWithHttpInfo (string name, string outPath, int? additionalMarginWidthInPoints = null, bool? compressSvgGraphicsIfAny = null, bool? convertMarkedContentToLayers = null, string defaultFontName = null, int? documentType = null, bool? fixedLayout = null, int? imageResolution = null, int? minimalLineWidth = null, bool? preventGlyphsGrouping = null, bool? splitCssIntoPages = null, bool? splitIntoPages = null, bool? useZOrder = null, string antialiasingProcessing = null, string cssClassNamesPrefix = null, List<int?> explicitListOfSavedPages = null, string fontEncodingStrategy = null, string fontSavingMode = null, string htmlMarkupGenerationMode = null, string lettersPositioningMethod = null, bool? pagesFlowTypeDependsOnViewersScreenSize = null, string partsEmbeddingMode = null, string rasterImagesSavingMode = null, bool? removeEmptyAreasOnTopAndBottom = null, bool? saveShadowedTextsAsTransparentTexts = null, bool? saveTransparentTexts = null, string specialFolderForAllImages = null, string specialFolderForSvgImages = null, bool? trySaveTextUnderliningAndStrikeoutingInCss = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToHtml");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToHtml");
+
+            var localVarPath = "/pdf/{name}/convert/html";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (additionalMarginWidthInPoints != null) localVarQueryParams.Add("additionalMarginWidthInPoints", ApiClient.ParameterToString(additionalMarginWidthInPoints)); // query parameter
+            if (compressSvgGraphicsIfAny != null) localVarQueryParams.Add("compressSvgGraphicsIfAny", ApiClient.ParameterToString(compressSvgGraphicsIfAny)); // query parameter
+            if (convertMarkedContentToLayers != null) localVarQueryParams.Add("convertMarkedContentToLayers", ApiClient.ParameterToString(convertMarkedContentToLayers)); // query parameter
+            if (defaultFontName != null) localVarQueryParams.Add("defaultFontName", ApiClient.ParameterToString(defaultFontName)); // query parameter
+            if (documentType != null) localVarQueryParams.Add("documentType", ApiClient.ParameterToString(documentType)); // query parameter
+            if (fixedLayout != null) localVarQueryParams.Add("fixedLayout", ApiClient.ParameterToString(fixedLayout)); // query parameter
+            if (imageResolution != null) localVarQueryParams.Add("imageResolution", ApiClient.ParameterToString(imageResolution)); // query parameter
+            if (minimalLineWidth != null) localVarQueryParams.Add("minimalLineWidth", ApiClient.ParameterToString(minimalLineWidth)); // query parameter
+            if (preventGlyphsGrouping != null) localVarQueryParams.Add("preventGlyphsGrouping", ApiClient.ParameterToString(preventGlyphsGrouping)); // query parameter
+            if (splitCssIntoPages != null) localVarQueryParams.Add("splitCssIntoPages", ApiClient.ParameterToString(splitCssIntoPages)); // query parameter
+            if (splitIntoPages != null) localVarQueryParams.Add("splitIntoPages", ApiClient.ParameterToString(splitIntoPages)); // query parameter
+            if (useZOrder != null) localVarQueryParams.Add("useZOrder", ApiClient.ParameterToString(useZOrder)); // query parameter
+            if (antialiasingProcessing != null) localVarQueryParams.Add("antialiasingProcessing", ApiClient.ParameterToString(antialiasingProcessing)); // query parameter
+            if (cssClassNamesPrefix != null) localVarQueryParams.Add("cssClassNamesPrefix", ApiClient.ParameterToString(cssClassNamesPrefix)); // query parameter
+            if (explicitListOfSavedPages != null) localVarQueryParams.Add("explicitListOfSavedPages", ApiClient.ParameterToString(explicitListOfSavedPages)); // query parameter
+            if (fontEncodingStrategy != null) localVarQueryParams.Add("fontEncodingStrategy", ApiClient.ParameterToString(fontEncodingStrategy)); // query parameter
+            if (fontSavingMode != null) localVarQueryParams.Add("fontSavingMode", ApiClient.ParameterToString(fontSavingMode)); // query parameter
+            if (htmlMarkupGenerationMode != null) localVarQueryParams.Add("htmlMarkupGenerationMode", ApiClient.ParameterToString(htmlMarkupGenerationMode)); // query parameter
+            if (lettersPositioningMethod != null) localVarQueryParams.Add("lettersPositioningMethod", ApiClient.ParameterToString(lettersPositioningMethod)); // query parameter
+            if (pagesFlowTypeDependsOnViewersScreenSize != null) localVarQueryParams.Add("pagesFlowTypeDependsOnViewersScreenSize", ApiClient.ParameterToString(pagesFlowTypeDependsOnViewersScreenSize)); // query parameter
+            if (partsEmbeddingMode != null) localVarQueryParams.Add("partsEmbeddingMode", ApiClient.ParameterToString(partsEmbeddingMode)); // query parameter
+            if (rasterImagesSavingMode != null) localVarQueryParams.Add("rasterImagesSavingMode", ApiClient.ParameterToString(rasterImagesSavingMode)); // query parameter
+            if (removeEmptyAreasOnTopAndBottom != null) localVarQueryParams.Add("removeEmptyAreasOnTopAndBottom", ApiClient.ParameterToString(removeEmptyAreasOnTopAndBottom)); // query parameter
+            if (saveShadowedTextsAsTransparentTexts != null) localVarQueryParams.Add("saveShadowedTextsAsTransparentTexts", ApiClient.ParameterToString(saveShadowedTextsAsTransparentTexts)); // query parameter
+            if (saveTransparentTexts != null) localVarQueryParams.Add("saveTransparentTexts", ApiClient.ParameterToString(saveTransparentTexts)); // query parameter
+            if (specialFolderForAllImages != null) localVarQueryParams.Add("specialFolderForAllImages", ApiClient.ParameterToString(specialFolderForAllImages)); // query parameter
+            if (specialFolderForSvgImages != null) localVarQueryParams.Add("specialFolderForSvgImages", ApiClient.ParameterToString(specialFolderForSvgImages)); // query parameter
+            if (trySaveTextUnderliningAndStrikeoutingInCss != null) localVarQueryParams.Add("trySaveTextUnderliningAndStrikeoutingInCss", ApiClient.ParameterToString(trySaveTextUnderliningAndStrikeoutingInCss)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToHtml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInStorageToLaTeX (string name, string outPath, int? pagesCount = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInStorageToLaTeXWithHttpInfo(name, outPath, pagesCount, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInStorageToLaTeXWithHttpInfo (string name, string outPath, int? pagesCount = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToLaTeX");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToLaTeX");
+
+            var localVarPath = "/pdf/{name}/convert/latex";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (pagesCount != null) localVarQueryParams.Add("pagesCount", ApiClient.ParameterToString(pagesCount)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToLaTeX", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToLaTeXAsync (string name, string outPath, int? pagesCount = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInStorageToLaTeXAsyncWithHttpInfo(name, outPath, pagesCount, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to LaTeX format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.tex)</param>
+        /// <param name="pagesCount">Pages count. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToLaTeXAsyncWithHttpInfo (string name, string outPath, int? pagesCount = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToLaTeX");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToLaTeX");
+
+            var localVarPath = "/pdf/{name}/convert/latex";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (pagesCount != null) localVarQueryParams.Add("pagesCount", ApiClient.ParameterToString(pagesCount)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToLaTeX", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInStorageToMobiXml (string name, string outPath, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInStorageToMobiXmlWithHttpInfo(name, outPath, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInStorageToMobiXmlWithHttpInfo (string name, string outPath, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToMobiXml");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToMobiXml");
+
+            var localVarPath = "/pdf/{name}/convert/mobixml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToMobiXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToMobiXmlAsync (string name, string outPath, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInStorageToMobiXmlAsyncWithHttpInfo(name, outPath, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to MOBIXML format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.mobixml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToMobiXmlAsyncWithHttpInfo (string name, string outPath, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToMobiXml");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToMobiXml");
+
+            var localVarPath = "/pdf/{name}/convert/mobixml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToMobiXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
         /// Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16769,6 +21819,171 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("PutPdfInStorageToPdfA", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInStorageToPptx (string name, string outPath, bool? separateImages = null, bool? slidesAsImages = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInStorageToPptxWithHttpInfo(name, outPath, separateImages, slidesAsImages, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInStorageToPptxWithHttpInfo (string name, string outPath, bool? separateImages = null, bool? slidesAsImages = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToPptx");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToPptx");
+
+            var localVarPath = "/pdf/{name}/convert/pptx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (separateImages != null) localVarQueryParams.Add("separateImages", ApiClient.ParameterToString(separateImages)); // query parameter
+            if (slidesAsImages != null) localVarQueryParams.Add("slidesAsImages", ApiClient.ParameterToString(slidesAsImages)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToPptx", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToPptxAsync (string name, string outPath, bool? separateImages = null, bool? slidesAsImages = null, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInStorageToPptxAsyncWithHttpInfo(name, outPath, separateImages, slidesAsImages, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to PPTX format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pptx)</param>
+        /// <param name="separateImages">Separate images. (optional)</param>
+        /// <param name="slidesAsImages">Slides as images. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToPptxAsyncWithHttpInfo (string name, string outPath, bool? separateImages = null, bool? slidesAsImages = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToPptx");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToPptx");
+
+            var localVarPath = "/pdf/{name}/convert/pptx";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (separateImages != null) localVarQueryParams.Add("separateImages", ApiClient.ParameterToString(separateImages)); // query parameter
+            if (slidesAsImages != null) localVarQueryParams.Add("slidesAsImages", ApiClient.ParameterToString(slidesAsImages)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToPptx", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -17357,6 +22572,159 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Converts PDF document (located on storage) to XML format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutPdfInStorageToXml (string name, string outPath, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutPdfInStorageToXmlWithHttpInfo(name, outPath, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XML format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutPdfInStorageToXmlWithHttpInfo (string name, string outPath, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToXml");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToXml");
+
+            var localVarPath = "/pdf/{name}/convert/xml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XML format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutPdfInStorageToXmlAsync (string name, string outPath, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutPdfInStorageToXmlAsyncWithHttpInfo(name, outPath, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document (located on storage) to XML format and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.xml)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutPdfInStorageToXmlAsyncWithHttpInfo (string name, string outPath, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPdfInStorageToXml");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutPdfInStorageToXml");
+
+            var localVarPath = "/pdf/{name}/convert/xml";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPdfInStorageToXml", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
         /// Converts PDF document (located on storage) to XPS format and uploads resulting file to storage 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -17507,6 +22875,167 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<System.IO.Stream>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Update privilege document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="privileges">Document privileges.  (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SaaSposeResponse</returns>
+        public SaaSposeResponse PutPrivileges (string name, DocumentPrivilege privileges = null, string folder = null)
+        {
+             ApiResponse<SaaSposeResponse> localVarResponse = PutPrivilegesWithHttpInfo(name, privileges, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update privilege document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="privileges">Document privileges.  (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SaaSposeResponse</returns>
+        public ApiResponse< SaaSposeResponse > PutPrivilegesWithHttpInfo (string name, DocumentPrivilege privileges = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPrivileges");
+
+            var localVarPath = "/pdf/{name}/privileges";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (privileges != null && privileges.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(privileges); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = privileges; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPrivileges", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SaaSposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SaaSposeResponse) ApiClient.Deserialize(localVarResponse, typeof(SaaSposeResponse)));
+        }
+
+        /// <summary>
+        /// Update privilege document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="privileges">Document privileges.  (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SaaSposeResponse</returns>
+        public async System.Threading.Tasks.Task<SaaSposeResponse> PutPrivilegesAsync (string name, DocumentPrivilege privileges = null, string folder = null)
+        {
+             ApiResponse<SaaSposeResponse> localVarResponse = await PutPrivilegesAsyncWithHttpInfo(name, privileges, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update privilege document. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="privileges">Document privileges.  (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SaaSposeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SaaSposeResponse>> PutPrivilegesAsyncWithHttpInfo (string name, DocumentPrivilege privileges = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPrivileges");
+
+            var localVarPath = "/pdf/{name}/privileges";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (privileges != null && privileges.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(privileges); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = privileges; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPrivileges", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SaaSposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SaaSposeResponse) ApiClient.Deserialize(localVarResponse, typeof(SaaSposeResponse)));
         }
 
         /// <summary>
@@ -18185,6 +23714,300 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<FieldsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (FieldsResponse) ApiClient.Deserialize(localVarResponse, typeof(FieldsResponse)));
+        }
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (in request content) to PDF with AcroForm and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutXfaPdfInRequestToAcroForm (string outPath, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutXfaPdfInRequestToAcroFormWithHttpInfo(outPath, file);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (in request content) to PDF with AcroForm and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutXfaPdfInRequestToAcroFormWithHttpInfo (string outPath, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutXfaPdfInRequestToAcroForm");
+
+            var localVarPath = "/pdf/convert/xfatoacroform";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutXfaPdfInRequestToAcroForm", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (in request content) to PDF with AcroForm and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutXfaPdfInRequestToAcroFormAsync (string outPath, System.IO.Stream file = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutXfaPdfInRequestToAcroFormAsyncWithHttpInfo(outPath, file);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (in request content) to PDF with AcroForm and uploads resulting file to storage. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="file">A file to be converted. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutXfaPdfInRequestToAcroFormAsyncWithHttpInfo (string outPath, System.IO.Stream file = null)
+        {
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutXfaPdfInRequestToAcroForm");
+
+            var localVarPath = "/pdf/convert/xfatoacroform";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (file != null) localVarFileParams.Add("file", ApiClient.ParameterToFile("file", file));
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutXfaPdfInRequestToAcroForm", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>System.IO.Stream</returns>
+        public System.IO.Stream PutXfaPdfInStorageToAcroForm (string name, string outPath, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = PutXfaPdfInStorageToAcroFormWithHttpInfo(name, outPath, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of System.IO.Stream</returns>
+        public ApiResponse< System.IO.Stream > PutXfaPdfInStorageToAcroFormWithHttpInfo (string name, string outPath, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutXfaPdfInStorageToAcroForm");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutXfaPdfInStorageToAcroForm");
+
+            var localVarPath = "/pdf/{name}/convert/xfatoacroform";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutXfaPdfInStorageToAcroForm", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of System.IO.Stream</returns>
+        public async System.Threading.Tasks.Task<System.IO.Stream> PutXfaPdfInStorageToAcroFormAsync (string name, string outPath, string folder = null)
+        {
+             ApiResponse<System.IO.Stream> localVarResponse = await PutXfaPdfInStorageToAcroFormAsyncWithHttpInfo(name, outPath, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and uploads resulting file to storage 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.pdf)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> PutXfaPdfInStorageToAcroFormAsyncWithHttpInfo (string name, string outPath, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutXfaPdfInStorageToAcroForm");
+            // verify the required parameter 'outPath' is set
+            if (outPath == null)
+                throw new ApiException(400, "Missing required parameter 'outPath' when calling PdfApi->PutXfaPdfInStorageToAcroForm");
+
+            var localVarPath = "/pdf/{name}/convert/xfatoacroform";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (outPath != null) localVarQueryParams.Add("outPath", ApiClient.ParameterToString(outPath)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutXfaPdfInStorageToAcroForm", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<System.IO.Stream>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
         }
 
     }

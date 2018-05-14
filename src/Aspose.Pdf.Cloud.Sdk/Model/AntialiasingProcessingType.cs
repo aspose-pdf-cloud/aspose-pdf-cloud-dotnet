@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="WrapMode.cs">
+// <copyright company="Aspose" file="AntialiasingProcessingType.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -41,30 +41,24 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// This enum describes possible antialiasing measures during conversion
     /// </summary>
-    /// <value></value>
+    /// <value>This enum describes possible antialiasing measures during conversion</value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum WrapMode
+    public enum AntialiasingProcessingType
     {
         
         /// <summary>
-        /// Enum NoWrap for "NoWrap"
+        /// Enum NoAdditionalProcessing for "NoAdditionalProcessing"
         /// </summary>
-        [EnumMember(Value = "NoWrap")]
-        NoWrap,
+        [EnumMember(Value = "NoAdditionalProcessing")]
+        NoAdditionalProcessing,
         
         /// <summary>
-        /// Enum ByWords for "ByWords"
+        /// Enum TryCorrectResultHtml for "TryCorrectResultHtml"
         /// </summary>
-        [EnumMember(Value = "ByWords")]
-        ByWords,
-        
-        /// <summary>
-        /// Enum DiscretionaryHyphenation for "DiscretionaryHyphenation"
-        /// </summary>
-        [EnumMember(Value = "DiscretionaryHyphenation")]
-        DiscretionaryHyphenation
+        [EnumMember(Value = "TryCorrectResultHtml")]
+        TryCorrectResultHtml
     }
 
 }
