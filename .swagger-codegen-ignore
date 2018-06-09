@@ -50,3 +50,7 @@ src/Aspose.Pdf.Cloud.Sdk/Model/HttpStatusCode.cs
 src/Aspose.Pdf.Cloud.Sdk.Test/**
 
 src/Aspose.Pdf.Cloud.Sdk/Api/AuthType.cs
+
+Aspose.Pdf.Cloud.Sdk.sln
+src/Aspose.Pdf.Cloud.Sdk/Aspose.Pdf.Cloud.Sdk.csproj
+src/Aspose.Pdf.Cloud.Sdk.Test/Aspose.Pdf.Cloud.Sdk.Test.csproj

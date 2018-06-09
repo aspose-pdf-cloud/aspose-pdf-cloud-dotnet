@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="RecognitionMode.cs">
+// <copyright company="Aspose" file="EpubRecognitionMode.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -41,24 +41,30 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Allows to control how a PDF document is converted into a word processing document.
+    /// When PDF file (that usually has fixed layout) is being converted,             the conversion engine tries to perform grouping and multi-level analysis to restore             the original document author&#39;s intent and produce result in flow layout.  This property tunes that conversion for this or that             desirable method of recognition of content.             
     /// </summary>
-    /// <value>Allows to control how a PDF document is converted into a word processing document.</value>
+    /// <value>When PDF file (that usually has fixed layout) is being converted,             the conversion engine tries to perform grouping and multi-level analysis to restore             the original document author&#39;s intent and produce result in flow layout.  This property tunes that conversion for this or that             desirable method of recognition of content.             </value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum RecognitionMode
+    public enum EpubRecognitionMode
     {
-        
-        /// <summary>
-        /// Enum Textbox for "Textbox"
-        /// </summary>
-        [EnumMember(Value = "Textbox")]
-        Textbox,
         
         /// <summary>
         /// Enum Flow for "Flow"
         /// </summary>
         [EnumMember(Value = "Flow")]
-        Flow
+        Flow,
+        
+        /// <summary>
+        /// Enum PdfFlow for "PdfFlow"
+        /// </summary>
+        [EnumMember(Value = "PdfFlow")]
+        PdfFlow,
+        
+        /// <summary>
+        /// Enum Fixed for "Fixed"
+        /// </summary>
+        [EnumMember(Value = "Fixed")]
+        Fixed
     }
 
 }

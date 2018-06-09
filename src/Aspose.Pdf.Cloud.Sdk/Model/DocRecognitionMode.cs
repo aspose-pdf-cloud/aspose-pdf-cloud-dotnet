@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="RecognitionMode2.cs">
+// <copyright company="Aspose" file="DocRecognitionMode.cs">
 //   Copyright (c) 2018 Aspose.Pdf for Cloud
 // </copyright>
 // <summary>
@@ -41,30 +41,24 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// When PDF file (that usually has fixed layout) is being converted,             the conversion engine tries to perform grouping and multi-level analysis to restore             the original document author&#39;s intent and produce result in flow layout.  This property tunes that conversion for this or that             desirable method of recognition of content.             
+    /// Allows to control how a PDF document is converted into a word processing document.
     /// </summary>
-    /// <value>When PDF file (that usually has fixed layout) is being converted,             the conversion engine tries to perform grouping and multi-level analysis to restore             the original document author&#39;s intent and produce result in flow layout.  This property tunes that conversion for this or that             desirable method of recognition of content.             </value>
+    /// <value>Allows to control how a PDF document is converted into a word processing document.</value>
     [JsonConverter(typeof(StringEnumConverter))]
-    public enum RecognitionMode2
+    public enum DocRecognitionMode
     {
+        
+        /// <summary>
+        /// Enum Textbox for "Textbox"
+        /// </summary>
+        [EnumMember(Value = "Textbox")]
+        Textbox,
         
         /// <summary>
         /// Enum Flow for "Flow"
         /// </summary>
         [EnumMember(Value = "Flow")]
-        Flow,
-        
-        /// <summary>
-        /// Enum PdfFlow for "PdfFlow"
-        /// </summary>
-        [EnumMember(Value = "PdfFlow")]
-        PdfFlow,
-        
-        /// <summary>
-        /// Enum Fixed for "Fixed"
-        /// </summary>
-        [EnumMember(Value = "Fixed")]
-        Fixed
+        Flow
     }
 
 }

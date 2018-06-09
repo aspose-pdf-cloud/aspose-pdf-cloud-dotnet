@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
                              Dictionary<String, String> defaultHeader = null,
                              string tempFolderPath = null,
                              string dateTimeFormat = null,
-                             int timeout = 100000,
+                             int timeout = 5 * 60 * 1000,
                              string userAgent = "aspose pdf cloud sdk"
                             )
         {
@@ -230,7 +230,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: 1.1\n";
-            report += "    SDK Package Version: 1.0.0\n";
+            report += "    SDK Package Version: 18.5.0\n";
 
             return report;
         }
