@@ -44,6 +44,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
     /// </summary>
     public partial class ApiClient
     {
+        private const int MAX_AUTH_TRIES_COUNT = 5;
+        private int authTriesCount = 0;
+
         private JsonSerializerSettings serializerSettings = new JsonSerializerSettings
         {
             ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
@@ -289,12 +292,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
             InterceptRequest(request);
             var response = RestClient.Execute(request);
-            if (!InterceptResponse(request, response))
+            if (!InterceptResponse(request, response) && authTriesCount < MAX_AUTH_TRIES_COUNT)
             {
+                authTriesCount++;
                 return CallApi(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams,
                     contentType);
             }
 
+            authTriesCount = 0;
             return response;
         }
         /// <summary>
@@ -321,12 +326,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
                 pathParams, contentType);
             await InterceptRequestAsync(request);
             var response = await RestClient.ExecuteTaskAsync(request);
-            if (!await InterceptResponseAsync(request, response))
+            if (!await InterceptResponseAsync(request, response) && authTriesCount < MAX_AUTH_TRIES_COUNT)
             {
+                authTriesCount++;
                 return CallApiAsync(path, method, queryParams, postBody, headerParams, formParams, fileParams, pathParams,
                     contentType);
             }
 
+            authTriesCount = 0;
             return response;
         }
 

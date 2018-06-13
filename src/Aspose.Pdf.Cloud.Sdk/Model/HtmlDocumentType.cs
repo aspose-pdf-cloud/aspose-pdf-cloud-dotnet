@@ -41,22 +41,24 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Represents enumeration of the Html document types.
     /// </summary>
-    /// <value></value>
+    /// <value>Represents enumeration of the Html document types.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum HtmlDocumentType
     {
         
         /// <summary>
-        /// Enum Xhtml for 0
+        /// Enum Xhtml for "Xhtml"
         /// </summary>
-        Xhtml = 0,
+        [EnumMember(Value = "Xhtml")]
+        Xhtml,
         
         /// <summary>
-        /// Enum Html5 for 1
+        /// Enum Html5 for "Html5"
         /// </summary>
-        Html5 = 0
+        [EnumMember(Value = "Html5")]
+        Html5
     }
 
 }
