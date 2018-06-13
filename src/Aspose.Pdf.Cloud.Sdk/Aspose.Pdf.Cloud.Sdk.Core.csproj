@@ -94,8 +94,6 @@
     <Compile Include="Model/PartsEmbeddingModes.cs" />
     <Compile Include="Model/PdfAType.cs" />
     <Compile Include="Model/RasterImagesSavingModes.cs" />
-    <Compile Include="Model/RecognitionMode.cs" />
-    <Compile Include="Model/RecognitionMode2.cs" />
     <Compile Include="Model/Rectangle.cs" />
     <Compile Include="Model/Rotation.cs" />
     <Compile Include="Model/SaaSposeResponse.cs" />
