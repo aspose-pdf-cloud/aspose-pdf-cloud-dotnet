@@ -106,7 +106,10 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\ImageResponse.cs" />
     <Compile Include="Model\Images.cs" />
     <Compile Include="Model\ImagesListRequest.cs" />
+    <Compile Include="Model\ImageSrcType.cs" />
     <Compile Include="Model\ImagesResponse.cs" />
+    <Compile Include="Model\ImageTemplate.cs" />
+    <Compile Include="Model\ImageTemplatesRequest.cs" />
     <Compile Include="Model\LettersPositioningMethods.cs" />
     <Compile Include="Model\LineSpacing.cs" />
     <Compile Include="Model\Link.cs" />
@@ -117,6 +120,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\LinkAnnotationsResponse.cs" />
     <Compile Include="Model\LinkElement.cs" />
     <Compile Include="Model\LinkHighlightingMode.cs" />
+    <Compile Include="Model\MarginInfo.cs" />
     <Compile Include="Model\MergeDocuments.cs" />
     <Compile Include="Model\OptimizeOptions.cs" />
     <Compile Include="Model\Page.cs" />

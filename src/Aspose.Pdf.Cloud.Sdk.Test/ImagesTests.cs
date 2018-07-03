@@ -98,5 +98,62 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.PostReplaceImage(Name, 1, 1, image: imageStream, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
         }
+
+
+        /// <summary>
+        /// Test PutImagesExtractAsJpeg
+        /// </summary>
+        [Test]
+        public void PutImagesExtractAsJpegTest()
+        {
+            const int pageNumber = 1;
+            const string destFolder = "extract_jpg";
+
+            var response = PdfApi.PutImagesExtractAsJpeg(Name, pageNumber: pageNumber, 
+                folder: TempFolder, destFolder: Path.Combine(TempFolder, destFolder));
+            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+        }
+
+        /// <summary>
+        /// Test PutImagesExtractAsTiff
+        /// </summary>
+        [Test]
+        public void PutImagesExtractAsTiffTest()
+        {
+            const int pageNumber = 1;
+            const string destFolder = "extract_tiff";
+
+            var response = PdfApi.PutImagesExtractAsTiff(Name, pageNumber: pageNumber,
+                folder: TempFolder, destFolder: Path.Combine(TempFolder, destFolder));
+            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+        }
+
+        /// <summary>
+        /// Test PutImagesExtractAsGif
+        /// </summary>
+        [Test]
+        public void PutImagesExtractAsGifTest()
+        {
+            const int pageNumber = 1;
+            const string destFolder = "extract_gif";
+
+            var response = PdfApi.PutImagesExtractAsGif(Name, pageNumber: pageNumber,
+                folder: TempFolder, destFolder: Path.Combine(TempFolder, destFolder));
+            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+        }
+
+        /// <summary>
+        /// Test PutImagesExtractAsPng
+        /// </summary>
+        [Test]
+        public void PutImagesExtractAsPngTest()
+        {
+            const int pageNumber = 1;
+            const string destFolder = "extract_png";
+
+            var response = PdfApi.PutImagesExtractAsPng(Name, pageNumber: pageNumber,
+                folder: TempFolder, destFolder: Path.Combine(TempFolder, destFolder));
+            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+        }
     }
 }
