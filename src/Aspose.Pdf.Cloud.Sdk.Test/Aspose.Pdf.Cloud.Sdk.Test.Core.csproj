@@ -39,6 +39,7 @@
     <Compile Include="AttachmentsTests.cs" />
     <Compile Include="BookmarksTests.cs" />
     <Compile Include="ConvertTests.cs" />
+    <Compile Include="ConvertToPdfTests.cs" />
     <Compile Include="DocumentSaveAsTiffTests.cs" />
     <Compile Include="DocumentTests.cs" />
     <Compile Include="FieldsTests.cs" />
@@ -47,6 +48,7 @@
     <Compile Include="LinksTests.cs" />
     <Compile Include="MergeTests.cs" />
     <Compile Include="OcrTests.cs" />
+    <Compile Include="PageConvertToImageTests.cs" />
     <Compile Include="PagesTests.cs" />
     <Compile Include="ParagraphsTests.cs" />
     <Compile Include="PrivilegesTests.cs" />

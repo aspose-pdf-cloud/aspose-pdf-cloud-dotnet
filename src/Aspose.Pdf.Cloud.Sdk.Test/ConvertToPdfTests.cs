@@ -23,6 +23,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using Aspose.Pdf.Cloud.Sdk.Model;
@@ -331,6 +332,63 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultName = "fromXml.pdf";
 
             var response = PdfApi.PutXmlInStorageToPdf(resultName, Path.Combine(TempFolder, name), dstFolder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
+        }
+
+
+        /// <summary>
+        /// Test GetPsInStorageToPdf
+        /// </summary>
+        [Test]
+        public void GetPsInStorageToPdfTest()
+        {
+            const string name = "Typography.PS";
+            UploadFile(name, name);
+            
+            using (var response = PdfApi.GetPsInStorageToPdf(Path.Combine(TempFolder, name)))
+            {
+                Assert.That(response.Length, Is.GreaterThan(0));
+            }
+        }
+
+        /// <summary>
+        /// Test PutPsInStorageToPdf
+        /// </summary>
+        [Test]
+        public void PutPsInStorageToPdfTest()
+        {
+            const string name = "Typography.PS";
+            UploadFile(name, name);
+            string resultName = "fromPs.pdf";
+
+            var response = PdfApi.PutPsInStorageToPdf(resultName, Path.Combine(TempFolder, name), dstFolder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
+        }
+
+
+        /// <summary>
+        /// Test PutImageInStorageToPdf
+        /// </summary>
+        [Test]
+        public void PutImageInStorageToPdfTest()
+        {
+            const string dataFile1 = "33539.jpg";
+            UploadFile(dataFile1, dataFile1);
+
+            const string dataFile2 = "44781.jpg";
+            UploadFile(dataFile2, dataFile2);
+
+            const string resultName = "result.pdf";
+
+            ImageTemplatesRequest imageTemplatesRequest = new ImageTemplatesRequest(IsOCR: true, 
+                OCRLangs: "eng", 
+                ImagesList: new List<ImageTemplate>()
+                {
+                    new ImageTemplate(ImagePath: $"{TempFolder}/{dataFile1}", ImageSrcType: ImageSrcType.Common),
+                    new ImageTemplate(ImagePath: $"{TempFolder}/{dataFile2}", ImageSrcType: ImageSrcType.Common)
+                }
+            );
+            var response = PdfApi.PutImageInStorageToPdf(resultName, imageTemplatesRequest, dstFolder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
         }
     }
