@@ -206,3 +206,4 @@ src/Settings/servercreds.json
 .swagger-codegen/
 
 build-out/
+nuget.exe
