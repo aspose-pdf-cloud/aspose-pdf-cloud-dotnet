@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="ImagesListRequest.cs">
-//   Copyright (c) 2018 Aspose.Pdf for Cloud
+//   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
