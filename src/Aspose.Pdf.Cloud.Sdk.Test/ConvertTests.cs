@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PagesTests.cs">
-//   Copyright (c) 2018 Aspose.Pdf for Cloud
+//   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -319,7 +319,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
-            string resFileName = "result.html";
+            string resFileName = "result.zip";
 
             var response = PdfApi.PutPdfInStorageToHtml(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
@@ -334,7 +334,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string name = "4pages.pdf";
             using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
-                string resFileName = "result.html";
+                string resFileName = "result.zip";
 
                 var response = PdfApi.PutPdfInRequestToHtml(Path.Combine(TempFolder, resFileName), file: stream);
                 Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));

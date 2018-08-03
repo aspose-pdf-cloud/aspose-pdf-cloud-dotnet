@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Aspose.Pdf-Cloud")]
-[assembly: AssemblyDescription("Aspose.PDF for Cloud is a REST API for creating and editing PDF files. It can also be used to convert PDF files to different formats like DOC, HTML, XPS, TIFF and many more. Aspose.Pdf for Cloud gives you control: create PDFs from scratch or from HTML, XML, template, database, XPS or an image. Render PDFs to image formats such as JPEG, PNG, GIF, BMP, TIFF and many others. Aspose.Pdf for Cloud helps you manipulate elements of a PDF file like text, annotations, watermarks, signatures, bookmarks, stamps and so on. Its REST API also allows you to manage PDF pages by using features like merging, splitting, and inserting. Add images to a PDF file or convert PDF pages to images.")]
+[assembly: AssemblyDescription("Aspose.PDF Cloud is a REST API for creating and editing PDF files. It can also be used to convert PDF files to different formats like DOC, HTML, XPS, TIFF and many more. Aspose.PDF Cloud gives you control: create PDFs from scratch or from HTML, XML, template, database, XPS or an image. Render PDFs to image formats such as JPEG, PNG, GIF, BMP, TIFF and many others. Aspose.PDF Cloud helps you manipulate elements of a PDF file like text, annotations, watermarks, signatures, bookmarks, stamps and so on. Its REST API also allows you to manage PDF pages by using features like merging, splitting, and inserting. Add images to a PDF file or convert PDF pages to images.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Aspose Pty Ltd")]
-[assembly: AssemblyProduct("Aspose.PDF for Cloud")]
-[assembly: AssemblyCopyright("Copyright (c) 2018 Aspose.Pdf for Cloud")]
+[assembly: AssemblyProduct("Aspose.PDF Cloud")]
+[assembly: AssemblyCopyright("Copyright (c) 2018 Aspose.PDF Cloud")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -28,5 +28,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("18.6.0")]
-[assembly: AssemblyFileVersion("18.6.0")]
+[assembly: AssemblyVersion("18.7.0")]
+[assembly: AssemblyFileVersion("18.7.0")]
