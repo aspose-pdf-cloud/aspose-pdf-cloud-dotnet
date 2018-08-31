@@ -47,18 +47,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
     [JsonConverter(typeof(StringEnumConverter))]
     public enum SignatureType
     {
+        
         /// <summary>
         /// Enum PKCS1 for "PKCS1"
         /// </summary>
         [EnumMember(Value = "PKCS1")]
         PKCS1,
-
+        
         /// <summary>
         /// Enum PKCS7 for "PKCS7"
         /// </summary>
         [EnumMember(Value = "PKCS7")]
         PKCS7,
-
+        
         /// <summary>
         /// Enum PKCS7Detached for "PKCS7Detached"
         /// </summary>

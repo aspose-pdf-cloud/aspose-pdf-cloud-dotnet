@@ -103,7 +103,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Image type.
         /// </summary>
         /// <value>Image type.</value>
-        [DataMember(Name="ImageSrcType", EmitDefaultValue=false)]
+        [DataMember(Name="ImageSrcType", EmitDefaultValue=true)]
         public ImageSrcType ImageSrcType { get; set; }
 
         /// <summary>

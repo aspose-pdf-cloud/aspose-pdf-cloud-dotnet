@@ -34,6 +34,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.Net;
 using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 
@@ -43,23 +44,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
     /// Represents enumeration of the stamp types.
     /// </summary>
     /// <value>Represents enumeration of the stamp types.</value>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum StampType
     {
+        
         /// <summary>
-        /// Text stamp
+        /// Enum Text for "Text"
         /// </summary>
+        [EnumMember(Value = "Text")]
         Text,
+        
         /// <summary>
-        /// Image stamp
+        /// Enum Image for "Image"
         /// </summary>
+        [EnumMember(Value = "Image")]
         Image,
+        
         /// <summary>
-        /// Page stamp
+        /// Enum Page for "Page"
         /// </summary>
+        [EnumMember(Value = "Page")]
         Page,
+        
         /// <summary>
-        /// Page number stamp
+        /// Enum PageNumber for "PageNumber"
         /// </summary>
+        [EnumMember(Value = "PageNumber")]
         PageNumber
     }
+
 }

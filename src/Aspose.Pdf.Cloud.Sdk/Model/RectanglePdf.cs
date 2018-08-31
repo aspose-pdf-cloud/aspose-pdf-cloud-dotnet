@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="TextItemResponse.cs">
+// <copyright company="Aspose" file="RectanglePdf.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,56 +41,86 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// TextItemResponse
+    /// Represents rectangle DTO.
     /// </summary>
     [DataContract]
-    public partial class TextItemResponse : SaaSposeResponse,  IEquatable<TextItemResponse>, IValidatableObject
+    public partial class RectanglePdf :  IEquatable<RectanglePdf>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TextItemResponse" /> class.
+        /// Initializes a new instance of the <see cref="RectanglePdf" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected TextItemResponse() { }
+        protected RectanglePdf() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TextItemResponse" /> class.
+        /// Initializes a new instance of the <see cref="RectanglePdf" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="TextItem">TextItem.</param>
-        public TextItemResponse(HttpStatusCode Code = default(HttpStatusCode), string Status = default(string), TextItem TextItem = default(TextItem))
+        /// <param name="LLX">LLX (required).</param>
+        /// <param name="LLY">LLY (required).</param>
+        /// <param name="URX">URX (required).</param>
+        /// <param name="URY">URY (required).</param>
+        public RectanglePdf(double? LLX = default(double?), double? LLY = default(double?), double? URX = default(double?), double? URY = default(double?))
         {
-            // to ensure "Code" is required (not null)
-            if (Code == null)
+            // to ensure "LLX" is required (not null)
+            if (LLX == null)
             {
-                throw new InvalidDataException("Code is a required property for TextItemResponse and cannot be null");
+                throw new InvalidDataException("LLX is a required property for RectanglePdf and cannot be null");
             }
             else
             {
-                this.Code = Code;
+                this.LLX = LLX;
             }
-            this.Status = Status;
-            this.TextItem = TextItem;
+            // to ensure "LLY" is required (not null)
+            if (LLY == null)
+            {
+                throw new InvalidDataException("LLY is a required property for RectanglePdf and cannot be null");
+            }
+            else
+            {
+                this.LLY = LLY;
+            }
+            // to ensure "URX" is required (not null)
+            if (URX == null)
+            {
+                throw new InvalidDataException("URX is a required property for RectanglePdf and cannot be null");
+            }
+            else
+            {
+                this.URX = URX;
+            }
+            // to ensure "URY" is required (not null)
+            if (URY == null)
+            {
+                throw new InvalidDataException("URY is a required property for RectanglePdf and cannot be null");
+            }
+            else
+            {
+                this.URY = URY;
+            }
         }
         
         /// <summary>
-        /// Response status code.
+        /// Gets or Sets LLX
         /// </summary>
-        /// <value>Response status code.</value>
-        [DataMember(Name="Code", EmitDefaultValue=false)]
-        public HttpStatusCode Code { get; set; }
+        [DataMember(Name="LLX", EmitDefaultValue=false)]
+        public double? LLX { get; set; }
 
         /// <summary>
-        /// Response status.
+        /// Gets or Sets LLY
         /// </summary>
-        /// <value>Response status.</value>
-        [DataMember(Name="Status", EmitDefaultValue=false)]
-        public string Status { get; set; }
+        [DataMember(Name="LLY", EmitDefaultValue=false)]
+        public double? LLY { get; set; }
 
         /// <summary>
-        /// Gets or Sets TextItem
+        /// Gets or Sets URX
         /// </summary>
-        [DataMember(Name="TextItem", EmitDefaultValue=false)]
-        public TextItem TextItem { get; set; }
+        [DataMember(Name="URX", EmitDefaultValue=false)]
+        public double? URX { get; set; }
+
+        /// <summary>
+        /// Gets or Sets URY
+        /// </summary>
+        [DataMember(Name="URY", EmitDefaultValue=false)]
+        public double? URY { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,10 +129,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TextItemResponse {\n");
-            sb.Append("  Code: ").Append(Code).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  TextItem: ").Append(TextItem).Append("\n");
+            sb.Append("class RectanglePdf {\n");
+            sb.Append("  LLX: ").Append(LLX).Append("\n");
+            sb.Append("  LLY: ").Append(LLY).Append("\n");
+            sb.Append("  URX: ").Append(URX).Append("\n");
+            sb.Append("  URY: ").Append(URY).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,7 +142,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  new string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -124,15 +155,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TextItemResponse);
+            return this.Equals(obj as RectanglePdf);
         }
 
         /// <summary>
-        /// Returns true if TextItemResponse instances are equal
+        /// Returns true if RectanglePdf instances are equal
         /// </summary>
-        /// <param name="other">Instance of TextItemResponse to be compared</param>
+        /// <param name="other">Instance of RectanglePdf to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TextItemResponse other)
+        public bool Equals(RectanglePdf other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -140,19 +171,24 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
 
             return 
                 (
-                    this.Code == other.Code ||
-                    this.Code != null &&
-                    this.Code.Equals(other.Code)
+                    this.LLX == other.LLX ||
+                    this.LLX != null &&
+                    this.LLX.Equals(other.LLX)
                 ) && 
                 (
-                    this.Status == other.Status ||
-                    this.Status != null &&
-                    this.Status.Equals(other.Status)
+                    this.LLY == other.LLY ||
+                    this.LLY != null &&
+                    this.LLY.Equals(other.LLY)
                 ) && 
                 (
-                    this.TextItem == other.TextItem ||
-                    this.TextItem != null &&
-                    this.TextItem.Equals(other.TextItem)
+                    this.URX == other.URX ||
+                    this.URX != null &&
+                    this.URX.Equals(other.URX)
+                ) && 
+                (
+                    this.URY == other.URY ||
+                    this.URY != null &&
+                    this.URY.Equals(other.URY)
                 );
         }
 
@@ -167,12 +203,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Code != null)
-                    hash = hash * 59 + this.Code.GetHashCode();
-                if (this.Status != null)
-                    hash = hash * 59 + this.Status.GetHashCode();
-                if (this.TextItem != null)
-                    hash = hash * 59 + this.TextItem.GetHashCode();
+                if (this.LLX != null)
+                    hash = hash * 59 + this.LLX.GetHashCode();
+                if (this.LLY != null)
+                    hash = hash * 59 + this.LLY.GetHashCode();
+                if (this.URX != null)
+                    hash = hash * 59 + this.URX.GetHashCode();
+                if (this.URY != null)
+                    hash = hash * 59 + this.URY.GetHashCode();
                 return hash;
             }
         }

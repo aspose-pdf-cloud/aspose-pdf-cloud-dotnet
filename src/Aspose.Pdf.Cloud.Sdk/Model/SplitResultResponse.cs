@@ -44,7 +44,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
     /// Represents split result object.
     /// </summary>
     [DataContract]
-    public partial class SplitResultResponse : SaaSposeResponse,  IEquatable<SplitResultResponse>, IValidatableObject
+    public partial class SplitResultResponse : AsposeResponse,  IEquatable<SplitResultResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SplitResultResponse" /> class.
@@ -57,7 +57,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
         /// <param name="Result">Gets or sets the splitting result..</param>
-        public SplitResultResponse(HttpStatusCode Code = default(HttpStatusCode), string Status = default(string), SplitResult Result = default(SplitResult))
+        public SplitResultResponse(int? Code = default(int?), string Status = default(string), SplitResult Result = default(SplitResult))
         {
             // to ensure "Code" is required (not null)
             if (Code == null)
@@ -77,7 +77,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Response status code.</value>
         [DataMember(Name="Code", EmitDefaultValue=false)]
-        public HttpStatusCode Code { get; set; }
+        public int? Code { get; set; }
 
         /// <summary>
         /// Response status.

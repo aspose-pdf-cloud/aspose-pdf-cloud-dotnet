@@ -44,7 +44,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
     /// FieldsResponse
     /// </summary>
     [DataContract]
-    public partial class FieldsResponse : SaaSposeResponse,  IEquatable<FieldsResponse>, IValidatableObject
+    public partial class FieldsResponse : AsposeResponse,  IEquatable<FieldsResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldsResponse" /> class.
@@ -57,7 +57,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
         /// <param name="Fields">Fields.</param>
-        public FieldsResponse(HttpStatusCode Code = default(HttpStatusCode), string Status = default(string), Fields Fields = default(Fields))
+        public FieldsResponse(int? Code = default(int?), string Status = default(string), Fields Fields = default(Fields))
         {
             // to ensure "Code" is required (not null)
             if (Code == null)
@@ -77,7 +77,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Response status code.</value>
         [DataMember(Name="Code", EmitDefaultValue=false)]
-        public HttpStatusCode Code { get; set; }
+        public int? Code { get; set; }
 
         /// <summary>
         /// Response status.

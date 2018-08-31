@@ -49,10 +49,23 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MergeDocuments" /> class.
         /// </summary>
-        /// <param name="List">List of documents for merging..</param>
+        [JsonConstructorAttribute]
+        protected MergeDocuments() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MergeDocuments" /> class.
+        /// </summary>
+        /// <param name="List">List of documents for merging. (required).</param>
         public MergeDocuments(List<string> List = default(List<string>))
         {
-            this.List = List;
+            // to ensure "List" is required (not null)
+            if (List == null)
+            {
+                throw new InvalidDataException("List is a required property for MergeDocuments and cannot be null");
+            }
+            else
+            {
+                this.List = List;
+            }
         }
         
         /// <summary>

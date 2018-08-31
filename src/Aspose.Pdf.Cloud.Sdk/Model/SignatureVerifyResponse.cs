@@ -44,7 +44,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
     /// Returns also a message.
     /// </summary>
     [DataContract]
-    public partial class SignatureVerifyResponse : SaaSposeResponse,  IEquatable<SignatureVerifyResponse>, IValidatableObject
+    public partial class SignatureVerifyResponse : AsposeResponse,  IEquatable<SignatureVerifyResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureVerifyResponse" /> class.
@@ -57,7 +57,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
         /// <param name="Valid">Valid sign..</param>
-        public SignatureVerifyResponse(HttpStatusCode Code = default(HttpStatusCode), string Status = default(string), bool? Valid = default(bool?))
+        public SignatureVerifyResponse(int? Code = default(int?), string Status = default(string), bool? Valid = default(bool?))
         {
             // to ensure "Code" is required (not null)
             if (Code == null)
@@ -77,7 +77,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Response status code.</value>
         [DataMember(Name="Code", EmitDefaultValue=false)]
-        public HttpStatusCode Code { get; set; }
+        public int? Code { get; set; }
 
         /// <summary>
         /// Response status.

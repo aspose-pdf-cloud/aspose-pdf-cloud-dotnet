@@ -52,11 +52,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Links">Link to the document..</param>
         /// <param name="Width">Gets width of the image..</param>
         /// <param name="Height">Gets height of the image..</param>
-        public Image(List<Link> Links = default(List<Link>), int? Width = default(int?), int? Height = default(int?))
+        /// <param name="Id">Gets ID of the image..</param>
+        /// <param name="Rectangle">Gets rectangle of the image..</param>
+        /// <param name="PageNumber">Gets page number..</param>
+        public Image(List<Link> Links = default(List<Link>), int? Width = default(int?), int? Height = default(int?), string Id = default(string), RectanglePdf Rectangle = default(RectanglePdf), int? PageNumber = default(int?))
         {
             this.Links = Links;
             this.Width = Width;
             this.Height = Height;
+            this.Id = Id;
+            this.Rectangle = Rectangle;
+            this.PageNumber = PageNumber;
         }
         
         /// <summary>
@@ -81,6 +87,27 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public int? Height { get; set; }
 
         /// <summary>
+        /// Gets ID of the image.
+        /// </summary>
+        /// <value>Gets ID of the image.</value>
+        [DataMember(Name="Id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+
+        /// <summary>
+        /// Gets rectangle of the image.
+        /// </summary>
+        /// <value>Gets rectangle of the image.</value>
+        [DataMember(Name="Rectangle", EmitDefaultValue=false)]
+        public RectanglePdf Rectangle { get; set; }
+
+        /// <summary>
+        /// Gets page number.
+        /// </summary>
+        /// <value>Gets page number.</value>
+        [DataMember(Name="PageNumber", EmitDefaultValue=false)]
+        public int? PageNumber { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -91,6 +118,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  Width: ").Append(Width).Append("\n");
             sb.Append("  Height: ").Append(Height).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Rectangle: ").Append(Rectangle).Append("\n");
+            sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,6 +171,21 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Height == other.Height ||
                     this.Height != null &&
                     this.Height.Equals(other.Height)
+                ) && 
+                (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) && 
+                (
+                    this.Rectangle == other.Rectangle ||
+                    this.Rectangle != null &&
+                    this.Rectangle.Equals(other.Rectangle)
+                ) && 
+                (
+                    this.PageNumber == other.PageNumber ||
+                    this.PageNumber != null &&
+                    this.PageNumber.Equals(other.PageNumber)
                 );
         }
 
@@ -161,6 +206,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Width.GetHashCode();
                 if (this.Height != null)
                     hash = hash * 59 + this.Height.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                if (this.Rectangle != null)
+                    hash = hash * 59 + this.Rectangle.GetHashCode();
+                if (this.PageNumber != null)
+                    hash = hash * 59 + this.PageNumber.GetHashCode();
                 return hash;
             }
         }

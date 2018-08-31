@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="TextFormatResponse.cs">
+// <copyright company="Aspose" file="AsposeResponse.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,35 +41,33 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// TextFormatResponse
+    /// Base class for all responses.
     /// </summary>
     [DataContract]
-    public partial class TextFormatResponse : SaaSposeResponse,  IEquatable<TextFormatResponse>, IValidatableObject
+    public partial class AsposeResponse :  IEquatable<AsposeResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="TextFormatResponse" /> class.
+        /// Initializes a new instance of the <see cref="AsposeResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected TextFormatResponse() { }
+        protected AsposeResponse() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="TextFormatResponse" /> class.
+        /// Initializes a new instance of the <see cref="AsposeResponse" /> class.
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="TextFormat">TextFormat.</param>
-        public TextFormatResponse(HttpStatusCode Code = default(HttpStatusCode), string Status = default(string), TextFormat TextFormat = default(TextFormat))
+        public AsposeResponse(int? Code = default(int?), string Status = default(string))
         {
             // to ensure "Code" is required (not null)
             if (Code == null)
             {
-                throw new InvalidDataException("Code is a required property for TextFormatResponse and cannot be null");
+                throw new InvalidDataException("Code is a required property for AsposeResponse and cannot be null");
             }
             else
             {
                 this.Code = Code;
             }
             this.Status = Status;
-            this.TextFormat = TextFormat;
         }
         
         /// <summary>
@@ -77,7 +75,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Response status code.</value>
         [DataMember(Name="Code", EmitDefaultValue=false)]
-        public HttpStatusCode Code { get; set; }
+        public int? Code { get; set; }
 
         /// <summary>
         /// Response status.
@@ -87,22 +85,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets TextFormat
-        /// </summary>
-        [DataMember(Name="TextFormat", EmitDefaultValue=false)]
-        public TextFormat TextFormat { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TextFormatResponse {\n");
+            sb.Append("class AsposeResponse {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  TextFormat: ").Append(TextFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,7 +102,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  new string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -124,15 +115,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TextFormatResponse);
+            return this.Equals(obj as AsposeResponse);
         }
 
         /// <summary>
-        /// Returns true if TextFormatResponse instances are equal
+        /// Returns true if AsposeResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TextFormatResponse to be compared</param>
+        /// <param name="other">Instance of AsposeResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TextFormatResponse other)
+        public bool Equals(AsposeResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -148,11 +139,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
-                ) && 
-                (
-                    this.TextFormat == other.TextFormat ||
-                    this.TextFormat != null &&
-                    this.TextFormat.Equals(other.TextFormat)
                 );
         }
 
@@ -171,8 +157,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Code.GetHashCode();
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                if (this.TextFormat != null)
-                    hash = hash * 59 + this.TextFormat.GetHashCode();
                 return hash;
             }
         }

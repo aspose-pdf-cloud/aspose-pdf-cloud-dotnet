@@ -54,7 +54,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Signature" /> class.
         /// </summary>
-        /// <param name="SignaturePath">Gets or sets the signature path..</param>
+        /// <param name="SignaturePath">Gets or sets the signature path. (required).</param>
         /// <param name="SignatureType">Gets or sets the type of the signature. (required).</param>
         /// <param name="Password">Gets or sets the signature password..</param>
         /// <param name="Appearance">Sets or gets a graphic appearance for the signature. Property value represents an image file name..</param>
@@ -67,8 +67,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Authority">Gets or sets the name of the person or authority signing the document...</param>
         /// <param name="Date">Gets or sets the time of signing..</param>
         /// <param name="ShowProperties">Gets or sets the showproperties in signature field (required).</param>
-        public Signature(string SignaturePath = default(string), SignatureType SignatureType = default(SignatureType), string Password = default(string), string Appearance = default(string), string Reason = default(string), string Contact = default(string), string Location = default(string), bool? Visible = default(bool?), Rectangle Rectangle = default(Rectangle), string FormFieldName = default(string), string Authority = default(string), string Date = default(string), bool? ShowProperties = default(bool?))
+        public Signature(string SignaturePath = default(string), SignatureType SignatureType = default(SignatureType), string Password = default(string), string Appearance = default(string), string Reason = default(string), string Contact = default(string), string Location = default(string), bool? Visible = default(bool?), RectanglePdf Rectangle = default(RectanglePdf), string FormFieldName = default(string), string Authority = default(string), string Date = default(string), bool? ShowProperties = default(bool?))
         {
+            // to ensure "SignaturePath" is required (not null)
+            if (SignaturePath == null)
+            {
+                throw new InvalidDataException("SignaturePath is a required property for Signature and cannot be null");
+            }
+            else
+            {
+                this.SignaturePath = SignaturePath;
+            }
             // to ensure "SignatureType" is required (not null)
             if (SignatureType == null)
             {
@@ -96,7 +105,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 this.ShowProperties = ShowProperties;
             }
-            this.SignaturePath = SignaturePath;
             this.Password = Password;
             this.Appearance = Appearance;
             this.Reason = Reason;
@@ -169,7 +177,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Gets or sets the visible rectangle of the signature. Supports only when signing particular page.</value>
         [DataMember(Name="Rectangle", EmitDefaultValue=false)]
-        public Rectangle Rectangle { get; set; }
+        public RectanglePdf Rectangle { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the signature field. Supports only when signing document with particular form field.

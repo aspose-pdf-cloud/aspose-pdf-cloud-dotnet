@@ -34,32 +34,43 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.Net;
 using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Defines HorizontalAlignment
+    /// 
     /// </summary>
+    /// <value></value>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum HorizontalAlignment
     {
+        
         /// <summary>
-        /// No alignment.
+        /// Enum None for "None"
         /// </summary>
+        [EnumMember(Value = "None")]
         None,
+        
         /// <summary>
-        /// Align to left.
+        /// Enum Left for "Left"
         /// </summary>
+        [EnumMember(Value = "Left")]
         Left,
+        
         /// <summary>
-        /// Center alignment.
+        /// Enum Center for "Center"
         /// </summary>
+        [EnumMember(Value = "Center")]
         Center,
+        
         /// <summary>
-        /// Align to right.
+        /// Enum Right for "Right"
         /// </summary>
-        Right,
-
+        [EnumMember(Value = "Right")]
+        Right
     }
+
 }

@@ -52,7 +52,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         public Configuration(string apiKey,
                              string appSid,
                              String basePath = "https://api.aspose.cloud",
-                             string version = "v1.1",
+                             string version = "/v2.0",
                              Dictionary<String, String> defaultHeader = null,
                              string tempFolderPath = null,
                              string dateTimeFormat = null,
@@ -229,8 +229,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
                      .GetExecutingAssembly()
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
-            report += "    Version of the API: 1.1\n";
-            report += "    SDK Package Version: 18.7.0\n";
+            report += "    Version of the API: 2.0\n";
+            report += "    SDK Package Version: 18.8.0\n";
 
             return report;
         }

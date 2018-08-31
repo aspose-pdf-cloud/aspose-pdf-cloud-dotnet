@@ -54,13 +54,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Action">Action.</param>
         /// <param name="Highlighting">Highlighting.</param>
         /// <param name="Color">Color.</param>
-        public LinkAnnotation(List<Link> Links = default(List<Link>), LinkActionType ActionType = default(LinkActionType), string Action = default(string), LinkHighlightingMode Highlighting = default(LinkHighlightingMode), Color Color = default(Color))
+        /// <param name="Rect">Rect.</param>
+        /// <param name="Id">Id.</param>
+        public LinkAnnotation(List<Link> Links = default(List<Link>), LinkActionType ActionType = default(LinkActionType), string Action = default(string), LinkHighlightingMode Highlighting = default(LinkHighlightingMode), Color Color = default(Color), RectanglePdf Rect = default(RectanglePdf), string Id = default(string))
         {
             this.Links = Links;
             this.ActionType = ActionType;
             this.Action = Action;
             this.Highlighting = Highlighting;
             this.Color = Color;
+            this.Rect = Rect;
+            this.Id = Id;
         }
         
         /// <summary>
@@ -95,6 +99,18 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public Color Color { get; set; }
 
         /// <summary>
+        /// Gets or Sets Rect
+        /// </summary>
+        [DataMember(Name="Rect", EmitDefaultValue=false)]
+        public RectanglePdf Rect { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="Id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -107,6 +123,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  Highlighting: ").Append(Highlighting).Append("\n");
             sb.Append("  Color: ").Append(Color).Append("\n");
+            sb.Append("  Rect: ").Append(Rect).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -167,6 +185,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Color == other.Color ||
                     this.Color != null &&
                     this.Color.Equals(other.Color)
+                ) && 
+                (
+                    this.Rect == other.Rect ||
+                    this.Rect != null &&
+                    this.Rect.Equals(other.Rect)
+                ) && 
+                (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 );
         }
 
@@ -191,6 +219,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Highlighting.GetHashCode();
                 if (this.Color != null)
                     hash = hash * 59 + this.Color.GetHashCode();
+                if (this.Rect != null)
+                    hash = hash * 59 + this.Rect.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 return hash;
             }
         }

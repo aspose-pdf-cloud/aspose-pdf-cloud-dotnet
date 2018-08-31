@@ -57,7 +57,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Text">Text.</param>
         /// <param name="Page">Page (required).</param>
         /// <param name="Rect">Rect.</param>
-        public TextRect(string Text = default(string), int? Page = default(int?), Rectangle Rect = default(Rectangle))
+        public TextRect(string Text = default(string), int? Page = default(int?), RectanglePdf Rect = default(RectanglePdf))
         {
             // to ensure "Page" is required (not null)
             if (Page == null)
@@ -88,7 +88,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Gets or Sets Rect
         /// </summary>
         [DataMember(Name="Rect", EmitDefaultValue=false)]
-        public Rectangle Rect { get; set; }
+        public RectanglePdf Rect { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
