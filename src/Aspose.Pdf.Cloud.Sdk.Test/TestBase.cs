@@ -35,7 +35,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 {
     public abstract class TestsBase
     {
-        private const string BaseProductUri = @"https://api-dev.aspose.cloud";
+        private const string BaseProductUri = @"https://billing.cloud.saltov.dynabic.com";
 
         protected const string TestDataFolder = @"..\..\..\..\testData";
         private const string ServerCredsFile = @"..\..\..\Settings\servercreds.json";
@@ -49,7 +49,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             // To run tests with your own credentials please uncomment following line of code
             // this.keys = new Keys { AppKey = "your app key", AppSID = "your app sid" };
-
             if (null == keys)
             {
                 keys = JsonConvert.DeserializeObject<Keys>(File.ReadAllText(ServerCredsFile));

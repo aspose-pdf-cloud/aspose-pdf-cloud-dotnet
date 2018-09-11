@@ -46,7 +46,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(name, name);
 
             var paragraph = new Paragraph(
-                Rectangle: new Rectangle(100, 100, 200, 200),
+                Rectangle: new RectanglePdf(100, 100, 200, 200),
                 LeftMargin: 10,
                 RightMargin: 10,
                 TopMargin: 20,
@@ -60,29 +60,27 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
                 Lines: new List<TextLine>
                 {
-                    new TextLine
-                    {
-                        HorizontalAlignment = TextHorizontalAlignment.Right,
-                        Segments = new List<Segment>
+                    new TextLine(
+                        HorizontalAlignment: TextHorizontalAlignment.Right,
+                        Segments: new List<Segment>
                         {
-                            new Segment
-                            {
-                                Value = "segment 1",
-                                TextState = new TextState(
+                            new Segment(
+                                Value: "segment 1",
+                                TextState: new TextState(
                                     Font: "Arial",
                                     FontSize: 10,
                                     ForegroundColor: new Color(0x00, 0x00, 0xFF, 0x00),
                                     BackgroundColor: new Color(0x00, 0xFF, 0x00, 0x00),
                                     FontStyle: FontStyles.Bold
                                 )
-                            }
+                            )
                         }
-                    }
+                    )
                 }
             );
 
             var response = PdfApi.PutAddText(name, 1, paragraph, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

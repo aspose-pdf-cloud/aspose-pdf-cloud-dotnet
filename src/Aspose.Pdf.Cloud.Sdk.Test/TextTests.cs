@@ -19,8 +19,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             const string name = "4pages.pdf";
             UploadFile(name, name);
 
-            var response = PdfApi.GetText(name, folder: TempFolder, X: 0, Y: 0, width: 0, height: 0);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            var response = PdfApi.GetText(name, LLX: 0, LLY: 0, URX: 0, URY: 0, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -33,9 +33,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(name, name);
 
             var format = new List<string> { "First Page", "Second Page" };
-            var response = PdfApi.GetPageText(name, folder: TempFolder, X: 0, Y: 0, width: 0, height: 0,
-                pageNumber: 1, format: format);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            var response = PdfApi.GetPageText(name, pageNumber: 1, LLX: 0, LLY: 0, URX: 0, URY: 0, folder: TempFolder, format: format);
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

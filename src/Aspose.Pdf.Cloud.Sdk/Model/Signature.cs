@@ -127,7 +127,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Gets or sets the type of the signature.
         /// </summary>
         /// <value>Gets or sets the type of the signature.</value>
-        [DataMember(Name="SignatureType", EmitDefaultValue=false)]
+        [DataMember(Name="SignatureType", EmitDefaultValue=true)]
         public SignatureType SignatureType { get; set; }
 
         /// <summary>

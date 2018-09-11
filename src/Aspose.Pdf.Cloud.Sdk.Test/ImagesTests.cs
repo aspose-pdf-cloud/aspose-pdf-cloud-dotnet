@@ -43,24 +43,41 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(Name, Name);
         }
 
+        private string _imageId;
+        private string ImageId
+        {
+            get
+            {
+                if (_imageId != null) return _imageId;
+
+                var imagesResponse = PdfApi.GetImages(Name, pageNumber: 1, folder: TempFolder);
+                Assert.That(imagesResponse.Code, Is.EqualTo(200));
+                _imageId = imagesResponse.Images.List[0].Id;
+
+                return _imageId;
+            }
+        }
+        
+
         /// <summary>
         /// Test GetImage
         /// </summary>
         [Test]
         public void GetImageTest()
         {
-            var response = PdfApi.GetImage(Name, 1, 1, folder: TempFolder);
-            Assert.That(response.Length, Is.GreaterThan(0));
+            var response = PdfApi.GetImage(Name, ImageId, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
+
         /// <summary>
-        /// Test GetImageWithFormat
+        /// Test DeleteImage
         /// </summary>
         [Test]
-        public void GetImageWithFormatTest()
+        public void DeleteImageTest()
         {
-            var response = PdfApi.GetImage(Name, 1, 1, format: "jpeg", height: 100, width: 100, folder: TempFolder);
-            Assert.That(response.Length, Is.GreaterThan(0));
+            var response = PdfApi.DeleteImage(Name, ImageId, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -70,35 +87,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void GetImagesTest()
         {
             var response = PdfApi.GetImages(Name, 1, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
-
+        
         /// <summary>
         /// Test PostReplaceImage
         /// </summary>
         [Test]
-        public void PostReplaceImageTest()
+        public void PutReplaceImageTest()
+        {
+            const string imageName = "Koala.jpg";
+            UploadFile(imageName, imageName);
+            
+            var response = PdfApi.PutReplaceImage(name: Name, imageId: ImageId, imageFilePath: Path.Combine(TempFolder, imageName), folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+
+        /// <summary>
+        /// Test PostInsertImage
+        /// </summary>
+        [Test]
+        public void PostInsertImageTest()
         {
             const string imageName = "Koala.jpg";
             UploadFile(imageName, imageName);
 
-            var response = PdfApi.PostReplaceImage(Name, 1, 1, Path.Combine(TempFolder, imageName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            var response = PdfApi.PostInsertImage(name: Name, pageNumber: 1, llx: 10, lly:10, urx: 100, ury: 100, imageFilePath: Path.Combine(TempFolder, imageName), folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(201));
         }
-
-        /// <summary>
-        /// Test PostReplaceImageFromRequest
-        /// </summary>
-        [Test]
-        public void PostReplaceImageFromRequestTest()
-        {
-            const string imageName = "Koala.jpg";
-            Stream imageStream = File.OpenRead(Path.Combine(TestDataFolder, imageName));
-
-            var response = PdfApi.PostReplaceImage(Name, 1, 1, image: imageStream, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
-        }
-
 
         /// <summary>
         /// Test PutImagesExtractAsJpeg
@@ -111,7 +128,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var response = PdfApi.PutImagesExtractAsJpeg(Name, pageNumber: pageNumber, 
                 folder: TempFolder, destFolder: Path.Combine(TempFolder, destFolder));
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -125,7 +142,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var response = PdfApi.PutImagesExtractAsTiff(Name, pageNumber: pageNumber,
                 folder: TempFolder, destFolder: Path.Combine(TempFolder, destFolder));
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -139,7 +156,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var response = PdfApi.PutImagesExtractAsGif(Name, pageNumber: pageNumber,
                 folder: TempFolder, destFolder: Path.Combine(TempFolder, destFolder));
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -153,7 +170,92 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var response = PdfApi.PutImagesExtractAsPng(Name, pageNumber: pageNumber,
                 folder: TempFolder, destFolder: Path.Combine(TempFolder, destFolder));
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+
+        /// <summary>
+        /// Test PutImageExtractAsJpeg
+        /// </summary>
+        [Test]
+        public void PutImageExtractAsJpegTest()
+        {
+            const string destFolder = "extract_jpg";
+            var response = PdfApi.PutImageExtractAsJpeg(Name, ImageId, folder: TempFolder, destFolder: Path.Combine(TempFolder, destFolder));
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetImageExtractAsJpeg
+        /// </summary>
+        [Test]
+        public void GetImageExtractAsJpegTest()
+        {
+            var response = PdfApi.GetImageExtractAsJpeg(Name, ImageId, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
+
+        /// <summary>
+        /// Test PutImageExtractAsTiff
+        /// </summary>
+        [Test]
+        public void PutImageExtractAsTiffTest()
+        {
+            const string destFolder = "extract_tiff";
+            var response = PdfApi.PutImageExtractAsTiff(Name, ImageId, folder: TempFolder, destFolder: Path.Combine(TempFolder, destFolder));
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetImageExtractAsTiff
+        /// </summary>
+        [Test]
+        public void GetImageExtractAsTiffTest()
+        {
+            var response = PdfApi.GetImageExtractAsTiff(Name, ImageId, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
+
+        /// <summary>
+        /// Test PutImageExtractAsGif
+        /// </summary>
+        [Test]
+        public void PutImageExtractAsGifTest()
+        {
+            const string destFolder = "extract_gif";
+            var response = PdfApi.PutImageExtractAsGif(Name, ImageId, folder: TempFolder, destFolder: Path.Combine(TempFolder, destFolder));
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetImageExtractAsGif
+        /// </summary>
+        [Test]
+        public void GetImageExtractAsGifTest()
+        {
+            var response = PdfApi.GetImageExtractAsGif(Name, ImageId, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
+
+        /// <summary>
+        /// Test PutImageExtractAsPng
+        /// </summary>
+        [Test]
+        public void PutImageExtractAsPngTest()
+        {
+            const string destFolder = "extract_png";
+            var response = PdfApi.PutImageExtractAsPng(Name, ImageId, folder: TempFolder, destFolder: Path.Combine(TempFolder, destFolder));
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetImageExtractAsPng
+        /// </summary>
+        [Test]
+        public void GetImageExtractAsPngTest()
+        {
+            var response = PdfApi.GetImageExtractAsPng(Name, ImageId, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
         }
     }
 }

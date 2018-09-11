@@ -77,7 +77,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Gets or Sets ActionType
         /// </summary>
-        [DataMember(Name="ActionType", EmitDefaultValue=false)]
+        [DataMember(Name="ActionType", EmitDefaultValue=true)]
         public LinkActionType ActionType { get; set; }
 
         /// <summary>
@@ -89,7 +89,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Gets or Sets Highlighting
         /// </summary>
-        [DataMember(Name="Highlighting", EmitDefaultValue=false)]
+        [DataMember(Name="Highlighting", EmitDefaultValue=true)]
         public LinkHighlightingMode Highlighting { get; set; }
 
         /// <summary>

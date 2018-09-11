@@ -75,13 +75,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 Name: "checkboxfield",
                 Type: FieldType.Boolean,
                 Values: new List<string> {"1"},
-                Rect: new Rectangle(
-                    X: 50,
-                    Y: 200,
-                    Width: 150,
-                    Height: 200));
+                Rect: new RectanglePdf(
+                    LLX: 50,
+                    LLY: 200,
+                    URX: 150,
+                    URY: 200
+                    ));
             var response = PdfApi.PostCreateField(name, 1, field, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -105,6 +106,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         }
 
         /// <summary>
+        /// Test PutUpdateFields
+        /// </summary>
+        [Test]
+        public void PutUpdateFieldsTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var fieldName = "textField";
+
+            var fields = new Fields(null, new List<Field>()
+            {
+                new Field(
+                    Name: fieldName,
+                    Type: FieldType.Text,
+                    Values: new List<string> {"Text field updated value."})
+                
+            });
+            
+            var response = PdfApi.PutUpdateFields(name, fields, folder: TempFolder);
+            Assert.That(response.Fields, Is.Not.Null);
+        }
+
+
+        /// <summary>
         /// Test DeleteField
         /// </summary>
         [Test]
@@ -116,7 +142,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var fieldName = "textField";
 
             var response = PdfApi.DeleteField(name, fieldName, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -129,7 +155,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(name, name);
 
             var response = PdfApi.PutFieldsFlatten(name, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 

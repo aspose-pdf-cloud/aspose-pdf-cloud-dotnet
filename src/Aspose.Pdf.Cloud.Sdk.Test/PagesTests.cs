@@ -26,6 +26,7 @@
 using System.IO;
 using System.Net;
 using Aspose.Pdf.Cloud.Sdk.Model;
+using Newtonsoft.Json;
 using NUnit.Framework;
 
 namespace Aspose.Pdf.Cloud.Sdk.Test
@@ -51,7 +52,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void DeletePageTest()
         {
             var response = PdfApi.DeletePage(Name, 3, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
         
         /// <summary>
@@ -60,20 +61,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void GetPageTest()
         {
-            var response = PdfApi.GetPage(Name, 3, folder: TempFolder);
-            Assert.That(response.Length, Is.GreaterThan(0));
+            string name = "PdfWithImages2.pdf";
+            var response = PdfApi.GetPage(name, pageNumber: 1, folder: TempFolder);
+            
+            Assert.That(response.Code, Is.EqualTo(200));
         }
-
-        /// <summary>
-        /// Test GetPageWithFormat
-        /// </summary>
-        [Test]
-        public void GetPageWithFormatTest()
-        {
-            var response = PdfApi.GetPage(Name, 3, format: "jpeg", width: 100, height: 100, folder: TempFolder);
-            Assert.That(response.Length, Is.GreaterThan(0));
-        }
-
+        
         /// <summary>
         /// Test GetPages
         /// </summary>
@@ -81,7 +74,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void GetPagesTest()
         {
             var response = PdfApi.GetPages(Name, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -91,7 +84,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void GetWordsPerPageTest()
         {
             var response = PdfApi.GetWordsPerPage(Name, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -101,7 +94,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PostMovePageTest()
         {
             var response = PdfApi.PostMovePage(Name, 3, 2, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -111,7 +104,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutAddNewPageTest()
         {
             var response = PdfApi.PutAddNewPage(Name, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -133,7 +126,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 YIndent: 100);
 
             var response = PdfApi.PutPageAddStamp(Name, 1, stamp, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

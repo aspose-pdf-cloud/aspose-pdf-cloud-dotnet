@@ -74,7 +74,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Line&#39;s horizontal alignment
         /// </summary>
         /// <value>Line&#39;s horizontal alignment</value>
-        [DataMember(Name="HorizontalAlignment", EmitDefaultValue=false)]
+        [DataMember(Name="HorizontalAlignment", EmitDefaultValue=true)]
         public TextHorizontalAlignment HorizontalAlignment { get; set; }
 
         /// <summary>

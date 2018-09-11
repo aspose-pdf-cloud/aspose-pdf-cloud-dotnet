@@ -36,9 +36,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     [TestFixture]
     public class TextReplaceTests : TestsBase
     {
-        private const string Name = "4pages.pdf";
+        private const string Name = "marketing.pdf";
 
-        private static readonly TextReplaceRequest ReplaceRequest = new TextReplaceRequest("Page", "p_a_g_e", false);
+        //private static readonly TextReplaceRequest ReplaceRequest = new TextReplaceRequest("Page", "p_a_g_e", false);
         private static readonly TextReplaceListRequest ReplaceListRequest = new TextReplaceListRequest(new List<TextReplace>
         {
             new TextReplace("First", "1", false),
@@ -50,63 +50,20 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             base.SetUp();
             UploadFile(Name, Name);
         }
-
-        /// <summary>
-        /// Test PostDocumentReplaceText
-        /// </summary>
-        [Test]
-        public void PostDocumentReplaceTextTest()
-        {
-            var response = PdfApi.PostDocumentReplaceText(Name, ReplaceRequest, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
-        }
         
-        /// <summary>
-        /// Test PostDocumentReplaceTextList
-        /// </summary>
-        [Test]
-        public void PostDocumentReplaceTextListTest()
-        {
-            var response = PdfApi.PostDocumentReplaceTextList(Name, ReplaceListRequest, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
-        }
-
-        /// <summary>
-        /// Test PostPageReplaceText
-        /// </summary>
-        [Test]
-        public void PostPageReplaceTextTest()
-        {
-            var response = PdfApi.PostPageReplaceText(Name, 1, ReplaceRequest, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
-        }
-
-        /// <summary>
-        /// Test PostPageReplaceTextList
-        /// </summary>
-        [Test]
-        public void PostPageReplaceTextListTest()
-        {
-            var response = PdfApi.PostPageReplaceTextList(Name, 1, ReplaceListRequest, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
-        }
-
         /// <summary>
         /// Test PostDocumentTextReplace
         /// </summary>
         [Test]
         public void PostDocumentTextReplaceTest()
         {
-            const string name = "4pages.pdf";
-            UploadFile(name, name);
-
-            var rect = new Rectangle(100, 700, 300, 300);
+            var rect = new RectanglePdf(100, 700, 300, 300);
             var textReplace = new TextReplace("Page", "p_a_g_e", false, Rect: rect);
             var textReplaceList = new TextReplaceListRequest(new List<TextReplace> { textReplace },
                 StartIndex: 0, CountReplace: 0);
 
-            var response = PdfApi.PostDocumentTextReplace(name, textReplaceList, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            var response = PdfApi.PostDocumentTextReplace(Name, textReplaceList, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -115,16 +72,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PostPageTextReplaceTest()
         {
-            const string name = "4pages.pdf";
-            UploadFile(name, name);
-
-            var rect = new Rectangle(100, 700, 300, 300);
-            var textReplace = new TextReplace("Page", "p_a_g_e", false, Rect: rect);
+            var rect = new RectanglePdf(100, 100, 300, 300);
+            var textReplace = new TextReplace("market", "m_a_r_k_e_t", false, Rect: rect);
             var textReplaceList = new TextReplaceListRequest(new List<TextReplace> { textReplace },
                 StartIndex: 0, CountReplace: 0);
 
-            var response = PdfApi.PostPageTextReplace(name, 1, textReplaceList, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            var response = PdfApi.PostPageTextReplace(Name, 1, textReplaceList, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

@@ -53,7 +53,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void GetDocumentAttachmentByIndexTest()
         {
             var response = PdfApi.GetDocumentAttachmentByIndex(Name, 1, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void GetDocumentAttachmentsTest()
         {
             var response = PdfApi.GetDocumentAttachments(Name, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>

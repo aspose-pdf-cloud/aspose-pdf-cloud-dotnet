@@ -38,6 +38,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         const string Name = "4pages.pdf";
         const int pageNumber = 2;
 
+        public override void SetUp()
+        {
+            base.SetUp();
+            UploadFile(Name, Name);
+        }
+
         /// <summary>
         /// Test GetPageConvertToTiff
         /// </summary>
@@ -47,7 +53,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.GetPageConvertToTiff(Name, pageNumber, folder: TempFolder);
             Assert.That(response.Length, Is.GreaterThan(0));
         }
-
+        
 
         /// <summary>
         /// Test PutPageConvertToTiff
@@ -58,8 +64,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultFile = "page.tiff";
             string outPath = Path.Combine(TempFolder, resultFile);
             var response = PdfApi.PutPageConvertToTiff(Name, pageNumber, outPath: outPath, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
+
 
         /// <summary>
         /// Test GetPageConvertToJpeg
@@ -81,7 +88,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultFile = "page.jpeg";
             string outPath = Path.Combine(TempFolder, resultFile);
             var response = PdfApi.PutPageConvertToJpeg(Name, pageNumber, outPath: outPath, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
 
@@ -105,7 +112,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultFile = "page.png";
             string outPath = Path.Combine(TempFolder, resultFile);
             var response = PdfApi.PutPageConvertToPng(Name, pageNumber, outPath: outPath, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
 
@@ -129,7 +136,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultFile = "page.emf";
             string outPath = Path.Combine(TempFolder, resultFile);
             var response = PdfApi.PutPageConvertToEmf(Name, pageNumber, outPath: outPath, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
 
@@ -153,7 +160,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultFile = "page.bmp";
             string outPath = Path.Combine(TempFolder, resultFile);
             var response = PdfApi.PutPageConvertToBmp(Name, pageNumber, outPath: outPath, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
 
@@ -177,7 +184,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultFile = "page.gif";
             string outPath = Path.Combine(TempFolder, resultFile);
             var response = PdfApi.PutPageConvertToGif(Name, pageNumber, outPath: outPath, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 

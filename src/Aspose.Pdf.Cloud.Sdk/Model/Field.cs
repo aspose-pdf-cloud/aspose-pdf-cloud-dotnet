@@ -83,7 +83,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Field type.
         /// </summary>
         /// <value>Field type.</value>
-        [DataMember(Name="Type", EmitDefaultValue=false)]
+        [DataMember(Name="Type", EmitDefaultValue=true)]
         public FieldType Type { get; set; }
 
         /// <summary>

@@ -93,19 +93,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Gets or Sets LineSpacing
         /// </summary>
-        [DataMember(Name="LineSpacing", EmitDefaultValue=false)]
+        [DataMember(Name="LineSpacing", EmitDefaultValue=true)]
         public LineSpacing LineSpacing { get; set; }
 
         /// <summary>
         /// Gets or Sets WrapMode
         /// </summary>
-        [DataMember(Name="WrapMode", EmitDefaultValue=false)]
+        [DataMember(Name="WrapMode", EmitDefaultValue=true)]
         public WrapMode WrapMode { get; set; }
 
         /// <summary>
         /// Gets or Sets HorizontalAlignment
         /// </summary>
-        [DataMember(Name="HorizontalAlignment", EmitDefaultValue=false)]
+        [DataMember(Name="HorizontalAlignment", EmitDefaultValue=true)]
         public TextHorizontalAlignment HorizontalAlignment { get; set; }
 
         /// <summary>
@@ -153,7 +153,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Gets or Sets VerticalAlignment
         /// </summary>
-        [DataMember(Name="VerticalAlignment", EmitDefaultValue=false)]
+        [DataMember(Name="VerticalAlignment", EmitDefaultValue=true)]
         public VerticalAlignment VerticalAlignment { get; set; }
 
         /// <summary>
