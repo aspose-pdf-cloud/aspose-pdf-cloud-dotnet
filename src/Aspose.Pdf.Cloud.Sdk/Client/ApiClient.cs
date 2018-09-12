@@ -218,7 +218,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
             String contentType)
         {
-            path = Configuration.Version + "/" + path;
+            path = "/v2.0/" + path;
             var request = new RestRequest(path, method);
 
             // add path parameter, if any

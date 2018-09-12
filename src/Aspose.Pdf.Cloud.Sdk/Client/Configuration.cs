@@ -42,7 +42,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// </summary>
         /// <param name="apiKey">The api key.</param>
         /// <param name="appSid">The app SID.</param>
-        /// <param name="version">The api version.</param>
         /// <param name="basePath">The base path.</param>
         /// <param name="defaultHeader">Dictionary of default HTTP header</param>
         /// <param name="tempFolderPath">Temp folder path</param>
@@ -52,7 +51,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         public Configuration(string apiKey,
                              string appSid,
                              String basePath = "https://api.aspose.cloud",
-                             string version = "/v2.0",
                              Dictionary<String, String> defaultHeader = null,
                              string tempFolderPath = null,
                              string dateTimeFormat = null,
@@ -66,7 +64,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             ApiKey = apiKey;
             AppSid = appSid;
             BasePath = basePath;
-            Version = version;
 
             UserAgent = userAgent;
 
@@ -104,11 +101,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <summary>
         /// </summary>
         public string BasePath { get; set; }
-
-        /// Gets or sets the api version to use.
-        /// <summary>
-        /// </summary>
-        public string Version { get; set; }
 
         /// <summary>
         /// Gets or sets the app sid.
