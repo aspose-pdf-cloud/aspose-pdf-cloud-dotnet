@@ -46,7 +46,23 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(name, name);
 
             var responce = PdfApi.GetPageAnnotations(name, pageNumber, folder: TempFolder);
-            Assert.That(responce.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(responce.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test AnnotationsGetPageAnnotation
+        /// </summary>
+        [Test]
+        public void GetPageAnnotationTest()
+        {
+            const string name = "PdfWithAnnotations.pdf";
+            const int pageNumber = 2;
+            const int annotationNumber = 2;
+
+            UploadFile(name, name);
+
+            var responce = PdfApi.GetPageAnnotation(name, pageNumber, annotationNumber, folder: TempFolder);
+            Assert.That(responce.Code, Is.EqualTo(200));
         }
     }
 }

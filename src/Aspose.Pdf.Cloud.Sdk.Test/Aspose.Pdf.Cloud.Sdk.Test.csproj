@@ -65,10 +65,8 @@ OpenAPI spec version: 1.1
     <Compile Include="BookmarksTests.cs" />
     <Compile Include="ConvertTests.cs" />
     <Compile Include="ConvertToPdfTests.cs" />
-    <Compile Include="DocumentSaveAsTiffTests.cs" />
     <Compile Include="DocumentTests.cs" />
     <Compile Include="FieldsTests.cs" />
-    <Compile Include="FragmentsAndSegmentsTests.cs" />
     <Compile Include="ImagesTests.cs" />
     <Compile Include="LinksTests.cs" />
     <Compile Include="MergeTests.cs" />
@@ -77,8 +75,6 @@ OpenAPI spec version: 1.1
     <Compile Include="TextTests.cs" />
     <Compile Include="OcrTests.cs" />
     <Compile Include="PagesTests.cs" />
-    <Compile Include="ParagraphsTests.cs" />
-    <Compile Include="TextItemsTests.cs" />
     <Compile Include="TextReplaceTests.cs" />
     <Compile Include="PropertiesTests.cs" />
     <Compile Include="SignTests.cs" />

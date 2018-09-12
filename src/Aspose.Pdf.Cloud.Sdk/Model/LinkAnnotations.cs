@@ -51,7 +51,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="List">List.</param>
-        public LinkAnnotations(List<Link> Links = default(List<Link>), List<LinkElement> List = default(List<LinkElement>))
+        public LinkAnnotations(List<Link> Links = default(List<Link>), List<LinkAnnotation> List = default(List<LinkAnnotation>))
         {
             this.Links = Links;
             this.List = List;
@@ -68,7 +68,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Gets or Sets List
         /// </summary>
         [DataMember(Name="List", EmitDefaultValue=false)]
-        public List<LinkElement> List { get; set; }
+        public List<LinkAnnotation> List { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

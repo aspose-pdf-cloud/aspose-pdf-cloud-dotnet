@@ -23,7 +23,9 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Collections.Generic;
 using System.Net;
+using Aspose.Pdf.Cloud.Sdk.Model;
 using NUnit.Framework;
 
 namespace Aspose.Pdf.Cloud.Sdk.Test
@@ -43,15 +45,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         }
 
         /// <summary>
-        /// Test GetPageLinkAnnotationByIndex
+        /// Test GetPageLinkAnnotation
         /// </summary>
         [Test]
-        public void GetPageLinkAnnotationByIndexTest()
+        public void GetPageLinkAnnotationTest()
         {
-            var response = PdfApi.GetPageLinkAnnotationByIndex(Name, 1, 1, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            var getLinksResponse = PdfApi.GetPageLinkAnnotations(Name, 1, folder: TempFolder);
+            Assert.That(getLinksResponse.Code, Is.EqualTo(200));
+
+            string linkId = getLinksResponse.Links.List[0].Id;
+
+            var response = PdfApi.GetPageLinkAnnotation(Name, pageNumber: 1, linkId: linkId, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
         }
-        
+
+        /// <summary>
+        /// Test DeleteLinkAnnotation
+        /// </summary>
+        [Test]
+        public void DeleteLinkAnnotationTest()
+        {
+            var getLinksResponse = PdfApi.GetPageLinkAnnotations(Name, 1, folder: TempFolder);
+            Assert.That(getLinksResponse.Code, Is.EqualTo(200));
+
+            string linkId = getLinksResponse.Links.List[0].Id;
+
+            var response = PdfApi.DeleteLinkAnnotation(Name, linkId: linkId, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
         /// <summary>
         /// Test GetPageLinkAnnotations
         /// </summary>
@@ -59,7 +81,63 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void GetPageLinkAnnotationsTest()
         {
             var response = PdfApi.GetPageLinkAnnotations(Name, 1, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PostPageLinkAnnotations
+        /// </summary>
+        [Test]
+        public void PostPageLinkAnnotationsTest()
+        {
+            LinkAnnotation linkAnnotation = new LinkAnnotation(null, LinkActionType.GoToURIAction, "https://products.aspose.cloud/pdf",
+                LinkHighlightingMode.Invert, new Color(0xFF, 0xAA, 0xAA, 0xAA), new RectanglePdf(100, 100, 500, 500));
+
+            var linkAnnotations = new List<LinkAnnotation>
+            {
+                linkAnnotation
+            };
+
+            var response = PdfApi.PostPageLinkAnnotations(Name, pageNumber: 1, links: linkAnnotations, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(201));
+        }
+
+        /// <summary>
+        /// Test PutLinkAnnotation
+        /// </summary>
+        [Test]
+        public void PutLinkAnnotationTest()
+        {
+            var getLinksResponse = PdfApi.GetPageLinkAnnotations(Name, 1, folder: TempFolder);
+            Assert.That(getLinksResponse.Code, Is.EqualTo(200));
+
+            string linkId = getLinksResponse.Links.List[0].Id;
+
+            LinkAnnotation linkAnnotation = new LinkAnnotation(null, LinkActionType.GoToURIAction, "https://products.aspose.cloud/pdf",
+                LinkHighlightingMode.Invert, new Color(0xFF, 0xAA, 0xAA, 0xAA), new RectanglePdf(100, 100, 500, 500));
+            
+            var response = PdfApi.PutLinkAnnotation(Name, linkId: linkId, link: linkAnnotation, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(201));
+        }
+
+        /// <summary>
+        /// Test DeletePageLinkAnnotations
+        /// </summary>
+        [Test]
+        public void DeletePageLinkAnnotationsTest()
+        {
+            var response = PdfApi.DeletePageLinkAnnotations(Name, pageNumber: 1, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test DeleteDocumentLinkAnnotations
+        /// </summary>
+        [Test]
+        public void DeleteDocumentLinkAnnotationsTest()
+        {
+            var response = PdfApi.DeleteDocumentLinkAnnotations(Name, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

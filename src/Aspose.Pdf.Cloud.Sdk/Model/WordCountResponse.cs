@@ -44,7 +44,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
     /// Number of words per document pages.
     /// </summary>
     [DataContract]
-    public partial class WordCountResponse : SaaSposeResponse,  IEquatable<WordCountResponse>, IValidatableObject
+    public partial class WordCountResponse : AsposeResponse,  IEquatable<WordCountResponse>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="WordCountResponse" /> class.
@@ -57,7 +57,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
         /// <param name="WordsPerPage">with words per page info.            .</param>
-        public WordCountResponse(HttpStatusCode Code = default(HttpStatusCode), string Status = default(string), WordCount WordsPerPage = default(WordCount))
+        public WordCountResponse(int? Code = default(int?), string Status = default(string), WordCount WordsPerPage = default(WordCount))
         {
             // to ensure "Code" is required (not null)
             if (Code == null)
@@ -77,7 +77,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Response status code.</value>
         [DataMember(Name="Code", EmitDefaultValue=false)]
-        public HttpStatusCode Code { get; set; }
+        public int? Code { get; set; }
 
         /// <summary>
         /// Response status.

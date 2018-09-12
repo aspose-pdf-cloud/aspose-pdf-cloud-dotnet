@@ -41,78 +41,76 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         private static readonly string[] PropertyNames = { "prop1", "prop2" };
         private static readonly string[] PropertyValues = { "val1", "val2" };
 
-        private static readonly List<DocumentProperty> Properties = new List<DocumentProperty>
-        {
-            new DocumentProperty(Name: PropertyNames[0], Value: PropertyValues[0]),
-            new DocumentProperty(Name: PropertyNames[1], Value: PropertyValues[1])
-        };
 
         public override void SetUp()
         {
             base.SetUp();
             UploadFile(Name, Name);
         }
-
+        
         /// <summary>
         /// Test DeleteProperties
         /// </summary>
         [Test]
         public void DeletePropertiesTest()
         {
-            PdfApi.PutSetProperty(Name, PropertyNames[0], Properties[0], folder: TempFolder);
-            PdfApi.PutSetProperty(Name, PropertyNames[1], Properties[1], folder: TempFolder);
+            PdfApi.PutSetProperty(Name, PropertyNames[0], PropertyValues[0], folder: TempFolder);
+            PdfApi.PutSetProperty(Name, PropertyNames[1], PropertyValues[1], folder: TempFolder);
 
             var response = PdfApi.DeleteProperties(Name, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
-
+        
+        
         /// <summary>
         /// Test DeleteProperty
         /// </summary>
         [Test]
         public void DeletePropertyTest()
         {
-            PdfApi.PutSetProperty(Name, PropertyNames[0], Properties[0], folder: TempFolder);
+            PdfApi.PutSetProperty(Name, PropertyNames[0], PropertyValues[0], folder: TempFolder);
 
             var response = PdfApi.DeleteProperty(Name, PropertyNames[0], folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
-
+        
+        
         /// <summary>
         /// Test GetDocumentProperties
         /// </summary>
         [Test]
         public void GetDocumentPropertiesTest()
         {
-            PdfApi.PutSetProperty(Name, PropertyNames[0], Properties[0], folder: TempFolder);
-            PdfApi.PutSetProperty(Name, PropertyNames[1], Properties[1], folder: TempFolder);
+            PdfApi.PutSetProperty(Name, PropertyNames[0], PropertyValues[0], folder: TempFolder);
+            PdfApi.PutSetProperty(Name, PropertyNames[1], PropertyValues[1], folder: TempFolder);
 
             var response = PdfApi.GetDocumentProperties(Name, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
-
+        
+        
         /// <summary>
         /// Test GetDocumentProperty
         /// </summary>
         [Test]
         public void GetDocumentPropertyTest()
         {
-            PdfApi.PutSetProperty(Name, PropertyNames[0], Properties[0], folder: TempFolder);
+            PdfApi.PutSetProperty(Name, PropertyNames[0], PropertyValues[0], folder: TempFolder);
 
             var response = PdfApi.GetDocumentProperty(Name, PropertyNames[0], folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
-
+        
+        
         /// <summary>
         /// Test PutSetProperty
         /// </summary>
         [Test]
         public void PutSetPropertyTest()
         {
-            PdfApi.PutSetProperty(Name, PropertyNames[0], Properties[0], folder: TempFolder);
-
-            var response = PdfApi.PutSetProperty(Name, PropertyNames[0], Properties[0], folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            var response = PdfApi.PutSetProperty(Name, PropertyNames[0], PropertyValues[0], folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
         }
+        
     }
 }

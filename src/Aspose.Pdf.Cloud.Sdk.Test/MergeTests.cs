@@ -54,7 +54,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             }
 
             var response = PdfApi.PutMergeDocuments(resultName, mergeDocuments, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

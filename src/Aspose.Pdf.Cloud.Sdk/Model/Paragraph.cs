@@ -66,7 +66,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="SubsequentLinesIndent">SubsequentLinesIndent.</param>
         /// <param name="VerticalAlignment">VerticalAlignment.</param>
         /// <param name="Lines">Lines (required).</param>
-        public Paragraph(LineSpacing LineSpacing = default(LineSpacing), WrapMode WrapMode = default(WrapMode), TextHorizontalAlignment HorizontalAlignment = default(TextHorizontalAlignment), double? LeftMargin = default(double?), double? RightMargin = default(double?), double? TopMargin = default(double?), double? BottomMargin = default(double?), Rectangle Rectangle = default(Rectangle), double? Rotation = default(double?), double? SubsequentLinesIndent = default(double?), VerticalAlignment VerticalAlignment = default(VerticalAlignment), List<TextLine> Lines = default(List<TextLine>))
+        public Paragraph(LineSpacing LineSpacing = default(LineSpacing), WrapMode WrapMode = default(WrapMode), TextHorizontalAlignment HorizontalAlignment = default(TextHorizontalAlignment), double? LeftMargin = default(double?), double? RightMargin = default(double?), double? TopMargin = default(double?), double? BottomMargin = default(double?), RectanglePdf Rectangle = default(RectanglePdf), double? Rotation = default(double?), double? SubsequentLinesIndent = default(double?), VerticalAlignment VerticalAlignment = default(VerticalAlignment), List<TextLine> Lines = default(List<TextLine>))
         {
             // to ensure "Lines" is required (not null)
             if (Lines == null)
@@ -93,19 +93,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Gets or Sets LineSpacing
         /// </summary>
-        [DataMember(Name="LineSpacing", EmitDefaultValue=false)]
+        [DataMember(Name="LineSpacing", EmitDefaultValue=true)]
         public LineSpacing LineSpacing { get; set; }
 
         /// <summary>
         /// Gets or Sets WrapMode
         /// </summary>
-        [DataMember(Name="WrapMode", EmitDefaultValue=false)]
+        [DataMember(Name="WrapMode", EmitDefaultValue=true)]
         public WrapMode WrapMode { get; set; }
 
         /// <summary>
         /// Gets or Sets HorizontalAlignment
         /// </summary>
-        [DataMember(Name="HorizontalAlignment", EmitDefaultValue=false)]
+        [DataMember(Name="HorizontalAlignment", EmitDefaultValue=true)]
         public TextHorizontalAlignment HorizontalAlignment { get; set; }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Gets or Sets Rectangle
         /// </summary>
         [DataMember(Name="Rectangle", EmitDefaultValue=false)]
-        public Rectangle Rectangle { get; set; }
+        public RectanglePdf Rectangle { get; set; }
 
         /// <summary>
         /// Gets or Sets Rotation
@@ -153,7 +153,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Gets or Sets VerticalAlignment
         /// </summary>
-        [DataMember(Name="VerticalAlignment", EmitDefaultValue=false)]
+        [DataMember(Name="VerticalAlignment", EmitDefaultValue=true)]
         public VerticalAlignment VerticalAlignment { get; set; }
 
         /// <summary>

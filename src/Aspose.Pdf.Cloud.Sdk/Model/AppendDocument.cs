@@ -54,11 +54,20 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppendDocument" /> class.
         /// </summary>
-        /// <param name="Document">Document to append (server path)..</param>
+        /// <param name="Document">Document to append (server path). (required).</param>
         /// <param name="StartPage">Appending start page. (required).</param>
         /// <param name="EndPage">Appending end page. (required).</param>
         public AppendDocument(string Document = default(string), int? StartPage = default(int?), int? EndPage = default(int?))
         {
+            // to ensure "Document" is required (not null)
+            if (Document == null)
+            {
+                throw new InvalidDataException("Document is a required property for AppendDocument and cannot be null");
+            }
+            else
+            {
+                this.Document = Document;
+            }
             // to ensure "StartPage" is required (not null)
             if (StartPage == null)
             {
@@ -77,7 +86,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 this.EndPage = EndPage;
             }
-            this.Document = Document;
         }
         
         /// <summary>

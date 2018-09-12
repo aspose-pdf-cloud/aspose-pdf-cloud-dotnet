@@ -34,6 +34,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.Net;
 using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 
@@ -43,21 +44,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
     /// Specifies style information applied to text.
     /// </summary>
     /// <value>Specifies style information applied to text.</value>
-    [Flags]
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum FontStyles
     {
+        
         /// <summary>
-        /// Regular text
+        /// Enum Regular for "Regular"
         /// </summary>
-        Regular = 0,
+        [EnumMember(Value = "Regular")]
+        Regular,
+        
         /// <summary>
-        /// Bold text
+        /// Enum Bold for "Bold"
         /// </summary>
-        Bold = 1,
+        [EnumMember(Value = "Bold")]
+        Bold,
+        
         /// <summary>
-        /// Italic text
+        /// Enum Italic for "Italic"
         /// </summary>
-        Italic = 2
-
+        [EnumMember(Value = "Italic")]
+        Italic,
+        
+        /// <summary>
+        /// Enum BoldItalic for "BoldItalic"
+        /// </summary>
+        [EnumMember(Value = "BoldItalic")]
+        BoldItalic
     }
+
 }

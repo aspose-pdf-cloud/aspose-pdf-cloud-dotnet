@@ -46,11 +46,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             FormFieldName: "Signature1",
             Location: "Ukraine",
             Password: "test1234",
-            Rectangle: new Rectangle(
-                X: 100,
-                Y: 100,
-                Width: 400,
-                Height: 100),
+            Rectangle: new RectanglePdf(
+                LLX: 100,
+                LLY: 100,
+                URX: 0,
+                URY: 0),
             SignaturePath: Path.Combine(TempFolder, SignatureName),
             SignatureType: SignatureType.PKCS7,
             Visible: true,
@@ -66,7 +66,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(SignatureName, SignatureName);
 
             var response = PdfApi.PostSignDocument(Name, Signature, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(SignatureName, SignatureName);
 
             var response = PdfApi.PostSignPage(Name, pageNumber: 1, signature: Signature, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -92,10 +92,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(SignatureName, SignatureName);
 
             var responseSignature = PdfApi.PostSignDocument(Name, Signature, folder: TempFolder);
-            Assert.That(responseSignature.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(responseSignature.Code, Is.EqualTo(200));
 
             var response = PdfApi.GetVerifySignature(Name, Signature.FormFieldName, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

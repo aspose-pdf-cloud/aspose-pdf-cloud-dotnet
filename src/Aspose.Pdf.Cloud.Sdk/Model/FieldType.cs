@@ -34,6 +34,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.Net;
 using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 
@@ -43,11 +44,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
     /// Represents an enumeration of available field types.
     /// </summary>
     /// <value>Represents an enumeration of available field types.</value>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum FieldType
     {
+        
+        /// <summary>
+        /// Enum Text for "Text"
+        /// </summary>
+        [EnumMember(Value = "Text")]
         Text,
+        
+        /// <summary>
+        /// Enum Integer for "Integer"
+        /// </summary>
+        [EnumMember(Value = "Integer")]
         Integer,
+        
+        /// <summary>
+        /// Enum Boolean for "Boolean"
+        /// </summary>
+        [EnumMember(Value = "Boolean")]
         Boolean,
+        
+        /// <summary>
+        /// Enum List for "List"
+        /// </summary>
+        [EnumMember(Value = "List")]
         List
     }
+
 }

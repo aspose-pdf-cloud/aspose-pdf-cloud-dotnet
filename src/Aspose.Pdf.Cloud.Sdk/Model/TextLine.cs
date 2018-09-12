@@ -49,19 +49,32 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextLine" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected TextLine() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TextLine" /> class.
+        /// </summary>
         /// <param name="HorizontalAlignment">Line&#39;s horizontal alignment.</param>
-        /// <param name="Segments">Segments that form the line. Every segment has its own formatting..</param>
+        /// <param name="Segments">Segments that form the line. Every segment has its own formatting. (required).</param>
         public TextLine(TextHorizontalAlignment HorizontalAlignment = default(TextHorizontalAlignment), List<Segment> Segments = default(List<Segment>))
         {
+            // to ensure "Segments" is required (not null)
+            if (Segments == null)
+            {
+                throw new InvalidDataException("Segments is a required property for TextLine and cannot be null");
+            }
+            else
+            {
+                this.Segments = Segments;
+            }
             this.HorizontalAlignment = HorizontalAlignment;
-            this.Segments = Segments;
         }
         
         /// <summary>
         /// Line&#39;s horizontal alignment
         /// </summary>
         /// <value>Line&#39;s horizontal alignment</value>
-        [DataMember(Name="HorizontalAlignment", EmitDefaultValue=false)]
+        [DataMember(Name="HorizontalAlignment", EmitDefaultValue=true)]
         public TextHorizontalAlignment HorizontalAlignment { get; set; }
 
         /// <summary>

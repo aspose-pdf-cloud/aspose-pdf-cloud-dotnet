@@ -49,11 +49,24 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Segment" /> class.
         /// </summary>
-        /// <param name="Value">Value.</param>
+        [JsonConstructorAttribute]
+        protected Segment() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Segment" /> class.
+        /// </summary>
+        /// <param name="Value">Value (required).</param>
         /// <param name="TextState">TextState.</param>
         public Segment(string Value = default(string), TextState TextState = default(TextState))
         {
-            this.Value = Value;
+            // to ensure "Value" is required (not null)
+            if (Value == null)
+            {
+                throw new InvalidDataException("Value is a required property for Segment and cannot be null");
+            }
+            else
+            {
+                this.Value = Value;
+            }
             this.TextState = TextState;
         }
         

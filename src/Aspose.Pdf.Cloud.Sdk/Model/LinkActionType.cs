@@ -34,6 +34,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.Net;
 using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 
@@ -43,31 +44,45 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
     /// Represents list of link action types.
     /// </summary>
     /// <value>Represents list of link action types.</value>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum LinkActionType
     {
+        
         /// <summary>
-        /// Represents a go-to action that changes the view to a specified destination (page, location, and magnification factor).
+        /// Enum GoToAction for "GoToAction"
         /// </summary>
+        [EnumMember(Value = "GoToAction")]
         GoToAction,
+        
         /// <summary>
-        /// Represents a URI action causes a URI to be resolved.
+        /// Enum GoToURIAction for "GoToURIAction"
         /// </summary>
+        [EnumMember(Value = "GoToURIAction")]
         GoToURIAction,
+        
         /// <summary>
-        /// Represents javascript action.
+        /// Enum JavascriptAction for "JavascriptAction"
         /// </summary>
+        [EnumMember(Value = "JavascriptAction")]
         JavascriptAction,
+        
         /// <summary>
-        /// Represents a launch action that launches an application or opens or prints a document.
+        /// Enum LaunchAction for "LaunchAction"
         /// </summary>
+        [EnumMember(Value = "LaunchAction")]
         LaunchAction,
+        
         /// <summary>
-        /// Represents named actions that PDF viewer applications are expected to support.
+        /// Enum NamedAction for "NamedAction"
         /// </summary>
+        [EnumMember(Value = "NamedAction")]
         NamedAction,
+        
         /// <summary>
-        /// Represents submit-form action.
+        /// Enum SubmitFormAction for "SubmitFormAction"
         /// </summary>
+        [EnumMember(Value = "SubmitFormAction")]
         SubmitFormAction
     }
+
 }

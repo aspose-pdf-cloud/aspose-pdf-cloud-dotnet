@@ -49,7 +49,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             using (var file = File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
                 var response = PdfApi.PutCreate(Path.Combine(TempFolder, name), file);
-                Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 

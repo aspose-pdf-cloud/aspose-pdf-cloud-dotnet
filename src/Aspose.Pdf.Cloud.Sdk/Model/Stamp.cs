@@ -114,7 +114,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Gets the stamp type.
         /// </summary>
         /// <value>Gets the stamp type.</value>
-        [DataMember(Name="Type", EmitDefaultValue=false)]
+        [DataMember(Name="Type", EmitDefaultValue=true)]
         public StampType Type { get; set; }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Gets or sets Horizontal alignment of stamp on the page. 
         /// </summary>
         /// <value>Gets or sets Horizontal alignment of stamp on the page. </value>
-        [DataMember(Name="HorizontalAlignment", EmitDefaultValue=false)]
+        [DataMember(Name="HorizontalAlignment", EmitDefaultValue=true)]
         public HorizontalAlignment HorizontalAlignment { get; set; }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Sets or gets the rotation of stamp content according  values. Note. This property is for set angles which are multiples of 90 degrees (0, 90, 180, 270 degrees). To set arbitrary angle use RotateAngle property.  If angle set by ArbitraryAngle is not multiple of 90 then Rotate property returns Rotation.None.
         /// </summary>
         /// <value>Sets or gets the rotation of stamp content according  values. Note. This property is for set angles which are multiples of 90 degrees (0, 90, 180, 270 degrees). To set arbitrary angle use RotateAngle property.  If angle set by ArbitraryAngle is not multiple of 90 then Rotate property returns Rotation.None.</value>
-        [DataMember(Name="Rotate", EmitDefaultValue=false)]
+        [DataMember(Name="Rotate", EmitDefaultValue=true)]
         public Rotation Rotate { get; set; }
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Gets or sets vertical alignment of stamp on page.
         /// </summary>
         /// <value>Gets or sets vertical alignment of stamp on page.</value>
-        [DataMember(Name="VerticalAlignment", EmitDefaultValue=false)]
+        [DataMember(Name="VerticalAlignment", EmitDefaultValue=true)]
         public VerticalAlignment VerticalAlignment { get; set; }
 
         /// <summary>
@@ -212,7 +212,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Alignment of the text inside the stamp.
         /// </summary>
         /// <value>Alignment of the text inside the stamp.</value>
-        [DataMember(Name="TextAlignment", EmitDefaultValue=false)]
+        [DataMember(Name="TextAlignment", EmitDefaultValue=true)]
         public HorizontalAlignment TextAlignment { get; set; }
 
         /// <summary>

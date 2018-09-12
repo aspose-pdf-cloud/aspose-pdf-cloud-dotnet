@@ -37,6 +37,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     [TestFixture]
     public class DocumentTests : TestsBase
     {
+        
         /// <summary>
         /// Test GetDocument
         /// </summary>
@@ -47,9 +48,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(name, name);
 
             var result = PdfApi.GetDocument(name, folder: TempFolder);
-            Assert.That(result.Length, Is.GreaterThan(0));
+            Assert.That(result.Code, Is.EqualTo(200));
         }
         
+
         /// <summary>
         /// Test PostOptimizeDocument
         /// </summary>
@@ -68,7 +70,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 RemoveUnusedStreams: true,
                 UnembedFonts: true);
             var response = PdfApi.PostOptimizeDocument(name, options, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
         
         /// <summary>
@@ -81,20 +83,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(name, name);
 
             var response = PdfApi.PostSplitDocument(name, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
-        }
-
-        /// <summary>
-        /// Test PutConvertDocument
-        /// </summary>
-        [Test]
-        public void PutConvertDocumentTest()
-        {
-            const string urlToFile = @"http://pdf995.com/samples/pdf.pdf";
-            const string format = "tiff";
-
-            var response = PdfApi.PutConvertDocument(format: format, url: urlToFile);
-            Assert.That(response.Length, Is.GreaterThan(0));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -105,49 +94,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             const string name = "empty.pdf";
             var response = PdfApi.PutCreateDocument(name, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
-        }
-
-        /// <summary>
-        /// Test PutCreateDocument
-        /// </summary>
-        [Test]
-        public void PutCreateDocumentTest()
-        {
-            const string name = "HtmlExample1.pdf";
-            const string templateName = "HtmlExample1.html";
-            UploadFile(templateName, templateName);
-
-            var response = PdfApi.PutCreateDocument(
-                name,
-                folder: TempFolder,
-                templateFile: Path.Combine(TempFolder, templateName),
-                templateType: "html");
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
-        }
-
-        /// <summary>
-        /// Test PutCreateDocumentFromImages
-        /// </summary>
-        [Test]
-        public void PutCreateDocumentFromImagesTest()
-        {
-            const string image1 = "33539.jpg";
-            UploadFile(image1, image1);
-
-            const string image2 = "44781.jpg";
-            UploadFile(image2, image2);
-
-            const string name = "pdffromimagesinquery_net.pdf";
-
-            var request = new ImagesListRequest(new List<string>
-            {
-                Path.Combine(TempFolder, image1),
-                Path.Combine(TempFolder, image2)
-            });
-
-            var response = PdfApi.PutCreateDocumentFromImages(name, images: request, ocr: false, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.OK));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

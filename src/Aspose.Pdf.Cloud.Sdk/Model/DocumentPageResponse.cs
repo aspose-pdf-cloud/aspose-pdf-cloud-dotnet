@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="SaaSposeResponse.cs">
+// <copyright company="Aspose" file="DocumentPageResponse.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,33 +41,35 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Base class for all responses.
+    /// DocumentPageResponse
     /// </summary>
     [DataContract]
-    public partial class SaaSposeResponse :  IEquatable<SaaSposeResponse>, IValidatableObject
+    public partial class DocumentPageResponse : AsposeResponse,  IEquatable<DocumentPageResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SaaSposeResponse" /> class.
+        /// Initializes a new instance of the <see cref="DocumentPageResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected SaaSposeResponse() { }
+        protected DocumentPageResponse() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="SaaSposeResponse" /> class.
+        /// Initializes a new instance of the <see cref="DocumentPageResponse" /> class.
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        public SaaSposeResponse(HttpStatusCode Code = default(HttpStatusCode), string Status = default(string))
+        /// <param name="Page">Page.</param>
+        public DocumentPageResponse(int? Code = default(int?), string Status = default(string), Page Page = default(Page))
         {
             // to ensure "Code" is required (not null)
             if (Code == null)
             {
-                throw new InvalidDataException("Code is a required property for SaaSposeResponse and cannot be null");
+                throw new InvalidDataException("Code is a required property for DocumentPageResponse and cannot be null");
             }
             else
             {
                 this.Code = Code;
             }
             this.Status = Status;
+            this.Page = Page;
         }
         
         /// <summary>
@@ -75,7 +77,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Response status code.</value>
         [DataMember(Name="Code", EmitDefaultValue=false)]
-        public HttpStatusCode Code { get; set; }
+        public int? Code { get; set; }
 
         /// <summary>
         /// Response status.
@@ -85,15 +87,22 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
+        /// Gets or Sets Page
+        /// </summary>
+        [DataMember(Name="Page", EmitDefaultValue=false)]
+        public Page Page { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SaaSposeResponse {\n");
+            sb.Append("class DocumentPageResponse {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  Page: ").Append(Page).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,7 +111,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public  new string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -115,15 +124,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SaaSposeResponse);
+            return this.Equals(obj as DocumentPageResponse);
         }
 
         /// <summary>
-        /// Returns true if SaaSposeResponse instances are equal
+        /// Returns true if DocumentPageResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of SaaSposeResponse to be compared</param>
+        /// <param name="other">Instance of DocumentPageResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SaaSposeResponse other)
+        public bool Equals(DocumentPageResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -139,6 +148,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
+                ) && 
+                (
+                    this.Page == other.Page ||
+                    this.Page != null &&
+                    this.Page.Equals(other.Page)
                 );
         }
 
@@ -157,6 +171,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Code.GetHashCode();
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                if (this.Page != null)
+                    hash = hash * 59 + this.Page.GetHashCode();
                 return hash;
             }
         }

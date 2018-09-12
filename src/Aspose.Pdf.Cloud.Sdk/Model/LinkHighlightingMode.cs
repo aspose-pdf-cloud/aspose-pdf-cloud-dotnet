@@ -34,36 +34,48 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.Net;
 using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Enumerates the annotation’s highlighting mode, the visual effect to be used when the mouse button is pressed or held down inside its active area.
+    /// Enumerates the annotation?s highlighting mode, the visual effect to be used when the mouse button is pressed or held down inside its active area.
     /// </summary>
-    /// <value>Enumerates the annotation’s highlighting mode, the visual effect to be used when the mouse button is pressed or held down inside its active area.</value>
+    /// <value>Enumerates the annotation?s highlighting mode, the visual effect to be used when the mouse button is pressed or held down inside its active area.</value>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum LinkHighlightingMode
     {
+        
         /// <summary>
-        /// No highlighting.
+        /// Enum None for "None"
         /// </summary>
+        [EnumMember(Value = "None")]
         None,
+        
         /// <summary>
-        /// Invert the contents of the annotation rectangle.
+        /// Enum Invert for "Invert"
         /// </summary>
+        [EnumMember(Value = "Invert")]
         Invert,
+        
         /// <summary>
-        /// Invert the annotation’s border.
+        /// Enum Outline for "Outline"
         /// </summary>
+        [EnumMember(Value = "Outline")]
         Outline,
+        
         /// <summary>
-        /// Display the annotation’s down appearance, if any. If no down appearance is defined, offset the contents of the annotation rectangle to appear as if it were being pushed below the surface of the page.
+        /// Enum Push for "Push"
         /// </summary>
+        [EnumMember(Value = "Push")]
         Push,
+        
         /// <summary>
-        /// Same as Push (which is preferred).
+        /// Enum Toggle for "Toggle"
         /// </summary>
+        [EnumMember(Value = "Toggle")]
         Toggle
     }
 

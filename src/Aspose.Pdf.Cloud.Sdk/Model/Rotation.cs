@@ -34,6 +34,7 @@ using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.Net;
 using System.ComponentModel.DataAnnotations;
 using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 
@@ -43,25 +44,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
     /// Enumeration of possible rotation values.
     /// </summary>
     /// <value>Enumeration of possible rotation values.</value>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum Rotation
     {
+        
         /// <summary>
-        /// Non-rotated.
+        /// Enum None for "None"
         /// </summary>
+        [EnumMember(Value = "None")]
         None,
+        
         /// <summary>
-        /// Rotated on 90 degrees clockwise.
+        /// Enum On90 for "on90"
         /// </summary>
-        on90,
+        [EnumMember(Value = "on90")]
+        On90,
+        
         /// <summary>
-        /// Rotated on 180 degrees.
+        /// Enum On180 for "on180"
         /// </summary>
-        on180,
+        [EnumMember(Value = "on180")]
+        On180,
+        
         /// <summary>
-        /// Rotated on 270 degrees clockwise.
+        /// Enum On270 for "on270"
         /// </summary>
-        on270,
-
+        [EnumMember(Value = "on270")]
+        On270
     }
 
 }

@@ -59,7 +59,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Regex">Gets or sets a value indicating whether search text is regular expression. (required).</param>
         /// <param name="TextState">Text properties of a new text..</param>
         /// <param name="Rect">Rectangle area where searched original text..</param>
-        public TextReplace(string OldValue = default(string), string NewValue = default(string), bool? Regex = default(bool?), TextState TextState = default(TextState), Rectangle Rect = default(Rectangle))
+        public TextReplace(string OldValue = default(string), string NewValue = default(string), bool? Regex = default(bool?), TextState TextState = default(TextState), RectanglePdf Rect = default(RectanglePdf))
         {
             // to ensure "OldValue" is required (not null)
             if (OldValue == null)
@@ -125,7 +125,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Rectangle area where searched original text.</value>
         [DataMember(Name="Rect", EmitDefaultValue=false)]
-        public Rectangle Rect { get; set; }
+        public RectanglePdf Rect { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

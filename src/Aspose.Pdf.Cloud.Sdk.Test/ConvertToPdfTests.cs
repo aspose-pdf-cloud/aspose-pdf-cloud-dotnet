@@ -62,8 +62,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(name, name);
             string resultName = "fromEpub.pdf";
 
-            var response = PdfApi.PutEpubInStorageToPdf(resultName, Path.Combine(TempFolder, name), TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
+            var response = PdfApi.PutEpubInStorageToPdf(resultName, Path.Combine(TempFolder, name), storage: null, dstFolder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(201));
         }
 
         /// <summary>
@@ -90,7 +90,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultName = "fromWeb.pdf";
 
             var response = PdfApi.PutWebInStorageToPdf(resultName, sourceUrl, dstFolder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
+            Assert.That(response.Code, Is.EqualTo(201));
         }
 
 
@@ -121,7 +121,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultName = "fromTex.pdf";
 
             var response = PdfApi.PutLaTeXInStorageToPdf(resultName, Path.Combine(TempFolder, name), TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
+            Assert.That(response.Code, Is.EqualTo(201));
         }
 
         /// <summary>
@@ -150,7 +150,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultName = "fromMht.pdf";
 
             var response = PdfApi.PutMhtInStorageToPdf(resultName, Path.Combine(TempFolder, name), TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
+            Assert.That(response.Code, Is.EqualTo(201));
         }
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultName = "fromHtml.pdf";
 
             var response = PdfApi.PutHtmlInStorageToPdf(resultName, Path.Combine(TempFolder, name), htmlFileName, height, width, dstFolder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
+            Assert.That(response.Code, Is.EqualTo(201));
         }
 
 
@@ -214,7 +214,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultName = "fromXlsFo.pdf";
 
             var response = PdfApi.PutXslFoInStorageToPdf(resultName, Path.Combine(TempFolder, name), TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
+            Assert.That(response.Code, Is.EqualTo(201));
         }
 
 
@@ -244,7 +244,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultName = "fromXps.pdf";
 
             var response = PdfApi.PutXpsInStorageToPdf(resultName, Path.Combine(TempFolder, name), TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
+            Assert.That(response.Code, Is.EqualTo(201));
         }
 
         /// <summary>
@@ -273,7 +273,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultName = "fromSvg.pdf";
 
             var response = PdfApi.PutSvgInStorageToPdf(resultName, Path.Combine(TempFolder, name), dstFolder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
+            Assert.That(response.Code, Is.EqualTo(201));
         }
 
         /// <summary>
@@ -302,7 +302,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultName = "fromPcl.pdf";
 
             var response = PdfApi.PutPclInStorageToPdf(resultName, Path.Combine(TempFolder, name), dstFolder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
+            Assert.That(response.Code, Is.EqualTo(201));
         }
 
 
@@ -332,7 +332,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultName = "fromXml.pdf";
 
             var response = PdfApi.PutXmlInStorageToPdf(resultName, Path.Combine(TempFolder, name), dstFolder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
+            Assert.That(response.Code, Is.EqualTo(201));
         }
 
 
@@ -362,7 +362,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resultName = "fromPs.pdf";
 
             var response = PdfApi.PutPsInStorageToPdf(resultName, Path.Combine(TempFolder, name), dstFolder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
+            Assert.That(response.Code, Is.EqualTo(201));
         }
 
 
@@ -389,7 +389,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 }
             );
             var response = PdfApi.PutImageInStorageToPdf(resultName, imageTemplatesRequest, dstFolder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(HttpStatusCode.Created));
+            Assert.That(response.Code, Is.EqualTo(201));
         }
     }
 }

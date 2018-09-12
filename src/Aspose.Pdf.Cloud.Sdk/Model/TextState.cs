@@ -116,7 +116,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Sets font style of the text.
         /// </summary>
         /// <value>Sets font style of the text.</value>
-        [DataMember(Name="FontStyle", EmitDefaultValue=false)]
+        [DataMember(Name="FontStyle", EmitDefaultValue=true)]
         public FontStyles FontStyle { get; set; }
 
         /// <summary>
