@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Net;
+using Aspose.Pdf.Cloud.Sdk.Model;
 using NUnit.Framework;
 
 namespace Aspose.Pdf.Cloud.Sdk.Test
@@ -10,16 +11,21 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     [TestFixture]
     public class TextTests : TestsBase
     {
+        private const string Name = "4pages.pdf";
+
+        public override void SetUp()
+        {
+            base.SetUp();
+            UploadFile(Name, Name);
+        }
+
         /// <summary>
         /// Test GetText
         /// </summary>
         [Test]
         public void GetTextTest()
         {
-            const string name = "4pages.pdf";
-            UploadFile(name, name);
-
-            var response = PdfApi.GetText(name, LLX: 0, LLY: 0, URX: 0, URY: 0, folder: TempFolder);
+            var response = PdfApi.GetText(Name, LLX: 0, LLY: 0, URX: 0, URY: 0, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
@@ -29,11 +35,52 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void GetPageTextTest()
         {
-            const string name = "4pages.pdf";
-            UploadFile(name, name);
-
             var format = new List<string> { "First Page", "Second Page" };
-            var response = PdfApi.GetPageText(name, pageNumber: 1, LLX: 0, LLY: 0, URX: 0, URY: 0, folder: TempFolder, format: format);
+            var response = PdfApi.GetPageText(Name, pageNumber: 1, LLX: 0, LLY: 0, URX: 0, URY: 0, folder: TempFolder, format: format);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PutAddText
+        /// </summary>
+        [Test]
+        public void PutAddTextTest()
+        {
+            var paragraph = new Paragraph(
+                Rectangle: new RectanglePdf(100, 100, 200, 200),
+                LeftMargin: 10,
+                RightMargin: 10,
+                TopMargin: 20,
+                BottomMargin: 20,
+                HorizontalAlignment: TextHorizontalAlignment.FullJustify,
+                LineSpacing: LineSpacing.FontSize,
+                Rotation: 10,
+                SubsequentLinesIndent: 20,
+                VerticalAlignment: VerticalAlignment.Center,
+                WrapMode: WrapMode.ByWords,
+
+                Lines: new List<TextLine>
+                {
+                    new TextLine(
+                        HorizontalAlignment: TextHorizontalAlignment.Right,
+                        Segments: new List<Segment>
+                        {
+                            new Segment(
+                                Value: "segment 1",
+                                TextState: new TextState(
+                                    Font: "Arial",
+                                    FontSize: 10,
+                                    ForegroundColor: new Color(0x00, 0x00, 0xFF, 0x00),
+                                    BackgroundColor: new Color(0x00, 0xFF, 0x00, 0x00),
+                                    FontStyle: FontStyles.Bold
+                                )
+                            )
+                        }
+                    )
+                }
+            );
+
+            var response = PdfApi.PutAddText(Name, 1, paragraph, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
     }

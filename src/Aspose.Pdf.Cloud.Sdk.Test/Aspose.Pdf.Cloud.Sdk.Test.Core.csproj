@@ -50,7 +50,6 @@
     <Compile Include="TextTests.cs" />
     <Compile Include="OcrTests.cs" />
     <Compile Include="PagesTests.cs" />
-    <Compile Include="ParagraphsTests.cs" />
     <Compile Include="TextReplaceTests.cs" />
     <Compile Include="PropertiesTests.cs" />
     <Compile Include="SignTests.cs" />
