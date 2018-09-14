@@ -78,8 +78,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 Rect: new RectanglePdf(
                     LLX: 50,
                     LLY: 200,
-                    URX: 150,
-                    URY: 200
+                    URX: 200,
+                    URY: 400
                     ));
             var response = PdfApi.PostCreateField(name, 1, field, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
