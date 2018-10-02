@@ -139,5 +139,21 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.DeleteDocumentLinkAnnotations(Name, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
+
+
+        /// <summary>
+        /// Test GetLinkAnnotation
+        /// </summary>
+        [Test]
+        public void GetLinkAnnotationTest()
+        {
+            var getLinksResponse = PdfApi.GetPageLinkAnnotations(Name, 1, folder: TempFolder);
+            Assert.That(getLinksResponse.Code, Is.EqualTo(200));
+
+            string linkId = getLinksResponse.Links.List[0].Id;
+
+            var response = PdfApi.GetLinkAnnotation(Name, linkId, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
     }
 }

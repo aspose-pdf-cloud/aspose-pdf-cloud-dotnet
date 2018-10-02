@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="Annotation.cs">
+// <copyright company="Aspose" file="TextAnnotation.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,13 +41,13 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Provides annotation.
+    /// Provides TextAnnotation.
     /// </summary>
     [DataContract]
-    public partial class Annotation : LinkElement,  IEquatable<Annotation>, IValidatableObject
+    public partial class TextAnnotation : MarkupAnnotation,  IEquatable<TextAnnotation>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Annotation" /> class.
+        /// Initializes a new instance of the <see cref="TextAnnotation" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Contents">Get the annotation content..</param>
@@ -63,7 +63,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
         /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation..</param>
         /// <param name="VerticalAlignment">Gets VerticalAlignment of the annotation..</param>
-        public Annotation(List<Link> Links = default(List<Link>), string Contents = default(string), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment))
+        /// <param name="RichText">Get the annotation RichText..</param>
+        /// <param name="State">Gets or sets the state to which the original annotation should be set..</param>
+        /// <param name="Open">Gets or sets is the annotation open..</param>
+        /// <param name="Color">Color of the annotation..</param>
+        /// <param name="Icon">Gets or sets an icon to be used in displaying the annotation..</param>
+        public TextAnnotation(List<Link> Links = default(List<Link>), string Contents = default(string), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string RichText = default(string), AnnotationState State = default(AnnotationState), bool? Open = default(bool?), Color Color = default(Color), TextIcon Icon = default(TextIcon))
         {
             this.Links = Links;
             this.Contents = Contents;
@@ -79,6 +84,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.ZIndex = ZIndex;
             this.HorizontalAlignment = HorizontalAlignment;
             this.VerticalAlignment = VerticalAlignment;
+            this.RichText = RichText;
+            this.State = State;
+            this.Open = Open;
+            this.Color = Color;
+            this.Icon = Icon;
         }
         
         /// <summary>
@@ -180,13 +190,48 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public VerticalAlignment VerticalAlignment { get; set; }
 
         /// <summary>
+        /// Get the annotation RichText.
+        /// </summary>
+        /// <value>Get the annotation RichText.</value>
+        [DataMember(Name="RichText", EmitDefaultValue=false)]
+        public string RichText { get; set; }
+
+        /// <summary>
+        /// Gets or sets the state to which the original annotation should be set.
+        /// </summary>
+        /// <value>Gets or sets the state to which the original annotation should be set.</value>
+        [DataMember(Name="State", EmitDefaultValue=true)]
+        public AnnotationState State { get; set; }
+
+        /// <summary>
+        /// Gets or sets is the annotation open.
+        /// </summary>
+        /// <value>Gets or sets is the annotation open.</value>
+        [DataMember(Name="Open", EmitDefaultValue=false)]
+        public bool? Open { get; set; }
+
+        /// <summary>
+        /// Color of the annotation.
+        /// </summary>
+        /// <value>Color of the annotation.</value>
+        [DataMember(Name="Color", EmitDefaultValue=false)]
+        public Color Color { get; set; }
+
+        /// <summary>
+        /// Gets or sets an icon to be used in displaying the annotation.
+        /// </summary>
+        /// <value>Gets or sets an icon to be used in displaying the annotation.</value>
+        [DataMember(Name="Icon", EmitDefaultValue=true)]
+        public TextIcon Icon { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Annotation {\n");
+            sb.Append("class TextAnnotation {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  Contents: ").Append(Contents).Append("\n");
             sb.Append("  CreationDate: ").Append(CreationDate).Append("\n");
@@ -201,6 +246,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  ZIndex: ").Append(ZIndex).Append("\n");
             sb.Append("  HorizontalAlignment: ").Append(HorizontalAlignment).Append("\n");
             sb.Append("  VerticalAlignment: ").Append(VerticalAlignment).Append("\n");
+            sb.Append("  RichText: ").Append(RichText).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  Open: ").Append(Open).Append("\n");
+            sb.Append("  Color: ").Append(Color).Append("\n");
+            sb.Append("  Icon: ").Append(Icon).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -222,15 +272,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Annotation);
+            return this.Equals(obj as TextAnnotation);
         }
 
         /// <summary>
-        /// Returns true if Annotation instances are equal
+        /// Returns true if TextAnnotation instances are equal
         /// </summary>
-        /// <param name="other">Instance of Annotation to be compared</param>
+        /// <param name="other">Instance of TextAnnotation to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Annotation other)
+        public bool Equals(TextAnnotation other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -306,6 +356,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.VerticalAlignment == other.VerticalAlignment ||
                     this.VerticalAlignment != null &&
                     this.VerticalAlignment.Equals(other.VerticalAlignment)
+                ) && 
+                (
+                    this.RichText == other.RichText ||
+                    this.RichText != null &&
+                    this.RichText.Equals(other.RichText)
+                ) && 
+                (
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
+                ) && 
+                (
+                    this.Open == other.Open ||
+                    this.Open != null &&
+                    this.Open.Equals(other.Open)
+                ) && 
+                (
+                    this.Color == other.Color ||
+                    this.Color != null &&
+                    this.Color.Equals(other.Color)
+                ) && 
+                (
+                    this.Icon == other.Icon ||
+                    this.Icon != null &&
+                    this.Icon.Equals(other.Icon)
                 );
         }
 
@@ -348,6 +423,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.HorizontalAlignment.GetHashCode();
                 if (this.VerticalAlignment != null)
                     hash = hash * 59 + this.VerticalAlignment.GetHashCode();
+                if (this.RichText != null)
+                    hash = hash * 59 + this.RichText.GetHashCode();
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
+                if (this.Open != null)
+                    hash = hash * 59 + this.Open.GetHashCode();
+                if (this.Color != null)
+                    hash = hash * 59 + this.Color.GetHashCode();
+                if (this.Icon != null)
+                    hash = hash * 59 + this.Icon.GetHashCode();
                 return hash;
             }
         }

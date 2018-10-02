@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="Annotation.cs">
+// <copyright company="Aspose" file="AnnotationInfo.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -44,10 +44,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
     /// Provides annotation.
     /// </summary>
     [DataContract]
-    public partial class Annotation : LinkElement,  IEquatable<Annotation>, IValidatableObject
+    public partial class AnnotationInfo : Annotation,  IEquatable<AnnotationInfo>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Annotation" /> class.
+        /// Initializes a new instance of the <see cref="AnnotationInfo" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Contents">Get the annotation content..</param>
@@ -63,7 +63,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
         /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation..</param>
         /// <param name="VerticalAlignment">Gets VerticalAlignment of the annotation..</param>
-        public Annotation(List<Link> Links = default(List<Link>), string Contents = default(string), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment))
+        /// <param name="AnnotationType">Gets annotation type..</param>
+        public AnnotationInfo(List<Link> Links = default(List<Link>), string Contents = default(string), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), AnnotationType AnnotationType = default(AnnotationType))
         {
             this.Links = Links;
             this.Contents = Contents;
@@ -79,6 +80,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.ZIndex = ZIndex;
             this.HorizontalAlignment = HorizontalAlignment;
             this.VerticalAlignment = VerticalAlignment;
+            this.AnnotationType = AnnotationType;
         }
         
         /// <summary>
@@ -180,13 +182,20 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public VerticalAlignment VerticalAlignment { get; set; }
 
         /// <summary>
+        /// Gets annotation type.
+        /// </summary>
+        /// <value>Gets annotation type.</value>
+        [DataMember(Name="AnnotationType", EmitDefaultValue=true)]
+        public AnnotationType AnnotationType { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Annotation {\n");
+            sb.Append("class AnnotationInfo {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  Contents: ").Append(Contents).Append("\n");
             sb.Append("  CreationDate: ").Append(CreationDate).Append("\n");
@@ -201,6 +210,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  ZIndex: ").Append(ZIndex).Append("\n");
             sb.Append("  HorizontalAlignment: ").Append(HorizontalAlignment).Append("\n");
             sb.Append("  VerticalAlignment: ").Append(VerticalAlignment).Append("\n");
+            sb.Append("  AnnotationType: ").Append(AnnotationType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -222,15 +232,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Annotation);
+            return this.Equals(obj as AnnotationInfo);
         }
 
         /// <summary>
-        /// Returns true if Annotation instances are equal
+        /// Returns true if AnnotationInfo instances are equal
         /// </summary>
-        /// <param name="other">Instance of Annotation to be compared</param>
+        /// <param name="other">Instance of AnnotationInfo to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Annotation other)
+        public bool Equals(AnnotationInfo other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -306,6 +316,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.VerticalAlignment == other.VerticalAlignment ||
                     this.VerticalAlignment != null &&
                     this.VerticalAlignment.Equals(other.VerticalAlignment)
+                ) && 
+                (
+                    this.AnnotationType == other.AnnotationType ||
+                    this.AnnotationType != null &&
+                    this.AnnotationType.Equals(other.AnnotationType)
                 );
         }
 
@@ -348,6 +363,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.HorizontalAlignment.GetHashCode();
                 if (this.VerticalAlignment != null)
                     hash = hash * 59 + this.VerticalAlignment.GetHashCode();
+                if (this.AnnotationType != null)
+                    hash = hash * 59 + this.AnnotationType.GetHashCode();
                 return hash;
             }
         }

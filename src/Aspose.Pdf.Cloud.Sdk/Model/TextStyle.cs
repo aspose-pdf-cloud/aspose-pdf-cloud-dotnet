@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="AnnotationResponse.cs">
+// <copyright company="Aspose" file="TextStyle.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,56 +41,66 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// AnnotationResponse
+    /// Represents a text style of a text
     /// </summary>
     [DataContract]
-    public partial class AnnotationResponse : AsposeResponse,  IEquatable<AnnotationResponse>, IValidatableObject
+    public partial class TextStyle :  IEquatable<TextStyle>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AnnotationResponse" /> class.
+        /// Initializes a new instance of the <see cref="TextStyle" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected AnnotationResponse() { }
+        protected TextStyle() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="AnnotationResponse" /> class.
+        /// Initializes a new instance of the <see cref="TextStyle" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Annotation">Annotation.</param>
-        public AnnotationResponse(int? Code = default(int?), string Status = default(string), Annotation Annotation = default(Annotation))
+        /// <param name="FontSize">Gets or sets font size of the text. (required).</param>
+        /// <param name="Font">Gets or sets font of the text..</param>
+        /// <param name="ForegroundColor">Gets or sets foreground color of the text..</param>
+        /// <param name="BackgroundColor">Sets background color of the text..</param>
+        public TextStyle(double? FontSize = default(double?), string Font = default(string), Color ForegroundColor = default(Color), Color BackgroundColor = default(Color))
         {
-            // to ensure "Code" is required (not null)
-            if (Code == null)
+            // to ensure "FontSize" is required (not null)
+            if (FontSize == null)
             {
-                throw new InvalidDataException("Code is a required property for AnnotationResponse and cannot be null");
+                throw new InvalidDataException("FontSize is a required property for TextStyle and cannot be null");
             }
             else
             {
-                this.Code = Code;
+                this.FontSize = FontSize;
             }
-            this.Status = Status;
-            this.Annotation = Annotation;
+            this.Font = Font;
+            this.ForegroundColor = ForegroundColor;
+            this.BackgroundColor = BackgroundColor;
         }
         
         /// <summary>
-        /// Response status code.
+        /// Gets or sets font size of the text.
         /// </summary>
-        /// <value>Response status code.</value>
-        [DataMember(Name="Code", EmitDefaultValue=false)]
-        public int? Code { get; set; }
+        /// <value>Gets or sets font size of the text.</value>
+        [DataMember(Name="FontSize", EmitDefaultValue=false)]
+        public double? FontSize { get; set; }
 
         /// <summary>
-        /// Response status.
+        /// Gets or sets font of the text.
         /// </summary>
-        /// <value>Response status.</value>
-        [DataMember(Name="Status", EmitDefaultValue=false)]
-        public string Status { get; set; }
+        /// <value>Gets or sets font of the text.</value>
+        [DataMember(Name="Font", EmitDefaultValue=false)]
+        public string Font { get; set; }
 
         /// <summary>
-        /// Gets or Sets Annotation
+        /// Gets or sets foreground color of the text.
         /// </summary>
-        [DataMember(Name="Annotation", EmitDefaultValue=false)]
-        public Annotation Annotation { get; set; }
+        /// <value>Gets or sets foreground color of the text.</value>
+        [DataMember(Name="ForegroundColor", EmitDefaultValue=false)]
+        public Color ForegroundColor { get; set; }
+
+        /// <summary>
+        /// Sets background color of the text.
+        /// </summary>
+        /// <value>Sets background color of the text.</value>
+        [DataMember(Name="BackgroundColor", EmitDefaultValue=false)]
+        public Color BackgroundColor { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,10 +109,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AnnotationResponse {\n");
-            sb.Append("  Code: ").Append(Code).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  Annotation: ").Append(Annotation).Append("\n");
+            sb.Append("class TextStyle {\n");
+            sb.Append("  FontSize: ").Append(FontSize).Append("\n");
+            sb.Append("  Font: ").Append(Font).Append("\n");
+            sb.Append("  ForegroundColor: ").Append(ForegroundColor).Append("\n");
+            sb.Append("  BackgroundColor: ").Append(BackgroundColor).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,7 +122,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  new string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -124,15 +135,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AnnotationResponse);
+            return this.Equals(obj as TextStyle);
         }
 
         /// <summary>
-        /// Returns true if AnnotationResponse instances are equal
+        /// Returns true if TextStyle instances are equal
         /// </summary>
-        /// <param name="other">Instance of AnnotationResponse to be compared</param>
+        /// <param name="other">Instance of TextStyle to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AnnotationResponse other)
+        public bool Equals(TextStyle other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -140,19 +151,24 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
 
             return 
                 (
-                    this.Code == other.Code ||
-                    this.Code != null &&
-                    this.Code.Equals(other.Code)
+                    this.FontSize == other.FontSize ||
+                    this.FontSize != null &&
+                    this.FontSize.Equals(other.FontSize)
                 ) && 
                 (
-                    this.Status == other.Status ||
-                    this.Status != null &&
-                    this.Status.Equals(other.Status)
+                    this.Font == other.Font ||
+                    this.Font != null &&
+                    this.Font.Equals(other.Font)
                 ) && 
                 (
-                    this.Annotation == other.Annotation ||
-                    this.Annotation != null &&
-                    this.Annotation.Equals(other.Annotation)
+                    this.ForegroundColor == other.ForegroundColor ||
+                    this.ForegroundColor != null &&
+                    this.ForegroundColor.Equals(other.ForegroundColor)
+                ) && 
+                (
+                    this.BackgroundColor == other.BackgroundColor ||
+                    this.BackgroundColor != null &&
+                    this.BackgroundColor.Equals(other.BackgroundColor)
                 );
         }
 
@@ -167,12 +183,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Code != null)
-                    hash = hash * 59 + this.Code.GetHashCode();
-                if (this.Status != null)
-                    hash = hash * 59 + this.Status.GetHashCode();
-                if (this.Annotation != null)
-                    hash = hash * 59 + this.Annotation.GetHashCode();
+                if (this.FontSize != null)
+                    hash = hash * 59 + this.FontSize.GetHashCode();
+                if (this.Font != null)
+                    hash = hash * 59 + this.Font.GetHashCode();
+                if (this.ForegroundColor != null)
+                    hash = hash * 59 + this.ForegroundColor.GetHashCode();
+                if (this.BackgroundColor != null)
+                    hash = hash * 59 + this.BackgroundColor.GetHashCode();
                 return hash;
             }
         }

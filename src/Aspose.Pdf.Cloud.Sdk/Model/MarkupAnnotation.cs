@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="Annotation.cs">
+// <copyright company="Aspose" file="MarkupAnnotation.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,13 +41,13 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Provides annotation.
+    /// Provides MarkupAnnotation.
     /// </summary>
     [DataContract]
-    public partial class Annotation : LinkElement,  IEquatable<Annotation>, IValidatableObject
+    public partial class MarkupAnnotation : Annotation,  IEquatable<MarkupAnnotation>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Annotation" /> class.
+        /// Initializes a new instance of the <see cref="MarkupAnnotation" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Contents">Get the annotation content..</param>
@@ -63,7 +63,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
         /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation..</param>
         /// <param name="VerticalAlignment">Gets VerticalAlignment of the annotation..</param>
-        public Annotation(List<Link> Links = default(List<Link>), string Contents = default(string), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment))
+        /// <param name="RichText">Get the annotation RichText..</param>
+        public MarkupAnnotation(List<Link> Links = default(List<Link>), string Contents = default(string), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string RichText = default(string))
         {
             this.Links = Links;
             this.Contents = Contents;
@@ -79,6 +80,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.ZIndex = ZIndex;
             this.HorizontalAlignment = HorizontalAlignment;
             this.VerticalAlignment = VerticalAlignment;
+            this.RichText = RichText;
         }
         
         /// <summary>
@@ -180,13 +182,20 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public VerticalAlignment VerticalAlignment { get; set; }
 
         /// <summary>
+        /// Get the annotation RichText.
+        /// </summary>
+        /// <value>Get the annotation RichText.</value>
+        [DataMember(Name="RichText", EmitDefaultValue=false)]
+        public string RichText { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Annotation {\n");
+            sb.Append("class MarkupAnnotation {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  Contents: ").Append(Contents).Append("\n");
             sb.Append("  CreationDate: ").Append(CreationDate).Append("\n");
@@ -201,6 +210,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  ZIndex: ").Append(ZIndex).Append("\n");
             sb.Append("  HorizontalAlignment: ").Append(HorizontalAlignment).Append("\n");
             sb.Append("  VerticalAlignment: ").Append(VerticalAlignment).Append("\n");
+            sb.Append("  RichText: ").Append(RichText).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -222,15 +232,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Annotation);
+            return this.Equals(obj as MarkupAnnotation);
         }
 
         /// <summary>
-        /// Returns true if Annotation instances are equal
+        /// Returns true if MarkupAnnotation instances are equal
         /// </summary>
-        /// <param name="other">Instance of Annotation to be compared</param>
+        /// <param name="other">Instance of MarkupAnnotation to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Annotation other)
+        public bool Equals(MarkupAnnotation other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -306,6 +316,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.VerticalAlignment == other.VerticalAlignment ||
                     this.VerticalAlignment != null &&
                     this.VerticalAlignment.Equals(other.VerticalAlignment)
+                ) && 
+                (
+                    this.RichText == other.RichText ||
+                    this.RichText != null &&
+                    this.RichText.Equals(other.RichText)
                 );
         }
 
@@ -348,6 +363,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.HorizontalAlignment.GetHashCode();
                 if (this.VerticalAlignment != null)
                     hash = hash * 59 + this.VerticalAlignment.GetHashCode();
+                if (this.RichText != null)
+                    hash = hash * 59 + this.RichText.GetHashCode();
                 return hash;
             }
         }

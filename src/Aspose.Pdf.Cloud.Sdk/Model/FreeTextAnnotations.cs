@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="AnnotationsResponse.cs">
+// <copyright company="Aspose" file="FreeTextAnnotations.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,56 +41,34 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// AnnotationsResponse
+    /// List of annotations.
     /// </summary>
     [DataContract]
-    public partial class AnnotationsResponse : AsposeResponse,  IEquatable<AnnotationsResponse>, IValidatableObject
+    public partial class FreeTextAnnotations : LinkElement,  IEquatable<FreeTextAnnotations>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AnnotationsResponse" /> class.
+        /// Initializes a new instance of the <see cref="FreeTextAnnotations" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected AnnotationsResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AnnotationsResponse" /> class.
-        /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Annotations">Annotations.</param>
-        public AnnotationsResponse(int? Code = default(int?), string Status = default(string), Annotations Annotations = default(Annotations))
+        /// <param name="Links">Link to the document..</param>
+        /// <param name="List">List.</param>
+        public FreeTextAnnotations(List<Link> Links = default(List<Link>), List<FreeTextAnnotation> List = default(List<FreeTextAnnotation>))
         {
-            // to ensure "Code" is required (not null)
-            if (Code == null)
-            {
-                throw new InvalidDataException("Code is a required property for AnnotationsResponse and cannot be null");
-            }
-            else
-            {
-                this.Code = Code;
-            }
-            this.Status = Status;
-            this.Annotations = Annotations;
+            this.Links = Links;
+            this.List = List;
         }
         
         /// <summary>
-        /// Response status code.
+        /// Link to the document.
         /// </summary>
-        /// <value>Response status code.</value>
-        [DataMember(Name="Code", EmitDefaultValue=false)]
-        public int? Code { get; set; }
+        /// <value>Link to the document.</value>
+        [DataMember(Name="Links", EmitDefaultValue=false)]
+        public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Response status.
+        /// Gets or Sets List
         /// </summary>
-        /// <value>Response status.</value>
-        [DataMember(Name="Status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Annotations
-        /// </summary>
-        [DataMember(Name="Annotations", EmitDefaultValue=false)]
-        public Annotations Annotations { get; set; }
+        [DataMember(Name="List", EmitDefaultValue=false)]
+        public List<FreeTextAnnotation> List { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,10 +77,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AnnotationsResponse {\n");
-            sb.Append("  Code: ").Append(Code).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  Annotations: ").Append(Annotations).Append("\n");
+            sb.Append("class FreeTextAnnotations {\n");
+            sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("  List: ").Append(List).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,15 +101,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AnnotationsResponse);
+            return this.Equals(obj as FreeTextAnnotations);
         }
 
         /// <summary>
-        /// Returns true if AnnotationsResponse instances are equal
+        /// Returns true if FreeTextAnnotations instances are equal
         /// </summary>
-        /// <param name="other">Instance of AnnotationsResponse to be compared</param>
+        /// <param name="other">Instance of FreeTextAnnotations to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AnnotationsResponse other)
+        public bool Equals(FreeTextAnnotations other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -140,19 +117,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
 
             return 
                 (
-                    this.Code == other.Code ||
-                    this.Code != null &&
-                    this.Code.Equals(other.Code)
+                    this.Links == other.Links ||
+                    this.Links != null &&
+                    this.Links.SequenceEqual(other.Links)
                 ) && 
                 (
-                    this.Status == other.Status ||
-                    this.Status != null &&
-                    this.Status.Equals(other.Status)
-                ) && 
-                (
-                    this.Annotations == other.Annotations ||
-                    this.Annotations != null &&
-                    this.Annotations.Equals(other.Annotations)
+                    this.List == other.List ||
+                    this.List != null &&
+                    this.List.SequenceEqual(other.List)
                 );
         }
 
@@ -167,12 +139,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Code != null)
-                    hash = hash * 59 + this.Code.GetHashCode();
-                if (this.Status != null)
-                    hash = hash * 59 + this.Status.GetHashCode();
-                if (this.Annotations != null)
-                    hash = hash * 59 + this.Annotations.GetHashCode();
+                if (this.Links != null)
+                    hash = hash * 59 + this.Links.GetHashCode();
+                if (this.List != null)
+                    hash = hash * 59 + this.List.GetHashCode();
                 return hash;
             }
         }
