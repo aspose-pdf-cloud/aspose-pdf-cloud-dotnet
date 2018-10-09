@@ -67,9 +67,12 @@ OpenAPI spec version: 1.1
     <Compile Include="Client\IApiAccessor.cs" />
     <Compile Include="Client\SwaggerDateConverter.cs" />
     <Compile Include="Model\Annotation.cs" />
-    <Compile Include="Model\AnnotationResponse.cs" />
-    <Compile Include="Model\Annotations.cs" />
-    <Compile Include="Model\AnnotationsResponse.cs" />
+    <Compile Include="Model\AnnotationFlags.cs" />
+    <Compile Include="Model\AnnotationInfo.cs" />
+    <Compile Include="Model\AnnotationsInfo.cs" />
+    <Compile Include="Model\AnnotationsInfoResponse.cs" />
+    <Compile Include="Model\AnnotationState.cs" />
+    <Compile Include="Model\AnnotationType.cs" />
     <Compile Include="Model\AntialiasingProcessingType.cs" />
     <Compile Include="Model\AppendDocument.cs" />
     <Compile Include="Model\AsposeResponse.cs" />
@@ -100,6 +103,11 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\FontEncodingRules.cs" />
     <Compile Include="Model\FontSavingModes.cs" />
     <Compile Include="Model\FontStyles.cs" />
+    <Compile Include="Model\FreeTextAnnotation.cs" />
+    <Compile Include="Model\FreeTextAnnotationResponse.cs" />
+    <Compile Include="Model\FreeTextAnnotations.cs" />
+    <Compile Include="Model\FreeTextAnnotationsResponse.cs" />
+    <Compile Include="Model\FreeTextIntent.cs" />
     <Compile Include="Model\HorizontalAlignment.cs" />
     <Compile Include="Model\HtmlDocumentType.cs" />
     <Compile Include="Model\HtmlMarkupGenerationModes.cs" />
@@ -110,6 +118,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\ImagesResponse.cs" />
     <Compile Include="Model\ImageTemplate.cs" />
     <Compile Include="Model\ImageTemplatesRequest.cs" />
+    <Compile Include="Model\Justification.cs" />
     <Compile Include="Model\LettersPositioningMethods.cs" />
     <Compile Include="Model\LineSpacing.cs" />
     <Compile Include="Model\Link.cs" />
@@ -121,6 +130,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\LinkElement.cs" />
     <Compile Include="Model\LinkHighlightingMode.cs" />
     <Compile Include="Model\MarginInfo.cs" />
+    <Compile Include="Model\MarkupAnnotation.cs" />
     <Compile Include="Model\MergeDocuments.cs" />
     <Compile Include="Model\OptimizeOptions.cs" />
     <Compile Include="Model\Page.cs" />
@@ -142,7 +152,12 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\SplitResultResponse.cs" />
     <Compile Include="Model\Stamp.cs" />
     <Compile Include="Model\StampType.cs" />
+    <Compile Include="Model\TextAnnotation.cs" />
+    <Compile Include="Model\TextAnnotationResponse.cs" />
+    <Compile Include="Model\TextAnnotations.cs" />
+    <Compile Include="Model\TextAnnotationsResponse.cs" />
     <Compile Include="Model\TextHorizontalAlignment.cs" />
+    <Compile Include="Model\TextIcon.cs" />
     <Compile Include="Model\TextLine.cs" />
     <Compile Include="Model\TextRect.cs" />
     <Compile Include="Model\TextRects.cs" />
@@ -151,6 +166,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\TextReplaceListRequest.cs" />
     <Compile Include="Model\TextReplaceResponse.cs" />
     <Compile Include="Model\TextState.cs" />
+    <Compile Include="Model\TextStyle.cs" />
     <Compile Include="Model\VerticalAlignment.cs" />
     <Compile Include="Model\WordCount.cs" />
     <Compile Include="Model\WordCountResponse.cs" />

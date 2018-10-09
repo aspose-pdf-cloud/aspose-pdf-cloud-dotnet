@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="Field.cs">
+// <copyright company="Aspose" file="TextAnnotations.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,28 +41,20 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents form field.
+    /// List of annotations.
     /// </summary>
     [DataContract]
-    public partial class Field : LinkElement,  IEquatable<Field>, IValidatableObject
+    public partial class TextAnnotations : LinkElement,  IEquatable<TextAnnotations>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Field" /> class.
+        /// Initializes a new instance of the <see cref="TextAnnotations" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
-        /// <param name="Name">Field name..</param>
-        /// <param name="SelectedItems">Selected items..</param>
-        /// <param name="Type">Field type..</param>
-        /// <param name="Rect">Field rectangle..</param>
-        /// <param name="Values">Field values..</param>
-        public Field(List<Link> Links = default(List<Link>), string Name = default(string), List<int?> SelectedItems = default(List<int?>), FieldType Type = default(FieldType), RectanglePdf Rect = default(RectanglePdf), List<string> Values = default(List<string>))
+        /// <param name="List">List.</param>
+        public TextAnnotations(List<Link> Links = default(List<Link>), List<TextAnnotation> List = default(List<TextAnnotation>))
         {
             this.Links = Links;
-            this.Name = Name;
-            this.SelectedItems = SelectedItems;
-            this.Type = Type;
-            this.Rect = Rect;
-            this.Values = Values;
+            this.List = List;
         }
         
         /// <summary>
@@ -73,39 +65,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Field name.
+        /// Gets or Sets List
         /// </summary>
-        /// <value>Field name.</value>
-        [DataMember(Name="Name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Selected items.
-        /// </summary>
-        /// <value>Selected items.</value>
-        [DataMember(Name="SelectedItems", EmitDefaultValue=false)]
-        public List<int?> SelectedItems { get; set; }
-
-        /// <summary>
-        /// Field type.
-        /// </summary>
-        /// <value>Field type.</value>
-        [DataMember(Name="Type", EmitDefaultValue=true)]
-        public FieldType Type { get; set; }
-
-        /// <summary>
-        /// Field rectangle.
-        /// </summary>
-        /// <value>Field rectangle.</value>
-        [DataMember(Name="Rect", EmitDefaultValue=false)]
-        public RectanglePdf Rect { get; set; }
-
-        /// <summary>
-        /// Field values.
-        /// </summary>
-        /// <value>Field values.</value>
-        [DataMember(Name="Values", EmitDefaultValue=false)]
-        public List<string> Values { get; set; }
+        [DataMember(Name="List", EmitDefaultValue=false)]
+        public List<TextAnnotation> List { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -114,13 +77,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Field {\n");
+            sb.Append("class TextAnnotations {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  SelectedItems: ").Append(SelectedItems).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Rect: ").Append(Rect).Append("\n");
-            sb.Append("  Values: ").Append(Values).Append("\n");
+            sb.Append("  List: ").Append(List).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -142,15 +101,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Field);
+            return this.Equals(obj as TextAnnotations);
         }
 
         /// <summary>
-        /// Returns true if Field instances are equal
+        /// Returns true if TextAnnotations instances are equal
         /// </summary>
-        /// <param name="other">Instance of Field to be compared</param>
+        /// <param name="other">Instance of TextAnnotations to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Field other)
+        public bool Equals(TextAnnotations other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -163,29 +122,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Links.SequenceEqual(other.Links)
                 ) && 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) && 
-                (
-                    this.SelectedItems == other.SelectedItems ||
-                    this.SelectedItems != null &&
-                    this.SelectedItems.SequenceEqual(other.SelectedItems)
-                ) && 
-                (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
-                ) && 
-                (
-                    this.Rect == other.Rect ||
-                    this.Rect != null &&
-                    this.Rect.Equals(other.Rect)
-                ) && 
-                (
-                    this.Values == other.Values ||
-                    this.Values != null &&
-                    this.Values.SequenceEqual(other.Values)
+                    this.List == other.List ||
+                    this.List != null &&
+                    this.List.SequenceEqual(other.List)
                 );
         }
 
@@ -202,16 +141,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Links != null)
                     hash = hash * 59 + this.Links.GetHashCode();
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                if (this.SelectedItems != null)
-                    hash = hash * 59 + this.SelectedItems.GetHashCode();
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
-                if (this.Rect != null)
-                    hash = hash * 59 + this.Rect.GetHashCode();
-                if (this.Values != null)
-                    hash = hash * 59 + this.Values.GetHashCode();
+                if (this.List != null)
+                    hash = hash * 59 + this.List.GetHashCode();
                 return hash;
             }
         }

@@ -31,21 +31,6 @@ docs/*
 #Ignere credentials file
 src/Settings/servercreds.json
 
-#Ignore enums that are not properly generated. We have good ones in sources already.
-#src/Aspose.Pdf.Cloud.Sdk/Model/FieldType.cs
-#src/Aspose.Pdf.Cloud.Sdk/Model/FontStyles.cs
-#src/Aspose.Pdf.Cloud.Sdk/Model/HorizontalAlignment.cs
-src/Aspose.Pdf.Cloud.Sdk/Model/HttpStatusCode.cs
-#src/Aspose.Pdf.Cloud.Sdk/Model/LineSpacing.cs
-#src/Aspose.Pdf.Cloud.Sdk/Model/LinkHighlightingMode.cs
-#src/Aspose.Pdf.Cloud.Sdk/Model/Rotation.cs
-#src/Aspose.Pdf.Cloud.Sdk/Model/TextHorizontalAlignment.cs
-#src/Aspose.Pdf.Cloud.Sdk/Model/StampType.cs
-#src/Aspose.Pdf.Cloud.Sdk/Model/VerticalAlignment.cs
-#src/Aspose.Pdf.Cloud.Sdk/Model/WrapMode.cs
-#src/Aspose.Pdf.Cloud.Sdk/Model/LinkActionType.cs
-#src/Aspose.Pdf.Cloud.Sdk/Model/SignatureType.cs
-
 #Do not generate tests.
 src/Aspose.Pdf.Cloud.Sdk.Test/**
 

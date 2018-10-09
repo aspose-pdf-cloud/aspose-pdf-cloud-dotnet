@@ -38,13 +38,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     {
         private const string Name = "marketing.pdf";
 
-        //private static readonly TextReplaceRequest ReplaceRequest = new TextReplaceRequest("Page", "p_a_g_e", false);
-        private static readonly TextReplaceListRequest ReplaceListRequest = new TextReplaceListRequest(new List<TextReplace>
-        {
-            new TextReplace("First", "1", false),
-            new TextReplace("Page", "p_a_g_e", false)
-        });
-
         public override void SetUp()
         {
             base.SetUp();
@@ -57,8 +50,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PostDocumentTextReplaceTest()
         {
-            var rect = new RectanglePdf(100, 700, 300, 300);
-            var textReplace = new TextReplace("Page", "p_a_g_e", false, Rect: rect);
+            var rect = new RectanglePdf(100, 100, 300, 300);
+            var textReplace = new TextReplace("market", "m_a_r_k_e_t", false, Rect: rect);
             var textReplaceList = new TextReplaceListRequest(new List<TextReplace> { textReplace },
                 StartIndex: 0, CountReplace: 0);
 

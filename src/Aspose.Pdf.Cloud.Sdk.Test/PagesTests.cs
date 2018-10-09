@@ -61,8 +61,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void GetPageTest()
         {
-            string name = "PdfWithImages2.pdf";
-            var response = PdfApi.GetPage(name, pageNumber: 1, folder: TempFolder);
+            var response = PdfApi.GetPage(Name, pageNumber: 1, folder: TempFolder);
             
             Assert.That(response.Code, Is.EqualTo(200));
         }

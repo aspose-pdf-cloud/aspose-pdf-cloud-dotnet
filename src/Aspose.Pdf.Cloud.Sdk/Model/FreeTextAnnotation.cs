@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="Annotation.cs">
+// <copyright company="Aspose" file="FreeTextAnnotation.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,13 +41,13 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Provides annotation.
+    /// Provides FreeTextAnnotation.
     /// </summary>
     [DataContract]
-    public partial class Annotation : LinkElement,  IEquatable<Annotation>, IValidatableObject
+    public partial class FreeTextAnnotation : MarkupAnnotation,  IEquatable<FreeTextAnnotation>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Annotation" /> class.
+        /// Initializes a new instance of the <see cref="FreeTextAnnotation" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Contents">Get the annotation content..</param>
@@ -63,7 +63,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
         /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation..</param>
         /// <param name="VerticalAlignment">Gets VerticalAlignment of the annotation..</param>
-        public Annotation(List<Link> Links = default(List<Link>), string Contents = default(string), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment))
+        /// <param name="RichText">Get the annotation RichText..</param>
+        /// <param name="Justification">Gets Justification of the annotation..</param>
+        /// <param name="Intent">Gets or sets the intent of the free text annotation..</param>
+        /// <param name="Rotate">Angle of annotation rotation..</param>
+        /// <param name="TextStyle">Text style of the annotation..</param>
+        public FreeTextAnnotation(List<Link> Links = default(List<Link>), string Contents = default(string), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string RichText = default(string), Justification Justification = default(Justification), FreeTextIntent Intent = default(FreeTextIntent), Rotation Rotate = default(Rotation), TextStyle TextStyle = default(TextStyle))
         {
             this.Links = Links;
             this.Contents = Contents;
@@ -79,6 +84,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.ZIndex = ZIndex;
             this.HorizontalAlignment = HorizontalAlignment;
             this.VerticalAlignment = VerticalAlignment;
+            this.RichText = RichText;
+            this.Justification = Justification;
+            this.Intent = Intent;
+            this.Rotate = Rotate;
+            this.TextStyle = TextStyle;
         }
         
         /// <summary>
@@ -180,13 +190,48 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public VerticalAlignment VerticalAlignment { get; set; }
 
         /// <summary>
+        /// Get the annotation RichText.
+        /// </summary>
+        /// <value>Get the annotation RichText.</value>
+        [DataMember(Name="RichText", EmitDefaultValue=false)]
+        public string RichText { get; set; }
+
+        /// <summary>
+        /// Gets Justification of the annotation.
+        /// </summary>
+        /// <value>Gets Justification of the annotation.</value>
+        [DataMember(Name="Justification", EmitDefaultValue=true)]
+        public Justification Justification { get; set; }
+
+        /// <summary>
+        /// Gets or sets the intent of the free text annotation.
+        /// </summary>
+        /// <value>Gets or sets the intent of the free text annotation.</value>
+        [DataMember(Name="Intent", EmitDefaultValue=true)]
+        public FreeTextIntent Intent { get; set; }
+
+        /// <summary>
+        /// Angle of annotation rotation.
+        /// </summary>
+        /// <value>Angle of annotation rotation.</value>
+        [DataMember(Name="Rotate", EmitDefaultValue=true)]
+        public Rotation Rotate { get; set; }
+
+        /// <summary>
+        /// Text style of the annotation.
+        /// </summary>
+        /// <value>Text style of the annotation.</value>
+        [DataMember(Name="TextStyle", EmitDefaultValue=false)]
+        public TextStyle TextStyle { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Annotation {\n");
+            sb.Append("class FreeTextAnnotation {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  Contents: ").Append(Contents).Append("\n");
             sb.Append("  CreationDate: ").Append(CreationDate).Append("\n");
@@ -201,6 +246,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  ZIndex: ").Append(ZIndex).Append("\n");
             sb.Append("  HorizontalAlignment: ").Append(HorizontalAlignment).Append("\n");
             sb.Append("  VerticalAlignment: ").Append(VerticalAlignment).Append("\n");
+            sb.Append("  RichText: ").Append(RichText).Append("\n");
+            sb.Append("  Justification: ").Append(Justification).Append("\n");
+            sb.Append("  Intent: ").Append(Intent).Append("\n");
+            sb.Append("  Rotate: ").Append(Rotate).Append("\n");
+            sb.Append("  TextStyle: ").Append(TextStyle).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -222,15 +272,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Annotation);
+            return this.Equals(obj as FreeTextAnnotation);
         }
 
         /// <summary>
-        /// Returns true if Annotation instances are equal
+        /// Returns true if FreeTextAnnotation instances are equal
         /// </summary>
-        /// <param name="other">Instance of Annotation to be compared</param>
+        /// <param name="other">Instance of FreeTextAnnotation to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Annotation other)
+        public bool Equals(FreeTextAnnotation other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -306,6 +356,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.VerticalAlignment == other.VerticalAlignment ||
                     this.VerticalAlignment != null &&
                     this.VerticalAlignment.Equals(other.VerticalAlignment)
+                ) && 
+                (
+                    this.RichText == other.RichText ||
+                    this.RichText != null &&
+                    this.RichText.Equals(other.RichText)
+                ) && 
+                (
+                    this.Justification == other.Justification ||
+                    this.Justification != null &&
+                    this.Justification.Equals(other.Justification)
+                ) && 
+                (
+                    this.Intent == other.Intent ||
+                    this.Intent != null &&
+                    this.Intent.Equals(other.Intent)
+                ) && 
+                (
+                    this.Rotate == other.Rotate ||
+                    this.Rotate != null &&
+                    this.Rotate.Equals(other.Rotate)
+                ) && 
+                (
+                    this.TextStyle == other.TextStyle ||
+                    this.TextStyle != null &&
+                    this.TextStyle.Equals(other.TextStyle)
                 );
         }
 
@@ -348,6 +423,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.HorizontalAlignment.GetHashCode();
                 if (this.VerticalAlignment != null)
                     hash = hash * 59 + this.VerticalAlignment.GetHashCode();
+                if (this.RichText != null)
+                    hash = hash * 59 + this.RichText.GetHashCode();
+                if (this.Justification != null)
+                    hash = hash * 59 + this.Justification.GetHashCode();
+                if (this.Intent != null)
+                    hash = hash * 59 + this.Intent.GetHashCode();
+                if (this.Rotate != null)
+                    hash = hash * 59 + this.Rotate.GetHashCode();
+                if (this.TextStyle != null)
+                    hash = hash * 59 + this.TextStyle.GetHashCode();
                 return hash;
             }
         }

@@ -1,5 +1,5 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="MergeTests.cs">
+// <copyright company="Aspose" file="FreeTextIntent.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -23,40 +23,48 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Collections.Generic;
+using System;
+using System.Linq;
 using System.IO;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System.Net;
-using Aspose.Pdf.Cloud.Sdk.Model;
-using NUnit.Framework;
+using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 
-namespace Aspose.Pdf.Cloud.Sdk.Test
+namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    ///  Class for testing Merge Api
+    /// Enumerates the intents of the free text annotation.
     /// </summary>
-    [TestFixture]
-    public class MergeTests : TestsBase
+    /// <value>Enumerates the intents of the free text annotation.</value>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum FreeTextIntent
     {
+        
         /// <summary>
-        /// Test PutMergeDocuments
+        /// Enum Undefined for "Undefined"
         /// </summary>
-        [Test]
-        public void PutMergeDocumentsTest()
-        {
-            var names = new[] { "4pages.pdf", "PdfWithImages2.pdf", "marketing.pdf" };
-            const string resultName = "MergingResult.pdf";
-
-            var mergeDocuments = new MergeDocuments(new List<string>());
-            foreach (var name in names)
-            {
-                UploadFile(name, name);
-                mergeDocuments.List.Add(Path.Combine(TempFolder, name));
-            }
-
-            using (var response = PdfApi.PutMergeDocuments(resultName, mergeDocuments, folder: TempFolder))
-            {
-                Assert.That(response.Length, Is.GreaterThan(0));
-            }
-        }
+        [EnumMember(Value = "Undefined")]
+        Undefined,
+        
+        /// <summary>
+        /// Enum FreeTextCallout for "FreeTextCallout"
+        /// </summary>
+        [EnumMember(Value = "FreeTextCallout")]
+        FreeTextCallout,
+        
+        /// <summary>
+        /// Enum FreeTextTypeWriter for "FreeTextTypeWriter"
+        /// </summary>
+        [EnumMember(Value = "FreeTextTypeWriter")]
+        FreeTextTypeWriter
     }
+
 }
