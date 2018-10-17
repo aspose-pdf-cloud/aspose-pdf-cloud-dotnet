@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.OptimizeOptions
+Represents Pdf optimize options.
+
 ## Properties
 
 Name | Type | Description | Notes

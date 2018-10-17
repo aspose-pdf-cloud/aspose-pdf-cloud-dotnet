@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.Page
+Provides link to page.
+
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.FreeTextIntent
+Enumerates the intents of the free text annotation.
+
 ## Properties
 
 Name | Type | Description | Notes

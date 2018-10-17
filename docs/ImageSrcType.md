@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.ImageSrcType
+Allows to specify image file format.
+
 ## Properties
 
 Name | Type | Description | Notes

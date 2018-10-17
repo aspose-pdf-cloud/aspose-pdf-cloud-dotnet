@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.PageWordCount
+Page words count.
+
 ## Properties
 
 Name | Type | Description | Notes

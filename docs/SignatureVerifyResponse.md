@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.SignatureVerifyResponse
+Returns also a message.
+
 ## Properties
 
 Name | Type | Description | Notes

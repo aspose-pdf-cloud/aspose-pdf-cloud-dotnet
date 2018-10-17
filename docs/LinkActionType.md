@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.LinkActionType
+Represents list of link action types.
+
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.Paragraph
+Paragraph DTO for add text functionality.
+
 ## Properties
 
 Name | Type | Description | Notes

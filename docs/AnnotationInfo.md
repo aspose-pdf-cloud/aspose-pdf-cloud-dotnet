@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.AnnotationInfo
+Provides annotation.
+
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.LinkElement
+Represents base DTO object.
+
 ## Properties
 
 Name | Type | Description | Notes

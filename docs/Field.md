@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.Field
+Represents form field.
+
 ## Properties
 
 Name | Type | Description | Notes

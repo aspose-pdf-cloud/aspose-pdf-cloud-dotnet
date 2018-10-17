@@ -1,4 +1,9 @@
 # Aspose.Pdf.Cloud.Sdk.Model.RasterImagesSavingModes
+Converted PDF can contain raster images(.png, *.jpeg etc.)
+This enum defines methods of how raster images can be handled
+during conversion of PDF to HTML
+            
+
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.MergeDocuments
+Documents for merging.
+
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.Segment
+
+
 ## Properties
 
 Name | Type | Description | Notes

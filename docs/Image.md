@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.Image
+Represents image DTO.
+
 ## Properties
 
 Name | Type | Description | Notes

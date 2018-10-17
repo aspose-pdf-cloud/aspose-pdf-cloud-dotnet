@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.RectanglePdf
+Represents rectangle DTO.
+
 ## Properties
 
 Name | Type | Description | Notes

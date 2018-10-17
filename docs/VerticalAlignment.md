@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.VerticalAlignment
+Enumeration of possible vertical alignment values.
+
 ## Properties
 
 Name | Type | Description | Notes

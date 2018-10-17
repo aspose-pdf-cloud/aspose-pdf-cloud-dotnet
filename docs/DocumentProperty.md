@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.DocumentProperty
+Pdf document property.
+
 ## Properties
 
 Name | Type | Description | Notes

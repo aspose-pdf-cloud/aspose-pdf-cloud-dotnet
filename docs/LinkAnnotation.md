@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.LinkAnnotation
+Provides link to linkAnnotation.
+
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.FieldType
+Represents an enumeration of available field types.
+
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.ColorDepth
+Used to specify the parameter value passed to a Tiff image device.
+
 ## Properties
 
 Name | Type | Description | Notes

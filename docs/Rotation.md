@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.Rotation
+Enumeration of possible rotation values.
+
 ## Properties
 
 Name | Type | Description | Notes

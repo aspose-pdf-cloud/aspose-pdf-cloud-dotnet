@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.PdfAType
+Allows to specify PdfA file format.
+
 ## Properties
 
 Name | Type | Description | Notes

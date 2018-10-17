@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.FontStyles
+Specifies style information applied to text.
+
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.HtmlDocumentType
+Represents enumeration of the Html document types.
+
 ## Properties
 
 Name | Type | Description | Notes

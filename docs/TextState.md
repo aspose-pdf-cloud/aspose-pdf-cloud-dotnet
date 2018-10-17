@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.TextState
+Represents a text state of a text
+
 ## Properties
 
 Name | Type | Description | Notes

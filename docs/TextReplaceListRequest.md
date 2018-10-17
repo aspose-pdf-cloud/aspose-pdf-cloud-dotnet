@@ -1,4 +1,6 @@
 # Aspose.Pdf.Cloud.Sdk.Model.TextReplaceListRequest
+Multiple text replacements request.
+
 ## Properties
 
 Name | Type | Description | Notes
