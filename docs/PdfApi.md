@@ -181,10 +181,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -211,10 +207,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -240,10 +232,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -272,10 +260,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -302,10 +286,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -334,10 +314,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -364,10 +340,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -396,10 +368,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -427,10 +395,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -456,10 +420,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -488,10 +448,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -518,10 +474,6 @@ Name | Type | Description  | Notes
 
 [**DocumentResponse**](DocumentResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -547,10 +499,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AnnotationsInfoResponse**](AnnotationsInfoResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -579,10 +527,6 @@ Name | Type | Description  | Notes
 
 [**AttachmentResponse**](AttachmentResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -608,10 +552,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AttachmentsResponse**](AttachmentsResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -640,10 +580,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -670,10 +606,6 @@ Name | Type | Description  | Notes
 
 [**FreeTextAnnotationsResponse**](FreeTextAnnotationsResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -699,10 +631,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DocumentPropertiesResponse**](DocumentPropertiesResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -731,10 +659,6 @@ Name | Type | Description  | Notes
 
 [**DocumentPropertyResponse**](DocumentPropertyResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -761,10 +685,6 @@ Name | Type | Description  | Notes
 
 [**TextAnnotationsResponse**](TextAnnotationsResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -790,10 +710,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -822,10 +738,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -850,10 +762,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -882,10 +790,6 @@ Name | Type | Description  | Notes
 
 [**FieldResponse**](FieldResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -911,10 +815,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FieldsResponse**](FieldsResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -942,10 +842,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FreeTextAnnotationResponse**](FreeTextAnnotationResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -980,10 +876,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1010,10 +902,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ImageResponse**](ImageResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -1044,10 +932,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1076,10 +960,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -1110,10 +990,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1143,10 +1019,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1174,10 +1046,6 @@ Name | Type | Description  | Notes
 
 [**ImagesResponse**](ImagesResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1202,10 +1070,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -1234,10 +1098,6 @@ Name | Type | Description  | Notes
 
 [**LinkAnnotationResponse**](LinkAnnotationResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1262,10 +1122,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -1294,10 +1150,6 @@ Name | Type | Description  | Notes
 
 [**DocumentPageResponse**](DocumentPageResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1324,10 +1176,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AnnotationsInfoResponse**](AnnotationsInfoResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -1358,10 +1206,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1390,10 +1234,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -1424,10 +1264,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1456,10 +1292,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -1490,10 +1322,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1523,10 +1351,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1553,10 +1377,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FreeTextAnnotationsResponse**](FreeTextAnnotationsResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -1586,10 +1406,6 @@ Name | Type | Description  | Notes
 
 [**LinkAnnotationResponse**](LinkAnnotationResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1616,10 +1432,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LinkAnnotationsResponse**](LinkAnnotationsResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -1655,10 +1467,6 @@ Name | Type | Description  | Notes
 
 [**TextRectsResponse**](TextRectsResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1686,10 +1494,6 @@ Name | Type | Description  | Notes
 
 [**TextAnnotationsResponse**](TextAnnotationsResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1716,10 +1520,6 @@ Name | Type | Description  | Notes
 
 [**DocumentPagesResponse**](DocumentPagesResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1744,10 +1544,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -1783,10 +1579,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1814,10 +1606,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1839,7 +1627,7 @@ Name | Type | Description  | Notes
  **name** | **string**| The document name. | 
  **additionalMarginWidthInPoints** | **int?**| Defines width of margin that will be forcibly left around that output HTML-areas. | [optional] 
  **compressSvgGraphicsIfAny** | **bool?**| The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. | [optional] 
- **convertMarkedContentToLayers** | **bool?**| If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. | [optional] 
+ **convertMarkedContentToLayers** | **bool?**| If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with &quot;data-pdflayer&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. | [optional] 
  **defaultFontName** | **string**| Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. | [optional] 
  **documentType** | **string**| Result document type. | [optional] 
  **fixedLayout** | **bool?**| The value indicating whether that HTML is created as fixed layout. | [optional] 
@@ -1850,7 +1638,7 @@ Name | Type | Description  | Notes
  **splitIntoPages** | **bool?**| The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. | [optional] 
  **useZOrder** | **bool?**| If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. | [optional] 
  **antialiasingProcessing** | **string**| The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. | [optional] 
- **cssClassNamesPrefix** | **string**| When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. | [optional] 
+ **cssClassNamesPrefix** | **string**| When PDFtoHTML converter generates result CSSs, CSS class names (something like &quot;.stl_01 {}&quot; ... &quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. | [optional] 
  **explicitListOfSavedPages** | [**List&lt;int?&gt;**](int?.md)| With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. | [optional] 
  **fontEncodingStrategy** | **string**| Defines encoding special rule to tune PDF decoding for current document. | [optional] 
  **fontSavingMode** | **string**| Defines font saving mode that will be used during saving of PDF to desirable format. | [optional] 
@@ -1871,10 +1659,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -1903,10 +1687,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -1932,10 +1712,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -1963,10 +1739,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -1996,10 +1768,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2026,10 +1794,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -2072,10 +1836,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2106,10 +1866,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2135,10 +1891,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -2166,10 +1918,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2194,10 +1942,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -2232,10 +1976,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2269,10 +2009,6 @@ Name | Type | Description  | Notes
 
 [**TextRectsResponse**](TextRectsResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2300,10 +2036,6 @@ Name | Type | Description  | Notes
 
 [**TextAnnotationResponse**](TextAnnotationResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2330,10 +2062,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SignatureVerifyResponse**](SignatureVerifyResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -2367,10 +2095,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2396,10 +2120,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WordCountResponse**](WordCountResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -2427,10 +2147,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2457,10 +2173,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2486,10 +2198,6 @@ Name | Type | Description  | Notes
 
 **System.IO.Stream**
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2514,10 +2222,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -2549,10 +2253,6 @@ Name | Type | Description  | Notes
 
 [**DocumentResponse**](DocumentResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2581,10 +2281,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2611,10 +2307,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TextReplaceResponse**](TextReplaceResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -2649,10 +2341,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
@@ -2681,10 +2369,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2711,10 +2395,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -2744,10 +2424,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2775,10 +2451,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -2808,10 +2480,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2840,10 +2508,6 @@ Name | Type | Description  | Notes
 
 [**TextReplaceResponse**](TextReplaceResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2870,10 +2534,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -2902,10 +2562,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -2936,10 +2592,6 @@ Name | Type | Description  | Notes
 
 [**SplitResultResponse**](SplitResultResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -2965,10 +2617,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DocumentPagesResponse**](DocumentPagesResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -2998,10 +2646,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -3029,10 +2673,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
@@ -3058,10 +2698,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DocumentResponse**](DocumentResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -3090,10 +2726,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -3119,10 +2751,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -3151,10 +2779,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FreeTextAnnotationResponse**](FreeTextAnnotationResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -3191,10 +2815,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -3224,10 +2844,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -3259,10 +2875,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -3292,10 +2904,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -3327,10 +2935,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -3357,10 +2961,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -3392,10 +2992,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -3425,10 +3021,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -3460,10 +3052,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -3494,10 +3082,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -3524,10 +3108,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -3557,10 +3137,6 @@ Name | Type | Description  | Notes
 
 [**LinkAnnotationResponse**](LinkAnnotationResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -3587,10 +3163,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 **System.IO.Stream**
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -3619,10 +3191,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -3650,10 +3218,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -3685,10 +3249,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -3718,10 +3278,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -3753,10 +3309,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -3786,10 +3338,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -3821,10 +3369,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -3855,10 +3399,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -3885,10 +3425,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -3924,10 +3460,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
@@ -3955,10 +3487,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
@@ -3980,7 +3508,7 @@ Name | Type | Description  | Notes
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.html) | 
  **additionalMarginWidthInPoints** | **int?**| Defines width of margin that will be forcibly left around that output HTML-areas. | [optional] 
  **compressSvgGraphicsIfAny** | **bool?**| The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. | [optional] 
- **convertMarkedContentToLayers** | **bool?**| If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. | [optional] 
+ **convertMarkedContentToLayers** | **bool?**| If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with &quot;data-pdflayer&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. | [optional] 
  **defaultFontName** | **string**| Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. | [optional] 
  **documentType** | **string**| Result document type. | [optional] 
  **fixedLayout** | **bool?**| The value indicating whether that HTML is created as fixed layout. | [optional] 
@@ -3991,7 +3519,7 @@ Name | Type | Description  | Notes
  **splitIntoPages** | **bool?**| The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. | [optional] 
  **useZOrder** | **bool?**| If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. | [optional] 
  **antialiasingProcessing** | **string**| The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. | [optional] 
- **cssClassNamesPrefix** | **string**| When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. | [optional] 
+ **cssClassNamesPrefix** | **string**| When PDFtoHTML converter generates result CSSs, CSS class names (something like &quot;.stl_01 {}&quot; ... &quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. | [optional] 
  **explicitListOfSavedPages** | [**List&lt;int?&gt;**](int?.md)| With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. | [optional] 
  **fontEncodingStrategy** | **string**| Defines encoding special rule to tune PDF decoding for current document. | [optional] 
  **fontSavingMode** | **string**| Defines font saving mode that will be used during saving of PDF to desirable format. | [optional] 
@@ -4012,10 +3540,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -4044,10 +3568,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
@@ -4073,10 +3593,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -4104,10 +3620,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -4137,10 +3649,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
@@ -4166,10 +3674,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -4212,10 +3716,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
@@ -4246,10 +3746,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
@@ -4276,10 +3772,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
@@ -4305,10 +3797,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -4345,10 +3833,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -4377,10 +3861,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -4403,7 +3883,7 @@ Name | Type | Description  | Notes
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.html) | 
  **additionalMarginWidthInPoints** | **int?**| Defines width of margin that will be forcibly left around that output HTML-areas. | [optional] 
  **compressSvgGraphicsIfAny** | **bool?**| The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. | [optional] 
- **convertMarkedContentToLayers** | **bool?**| If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \&quot;data-pdflayer\&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. | [optional] 
+ **convertMarkedContentToLayers** | **bool?**| If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with &quot;data-pdflayer&quot; attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. | [optional] 
  **defaultFontName** | **string**| Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. | [optional] 
  **documentType** | **string**| Result document type. | [optional] 
  **fixedLayout** | **bool?**| The value indicating whether that HTML is created as fixed layout. | [optional] 
@@ -4414,7 +3894,7 @@ Name | Type | Description  | Notes
  **splitIntoPages** | **bool?**| The flag that indicates whether each page of source document will be converted into it&#39;s own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. | [optional] 
  **useZOrder** | **bool?**| If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. | [optional] 
  **antialiasingProcessing** | **string**| The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. | [optional] 
- **cssClassNamesPrefix** | **string**| When PDFtoHTML converter generates result CSSs, CSS class names (something like \&quot;.stl_01 {}\&quot; ... \&quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. | [optional] 
+ **cssClassNamesPrefix** | **string**| When PDFtoHTML converter generates result CSSs, CSS class names (something like &quot;.stl_01 {}&quot; ... &quot;.stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. | [optional] 
  **explicitListOfSavedPages** | [**List&lt;int?&gt;**](int?.md)| With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. | [optional] 
  **fontEncodingStrategy** | **string**| Defines encoding special rule to tune PDF decoding for current document. | [optional] 
  **fontSavingMode** | **string**| Defines font saving mode that will be used during saving of PDF to desirable format. | [optional] 
@@ -4435,10 +3915,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -4468,10 +3944,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -4498,10 +3970,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -4530,10 +3998,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -4564,10 +4028,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -4594,10 +4054,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -4641,10 +4097,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -4676,10 +4128,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -4706,10 +4154,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -4738,10 +4182,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -4769,10 +4209,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -4799,10 +4235,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -4833,10 +4265,6 @@ Name | Type | Description  | Notes
 
 [**ImageResponse**](ImageResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
@@ -4863,10 +4291,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -4895,10 +4319,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DocumentPropertyResponse**](DocumentPropertyResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -4935,10 +4355,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -4966,10 +4382,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TextAnnotationResponse**](TextAnnotationResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -4999,10 +4411,6 @@ Name | Type | Description  | Notes
 
 [**FieldResponse**](FieldResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -5029,10 +4437,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FieldsResponse**](FieldsResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -5068,10 +4472,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -5097,10 +4497,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -5128,10 +4524,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
@@ -5161,10 +4553,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -5192,10 +4580,6 @@ Name | Type | Description  | Notes
 
 [**AsposeResponse**](AsposeResponse.md)
 
-### Authorization
-
-No authorization required
-
 ### HTTP request headers
 
  - **Content-Type**: application/json
@@ -5222,10 +4606,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AsposeResponse**](AsposeResponse.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 
