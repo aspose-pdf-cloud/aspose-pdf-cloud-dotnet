@@ -4,122 +4,122 @@ All URIs are relative to *https://api.aspose.cloud/v2.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DeleteAnnotation**](PdfApi.md#deleteannotation) | **DELETE** /pdf/{name}/annotations/{annotationId} | Delete document annotation by ID
-[**DeleteDocumentAnnotations**](PdfApi.md#deletedocumentannotations) | **DELETE** /pdf/{name}/annotations | Delete all annotations from the document
-[**DeleteDocumentLinkAnnotations**](PdfApi.md#deletedocumentlinkannotations) | **DELETE** /pdf/{name}/links | Delete all link annotations from the document
-[**DeleteField**](PdfApi.md#deletefield) | **DELETE** /pdf/{name}/fields/{fieldName} | Delete document field by name.
-[**DeleteImage**](PdfApi.md#deleteimage) | **DELETE** /pdf/{name}/images/{imageId} | Delete image from document page.
-[**DeleteLinkAnnotation**](PdfApi.md#deletelinkannotation) | **DELETE** /pdf/{name}/links/{linkId} | Delete document page link annotation by ID
-[**DeletePage**](PdfApi.md#deletepage) | **DELETE** /pdf/{name}/pages/{pageNumber} | Delete document page by its number.
-[**DeletePageAnnotations**](PdfApi.md#deletepageannotations) | **DELETE** /pdf/{name}/pages/{pageNumber}/annotations | Delete all annotations from the page
-[**DeletePageLinkAnnotations**](PdfApi.md#deletepagelinkannotations) | **DELETE** /pdf/{name}/pages/{pageNumber}/links | Delete all link annotations from the page
-[**DeleteProperties**](PdfApi.md#deleteproperties) | **DELETE** /pdf/{name}/documentproperties | Delete custom document properties.
-[**DeleteProperty**](PdfApi.md#deleteproperty) | **DELETE** /pdf/{name}/documentproperties/{propertyName} | Delete document property.
-[**GetDocument**](PdfApi.md#getdocument) | **GET** /pdf/{name} | Read common document info.
-[**GetDocumentAnnotations**](PdfApi.md#getdocumentannotations) | **GET** /pdf/{name}/annotations | Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
-[**GetDocumentAttachmentByIndex**](PdfApi.md#getdocumentattachmentbyindex) | **GET** /pdf/{name}/attachments/{attachmentIndex} | Read document attachment info by its index.
-[**GetDocumentAttachments**](PdfApi.md#getdocumentattachments) | **GET** /pdf/{name}/attachments | Read document attachments info.
-[**GetDocumentBookmarks**](PdfApi.md#getdocumentbookmarks) | **GET** /pdf/{name}/bookmarks | Read document bookmark/bookmarks (including children).
-[**GetDocumentFreeTextAnnotations**](PdfApi.md#getdocumentfreetextannotations) | **GET** /pdf/{name}/annotations/freetext | Read document free text annotations.
-[**GetDocumentProperties**](PdfApi.md#getdocumentproperties) | **GET** /pdf/{name}/documentproperties | Read document properties.
-[**GetDocumentProperty**](PdfApi.md#getdocumentproperty) | **GET** /pdf/{name}/documentproperties/{propertyName} | Read document property by name.
-[**GetDocumentTextAnnotations**](PdfApi.md#getdocumenttextannotations) | **GET** /pdf/{name}/annotations/text | Read document text annotations.
+[**DeleteAnnotation**](PdfApi.md#deleteannotation) | **DELETE** /pdf/\{name}/annotations/\{annotationId} | Delete document annotation by ID
+[**DeleteDocumentAnnotations**](PdfApi.md#deletedocumentannotations) | **DELETE** /pdf/\{name}/annotations | Delete all annotations from the document
+[**DeleteDocumentLinkAnnotations**](PdfApi.md#deletedocumentlinkannotations) | **DELETE** /pdf/\{name}/links | Delete all link annotations from the document
+[**DeleteField**](PdfApi.md#deletefield) | **DELETE** /pdf/\{name}/fields/\{fieldName} | Delete document field by name.
+[**DeleteImage**](PdfApi.md#deleteimage) | **DELETE** /pdf/\{name}/images/\{imageId} | Delete image from document page.
+[**DeleteLinkAnnotation**](PdfApi.md#deletelinkannotation) | **DELETE** /pdf/\{name}/links/\{linkId} | Delete document page link annotation by ID
+[**DeletePage**](PdfApi.md#deletepage) | **DELETE** /pdf/\{name}/pages/\{pageNumber} | Delete document page by its number.
+[**DeletePageAnnotations**](PdfApi.md#deletepageannotations) | **DELETE** /pdf/\{name}/pages/\{pageNumber}/annotations | Delete all annotations from the page
+[**DeletePageLinkAnnotations**](PdfApi.md#deletepagelinkannotations) | **DELETE** /pdf/\{name}/pages/\{pageNumber}/links | Delete all link annotations from the page
+[**DeleteProperties**](PdfApi.md#deleteproperties) | **DELETE** /pdf/\{name}/documentproperties | Delete custom document properties.
+[**DeleteProperty**](PdfApi.md#deleteproperty) | **DELETE** /pdf/\{name}/documentproperties/\{propertyName} | Delete document property.
+[**GetDocument**](PdfApi.md#getdocument) | **GET** /pdf/\{name} | Read common document info.
+[**GetDocumentAnnotations**](PdfApi.md#getdocumentannotations) | **GET** /pdf/\{name}/annotations | Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
+[**GetDocumentAttachmentByIndex**](PdfApi.md#getdocumentattachmentbyindex) | **GET** /pdf/\{name}/attachments/\{attachmentIndex} | Read document attachment info by its index.
+[**GetDocumentAttachments**](PdfApi.md#getdocumentattachments) | **GET** /pdf/\{name}/attachments | Read document attachments info.
+[**GetDocumentBookmarks**](PdfApi.md#getdocumentbookmarks) | **GET** /pdf/\{name}/bookmarks | Read document bookmark/bookmarks (including children).
+[**GetDocumentFreeTextAnnotations**](PdfApi.md#getdocumentfreetextannotations) | **GET** /pdf/\{name}/annotations/freetext | Read document free text annotations.
+[**GetDocumentProperties**](PdfApi.md#getdocumentproperties) | **GET** /pdf/\{name}/documentproperties | Read document properties.
+[**GetDocumentProperty**](PdfApi.md#getdocumentproperty) | **GET** /pdf/\{name}/documentproperties/\{propertyName} | Read document property by name.
+[**GetDocumentTextAnnotations**](PdfApi.md#getdocumenttextannotations) | **GET** /pdf/\{name}/annotations/text | Read document text annotations.
 [**GetDownload**](PdfApi.md#getdownload) | **GET** /storage/file | Download a specific file 
-[**GetDownloadDocumentAttachmentByIndex**](PdfApi.md#getdownloaddocumentattachmentbyindex) | **GET** /pdf/{name}/attachments/{attachmentIndex}/download | Download document attachment content by its index.
+[**GetDownloadDocumentAttachmentByIndex**](PdfApi.md#getdownloaddocumentattachmentbyindex) | **GET** /pdf/\{name}/attachments/\{attachmentIndex}/download | Download document attachment content by its index.
 [**GetEpubInStorageToPdf**](PdfApi.md#getepubinstoragetopdf) | **GET** /pdf/create/epub | Convert EPUB file (located on storage) to PDF format and return resulting file in response. 
-[**GetField**](PdfApi.md#getfield) | **GET** /pdf/{name}/fields/{fieldName} | Get document field by name.
-[**GetFields**](PdfApi.md#getfields) | **GET** /pdf/{name}/fields | Get document fields.
-[**GetFreeTextAnnotation**](PdfApi.md#getfreetextannotation) | **GET** /pdf/{name}/annotations/freetext/{annotationId} | Read document page free text annotation by ID.
+[**GetField**](PdfApi.md#getfield) | **GET** /pdf/\{name}/fields/\{fieldName} | Get document field by name.
+[**GetFields**](PdfApi.md#getfields) | **GET** /pdf/\{name}/fields | Get document fields.
+[**GetFreeTextAnnotation**](PdfApi.md#getfreetextannotation) | **GET** /pdf/\{name}/annotations/freetext/\{annotationId} | Read document page free text annotation by ID.
 [**GetHtmlInStorageToPdf**](PdfApi.md#gethtmlinstoragetopdf) | **GET** /pdf/create/html | Convert HTML file (located on storage) to PDF format and return resulting file in response. 
-[**GetImage**](PdfApi.md#getimage) | **GET** /pdf/{name}/images/{imageId} | Read document image by ID.
-[**GetImageExtractAsGif**](PdfApi.md#getimageextractasgif) | **GET** /pdf/{name}/images/{imageId}/extract/gif | Extract document image in GIF format
-[**GetImageExtractAsJpeg**](PdfApi.md#getimageextractasjpeg) | **GET** /pdf/{name}/images/{imageId}/extract/jpeg | Extract document image in JPEG format
-[**GetImageExtractAsPng**](PdfApi.md#getimageextractaspng) | **GET** /pdf/{name}/images/{imageId}/extract/png | Extract document image in PNG format
-[**GetImageExtractAsTiff**](PdfApi.md#getimageextractastiff) | **GET** /pdf/{name}/images/{imageId}/extract/tiff | Extract document image in TIFF format
-[**GetImages**](PdfApi.md#getimages) | **GET** /pdf/{name}/pages/{pageNumber}/images | Read document images.
+[**GetImage**](PdfApi.md#getimage) | **GET** /pdf/\{name}/images/\{imageId} | Read document image by ID.
+[**GetImageExtractAsGif**](PdfApi.md#getimageextractasgif) | **GET** /pdf/\{name}/images/\{imageId}/extract/gif | Extract document image in GIF format
+[**GetImageExtractAsJpeg**](PdfApi.md#getimageextractasjpeg) | **GET** /pdf/\{name}/images/\{imageId}/extract/jpeg | Extract document image in JPEG format
+[**GetImageExtractAsPng**](PdfApi.md#getimageextractaspng) | **GET** /pdf/\{name}/images/\{imageId}/extract/png | Extract document image in PNG format
+[**GetImageExtractAsTiff**](PdfApi.md#getimageextractastiff) | **GET** /pdf/\{name}/images/\{imageId}/extract/tiff | Extract document image in TIFF format
+[**GetImages**](PdfApi.md#getimages) | **GET** /pdf/\{name}/pages/\{pageNumber}/images | Read document images.
 [**GetLaTeXInStorageToPdf**](PdfApi.md#getlatexinstoragetopdf) | **GET** /pdf/create/latex | Convert LaTeX file (located on storage) to PDF format and return resulting file in response. 
-[**GetLinkAnnotation**](PdfApi.md#getlinkannotation) | **GET** /pdf/{name}/links/{linkId} | Read document link annotation by ID.
+[**GetLinkAnnotation**](PdfApi.md#getlinkannotation) | **GET** /pdf/\{name}/links/\{linkId} | Read document link annotation by ID.
 [**GetMhtInStorageToPdf**](PdfApi.md#getmhtinstoragetopdf) | **GET** /pdf/create/mht | Convert MHT file (located on storage) to PDF format and return resulting file in response. 
-[**GetPage**](PdfApi.md#getpage) | **GET** /pdf/{name}/pages/{pageNumber} | Read document page info.
-[**GetPageAnnotations**](PdfApi.md#getpageannotations) | **GET** /pdf/{name}/pages/{pageNumber}/annotations | Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
-[**GetPageConvertToBmp**](PdfApi.md#getpageconverttobmp) | **GET** /pdf/{name}/pages/{pageNumber}/convert/bmp | Convert document page to Bmp image and return resulting file in response.
-[**GetPageConvertToEmf**](PdfApi.md#getpageconverttoemf) | **GET** /pdf/{name}/pages/{pageNumber}/convert/emf | Convert document page to Emf image and return resulting file in response.
-[**GetPageConvertToGif**](PdfApi.md#getpageconverttogif) | **GET** /pdf/{name}/pages/{pageNumber}/convert/gif | Convert document page to Gif image and return resulting file in response.
-[**GetPageConvertToJpeg**](PdfApi.md#getpageconverttojpeg) | **GET** /pdf/{name}/pages/{pageNumber}/convert/jpeg | Convert document page to Jpeg image and return resulting file in response.
-[**GetPageConvertToPng**](PdfApi.md#getpageconverttopng) | **GET** /pdf/{name}/pages/{pageNumber}/convert/png | Convert document page to Png image and return resulting file in response.
-[**GetPageConvertToTiff**](PdfApi.md#getpageconverttotiff) | **GET** /pdf/{name}/pages/{pageNumber}/convert/tiff | Convert document page to Tiff image  and return resulting file in response.
-[**GetPageFreeTextAnnotations**](PdfApi.md#getpagefreetextannotations) | **GET** /pdf/{name}/pages/{pageNumber}/annotations/freetext | Read document page free text annotations.
-[**GetPageLinkAnnotation**](PdfApi.md#getpagelinkannotation) | **GET** /pdf/{name}/pages/{pageNumber}/links/{linkId} | Read document page link annotation by ID.
-[**GetPageLinkAnnotations**](PdfApi.md#getpagelinkannotations) | **GET** /pdf/{name}/pages/{pageNumber}/links | Read document page link annotations.
-[**GetPageText**](PdfApi.md#getpagetext) | **GET** /pdf/{name}/pages/{pageNumber}/text | Read page text items.
-[**GetPageTextAnnotations**](PdfApi.md#getpagetextannotations) | **GET** /pdf/{name}/pages/{pageNumber}/annotations/text | Read document page text annotations.
-[**GetPages**](PdfApi.md#getpages) | **GET** /pdf/{name}/pages | Read document pages info.
+[**GetPage**](PdfApi.md#getpage) | **GET** /pdf/\{name}/pages/\{pageNumber} | Read document page info.
+[**GetPageAnnotations**](PdfApi.md#getpageannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations | Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
+[**GetPageConvertToBmp**](PdfApi.md#getpageconverttobmp) | **GET** /pdf/\{name}/pages/\{pageNumber}/convert/bmp | Convert document page to Bmp image and return resulting file in response.
+[**GetPageConvertToEmf**](PdfApi.md#getpageconverttoemf) | **GET** /pdf/\{name}/pages/\{pageNumber}/convert/emf | Convert document page to Emf image and return resulting file in response.
+[**GetPageConvertToGif**](PdfApi.md#getpageconverttogif) | **GET** /pdf/\{name}/pages/\{pageNumber}/convert/gif | Convert document page to Gif image and return resulting file in response.
+[**GetPageConvertToJpeg**](PdfApi.md#getpageconverttojpeg) | **GET** /pdf/\{name}/pages/\{pageNumber}/convert/jpeg | Convert document page to Jpeg image and return resulting file in response.
+[**GetPageConvertToPng**](PdfApi.md#getpageconverttopng) | **GET** /pdf/\{name}/pages/\{pageNumber}/convert/png | Convert document page to Png image and return resulting file in response.
+[**GetPageConvertToTiff**](PdfApi.md#getpageconverttotiff) | **GET** /pdf/\{name}/pages/\{pageNumber}/convert/tiff | Convert document page to Tiff image  and return resulting file in response.
+[**GetPageFreeTextAnnotations**](PdfApi.md#getpagefreetextannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/freetext | Read document page free text annotations.
+[**GetPageLinkAnnotation**](PdfApi.md#getpagelinkannotation) | **GET** /pdf/\{name}/pages/\{pageNumber}/links/\{linkId} | Read document page link annotation by ID.
+[**GetPageLinkAnnotations**](PdfApi.md#getpagelinkannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/links | Read document page link annotations.
+[**GetPageText**](PdfApi.md#getpagetext) | **GET** /pdf/\{name}/pages/\{pageNumber}/text | Read page text items.
+[**GetPageTextAnnotations**](PdfApi.md#getpagetextannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/text | Read document page text annotations.
+[**GetPages**](PdfApi.md#getpages) | **GET** /pdf/\{name}/pages | Read document pages info.
 [**GetPclInStorageToPdf**](PdfApi.md#getpclinstoragetopdf) | **GET** /pdf/create/pcl | Convert PCL file (located on storage) to PDF format and return resulting file in response. 
-[**GetPdfInStorageToDoc**](PdfApi.md#getpdfinstoragetodoc) | **GET** /pdf/{name}/convert/doc | Converts PDF document (located on storage) to DOC format and returns resulting file in response content
-[**GetPdfInStorageToEpub**](PdfApi.md#getpdfinstoragetoepub) | **GET** /pdf/{name}/convert/epub | Converts PDF document (located on storage) to EPUB format and returns resulting file in response content
-[**GetPdfInStorageToHtml**](PdfApi.md#getpdfinstoragetohtml) | **GET** /pdf/{name}/convert/html | Converts PDF document (located on storage) to Html format and returns resulting file in response content
-[**GetPdfInStorageToLaTeX**](PdfApi.md#getpdfinstoragetolatex) | **GET** /pdf/{name}/convert/latex | Converts PDF document (located on storage) to LaTeX format and returns resulting file in response content
-[**GetPdfInStorageToMobiXml**](PdfApi.md#getpdfinstoragetomobixml) | **GET** /pdf/{name}/convert/mobixml | Converts PDF document (located on storage) to MOBIXML format and returns resulting file in response content
-[**GetPdfInStorageToPdfA**](PdfApi.md#getpdfinstoragetopdfa) | **GET** /pdf/{name}/convert/pdfa | Converts PDF document (located on storage) to PdfA format and returns resulting file in response content
-[**GetPdfInStorageToPptx**](PdfApi.md#getpdfinstoragetopptx) | **GET** /pdf/{name}/convert/pptx | Converts PDF document (located on storage) to PPTX format and returns resulting file in response content
-[**GetPdfInStorageToSvg**](PdfApi.md#getpdfinstoragetosvg) | **GET** /pdf/{name}/convert/svg | Converts PDF document (located on storage) to SVG format and returns resulting file in response content
-[**GetPdfInStorageToTiff**](PdfApi.md#getpdfinstoragetotiff) | **GET** /pdf/{name}/convert/tiff | Converts PDF document (located on storage) to TIFF format and returns resulting file in response content
-[**GetPdfInStorageToXls**](PdfApi.md#getpdfinstoragetoxls) | **GET** /pdf/{name}/convert/xls | Converts PDF document (located on storage) to XLS format and returns resulting file in response content
-[**GetPdfInStorageToXml**](PdfApi.md#getpdfinstoragetoxml) | **GET** /pdf/{name}/convert/xml | Converts PDF document (located on storage) to XML format and returns resulting file in response content
-[**GetPdfInStorageToXps**](PdfApi.md#getpdfinstoragetoxps) | **GET** /pdf/{name}/convert/xps | Converts PDF document (located on storage) to XPS format and returns resulting file in response content
+[**GetPdfInStorageToDoc**](PdfApi.md#getpdfinstoragetodoc) | **GET** /pdf/\{name}/convert/doc | Converts PDF document (located on storage) to DOC format and returns resulting file in response content
+[**GetPdfInStorageToEpub**](PdfApi.md#getpdfinstoragetoepub) | **GET** /pdf/\{name}/convert/epub | Converts PDF document (located on storage) to EPUB format and returns resulting file in response content
+[**GetPdfInStorageToHtml**](PdfApi.md#getpdfinstoragetohtml) | **GET** /pdf/\{name}/convert/html | Converts PDF document (located on storage) to Html format and returns resulting file in response content
+[**GetPdfInStorageToLaTeX**](PdfApi.md#getpdfinstoragetolatex) | **GET** /pdf/\{name}/convert/latex | Converts PDF document (located on storage) to LaTeX format and returns resulting file in response content
+[**GetPdfInStorageToMobiXml**](PdfApi.md#getpdfinstoragetomobixml) | **GET** /pdf/\{name}/convert/mobixml | Converts PDF document (located on storage) to MOBIXML format and returns resulting file in response content
+[**GetPdfInStorageToPdfA**](PdfApi.md#getpdfinstoragetopdfa) | **GET** /pdf/\{name}/convert/pdfa | Converts PDF document (located on storage) to PdfA format and returns resulting file in response content
+[**GetPdfInStorageToPptx**](PdfApi.md#getpdfinstoragetopptx) | **GET** /pdf/\{name}/convert/pptx | Converts PDF document (located on storage) to PPTX format and returns resulting file in response content
+[**GetPdfInStorageToSvg**](PdfApi.md#getpdfinstoragetosvg) | **GET** /pdf/\{name}/convert/svg | Converts PDF document (located on storage) to SVG format and returns resulting file in response content
+[**GetPdfInStorageToTiff**](PdfApi.md#getpdfinstoragetotiff) | **GET** /pdf/\{name}/convert/tiff | Converts PDF document (located on storage) to TIFF format and returns resulting file in response content
+[**GetPdfInStorageToXls**](PdfApi.md#getpdfinstoragetoxls) | **GET** /pdf/\{name}/convert/xls | Converts PDF document (located on storage) to XLS format and returns resulting file in response content
+[**GetPdfInStorageToXml**](PdfApi.md#getpdfinstoragetoxml) | **GET** /pdf/\{name}/convert/xml | Converts PDF document (located on storage) to XML format and returns resulting file in response content
+[**GetPdfInStorageToXps**](PdfApi.md#getpdfinstoragetoxps) | **GET** /pdf/\{name}/convert/xps | Converts PDF document (located on storage) to XPS format and returns resulting file in response content
 [**GetPsInStorageToPdf**](PdfApi.md#getpsinstoragetopdf) | **GET** /pdf/create/ps | Convert PS file (located on storage) to PDF format and return resulting file in response. 
 [**GetSvgInStorageToPdf**](PdfApi.md#getsvginstoragetopdf) | **GET** /pdf/create/svg | Convert SVG file (located on storage) to PDF format and return resulting file in response. 
-[**GetText**](PdfApi.md#gettext) | **GET** /pdf/{name}/text | Read document text.
-[**GetTextAnnotation**](PdfApi.md#gettextannotation) | **GET** /pdf/{name}/annotations/text/{annotationId} | Read document page text annotation by ID.
-[**GetVerifySignature**](PdfApi.md#getverifysignature) | **GET** /pdf/{name}/verifySignature | Verify signature document.
+[**GetText**](PdfApi.md#gettext) | **GET** /pdf/\{name}/text | Read document text.
+[**GetTextAnnotation**](PdfApi.md#gettextannotation) | **GET** /pdf/\{name}/annotations/text/\{annotationId} | Read document page text annotation by ID.
+[**GetVerifySignature**](PdfApi.md#getverifysignature) | **GET** /pdf/\{name}/verifySignature | Verify signature document.
 [**GetWebInStorageToPdf**](PdfApi.md#getwebinstoragetopdf) | **GET** /pdf/create/web | Convert web page to PDF format and return resulting file in response. 
-[**GetWordsPerPage**](PdfApi.md#getwordsperpage) | **GET** /pdf/{name}/pages/wordCount | Get number of words per document page.
-[**GetXfaPdfInStorageToAcroForm**](PdfApi.md#getxfapdfinstoragetoacroform) | **GET** /pdf/{name}/convert/xfatoacroform | Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and returns resulting file response content
+[**GetWordsPerPage**](PdfApi.md#getwordsperpage) | **GET** /pdf/\{name}/pages/wordCount | Get number of words per document page.
+[**GetXfaPdfInStorageToAcroForm**](PdfApi.md#getxfapdfinstoragetoacroform) | **GET** /pdf/\{name}/convert/xfatoacroform | Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and returns resulting file response content
 [**GetXmlInStorageToPdf**](PdfApi.md#getxmlinstoragetopdf) | **GET** /pdf/create/xml | Convert XML file (located on storage) to PDF format and return resulting file in response. 
 [**GetXpsInStorageToPdf**](PdfApi.md#getxpsinstoragetopdf) | **GET** /pdf/create/xps | Convert XPS file (located on storage) to PDF format and return resulting file in response. 
 [**GetXslFoInStorageToPdf**](PdfApi.md#getxslfoinstoragetopdf) | **GET** /pdf/create/xslfo | Convert XslFo file (located on storage) to PDF format and return resulting file in response. 
-[**PostAppendDocument**](PdfApi.md#postappenddocument) | **POST** /pdf/{name}/appendDocument | Append document to existing one.
-[**PostCreateField**](PdfApi.md#postcreatefield) | **POST** /pdf/{name}/fields | Create field.
-[**PostDocumentTextReplace**](PdfApi.md#postdocumenttextreplace) | **POST** /pdf/{name}/text/replace | Document&#39;s replace text method.
-[**PostInsertImage**](PdfApi.md#postinsertimage) | **POST** /pdf/{name}/pages/{pageNumber}/images | Insert image to document page.
-[**PostMovePage**](PdfApi.md#postmovepage) | **POST** /pdf/{name}/pages/{pageNumber}/movePage | Move page to new position.
-[**PostOptimizeDocument**](PdfApi.md#postoptimizedocument) | **POST** /pdf/{name}/optimize | Optimize document.
-[**PostPageFreeTextAnnotations**](PdfApi.md#postpagefreetextannotations) | **POST** /pdf/{name}/pages/{pageNumber}/annotations/freetext | Add document page free text annotations.
-[**PostPageLinkAnnotations**](PdfApi.md#postpagelinkannotations) | **POST** /pdf/{name}/pages/{pageNumber}/links | Add document page link annotations.
-[**PostPageTextAnnotations**](PdfApi.md#postpagetextannotations) | **POST** /pdf/{name}/pages/{pageNumber}/annotations/text | Add document page text annotations.
-[**PostPageTextReplace**](PdfApi.md#postpagetextreplace) | **POST** /pdf/{name}/pages/{pageNumber}/text/replace | Page&#39;s replace text method.
-[**PostSignDocument**](PdfApi.md#postsigndocument) | **POST** /pdf/{name}/sign | Sign document.
-[**PostSignPage**](PdfApi.md#postsignpage) | **POST** /pdf/{name}/pages/{pageNumber}/sign | Sign page.
-[**PostSplitDocument**](PdfApi.md#postsplitdocument) | **POST** /pdf/{name}/split | Split document to parts.
-[**PutAddNewPage**](PdfApi.md#putaddnewpage) | **PUT** /pdf/{name}/pages | Add new page to end of the document.
-[**PutAddText**](PdfApi.md#putaddtext) | **PUT** /pdf/{name}/pages/{pageNumber}/text | Add text to PDF document page.
+[**PostAppendDocument**](PdfApi.md#postappenddocument) | **POST** /pdf/\{name}/appendDocument | Append document to existing one.
+[**PostCreateField**](PdfApi.md#postcreatefield) | **POST** /pdf/\{name}/fields | Create field.
+[**PostDocumentTextReplace**](PdfApi.md#postdocumenttextreplace) | **POST** /pdf/\{name}/text/replace | Document&#39;s replace text method.
+[**PostInsertImage**](PdfApi.md#postinsertimage) | **POST** /pdf/\{name}/pages/\{pageNumber}/images | Insert image to document page.
+[**PostMovePage**](PdfApi.md#postmovepage) | **POST** /pdf/\{name}/pages/\{pageNumber}/movePage | Move page to new position.
+[**PostOptimizeDocument**](PdfApi.md#postoptimizedocument) | **POST** /pdf/\{name}/optimize | Optimize document.
+[**PostPageFreeTextAnnotations**](PdfApi.md#postpagefreetextannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/freetext | Add document page free text annotations.
+[**PostPageLinkAnnotations**](PdfApi.md#postpagelinkannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/links | Add document page link annotations.
+[**PostPageTextAnnotations**](PdfApi.md#postpagetextannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/text | Add document page text annotations.
+[**PostPageTextReplace**](PdfApi.md#postpagetextreplace) | **POST** /pdf/\{name}/pages/\{pageNumber}/text/replace | Page&#39;s replace text method.
+[**PostSignDocument**](PdfApi.md#postsigndocument) | **POST** /pdf/\{name}/sign | Sign document.
+[**PostSignPage**](PdfApi.md#postsignpage) | **POST** /pdf/\{name}/pages/\{pageNumber}/sign | Sign page.
+[**PostSplitDocument**](PdfApi.md#postsplitdocument) | **POST** /pdf/\{name}/split | Split document to parts.
+[**PutAddNewPage**](PdfApi.md#putaddnewpage) | **PUT** /pdf/\{name}/pages | Add new page to end of the document.
+[**PutAddText**](PdfApi.md#putaddtext) | **PUT** /pdf/\{name}/pages/\{pageNumber}/text | Add text to PDF document page.
 [**PutCreate**](PdfApi.md#putcreate) | **PUT** /storage/file | Upload a specific file 
-[**PutCreateDocument**](PdfApi.md#putcreatedocument) | **PUT** /pdf/{name} | Create empty document.
-[**PutEpubInStorageToPdf**](PdfApi.md#putepubinstoragetopdf) | **PUT** /pdf/{name}/create/epub | Convert EPUB file (located on storage) to PDF format and upload resulting file to storage. 
-[**PutFieldsFlatten**](PdfApi.md#putfieldsflatten) | **PUT** /pdf/{name}/fields/flatten | Flatten form fields in document.
-[**PutFreeTextAnnotation**](PdfApi.md#putfreetextannotation) | **PUT** /pdf/{name}/annotations/freetext/{annotationId} | Replace document free text annotation
-[**PutHtmlInStorageToPdf**](PdfApi.md#puthtmlinstoragetopdf) | **PUT** /pdf/{name}/create/html | Convert HTML file (located on storage) to PDF format and upload resulting file to storage. 
-[**PutImageExtractAsGif**](PdfApi.md#putimageextractasgif) | **PUT** /pdf/{name}/images/{imageId}/extract/gif | Extract document image in GIF format to folder
-[**PutImageExtractAsJpeg**](PdfApi.md#putimageextractasjpeg) | **PUT** /pdf/{name}/images/{imageId}/extract/jpeg | Extract document image in JPEG format to folder
-[**PutImageExtractAsPng**](PdfApi.md#putimageextractaspng) | **PUT** /pdf/{name}/images/{imageId}/extract/png | Extract document image in PNG format to folder
-[**PutImageExtractAsTiff**](PdfApi.md#putimageextractastiff) | **PUT** /pdf/{name}/images/{imageId}/extract/tiff | Extract document image in TIFF format to folder
-[**PutImageInStorageToPdf**](PdfApi.md#putimageinstoragetopdf) | **PUT** /pdf/{name}/create/images | Convert image file (located on storage) to PDF format and upload resulting file to storage. 
-[**PutImagesExtractAsGif**](PdfApi.md#putimagesextractasgif) | **PUT** /pdf/{name}/pages/{pageNumber}/images/extract/gif | Extract document images in GIF format to folder.
-[**PutImagesExtractAsJpeg**](PdfApi.md#putimagesextractasjpeg) | **PUT** /pdf/{name}/pages/{pageNumber}/images/extract/jpeg | Extract document images in JPEG format to folder.
-[**PutImagesExtractAsPng**](PdfApi.md#putimagesextractaspng) | **PUT** /pdf/{name}/pages/{pageNumber}/images/extract/png | Extract document images in PNG format to folder.
-[**PutImagesExtractAsTiff**](PdfApi.md#putimagesextractastiff) | **PUT** /pdf/{name}/pages/{pageNumber}/images/extract/tiff | Extract document images in TIFF format to folder.
-[**PutLaTeXInStorageToPdf**](PdfApi.md#putlatexinstoragetopdf) | **PUT** /pdf/{name}/create/latex | Convert LaTeX file (located on storage) to PDF format and upload resulting file to storage. 
-[**PutLinkAnnotation**](PdfApi.md#putlinkannotation) | **PUT** /pdf/{name}/links/{linkId} | Replace document page link annotations
-[**PutMergeDocuments**](PdfApi.md#putmergedocuments) | **PUT** /pdf/{name}/merge | Merge a list of documents.
-[**PutMhtInStorageToPdf**](PdfApi.md#putmhtinstoragetopdf) | **PUT** /pdf/{name}/create/mht | Convert MHT file (located on storage) to PDF format and upload resulting file to storage. 
-[**PutPageAddStamp**](PdfApi.md#putpageaddstamp) | **PUT** /pdf/{name}/pages/{pageNumber}/stamp | Add page stamp.
-[**PutPageConvertToBmp**](PdfApi.md#putpageconverttobmp) | **PUT** /pdf/{name}/pages/{pageNumber}/convert/bmp | Convert document page to bmp image and upload resulting file to storage.
-[**PutPageConvertToEmf**](PdfApi.md#putpageconverttoemf) | **PUT** /pdf/{name}/pages/{pageNumber}/convert/emf | Convert document page to emf image and upload resulting file to storage.
-[**PutPageConvertToGif**](PdfApi.md#putpageconverttogif) | **PUT** /pdf/{name}/pages/{pageNumber}/convert/gif | Convert document page to gif image and upload resulting file to storage.
-[**PutPageConvertToJpeg**](PdfApi.md#putpageconverttojpeg) | **PUT** /pdf/{name}/pages/{pageNumber}/convert/jpeg | Convert document page to Jpeg image and upload resulting file to storage.
-[**PutPageConvertToPng**](PdfApi.md#putpageconverttopng) | **PUT** /pdf/{name}/pages/{pageNumber}/convert/png | Convert document page to png image and upload resulting file to storage.
-[**PutPageConvertToTiff**](PdfApi.md#putpageconverttotiff) | **PUT** /pdf/{name}/pages/{pageNumber}/convert/tiff | Convert document page to Tiff image and upload resulting file to storage.
-[**PutPclInStorageToPdf**](PdfApi.md#putpclinstoragetopdf) | **PUT** /pdf/{name}/create/pcl | Convert PCL file (located on storage) to PDF format and upload resulting file to storage. 
+[**PutCreateDocument**](PdfApi.md#putcreatedocument) | **PUT** /pdf/\{name} | Create empty document.
+[**PutEpubInStorageToPdf**](PdfApi.md#putepubinstoragetopdf) | **PUT** /pdf/\{name}/create/epub | Convert EPUB file (located on storage) to PDF format and upload resulting file to storage. 
+[**PutFieldsFlatten**](PdfApi.md#putfieldsflatten) | **PUT** /pdf/\{name}/fields/flatten | Flatten form fields in document.
+[**PutFreeTextAnnotation**](PdfApi.md#putfreetextannotation) | **PUT** /pdf/\{name}/annotations/freetext/\{annotationId} | Replace document free text annotation
+[**PutHtmlInStorageToPdf**](PdfApi.md#puthtmlinstoragetopdf) | **PUT** /pdf/\{name}/create/html | Convert HTML file (located on storage) to PDF format and upload resulting file to storage. 
+[**PutImageExtractAsGif**](PdfApi.md#putimageextractasgif) | **PUT** /pdf/\{name}/images/\{imageId}/extract/gif | Extract document image in GIF format to folder
+[**PutImageExtractAsJpeg**](PdfApi.md#putimageextractasjpeg) | **PUT** /pdf/\{name}/images/\{imageId}/extract/jpeg | Extract document image in JPEG format to folder
+[**PutImageExtractAsPng**](PdfApi.md#putimageextractaspng) | **PUT** /pdf/\{name}/images/\{imageId}/extract/png | Extract document image in PNG format to folder
+[**PutImageExtractAsTiff**](PdfApi.md#putimageextractastiff) | **PUT** /pdf/\{name}/images/\{imageId}/extract/tiff | Extract document image in TIFF format to folder
+[**PutImageInStorageToPdf**](PdfApi.md#putimageinstoragetopdf) | **PUT** /pdf/\{name}/create/images | Convert image file (located on storage) to PDF format and upload resulting file to storage. 
+[**PutImagesExtractAsGif**](PdfApi.md#putimagesextractasgif) | **PUT** /pdf/\{name}/pages/\{pageNumber}/images/extract/gif | Extract document images in GIF format to folder.
+[**PutImagesExtractAsJpeg**](PdfApi.md#putimagesextractasjpeg) | **PUT** /pdf/\{name}/pages/\{pageNumber}/images/extract/jpeg | Extract document images in JPEG format to folder.
+[**PutImagesExtractAsPng**](PdfApi.md#putimagesextractaspng) | **PUT** /pdf/\{name}/pages/\{pageNumber}/images/extract/png | Extract document images in PNG format to folder.
+[**PutImagesExtractAsTiff**](PdfApi.md#putimagesextractastiff) | **PUT** /pdf/\{name}/pages/\{pageNumber}/images/extract/tiff | Extract document images in TIFF format to folder.
+[**PutLaTeXInStorageToPdf**](PdfApi.md#putlatexinstoragetopdf) | **PUT** /pdf/\{name}/create/latex | Convert LaTeX file (located on storage) to PDF format and upload resulting file to storage. 
+[**PutLinkAnnotation**](PdfApi.md#putlinkannotation) | **PUT** /pdf/\{name}/links/\{linkId} | Replace document page link annotations
+[**PutMergeDocuments**](PdfApi.md#putmergedocuments) | **PUT** /pdf/\{name}/merge | Merge a list of documents.
+[**PutMhtInStorageToPdf**](PdfApi.md#putmhtinstoragetopdf) | **PUT** /pdf/\{name}/create/mht | Convert MHT file (located on storage) to PDF format and upload resulting file to storage. 
+[**PutPageAddStamp**](PdfApi.md#putpageaddstamp) | **PUT** /pdf/\{name}/pages/\{pageNumber}/stamp | Add page stamp.
+[**PutPageConvertToBmp**](PdfApi.md#putpageconverttobmp) | **PUT** /pdf/\{name}/pages/\{pageNumber}/convert/bmp | Convert document page to bmp image and upload resulting file to storage.
+[**PutPageConvertToEmf**](PdfApi.md#putpageconverttoemf) | **PUT** /pdf/\{name}/pages/\{pageNumber}/convert/emf | Convert document page to emf image and upload resulting file to storage.
+[**PutPageConvertToGif**](PdfApi.md#putpageconverttogif) | **PUT** /pdf/\{name}/pages/\{pageNumber}/convert/gif | Convert document page to gif image and upload resulting file to storage.
+[**PutPageConvertToJpeg**](PdfApi.md#putpageconverttojpeg) | **PUT** /pdf/\{name}/pages/\{pageNumber}/convert/jpeg | Convert document page to Jpeg image and upload resulting file to storage.
+[**PutPageConvertToPng**](PdfApi.md#putpageconverttopng) | **PUT** /pdf/\{name}/pages/\{pageNumber}/convert/png | Convert document page to png image and upload resulting file to storage.
+[**PutPageConvertToTiff**](PdfApi.md#putpageconverttotiff) | **PUT** /pdf/\{name}/pages/\{pageNumber}/convert/tiff | Convert document page to Tiff image and upload resulting file to storage.
+[**PutPclInStorageToPdf**](PdfApi.md#putpclinstoragetopdf) | **PUT** /pdf/\{name}/create/pcl | Convert PCL file (located on storage) to PDF format and upload resulting file to storage. 
 [**PutPdfInRequestToDoc**](PdfApi.md#putpdfinrequesttodoc) | **PUT** /pdf/convert/doc | Converts PDF document (in request content) to DOC format and uploads resulting file to storage.
 [**PutPdfInRequestToEpub**](PdfApi.md#putpdfinrequesttoepub) | **PUT** /pdf/convert/epub | Converts PDF document (in request content) to EPUB format and uploads resulting file to storage.
 [**PutPdfInRequestToHtml**](PdfApi.md#putpdfinrequesttohtml) | **PUT** /pdf/convert/html | Converts PDF document (in request content) to Html format and uploads resulting file to storage.
@@ -132,33 +132,33 @@ Method | HTTP request | Description
 [**PutPdfInRequestToXls**](PdfApi.md#putpdfinrequesttoxls) | **PUT** /pdf/convert/xls | Converts PDF document (in request content) to XLS format and uploads resulting file to storage.
 [**PutPdfInRequestToXml**](PdfApi.md#putpdfinrequesttoxml) | **PUT** /pdf/convert/xml | Converts PDF document (in request content) to XML format and uploads resulting file to storage.
 [**PutPdfInRequestToXps**](PdfApi.md#putpdfinrequesttoxps) | **PUT** /pdf/convert/xps | Converts PDF document (in request content) to XPS format and uploads resulting file to storage.
-[**PutPdfInStorageToDoc**](PdfApi.md#putpdfinstoragetodoc) | **PUT** /pdf/{name}/convert/doc | Converts PDF document (located on storage) to DOC format and uploads resulting file to storage
-[**PutPdfInStorageToEpub**](PdfApi.md#putpdfinstoragetoepub) | **PUT** /pdf/{name}/convert/epub | Converts PDF document (located on storage) to EPUB format and uploads resulting file to storage
-[**PutPdfInStorageToHtml**](PdfApi.md#putpdfinstoragetohtml) | **PUT** /pdf/{name}/convert/html | Converts PDF document (located on storage) to Html format and uploads resulting file to storage
-[**PutPdfInStorageToLaTeX**](PdfApi.md#putpdfinstoragetolatex) | **PUT** /pdf/{name}/convert/latex | Converts PDF document (located on storage) to LaTeX format and uploads resulting file to storage
-[**PutPdfInStorageToMobiXml**](PdfApi.md#putpdfinstoragetomobixml) | **PUT** /pdf/{name}/convert/mobixml | Converts PDF document (located on storage) to MOBIXML format and uploads resulting file to storage
-[**PutPdfInStorageToPdfA**](PdfApi.md#putpdfinstoragetopdfa) | **PUT** /pdf/{name}/convert/pdfa | Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage
-[**PutPdfInStorageToPptx**](PdfApi.md#putpdfinstoragetopptx) | **PUT** /pdf/{name}/convert/pptx | Converts PDF document (located on storage) to PPTX format and uploads resulting file to storage
-[**PutPdfInStorageToSvg**](PdfApi.md#putpdfinstoragetosvg) | **PUT** /pdf/{name}/convert/svg | Converts PDF document (located on storage) to SVG format and uploads resulting file to storage
-[**PutPdfInStorageToTiff**](PdfApi.md#putpdfinstoragetotiff) | **PUT** /pdf/{name}/convert/tiff | Converts PDF document (located on storage) to TIFF format and uploads resulting file to storage
-[**PutPdfInStorageToXls**](PdfApi.md#putpdfinstoragetoxls) | **PUT** /pdf/{name}/convert/xls | Converts PDF document (located on storage) to XLS format and uploads resulting file to storage
-[**PutPdfInStorageToXml**](PdfApi.md#putpdfinstoragetoxml) | **PUT** /pdf/{name}/convert/xml | Converts PDF document (located on storage) to XML format and uploads resulting file to storage
-[**PutPdfInStorageToXps**](PdfApi.md#putpdfinstoragetoxps) | **PUT** /pdf/{name}/convert/xps | Converts PDF document (located on storage) to XPS format and uploads resulting file to storage
-[**PutPrivileges**](PdfApi.md#putprivileges) | **PUT** /pdf/{name}/privileges | Update privilege document.
-[**PutPsInStorageToPdf**](PdfApi.md#putpsinstoragetopdf) | **PUT** /pdf/{name}/create/ps | Convert PS file (located on storage) to PDF format and upload resulting file to storage. 
-[**PutReplaceImage**](PdfApi.md#putreplaceimage) | **PUT** /pdf/{name}/images/{imageId} | Replace document image.
-[**PutSearchableDocument**](PdfApi.md#putsearchabledocument) | **PUT** /pdf/{name}/ocr | Create searchable PDF document. Generate OCR layer for images in input PDF document.
-[**PutSetProperty**](PdfApi.md#putsetproperty) | **PUT** /pdf/{name}/documentproperties/{propertyName} | Add/update document property.
-[**PutSvgInStorageToPdf**](PdfApi.md#putsvginstoragetopdf) | **PUT** /pdf/{name}/create/svg | Convert SVG file (located on storage) to PDF format and upload resulting file to storage. 
-[**PutTextAnnotation**](PdfApi.md#puttextannotation) | **PUT** /pdf/{name}/annotations/text/{annotationId} | Replace document text annotation
-[**PutUpdateField**](PdfApi.md#putupdatefield) | **PUT** /pdf/{name}/fields/{fieldName} | Update field.
-[**PutUpdateFields**](PdfApi.md#putupdatefields) | **PUT** /pdf/{name}/fields | Update fields.
-[**PutWebInStorageToPdf**](PdfApi.md#putwebinstoragetopdf) | **PUT** /pdf/{name}/create/web | Convert web page to PDF format and upload resulting file to storage. 
+[**PutPdfInStorageToDoc**](PdfApi.md#putpdfinstoragetodoc) | **PUT** /pdf/\{name}/convert/doc | Converts PDF document (located on storage) to DOC format and uploads resulting file to storage
+[**PutPdfInStorageToEpub**](PdfApi.md#putpdfinstoragetoepub) | **PUT** /pdf/\{name}/convert/epub | Converts PDF document (located on storage) to EPUB format and uploads resulting file to storage
+[**PutPdfInStorageToHtml**](PdfApi.md#putpdfinstoragetohtml) | **PUT** /pdf/\{name}/convert/html | Converts PDF document (located on storage) to Html format and uploads resulting file to storage
+[**PutPdfInStorageToLaTeX**](PdfApi.md#putpdfinstoragetolatex) | **PUT** /pdf/\{name}/convert/latex | Converts PDF document (located on storage) to LaTeX format and uploads resulting file to storage
+[**PutPdfInStorageToMobiXml**](PdfApi.md#putpdfinstoragetomobixml) | **PUT** /pdf/\{name}/convert/mobixml | Converts PDF document (located on storage) to MOBIXML format and uploads resulting file to storage
+[**PutPdfInStorageToPdfA**](PdfApi.md#putpdfinstoragetopdfa) | **PUT** /pdf/\{name}/convert/pdfa | Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage
+[**PutPdfInStorageToPptx**](PdfApi.md#putpdfinstoragetopptx) | **PUT** /pdf/\{name}/convert/pptx | Converts PDF document (located on storage) to PPTX format and uploads resulting file to storage
+[**PutPdfInStorageToSvg**](PdfApi.md#putpdfinstoragetosvg) | **PUT** /pdf/\{name}/convert/svg | Converts PDF document (located on storage) to SVG format and uploads resulting file to storage
+[**PutPdfInStorageToTiff**](PdfApi.md#putpdfinstoragetotiff) | **PUT** /pdf/\{name}/convert/tiff | Converts PDF document (located on storage) to TIFF format and uploads resulting file to storage
+[**PutPdfInStorageToXls**](PdfApi.md#putpdfinstoragetoxls) | **PUT** /pdf/\{name}/convert/xls | Converts PDF document (located on storage) to XLS format and uploads resulting file to storage
+[**PutPdfInStorageToXml**](PdfApi.md#putpdfinstoragetoxml) | **PUT** /pdf/\{name}/convert/xml | Converts PDF document (located on storage) to XML format and uploads resulting file to storage
+[**PutPdfInStorageToXps**](PdfApi.md#putpdfinstoragetoxps) | **PUT** /pdf/\{name}/convert/xps | Converts PDF document (located on storage) to XPS format and uploads resulting file to storage
+[**PutPrivileges**](PdfApi.md#putprivileges) | **PUT** /pdf/\{name}/privileges | Update privilege document.
+[**PutPsInStorageToPdf**](PdfApi.md#putpsinstoragetopdf) | **PUT** /pdf/\{name}/create/ps | Convert PS file (located on storage) to PDF format and upload resulting file to storage. 
+[**PutReplaceImage**](PdfApi.md#putreplaceimage) | **PUT** /pdf/\{name}/images/\{imageId} | Replace document image.
+[**PutSearchableDocument**](PdfApi.md#putsearchabledocument) | **PUT** /pdf/\{name}/ocr | Create searchable PDF document. Generate OCR layer for images in input PDF document.
+[**PutSetProperty**](PdfApi.md#putsetproperty) | **PUT** /pdf/\{name}/documentproperties/\{propertyName} | Add/update document property.
+[**PutSvgInStorageToPdf**](PdfApi.md#putsvginstoragetopdf) | **PUT** /pdf/\{name}/create/svg | Convert SVG file (located on storage) to PDF format and upload resulting file to storage. 
+[**PutTextAnnotation**](PdfApi.md#puttextannotation) | **PUT** /pdf/\{name}/annotations/text/\{annotationId} | Replace document text annotation
+[**PutUpdateField**](PdfApi.md#putupdatefield) | **PUT** /pdf/\{name}/fields/\{fieldName} | Update field.
+[**PutUpdateFields**](PdfApi.md#putupdatefields) | **PUT** /pdf/\{name}/fields | Update fields.
+[**PutWebInStorageToPdf**](PdfApi.md#putwebinstoragetopdf) | **PUT** /pdf/\{name}/create/web | Convert web page to PDF format and upload resulting file to storage. 
 [**PutXfaPdfInRequestToAcroForm**](PdfApi.md#putxfapdfinrequesttoacroform) | **PUT** /pdf/convert/xfatoacroform | Converts PDF document which contatins XFA form (in request content) to PDF with AcroForm and uploads resulting file to storage.
-[**PutXfaPdfInStorageToAcroForm**](PdfApi.md#putxfapdfinstoragetoacroform) | **PUT** /pdf/{name}/convert/xfatoacroform | Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and uploads resulting file to storage
-[**PutXmlInStorageToPdf**](PdfApi.md#putxmlinstoragetopdf) | **PUT** /pdf/{name}/create/xml | Convert XML file (located on storage) to PDF format and upload resulting file to storage. 
-[**PutXpsInStorageToPdf**](PdfApi.md#putxpsinstoragetopdf) | **PUT** /pdf/{name}/create/xps | Convert XPS file (located on storage) to PDF format and upload resulting file to storage. 
-[**PutXslFoInStorageToPdf**](PdfApi.md#putxslfoinstoragetopdf) | **PUT** /pdf/{name}/create/xslfo | Convert XslFo file (located on storage) to PDF format and upload resulting file to storage. 
+[**PutXfaPdfInStorageToAcroForm**](PdfApi.md#putxfapdfinstoragetoacroform) | **PUT** /pdf/\{name}/convert/xfatoacroform | Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and uploads resulting file to storage
+[**PutXmlInStorageToPdf**](PdfApi.md#putxmlinstoragetopdf) | **PUT** /pdf/\{name}/create/xml | Convert XML file (located on storage) to PDF format and upload resulting file to storage. 
+[**PutXpsInStorageToPdf**](PdfApi.md#putxpsinstoragetopdf) | **PUT** /pdf/\{name}/create/xps | Convert XPS file (located on storage) to PDF format and upload resulting file to storage. 
+[**PutXslFoInStorageToPdf**](PdfApi.md#putxslfoinstoragetopdf) | **PUT** /pdf/\{name}/create/xslfo | Convert XslFo file (located on storage) to PDF format and upload resulting file to storage. 
 
 
 <a name="deleteannotation"></a>
@@ -167,40 +167,6 @@ Method | HTTP request | Description
 
 Delete document annotation by ID
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class DeleteAnnotationExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var annotationId = annotationId_example;  // string | The annotation ID.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Delete document annotation by ID
-                AsposeResponse result = apiInstance.DeleteAnnotation(name, annotationId, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.DeleteAnnotation: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -232,39 +198,6 @@ No authorization required
 
 Delete all annotations from the document
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class DeleteDocumentAnnotationsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Delete all annotations from the document
-                AsposeResponse result = apiInstance.DeleteDocumentAnnotations(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.DeleteDocumentAnnotations: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -295,39 +228,6 @@ No authorization required
 
 Delete all link annotations from the document
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class DeleteDocumentLinkAnnotationsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Delete all link annotations from the document
-                AsposeResponse result = apiInstance.DeleteDocumentLinkAnnotations(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.DeleteDocumentLinkAnnotations: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -358,40 +258,6 @@ No authorization required
 
 Delete document field by name.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class DeleteFieldExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var fieldName = fieldName_example;  // string | The field name/
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Delete document field by name.
-                AsposeResponse result = apiInstance.DeleteField(name, fieldName, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.DeleteField: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -423,40 +289,6 @@ No authorization required
 
 Delete image from document page.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class DeleteImageExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var imageId = imageId_example;  // string | Image ID.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Delete image from document page.
-                AsposeResponse result = apiInstance.DeleteImage(name, imageId, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.DeleteImage: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -488,40 +320,6 @@ No authorization required
 
 Delete document page link annotation by ID
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class DeleteLinkAnnotationExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var linkId = linkId_example;  // string | The link ID.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Delete document page link annotation by ID
-                AsposeResponse result = apiInstance.DeleteLinkAnnotation(name, linkId, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.DeleteLinkAnnotation: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -553,40 +351,6 @@ No authorization required
 
 Delete document page by its number.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class DeletePageExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Delete document page by its number.
-                AsposeResponse result = apiInstance.DeletePage(name, pageNumber, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.DeletePage: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -618,40 +382,6 @@ No authorization required
 
 Delete all annotations from the page
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class DeletePageAnnotationsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Delete all annotations from the page
-                AsposeResponse result = apiInstance.DeletePageAnnotations(name, pageNumber, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.DeletePageAnnotations: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -683,40 +413,6 @@ No authorization required
 
 Delete all link annotations from the page
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class DeletePageLinkAnnotationsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Delete all link annotations from the page
-                AsposeResponse result = apiInstance.DeletePageLinkAnnotations(name, pageNumber, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.DeletePageLinkAnnotations: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -748,39 +444,6 @@ No authorization required
 
 Delete custom document properties.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class DeletePropertiesExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | 
-            var storage = storage_example;  // string |  (optional) 
-            var folder = folder_example;  // string |  (optional) 
-
-            try
-            {
-                // Delete custom document properties.
-                AsposeResponse result = apiInstance.DeleteProperties(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.DeleteProperties: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -811,40 +474,6 @@ No authorization required
 
 Delete document property.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class DeletePropertyExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | 
-            var propertyName = propertyName_example;  // string | 
-            var storage = storage_example;  // string |  (optional) 
-            var folder = folder_example;  // string |  (optional) 
-
-            try
-            {
-                // Delete document property.
-                AsposeResponse result = apiInstance.DeleteProperty(name, propertyName, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.DeleteProperty: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -876,39 +505,6 @@ No authorization required
 
 Read common document info.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetDocumentExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read common document info.
-                DocumentResponse result = apiInstance.GetDocument(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetDocument: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -939,39 +535,6 @@ No authorization required
 
 Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetDocumentAnnotationsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
-                AnnotationsInfoResponse result = apiInstance.GetDocumentAnnotations(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetDocumentAnnotations: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1002,40 +565,6 @@ No authorization required
 
 Read document attachment info by its index.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetDocumentAttachmentByIndexExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var attachmentIndex = 56;  // int? | The attachment index.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document attachment info by its index.
-                AttachmentResponse result = apiInstance.GetDocumentAttachmentByIndex(name, attachmentIndex, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetDocumentAttachmentByIndex: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1067,39 +596,6 @@ No authorization required
 
 Read document attachments info.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetDocumentAttachmentsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document attachments info.
-                AttachmentsResponse result = apiInstance.GetDocumentAttachments(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetDocumentAttachments: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1130,40 +626,6 @@ No authorization required
 
 Read document bookmark/bookmarks (including children).
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetDocumentBookmarksExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var bookmarkPath = bookmarkPath_example;  // string | The bookmark path. Leave it empty if you want to get all the bookmarks in the document. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document bookmark/bookmarks (including children).
-                System.IO.Stream result = apiInstance.GetDocumentBookmarks(name, bookmarkPath, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetDocumentBookmarks: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1195,39 +657,6 @@ No authorization required
 
 Read document free text annotations.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetDocumentFreeTextAnnotationsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document free text annotations.
-                FreeTextAnnotationsResponse result = apiInstance.GetDocumentFreeTextAnnotations(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetDocumentFreeTextAnnotations: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1258,39 +687,6 @@ No authorization required
 
 Read document properties.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetDocumentPropertiesExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | 
-            var storage = storage_example;  // string |  (optional) 
-            var folder = folder_example;  // string |  (optional) 
-
-            try
-            {
-                // Read document properties.
-                DocumentPropertiesResponse result = apiInstance.GetDocumentProperties(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetDocumentProperties: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1321,40 +717,6 @@ No authorization required
 
 Read document property by name.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetDocumentPropertyExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | 
-            var propertyName = propertyName_example;  // string | 
-            var storage = storage_example;  // string |  (optional) 
-            var folder = folder_example;  // string |  (optional) 
-
-            try
-            {
-                // Read document property by name.
-                DocumentPropertyResponse result = apiInstance.GetDocumentProperty(name, propertyName, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetDocumentProperty: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1386,39 +748,6 @@ No authorization required
 
 Read document text annotations.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetDocumentTextAnnotationsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document text annotations.
-                TextAnnotationsResponse result = apiInstance.GetDocumentTextAnnotations(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetDocumentTextAnnotations: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1449,39 +778,6 @@ No authorization required
 
 Download a specific file 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetDownloadExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var path = path_example;  // string | Path of the file including the file name and extension e.g. /file.ext
-            var versionId = versionId_example;  // string | File's version (optional) 
-            var storage = storage_example;  // string | User's storage name (optional) 
-
-            try
-            {
-                // Download a specific file 
-                System.IO.Stream result = apiInstance.GetDownload(path, versionId, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetDownload: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1512,40 +808,6 @@ No authorization required
 
 Download document attachment content by its index.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetDownloadDocumentAttachmentByIndexExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var attachmentIndex = 56;  // int? | The attachment index.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Download document attachment content by its index.
-                System.IO.Stream result = apiInstance.GetDownloadDocumentAttachmentByIndex(name, attachmentIndex, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetDownloadDocumentAttachmentByIndex: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1577,38 +839,6 @@ No authorization required
 
 Convert EPUB file (located on storage) to PDF format and return resulting file in response. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetEpubInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.epub)
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert EPUB file (located on storage) to PDF format and return resulting file in response. 
-                System.IO.Stream result = apiInstance.GetEpubInStorageToPdf(srcPath, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetEpubInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1638,40 +868,6 @@ No authorization required
 
 Get document field by name.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetFieldExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var fieldName = fieldName_example;  // string | The field name/
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Get document field by name.
-                FieldResponse result = apiInstance.GetField(name, fieldName, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetField: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1703,39 +899,6 @@ No authorization required
 
 Get document fields.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetFieldsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Get document fields.
-                FieldsResponse result = apiInstance.GetFields(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetFields: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1766,40 +929,6 @@ No authorization required
 
 Read document page free text annotation by ID.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetFreeTextAnnotationExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var annotationId = annotationId_example;  // string | The annotation ID.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document page free text annotation by ID.
-                FreeTextAnnotationResponse result = apiInstance.GetFreeTextAnnotation(name, annotationId, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetFreeTextAnnotation: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1831,46 +960,6 @@ No authorization required
 
 Convert HTML file (located on storage) to PDF format and return resulting file in response. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetHtmlInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.zip)
-            var htmlFileName = htmlFileName_example;  // string | Name of HTML file in ZIP.
-            var height = 1.2;  // double? | Page height (optional) 
-            var width = 1.2;  // double? | Page width (optional) 
-            var isLandscape = true;  // bool? | Is page landscaped (optional) 
-            var marginLeft = 1.2;  // double? | Page margin left (optional) 
-            var marginBottom = 1.2;  // double? | Page margin bottom (optional) 
-            var marginRight = 1.2;  // double? | Page margin right (optional) 
-            var marginTop = 1.2;  // double? | Page margin top (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert HTML file (located on storage) to PDF format and return resulting file in response. 
-                System.IO.Stream result = apiInstance.GetHtmlInStorageToPdf(srcPath, htmlFileName, height, width, isLandscape, marginLeft, marginBottom, marginRight, marginTop, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetHtmlInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1908,40 +997,6 @@ No authorization required
 
 Read document image by ID.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetImageExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var imageId = imageId_example;  // string | Image ID.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document image by ID.
-                ImageResponse result = apiInstance.GetImage(name, imageId, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetImage: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -1973,42 +1028,6 @@ No authorization required
 
 Extract document image in GIF format
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetImageExtractAsGifExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var imageId = imageId_example;  // string | Image ID.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Extract document image in GIF format
-                System.IO.Stream result = apiInstance.GetImageExtractAsGif(name, imageId, width, height, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetImageExtractAsGif: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2042,42 +1061,6 @@ No authorization required
 
 Extract document image in JPEG format
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetImageExtractAsJpegExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var imageId = imageId_example;  // string | Image ID.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Extract document image in JPEG format
-                System.IO.Stream result = apiInstance.GetImageExtractAsJpeg(name, imageId, width, height, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetImageExtractAsJpeg: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2111,42 +1094,6 @@ No authorization required
 
 Extract document image in PNG format
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetImageExtractAsPngExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var imageId = imageId_example;  // string | Image ID.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Extract document image in PNG format
-                System.IO.Stream result = apiInstance.GetImageExtractAsPng(name, imageId, width, height, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetImageExtractAsPng: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2180,42 +1127,6 @@ No authorization required
 
 Extract document image in TIFF format
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetImageExtractAsTiffExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var imageId = imageId_example;  // string | Image ID.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Extract document image in TIFF format
-                System.IO.Stream result = apiInstance.GetImageExtractAsTiff(name, imageId, width, height, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetImageExtractAsTiff: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2249,40 +1160,6 @@ No authorization required
 
 Read document images.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetImagesExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document images.
-                ImagesResponse result = apiInstance.GetImages(name, pageNumber, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetImages: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2314,38 +1191,6 @@ No authorization required
 
 Convert LaTeX file (located on storage) to PDF format and return resulting file in response. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetLaTeXInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.tex)
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert LaTeX file (located on storage) to PDF format and return resulting file in response. 
-                System.IO.Stream result = apiInstance.GetLaTeXInStorageToPdf(srcPath, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetLaTeXInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2375,40 +1220,6 @@ No authorization required
 
 Read document link annotation by ID.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetLinkAnnotationExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var linkId = linkId_example;  // string | The link ID.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document link annotation by ID.
-                LinkAnnotationResponse result = apiInstance.GetLinkAnnotation(name, linkId, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetLinkAnnotation: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2440,38 +1251,6 @@ No authorization required
 
 Convert MHT file (located on storage) to PDF format and return resulting file in response. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetMhtInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.mht)
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert MHT file (located on storage) to PDF format and return resulting file in response. 
-                System.IO.Stream result = apiInstance.GetMhtInStorageToPdf(srcPath, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetMhtInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2501,40 +1280,6 @@ No authorization required
 
 Read document page info.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPageExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document page info.
-                DocumentPageResponse result = apiInstance.GetPage(name, pageNumber, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPage: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2566,40 +1311,6 @@ No authorization required
 
 Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPageAnnotationsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
-                AnnotationsInfoResponse result = apiInstance.GetPageAnnotations(name, pageNumber, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPageAnnotations: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2631,42 +1342,6 @@ No authorization required
 
 Convert document page to Bmp image and return resulting file in response.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPageConvertToBmpExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert document page to Bmp image and return resulting file in response.
-                System.IO.Stream result = apiInstance.GetPageConvertToBmp(name, pageNumber, width, height, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPageConvertToBmp: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2700,42 +1375,6 @@ No authorization required
 
 Convert document page to Emf image and return resulting file in response.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPageConvertToEmfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert document page to Emf image and return resulting file in response.
-                System.IO.Stream result = apiInstance.GetPageConvertToEmf(name, pageNumber, width, height, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPageConvertToEmf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2769,42 +1408,6 @@ No authorization required
 
 Convert document page to Gif image and return resulting file in response.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPageConvertToGifExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert document page to Gif image and return resulting file in response.
-                System.IO.Stream result = apiInstance.GetPageConvertToGif(name, pageNumber, width, height, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPageConvertToGif: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2838,42 +1441,6 @@ No authorization required
 
 Convert document page to Jpeg image and return resulting file in response.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPageConvertToJpegExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert document page to Jpeg image and return resulting file in response.
-                System.IO.Stream result = apiInstance.GetPageConvertToJpeg(name, pageNumber, width, height, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPageConvertToJpeg: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2907,42 +1474,6 @@ No authorization required
 
 Convert document page to Png image and return resulting file in response.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPageConvertToPngExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert document page to Png image and return resulting file in response.
-                System.IO.Stream result = apiInstance.GetPageConvertToPng(name, pageNumber, width, height, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPageConvertToPng: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -2976,42 +1507,6 @@ No authorization required
 
 Convert document page to Tiff image  and return resulting file in response.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPageConvertToTiffExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert document page to Tiff image  and return resulting file in response.
-                System.IO.Stream result = apiInstance.GetPageConvertToTiff(name, pageNumber, width, height, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPageConvertToTiff: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -3045,40 +1540,6 @@ No authorization required
 
 Read document page free text annotations.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPageFreeTextAnnotationsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document page free text annotations.
-                FreeTextAnnotationsResponse result = apiInstance.GetPageFreeTextAnnotations(name, pageNumber, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPageFreeTextAnnotations: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -3110,41 +1571,6 @@ No authorization required
 
 Read document page link annotation by ID.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPageLinkAnnotationExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var linkId = linkId_example;  // string | The link ID.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document page link annotation by ID.
-                LinkAnnotationResponse result = apiInstance.GetPageLinkAnnotation(name, pageNumber, linkId, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPageLinkAnnotation: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -3177,40 +1603,6 @@ No authorization required
 
 Read document page link annotations.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPageLinkAnnotationsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document page link annotations.
-                LinkAnnotationsResponse result = apiInstance.GetPageLinkAnnotations(name, pageNumber, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPageLinkAnnotations: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -3242,47 +1634,6 @@ No authorization required
 
 Read page text items.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPageTextExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | Number of page (starting from 1).
-            var LLX = 1.2;  // double? | 
-            var LLY = 1.2;  // double? | 
-            var URX = 1.2;  // double? | 
-            var URY = 1.2;  // double? | 
-            var format = new List<string>(); // List<string> | List of formats for search. (optional) 
-            var regex = regex_example;  // string | Formats are specified as a regular expression. (optional) 
-            var splitRects = true;  // bool? | Split result fragments (default is true). (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Read page text items.
-                TextRectsResponse result = apiInstance.GetPageText(name, pageNumber, LLX, LLY, URX, URY, format, regex, splitRects, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPageText: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -3321,40 +1672,6 @@ No authorization required
 
 Read document page text annotations.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPageTextAnnotationsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document page text annotations.
-                TextAnnotationsResponse result = apiInstance.GetPageTextAnnotations(name, pageNumber, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPageTextAnnotations: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -3386,39 +1703,6 @@ No authorization required
 
 Read document pages info.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPagesExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document pages info.
-                DocumentPagesResponse result = apiInstance.GetPages(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPages: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -3449,38 +1733,6 @@ No authorization required
 
 Convert PCL file (located on storage) to PDF format and return resulting file in response. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPclInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.pcl)
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert PCL file (located on storage) to PDF format and return resulting file in response. 
-                System.IO.Stream result = apiInstance.GetPclInStorageToPdf(srcPath, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPclInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -3510,47 +1762,6 @@ No authorization required
 
 Converts PDF document (located on storage) to DOC format and returns resulting file in response content
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPdfInStorageToDocExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var addReturnToLineEnd = true;  // bool? | Add return to line end. (optional) 
-            var format = format_example;  // string | Allows to specify .doc or .docx file format. (optional) 
-            var imageResolutionX = 56;  // int? | Image resolution X. (optional) 
-            var imageResolutionY = 56;  // int? | Image resolution Y. (optional) 
-            var maxDistanceBetweenTextLines = 1.2;  // double? | Max distance between text lines. (optional) 
-            var mode = mode_example;  // string | Allows to control how a PDF document is converted into a word processing document. (optional) 
-            var recognizeBullets = true;  // bool? | Recognize bullets. (optional) 
-            var relativeHorizontalProximity = 1.2;  // double? | Relative horizontal proximity. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to DOC format and returns resulting file in response content
-                System.IO.Stream result = apiInstance.GetPdfInStorageToDoc(name, addReturnToLineEnd, format, imageResolutionX, imageResolutionY, maxDistanceBetweenTextLines, mode, recognizeBullets, relativeHorizontalProximity, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPdfInStorageToDoc: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -3589,40 +1800,6 @@ No authorization required
 
 Converts PDF document (located on storage) to EPUB format and returns resulting file in response content
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPdfInStorageToEpubExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var contentRecognitionMode = contentRecognitionMode_example;  // string | ?roperty tunes conversion for this or that desirable method of recognition of content. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to EPUB format and returns resulting file in response content
-                System.IO.Stream result = apiInstance.GetPdfInStorageToEpub(name, contentRecognitionMode, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPdfInStorageToEpub: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -3654,67 +1831,6 @@ No authorization required
 
 Converts PDF document (located on storage) to Html format and returns resulting file in response content
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPdfInStorageToHtmlExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var additionalMarginWidthInPoints = 56;  // int? | Defines width of margin that will be forcibly left around that output HTML-areas. (optional) 
-            var compressSvgGraphicsIfAny = true;  // bool? | The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional) 
-            var convertMarkedContentToLayers = true;  // bool? | If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \"data-pdflayer\" attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional) 
-            var defaultFontName = defaultFontName_example;  // string | Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional) 
-            var documentType = documentType_example;  // string | Result document type. (optional) 
-            var fixedLayout = true;  // bool? | The value indicating whether that HTML is created as fixed layout. (optional) 
-            var imageResolution = 56;  // int? | Resolution for image rendering. (optional) 
-            var minimalLineWidth = 56;  // int? | This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional) 
-            var preventGlyphsGrouping = true;  // bool? | This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional) 
-            var splitCssIntoPages = true;  // bool? | When multipage-mode selected(i.e 'SplitIntoPages' is 'true'), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional) 
-            var splitIntoPages = true;  // bool? | The flag that indicates whether each page of source document will be converted into it's own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional) 
-            var useZOrder = true;  // bool? | If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional) 
-            var antialiasingProcessing = antialiasingProcessing_example;  // string | The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional) 
-            var cssClassNamesPrefix = cssClassNamesPrefix_example;  // string | When PDFtoHTML converter generates result CSSs, CSS class names (something like \".stl_01 {}\" ... \".stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional) 
-            var explicitListOfSavedPages = new List<int?>(); // List<int?> | With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional) 
-            var fontEncodingStrategy = fontEncodingStrategy_example;  // string | Defines encoding special rule to tune PDF decoding for current document. (optional) 
-            var fontSavingMode = fontSavingMode_example;  // string | Defines font saving mode that will be used during saving of PDF to desirable format. (optional) 
-            var htmlMarkupGenerationMode = htmlMarkupGenerationMode_example;  // string | Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional) 
-            var lettersPositioningMethod = lettersPositioningMethod_example;  // string | The mode of positioning of letters in words in result HTML. (optional) 
-            var pagesFlowTypeDependsOnViewersScreenSize = true;  // bool? | If attribute 'SplitOnPages=false', than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional) 
-            var partsEmbeddingMode = partsEmbeddingMode_example;  // string | It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional) 
-            var rasterImagesSavingMode = rasterImagesSavingMode_example;  // string | Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional) 
-            var removeEmptyAreasOnTopAndBottom = true;  // bool? | Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional) 
-            var saveShadowedTextsAsTransparentTexts = true;  // bool? | Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional) 
-            var saveTransparentTexts = true;  // bool? | Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional) 
-            var specialFolderForAllImages = specialFolderForAllImages_example;  // string | The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional) 
-            var specialFolderForSvgImages = specialFolderForSvgImages_example;  // string | The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional) 
-            var trySaveTextUnderliningAndStrikeoutingInCss = true;  // bool? | PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text's underlining and put this info into CSS instead of drawing of underlining graphically. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to Html format and returns resulting file in response content
-                System.IO.Stream result = apiInstance.GetPdfInStorageToHtml(name, additionalMarginWidthInPoints, compressSvgGraphicsIfAny, convertMarkedContentToLayers, defaultFontName, documentType, fixedLayout, imageResolution, minimalLineWidth, preventGlyphsGrouping, splitCssIntoPages, splitIntoPages, useZOrder, antialiasingProcessing, cssClassNamesPrefix, explicitListOfSavedPages, fontEncodingStrategy, fontSavingMode, htmlMarkupGenerationMode, lettersPositioningMethod, pagesFlowTypeDependsOnViewersScreenSize, partsEmbeddingMode, rasterImagesSavingMode, removeEmptyAreasOnTopAndBottom, saveShadowedTextsAsTransparentTexts, saveTransparentTexts, specialFolderForAllImages, specialFolderForSvgImages, trySaveTextUnderliningAndStrikeoutingInCss, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPdfInStorageToHtml: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -3773,40 +1889,6 @@ No authorization required
 
 Converts PDF document (located on storage) to LaTeX format and returns resulting file in response content
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPdfInStorageToLaTeXExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pagesCount = 56;  // int? | Pages count. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to LaTeX format and returns resulting file in response content
-                System.IO.Stream result = apiInstance.GetPdfInStorageToLaTeX(name, pagesCount, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPdfInStorageToLaTeX: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -3838,39 +1920,6 @@ No authorization required
 
 Converts PDF document (located on storage) to MOBIXML format and returns resulting file in response content
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPdfInStorageToMobiXmlExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to MOBIXML format and returns resulting file in response content
-                System.IO.Stream result = apiInstance.GetPdfInStorageToMobiXml(name, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPdfInStorageToMobiXml: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -3901,40 +1950,6 @@ No authorization required
 
 Converts PDF document (located on storage) to PdfA format and returns resulting file in response content
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPdfInStorageToPdfAExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var type = type_example;  // string | Type of PdfA format.
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to PdfA format and returns resulting file in response content
-                System.IO.Stream result = apiInstance.GetPdfInStorageToPdfA(name, type, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPdfInStorageToPdfA: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -3966,41 +1981,6 @@ No authorization required
 
 Converts PDF document (located on storage) to PPTX format and returns resulting file in response content
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPdfInStorageToPptxExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var separateImages = true;  // bool? | Separate images. (optional) 
-            var slidesAsImages = true;  // bool? | Slides as images. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to PPTX format and returns resulting file in response content
-                System.IO.Stream result = apiInstance.GetPdfInStorageToPptx(name, separateImages, slidesAsImages, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPdfInStorageToPptx: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4033,40 +2013,6 @@ No authorization required
 
 Converts PDF document (located on storage) to SVG format and returns resulting file in response content
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPdfInStorageToSvgExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var compressOutputToZipArchive = true;  // bool? | Specifies whether output will be created as one zip-archive. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to SVG format and returns resulting file in response content
-                System.IO.Stream result = apiInstance.GetPdfInStorageToSvg(name, compressOutputToZipArchive, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPdfInStorageToSvg: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4098,54 +2044,6 @@ No authorization required
 
 Converts PDF document (located on storage) to TIFF format and returns resulting file in response content
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPdfInStorageToTiffExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var brightness = 1.2;  // double? | Image brightness. (optional) 
-            var compression = compression_example;  // string | Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional) 
-            var colorDepth = colorDepth_example;  // string | Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional) 
-            var leftMargin = 56;  // int? | Left image margin. (optional) 
-            var rightMargin = 56;  // int? | Right image margin. (optional) 
-            var topMargin = 56;  // int? | Top image margin. (optional) 
-            var bottomMargin = 56;  // int? | Bottom image margin. (optional) 
-            var orientation = orientation_example;  // string | Image orientation. Possible values are: None, Landscape, Portait. (optional) 
-            var skipBlankPages = true;  // bool? | Skip blank pages flag. (optional) 
-            var width = 56;  // int? | Image width. (optional) 
-            var height = 56;  // int? | Image height. (optional) 
-            var xResolution = 56;  // int? | Horizontal resolution. (optional) 
-            var yResolution = 56;  // int? | Vertical resolution. (optional) 
-            var pageIndex = 56;  // int? | Start page to export. (optional) 
-            var pageCount = 56;  // int? | Number of pages to export. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to TIFF format and returns resulting file in response content
-                System.IO.Stream result = apiInstance.GetPdfInStorageToTiff(name, brightness, compression, colorDepth, leftMargin, rightMargin, topMargin, bottomMargin, orientation, skipBlankPages, width, height, xResolution, yResolution, pageIndex, pageCount, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPdfInStorageToTiff: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4191,43 +2089,6 @@ No authorization required
 
 Converts PDF document (located on storage) to XLS format and returns resulting file in response content
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPdfInStorageToXlsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var insertBlankColumnAtFirst = true;  // bool? | Insert blank column at first (optional) 
-            var minimizeTheNumberOfWorksheets = true;  // bool? | Minimize the number of worksheets (optional) 
-            var scaleFactor = 1.2;  // double? | Scale factor (optional) 
-            var uniformWorksheets = true;  // bool? | Uniform worksheets (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to XLS format and returns resulting file in response content
-                System.IO.Stream result = apiInstance.GetPdfInStorageToXls(name, insertBlankColumnAtFirst, minimizeTheNumberOfWorksheets, scaleFactor, uniformWorksheets, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPdfInStorageToXls: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4262,39 +2123,6 @@ No authorization required
 
 Converts PDF document (located on storage) to XML format and returns resulting file in response content
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPdfInStorageToXmlExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to XML format and returns resulting file in response content
-                System.IO.Stream result = apiInstance.GetPdfInStorageToXml(name, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPdfInStorageToXml: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4325,39 +2153,6 @@ No authorization required
 
 Converts PDF document (located on storage) to XPS format and returns resulting file in response content
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPdfInStorageToXpsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to XPS format and returns resulting file in response content
-                System.IO.Stream result = apiInstance.GetPdfInStorageToXps(name, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPdfInStorageToXps: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4388,38 +2183,6 @@ No authorization required
 
 Convert PS file (located on storage) to PDF format and return resulting file in response. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetPsInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.ps)
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert PS file (located on storage) to PDF format and return resulting file in response. 
-                System.IO.Stream result = apiInstance.GetPsInStorageToPdf(srcPath, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetPsInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4449,46 +2212,6 @@ No authorization required
 
 Convert SVG file (located on storage) to PDF format and return resulting file in response. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetSvgInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.svg)
-            var adjustPageSize = true;  // bool? | Adjust page size (optional) 
-            var height = 1.2;  // double? | Page height (optional) 
-            var width = 1.2;  // double? | Page width (optional) 
-            var isLandscape = true;  // bool? | Is page landscaped (optional) 
-            var marginLeft = 1.2;  // double? | Page margin left (optional) 
-            var marginBottom = 1.2;  // double? | Page margin bottom (optional) 
-            var marginRight = 1.2;  // double? | Page margin right (optional) 
-            var marginTop = 1.2;  // double? | Page margin top (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert SVG file (located on storage) to PDF format and return resulting file in response. 
-                System.IO.Stream result = apiInstance.GetSvgInStorageToPdf(srcPath, adjustPageSize, height, width, isLandscape, marginLeft, marginBottom, marginRight, marginTop, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetSvgInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4526,46 +2249,6 @@ No authorization required
 
 Read document text.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetTextExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var LLX = 1.2;  // double? | 
-            var LLY = 1.2;  // double? | 
-            var URX = 1.2;  // double? | 
-            var URY = 1.2;  // double? | 
-            var format = new List<string>(); // List<string> | List of formats for search. (optional) 
-            var regex = regex_example;  // string | Formats are specified as a regular expression. (optional) 
-            var splitRects = true;  // bool? | Split result fragments (default is true). (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Read document text.
-                TextRectsResponse result = apiInstance.GetText(name, LLX, LLY, URX, URY, format, regex, splitRects, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetText: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4603,40 +2286,6 @@ No authorization required
 
 Read document page text annotation by ID.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetTextAnnotationExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var annotationId = annotationId_example;  // string | The annotation ID.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Read document page text annotation by ID.
-                TextAnnotationResponse result = apiInstance.GetTextAnnotation(name, annotationId, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetTextAnnotation: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4668,40 +2317,6 @@ No authorization required
 
 Verify signature document.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetVerifySignatureExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var signName = signName_example;  // string | Sign name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Verify signature document.
-                SignatureVerifyResponse result = apiInstance.GetVerifySignature(name, signName, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetVerifySignature: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4733,45 +2348,6 @@ No authorization required
 
 Convert web page to PDF format and return resulting file in response. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetWebInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var url = url_example;  // string | Source url
-            var height = 1.2;  // double? | Page height (optional) 
-            var width = 1.2;  // double? | Page width (optional) 
-            var isLandscape = true;  // bool? | Is page landscaped (optional) 
-            var marginLeft = 1.2;  // double? | Page margin left (optional) 
-            var marginBottom = 1.2;  // double? | Page margin bottom (optional) 
-            var marginRight = 1.2;  // double? | Page margin right (optional) 
-            var marginTop = 1.2;  // double? | Page margin top (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert web page to PDF format and return resulting file in response. 
-                System.IO.Stream result = apiInstance.GetWebInStorageToPdf(url, height, width, isLandscape, marginLeft, marginBottom, marginRight, marginTop, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetWebInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4808,39 +2384,6 @@ No authorization required
 
 Get number of words per document page.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetWordsPerPageExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Get number of words per document page.
-                WordCountResponse result = apiInstance.GetWordsPerPage(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetWordsPerPage: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4871,39 +2414,6 @@ No authorization required
 
 Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and returns resulting file response content
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetXfaPdfInStorageToAcroFormExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and returns resulting file response content
-                System.IO.Stream result = apiInstance.GetXfaPdfInStorageToAcroForm(name, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetXfaPdfInStorageToAcroForm: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4934,39 +2444,6 @@ No authorization required
 
 Convert XML file (located on storage) to PDF format and return resulting file in response. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetXmlInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.xml)
-            var xslFilePath = xslFilePath_example;  // string | Full XSL source filename (ex. /folder1/folder2/template.xsl) (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert XML file (located on storage) to PDF format and return resulting file in response. 
-                System.IO.Stream result = apiInstance.GetXmlInStorageToPdf(srcPath, xslFilePath, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetXmlInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -4997,38 +2474,6 @@ No authorization required
 
 Convert XPS file (located on storage) to PDF format and return resulting file in response. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetXpsInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.xps)
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert XPS file (located on storage) to PDF format and return resulting file in response. 
-                System.IO.Stream result = apiInstance.GetXpsInStorageToPdf(srcPath, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetXpsInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -5058,38 +2503,6 @@ No authorization required
 
 Convert XslFo file (located on storage) to PDF format and return resulting file in response. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class GetXslFoInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.xslfo)
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert XslFo file (located on storage) to PDF format and return resulting file in response. 
-                System.IO.Stream result = apiInstance.GetXslFoInStorageToPdf(srcPath, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.GetXslFoInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -5119,43 +2532,6 @@ No authorization required
 
 Append document to existing one.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PostAppendDocumentExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The original document name.
-            var appendDocument = new AppendDocument(); // AppendDocument | with the append document data. (optional) 
-            var appendFile = appendFile_example;  // string | Append file server path. (optional) 
-            var startPage = 56;  // int? | Appending start page. (optional)  (default to 0)
-            var endPage = 56;  // int? | Appending end page. (optional)  (default to 0)
-            var storage = storage_example;  // string | The documents storage. (optional) 
-            var folder = folder_example;  // string | The original document folder. (optional) 
-
-            try
-            {
-                // Append document to existing one.
-                DocumentResponse result = apiInstance.PostAppendDocument(name, appendDocument, appendFile, startPage, endPage, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PostAppendDocument: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -5190,41 +2566,6 @@ No authorization required
 
 Create field.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PostCreateFieldExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var page = 56;  // int? | Document page number.
-            var field = new Field(); // Field | with the field data. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Create field.
-                AsposeResponse result = apiInstance.PostCreateField(name, page, field, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PostCreateField: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -5257,40 +2598,6 @@ No authorization required
 
 Document's replace text method.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PostDocumentTextReplaceExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | 
-            var textReplace = new TextReplaceListRequest(); // TextReplaceListRequest | 
-            var storage = storage_example;  // string |  (optional) 
-            var folder = folder_example;  // string |  (optional) 
-
-            try
-            {
-                // Document's replace text method.
-                TextReplaceResponse result = apiInstance.PostDocumentTextReplace(name, textReplace, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PostDocumentTextReplace: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -5322,46 +2629,6 @@ No authorization required
 
 Insert image to document page.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PostInsertImageExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var llx = 1.2;  // double? | Coordinate lower left X.
-            var lly = 1.2;  // double? | Coordinate lower left Y.
-            var urx = 1.2;  // double? | Coordinate upper right X.
-            var ury = 1.2;  // double? | Coordinate upper right Y.
-            var imageFilePath = imageFilePath_example;  // string | Path to image file if specified. Request content is used otherwise. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var image = new System.IO.Stream(); // System.IO.Stream | Image file. (optional) 
-
-            try
-            {
-                // Insert image to document page.
-                AsposeResponse result = apiInstance.PostInsertImage(name, pageNumber, llx, lly, urx, ury, imageFilePath, storage, folder, image);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PostInsertImage: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -5399,41 +2666,6 @@ No authorization required
 
 Move page to new position.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PostMovePageExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var newIndex = 56;  // int? | The new page position/index.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Move page to new position.
-                AsposeResponse result = apiInstance.PostMovePage(name, pageNumber, newIndex, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PostMovePage: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -5466,40 +2698,6 @@ No authorization required
 
 Optimize document.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PostOptimizeDocumentExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var options = new OptimizeOptions(); // OptimizeOptions | The optimization options. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Optimize document.
-                AsposeResponse result = apiInstance.PostOptimizeDocument(name, options, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PostOptimizeDocument: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -5531,41 +2729,6 @@ No authorization required
 
 Add document page free text annotations.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PostPageFreeTextAnnotationsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var annotations = new List<FreeTextAnnotation>(); // List<FreeTextAnnotation> | The array of annotation.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Add document page free text annotations.
-                AsposeResponse result = apiInstance.PostPageFreeTextAnnotations(name, pageNumber, annotations, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PostPageFreeTextAnnotations: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -5598,41 +2761,6 @@ No authorization required
 
 Add document page link annotations.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PostPageLinkAnnotationsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var links = new List<LinkAnnotation>(); // List<LinkAnnotation> | Array of link anotation.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Add document page link annotations.
-                AsposeResponse result = apiInstance.PostPageLinkAnnotations(name, pageNumber, links, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PostPageLinkAnnotations: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -5665,41 +2793,6 @@ No authorization required
 
 Add document page text annotations.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PostPageTextAnnotationsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var annotations = new List<TextAnnotation>(); // List<TextAnnotation> | The array of annotation.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Add document page text annotations.
-                AsposeResponse result = apiInstance.PostPageTextAnnotations(name, pageNumber, annotations, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PostPageTextAnnotations: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -5732,41 +2825,6 @@ No authorization required
 
 Page's replace text method.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PostPageTextReplaceExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | 
-            var pageNumber = 56;  // int? | 
-            var textReplaceListRequest = new TextReplaceListRequest(); // TextReplaceListRequest | 
-            var storage = storage_example;  // string |  (optional) 
-            var folder = folder_example;  // string |  (optional) 
-
-            try
-            {
-                // Page's replace text method.
-                TextReplaceResponse result = apiInstance.PostPageTextReplace(name, pageNumber, textReplaceListRequest, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PostPageTextReplace: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -5799,40 +2857,6 @@ No authorization required
 
 Sign document.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PostSignDocumentExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var signature = new Signature(); // Signature | Signature object containing signature data. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Sign document.
-                AsposeResponse result = apiInstance.PostSignDocument(name, signature, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PostSignDocument: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -5864,41 +2888,6 @@ No authorization required
 
 Sign page.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PostSignPageExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var signature = new Signature(); // Signature | Signature object containing signature data. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Sign page.
-                AsposeResponse result = apiInstance.PostSignPage(name, pageNumber, signature, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PostSignPage: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -5931,42 +2920,6 @@ No authorization required
 
 Split document to parts.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PostSplitDocumentExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | Document name.
-            var format = format_example;  // string | Resulting documents format. (optional) 
-            var from = 56;  // int? | Start page if defined. (optional) 
-            var to = 56;  // int? | End page if defined. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Split document to parts.
-                SplitResultResponse result = apiInstance.PostSplitDocument(name, format, from, to, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PostSplitDocument: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6000,39 +2953,6 @@ No authorization required
 
 Add new page to end of the document.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutAddNewPageExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Add new page to end of the document.
-                DocumentPagesResponse result = apiInstance.PutAddNewPage(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutAddNewPage: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6063,41 +2983,6 @@ No authorization required
 
 Add text to PDF document page.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutAddTextExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | Number of page (starting from 1).
-            var paragraph = new Paragraph(); // Paragraph | Paragraph data. (optional) 
-            var folder = folder_example;  // string | Document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Add text to PDF document page.
-                AsposeResponse result = apiInstance.PutAddText(name, pageNumber, paragraph, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutAddText: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6130,40 +3015,6 @@ No authorization required
 
 Upload a specific file 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutCreateExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var path = path_example;  // string | Path where to upload including filename and extension e.g. /file.ext or /Folder 1/file.ext
-            var file = new System.IO.Stream(); // System.IO.Stream | File to upload
-            var versionId = versionId_example;  // string | Source file's version (optional) 
-            var storage = storage_example;  // string | User's storage name (optional) 
-
-            try
-            {
-                // Upload a specific file 
-                AsposeResponse result = apiInstance.PutCreate(path, file, versionId, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutCreate: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6195,39 +3046,6 @@ No authorization required
 
 Create empty document.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutCreateDocumentExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The new document name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The new document folder. (optional) 
-
-            try
-            {
-                // Create empty document.
-                DocumentResponse result = apiInstance.PutCreateDocument(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutCreateDocument: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6258,40 +3076,6 @@ No authorization required
 
 Convert EPUB file (located on storage) to PDF format and upload resulting file to storage. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutEpubInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.epub)
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var dstFolder = dstFolder_example;  // string | The destination document folder. (optional) 
-
-            try
-            {
-                // Convert EPUB file (located on storage) to PDF format and upload resulting file to storage. 
-                AsposeResponse result = apiInstance.PutEpubInStorageToPdf(name, srcPath, storage, dstFolder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutEpubInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6323,39 +3107,6 @@ No authorization required
 
 Flatten form fields in document.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutFieldsFlattenExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Flatten form fields in document.
-                AsposeResponse result = apiInstance.PutFieldsFlatten(name, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutFieldsFlatten: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6386,41 +3137,6 @@ No authorization required
 
 Replace document free text annotation
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutFreeTextAnnotationExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var annotationId = annotationId_example;  // string | The annotation ID.
-            var annotation = new FreeTextAnnotation(); // FreeTextAnnotation | Annotation.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Replace document free text annotation
-                FreeTextAnnotationResponse result = apiInstance.PutFreeTextAnnotation(name, annotationId, annotation, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutFreeTextAnnotation: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6453,48 +3169,6 @@ No authorization required
 
 Convert HTML file (located on storage) to PDF format and upload resulting file to storage. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutHtmlInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.zip)
-            var htmlFileName = htmlFileName_example;  // string | Name of HTML file in ZIP.
-            var height = 1.2;  // double? | Page height (optional) 
-            var width = 1.2;  // double? | Page width (optional) 
-            var isLandscape = true;  // bool? | Is page landscaped (optional) 
-            var marginLeft = 1.2;  // double? | Page margin left (optional) 
-            var marginBottom = 1.2;  // double? | Page margin bottom (optional) 
-            var marginRight = 1.2;  // double? | Page margin right (optional) 
-            var marginTop = 1.2;  // double? | Page margin top (optional) 
-            var dstFolder = dstFolder_example;  // string | The destination document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert HTML file (located on storage) to PDF format and upload resulting file to storage. 
-                AsposeResponse result = apiInstance.PutHtmlInStorageToPdf(name, srcPath, htmlFileName, height, width, isLandscape, marginLeft, marginBottom, marginRight, marginTop, dstFolder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutHtmlInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6534,43 +3208,6 @@ No authorization required
 
 Extract document image in GIF format to folder
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutImageExtractAsGifExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var imageId = imageId_example;  // string | Image ID.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var destFolder = destFolder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Extract document image in GIF format to folder
-                AsposeResponse result = apiInstance.PutImageExtractAsGif(name, imageId, width, height, storage, folder, destFolder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutImageExtractAsGif: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6605,43 +3242,6 @@ No authorization required
 
 Extract document image in JPEG format to folder
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutImageExtractAsJpegExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var imageId = imageId_example;  // string | Image ID.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var destFolder = destFolder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Extract document image in JPEG format to folder
-                AsposeResponse result = apiInstance.PutImageExtractAsJpeg(name, imageId, width, height, storage, folder, destFolder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutImageExtractAsJpeg: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6676,43 +3276,6 @@ No authorization required
 
 Extract document image in PNG format to folder
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutImageExtractAsPngExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var imageId = imageId_example;  // string | Image ID.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var destFolder = destFolder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Extract document image in PNG format to folder
-                AsposeResponse result = apiInstance.PutImageExtractAsPng(name, imageId, width, height, storage, folder, destFolder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutImageExtractAsPng: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6747,43 +3310,6 @@ No authorization required
 
 Extract document image in TIFF format to folder
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutImageExtractAsTiffExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var imageId = imageId_example;  // string | Image ID.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var destFolder = destFolder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Extract document image in TIFF format to folder
-                AsposeResponse result = apiInstance.PutImageExtractAsTiff(name, imageId, width, height, storage, folder, destFolder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutImageExtractAsTiff: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6818,40 +3344,6 @@ No authorization required
 
 Convert image file (located on storage) to PDF format and upload resulting file to storage. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutImageInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var imageTemplates = new ImageTemplatesRequest(); // ImageTemplatesRequest | Image templates
-            var dstFolder = dstFolder_example;  // string | The destination document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert image file (located on storage) to PDF format and upload resulting file to storage. 
-                AsposeResponse result = apiInstance.PutImageInStorageToPdf(name, imageTemplates, dstFolder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutImageInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6883,43 +3375,6 @@ No authorization required
 
 Extract document images in GIF format to folder.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutImagesExtractAsGifExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var destFolder = destFolder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Extract document images in GIF format to folder.
-                AsposeResponse result = apiInstance.PutImagesExtractAsGif(name, pageNumber, width, height, storage, folder, destFolder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutImagesExtractAsGif: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -6954,43 +3409,6 @@ No authorization required
 
 Extract document images in JPEG format to folder.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutImagesExtractAsJpegExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var storage = storage_example;  // string |  (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var destFolder = destFolder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Extract document images in JPEG format to folder.
-                AsposeResponse result = apiInstance.PutImagesExtractAsJpeg(name, pageNumber, width, height, storage, folder, destFolder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutImagesExtractAsJpeg: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7025,43 +3443,6 @@ No authorization required
 
 Extract document images in PNG format to folder.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutImagesExtractAsPngExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var destFolder = destFolder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Extract document images in PNG format to folder.
-                AsposeResponse result = apiInstance.PutImagesExtractAsPng(name, pageNumber, width, height, storage, folder, destFolder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutImagesExtractAsPng: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7096,43 +3477,6 @@ No authorization required
 
 Extract document images in TIFF format to folder.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutImagesExtractAsTiffExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var destFolder = destFolder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Extract document images in TIFF format to folder.
-                AsposeResponse result = apiInstance.PutImagesExtractAsTiff(name, pageNumber, width, height, storage, folder, destFolder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutImagesExtractAsTiff: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7167,40 +3511,6 @@ No authorization required
 
 Convert LaTeX file (located on storage) to PDF format and upload resulting file to storage. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutLaTeXInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.tex)
-            var dstFolder = dstFolder_example;  // string | The destination document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert LaTeX file (located on storage) to PDF format and upload resulting file to storage. 
-                AsposeResponse result = apiInstance.PutLaTeXInStorageToPdf(name, srcPath, dstFolder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutLaTeXInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7232,41 +3542,6 @@ No authorization required
 
 Replace document page link annotations
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutLinkAnnotationExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var linkId = linkId_example;  // string | The link ID.
-            var link = new LinkAnnotation(); // LinkAnnotation | Link anotation.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Replace document page link annotations
-                LinkAnnotationResponse result = apiInstance.PutLinkAnnotation(name, linkId, link, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutLinkAnnotation: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7299,40 +3574,6 @@ No authorization required
 
 Merge a list of documents.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutMergeDocumentsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | Resulting documen name.
-            var mergeDocuments = new MergeDocuments(); // MergeDocuments | with a list of documents. (optional) 
-            var storage = storage_example;  // string | Resulting document storage. (optional) 
-            var folder = folder_example;  // string | Resulting document folder. (optional) 
-
-            try
-            {
-                // Merge a list of documents.
-                System.IO.Stream result = apiInstance.PutMergeDocuments(name, mergeDocuments, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutMergeDocuments: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7364,40 +3605,6 @@ No authorization required
 
 Convert MHT file (located on storage) to PDF format and upload resulting file to storage. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutMhtInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.mht)
-            var dstFolder = dstFolder_example;  // string | The destination document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert MHT file (located on storage) to PDF format and upload resulting file to storage. 
-                AsposeResponse result = apiInstance.PutMhtInStorageToPdf(name, srcPath, dstFolder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutMhtInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7429,41 +3636,6 @@ No authorization required
 
 Add page stamp.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPageAddStampExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var stamp = new Stamp(); // Stamp | with data.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Add page stamp.
-                AsposeResponse result = apiInstance.PutPageAddStamp(name, pageNumber, stamp, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPageAddStamp: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7496,43 +3668,6 @@ No authorization required
 
 Convert document page to bmp image and upload resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPageConvertToBmpExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var outPath = outPath_example;  // string | The out path of result image.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert document page to bmp image and upload resulting file to storage.
-                AsposeResponse result = apiInstance.PutPageConvertToBmp(name, pageNumber, outPath, width, height, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPageConvertToBmp: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7567,43 +3702,6 @@ No authorization required
 
 Convert document page to emf image and upload resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPageConvertToEmfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var outPath = outPath_example;  // string | The out path of result image.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert document page to emf image and upload resulting file to storage.
-                AsposeResponse result = apiInstance.PutPageConvertToEmf(name, pageNumber, outPath, width, height, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPageConvertToEmf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7638,43 +3736,6 @@ No authorization required
 
 Convert document page to gif image and upload resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPageConvertToGifExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var outPath = outPath_example;  // string | The out path of result image.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert document page to gif image and upload resulting file to storage.
-                AsposeResponse result = apiInstance.PutPageConvertToGif(name, pageNumber, outPath, width, height, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPageConvertToGif: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7709,43 +3770,6 @@ No authorization required
 
 Convert document page to Jpeg image and upload resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPageConvertToJpegExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var outPath = outPath_example;  // string | The out path of result image.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert document page to Jpeg image and upload resulting file to storage.
-                AsposeResponse result = apiInstance.PutPageConvertToJpeg(name, pageNumber, outPath, width, height, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPageConvertToJpeg: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7780,43 +3804,6 @@ No authorization required
 
 Convert document page to png image and upload resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPageConvertToPngExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var outPath = outPath_example;  // string | The out path of result image.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert document page to png image and upload resulting file to storage.
-                AsposeResponse result = apiInstance.PutPageConvertToPng(name, pageNumber, outPath, width, height, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPageConvertToPng: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7851,43 +3838,6 @@ No authorization required
 
 Convert document page to Tiff image and upload resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPageConvertToTiffExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var pageNumber = 56;  // int? | The page number.
-            var outPath = outPath_example;  // string | The out path of result image.
-            var width = 56;  // int? | The converted image width. (optional) 
-            var height = 56;  // int? | The converted image height. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert document page to Tiff image and upload resulting file to storage.
-                AsposeResponse result = apiInstance.PutPageConvertToTiff(name, pageNumber, outPath, width, height, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPageConvertToTiff: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7922,40 +3872,6 @@ No authorization required
 
 Convert PCL file (located on storage) to PDF format and upload resulting file to storage. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPclInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.pcl)
-            var dstFolder = dstFolder_example;  // string | The destination document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert PCL file (located on storage) to PDF format and upload resulting file to storage. 
-                AsposeResponse result = apiInstance.PutPclInStorageToPdf(name, srcPath, dstFolder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPclInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -7987,47 +3903,6 @@ No authorization required
 
 Converts PDF document (in request content) to DOC format and uploads resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInRequestToDocExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.doc)
-            var addReturnToLineEnd = true;  // bool? | Add return to line end. (optional) 
-            var format = format_example;  // string | Allows to specify .doc or .docx file format. (optional) 
-            var imageResolutionX = 56;  // int? | Image resolution X. (optional) 
-            var imageResolutionY = 56;  // int? | Image resolution Y. (optional) 
-            var maxDistanceBetweenTextLines = 1.2;  // double? | Max distance between text lines. (optional) 
-            var mode = mode_example;  // string | Allows to control how a PDF document is converted into a word processing document. (optional) 
-            var recognizeBullets = true;  // bool? | Recognize bullets. (optional) 
-            var relativeHorizontalProximity = 1.2;  // double? | Relative horizontal proximity. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var file = new System.IO.Stream(); // System.IO.Stream | A file to be converted. (optional) 
-
-            try
-            {
-                // Converts PDF document (in request content) to DOC format and uploads resulting file to storage.
-                AsposeResponse result = apiInstance.PutPdfInRequestToDoc(outPath, addReturnToLineEnd, format, imageResolutionX, imageResolutionY, maxDistanceBetweenTextLines, mode, recognizeBullets, relativeHorizontalProximity, storage, file);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInRequestToDoc: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -8066,40 +3941,6 @@ No authorization required
 
 Converts PDF document (in request content) to EPUB format and uploads resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInRequestToEpubExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.epub)
-            var contentRecognitionMode = contentRecognitionMode_example;  // string | ?roperty tunes conversion for this or that desirable method of recognition of content. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var file = new System.IO.Stream(); // System.IO.Stream | A file to be converted. (optional) 
-
-            try
-            {
-                // Converts PDF document (in request content) to EPUB format and uploads resulting file to storage.
-                AsposeResponse result = apiInstance.PutPdfInRequestToEpub(outPath, contentRecognitionMode, storage, file);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInRequestToEpub: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -8131,67 +3972,6 @@ No authorization required
 
 Converts PDF document (in request content) to Html format and uploads resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInRequestToHtmlExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.html)
-            var additionalMarginWidthInPoints = 56;  // int? | Defines width of margin that will be forcibly left around that output HTML-areas. (optional) 
-            var compressSvgGraphicsIfAny = true;  // bool? | The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional) 
-            var convertMarkedContentToLayers = true;  // bool? | If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \"data-pdflayer\" attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional) 
-            var defaultFontName = defaultFontName_example;  // string | Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional) 
-            var documentType = documentType_example;  // string | Result document type. (optional) 
-            var fixedLayout = true;  // bool? | The value indicating whether that HTML is created as fixed layout. (optional) 
-            var imageResolution = 56;  // int? | Resolution for image rendering. (optional) 
-            var minimalLineWidth = 56;  // int? | This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional) 
-            var preventGlyphsGrouping = true;  // bool? | This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional) 
-            var splitCssIntoPages = true;  // bool? | When multipage-mode selected(i.e 'SplitIntoPages' is 'true'), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional) 
-            var splitIntoPages = true;  // bool? | The flag that indicates whether each page of source document will be converted into it's own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional) 
-            var useZOrder = true;  // bool? | If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional) 
-            var antialiasingProcessing = antialiasingProcessing_example;  // string | The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional) 
-            var cssClassNamesPrefix = cssClassNamesPrefix_example;  // string | When PDFtoHTML converter generates result CSSs, CSS class names (something like \".stl_01 {}\" ... \".stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional) 
-            var explicitListOfSavedPages = new List<int?>(); // List<int?> | With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional) 
-            var fontEncodingStrategy = fontEncodingStrategy_example;  // string | Defines encoding special rule to tune PDF decoding for current document. (optional) 
-            var fontSavingMode = fontSavingMode_example;  // string | Defines font saving mode that will be used during saving of PDF to desirable format. (optional) 
-            var htmlMarkupGenerationMode = htmlMarkupGenerationMode_example;  // string | Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional) 
-            var lettersPositioningMethod = lettersPositioningMethod_example;  // string | The mode of positioning of letters in words in result HTML. (optional) 
-            var pagesFlowTypeDependsOnViewersScreenSize = true;  // bool? | If attribute 'SplitOnPages=false', than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional) 
-            var partsEmbeddingMode = partsEmbeddingMode_example;  // string | It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional) 
-            var rasterImagesSavingMode = rasterImagesSavingMode_example;  // string | Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional) 
-            var removeEmptyAreasOnTopAndBottom = true;  // bool? | Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional) 
-            var saveShadowedTextsAsTransparentTexts = true;  // bool? | Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional) 
-            var saveTransparentTexts = true;  // bool? | Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional) 
-            var specialFolderForAllImages = specialFolderForAllImages_example;  // string | The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional) 
-            var specialFolderForSvgImages = specialFolderForSvgImages_example;  // string | The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional) 
-            var trySaveTextUnderliningAndStrikeoutingInCss = true;  // bool? | PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text's underlining and put this info into CSS instead of drawing of underlining graphically. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var file = new System.IO.Stream(); // System.IO.Stream | A file to be converted. (optional) 
-
-            try
-            {
-                // Converts PDF document (in request content) to Html format and uploads resulting file to storage.
-                AsposeResponse result = apiInstance.PutPdfInRequestToHtml(outPath, additionalMarginWidthInPoints, compressSvgGraphicsIfAny, convertMarkedContentToLayers, defaultFontName, documentType, fixedLayout, imageResolution, minimalLineWidth, preventGlyphsGrouping, splitCssIntoPages, splitIntoPages, useZOrder, antialiasingProcessing, cssClassNamesPrefix, explicitListOfSavedPages, fontEncodingStrategy, fontSavingMode, htmlMarkupGenerationMode, lettersPositioningMethod, pagesFlowTypeDependsOnViewersScreenSize, partsEmbeddingMode, rasterImagesSavingMode, removeEmptyAreasOnTopAndBottom, saveShadowedTextsAsTransparentTexts, saveTransparentTexts, specialFolderForAllImages, specialFolderForSvgImages, trySaveTextUnderliningAndStrikeoutingInCss, storage, file);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInRequestToHtml: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -8250,40 +4030,6 @@ No authorization required
 
 Converts PDF document (in request content) to LaTeX format and uploads resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInRequestToLaTeXExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.tex)
-            var pagesCount = 56;  // int? | Pages count. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var file = new System.IO.Stream(); // System.IO.Stream | A file to be converted. (optional) 
-
-            try
-            {
-                // Converts PDF document (in request content) to LaTeX format and uploads resulting file to storage.
-                AsposeResponse result = apiInstance.PutPdfInRequestToLaTeX(outPath, pagesCount, storage, file);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInRequestToLaTeX: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -8315,39 +4061,6 @@ No authorization required
 
 Converts PDF document (in request content) to MOBIXML format and uploads resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInRequestToMobiXmlExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.mobixml)
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var file = new System.IO.Stream(); // System.IO.Stream | A file to be converted. (optional) 
-
-            try
-            {
-                // Converts PDF document (in request content) to MOBIXML format and uploads resulting file to storage.
-                AsposeResponse result = apiInstance.PutPdfInRequestToMobiXml(outPath, storage, file);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInRequestToMobiXml: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -8378,40 +4091,6 @@ No authorization required
 
 Converts PDF document (in request content) to PdfA format and uploads resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInRequestToPdfAExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.pdf)
-            var type = type_example;  // string | Type of PdfA format.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var file = new System.IO.Stream(); // System.IO.Stream | A file to be converted. (optional) 
-
-            try
-            {
-                // Converts PDF document (in request content) to PdfA format and uploads resulting file to storage.
-                AsposeResponse result = apiInstance.PutPdfInRequestToPdfA(outPath, type, storage, file);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInRequestToPdfA: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -8443,41 +4122,6 @@ No authorization required
 
 Converts PDF document (in request content) to PPTX format and uploads resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInRequestToPptxExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.pptx)
-            var separateImages = true;  // bool? | Separate images. (optional) 
-            var slidesAsImages = true;  // bool? | Slides as images. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var file = new System.IO.Stream(); // System.IO.Stream | A file to be converted. (optional) 
-
-            try
-            {
-                // Converts PDF document (in request content) to PPTX format and uploads resulting file to storage.
-                AsposeResponse result = apiInstance.PutPdfInRequestToPptx(outPath, separateImages, slidesAsImages, storage, file);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInRequestToPptx: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -8510,39 +4154,6 @@ No authorization required
 
 Converts PDF document (in request content) to SVG format and uploads resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInRequestToSvgExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.svg)
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var file = new System.IO.Stream(); // System.IO.Stream | A file to be converted. (optional) 
-
-            try
-            {
-                // Converts PDF document (in request content) to SVG format and uploads resulting file to storage.
-                AsposeResponse result = apiInstance.PutPdfInRequestToSvg(outPath, storage, file);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInRequestToSvg: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -8573,54 +4184,6 @@ No authorization required
 
 Converts PDF document (in request content) to TIFF format and uploads resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInRequestToTiffExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.tiff)
-            var brightness = 1.2;  // double? | Image brightness. (optional) 
-            var compression = compression_example;  // string | Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional) 
-            var colorDepth = colorDepth_example;  // string | Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional) 
-            var leftMargin = 56;  // int? | Left image margin. (optional) 
-            var rightMargin = 56;  // int? | Right image margin. (optional) 
-            var topMargin = 56;  // int? | Top image margin. (optional) 
-            var bottomMargin = 56;  // int? | Bottom image margin. (optional) 
-            var orientation = orientation_example;  // string | Image orientation. Possible values are: None, Landscape, Portait. (optional) 
-            var skipBlankPages = true;  // bool? | Skip blank pages flag. (optional) 
-            var width = 56;  // int? | Image width. (optional) 
-            var height = 56;  // int? | Image height. (optional) 
-            var xResolution = 56;  // int? | Horizontal resolution. (optional) 
-            var yResolution = 56;  // int? | Vertical resolution. (optional) 
-            var pageIndex = 56;  // int? | Start page to export. (optional) 
-            var pageCount = 56;  // int? | Number of pages to export. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var file = new System.IO.Stream(); // System.IO.Stream | A file to be converted. (optional) 
-
-            try
-            {
-                // Converts PDF document (in request content) to TIFF format and uploads resulting file to storage.
-                AsposeResponse result = apiInstance.PutPdfInRequestToTiff(outPath, brightness, compression, colorDepth, leftMargin, rightMargin, topMargin, bottomMargin, orientation, skipBlankPages, width, height, xResolution, yResolution, pageIndex, pageCount, storage, file);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInRequestToTiff: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -8666,43 +4229,6 @@ No authorization required
 
 Converts PDF document (in request content) to XLS format and uploads resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInRequestToXlsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.xls)
-            var insertBlankColumnAtFirst = true;  // bool? | Insert blank column at first (optional) 
-            var minimizeTheNumberOfWorksheets = true;  // bool? | Minimize the number of worksheets (optional) 
-            var scaleFactor = 1.2;  // double? | Scale factor (optional) 
-            var uniformWorksheets = true;  // bool? | Uniform worksheets (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var file = new System.IO.Stream(); // System.IO.Stream | A file to be converted. (optional) 
-
-            try
-            {
-                // Converts PDF document (in request content) to XLS format and uploads resulting file to storage.
-                AsposeResponse result = apiInstance.PutPdfInRequestToXls(outPath, insertBlankColumnAtFirst, minimizeTheNumberOfWorksheets, scaleFactor, uniformWorksheets, storage, file);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInRequestToXls: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -8737,39 +4263,6 @@ No authorization required
 
 Converts PDF document (in request content) to XML format and uploads resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInRequestToXmlExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.xml)
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var file = new System.IO.Stream(); // System.IO.Stream | A file to be converted. (optional) 
-
-            try
-            {
-                // Converts PDF document (in request content) to XML format and uploads resulting file to storage.
-                AsposeResponse result = apiInstance.PutPdfInRequestToXml(outPath, storage, file);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInRequestToXml: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -8800,39 +4293,6 @@ No authorization required
 
 Converts PDF document (in request content) to XPS format and uploads resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInRequestToXpsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.xps)
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var file = new System.IO.Stream(); // System.IO.Stream | A file to be converted. (optional) 
-
-            try
-            {
-                // Converts PDF document (in request content) to XPS format and uploads resulting file to storage.
-                AsposeResponse result = apiInstance.PutPdfInRequestToXps(outPath, storage, file);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInRequestToXps: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -8863,48 +4323,6 @@ No authorization required
 
 Converts PDF document (located on storage) to DOC format and uploads resulting file to storage
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInStorageToDocExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.doc)
-            var addReturnToLineEnd = true;  // bool? | Add return to line end. (optional) 
-            var format = format_example;  // string | Allows to specify .doc or .docx file format. (optional) 
-            var imageResolutionX = 56;  // int? | Image resolution X. (optional) 
-            var imageResolutionY = 56;  // int? | Image resolution Y. (optional) 
-            var maxDistanceBetweenTextLines = 1.2;  // double? | Max distance between text lines. (optional) 
-            var mode = mode_example;  // string | Allows to control how a PDF document is converted into a word processing document. (optional) 
-            var recognizeBullets = true;  // bool? | Recognize bullets. (optional) 
-            var relativeHorizontalProximity = 1.2;  // double? | Relative horizontal proximity. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to DOC format and uploads resulting file to storage
-                AsposeResponse result = apiInstance.PutPdfInStorageToDoc(name, outPath, addReturnToLineEnd, format, imageResolutionX, imageResolutionY, maxDistanceBetweenTextLines, mode, recognizeBullets, relativeHorizontalProximity, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInStorageToDoc: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -8944,41 +4362,6 @@ No authorization required
 
 Converts PDF document (located on storage) to EPUB format and uploads resulting file to storage
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInStorageToEpubExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.epub)
-            var contentRecognitionMode = contentRecognitionMode_example;  // string | ?roperty tunes conversion for this or that desirable method of recognition of content. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to EPUB format and uploads resulting file to storage
-                AsposeResponse result = apiInstance.PutPdfInStorageToEpub(name, outPath, contentRecognitionMode, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInStorageToEpub: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -9011,68 +4394,6 @@ No authorization required
 
 Converts PDF document (located on storage) to Html format and uploads resulting file to storage
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInStorageToHtmlExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.html)
-            var additionalMarginWidthInPoints = 56;  // int? | Defines width of margin that will be forcibly left around that output HTML-areas. (optional) 
-            var compressSvgGraphicsIfAny = true;  // bool? | The flag that indicates whether found SVG graphics(if any) will be compressed(zipped) into SVGZ format during saving. (optional) 
-            var convertMarkedContentToLayers = true;  // bool? | If attribute ConvertMarkedContentToLayers set to true then an all elements inside a PDF marked content (layer) will be put into an HTML div with \"data-pdflayer\" attribute specifying a layer name. This layer name will be extracted from optional properties of PDF marked content. If this attribute is false (by default) then no any layers will be created from PDF marked content. (optional) 
-            var defaultFontName = defaultFontName_example;  // string | Specifies the name of an installed font which is used to substitute any document font that is not embedded and not installed in the system. If null then default substitution font is used. (optional) 
-            var documentType = documentType_example;  // string | Result document type. (optional) 
-            var fixedLayout = true;  // bool? | The value indicating whether that HTML is created as fixed layout. (optional) 
-            var imageResolution = 56;  // int? | Resolution for image rendering. (optional) 
-            var minimalLineWidth = 56;  // int? | This attribute sets minimal width of graphic path line. If thickness of line is less than 1px Adobe Acrobat rounds it to this value. So this attribute can be used to emulate this behavior for HTML browsers. (optional) 
-            var preventGlyphsGrouping = true;  // bool? | This attribute switch on the mode when text glyphs will not be grouped into words and strings This mode allows to keep maximum precision during positioning of glyphs on the page and it can be used for conversion documents with music notes or glyphs that should be placed separately each other. This parameter will be applied to document only when the value of FixedLayout attribute is true. (optional) 
-            var splitCssIntoPages = true;  // bool? | When multipage-mode selected(i.e 'SplitIntoPages' is 'true'), then this attribute defines whether should be created separate CSS-file for each result HTML page. (optional) 
-            var splitIntoPages = true;  // bool? | The flag that indicates whether each page of source document will be converted into it's own target HTML document, i.e whether result HTML will be splitted into several HTML-pages. (optional) 
-            var useZOrder = true;  // bool? | If attribute UseZORder set to true, graphics and text are added to resultant HTML document accordingly Z-order in original PDF document. If this attribute is false all graphics is put as single layer which may cause some unnecessary effects for overlapped objects. (optional) 
-            var antialiasingProcessing = antialiasingProcessing_example;  // string | The parameter defines required antialiasing measures during conversion of compound background images from PDF to HTML. (optional) 
-            var cssClassNamesPrefix = cssClassNamesPrefix_example;  // string | When PDFtoHTML converter generates result CSSs, CSS class names (something like \".stl_01 {}\" ... \".stl_NN {}) are generated and used in result CSS. This property allows forcibly set class name prefix. (optional) 
-            var explicitListOfSavedPages = new List<int?>(); // List<int?> | With this property You can explicitely define what pages of document should be converted. Pages in this list must have 1-based numbers. I.e. valid numbers of pages must be taken from range (1...[NumberOfPagesInConvertedDocument]) Order of appearing of pages in this list does not affect their order in result HTML page(s) - in result pages allways will go in order in which they are present in source PDF. (optional) 
-            var fontEncodingStrategy = fontEncodingStrategy_example;  // string | Defines encoding special rule to tune PDF decoding for current document. (optional) 
-            var fontSavingMode = fontSavingMode_example;  // string | Defines font saving mode that will be used during saving of PDF to desirable format. (optional) 
-            var htmlMarkupGenerationMode = htmlMarkupGenerationMode_example;  // string | Sometimes specific reqirments to generation of HTML markup are present. This parameter defines HTML preparing modes that can be used during conversion of PDF to HTML to match such specific requirments. (optional) 
-            var lettersPositioningMethod = lettersPositioningMethod_example;  // string | The mode of positioning of letters in words in result HTML. (optional) 
-            var pagesFlowTypeDependsOnViewersScreenSize = true;  // bool? | If attribute 'SplitOnPages=false', than whole HTML representing all input PDF pages will be put into one big result HTML file. This flag defines whether result HTML will be generated in such way that flow of areas that represent PDF pages in result HTML will depend on screen resolution of viewer. (optional) 
-            var partsEmbeddingMode = partsEmbeddingMode_example;  // string | It defines whether referenced files (HTML, Fonts,Images, CSSes) will be embedded into main HTML file or will be generated as apart binary entities. (optional) 
-            var rasterImagesSavingMode = rasterImagesSavingMode_example;  // string | Converted PDF can contain raster images This parameter defines how they should be handled during conversion of PDF to HTML. (optional) 
-            var removeEmptyAreasOnTopAndBottom = true;  // bool? | Defines whether in created HTML will be removed top and bottom empty area without any content (if any). (optional) 
-            var saveShadowedTextsAsTransparentTexts = true;  // bool? | Pdf can contain texts that are shadowed by another elements (f.e. by images) but can be selected to clipboard in Acrobat Reader (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML to mimic behaviour of Acrobat Reader (othervise such texts are usually saved as hidden, not available for copying to clipboard). (optional) 
-            var saveTransparentTexts = true;  // bool? | Pdf can contain transparent texts that can be selected to clipboard (usually it happen when document contains images and OCRed texts extracted from it). This settings tells to converter whether we need save such texts as transparent selectable texts in result HTML. (optional) 
-            var specialFolderForAllImages = specialFolderForAllImages_example;  // string | The path to directory to which must be saved any images if they are encountered during saving of document as HTML. If parameter is empty or null then image files(if any) wil be saved together with other files linked to HTML It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional) 
-            var specialFolderForSvgImages = specialFolderForSvgImages_example;  // string | The path to directory to which must be saved only SVG-images if they are encountered during saving of document as HTML. If parameter is empty or null then SVG files(if any) wil be saved together with other image-files (near to output file) or in special folder for images (if it specified in SpecialImagesFolderIfAny option). It does not affect anything if CustomImageSavingStrategy property was successfully used to process relevant image file. (optional) 
-            var trySaveTextUnderliningAndStrikeoutingInCss = true;  // bool? | PDF itself does not contain underlining markers for texts. It emulated with line situated under text. This option allows converter try guess that this or that line is a text's underlining and put this info into CSS instead of drawing of underlining graphically. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to Html format and uploads resulting file to storage
-                AsposeResponse result = apiInstance.PutPdfInStorageToHtml(name, outPath, additionalMarginWidthInPoints, compressSvgGraphicsIfAny, convertMarkedContentToLayers, defaultFontName, documentType, fixedLayout, imageResolution, minimalLineWidth, preventGlyphsGrouping, splitCssIntoPages, splitIntoPages, useZOrder, antialiasingProcessing, cssClassNamesPrefix, explicitListOfSavedPages, fontEncodingStrategy, fontSavingMode, htmlMarkupGenerationMode, lettersPositioningMethod, pagesFlowTypeDependsOnViewersScreenSize, partsEmbeddingMode, rasterImagesSavingMode, removeEmptyAreasOnTopAndBottom, saveShadowedTextsAsTransparentTexts, saveTransparentTexts, specialFolderForAllImages, specialFolderForSvgImages, trySaveTextUnderliningAndStrikeoutingInCss, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInStorageToHtml: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -9132,41 +4453,6 @@ No authorization required
 
 Converts PDF document (located on storage) to LaTeX format and uploads resulting file to storage
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInStorageToLaTeXExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.tex)
-            var pagesCount = 56;  // int? | Pages count. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to LaTeX format and uploads resulting file to storage
-                AsposeResponse result = apiInstance.PutPdfInStorageToLaTeX(name, outPath, pagesCount, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInStorageToLaTeX: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -9199,40 +4485,6 @@ No authorization required
 
 Converts PDF document (located on storage) to MOBIXML format and uploads resulting file to storage
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInStorageToMobiXmlExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.mobixml)
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to MOBIXML format and uploads resulting file to storage
-                AsposeResponse result = apiInstance.PutPdfInStorageToMobiXml(name, outPath, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInStorageToMobiXml: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -9264,41 +4516,6 @@ No authorization required
 
 Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInStorageToPdfAExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.pdf)
-            var type = type_example;  // string | Type of PdfA format.
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage
-                AsposeResponse result = apiInstance.PutPdfInStorageToPdfA(name, outPath, type, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInStorageToPdfA: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -9331,42 +4548,6 @@ No authorization required
 
 Converts PDF document (located on storage) to PPTX format and uploads resulting file to storage
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInStorageToPptxExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.pptx)
-            var separateImages = true;  // bool? | Separate images. (optional) 
-            var slidesAsImages = true;  // bool? | Slides as images. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to PPTX format and uploads resulting file to storage
-                AsposeResponse result = apiInstance.PutPdfInStorageToPptx(name, outPath, separateImages, slidesAsImages, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInStorageToPptx: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -9400,40 +4581,6 @@ No authorization required
 
 Converts PDF document (located on storage) to SVG format and uploads resulting file to storage
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInStorageToSvgExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.svg)
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to SVG format and uploads resulting file to storage
-                AsposeResponse result = apiInstance.PutPdfInStorageToSvg(name, outPath, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInStorageToSvg: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -9465,55 +4612,6 @@ No authorization required
 
 Converts PDF document (located on storage) to TIFF format and uploads resulting file to storage
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInStorageToTiffExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.tiff)
-            var brightness = 1.2;  // double? | Image brightness. (optional) 
-            var compression = compression_example;  // string | Tiff compression. Possible values are: LZW, CCITT4, CCITT3, RLE, None. (optional) 
-            var colorDepth = colorDepth_example;  // string | Image color depth. Possible valuse are: Default, Format8bpp, Format4bpp, Format1bpp. (optional) 
-            var leftMargin = 56;  // int? | Left image margin. (optional) 
-            var rightMargin = 56;  // int? | Right image margin. (optional) 
-            var topMargin = 56;  // int? | Top image margin. (optional) 
-            var bottomMargin = 56;  // int? | Bottom image margin. (optional) 
-            var orientation = orientation_example;  // string | Image orientation. Possible values are: None, Landscape, Portait. (optional) 
-            var skipBlankPages = true;  // bool? | Skip blank pages flag. (optional) 
-            var width = 56;  // int? | Image width. (optional) 
-            var height = 56;  // int? | Image height. (optional) 
-            var xResolution = 56;  // int? | Horizontal resolution. (optional) 
-            var yResolution = 56;  // int? | Vertical resolution. (optional) 
-            var pageIndex = 56;  // int? | Start page to export. (optional) 
-            var pageCount = 56;  // int? | Number of pages to export. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to TIFF format and uploads resulting file to storage
-                AsposeResponse result = apiInstance.PutPdfInStorageToTiff(name, outPath, brightness, compression, colorDepth, leftMargin, rightMargin, topMargin, bottomMargin, orientation, skipBlankPages, width, height, xResolution, yResolution, pageIndex, pageCount, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInStorageToTiff: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -9560,44 +4658,6 @@ No authorization required
 
 Converts PDF document (located on storage) to XLS format and uploads resulting file to storage
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInStorageToXlsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.xls)
-            var insertBlankColumnAtFirst = true;  // bool? | Insert blank column at first (optional) 
-            var minimizeTheNumberOfWorksheets = true;  // bool? | Minimize the number of worksheets (optional) 
-            var scaleFactor = 1.2;  // double? | Scale factor (optional) 
-            var uniformWorksheets = true;  // bool? | Uniform worksheets (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to XLS format and uploads resulting file to storage
-                AsposeResponse result = apiInstance.PutPdfInStorageToXls(name, outPath, insertBlankColumnAtFirst, minimizeTheNumberOfWorksheets, scaleFactor, uniformWorksheets, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInStorageToXls: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -9633,40 +4693,6 @@ No authorization required
 
 Converts PDF document (located on storage) to XML format and uploads resulting file to storage
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInStorageToXmlExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.xml)
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to XML format and uploads resulting file to storage
-                AsposeResponse result = apiInstance.PutPdfInStorageToXml(name, outPath, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInStorageToXml: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -9698,40 +4724,6 @@ No authorization required
 
 Converts PDF document (located on storage) to XPS format and uploads resulting file to storage
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPdfInStorageToXpsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.xps)
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document (located on storage) to XPS format and uploads resulting file to storage
-                AsposeResponse result = apiInstance.PutPdfInStorageToXps(name, outPath, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPdfInStorageToXps: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -9763,40 +4755,6 @@ No authorization required
 
 Update privilege document.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPrivilegesExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var privileges = new DocumentPrivilege(); // DocumentPrivilege | Document privileges.  (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Update privilege document.
-                AsposeResponse result = apiInstance.PutPrivileges(name, privileges, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPrivileges: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -9828,40 +4786,6 @@ No authorization required
 
 Convert PS file (located on storage) to PDF format and upload resulting file to storage. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutPsInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.ps)
-            var dstFolder = dstFolder_example;  // string | The destination document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert PS file (located on storage) to PDF format and upload resulting file to storage. 
-                AsposeResponse result = apiInstance.PutPsInStorageToPdf(name, srcPath, dstFolder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutPsInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -9893,42 +4817,6 @@ No authorization required
 
 Replace document image.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutReplaceImageExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var imageId = imageId_example;  // string | The image ID.
-            var imageFilePath = imageFilePath_example;  // string | Path to image file if specified. Request content is used otherwise. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var image = new System.IO.Stream(); // System.IO.Stream | Image file. (optional) 
-
-            try
-            {
-                // Replace document image.
-                ImageResponse result = apiInstance.PutReplaceImage(name, imageId, imageFilePath, storage, folder, image);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutReplaceImage: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -9962,40 +4850,6 @@ No authorization required
 
 Create searchable PDF document. Generate OCR layer for images in input PDF document.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutSearchableDocumentExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var lang = lang_example;  // string | language for OCR engine. Possible values: eng, ara, bel, ben, bul, ces, dan, deu, ell, fin, fra, heb, hin, ind, isl, ita, jpn, kor, nld, nor, pol, por, ron, rus, spa, swe, tha, tur, ukr, vie, chi_sim, chi_tra or thier combination e.g. eng,rus  (optional) 
-
-            try
-            {
-                // Create searchable PDF document. Generate OCR layer for images in input PDF document.
-                AsposeResponse result = apiInstance.PutSearchableDocument(name, storage, folder, lang);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutSearchableDocument: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -10027,41 +4881,6 @@ No authorization required
 
 Add/update document property.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutSetPropertyExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | 
-            var propertyName = propertyName_example;  // string | 
-            var value = value_example;  // string | 
-            var storage = storage_example;  // string |  (optional) 
-            var folder = folder_example;  // string |  (optional) 
-
-            try
-            {
-                // Add/update document property.
-                DocumentPropertyResponse result = apiInstance.PutSetProperty(name, propertyName, value, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutSetProperty: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -10094,48 +4913,6 @@ No authorization required
 
 Convert SVG file (located on storage) to PDF format and upload resulting file to storage. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutSvgInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.svg)
-            var adjustPageSize = true;  // bool? | Adjust page size (optional) 
-            var height = 1.2;  // double? | Page height (optional) 
-            var width = 1.2;  // double? | Page width (optional) 
-            var isLandscape = true;  // bool? | Is page landscaped (optional) 
-            var marginLeft = 1.2;  // double? | Page margin left (optional) 
-            var marginBottom = 1.2;  // double? | Page margin bottom (optional) 
-            var marginRight = 1.2;  // double? | Page margin right (optional) 
-            var marginTop = 1.2;  // double? | Page margin top (optional) 
-            var dstFolder = dstFolder_example;  // string | The destination document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert SVG file (located on storage) to PDF format and upload resulting file to storage. 
-                AsposeResponse result = apiInstance.PutSvgInStorageToPdf(name, srcPath, adjustPageSize, height, width, isLandscape, marginLeft, marginBottom, marginRight, marginTop, dstFolder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutSvgInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -10175,41 +4952,6 @@ No authorization required
 
 Replace document text annotation
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutTextAnnotationExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var annotationId = annotationId_example;  // string | The annotation ID.
-            var annotation = new TextAnnotation(); // TextAnnotation | Annotation.
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Replace document text annotation
-                TextAnnotationResponse result = apiInstance.PutTextAnnotation(name, annotationId, annotation, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutTextAnnotation: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -10242,41 +4984,6 @@ No authorization required
 
 Update field.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutUpdateFieldExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var fieldName = fieldName_example;  // string | The name of a field to be updated.
-            var field = new Field(); // Field | with the field data. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Update field.
-                FieldResponse result = apiInstance.PutUpdateField(name, fieldName, field, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutUpdateField: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -10309,40 +5016,6 @@ No authorization required
 
 Update fields.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutUpdateFieldsExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var fields = new Fields(); // Fields | with the fields data. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var folder = folder_example;  // string | The document folder. (optional) 
-
-            try
-            {
-                // Update fields.
-                FieldsResponse result = apiInstance.PutUpdateFields(name, fields, storage, folder);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutUpdateFields: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -10374,47 +5047,6 @@ No authorization required
 
 Convert web page to PDF format and upload resulting file to storage. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutWebInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var url = url_example;  // string | Source url
-            var height = 1.2;  // double? | Page height (optional) 
-            var width = 1.2;  // double? | Page width (optional) 
-            var isLandscape = true;  // bool? | Is page landscaped (optional) 
-            var marginLeft = 1.2;  // double? | Page margin left (optional) 
-            var marginBottom = 1.2;  // double? | Page margin bottom (optional) 
-            var marginRight = 1.2;  // double? | Page margin right (optional) 
-            var marginTop = 1.2;  // double? | Page margin top (optional) 
-            var dstFolder = dstFolder_example;  // string | The destination document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert web page to PDF format and upload resulting file to storage. 
-                AsposeResponse result = apiInstance.PutWebInStorageToPdf(name, url, height, width, isLandscape, marginLeft, marginBottom, marginRight, marginTop, dstFolder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutWebInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -10453,39 +5085,6 @@ No authorization required
 
 Converts PDF document which contatins XFA form (in request content) to PDF with AcroForm and uploads resulting file to storage.
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutXfaPdfInRequestToAcroFormExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.pdf)
-            var storage = storage_example;  // string | The document storage. (optional) 
-            var file = new System.IO.Stream(); // System.IO.Stream | A file to be converted. (optional) 
-
-            try
-            {
-                // Converts PDF document which contatins XFA form (in request content) to PDF with AcroForm and uploads resulting file to storage.
-                AsposeResponse result = apiInstance.PutXfaPdfInRequestToAcroForm(outPath, storage, file);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutXfaPdfInRequestToAcroForm: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -10516,40 +5115,6 @@ No authorization required
 
 Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and uploads resulting file to storage
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutXfaPdfInStorageToAcroFormExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var outPath = outPath_example;  // string | Full resulting filename (ex. /folder1/folder2/result.pdf)
-            var folder = folder_example;  // string | The document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Converts PDF document which contatins XFA form (located on storage) to PDF with AcroForm and uploads resulting file to storage
-                AsposeResponse result = apiInstance.PutXfaPdfInStorageToAcroForm(name, outPath, folder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutXfaPdfInStorageToAcroForm: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -10581,41 +5146,6 @@ No authorization required
 
 Convert XML file (located on storage) to PDF format and upload resulting file to storage. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutXmlInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.xml)
-            var xslFilePath = xslFilePath_example;  // string | Full XSL source filename (ex. /folder1/folder2/template.xsl) (optional) 
-            var dstFolder = dstFolder_example;  // string | The destination document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert XML file (located on storage) to PDF format and upload resulting file to storage. 
-                AsposeResponse result = apiInstance.PutXmlInStorageToPdf(name, srcPath, xslFilePath, dstFolder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutXmlInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -10648,40 +5178,6 @@ No authorization required
 
 Convert XPS file (located on storage) to PDF format and upload resulting file to storage. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutXpsInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.xps)
-            var dstFolder = dstFolder_example;  // string | The destination document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert XPS file (located on storage) to PDF format and upload resulting file to storage. 
-                AsposeResponse result = apiInstance.PutXpsInStorageToPdf(name, srcPath, dstFolder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutXpsInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
@@ -10713,40 +5209,6 @@ No authorization required
 
 Convert XslFo file (located on storage) to PDF format and upload resulting file to storage. 
 
-### Example
-```csharp
-using System;
-using System.Diagnostics;
-using Aspose.Pdf.Cloud.Sdk.Api;
-using Aspose.Pdf.Cloud.Sdk.Client;
-using Aspose.Pdf.Cloud.Sdk.Model;
-
-namespace Example
-{
-    public class PutXslFoInStorageToPdfExample
-    {
-        public void main()
-        {
-            var apiInstance = new PdfApi();
-            var name = name_example;  // string | The document name.
-            var srcPath = srcPath_example;  // string | Full source filename (ex. /folder1/folder2/template.xpsfo)
-            var dstFolder = dstFolder_example;  // string | The destination document folder. (optional) 
-            var storage = storage_example;  // string | The document storage. (optional) 
-
-            try
-            {
-                // Convert XslFo file (located on storage) to PDF format and upload resulting file to storage. 
-                AsposeResponse result = apiInstance.PutXslFoInStorageToPdf(name, srcPath, dstFolder, storage);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PdfApi.PutXslFoInStorageToPdf: " + e.Message );
-            }
-        }
-    }
-}
-```
 
 ### Parameters
 
