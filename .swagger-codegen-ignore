@@ -25,10 +25,10 @@
 *.sh
 .travis.yml
 .gitignore
-*.md
+#*.md
 #docs/*
 
-#Ignere credentials file
+#Ignore credentials file
 src/Settings/servercreds.json
 
 #Do not generate tests.
