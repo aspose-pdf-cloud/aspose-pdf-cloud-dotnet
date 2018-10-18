@@ -6,10 +6,10 @@ during conversion of PDF to HTML to match such specific requirments.
 
 ## Enum
 
-Name | Type | Value
------------- | ------------- | -------------
-**WriteAllHtml** | **string** | "WriteAllHtml"
-**WriteOnlyBodyContent** | **string** | "WriteOnlyBodyContent"
+| Name |
+|------------|
+|**WriteAllHtml**| 
+|**WriteOnlyBodyContent**| 
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -8,11 +8,11 @@ When PDF file (that usually has fixed layout) is being converted,
 
 ## Enum
 
-Name | Type | Value
------------- | ------------- | -------------
-**Flow** | **string** | "Flow"
-**PdfFlow** | **string** | "PdfFlow"
-**Fixed** | **string** | "Fixed"
+| Name |
+|------------|
+|**Flow**| 
+|**PdfFlow**| 
+|**Fixed**| 
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

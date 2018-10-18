@@ -3,13 +3,13 @@ Enumerates the annotation?s highlighting mode, the visual effect to be used when
 
 ## Enum
 
-Name | Type | Value
------------- | ------------- | -------------
-**None** | **string** | "None"
-**Invert** | **string** | "Invert"
-**Outline** | **string** | "Outline"
-**Push** | **string** | "Push"
-**Toggle** | **string** | "Toggle"
+| Name |
+|------------|
+|**None**| 
+|**Invert**| 
+|**Outline**| 
+|**Push**| 
+|**Toggle**| 
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

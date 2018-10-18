@@ -6,11 +6,11 @@ during conversion of PDF to HTML
 
 ## Enum
 
-Name | Type | Value
------------- | ------------- | -------------
-**AsPngImagesEmbeddedIntoSvg** | **string** | "AsPngImagesEmbeddedIntoSvg"
-**AsExternalPngFilesReferencedViaSvg** | **string** | "AsExternalPngFilesReferencedViaSvg"
-**AsEmbeddedPartsOfPngPageBackground** | **string** | "AsEmbeddedPartsOfPngPageBackground"
+| Name |
+|------------|
+|**AsPngImagesEmbeddedIntoSvg**| 
+|**AsExternalPngFilesReferencedViaSvg**| 
+|**AsEmbeddedPartsOfPngPageBackground**| 
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

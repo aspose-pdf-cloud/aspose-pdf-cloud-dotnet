@@ -3,14 +3,14 @@
 
 ## Enum
 
-Name | Type | Value
------------- | ------------- | -------------
-**Left** | **string** | "Left"
-**Right** | **string** | "Right"
-**Center** | **string** | "Center"
-**Justify** | **string** | "Justify"
-**FullJustify** | **string** | "FullJustify"
-**None** | **string** | "None"
+| Name |
+|------------|
+|**Left**| 
+|**Right**| 
+|**Center**| 
+|**Justify**| 
+|**FullJustify**| 
+|**None**| 
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
