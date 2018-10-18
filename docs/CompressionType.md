@@ -1,10 +1,16 @@
 # Aspose.Pdf.Cloud.Sdk.Model.CompressionType
 Used to specify the parameter value passed to a Tiff image device.
 
-## Properties
+## Enum
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
+Name | Type | Value
+------------ | ------------- | -------------
+**LZW** | **string** | "LZW"
+**CCITT4** | **string** | "CCITT4"
+**CCITT3** | **string** | "CCITT3"
+**RLE** | **string** | "RLE"
+**None** | **string** | "None"
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

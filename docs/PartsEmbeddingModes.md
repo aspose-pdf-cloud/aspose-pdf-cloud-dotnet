@@ -4,10 +4,14 @@ It allows to control whether referenced files (HTML, Fonts,Images, CSSes)
 will be embedded into main HTML file or will be generated as apart binary entities 
             
 
-## Properties
+## Enum
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
+Name | Type | Value
+------------ | ------------- | -------------
+**EmbedAllIntoHtml** | **string** | "EmbedAllIntoHtml"
+**EmbedCssOnly** | **string** | "EmbedCssOnly"
+**NoEmbedding** | **string** | "NoEmbedding"
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

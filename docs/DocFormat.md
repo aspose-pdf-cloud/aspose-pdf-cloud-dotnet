@@ -1,10 +1,13 @@
 # Aspose.Pdf.Cloud.Sdk.Model.DocFormat
 Allows to specify .doc or .docx file format.
 
-## Properties
+## Enum
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
+Name | Type | Value
+------------ | ------------- | -------------
+**Doc** | **string** | "Doc"
+**DocX** | **string** | "DocX"
+
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
