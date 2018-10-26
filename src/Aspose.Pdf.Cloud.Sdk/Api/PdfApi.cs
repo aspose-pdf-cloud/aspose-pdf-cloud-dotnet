@@ -331,6 +331,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of AsposeResponse</returns>
         ApiResponse<AsposeResponse> DeletePropertyWithHttpInfo (string name, string propertyName, string storage = null, string folder = null);
         /// <summary>
+        /// Read document page circle annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>CircleAnnotationResponse</returns>
+        CircleAnnotationResponse GetCircleAnnotation (string name, string annotationId, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page circle annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of CircleAnnotationResponse</returns>
+        ApiResponse<CircleAnnotationResponse> GetCircleAnnotationWithHttpInfo (string name, string annotationId, string storage = null, string folder = null);
+        /// <summary>
         /// Read common document info.
         /// </summary>
         /// <remarks>
@@ -460,6 +487,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> GetDocumentBookmarksWithHttpInfo (string name, string bookmarkPath = null, string storage = null, string folder = null);
         /// <summary>
+        /// Read document circle annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>CircleAnnotationsResponse</returns>
+        CircleAnnotationsResponse GetDocumentCircleAnnotations (string name, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document circle annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of CircleAnnotationsResponse</returns>
+        ApiResponse<CircleAnnotationsResponse> GetDocumentCircleAnnotationsWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
         /// Read document free text annotations.
         /// </summary>
         /// <remarks>
@@ -484,6 +536,81 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of FreeTextAnnotationsResponse</returns>
         ApiResponse<FreeTextAnnotationsResponse> GetDocumentFreeTextAnnotationsWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document line annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>LineAnnotationsResponse</returns>
+        LineAnnotationsResponse GetDocumentLineAnnotations (string name, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document line annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of LineAnnotationsResponse</returns>
+        ApiResponse<LineAnnotationsResponse> GetDocumentLineAnnotationsWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document polyline annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolyLineAnnotationsResponse</returns>
+        PolyLineAnnotationsResponse GetDocumentPolyLineAnnotations (string name, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document polyline annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolyLineAnnotationsResponse</returns>
+        ApiResponse<PolyLineAnnotationsResponse> GetDocumentPolyLineAnnotationsWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document polygon annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolygonAnnotationsResponse</returns>
+        PolygonAnnotationsResponse GetDocumentPolygonAnnotations (string name, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document polygon annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolygonAnnotationsResponse</returns>
+        ApiResponse<PolygonAnnotationsResponse> GetDocumentPolygonAnnotationsWithHttpInfo (string name, string storage = null, string folder = null);
         /// <summary>
         /// Read document properties.
         /// </summary>
@@ -536,6 +663,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder"> (optional)</param>
         /// <returns>ApiResponse of DocumentPropertyResponse</returns>
         ApiResponse<DocumentPropertyResponse> GetDocumentPropertyWithHttpInfo (string name, string propertyName, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document square annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SquareAnnotationsResponse</returns>
+        SquareAnnotationsResponse GetDocumentSquareAnnotations (string name, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document square annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SquareAnnotationsResponse</returns>
+        ApiResponse<SquareAnnotationsResponse> GetDocumentSquareAnnotationsWithHttpInfo (string name, string storage = null, string folder = null);
         /// <summary>
         /// Read document text annotations.
         /// </summary>
@@ -956,6 +1108,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> GetLaTeXInStorageToPdfWithHttpInfo (string srcPath, string storage = null);
         /// <summary>
+        /// Read document page line annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>LineAnnotationResponse</returns>
+        LineAnnotationResponse GetLineAnnotation (string name, string annotationId, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page line annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of LineAnnotationResponse</returns>
+        ApiResponse<LineAnnotationResponse> GetLineAnnotationWithHttpInfo (string name, string annotationId, string storage = null, string folder = null);
+        /// <summary>
         /// Read document link annotation by ID.
         /// </summary>
         /// <remarks>
@@ -1059,6 +1238,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of AnnotationsInfoResponse</returns>
         ApiResponse<AnnotationsInfoResponse> GetPageAnnotationsWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document page circle annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>CircleAnnotationsResponse</returns>
+        CircleAnnotationsResponse GetPageCircleAnnotations (string name, int? pageNumber, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page circle annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of CircleAnnotationsResponse</returns>
+        ApiResponse<CircleAnnotationsResponse> GetPageCircleAnnotationsWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
         /// <summary>
         /// Convert document page to Bmp image and return resulting file in response.
         /// </summary>
@@ -1273,6 +1479,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of FreeTextAnnotationsResponse</returns>
         ApiResponse<FreeTextAnnotationsResponse> GetPageFreeTextAnnotationsWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
         /// <summary>
+        /// Read document page line annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>LineAnnotationsResponse</returns>
+        LineAnnotationsResponse GetPageLineAnnotations (string name, int? pageNumber, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page line annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of LineAnnotationsResponse</returns>
+        ApiResponse<LineAnnotationsResponse> GetPageLineAnnotationsWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
+        /// <summary>
         /// Read document page link annotation by ID.
         /// </summary>
         /// <remarks>
@@ -1328,6 +1561,87 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of LinkAnnotationsResponse</returns>
         ApiResponse<LinkAnnotationsResponse> GetPageLinkAnnotationsWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document page polyline annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolyLineAnnotationsResponse</returns>
+        PolyLineAnnotationsResponse GetPagePolyLineAnnotations (string name, int? pageNumber, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page polyline annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolyLineAnnotationsResponse</returns>
+        ApiResponse<PolyLineAnnotationsResponse> GetPagePolyLineAnnotationsWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document page polygon annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolygonAnnotationsResponse</returns>
+        PolygonAnnotationsResponse GetPagePolygonAnnotations (string name, int? pageNumber, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page polygon annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolygonAnnotationsResponse</returns>
+        ApiResponse<PolygonAnnotationsResponse> GetPagePolygonAnnotationsWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document page square annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SquareAnnotationsResponse</returns>
+        SquareAnnotationsResponse GetPageSquareAnnotations (string name, int? pageNumber, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page square annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SquareAnnotationsResponse</returns>
+        ApiResponse<SquareAnnotationsResponse> GetPageSquareAnnotationsWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
         /// <summary>
         /// Read page text items.
         /// </summary>
@@ -1867,6 +2181,60 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> GetPdfInStorageToXpsWithHttpInfo (string name, string folder = null, string storage = null);
         /// <summary>
+        /// Read document page polyline annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolyLineAnnotationResponse</returns>
+        PolyLineAnnotationResponse GetPolyLineAnnotation (string name, string annotationId, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page polyline annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolyLineAnnotationResponse</returns>
+        ApiResponse<PolyLineAnnotationResponse> GetPolyLineAnnotationWithHttpInfo (string name, string annotationId, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document page polygon annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolygonAnnotationResponse</returns>
+        PolygonAnnotationResponse GetPolygonAnnotation (string name, string annotationId, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page polygon annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolygonAnnotationResponse</returns>
+        ApiResponse<PolygonAnnotationResponse> GetPolygonAnnotationWithHttpInfo (string name, string annotationId, string storage = null, string folder = null);
+        /// <summary>
         /// Convert PS file (located on storage) to PDF format and return resulting file in response. 
         /// </summary>
         /// <remarks>
@@ -1889,6 +2257,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
         ApiResponse<System.IO.Stream> GetPsInStorageToPdfWithHttpInfo (string srcPath, string storage = null);
+        /// <summary>
+        /// Read document page square annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SquareAnnotationResponse</returns>
+        SquareAnnotationResponse GetSquareAnnotation (string name, string annotationId, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page square annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SquareAnnotationResponse</returns>
+        ApiResponse<SquareAnnotationResponse> GetSquareAnnotationWithHttpInfo (string name, string annotationId, string storage = null, string folder = null);
         /// <summary>
         /// Convert SVG file (located on storage) to PDF format and return resulting file in response. 
         /// </summary>
@@ -2364,6 +2759,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of AsposeResponse</returns>
         ApiResponse<AsposeResponse> PostOptimizeDocumentWithHttpInfo (string name, OptimizeOptions options = null, string storage = null, string folder = null);
         /// <summary>
+        /// Add document page circle annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>AsposeResponse</returns>
+        AsposeResponse PostPageCircleAnnotations (string name, int? pageNumber, List<CircleAnnotation> annotations, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Add document page circle annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of AsposeResponse</returns>
+        ApiResponse<AsposeResponse> PostPageCircleAnnotationsWithHttpInfo (string name, int? pageNumber, List<CircleAnnotation> annotations, string storage = null, string folder = null);
+        /// <summary>
         /// Add document page free text annotations.
         /// </summary>
         /// <remarks>
@@ -2393,6 +2817,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of AsposeResponse</returns>
         ApiResponse<AsposeResponse> PostPageFreeTextAnnotationsWithHttpInfo (string name, int? pageNumber, List<FreeTextAnnotation> annotations, string storage = null, string folder = null);
         /// <summary>
+        /// Add document page line annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>AsposeResponse</returns>
+        AsposeResponse PostPageLineAnnotations (string name, int? pageNumber, List<LineAnnotation> annotations, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Add document page line annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of AsposeResponse</returns>
+        ApiResponse<AsposeResponse> PostPageLineAnnotationsWithHttpInfo (string name, int? pageNumber, List<LineAnnotation> annotations, string storage = null, string folder = null);
+        /// <summary>
         /// Add document page link annotations.
         /// </summary>
         /// <remarks>
@@ -2421,6 +2874,93 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>ApiResponse of AsposeResponse</returns>
         ApiResponse<AsposeResponse> PostPageLinkAnnotationsWithHttpInfo (string name, int? pageNumber, List<LinkAnnotation> links, string storage = null, string folder = null);
+        /// <summary>
+        /// Add document page polyline annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>AsposeResponse</returns>
+        AsposeResponse PostPagePolyLineAnnotations (string name, int? pageNumber, List<PolyLineAnnotation> annotations, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Add document page polyline annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of AsposeResponse</returns>
+        ApiResponse<AsposeResponse> PostPagePolyLineAnnotationsWithHttpInfo (string name, int? pageNumber, List<PolyLineAnnotation> annotations, string storage = null, string folder = null);
+        /// <summary>
+        /// Add document page polygon annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>AsposeResponse</returns>
+        AsposeResponse PostPagePolygonAnnotations (string name, int? pageNumber, List<PolygonAnnotation> annotations, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Add document page polygon annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of AsposeResponse</returns>
+        ApiResponse<AsposeResponse> PostPagePolygonAnnotationsWithHttpInfo (string name, int? pageNumber, List<PolygonAnnotation> annotations, string storage = null, string folder = null);
+        /// <summary>
+        /// Add document page square annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>AsposeResponse</returns>
+        AsposeResponse PostPageSquareAnnotations (string name, int? pageNumber, List<SquareAnnotation> annotations, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Add document page square annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of AsposeResponse</returns>
+        ApiResponse<AsposeResponse> PostPageSquareAnnotationsWithHttpInfo (string name, int? pageNumber, List<SquareAnnotation> annotations, string storage = null, string folder = null);
         /// <summary>
         /// Add document page text annotations.
         /// </summary>
@@ -2620,6 +3160,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>ApiResponse of AsposeResponse</returns>
         ApiResponse<AsposeResponse> PutAddTextWithHttpInfo (string name, int? pageNumber, Paragraph paragraph = null, string folder = null, string storage = null);
+        /// <summary>
+        /// Replace document circle annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>CircleAnnotationResponse</returns>
+        CircleAnnotationResponse PutCircleAnnotation (string name, string annotationId, CircleAnnotation annotation, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Replace document circle annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of CircleAnnotationResponse</returns>
+        ApiResponse<CircleAnnotationResponse> PutCircleAnnotationWithHttpInfo (string name, string annotationId, CircleAnnotation annotation, string storage = null, string folder = null);
         /// <summary>
         /// Upload a specific file 
         /// </summary>
@@ -3114,6 +3683,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>ApiResponse of AsposeResponse</returns>
         ApiResponse<AsposeResponse> PutLaTeXInStorageToPdfWithHttpInfo (string name, string srcPath, string dstFolder = null, string storage = null);
+        /// <summary>
+        /// Replace document line annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>LineAnnotationResponse</returns>
+        LineAnnotationResponse PutLineAnnotation (string name, string annotationId, LineAnnotation annotation, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Replace document line annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of LineAnnotationResponse</returns>
+        ApiResponse<LineAnnotationResponse> PutLineAnnotationWithHttpInfo (string name, string annotationId, LineAnnotation annotation, string storage = null, string folder = null);
         /// <summary>
         /// Replace document page link annotations
         /// </summary>
@@ -4316,6 +4914,64 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>ApiResponse of AsposeResponse</returns>
         ApiResponse<AsposeResponse> PutPdfInStorageToXpsWithHttpInfo (string name, string outPath, string folder = null, string storage = null);
         /// <summary>
+        /// Replace document polyline annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolyLineAnnotationResponse</returns>
+        PolyLineAnnotationResponse PutPolyLineAnnotation (string name, string annotationId, PolyLineAnnotation annotation, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Replace document polyline annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolyLineAnnotationResponse</returns>
+        ApiResponse<PolyLineAnnotationResponse> PutPolyLineAnnotationWithHttpInfo (string name, string annotationId, PolyLineAnnotation annotation, string storage = null, string folder = null);
+        /// <summary>
+        /// Replace document polygon annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolygonAnnotationResponse</returns>
+        PolygonAnnotationResponse PutPolygonAnnotation (string name, string annotationId, PolygonAnnotation annotation, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Replace document polygon annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolygonAnnotationResponse</returns>
+        ApiResponse<PolygonAnnotationResponse> PutPolygonAnnotationWithHttpInfo (string name, string annotationId, PolygonAnnotation annotation, string storage = null, string folder = null);
+        /// <summary>
         /// Update privilege document.
         /// </summary>
         /// <remarks>
@@ -4456,6 +5112,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder"> (optional)</param>
         /// <returns>ApiResponse of DocumentPropertyResponse</returns>
         ApiResponse<DocumentPropertyResponse> PutSetPropertyWithHttpInfo (string name, string propertyName, string value, string storage = null, string folder = null);
+        /// <summary>
+        /// Replace document square annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SquareAnnotationResponse</returns>
+        SquareAnnotationResponse PutSquareAnnotation (string name, string annotationId, SquareAnnotation annotation, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Replace document square annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SquareAnnotationResponse</returns>
+        ApiResponse<SquareAnnotationResponse> PutSquareAnnotationWithHttpInfo (string name, string annotationId, SquareAnnotation annotation, string storage = null, string folder = null);
         /// <summary>
         /// Convert SVG file (located on storage) to PDF format and upload resulting file to storage. 
         /// </summary>
@@ -5054,6 +5739,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> DeletePropertyAsyncWithHttpInfo (string name, string propertyName, string storage = null, string folder = null);
         /// <summary>
+        /// Read document page circle annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of CircleAnnotationResponse</returns>
+        System.Threading.Tasks.Task<CircleAnnotationResponse> GetCircleAnnotationAsync (string name, string annotationId, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page circle annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (CircleAnnotationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CircleAnnotationResponse>> GetCircleAnnotationAsyncWithHttpInfo (string name, string annotationId, string storage = null, string folder = null);
+        /// <summary>
         /// Read common document info.
         /// </summary>
         /// <remarks>
@@ -5183,6 +5895,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetDocumentBookmarksAsyncWithHttpInfo (string name, string bookmarkPath = null, string storage = null, string folder = null);
         /// <summary>
+        /// Read document circle annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of CircleAnnotationsResponse</returns>
+        System.Threading.Tasks.Task<CircleAnnotationsResponse> GetDocumentCircleAnnotationsAsync (string name, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document circle annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (CircleAnnotationsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CircleAnnotationsResponse>> GetDocumentCircleAnnotationsAsyncWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
         /// Read document free text annotations.
         /// </summary>
         /// <remarks>
@@ -5207,6 +5944,81 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (FreeTextAnnotationsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<FreeTextAnnotationsResponse>> GetDocumentFreeTextAnnotationsAsyncWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document line annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of LineAnnotationsResponse</returns>
+        System.Threading.Tasks.Task<LineAnnotationsResponse> GetDocumentLineAnnotationsAsync (string name, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document line annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (LineAnnotationsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LineAnnotationsResponse>> GetDocumentLineAnnotationsAsyncWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document polyline annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolyLineAnnotationsResponse</returns>
+        System.Threading.Tasks.Task<PolyLineAnnotationsResponse> GetDocumentPolyLineAnnotationsAsync (string name, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document polyline annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolyLineAnnotationsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PolyLineAnnotationsResponse>> GetDocumentPolyLineAnnotationsAsyncWithHttpInfo (string name, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document polygon annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolygonAnnotationsResponse</returns>
+        System.Threading.Tasks.Task<PolygonAnnotationsResponse> GetDocumentPolygonAnnotationsAsync (string name, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document polygon annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolygonAnnotationsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PolygonAnnotationsResponse>> GetDocumentPolygonAnnotationsAsyncWithHttpInfo (string name, string storage = null, string folder = null);
         /// <summary>
         /// Read document properties.
         /// </summary>
@@ -5259,6 +6071,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder"> (optional)</param>
         /// <returns>Task of ApiResponse (DocumentPropertyResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentPropertyResponse>> GetDocumentPropertyAsyncWithHttpInfo (string name, string propertyName, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document square annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SquareAnnotationsResponse</returns>
+        System.Threading.Tasks.Task<SquareAnnotationsResponse> GetDocumentSquareAnnotationsAsync (string name, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document square annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SquareAnnotationsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SquareAnnotationsResponse>> GetDocumentSquareAnnotationsAsyncWithHttpInfo (string name, string storage = null, string folder = null);
         /// <summary>
         /// Read document text annotations.
         /// </summary>
@@ -5679,6 +6516,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetLaTeXInStorageToPdfAsyncWithHttpInfo (string srcPath, string storage = null);
         /// <summary>
+        /// Read document page line annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of LineAnnotationResponse</returns>
+        System.Threading.Tasks.Task<LineAnnotationResponse> GetLineAnnotationAsync (string name, string annotationId, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page line annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (LineAnnotationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LineAnnotationResponse>> GetLineAnnotationAsyncWithHttpInfo (string name, string annotationId, string storage = null, string folder = null);
+        /// <summary>
         /// Read document link annotation by ID.
         /// </summary>
         /// <remarks>
@@ -5782,6 +6646,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (AnnotationsInfoResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AnnotationsInfoResponse>> GetPageAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document page circle annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of CircleAnnotationsResponse</returns>
+        System.Threading.Tasks.Task<CircleAnnotationsResponse> GetPageCircleAnnotationsAsync (string name, int? pageNumber, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page circle annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (CircleAnnotationsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CircleAnnotationsResponse>> GetPageCircleAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
         /// <summary>
         /// Convert document page to Bmp image and return resulting file in response.
         /// </summary>
@@ -5996,6 +6887,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (FreeTextAnnotationsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<FreeTextAnnotationsResponse>> GetPageFreeTextAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
         /// <summary>
+        /// Read document page line annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of LineAnnotationsResponse</returns>
+        System.Threading.Tasks.Task<LineAnnotationsResponse> GetPageLineAnnotationsAsync (string name, int? pageNumber, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page line annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (LineAnnotationsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LineAnnotationsResponse>> GetPageLineAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
+        /// <summary>
         /// Read document page link annotation by ID.
         /// </summary>
         /// <remarks>
@@ -6051,6 +6969,87 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (LinkAnnotationsResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LinkAnnotationsResponse>> GetPageLinkAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document page polyline annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolyLineAnnotationsResponse</returns>
+        System.Threading.Tasks.Task<PolyLineAnnotationsResponse> GetPagePolyLineAnnotationsAsync (string name, int? pageNumber, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page polyline annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolyLineAnnotationsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PolyLineAnnotationsResponse>> GetPagePolyLineAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document page polygon annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolygonAnnotationsResponse</returns>
+        System.Threading.Tasks.Task<PolygonAnnotationsResponse> GetPagePolygonAnnotationsAsync (string name, int? pageNumber, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page polygon annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolygonAnnotationsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PolygonAnnotationsResponse>> GetPagePolygonAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document page square annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SquareAnnotationsResponse</returns>
+        System.Threading.Tasks.Task<SquareAnnotationsResponse> GetPageSquareAnnotationsAsync (string name, int? pageNumber, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page square annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SquareAnnotationsResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SquareAnnotationsResponse>> GetPageSquareAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null);
         /// <summary>
         /// Read page text items.
         /// </summary>
@@ -6590,6 +7589,60 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPdfInStorageToXpsAsyncWithHttpInfo (string name, string folder = null, string storage = null);
         /// <summary>
+        /// Read document page polyline annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolyLineAnnotationResponse</returns>
+        System.Threading.Tasks.Task<PolyLineAnnotationResponse> GetPolyLineAnnotationAsync (string name, string annotationId, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page polyline annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolyLineAnnotationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PolyLineAnnotationResponse>> GetPolyLineAnnotationAsyncWithHttpInfo (string name, string annotationId, string storage = null, string folder = null);
+        /// <summary>
+        /// Read document page polygon annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolygonAnnotationResponse</returns>
+        System.Threading.Tasks.Task<PolygonAnnotationResponse> GetPolygonAnnotationAsync (string name, string annotationId, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page polygon annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolygonAnnotationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PolygonAnnotationResponse>> GetPolygonAnnotationAsyncWithHttpInfo (string name, string annotationId, string storage = null, string folder = null);
+        /// <summary>
         /// Convert PS file (located on storage) to PDF format and return resulting file in response. 
         /// </summary>
         /// <remarks>
@@ -6612,6 +7665,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
         System.Threading.Tasks.Task<ApiResponse<System.IO.Stream>> GetPsInStorageToPdfAsyncWithHttpInfo (string srcPath, string storage = null);
+        /// <summary>
+        /// Read document page square annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SquareAnnotationResponse</returns>
+        System.Threading.Tasks.Task<SquareAnnotationResponse> GetSquareAnnotationAsync (string name, string annotationId, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Read document page square annotation by ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SquareAnnotationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SquareAnnotationResponse>> GetSquareAnnotationAsyncWithHttpInfo (string name, string annotationId, string storage = null, string folder = null);
         /// <summary>
         /// Convert SVG file (located on storage) to PDF format and return resulting file in response. 
         /// </summary>
@@ -7087,6 +8167,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostOptimizeDocumentAsyncWithHttpInfo (string name, OptimizeOptions options = null, string storage = null, string folder = null);
         /// <summary>
+        /// Add document page circle annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of AsposeResponse</returns>
+        System.Threading.Tasks.Task<AsposeResponse> PostPageCircleAnnotationsAsync (string name, int? pageNumber, List<CircleAnnotation> annotations, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Add document page circle annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (AsposeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostPageCircleAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, List<CircleAnnotation> annotations, string storage = null, string folder = null);
+        /// <summary>
         /// Add document page free text annotations.
         /// </summary>
         /// <remarks>
@@ -7116,6 +8225,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostPageFreeTextAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, List<FreeTextAnnotation> annotations, string storage = null, string folder = null);
         /// <summary>
+        /// Add document page line annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of AsposeResponse</returns>
+        System.Threading.Tasks.Task<AsposeResponse> PostPageLineAnnotationsAsync (string name, int? pageNumber, List<LineAnnotation> annotations, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Add document page line annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (AsposeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostPageLineAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, List<LineAnnotation> annotations, string storage = null, string folder = null);
+        /// <summary>
         /// Add document page link annotations.
         /// </summary>
         /// <remarks>
@@ -7144,6 +8282,93 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder">The document folder. (optional)</param>
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostPageLinkAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, List<LinkAnnotation> links, string storage = null, string folder = null);
+        /// <summary>
+        /// Add document page polyline annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of AsposeResponse</returns>
+        System.Threading.Tasks.Task<AsposeResponse> PostPagePolyLineAnnotationsAsync (string name, int? pageNumber, List<PolyLineAnnotation> annotations, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Add document page polyline annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (AsposeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostPagePolyLineAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, List<PolyLineAnnotation> annotations, string storage = null, string folder = null);
+        /// <summary>
+        /// Add document page polygon annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of AsposeResponse</returns>
+        System.Threading.Tasks.Task<AsposeResponse> PostPagePolygonAnnotationsAsync (string name, int? pageNumber, List<PolygonAnnotation> annotations, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Add document page polygon annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (AsposeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostPagePolygonAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, List<PolygonAnnotation> annotations, string storage = null, string folder = null);
+        /// <summary>
+        /// Add document page square annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of AsposeResponse</returns>
+        System.Threading.Tasks.Task<AsposeResponse> PostPageSquareAnnotationsAsync (string name, int? pageNumber, List<SquareAnnotation> annotations, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Add document page square annotations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (AsposeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostPageSquareAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, List<SquareAnnotation> annotations, string storage = null, string folder = null);
         /// <summary>
         /// Add document page text annotations.
         /// </summary>
@@ -7343,6 +8568,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PutAddTextAsyncWithHttpInfo (string name, int? pageNumber, Paragraph paragraph = null, string folder = null, string storage = null);
+        /// <summary>
+        /// Replace document circle annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of CircleAnnotationResponse</returns>
+        System.Threading.Tasks.Task<CircleAnnotationResponse> PutCircleAnnotationAsync (string name, string annotationId, CircleAnnotation annotation, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Replace document circle annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (CircleAnnotationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CircleAnnotationResponse>> PutCircleAnnotationAsyncWithHttpInfo (string name, string annotationId, CircleAnnotation annotation, string storage = null, string folder = null);
         /// <summary>
         /// Upload a specific file 
         /// </summary>
@@ -7837,6 +9091,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PutLaTeXInStorageToPdfAsyncWithHttpInfo (string name, string srcPath, string dstFolder = null, string storage = null);
+        /// <summary>
+        /// Replace document line annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of LineAnnotationResponse</returns>
+        System.Threading.Tasks.Task<LineAnnotationResponse> PutLineAnnotationAsync (string name, string annotationId, LineAnnotation annotation, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Replace document line annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (LineAnnotationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LineAnnotationResponse>> PutLineAnnotationAsyncWithHttpInfo (string name, string annotationId, LineAnnotation annotation, string storage = null, string folder = null);
         /// <summary>
         /// Replace document page link annotations
         /// </summary>
@@ -9039,6 +10322,64 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PutPdfInStorageToXpsAsyncWithHttpInfo (string name, string outPath, string folder = null, string storage = null);
         /// <summary>
+        /// Replace document polyline annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolyLineAnnotationResponse</returns>
+        System.Threading.Tasks.Task<PolyLineAnnotationResponse> PutPolyLineAnnotationAsync (string name, string annotationId, PolyLineAnnotation annotation, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Replace document polyline annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolyLineAnnotationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PolyLineAnnotationResponse>> PutPolyLineAnnotationAsyncWithHttpInfo (string name, string annotationId, PolyLineAnnotation annotation, string storage = null, string folder = null);
+        /// <summary>
+        /// Replace document polygon annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolygonAnnotationResponse</returns>
+        System.Threading.Tasks.Task<PolygonAnnotationResponse> PutPolygonAnnotationAsync (string name, string annotationId, PolygonAnnotation annotation, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Replace document polygon annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolygonAnnotationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PolygonAnnotationResponse>> PutPolygonAnnotationAsyncWithHttpInfo (string name, string annotationId, PolygonAnnotation annotation, string storage = null, string folder = null);
+        /// <summary>
         /// Update privilege document.
         /// </summary>
         /// <remarks>
@@ -9179,6 +10520,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder"> (optional)</param>
         /// <returns>Task of ApiResponse (DocumentPropertyResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<DocumentPropertyResponse>> PutSetPropertyAsyncWithHttpInfo (string name, string propertyName, string value, string storage = null, string folder = null);
+        /// <summary>
+        /// Replace document square annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SquareAnnotationResponse</returns>
+        System.Threading.Tasks.Task<SquareAnnotationResponse> PutSquareAnnotationAsync (string name, string annotationId, SquareAnnotation annotation, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Replace document square annotation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SquareAnnotationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SquareAnnotationResponse>> PutSquareAnnotationAsyncWithHttpInfo (string name, string annotationId, SquareAnnotation annotation, string storage = null, string folder = null);
         /// <summary>
         /// Convert SVG file (located on storage) to PDF format and upload resulting file to storage. 
         /// </summary>
@@ -11293,6 +12663,165 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Read document page circle annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>CircleAnnotationResponse</returns>
+        public CircleAnnotationResponse GetCircleAnnotation (string name, string annotationId, string storage = null, string folder = null)
+        {
+             ApiResponse<CircleAnnotationResponse> localVarResponse = GetCircleAnnotationWithHttpInfo(name, annotationId, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document page circle annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of CircleAnnotationResponse</returns>
+        public ApiResponse< CircleAnnotationResponse > GetCircleAnnotationWithHttpInfo (string name, string annotationId, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetCircleAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->GetCircleAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/circle/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCircleAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CircleAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CircleAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(CircleAnnotationResponse)));
+        }
+
+        /// <summary>
+        /// Read document page circle annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of CircleAnnotationResponse</returns>
+        public async System.Threading.Tasks.Task<CircleAnnotationResponse> GetCircleAnnotationAsync (string name, string annotationId, string storage = null, string folder = null)
+        {
+             ApiResponse<CircleAnnotationResponse> localVarResponse = await GetCircleAnnotationAsyncWithHttpInfo(name, annotationId, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document page circle annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (CircleAnnotationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CircleAnnotationResponse>> GetCircleAnnotationAsyncWithHttpInfo (string name, string annotationId, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetCircleAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->GetCircleAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/circle/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetCircleAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CircleAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CircleAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(CircleAnnotationResponse)));
+        }
+
+        /// <summary>
         /// Read common document info. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12046,6 +13575,153 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Read document circle annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>CircleAnnotationsResponse</returns>
+        public CircleAnnotationsResponse GetDocumentCircleAnnotations (string name, string storage = null, string folder = null)
+        {
+             ApiResponse<CircleAnnotationsResponse> localVarResponse = GetDocumentCircleAnnotationsWithHttpInfo(name, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document circle annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of CircleAnnotationsResponse</returns>
+        public ApiResponse< CircleAnnotationsResponse > GetDocumentCircleAnnotationsWithHttpInfo (string name, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetDocumentCircleAnnotations");
+
+            var localVarPath = "/pdf/{name}/annotations/circle";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDocumentCircleAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CircleAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CircleAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(CircleAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document circle annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of CircleAnnotationsResponse</returns>
+        public async System.Threading.Tasks.Task<CircleAnnotationsResponse> GetDocumentCircleAnnotationsAsync (string name, string storage = null, string folder = null)
+        {
+             ApiResponse<CircleAnnotationsResponse> localVarResponse = await GetDocumentCircleAnnotationsAsyncWithHttpInfo(name, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document circle annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (CircleAnnotationsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CircleAnnotationsResponse>> GetDocumentCircleAnnotationsAsyncWithHttpInfo (string name, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetDocumentCircleAnnotations");
+
+            var localVarPath = "/pdf/{name}/annotations/circle";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDocumentCircleAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CircleAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CircleAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(CircleAnnotationsResponse)));
+        }
+
+        /// <summary>
         /// Read document free text annotations. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12190,6 +13866,447 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<FreeTextAnnotationsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (FreeTextAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(FreeTextAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document line annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>LineAnnotationsResponse</returns>
+        public LineAnnotationsResponse GetDocumentLineAnnotations (string name, string storage = null, string folder = null)
+        {
+             ApiResponse<LineAnnotationsResponse> localVarResponse = GetDocumentLineAnnotationsWithHttpInfo(name, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document line annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of LineAnnotationsResponse</returns>
+        public ApiResponse< LineAnnotationsResponse > GetDocumentLineAnnotationsWithHttpInfo (string name, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetDocumentLineAnnotations");
+
+            var localVarPath = "/pdf/{name}/annotations/line";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDocumentLineAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LineAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LineAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(LineAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document line annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of LineAnnotationsResponse</returns>
+        public async System.Threading.Tasks.Task<LineAnnotationsResponse> GetDocumentLineAnnotationsAsync (string name, string storage = null, string folder = null)
+        {
+             ApiResponse<LineAnnotationsResponse> localVarResponse = await GetDocumentLineAnnotationsAsyncWithHttpInfo(name, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document line annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (LineAnnotationsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LineAnnotationsResponse>> GetDocumentLineAnnotationsAsyncWithHttpInfo (string name, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetDocumentLineAnnotations");
+
+            var localVarPath = "/pdf/{name}/annotations/line";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDocumentLineAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LineAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LineAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(LineAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document polyline annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolyLineAnnotationsResponse</returns>
+        public PolyLineAnnotationsResponse GetDocumentPolyLineAnnotations (string name, string storage = null, string folder = null)
+        {
+             ApiResponse<PolyLineAnnotationsResponse> localVarResponse = GetDocumentPolyLineAnnotationsWithHttpInfo(name, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document polyline annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolyLineAnnotationsResponse</returns>
+        public ApiResponse< PolyLineAnnotationsResponse > GetDocumentPolyLineAnnotationsWithHttpInfo (string name, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetDocumentPolyLineAnnotations");
+
+            var localVarPath = "/pdf/{name}/annotations/polyline";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDocumentPolyLineAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolyLineAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolyLineAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(PolyLineAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document polyline annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolyLineAnnotationsResponse</returns>
+        public async System.Threading.Tasks.Task<PolyLineAnnotationsResponse> GetDocumentPolyLineAnnotationsAsync (string name, string storage = null, string folder = null)
+        {
+             ApiResponse<PolyLineAnnotationsResponse> localVarResponse = await GetDocumentPolyLineAnnotationsAsyncWithHttpInfo(name, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document polyline annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolyLineAnnotationsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PolyLineAnnotationsResponse>> GetDocumentPolyLineAnnotationsAsyncWithHttpInfo (string name, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetDocumentPolyLineAnnotations");
+
+            var localVarPath = "/pdf/{name}/annotations/polyline";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDocumentPolyLineAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolyLineAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolyLineAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(PolyLineAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document polygon annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolygonAnnotationsResponse</returns>
+        public PolygonAnnotationsResponse GetDocumentPolygonAnnotations (string name, string storage = null, string folder = null)
+        {
+             ApiResponse<PolygonAnnotationsResponse> localVarResponse = GetDocumentPolygonAnnotationsWithHttpInfo(name, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document polygon annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolygonAnnotationsResponse</returns>
+        public ApiResponse< PolygonAnnotationsResponse > GetDocumentPolygonAnnotationsWithHttpInfo (string name, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetDocumentPolygonAnnotations");
+
+            var localVarPath = "/pdf/{name}/annotations/polygon";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDocumentPolygonAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolygonAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolygonAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(PolygonAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document polygon annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolygonAnnotationsResponse</returns>
+        public async System.Threading.Tasks.Task<PolygonAnnotationsResponse> GetDocumentPolygonAnnotationsAsync (string name, string storage = null, string folder = null)
+        {
+             ApiResponse<PolygonAnnotationsResponse> localVarResponse = await GetDocumentPolygonAnnotationsAsyncWithHttpInfo(name, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document polygon annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolygonAnnotationsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PolygonAnnotationsResponse>> GetDocumentPolygonAnnotationsAsyncWithHttpInfo (string name, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetDocumentPolygonAnnotations");
+
+            var localVarPath = "/pdf/{name}/annotations/polygon";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDocumentPolygonAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolygonAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolygonAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(PolygonAnnotationsResponse)));
         }
 
         /// <summary>
@@ -12496,6 +14613,153 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<DocumentPropertyResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DocumentPropertyResponse) ApiClient.Deserialize(localVarResponse, typeof(DocumentPropertyResponse)));
+        }
+
+        /// <summary>
+        /// Read document square annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SquareAnnotationsResponse</returns>
+        public SquareAnnotationsResponse GetDocumentSquareAnnotations (string name, string storage = null, string folder = null)
+        {
+             ApiResponse<SquareAnnotationsResponse> localVarResponse = GetDocumentSquareAnnotationsWithHttpInfo(name, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document square annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SquareAnnotationsResponse</returns>
+        public ApiResponse< SquareAnnotationsResponse > GetDocumentSquareAnnotationsWithHttpInfo (string name, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetDocumentSquareAnnotations");
+
+            var localVarPath = "/pdf/{name}/annotations/square";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDocumentSquareAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SquareAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SquareAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(SquareAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document square annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SquareAnnotationsResponse</returns>
+        public async System.Threading.Tasks.Task<SquareAnnotationsResponse> GetDocumentSquareAnnotationsAsync (string name, string storage = null, string folder = null)
+        {
+             ApiResponse<SquareAnnotationsResponse> localVarResponse = await GetDocumentSquareAnnotationsAsyncWithHttpInfo(name, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document square annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SquareAnnotationsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SquareAnnotationsResponse>> GetDocumentSquareAnnotationsAsyncWithHttpInfo (string name, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetDocumentSquareAnnotations");
+
+            var localVarPath = "/pdf/{name}/annotations/square";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDocumentSquareAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SquareAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SquareAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(SquareAnnotationsResponse)));
         }
 
         /// <summary>
@@ -14896,6 +17160,165 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Read document page line annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>LineAnnotationResponse</returns>
+        public LineAnnotationResponse GetLineAnnotation (string name, string annotationId, string storage = null, string folder = null)
+        {
+             ApiResponse<LineAnnotationResponse> localVarResponse = GetLineAnnotationWithHttpInfo(name, annotationId, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document page line annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of LineAnnotationResponse</returns>
+        public ApiResponse< LineAnnotationResponse > GetLineAnnotationWithHttpInfo (string name, string annotationId, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetLineAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->GetLineAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/line/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetLineAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LineAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LineAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(LineAnnotationResponse)));
+        }
+
+        /// <summary>
+        /// Read document page line annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of LineAnnotationResponse</returns>
+        public async System.Threading.Tasks.Task<LineAnnotationResponse> GetLineAnnotationAsync (string name, string annotationId, string storage = null, string folder = null)
+        {
+             ApiResponse<LineAnnotationResponse> localVarResponse = await GetLineAnnotationAsyncWithHttpInfo(name, annotationId, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document page line annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (LineAnnotationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LineAnnotationResponse>> GetLineAnnotationAsyncWithHttpInfo (string name, string annotationId, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetLineAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->GetLineAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/line/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetLineAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LineAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LineAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(LineAnnotationResponse)));
+        }
+
+        /// <summary>
         /// Read document link annotation by ID. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -15511,6 +17934,165 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<AnnotationsInfoResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AnnotationsInfoResponse) ApiClient.Deserialize(localVarResponse, typeof(AnnotationsInfoResponse)));
+        }
+
+        /// <summary>
+        /// Read document page circle annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>CircleAnnotationsResponse</returns>
+        public CircleAnnotationsResponse GetPageCircleAnnotations (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+             ApiResponse<CircleAnnotationsResponse> localVarResponse = GetPageCircleAnnotationsWithHttpInfo(name, pageNumber, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document page circle annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of CircleAnnotationsResponse</returns>
+        public ApiResponse< CircleAnnotationsResponse > GetPageCircleAnnotationsWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPageCircleAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->GetPageCircleAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/circle";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPageCircleAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CircleAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CircleAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(CircleAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document page circle annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of CircleAnnotationsResponse</returns>
+        public async System.Threading.Tasks.Task<CircleAnnotationsResponse> GetPageCircleAnnotationsAsync (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+             ApiResponse<CircleAnnotationsResponse> localVarResponse = await GetPageCircleAnnotationsAsyncWithHttpInfo(name, pageNumber, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document page circle annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (CircleAnnotationsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CircleAnnotationsResponse>> GetPageCircleAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPageCircleAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->GetPageCircleAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/circle";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPageCircleAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CircleAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CircleAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(CircleAnnotationsResponse)));
         }
 
         /// <summary>
@@ -16699,6 +19281,165 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Read document page line annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>LineAnnotationsResponse</returns>
+        public LineAnnotationsResponse GetPageLineAnnotations (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+             ApiResponse<LineAnnotationsResponse> localVarResponse = GetPageLineAnnotationsWithHttpInfo(name, pageNumber, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document page line annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of LineAnnotationsResponse</returns>
+        public ApiResponse< LineAnnotationsResponse > GetPageLineAnnotationsWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPageLineAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->GetPageLineAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/line";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPageLineAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LineAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LineAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(LineAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document page line annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of LineAnnotationsResponse</returns>
+        public async System.Threading.Tasks.Task<LineAnnotationsResponse> GetPageLineAnnotationsAsync (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+             ApiResponse<LineAnnotationsResponse> localVarResponse = await GetPageLineAnnotationsAsyncWithHttpInfo(name, pageNumber, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document page line annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (LineAnnotationsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LineAnnotationsResponse>> GetPageLineAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPageLineAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->GetPageLineAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/line";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPageLineAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LineAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LineAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(LineAnnotationsResponse)));
+        }
+
+        /// <summary>
         /// Read document page link annotation by ID. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -17026,6 +19767,483 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<LinkAnnotationsResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (LinkAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(LinkAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document page polyline annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolyLineAnnotationsResponse</returns>
+        public PolyLineAnnotationsResponse GetPagePolyLineAnnotations (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+             ApiResponse<PolyLineAnnotationsResponse> localVarResponse = GetPagePolyLineAnnotationsWithHttpInfo(name, pageNumber, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document page polyline annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolyLineAnnotationsResponse</returns>
+        public ApiResponse< PolyLineAnnotationsResponse > GetPagePolyLineAnnotationsWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPagePolyLineAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->GetPagePolyLineAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/polyline";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPagePolyLineAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolyLineAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolyLineAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(PolyLineAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document page polyline annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolyLineAnnotationsResponse</returns>
+        public async System.Threading.Tasks.Task<PolyLineAnnotationsResponse> GetPagePolyLineAnnotationsAsync (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+             ApiResponse<PolyLineAnnotationsResponse> localVarResponse = await GetPagePolyLineAnnotationsAsyncWithHttpInfo(name, pageNumber, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document page polyline annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolyLineAnnotationsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PolyLineAnnotationsResponse>> GetPagePolyLineAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPagePolyLineAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->GetPagePolyLineAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/polyline";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPagePolyLineAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolyLineAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolyLineAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(PolyLineAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document page polygon annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolygonAnnotationsResponse</returns>
+        public PolygonAnnotationsResponse GetPagePolygonAnnotations (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+             ApiResponse<PolygonAnnotationsResponse> localVarResponse = GetPagePolygonAnnotationsWithHttpInfo(name, pageNumber, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document page polygon annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolygonAnnotationsResponse</returns>
+        public ApiResponse< PolygonAnnotationsResponse > GetPagePolygonAnnotationsWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPagePolygonAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->GetPagePolygonAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/polygon";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPagePolygonAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolygonAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolygonAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(PolygonAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document page polygon annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolygonAnnotationsResponse</returns>
+        public async System.Threading.Tasks.Task<PolygonAnnotationsResponse> GetPagePolygonAnnotationsAsync (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+             ApiResponse<PolygonAnnotationsResponse> localVarResponse = await GetPagePolygonAnnotationsAsyncWithHttpInfo(name, pageNumber, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document page polygon annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolygonAnnotationsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PolygonAnnotationsResponse>> GetPagePolygonAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPagePolygonAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->GetPagePolygonAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/polygon";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPagePolygonAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolygonAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolygonAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(PolygonAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document page square annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SquareAnnotationsResponse</returns>
+        public SquareAnnotationsResponse GetPageSquareAnnotations (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+             ApiResponse<SquareAnnotationsResponse> localVarResponse = GetPageSquareAnnotationsWithHttpInfo(name, pageNumber, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document page square annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SquareAnnotationsResponse</returns>
+        public ApiResponse< SquareAnnotationsResponse > GetPageSquareAnnotationsWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPageSquareAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->GetPageSquareAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/square";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPageSquareAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SquareAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SquareAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(SquareAnnotationsResponse)));
+        }
+
+        /// <summary>
+        /// Read document page square annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SquareAnnotationsResponse</returns>
+        public async System.Threading.Tasks.Task<SquareAnnotationsResponse> GetPageSquareAnnotationsAsync (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+             ApiResponse<SquareAnnotationsResponse> localVarResponse = await GetPageSquareAnnotationsAsyncWithHttpInfo(name, pageNumber, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document page square annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SquareAnnotationsResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SquareAnnotationsResponse>> GetPageSquareAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPageSquareAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->GetPageSquareAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/square";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPageSquareAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SquareAnnotationsResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SquareAnnotationsResponse) ApiClient.Deserialize(localVarResponse, typeof(SquareAnnotationsResponse)));
         }
 
         /// <summary>
@@ -19837,6 +23055,324 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Read document page polyline annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolyLineAnnotationResponse</returns>
+        public PolyLineAnnotationResponse GetPolyLineAnnotation (string name, string annotationId, string storage = null, string folder = null)
+        {
+             ApiResponse<PolyLineAnnotationResponse> localVarResponse = GetPolyLineAnnotationWithHttpInfo(name, annotationId, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document page polyline annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolyLineAnnotationResponse</returns>
+        public ApiResponse< PolyLineAnnotationResponse > GetPolyLineAnnotationWithHttpInfo (string name, string annotationId, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPolyLineAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->GetPolyLineAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/polyline/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPolyLineAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolyLineAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolyLineAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(PolyLineAnnotationResponse)));
+        }
+
+        /// <summary>
+        /// Read document page polyline annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolyLineAnnotationResponse</returns>
+        public async System.Threading.Tasks.Task<PolyLineAnnotationResponse> GetPolyLineAnnotationAsync (string name, string annotationId, string storage = null, string folder = null)
+        {
+             ApiResponse<PolyLineAnnotationResponse> localVarResponse = await GetPolyLineAnnotationAsyncWithHttpInfo(name, annotationId, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document page polyline annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolyLineAnnotationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PolyLineAnnotationResponse>> GetPolyLineAnnotationAsyncWithHttpInfo (string name, string annotationId, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPolyLineAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->GetPolyLineAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/polyline/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPolyLineAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolyLineAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolyLineAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(PolyLineAnnotationResponse)));
+        }
+
+        /// <summary>
+        /// Read document page polygon annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolygonAnnotationResponse</returns>
+        public PolygonAnnotationResponse GetPolygonAnnotation (string name, string annotationId, string storage = null, string folder = null)
+        {
+             ApiResponse<PolygonAnnotationResponse> localVarResponse = GetPolygonAnnotationWithHttpInfo(name, annotationId, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document page polygon annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolygonAnnotationResponse</returns>
+        public ApiResponse< PolygonAnnotationResponse > GetPolygonAnnotationWithHttpInfo (string name, string annotationId, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPolygonAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->GetPolygonAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/polygon/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPolygonAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolygonAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolygonAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(PolygonAnnotationResponse)));
+        }
+
+        /// <summary>
+        /// Read document page polygon annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolygonAnnotationResponse</returns>
+        public async System.Threading.Tasks.Task<PolygonAnnotationResponse> GetPolygonAnnotationAsync (string name, string annotationId, string storage = null, string folder = null)
+        {
+             ApiResponse<PolygonAnnotationResponse> localVarResponse = await GetPolygonAnnotationAsyncWithHttpInfo(name, annotationId, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document page polygon annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolygonAnnotationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PolygonAnnotationResponse>> GetPolygonAnnotationAsyncWithHttpInfo (string name, string annotationId, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetPolygonAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->GetPolygonAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/polygon/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetPolygonAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolygonAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolygonAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(PolygonAnnotationResponse)));
+        }
+
+        /// <summary>
         /// Convert PS file (located on storage) to PDF format and return resulting file in response.  
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -19975,6 +23511,165 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<System.IO.Stream>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (System.IO.Stream) ApiClient.Deserialize(localVarResponse, typeof(System.IO.Stream)));
+        }
+
+        /// <summary>
+        /// Read document page square annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SquareAnnotationResponse</returns>
+        public SquareAnnotationResponse GetSquareAnnotation (string name, string annotationId, string storage = null, string folder = null)
+        {
+             ApiResponse<SquareAnnotationResponse> localVarResponse = GetSquareAnnotationWithHttpInfo(name, annotationId, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read document page square annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SquareAnnotationResponse</returns>
+        public ApiResponse< SquareAnnotationResponse > GetSquareAnnotationWithHttpInfo (string name, string annotationId, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetSquareAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->GetSquareAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/square/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSquareAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SquareAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SquareAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(SquareAnnotationResponse)));
+        }
+
+        /// <summary>
+        /// Read document page square annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SquareAnnotationResponse</returns>
+        public async System.Threading.Tasks.Task<SquareAnnotationResponse> GetSquareAnnotationAsync (string name, string annotationId, string storage = null, string folder = null)
+        {
+             ApiResponse<SquareAnnotationResponse> localVarResponse = await GetSquareAnnotationAsyncWithHttpInfo(name, annotationId, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read document page square annotation by ID. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SquareAnnotationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SquareAnnotationResponse>> GetSquareAnnotationAsyncWithHttpInfo (string name, string annotationId, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->GetSquareAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->GetSquareAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/square/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetSquareAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SquareAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SquareAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(SquareAnnotationResponse)));
         }
 
         /// <summary>
@@ -22698,6 +26393,191 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Add document page circle annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>AsposeResponse</returns>
+        public AsposeResponse PostPageCircleAnnotations (string name, int? pageNumber, List<CircleAnnotation> annotations, string storage = null, string folder = null)
+        {
+             ApiResponse<AsposeResponse> localVarResponse = PostPageCircleAnnotationsWithHttpInfo(name, pageNumber, annotations, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add document page circle annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of AsposeResponse</returns>
+        public ApiResponse< AsposeResponse > PostPageCircleAnnotationsWithHttpInfo (string name, int? pageNumber, List<CircleAnnotation> annotations, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostPageCircleAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPageCircleAnnotations");
+            // verify the required parameter 'annotations' is set
+            if (annotations == null)
+                throw new ApiException(400, "Missing required parameter 'annotations' when calling PdfApi->PostPageCircleAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/circle";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotations != null && annotations.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotations); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotations; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostPageCircleAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AsposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AsposeResponse) ApiClient.Deserialize(localVarResponse, typeof(AsposeResponse)));
+        }
+
+        /// <summary>
+        /// Add document page circle annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of AsposeResponse</returns>
+        public async System.Threading.Tasks.Task<AsposeResponse> PostPageCircleAnnotationsAsync (string name, int? pageNumber, List<CircleAnnotation> annotations, string storage = null, string folder = null)
+        {
+             ApiResponse<AsposeResponse> localVarResponse = await PostPageCircleAnnotationsAsyncWithHttpInfo(name, pageNumber, annotations, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add document page circle annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (AsposeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostPageCircleAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, List<CircleAnnotation> annotations, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostPageCircleAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPageCircleAnnotations");
+            // verify the required parameter 'annotations' is set
+            if (annotations == null)
+                throw new ApiException(400, "Missing required parameter 'annotations' when calling PdfApi->PostPageCircleAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/circle";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotations != null && annotations.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotations); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotations; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostPageCircleAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AsposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AsposeResponse) ApiClient.Deserialize(localVarResponse, typeof(AsposeResponse)));
+        }
+
+        /// <summary>
         /// Add document page free text annotations. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -22883,6 +26763,191 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Add document page line annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>AsposeResponse</returns>
+        public AsposeResponse PostPageLineAnnotations (string name, int? pageNumber, List<LineAnnotation> annotations, string storage = null, string folder = null)
+        {
+             ApiResponse<AsposeResponse> localVarResponse = PostPageLineAnnotationsWithHttpInfo(name, pageNumber, annotations, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add document page line annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of AsposeResponse</returns>
+        public ApiResponse< AsposeResponse > PostPageLineAnnotationsWithHttpInfo (string name, int? pageNumber, List<LineAnnotation> annotations, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostPageLineAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPageLineAnnotations");
+            // verify the required parameter 'annotations' is set
+            if (annotations == null)
+                throw new ApiException(400, "Missing required parameter 'annotations' when calling PdfApi->PostPageLineAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/line";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotations != null && annotations.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotations); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotations; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostPageLineAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AsposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AsposeResponse) ApiClient.Deserialize(localVarResponse, typeof(AsposeResponse)));
+        }
+
+        /// <summary>
+        /// Add document page line annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of AsposeResponse</returns>
+        public async System.Threading.Tasks.Task<AsposeResponse> PostPageLineAnnotationsAsync (string name, int? pageNumber, List<LineAnnotation> annotations, string storage = null, string folder = null)
+        {
+             ApiResponse<AsposeResponse> localVarResponse = await PostPageLineAnnotationsAsyncWithHttpInfo(name, pageNumber, annotations, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add document page line annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (AsposeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostPageLineAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, List<LineAnnotation> annotations, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostPageLineAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPageLineAnnotations");
+            // verify the required parameter 'annotations' is set
+            if (annotations == null)
+                throw new ApiException(400, "Missing required parameter 'annotations' when calling PdfApi->PostPageLineAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/line";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotations != null && annotations.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotations); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotations; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostPageLineAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AsposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AsposeResponse) ApiClient.Deserialize(localVarResponse, typeof(AsposeResponse)));
+        }
+
+        /// <summary>
         /// Add document page link annotations. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -23059,6 +27124,561 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("PostPageLinkAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AsposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AsposeResponse) ApiClient.Deserialize(localVarResponse, typeof(AsposeResponse)));
+        }
+
+        /// <summary>
+        /// Add document page polyline annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>AsposeResponse</returns>
+        public AsposeResponse PostPagePolyLineAnnotations (string name, int? pageNumber, List<PolyLineAnnotation> annotations, string storage = null, string folder = null)
+        {
+             ApiResponse<AsposeResponse> localVarResponse = PostPagePolyLineAnnotationsWithHttpInfo(name, pageNumber, annotations, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add document page polyline annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of AsposeResponse</returns>
+        public ApiResponse< AsposeResponse > PostPagePolyLineAnnotationsWithHttpInfo (string name, int? pageNumber, List<PolyLineAnnotation> annotations, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostPagePolyLineAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPagePolyLineAnnotations");
+            // verify the required parameter 'annotations' is set
+            if (annotations == null)
+                throw new ApiException(400, "Missing required parameter 'annotations' when calling PdfApi->PostPagePolyLineAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/polyline";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotations != null && annotations.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotations); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotations; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostPagePolyLineAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AsposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AsposeResponse) ApiClient.Deserialize(localVarResponse, typeof(AsposeResponse)));
+        }
+
+        /// <summary>
+        /// Add document page polyline annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of AsposeResponse</returns>
+        public async System.Threading.Tasks.Task<AsposeResponse> PostPagePolyLineAnnotationsAsync (string name, int? pageNumber, List<PolyLineAnnotation> annotations, string storage = null, string folder = null)
+        {
+             ApiResponse<AsposeResponse> localVarResponse = await PostPagePolyLineAnnotationsAsyncWithHttpInfo(name, pageNumber, annotations, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add document page polyline annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (AsposeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostPagePolyLineAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, List<PolyLineAnnotation> annotations, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostPagePolyLineAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPagePolyLineAnnotations");
+            // verify the required parameter 'annotations' is set
+            if (annotations == null)
+                throw new ApiException(400, "Missing required parameter 'annotations' when calling PdfApi->PostPagePolyLineAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/polyline";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotations != null && annotations.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotations); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotations; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostPagePolyLineAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AsposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AsposeResponse) ApiClient.Deserialize(localVarResponse, typeof(AsposeResponse)));
+        }
+
+        /// <summary>
+        /// Add document page polygon annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>AsposeResponse</returns>
+        public AsposeResponse PostPagePolygonAnnotations (string name, int? pageNumber, List<PolygonAnnotation> annotations, string storage = null, string folder = null)
+        {
+             ApiResponse<AsposeResponse> localVarResponse = PostPagePolygonAnnotationsWithHttpInfo(name, pageNumber, annotations, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add document page polygon annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of AsposeResponse</returns>
+        public ApiResponse< AsposeResponse > PostPagePolygonAnnotationsWithHttpInfo (string name, int? pageNumber, List<PolygonAnnotation> annotations, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostPagePolygonAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPagePolygonAnnotations");
+            // verify the required parameter 'annotations' is set
+            if (annotations == null)
+                throw new ApiException(400, "Missing required parameter 'annotations' when calling PdfApi->PostPagePolygonAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/polygon";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotations != null && annotations.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotations); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotations; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostPagePolygonAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AsposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AsposeResponse) ApiClient.Deserialize(localVarResponse, typeof(AsposeResponse)));
+        }
+
+        /// <summary>
+        /// Add document page polygon annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of AsposeResponse</returns>
+        public async System.Threading.Tasks.Task<AsposeResponse> PostPagePolygonAnnotationsAsync (string name, int? pageNumber, List<PolygonAnnotation> annotations, string storage = null, string folder = null)
+        {
+             ApiResponse<AsposeResponse> localVarResponse = await PostPagePolygonAnnotationsAsyncWithHttpInfo(name, pageNumber, annotations, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add document page polygon annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (AsposeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostPagePolygonAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, List<PolygonAnnotation> annotations, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostPagePolygonAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPagePolygonAnnotations");
+            // verify the required parameter 'annotations' is set
+            if (annotations == null)
+                throw new ApiException(400, "Missing required parameter 'annotations' when calling PdfApi->PostPagePolygonAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/polygon";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotations != null && annotations.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotations); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotations; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostPagePolygonAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AsposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AsposeResponse) ApiClient.Deserialize(localVarResponse, typeof(AsposeResponse)));
+        }
+
+        /// <summary>
+        /// Add document page square annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>AsposeResponse</returns>
+        public AsposeResponse PostPageSquareAnnotations (string name, int? pageNumber, List<SquareAnnotation> annotations, string storage = null, string folder = null)
+        {
+             ApiResponse<AsposeResponse> localVarResponse = PostPageSquareAnnotationsWithHttpInfo(name, pageNumber, annotations, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add document page square annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of AsposeResponse</returns>
+        public ApiResponse< AsposeResponse > PostPageSquareAnnotationsWithHttpInfo (string name, int? pageNumber, List<SquareAnnotation> annotations, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostPageSquareAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPageSquareAnnotations");
+            // verify the required parameter 'annotations' is set
+            if (annotations == null)
+                throw new ApiException(400, "Missing required parameter 'annotations' when calling PdfApi->PostPageSquareAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/square";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotations != null && annotations.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotations); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotations; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostPageSquareAnnotations", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AsposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AsposeResponse) ApiClient.Deserialize(localVarResponse, typeof(AsposeResponse)));
+        }
+
+        /// <summary>
+        /// Add document page square annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of AsposeResponse</returns>
+        public async System.Threading.Tasks.Task<AsposeResponse> PostPageSquareAnnotationsAsync (string name, int? pageNumber, List<SquareAnnotation> annotations, string storage = null, string folder = null)
+        {
+             ApiResponse<AsposeResponse> localVarResponse = await PostPageSquareAnnotationsAsyncWithHttpInfo(name, pageNumber, annotations, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add document page square annotations. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="pageNumber">The page number.</param>
+        /// <param name="annotations">The array of annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (AsposeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostPageSquareAnnotationsAsyncWithHttpInfo (string name, int? pageNumber, List<SquareAnnotation> annotations, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostPageSquareAnnotations");
+            // verify the required parameter 'pageNumber' is set
+            if (pageNumber == null)
+                throw new ApiException(400, "Missing required parameter 'pageNumber' when calling PdfApi->PostPageSquareAnnotations");
+            // verify the required parameter 'annotations' is set
+            if (annotations == null)
+                throw new ApiException(400, "Missing required parameter 'annotations' when calling PdfApi->PostPageSquareAnnotations");
+
+            var localVarPath = "/pdf/{name}/pages/{pageNumber}/annotations/square";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (pageNumber != null) localVarPathParams.Add("pageNumber", ApiClient.ParameterToString(pageNumber)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotations != null && annotations.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotations); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotations; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostPageSquareAnnotations", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -24272,6 +28892,191 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<AsposeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AsposeResponse) ApiClient.Deserialize(localVarResponse, typeof(AsposeResponse)));
+        }
+
+        /// <summary>
+        /// Replace document circle annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>CircleAnnotationResponse</returns>
+        public CircleAnnotationResponse PutCircleAnnotation (string name, string annotationId, CircleAnnotation annotation, string storage = null, string folder = null)
+        {
+             ApiResponse<CircleAnnotationResponse> localVarResponse = PutCircleAnnotationWithHttpInfo(name, annotationId, annotation, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Replace document circle annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of CircleAnnotationResponse</returns>
+        public ApiResponse< CircleAnnotationResponse > PutCircleAnnotationWithHttpInfo (string name, string annotationId, CircleAnnotation annotation, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutCircleAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->PutCircleAnnotation");
+            // verify the required parameter 'annotation' is set
+            if (annotation == null)
+                throw new ApiException(400, "Missing required parameter 'annotation' when calling PdfApi->PutCircleAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/circle/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotation != null && annotation.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotation); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotation; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutCircleAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CircleAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CircleAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(CircleAnnotationResponse)));
+        }
+
+        /// <summary>
+        /// Replace document circle annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of CircleAnnotationResponse</returns>
+        public async System.Threading.Tasks.Task<CircleAnnotationResponse> PutCircleAnnotationAsync (string name, string annotationId, CircleAnnotation annotation, string storage = null, string folder = null)
+        {
+             ApiResponse<CircleAnnotationResponse> localVarResponse = await PutCircleAnnotationAsyncWithHttpInfo(name, annotationId, annotation, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Replace document circle annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (CircleAnnotationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CircleAnnotationResponse>> PutCircleAnnotationAsyncWithHttpInfo (string name, string annotationId, CircleAnnotation annotation, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutCircleAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->PutCircleAnnotation");
+            // verify the required parameter 'annotation' is set
+            if (annotation == null)
+                throw new ApiException(400, "Missing required parameter 'annotation' when calling PdfApi->PutCircleAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/circle/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotation != null && annotation.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotation); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotation; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutCircleAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CircleAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CircleAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(CircleAnnotationResponse)));
         }
 
         /// <summary>
@@ -27030,6 +31835,191 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<AsposeResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (AsposeResponse) ApiClient.Deserialize(localVarResponse, typeof(AsposeResponse)));
+        }
+
+        /// <summary>
+        /// Replace document line annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>LineAnnotationResponse</returns>
+        public LineAnnotationResponse PutLineAnnotation (string name, string annotationId, LineAnnotation annotation, string storage = null, string folder = null)
+        {
+             ApiResponse<LineAnnotationResponse> localVarResponse = PutLineAnnotationWithHttpInfo(name, annotationId, annotation, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Replace document line annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of LineAnnotationResponse</returns>
+        public ApiResponse< LineAnnotationResponse > PutLineAnnotationWithHttpInfo (string name, string annotationId, LineAnnotation annotation, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutLineAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->PutLineAnnotation");
+            // verify the required parameter 'annotation' is set
+            if (annotation == null)
+                throw new ApiException(400, "Missing required parameter 'annotation' when calling PdfApi->PutLineAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/line/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotation != null && annotation.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotation); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotation; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutLineAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LineAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LineAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(LineAnnotationResponse)));
+        }
+
+        /// <summary>
+        /// Replace document line annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of LineAnnotationResponse</returns>
+        public async System.Threading.Tasks.Task<LineAnnotationResponse> PutLineAnnotationAsync (string name, string annotationId, LineAnnotation annotation, string storage = null, string folder = null)
+        {
+             ApiResponse<LineAnnotationResponse> localVarResponse = await PutLineAnnotationAsyncWithHttpInfo(name, annotationId, annotation, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Replace document line annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (LineAnnotationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LineAnnotationResponse>> PutLineAnnotationAsyncWithHttpInfo (string name, string annotationId, LineAnnotation annotation, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutLineAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->PutLineAnnotation");
+            // verify the required parameter 'annotation' is set
+            if (annotation == null)
+                throw new ApiException(400, "Missing required parameter 'annotation' when calling PdfApi->PutLineAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/line/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotation != null && annotation.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotation); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotation; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutLineAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LineAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LineAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(LineAnnotationResponse)));
         }
 
         /// <summary>
@@ -33390,6 +38380,376 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         }
 
         /// <summary>
+        /// Replace document polyline annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolyLineAnnotationResponse</returns>
+        public PolyLineAnnotationResponse PutPolyLineAnnotation (string name, string annotationId, PolyLineAnnotation annotation, string storage = null, string folder = null)
+        {
+             ApiResponse<PolyLineAnnotationResponse> localVarResponse = PutPolyLineAnnotationWithHttpInfo(name, annotationId, annotation, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Replace document polyline annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolyLineAnnotationResponse</returns>
+        public ApiResponse< PolyLineAnnotationResponse > PutPolyLineAnnotationWithHttpInfo (string name, string annotationId, PolyLineAnnotation annotation, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPolyLineAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->PutPolyLineAnnotation");
+            // verify the required parameter 'annotation' is set
+            if (annotation == null)
+                throw new ApiException(400, "Missing required parameter 'annotation' when calling PdfApi->PutPolyLineAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/polyline/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotation != null && annotation.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotation); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotation; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPolyLineAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolyLineAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolyLineAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(PolyLineAnnotationResponse)));
+        }
+
+        /// <summary>
+        /// Replace document polyline annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolyLineAnnotationResponse</returns>
+        public async System.Threading.Tasks.Task<PolyLineAnnotationResponse> PutPolyLineAnnotationAsync (string name, string annotationId, PolyLineAnnotation annotation, string storage = null, string folder = null)
+        {
+             ApiResponse<PolyLineAnnotationResponse> localVarResponse = await PutPolyLineAnnotationAsyncWithHttpInfo(name, annotationId, annotation, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Replace document polyline annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolyLineAnnotationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PolyLineAnnotationResponse>> PutPolyLineAnnotationAsyncWithHttpInfo (string name, string annotationId, PolyLineAnnotation annotation, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPolyLineAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->PutPolyLineAnnotation");
+            // verify the required parameter 'annotation' is set
+            if (annotation == null)
+                throw new ApiException(400, "Missing required parameter 'annotation' when calling PdfApi->PutPolyLineAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/polyline/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotation != null && annotation.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotation); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotation; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPolyLineAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolyLineAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolyLineAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(PolyLineAnnotationResponse)));
+        }
+
+        /// <summary>
+        /// Replace document polygon annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>PolygonAnnotationResponse</returns>
+        public PolygonAnnotationResponse PutPolygonAnnotation (string name, string annotationId, PolygonAnnotation annotation, string storage = null, string folder = null)
+        {
+             ApiResponse<PolygonAnnotationResponse> localVarResponse = PutPolygonAnnotationWithHttpInfo(name, annotationId, annotation, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Replace document polygon annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of PolygonAnnotationResponse</returns>
+        public ApiResponse< PolygonAnnotationResponse > PutPolygonAnnotationWithHttpInfo (string name, string annotationId, PolygonAnnotation annotation, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPolygonAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->PutPolygonAnnotation");
+            // verify the required parameter 'annotation' is set
+            if (annotation == null)
+                throw new ApiException(400, "Missing required parameter 'annotation' when calling PdfApi->PutPolygonAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/polygon/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotation != null && annotation.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotation); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotation; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPolygonAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolygonAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolygonAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(PolygonAnnotationResponse)));
+        }
+
+        /// <summary>
+        /// Replace document polygon annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of PolygonAnnotationResponse</returns>
+        public async System.Threading.Tasks.Task<PolygonAnnotationResponse> PutPolygonAnnotationAsync (string name, string annotationId, PolygonAnnotation annotation, string storage = null, string folder = null)
+        {
+             ApiResponse<PolygonAnnotationResponse> localVarResponse = await PutPolygonAnnotationAsyncWithHttpInfo(name, annotationId, annotation, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Replace document polygon annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (PolygonAnnotationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PolygonAnnotationResponse>> PutPolygonAnnotationAsyncWithHttpInfo (string name, string annotationId, PolygonAnnotation annotation, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutPolygonAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->PutPolygonAnnotation");
+            // verify the required parameter 'annotation' is set
+            if (annotation == null)
+                throw new ApiException(400, "Missing required parameter 'annotation' when calling PdfApi->PutPolygonAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/polygon/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotation != null && annotation.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotation); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotation; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutPolygonAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PolygonAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PolygonAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(PolygonAnnotationResponse)));
+        }
+
+        /// <summary>
         /// Update privilege document. 
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
@@ -34208,6 +39568,191 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<DocumentPropertyResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (DocumentPropertyResponse) ApiClient.Deserialize(localVarResponse, typeof(DocumentPropertyResponse)));
+        }
+
+        /// <summary>
+        /// Replace document square annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>SquareAnnotationResponse</returns>
+        public SquareAnnotationResponse PutSquareAnnotation (string name, string annotationId, SquareAnnotation annotation, string storage = null, string folder = null)
+        {
+             ApiResponse<SquareAnnotationResponse> localVarResponse = PutSquareAnnotationWithHttpInfo(name, annotationId, annotation, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Replace document square annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of SquareAnnotationResponse</returns>
+        public ApiResponse< SquareAnnotationResponse > PutSquareAnnotationWithHttpInfo (string name, string annotationId, SquareAnnotation annotation, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutSquareAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->PutSquareAnnotation");
+            // verify the required parameter 'annotation' is set
+            if (annotation == null)
+                throw new ApiException(400, "Missing required parameter 'annotation' when calling PdfApi->PutSquareAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/square/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotation != null && annotation.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotation); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotation; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutSquareAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SquareAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SquareAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(SquareAnnotationResponse)));
+        }
+
+        /// <summary>
+        /// Replace document square annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of SquareAnnotationResponse</returns>
+        public async System.Threading.Tasks.Task<SquareAnnotationResponse> PutSquareAnnotationAsync (string name, string annotationId, SquareAnnotation annotation, string storage = null, string folder = null)
+        {
+             ApiResponse<SquareAnnotationResponse> localVarResponse = await PutSquareAnnotationAsyncWithHttpInfo(name, annotationId, annotation, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Replace document square annotation 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="annotationId">The annotation ID.</param>
+        /// <param name="annotation">Annotation.</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (SquareAnnotationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SquareAnnotationResponse>> PutSquareAnnotationAsyncWithHttpInfo (string name, string annotationId, SquareAnnotation annotation, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PutSquareAnnotation");
+            // verify the required parameter 'annotationId' is set
+            if (annotationId == null)
+                throw new ApiException(400, "Missing required parameter 'annotationId' when calling PdfApi->PutSquareAnnotation");
+            // verify the required parameter 'annotation' is set
+            if (annotation == null)
+                throw new ApiException(400, "Missing required parameter 'annotation' when calling PdfApi->PutSquareAnnotation");
+
+            var localVarPath = "/pdf/{name}/annotations/square/{annotationId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (annotationId != null) localVarPathParams.Add("annotationId", ApiClient.ParameterToString(annotationId)); // path parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+            if (annotation != null && annotation.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = ApiClient.Serialize(annotation); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = annotation; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PutSquareAnnotation", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SquareAnnotationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SquareAnnotationResponse) ApiClient.Deserialize(localVarResponse, typeof(SquareAnnotationResponse)));
         }
 
         /// <summary>
