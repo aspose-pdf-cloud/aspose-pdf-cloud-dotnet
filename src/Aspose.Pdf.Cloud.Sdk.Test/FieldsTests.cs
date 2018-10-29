@@ -99,7 +99,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var field = new Field(
                 Name: fieldName,
                 Type: FieldType.Text,
-                Values: new List<string> {"Text field updated value."});
+                Values: new List<string> {"Text field updated value."},
+                Rect: new RectanglePdf(125, 735, 200, 752)                
+                );
 
             var response = PdfApi.PutUpdateField(name, fieldName, field, folder: TempFolder);
             Assert.That(response.Field, Is.Not.Null);
