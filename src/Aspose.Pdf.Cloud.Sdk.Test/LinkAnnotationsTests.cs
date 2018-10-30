@@ -31,10 +31,10 @@ using NUnit.Framework;
 namespace Aspose.Pdf.Cloud.Sdk.Test
 {
     /// <summary>
-    ///  Class for testing Links Api
+    ///  Class for testing Link Annotations Api
     /// </summary>
     [TestFixture]
-    public class LinksTests : TestsBase
+    public class LinkAnnotationsTests : TestsBase
     {
         private const string Name = "PdfWithLinks.pdf";
 
