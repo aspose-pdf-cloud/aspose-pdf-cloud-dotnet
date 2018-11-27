@@ -79,6 +79,7 @@ OpenAPI spec version: 1.1
     <Compile Include="PageConvertToImageTests.cs" />
     <Compile Include="PolygonAnnotationsTests.cs" />
     <Compile Include="PolyLineAnnotationsTests.cs" />
+    <Compile Include="PopupAnnotationsTests.cs" />
     <Compile Include="PrivilegesTests.cs" />
     <Compile Include="SquareAnnotationsTests.cs" />
     <Compile Include="SquigglyAnnotationsTests.cs" />
