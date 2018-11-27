@@ -1,5 +1,5 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="MergeTests.cs">
+// --------------------------------------------------------------------------------------------------------------------
+// <copyright company="Aspose" file="CaretSymbol.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -23,47 +23,42 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Collections.Generic;
+using System;
+using System.Linq;
 using System.IO;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System.Net;
-using Aspose.Pdf.Cloud.Sdk.Model;
-using NUnit.Framework;
+using System.ComponentModel.DataAnnotations;
+using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 
-
-namespace Aspose.Pdf.Cloud.Sdk.Test
+namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    ///  Class for testing Storage Access Api
+    /// A symbol to be associated with the caret.
     /// </summary>
-    [TestFixture]
-    public class UploadDownloadTests : TestsBase
+    /// <value>A symbol to be associated with the caret.</value>
+    [JsonConverter(typeof(StringEnumConverter))]
+    public enum CaretSymbol
     {
+        
         /// <summary>
-        /// Test Upload file
+        /// Enum None for "None"
         /// </summary>
-        [Test]
-        public void PutCreateTest()
-        {
-            string name = "4pages.pdf";
-
-            using (var file = File.OpenRead(Path.Combine(TestDataFolder, name)))
-            {
-                var response = PdfApi.PutCreate(Path.Combine(TempFolder, name), file);
-                Assert.That(response.Code, Is.EqualTo(200));
-            }
-        }
-
+        [EnumMember(Value = "None")]
+        None,
+        
         /// <summary>
-        /// Test Upload file
+        /// Enum Paragraph for "Paragraph"
         /// </summary>
-        [Test]
-        public void GetDonloadFileTest()
-        {
-            string name = "4pages.pdf";
-            UploadFile(name, name);
-
-            var response = PdfApi.GetDownload(Path.Combine(TempFolder, name));
-            Assert.That(response.Length, Is.GreaterThan(0));
-        }
+        [EnumMember(Value = "Paragraph")]
+        Paragraph
     }
+
 }

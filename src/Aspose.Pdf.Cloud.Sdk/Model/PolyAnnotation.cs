@@ -51,9 +51,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Contents">Get the annotation content..</param>
-        /// <param name="CreationDate">The date and time when the annotation was created..</param>
-        /// <param name="Subject">Get the annotation subject..</param>
-        /// <param name="Title">Get the annotation title..</param>
         /// <param name="Modified">The date and time when the annotation was last modified..</param>
         /// <param name="Id">Gets ID of the annotation..</param>
         /// <param name="Flags">Gets Flags of the annotation..</param>
@@ -63,19 +60,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
         /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation..</param>
         /// <param name="VerticalAlignment">Gets VerticalAlignment of the annotation..</param>
+        /// <param name="CreationDate">The date and time when the annotation was created..</param>
+        /// <param name="Subject">Get the annotation subject..</param>
+        /// <param name="Title">Get the annotation title..</param>
         /// <param name="RichText">Get the annotation RichText..</param>
         /// <param name="InteriorColor">Gets or sets the interior color with which to fill the annotation?s line endings..</param>
         /// <param name="StartingStyle">Gets or sets the style of first line ending..</param>
         /// <param name="EndingStyle">Gets or sets the style of second line ending..</param>
         /// <param name="Intent">Gets or sets the intent of the polygon or polyline annotation..</param>
         /// <param name="Vertices">Gets or sets an array of points representing the horizontal and vertical coordinates of each vertex..</param>
-        public PolyAnnotation(List<Link> Links = default(List<Link>), string Contents = default(string), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string RichText = default(string), Color InteriorColor = default(Color), LineEnding StartingStyle = default(LineEnding), LineEnding EndingStyle = default(LineEnding), PolyIntent Intent = default(PolyIntent), List<Point> Vertices = default(List<Point>))
+        public PolyAnnotation(List<Link> Links = default(List<Link>), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), Color InteriorColor = default(Color), LineEnding StartingStyle = default(LineEnding), LineEnding EndingStyle = default(LineEnding), PolyIntent Intent = default(PolyIntent), List<Point> Vertices = default(List<Point>))
         {
             this.Links = Links;
             this.Contents = Contents;
-            this.CreationDate = CreationDate;
-            this.Subject = Subject;
-            this.Title = Title;
             this.Modified = Modified;
             this.Id = Id;
             this.Flags = Flags;
@@ -85,6 +82,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.ZIndex = ZIndex;
             this.HorizontalAlignment = HorizontalAlignment;
             this.VerticalAlignment = VerticalAlignment;
+            this.CreationDate = CreationDate;
+            this.Subject = Subject;
+            this.Title = Title;
             this.RichText = RichText;
             this.InteriorColor = InteriorColor;
             this.StartingStyle = StartingStyle;
@@ -106,27 +106,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <value>Get the annotation content.</value>
         [DataMember(Name="Contents", EmitDefaultValue=false)]
         public string Contents { get; set; }
-
-        /// <summary>
-        /// The date and time when the annotation was created.
-        /// </summary>
-        /// <value>The date and time when the annotation was created.</value>
-        [DataMember(Name="CreationDate", EmitDefaultValue=false)]
-        public string CreationDate { get; set; }
-
-        /// <summary>
-        /// Get the annotation subject.
-        /// </summary>
-        /// <value>Get the annotation subject.</value>
-        [DataMember(Name="Subject", EmitDefaultValue=false)]
-        public string Subject { get; set; }
-
-        /// <summary>
-        /// Get the annotation title.
-        /// </summary>
-        /// <value>Get the annotation title.</value>
-        [DataMember(Name="Title", EmitDefaultValue=false)]
-        public string Title { get; set; }
 
         /// <summary>
         /// The date and time when the annotation was last modified.
@@ -192,6 +171,27 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public VerticalAlignment VerticalAlignment { get; set; }
 
         /// <summary>
+        /// The date and time when the annotation was created.
+        /// </summary>
+        /// <value>The date and time when the annotation was created.</value>
+        [DataMember(Name="CreationDate", EmitDefaultValue=false)]
+        public string CreationDate { get; set; }
+
+        /// <summary>
+        /// Get the annotation subject.
+        /// </summary>
+        /// <value>Get the annotation subject.</value>
+        [DataMember(Name="Subject", EmitDefaultValue=false)]
+        public string Subject { get; set; }
+
+        /// <summary>
+        /// Get the annotation title.
+        /// </summary>
+        /// <value>Get the annotation title.</value>
+        [DataMember(Name="Title", EmitDefaultValue=false)]
+        public string Title { get; set; }
+
+        /// <summary>
         /// Get the annotation RichText.
         /// </summary>
         /// <value>Get the annotation RichText.</value>
@@ -243,9 +243,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("class PolyAnnotation {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  Contents: ").Append(Contents).Append("\n");
-            sb.Append("  CreationDate: ").Append(CreationDate).Append("\n");
-            sb.Append("  Subject: ").Append(Subject).Append("\n");
-            sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Modified: ").Append(Modified).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Flags: ").Append(Flags).Append("\n");
@@ -255,6 +252,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  ZIndex: ").Append(ZIndex).Append("\n");
             sb.Append("  HorizontalAlignment: ").Append(HorizontalAlignment).Append("\n");
             sb.Append("  VerticalAlignment: ").Append(VerticalAlignment).Append("\n");
+            sb.Append("  CreationDate: ").Append(CreationDate).Append("\n");
+            sb.Append("  Subject: ").Append(Subject).Append("\n");
+            sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  RichText: ").Append(RichText).Append("\n");
             sb.Append("  InteriorColor: ").Append(InteriorColor).Append("\n");
             sb.Append("  StartingStyle: ").Append(StartingStyle).Append("\n");
@@ -308,21 +308,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Contents.Equals(other.Contents)
                 ) && 
                 (
-                    this.CreationDate == other.CreationDate ||
-                    this.CreationDate != null &&
-                    this.CreationDate.Equals(other.CreationDate)
-                ) && 
-                (
-                    this.Subject == other.Subject ||
-                    this.Subject != null &&
-                    this.Subject.Equals(other.Subject)
-                ) && 
-                (
-                    this.Title == other.Title ||
-                    this.Title != null &&
-                    this.Title.Equals(other.Title)
-                ) && 
-                (
                     this.Modified == other.Modified ||
                     this.Modified != null &&
                     this.Modified.Equals(other.Modified)
@@ -366,6 +351,21 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.VerticalAlignment == other.VerticalAlignment ||
                     this.VerticalAlignment != null &&
                     this.VerticalAlignment.Equals(other.VerticalAlignment)
+                ) && 
+                (
+                    this.CreationDate == other.CreationDate ||
+                    this.CreationDate != null &&
+                    this.CreationDate.Equals(other.CreationDate)
+                ) && 
+                (
+                    this.Subject == other.Subject ||
+                    this.Subject != null &&
+                    this.Subject.Equals(other.Subject)
+                ) && 
+                (
+                    this.Title == other.Title ||
+                    this.Title != null &&
+                    this.Title.Equals(other.Title)
                 ) && 
                 (
                     this.RichText == other.RichText ||
@@ -414,12 +414,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Links.GetHashCode();
                 if (this.Contents != null)
                     hash = hash * 59 + this.Contents.GetHashCode();
-                if (this.CreationDate != null)
-                    hash = hash * 59 + this.CreationDate.GetHashCode();
-                if (this.Subject != null)
-                    hash = hash * 59 + this.Subject.GetHashCode();
-                if (this.Title != null)
-                    hash = hash * 59 + this.Title.GetHashCode();
                 if (this.Modified != null)
                     hash = hash * 59 + this.Modified.GetHashCode();
                 if (this.Id != null)
@@ -438,6 +432,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.HorizontalAlignment.GetHashCode();
                 if (this.VerticalAlignment != null)
                     hash = hash * 59 + this.VerticalAlignment.GetHashCode();
+                if (this.CreationDate != null)
+                    hash = hash * 59 + this.CreationDate.GetHashCode();
+                if (this.Subject != null)
+                    hash = hash * 59 + this.Subject.GetHashCode();
+                if (this.Title != null)
+                    hash = hash * 59 + this.Title.GetHashCode();
                 if (this.RichText != null)
                     hash = hash * 59 + this.RichText.GetHashCode();
                 if (this.InteriorColor != null)
