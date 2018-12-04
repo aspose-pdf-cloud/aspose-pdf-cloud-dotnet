@@ -71,7 +71,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutPdfInRequestToDocTest()
         {
             string name = "4pages.pdf";
-            using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name)))
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
                 string resFileName = "result.doc";
 
@@ -114,7 +114,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutPdfInRequestToPdfATest()
         {
             string name = "4pages.pdf";
-            using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name)))
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
                 string resFileName = "result.doc";
 
@@ -158,7 +158,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutPdfInRequestToTiffTest()
         {
             string name = "4pages.pdf";
-            using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name)))
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
                 string resFileName = "result.tiff";
 
@@ -202,7 +202,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutPdfInRequestToSvgTest()
         {
             string name = "4pages.pdf";
-            using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name)))
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
                 string resFileName = "result.svg";
 
@@ -245,7 +245,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutPdfInRequestToXpsTest()
         {
             string name = "4pages.pdf";
-            using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name)))
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
                 string resFileName = "result.xps";
 
@@ -288,7 +288,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutPdfInRequestToXlsTest()
         {
             string name = "4pages.pdf";
-            using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name)))
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
                 string resFileName = "result.xls";
 
@@ -332,7 +332,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutPdfInRequestToHtmlTest()
         {
             string name = "4pages.pdf";
-            using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name)))
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
                 string resFileName = "result.zip";
 
@@ -375,7 +375,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutPdfInRequestToEpubTest()
         {
             string name = "4pages.pdf";
-            using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name)))
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
                 string resFileName = "result.epub";
 
@@ -419,7 +419,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutPdfInRequestToPptxTest()
         {
             string name = "4pages.pdf";
-            using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name)))
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
                 string resFileName = "result.pptx";
 
@@ -463,7 +463,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutPdfInRequestToLaTeXTest()
         {
             string name = "4pages.pdf";
-            using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name)))
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
                 string resFileName = "result.latex";
 
@@ -507,7 +507,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutPdfInRequestToMobiXmlTest()
         {
             string name = "4pages.pdf";
-            using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name)))
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
                 string resFileName = "result.mobi";
 
@@ -551,7 +551,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutXfaPdfInRequestToAcroFormTest()
         {
             string name = "PdfWithXfaForm.pdf";
-            using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name)))
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
                 string resFileName = "result.pdf";
 
@@ -595,7 +595,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutPdfInRequestToXmlTest()
         {
             string name = "4pages.pdf";
-            using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, name)))
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
                 string resFileName = "result.xml";
 

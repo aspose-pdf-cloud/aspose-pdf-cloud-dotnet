@@ -63,21 +63,27 @@ OpenAPI spec version: 1.1
     <Compile Include="AppendTests.cs" />
     <Compile Include="AttachmentsTests.cs" />
     <Compile Include="BookmarksTests.cs" />
+    <Compile Include="CaretAnnotationsTests.cs" />
     <Compile Include="CircleAnnotationsTests.cs" />
     <Compile Include="ConvertTests.cs" />
     <Compile Include="ConvertToPdfTests.cs" />
     <Compile Include="DocumentTests.cs" />
     <Compile Include="FieldsTests.cs" />
     <Compile Include="FreeTextAnnotationsTests.cs" />
+    <Compile Include="HighlightAnnotationsTests.cs" />
     <Compile Include="ImagesTests.cs" />
+    <Compile Include="InkAnnotationsTests.cs" />
     <Compile Include="LineAnnotationsTests.cs" />
     <Compile Include="LinkAnnotationsTests.cs" />
     <Compile Include="MergeTests.cs" />
     <Compile Include="PageConvertToImageTests.cs" />
     <Compile Include="PolygonAnnotationsTests.cs" />
     <Compile Include="PolyLineAnnotationsTests.cs" />
+    <Compile Include="PopupAnnotationsTests.cs" />
     <Compile Include="PrivilegesTests.cs" />
     <Compile Include="SquareAnnotationsTests.cs" />
+    <Compile Include="SquigglyAnnotationsTests.cs" />
+    <Compile Include="StrikeOutAnnotationsTests.cs" />
     <Compile Include="TextAnnotationsTests.cs" />
     <Compile Include="TextTests.cs" />
     <Compile Include="OcrTests.cs" />
@@ -86,7 +92,8 @@ OpenAPI spec version: 1.1
     <Compile Include="PropertiesTests.cs" />
     <Compile Include="SignTests.cs" />
     <Compile Include="TestBase.cs" />
-    <Compile Include="UploadDownloadTests.cs" />
+    <Compile Include="UnderlineAnnotationsTests.cs" />
+    <Compile Include="StorageTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
