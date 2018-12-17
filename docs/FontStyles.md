@@ -3,12 +3,12 @@ Specifies style information applied to text.
 
 ## Enum
 
-| Name |
-|------------|
-|**Regular**| 
-|**Bold**| 
-|**Italic**| 
-|**BoldItalic**| 
+ Name | Description
+------------ | ------------
+**Regular** | Regular text
+**Bold** | Bold text
+**Italic** | Italic text
+**BoldItalic** | Bold Italic text
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -2302,7 +2302,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>System.IO.Stream</returns>
@@ -2316,7 +2316,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
@@ -4991,7 +4991,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>AsposeResponse</returns>
@@ -5005,7 +5005,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>ApiResponse of AsposeResponse</returns>
@@ -5414,7 +5414,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>AsposeResponse</returns>
@@ -5429,7 +5429,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>ApiResponse of AsposeResponse</returns>
@@ -8719,7 +8719,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of System.IO.Stream</returns>
@@ -8733,7 +8733,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
@@ -11408,7 +11408,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>Task of AsposeResponse</returns>
@@ -11422,7 +11422,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>
@@ -11831,7 +11831,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of AsposeResponse</returns>
@@ -11846,7 +11846,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>
@@ -26043,7 +26043,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>System.IO.Stream</returns>
@@ -26058,7 +26058,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
@@ -26119,7 +26119,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of System.IO.Stream</returns>
@@ -26135,7 +26135,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
@@ -41580,7 +41580,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>AsposeResponse</returns>
@@ -41595,7 +41595,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>ApiResponse of AsposeResponse</returns>
@@ -41656,7 +41656,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>Task of AsposeResponse</returns>
@@ -41672,7 +41672,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>
@@ -43723,7 +43723,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>AsposeResponse</returns>
@@ -43739,7 +43739,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>ApiResponse of AsposeResponse</returns>
@@ -43805,7 +43805,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of AsposeResponse</returns>
@@ -43822,7 +43822,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">?roperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>
