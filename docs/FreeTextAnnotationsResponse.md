@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.FreeTextAnnotationsResponse
+﻿# Aspose.Pdf.Cloud.Sdk.Model.FreeTextAnnotationsResponse
 
 
 ## Properties

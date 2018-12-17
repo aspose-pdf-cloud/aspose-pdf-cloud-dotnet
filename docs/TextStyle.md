@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.TextStyle
+﻿# Aspose.Pdf.Cloud.Sdk.Model.TextStyle
 Represents a text style of a text
 
 ## Properties

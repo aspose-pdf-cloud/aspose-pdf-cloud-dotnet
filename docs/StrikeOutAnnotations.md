@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.StrikeOutAnnotations
+﻿# Aspose.Pdf.Cloud.Sdk.Model.StrikeOutAnnotations
 List of annotations.
 
 ## Properties

@@ -1,5 +1,5 @@
 ﻿# Aspose.Pdf.Cloud.Sdk.Model.LinkHighlightingMode
-Enumerates the annotation?s highlighting mode, the visual effect to be used when the mouse button is pressed or held down inside its active area.
+Enumerates the annotation’s highlighting mode, the visual effect to be used when the mouse button is pressed or held down inside its active area.
 
 ## Enum
 

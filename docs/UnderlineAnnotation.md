@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.UnderlineAnnotation
+﻿# Aspose.Pdf.Cloud.Sdk.Model.UnderlineAnnotation
 Provides UnderlineAnnotation.
 
 ## Properties

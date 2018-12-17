@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.SquareAnnotationsResponse
+﻿# Aspose.Pdf.Cloud.Sdk.Model.SquareAnnotationsResponse
 
 
 ## Properties

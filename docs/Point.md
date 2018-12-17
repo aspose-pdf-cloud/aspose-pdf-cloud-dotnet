@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.Point
+﻿# Aspose.Pdf.Cloud.Sdk.Model.Point
 Represent point with fractional coordinates.
 
 ## Properties

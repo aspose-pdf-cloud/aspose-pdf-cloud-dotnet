@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.PopupAnnotationWithParent
+﻿# Aspose.Pdf.Cloud.Sdk.Model.PopupAnnotationWithParent
 Provides PopupAnnotation.
 
 ## Properties

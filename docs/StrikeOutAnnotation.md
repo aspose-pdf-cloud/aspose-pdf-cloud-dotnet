@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.StrikeOutAnnotation
+﻿# Aspose.Pdf.Cloud.Sdk.Model.StrikeOutAnnotation
 Provides StrikeOutAnnotation.
 
 ## Properties

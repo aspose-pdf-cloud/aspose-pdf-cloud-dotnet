@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.Stamp
+﻿# Aspose.Pdf.Cloud.Sdk.Model.Stamp
 Represents Pdf stamps.
 
 ## Properties

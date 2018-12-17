@@ -1,5 +1,5 @@
 ﻿# Aspose.Pdf.Cloud.Sdk.Model.CaptionPosition
-Enumeration of the annotation?s caption positioning.
+Enumeration of the annotation’s caption positioning.
 
 ## Enum
 

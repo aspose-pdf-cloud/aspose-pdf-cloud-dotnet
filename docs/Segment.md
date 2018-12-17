@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.Segment
+﻿# Aspose.Pdf.Cloud.Sdk.Model.Segment
 
 
 ## Properties

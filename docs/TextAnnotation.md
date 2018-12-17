@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.TextAnnotation
+﻿# Aspose.Pdf.Cloud.Sdk.Model.TextAnnotation
 Provides TextAnnotation.
 
 ## Properties

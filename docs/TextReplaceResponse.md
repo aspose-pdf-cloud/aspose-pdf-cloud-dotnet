@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.TextReplaceResponse
+﻿# Aspose.Pdf.Cloud.Sdk.Model.TextReplaceResponse
 
 
 ## Properties

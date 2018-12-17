@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.LinkAnnotationResponse
+﻿# Aspose.Pdf.Cloud.Sdk.Model.LinkAnnotationResponse
 
 
 ## Properties

@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.ImageTemplatesRequest
+﻿# Aspose.Pdf.Cloud.Sdk.Model.ImageTemplatesRequest
 Create document from images request.
 
 ## Properties

@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.PolyAnnotation
+﻿# Aspose.Pdf.Cloud.Sdk.Model.PolyAnnotation
 Provides PolyAnnotation.
 
 ## Properties
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 **Subject** | **string** | Get the annotation subject. | [optional] 
 **Title** | **string** | Get the annotation title. | [optional] 
 **RichText** | **string** | Get the annotation RichText. | [optional] 
-**InteriorColor** | [**Color**](Color.md) | Gets or sets the interior color with which to fill the annotation???s line endings. | [optional] 
+**InteriorColor** | [**Color**](Color.md) | Gets or sets the interior color with which to fill the annotation’s line endings. | [optional] 
 **StartingStyle** | [**LineEnding**](LineEnding.md) | Gets or sets the style of first line ending. | [optional] 
 **EndingStyle** | [**LineEnding**](LineEnding.md) | Gets or sets the style of second line ending. | [optional] 
 **Intent** | [**PolyIntent**](PolyIntent.md) | Gets or sets the intent of the polygon or polyline annotation. | [optional] 

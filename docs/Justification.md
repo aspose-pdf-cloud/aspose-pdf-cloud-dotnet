@@ -1,5 +1,5 @@
 ﻿# Aspose.Pdf.Cloud.Sdk.Model.Justification
-Enumerates the forms of quadding (justification) to be used in displaying the annotation?s text.
+Enumerates the forms of quadding (justification) to be used in displaying the annotation’s text.
 
 ## Enum
 

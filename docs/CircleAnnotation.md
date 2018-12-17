@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.CircleAnnotation
+﻿# Aspose.Pdf.Cloud.Sdk.Model.CircleAnnotation
 Provides CircleAnnotation.
 
 ## Properties

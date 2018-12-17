@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.CircleAnnotationResponse
+﻿# Aspose.Pdf.Cloud.Sdk.Model.CircleAnnotationResponse
 
 
 ## Properties

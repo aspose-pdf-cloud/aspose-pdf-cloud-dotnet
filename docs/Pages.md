@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.Pages
+﻿# Aspose.Pdf.Cloud.Sdk.Model.Pages
 List of pages.
 
 ## Properties

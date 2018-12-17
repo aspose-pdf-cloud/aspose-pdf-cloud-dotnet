@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.FreeTextAnnotations
+﻿# Aspose.Pdf.Cloud.Sdk.Model.FreeTextAnnotations
 List of annotations.
 
 ## Properties

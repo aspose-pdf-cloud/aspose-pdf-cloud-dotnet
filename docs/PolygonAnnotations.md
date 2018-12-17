@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.PolygonAnnotations
+﻿# Aspose.Pdf.Cloud.Sdk.Model.PolygonAnnotations
 List of annotations.
 
 ## Properties

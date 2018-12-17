@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.HighlightAnnotation
+﻿# Aspose.Pdf.Cloud.Sdk.Model.HighlightAnnotation
 Provides HighlightAnnotation.
 
 ## Properties

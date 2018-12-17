@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.ImageTemplate
+﻿# Aspose.Pdf.Cloud.Sdk.Model.ImageTemplate
 Template of image.
 
 ## Properties

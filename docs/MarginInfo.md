@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.MarginInfo
+﻿# Aspose.Pdf.Cloud.Sdk.Model.MarginInfo
 
 
 ## Properties

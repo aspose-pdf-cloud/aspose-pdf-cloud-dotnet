@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.TextRect
+﻿# Aspose.Pdf.Cloud.Sdk.Model.TextRect
 Represents text DTO.
 
 ## Properties
