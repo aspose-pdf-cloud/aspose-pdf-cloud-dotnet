@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.PolyIntent
+﻿# Aspose.Pdf.Cloud.Sdk.Model.PolyIntent
 Enumerates the intents of the polygon or polyline annotation.
 
 ## Enum

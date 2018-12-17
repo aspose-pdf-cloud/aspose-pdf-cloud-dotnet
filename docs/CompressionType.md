@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.CompressionType
+﻿# Aspose.Pdf.Cloud.Sdk.Model.CompressionType
 Used to specify the parameter value passed to a Tiff image device.
 
 ## Enum

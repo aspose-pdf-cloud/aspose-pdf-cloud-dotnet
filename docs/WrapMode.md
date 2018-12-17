@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.WrapMode
+﻿# Aspose.Pdf.Cloud.Sdk.Model.WrapMode
 
 
 ## Enum

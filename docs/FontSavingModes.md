@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.FontSavingModes
+﻿# Aspose.Pdf.Cloud.Sdk.Model.FontSavingModes
 Enumerates modes that can be used for saving of fonts
 referenced in saved PDF 
             

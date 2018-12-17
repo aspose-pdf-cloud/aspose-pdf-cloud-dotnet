@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.FieldType
+﻿# Aspose.Pdf.Cloud.Sdk.Model.FieldType
 Represents an enumeration of available field types.
 
 ## Enum

@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.FontStyles
+﻿# Aspose.Pdf.Cloud.Sdk.Model.FontStyles
 Specifies style information applied to text.
 
 ## Enum

@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.EpubRecognitionMode
+﻿# Aspose.Pdf.Cloud.Sdk.Model.EpubRecognitionMode
 When PDF file (that usually has fixed layout) is being converted,
             the conversion engine tries to perform grouping and multi-level analysis to restore
             the original document author's intent and produce result in flow layout.

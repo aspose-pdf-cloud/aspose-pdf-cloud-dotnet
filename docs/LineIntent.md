@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.LineIntent
+﻿# Aspose.Pdf.Cloud.Sdk.Model.LineIntent
 Enumerates the intents of the line annotation.
 
 ## Enum

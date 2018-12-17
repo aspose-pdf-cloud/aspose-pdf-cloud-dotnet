@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.DocRecognitionMode
+﻿# Aspose.Pdf.Cloud.Sdk.Model.DocRecognitionMode
 Allows to control how a PDF document is converted into a word processing document.
 
 ## Enum

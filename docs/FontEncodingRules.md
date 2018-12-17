@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.FontEncodingRules
+﻿# Aspose.Pdf.Cloud.Sdk.Model.FontEncodingRules
 This enumeration defines rules which tune encoding logic
 
 ## Enum

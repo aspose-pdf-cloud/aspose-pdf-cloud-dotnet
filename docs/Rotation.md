@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.Rotation
+﻿# Aspose.Pdf.Cloud.Sdk.Model.Rotation
 Enumeration of possible rotation values.
 
 ## Enum

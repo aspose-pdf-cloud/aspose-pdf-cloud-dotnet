@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.StampType
+﻿# Aspose.Pdf.Cloud.Sdk.Model.StampType
 Represents enumeration of the stamp types.
 
 ## Enum

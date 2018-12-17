@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.TextHorizontalAlignment
+﻿# Aspose.Pdf.Cloud.Sdk.Model.TextHorizontalAlignment
 
 
 ## Enum

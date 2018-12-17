@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.LineSpacing
+﻿# Aspose.Pdf.Cloud.Sdk.Model.LineSpacing
 
 
 ## Enum

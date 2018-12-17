@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.LinkActionType
+﻿# Aspose.Pdf.Cloud.Sdk.Model.LinkActionType
 Represents list of link action types.
 
 ## Enum

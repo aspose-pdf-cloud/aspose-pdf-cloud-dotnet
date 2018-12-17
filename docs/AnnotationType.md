@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.AnnotationType
+﻿# Aspose.Pdf.Cloud.Sdk.Model.AnnotationType
 
 
 ## Enum

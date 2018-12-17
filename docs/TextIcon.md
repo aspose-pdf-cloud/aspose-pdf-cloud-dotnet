@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.TextIcon
+﻿# Aspose.Pdf.Cloud.Sdk.Model.TextIcon
 Enumerates the icons to be used in displaying the annotation.
 
 ## Enum

@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.PdfAType
+﻿# Aspose.Pdf.Cloud.Sdk.Model.PdfAType
 Allows to specify PdfA file format.
 
 ## Enum

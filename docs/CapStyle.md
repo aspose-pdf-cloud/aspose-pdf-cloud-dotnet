@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.CapStyle
+﻿# Aspose.Pdf.Cloud.Sdk.Model.CapStyle
 Style of line ending of Ink annotation line. 
 
 ## Enum

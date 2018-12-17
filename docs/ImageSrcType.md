@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.ImageSrcType
+﻿# Aspose.Pdf.Cloud.Sdk.Model.ImageSrcType
 Allows to specify image file format.
 
 ## Enum

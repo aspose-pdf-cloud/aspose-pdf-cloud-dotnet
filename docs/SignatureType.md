@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.SignatureType
+﻿# Aspose.Pdf.Cloud.Sdk.Model.SignatureType
 
 
 ## Enum

@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.VerticalAlignment
+﻿# Aspose.Pdf.Cloud.Sdk.Model.VerticalAlignment
 Enumeration of possible vertical alignment values.
 
 ## Enum

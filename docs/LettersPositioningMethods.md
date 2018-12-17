@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.LettersPositioningMethods
+﻿# Aspose.Pdf.Cloud.Sdk.Model.LettersPositioningMethods
 It enumerates possible modes of positioning of letters in words in result HTML
             
 

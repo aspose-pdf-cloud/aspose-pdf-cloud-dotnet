@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.ShapeType
+﻿# Aspose.Pdf.Cloud.Sdk.Model.ShapeType
 This enum represents shape type for the extracted images.
 
 ## Enum

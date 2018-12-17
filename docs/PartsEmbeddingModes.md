@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.PartsEmbeddingModes
+﻿# Aspose.Pdf.Cloud.Sdk.Model.PartsEmbeddingModes
 This enum enumerates possible modes of embedding of files referenced in HTML
 It allows to control whether referenced files (HTML, Fonts,Images, CSSes)
 will be embedded into main HTML file or will be generated as apart binary entities 

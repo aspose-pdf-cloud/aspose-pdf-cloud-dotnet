@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.AntialiasingProcessingType
+﻿# Aspose.Pdf.Cloud.Sdk.Model.AntialiasingProcessingType
 This enum describes possible antialiasing measures during conversion
 
 ## Enum
