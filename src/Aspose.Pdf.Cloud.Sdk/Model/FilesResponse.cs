@@ -1,4 +1,4 @@
-// --------------------------------------------------------------------------------------------------------------------
+﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="FilesResponse.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
@@ -57,7 +57,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
         /// <param name="Files">Files.</param>
-        public FilesResponse(int? Code = default(int?), string Status = default(string), List<File> Files = default(List<File>))
+        public FilesResponse(int? Code = default(int?), string Status = default(string), List<System.IO.Stream> Files = default(List<System.IO.Stream>))
         {
             // to ensure "Code" is required (not null)
             if (Code == null)
@@ -90,7 +90,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Gets or Sets Files
         /// </summary>
         [DataMember(Name="Files", EmitDefaultValue=false)]
-        public List<File> Files { get; set; }
+        public List<System.IO.Stream> Files { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -1,4 +1,4 @@
-// --------------------------------------------------------------------------------------------------------------------
+﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="CaptionPosition.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
@@ -41,9 +41,9 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Enumeration of the annotation?s caption positioning.
+    /// Enumeration of the annotation’s caption positioning.
     /// </summary>
-    /// <value>Enumeration of the annotation?s caption positioning.</value>
+    /// <value>Enumeration of the annotation’s caption positioning.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum CaptionPosition
     {
