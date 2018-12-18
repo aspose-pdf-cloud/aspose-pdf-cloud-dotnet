@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.SquigglyAnnotations
+﻿# Aspose.Pdf.Cloud.Sdk.Model.SquigglyAnnotations
 List of annotations.
 
 ## Properties

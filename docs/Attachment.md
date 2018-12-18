@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.Attachment
+﻿# Aspose.Pdf.Cloud.Sdk.Model.Attachment
 Provides link to attachment.
 
 ## Properties

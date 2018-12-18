@@ -1,4 +1,4 @@
-// --------------------------------------------------------------------------------------------------------------------
+﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="LinkHighlightingMode.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
@@ -41,9 +41,9 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Enumerates the annotation?s highlighting mode, the visual effect to be used when the mouse button is pressed or held down inside its active area.
+    /// Enumerates the annotation’s highlighting mode, the visual effect to be used when the mouse button is pressed or held down inside its active area.
     /// </summary>
-    /// <value>Enumerates the annotation?s highlighting mode, the visual effect to be used when the mouse button is pressed or held down inside its active area.</value>
+    /// <value>Enumerates the annotation’s highlighting mode, the visual effect to be used when the mouse button is pressed or held down inside its active area.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum LinkHighlightingMode
     {

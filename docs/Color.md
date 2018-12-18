@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.Color
+﻿# Aspose.Pdf.Cloud.Sdk.Model.Color
 Represents color DTO.
 
 ## Properties

@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.PolygonAnnotationsResponse
+﻿# Aspose.Pdf.Cloud.Sdk.Model.PolygonAnnotationsResponse
 
 
 ## Properties

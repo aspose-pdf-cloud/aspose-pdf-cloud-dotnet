@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.SplitResultResponse
+﻿# Aspose.Pdf.Cloud.Sdk.Model.SplitResultResponse
 Represents split result object.
 
 ## Properties

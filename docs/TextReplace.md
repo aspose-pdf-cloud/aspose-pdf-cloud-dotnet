@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.TextReplace
+﻿# Aspose.Pdf.Cloud.Sdk.Model.TextReplace
 Single text replacement setting.
 
 ## Properties

@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.MarkupAnnotation
+﻿# Aspose.Pdf.Cloud.Sdk.Model.MarkupAnnotation
 Provides MarkupAnnotation.
 
 ## Properties

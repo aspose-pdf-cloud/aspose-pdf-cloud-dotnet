@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.HighlightAnnotations
+﻿# Aspose.Pdf.Cloud.Sdk.Model.HighlightAnnotations
 List of annotations.
 
 ## Properties

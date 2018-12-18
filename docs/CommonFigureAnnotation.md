@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.CommonFigureAnnotation
+﻿# Aspose.Pdf.Cloud.Sdk.Model.CommonFigureAnnotation
 Provides CommonFigureAnnotation.
 
 ## Properties

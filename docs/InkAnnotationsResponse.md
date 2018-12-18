@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.InkAnnotationsResponse
+﻿# Aspose.Pdf.Cloud.Sdk.Model.InkAnnotationsResponse
 
 
 ## Properties

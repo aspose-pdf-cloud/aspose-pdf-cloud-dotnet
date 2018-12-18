@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.LineAnnotation
+﻿# Aspose.Pdf.Cloud.Sdk.Model.LineAnnotation
 Provides LineAnnotation.
 
 ## Properties

@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.TextLine
+﻿# Aspose.Pdf.Cloud.Sdk.Model.TextLine
 A line of text to be inserted into .
 
 ## Properties

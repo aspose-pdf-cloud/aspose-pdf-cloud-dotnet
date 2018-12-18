@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.UnderlineAnnotations
+﻿# Aspose.Pdf.Cloud.Sdk.Model.UnderlineAnnotations
 List of annotations.
 
 ## Properties

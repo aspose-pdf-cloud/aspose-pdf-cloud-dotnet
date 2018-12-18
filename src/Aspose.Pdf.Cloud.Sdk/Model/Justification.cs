@@ -1,4 +1,4 @@
-// --------------------------------------------------------------------------------------------------------------------
+﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="Justification.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
@@ -41,9 +41,9 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Enumerates the forms of quadding (justification) to be used in displaying the annotation?s text.
+    /// Enumerates the forms of quadding (justification) to be used in displaying the annotation’s text.
     /// </summary>
-    /// <value>Enumerates the forms of quadding (justification) to be used in displaying the annotation?s text.</value>
+    /// <value>Enumerates the forms of quadding (justification) to be used in displaying the annotation’s text.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum Justification
     {

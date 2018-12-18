@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.HighlightAnnotationResponse
+﻿# Aspose.Pdf.Cloud.Sdk.Model.HighlightAnnotationResponse
 
 
 ## Properties

@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.LinkAnnotations
+﻿# Aspose.Pdf.Cloud.Sdk.Model.LinkAnnotations
 List of LinkAnnotations.
 
 ## Properties

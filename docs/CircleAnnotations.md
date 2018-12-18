@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.CircleAnnotations
+﻿# Aspose.Pdf.Cloud.Sdk.Model.CircleAnnotations
 List of annotations.
 
 ## Properties

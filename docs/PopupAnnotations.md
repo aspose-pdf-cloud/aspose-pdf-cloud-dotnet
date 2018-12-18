@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.PopupAnnotations
+﻿# Aspose.Pdf.Cloud.Sdk.Model.PopupAnnotations
 List of annotations.
 
 ## Properties

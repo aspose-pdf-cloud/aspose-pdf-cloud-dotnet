@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.Attachments
+﻿# Aspose.Pdf.Cloud.Sdk.Model.Attachments
 List of attachment.
 
 ## Properties

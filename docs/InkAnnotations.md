@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.InkAnnotations
+﻿# Aspose.Pdf.Cloud.Sdk.Model.InkAnnotations
 List of annotations.
 
 ## Properties

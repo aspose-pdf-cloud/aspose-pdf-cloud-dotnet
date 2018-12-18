@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.File
+﻿# Aspose.Pdf.Cloud.Sdk.Model.File
 Represents file DTO.
 
 ## Properties

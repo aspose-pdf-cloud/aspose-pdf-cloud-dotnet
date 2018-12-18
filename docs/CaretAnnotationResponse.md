@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.CaretAnnotationResponse
+﻿# Aspose.Pdf.Cloud.Sdk.Model.CaretAnnotationResponse
 
 
 ## Properties

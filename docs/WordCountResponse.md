@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.WordCountResponse
+﻿# Aspose.Pdf.Cloud.Sdk.Model.WordCountResponse
 Number of words per document pages.
 
 ## Properties

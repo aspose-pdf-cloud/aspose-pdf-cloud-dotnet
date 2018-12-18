@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.CaretAnnotation
+﻿# Aspose.Pdf.Cloud.Sdk.Model.CaretAnnotation
 Provides CaretAnnotation.
 
 ## Properties

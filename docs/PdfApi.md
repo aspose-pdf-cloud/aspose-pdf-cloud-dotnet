@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Api.PdfApi
+﻿# Aspose.Pdf.Cloud.Sdk.Api.PdfApi
 
 All URIs are relative to *https://api.aspose.cloud/v2.0*
 
@@ -2483,7 +2483,7 @@ Converts PDF document (located on storage) to EPUB format and returns resulting 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The document name. | 
- **contentRecognitionMode** | **string**| ?roperty tunes conversion for this or that desirable method of recognition of content. | [optional] 
+ **contentRecognitionMode** | **string**| Рroperty tunes conversion for this or that desirable method of recognition of content. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
 
@@ -5029,7 +5029,7 @@ Converts PDF document (in request content) to EPUB format and uploads resulting 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.epub) | 
- **contentRecognitionMode** | **string**| ?roperty tunes conversion for this or that desirable method of recognition of content. | [optional] 
+ **contentRecognitionMode** | **string**| Рroperty tunes conversion for this or that desirable method of recognition of content. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
  **file** | **System.IO.Stream**| A file to be converted. | [optional] 
 
@@ -5403,7 +5403,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The document name. | 
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.epub) | 
- **contentRecognitionMode** | **string**| ?roperty tunes conversion for this or that desirable method of recognition of content. | [optional] 
+ **contentRecognitionMode** | **string**| Рroperty tunes conversion for this or that desirable method of recognition of content. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
 

@@ -1,4 +1,4 @@
-// --------------------------------------------------------------------------------------------------------------------
+﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="PolyLineAnnotation.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
@@ -64,7 +64,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Subject">Get the annotation subject..</param>
         /// <param name="Title">Get the annotation title..</param>
         /// <param name="RichText">Get the annotation RichText..</param>
-        /// <param name="InteriorColor">Gets or sets the interior color with which to fill the annotation?s line endings..</param>
+        /// <param name="InteriorColor">Gets or sets the interior color with which to fill the annotation’s line endings..</param>
         /// <param name="StartingStyle">Gets or sets the style of first line ending..</param>
         /// <param name="EndingStyle">Gets or sets the style of second line ending..</param>
         /// <param name="Intent">Gets or sets the intent of the polygon or polyline annotation..</param>
@@ -201,9 +201,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string RichText { get; set; }
 
         /// <summary>
-        /// Gets or sets the interior color with which to fill the annotation?s line endings.
+        /// Gets or sets the interior color with which to fill the annotation’s line endings.
         /// </summary>
-        /// <value>Gets or sets the interior color with which to fill the annotation?s line endings.</value>
+        /// <value>Gets or sets the interior color with which to fill the annotation’s line endings.</value>
         [DataMember(Name="InteriorColor", EmitDefaultValue=false)]
         public Color InteriorColor { get; set; }
 

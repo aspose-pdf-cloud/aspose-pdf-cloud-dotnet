@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.AttachmentResponse
+﻿# Aspose.Pdf.Cloud.Sdk.Model.AttachmentResponse
 
 
 ## Properties

@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.DocumentProperties
+﻿# Aspose.Pdf.Cloud.Sdk.Model.DocumentProperties
 Pdf document properties.
 
 ## Properties

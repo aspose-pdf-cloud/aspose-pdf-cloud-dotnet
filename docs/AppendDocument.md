@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Model.AppendDocument
+﻿# Aspose.Pdf.Cloud.Sdk.Model.AppendDocument
 Class for appendDocument service request building.
 
 ## Properties
