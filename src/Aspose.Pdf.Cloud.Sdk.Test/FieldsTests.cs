@@ -159,6 +159,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.PutFieldsFlatten(name, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
+
+        /// <summary>
+        /// Test PutFieldsFlatten
+        /// </summary>
+        [Test]
+        public void PostFlattenDocumentTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.PostFlattenDocument(name, updateAppearances: true, hideButtons: true, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
     }
 
 }
