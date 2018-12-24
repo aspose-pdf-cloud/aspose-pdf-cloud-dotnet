@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// AttachmentsResponse
+    /// Represents response containing multiple attachments info
     /// </summary>
     [DataContract]
     public partial class AttachmentsResponse : AsposeResponse,  IEquatable<AttachmentsResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Attachments">Attachments.</param>
+        /// <param name="Attachments">Attachments object.</param>
         public AttachmentsResponse(int? Code = default(int?), string Status = default(string), Attachments Attachments = default(Attachments))
         {
             // to ensure "Code" is required (not null)
@@ -87,8 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Attachments
+        /// Attachments object
         /// </summary>
+        /// <value>Attachments object</value>
         [DataMember(Name="Attachments", EmitDefaultValue=false)]
         public Attachments Attachments { get; set; }
 

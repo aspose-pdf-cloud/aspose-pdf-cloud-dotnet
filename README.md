@@ -166,6 +166,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**PostAppendDocument**](docs/PdfApi.md#postappenddocument) | **POST** /pdf/\{name}/appendDocument | Append document to existing one.
 *PdfApi* | [**PostCreateField**](docs/PdfApi.md#postcreatefield) | **POST** /pdf/\{name}/fields | Create field.
 *PdfApi* | [**PostDocumentTextReplace**](docs/PdfApi.md#postdocumenttextreplace) | **POST** /pdf/\{name}/text/replace | Document's replace text method.
+*PdfApi* | [**PostFlattenDocument**](docs/PdfApi.md#postflattendocument) | **POST** /pdf/\{name}/flatten | Removes all fields from the document and place their values instead.
 *PdfApi* | [**PostInsertImage**](docs/PdfApi.md#postinsertimage) | **POST** /pdf/\{name}/pages/\{pageNumber}/images | Insert image to document page.
 *PdfApi* | [**PostMovePage**](docs/PdfApi.md#postmovepage) | **POST** /pdf/\{name}/pages/\{pageNumber}/movePage | Move page to new position.
 *PdfApi* | [**PostOptimizeDocument**](docs/PdfApi.md#postoptimizedocument) | **POST** /pdf/\{name}/optimize | Optimize document.
@@ -320,7 +321,7 @@ Class | Method | HTTP request | Description
  - [Model.Point](docs/Point.md)
  - [Model.PolyIntent](docs/PolyIntent.md)
  - [Model.RasterImagesSavingModes](docs/RasterImagesSavingModes.md)
- - [Model.RectanglePdf](docs/RectanglePdf.md)
+ - [Model.Rectangle](docs/Rectangle.md)
  - [Model.Rotation](docs/Rotation.md)
  - [Model.Segment](docs/Segment.md)
  - [Model.ShapeType](docs/ShapeType.md)

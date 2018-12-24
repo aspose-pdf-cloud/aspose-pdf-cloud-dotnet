@@ -41,9 +41,9 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Defines word wrapping strategies
     /// </summary>
-    /// <value></value>
+    /// <value>Defines word wrapping strategies</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum WrapMode
     {

@@ -55,7 +55,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Id">Gets ID of the image..</param>
         /// <param name="Rectangle">Gets rectangle of the image..</param>
         /// <param name="PageNumber">Gets page number..</param>
-        public Image(List<Link> Links = default(List<Link>), int? Width = default(int?), int? Height = default(int?), string Id = default(string), RectanglePdf Rectangle = default(RectanglePdf), int? PageNumber = default(int?))
+        public Image(List<Link> Links = default(List<Link>), int? Width = default(int?), int? Height = default(int?), string Id = default(string), Rectangle Rectangle = default(Rectangle), int? PageNumber = default(int?))
         {
             this.Links = Links;
             this.Width = Width;
@@ -98,7 +98,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Gets rectangle of the image.</value>
         [DataMember(Name="Rectangle", EmitDefaultValue=false)]
-        public RectanglePdf Rectangle { get; set; }
+        public Rectangle Rectangle { get; set; }
 
         /// <summary>
         /// Gets page number.

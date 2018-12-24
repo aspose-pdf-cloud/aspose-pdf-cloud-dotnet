@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Color">Color.</param>
         /// <param name="Rect">Rect.</param>
         /// <param name="Id">Id.</param>
-        public LinkAnnotation(List<Link> Links = default(List<Link>), LinkActionType ActionType = default(LinkActionType), string Action = default(string), LinkHighlightingMode Highlighting = default(LinkHighlightingMode), Color Color = default(Color), RectanglePdf Rect = default(RectanglePdf), string Id = default(string))
+        public LinkAnnotation(List<Link> Links = default(List<Link>), LinkActionType ActionType = default(LinkActionType), string Action = default(string), LinkHighlightingMode Highlighting = default(LinkHighlightingMode), Color Color = default(Color), Rectangle Rect = default(Rectangle), string Id = default(string))
         {
             this.Links = Links;
             this.ActionType = ActionType;
@@ -102,7 +102,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Gets or Sets Rect
         /// </summary>
         [DataMember(Name="Rect", EmitDefaultValue=false)]
-        public RectanglePdf Rect { get; set; }
+        public Rectangle Rect { get; set; }
 
         /// <summary>
         /// Gets or Sets Id

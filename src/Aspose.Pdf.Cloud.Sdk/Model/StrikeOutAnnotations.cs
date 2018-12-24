@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// List of annotations.
+    /// Object representing a list of strikeout annotations.
     /// </summary>
     [DataContract]
     public partial class StrikeOutAnnotations : LinkElement,  IEquatable<StrikeOutAnnotations>, IValidatableObject
@@ -50,7 +50,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="StrikeOutAnnotations" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List.</param>
+        /// <param name="List">List of strikeout annotations..</param>
         public StrikeOutAnnotations(List<Link> Links = default(List<Link>), List<StrikeOutAnnotation> List = default(List<StrikeOutAnnotation>))
         {
             this.Links = Links;
@@ -65,8 +65,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Gets or Sets List
+        /// List of strikeout annotations.
         /// </summary>
+        /// <value>List of strikeout annotations.</value>
         [DataMember(Name="List", EmitDefaultValue=false)]
         public List<StrikeOutAnnotation> List { get; set; }
 

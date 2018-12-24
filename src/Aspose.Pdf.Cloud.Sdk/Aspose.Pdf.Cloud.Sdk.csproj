@@ -184,7 +184,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\PopupAnnotationsResponse.cs" />
     <Compile Include="Model\PopupAnnotationWithParent.cs" />
     <Compile Include="Model\RasterImagesSavingModes.cs" />
-    <Compile Include="Model\RectanglePdf.cs" />
+    <Compile Include="Model\Rectangle.cs" />
     <Compile Include="Model\Rotation.cs" />
     <Compile Include="Model\Segment.cs" />
     <Compile Include="Model\ShapeType.cs" />

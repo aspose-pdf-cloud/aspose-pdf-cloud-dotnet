@@ -50,6 +50,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="CircleAnnotation" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
+        /// <param name="Color">Color of the annotation..</param>
         /// <param name="Contents">Get the annotation content..</param>
         /// <param name="Modified">The date and time when the annotation was last modified..</param>
         /// <param name="Id">Gets ID of the annotation..</param>
@@ -66,10 +67,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="RichText">Get the annotation RichText..</param>
         /// <param name="InteriorColor">Get the annotation InteriorColor..</param>
         /// <param name="Frame">Get or set the annotation Rectangle of frame..</param>
-        /// <param name="Color">Color of the annotation..</param>
-        public CircleAnnotation(List<Link> Links = default(List<Link>), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), Color InteriorColor = default(Color), RectanglePdf Frame = default(RectanglePdf), Color Color = default(Color))
+        public CircleAnnotation(List<Link> Links = default(List<Link>), Color Color = default(Color), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), Rectangle Rect = default(Rectangle), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), Color InteriorColor = default(Color), Rectangle Frame = default(Rectangle))
         {
             this.Links = Links;
+            this.Color = Color;
             this.Contents = Contents;
             this.Modified = Modified;
             this.Id = Id;
@@ -86,7 +87,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.RichText = RichText;
             this.InteriorColor = InteriorColor;
             this.Frame = Frame;
-            this.Color = Color;
         }
         
         /// <summary>
@@ -95,6 +95,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <value>Link to the document.</value>
         [DataMember(Name="Links", EmitDefaultValue=false)]
         public List<Link> Links { get; set; }
+
+        /// <summary>
+        /// Color of the annotation.
+        /// </summary>
+        /// <value>Color of the annotation.</value>
+        [DataMember(Name="Color", EmitDefaultValue=false)]
+        public Color Color { get; set; }
 
         /// <summary>
         /// Get the annotation content.
@@ -136,7 +143,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Gets Rect of the annotation.</value>
         [DataMember(Name="Rect", EmitDefaultValue=false)]
-        public RectanglePdf Rect { get; set; }
+        public Rectangle Rect { get; set; }
 
         /// <summary>
         /// Gets PageIndex of the annotation.
@@ -206,14 +213,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Get or set the annotation Rectangle of frame.</value>
         [DataMember(Name="Frame", EmitDefaultValue=false)]
-        public RectanglePdf Frame { get; set; }
-
-        /// <summary>
-        /// Color of the annotation.
-        /// </summary>
-        /// <value>Color of the annotation.</value>
-        [DataMember(Name="Color", EmitDefaultValue=false)]
-        public Color Color { get; set; }
+        public Rectangle Frame { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -224,6 +224,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class CircleAnnotation {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("  Color: ").Append(Color).Append("\n");
             sb.Append("  Contents: ").Append(Contents).Append("\n");
             sb.Append("  Modified: ").Append(Modified).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -240,7 +241,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  RichText: ").Append(RichText).Append("\n");
             sb.Append("  InteriorColor: ").Append(InteriorColor).Append("\n");
             sb.Append("  Frame: ").Append(Frame).Append("\n");
-            sb.Append("  Color: ").Append(Color).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -281,6 +281,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Links == other.Links ||
                     this.Links != null &&
                     this.Links.SequenceEqual(other.Links)
+                ) && 
+                (
+                    this.Color == other.Color ||
+                    this.Color != null &&
+                    this.Color.Equals(other.Color)
                 ) && 
                 (
                     this.Contents == other.Contents ||
@@ -361,11 +366,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Frame == other.Frame ||
                     this.Frame != null &&
                     this.Frame.Equals(other.Frame)
-                ) && 
-                (
-                    this.Color == other.Color ||
-                    this.Color != null &&
-                    this.Color.Equals(other.Color)
                 );
         }
 
@@ -382,6 +382,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Links != null)
                     hash = hash * 59 + this.Links.GetHashCode();
+                if (this.Color != null)
+                    hash = hash * 59 + this.Color.GetHashCode();
                 if (this.Contents != null)
                     hash = hash * 59 + this.Contents.GetHashCode();
                 if (this.Modified != null)
@@ -414,8 +416,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.InteriorColor.GetHashCode();
                 if (this.Frame != null)
                     hash = hash * 59 + this.Frame.GetHashCode();
-                if (this.Color != null)
-                    hash = hash * 59 + this.Color.GetHashCode();
                 return hash;
             }
         }

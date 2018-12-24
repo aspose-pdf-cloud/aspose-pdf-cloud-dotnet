@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// A line of text to be inserted into .
+    /// A line of text to be inserted into paragraph.
     /// </summary>
     [DataContract]
     public partial class TextLine :  IEquatable<TextLine>, IValidatableObject

@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Returns also a message.
+    /// Represent responce containing signature verification result
     /// </summary>
     [DataContract]
     public partial class SignatureVerifyResponse : AsposeResponse,  IEquatable<SignatureVerifyResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Valid">Valid sign..</param>
+        /// <param name="Valid">True if signature is valid and false if not.</param>
         public SignatureVerifyResponse(int? Code = default(int?), string Status = default(string), bool? Valid = default(bool?))
         {
             // to ensure "Code" is required (not null)
@@ -87,9 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Valid sign.
+        /// True if signature is valid and false if not
         /// </summary>
-        /// <value>Valid sign.</value>
+        /// <value>True if signature is valid and false if not</value>
         [DataMember(Name="Valid", EmitDefaultValue=false)]
         public bool? Valid { get; set; }
 

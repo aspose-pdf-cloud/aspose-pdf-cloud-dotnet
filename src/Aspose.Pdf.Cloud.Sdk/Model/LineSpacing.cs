@@ -41,9 +41,9 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Defines line spacing specifics
     /// </summary>
-    /// <value></value>
+    /// <value>Defines line spacing specifics</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum LineSpacing
     {

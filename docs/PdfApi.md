@@ -119,6 +119,7 @@ Method | HTTP request | Description
 [**PostAppendDocument**](PdfApi.md#postappenddocument) | **POST** /pdf/\{name}/appendDocument | Append document to existing one.
 [**PostCreateField**](PdfApi.md#postcreatefield) | **POST** /pdf/\{name}/fields | Create field.
 [**PostDocumentTextReplace**](PdfApi.md#postdocumenttextreplace) | **POST** /pdf/\{name}/text/replace | Document&#39;s replace text method.
+[**PostFlattenDocument**](PdfApi.md#postflattendocument) | **POST** /pdf/\{name}/flatten | Removes all fields from the document and place their values instead.
 [**PostInsertImage**](PdfApi.md#postinsertimage) | **POST** /pdf/\{name}/pages/\{pageNumber}/images | Insert image to document page.
 [**PostMovePage**](PdfApi.md#postmovepage) | **POST** /pdf/\{name}/pages/\{pageNumber}/movePage | Move page to new position.
 [**PostOptimizeDocument**](PdfApi.md#postoptimizedocument) | **POST** /pdf/\{name}/optimize | Optimize document.
@@ -2311,10 +2312,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The document name. | 
  **pageNumber** | **int?**| Number of page (starting from 1). | 
- **LLX** | **double?**|  | 
- **LLY** | **double?**|  | 
- **URX** | **double?**|  | 
- **URY** | **double?**|  | 
+ **LLX** | **double?**| X-coordinate of lower - left corner. | 
+ **LLY** | **double?**| Y - coordinate of lower-left corner. | 
+ **URX** | **double?**| X - coordinate of upper-right corner. | 
+ **URY** | **double?**| Y - coordinate of upper-right corner. | 
  **format** | **List&lt;string&gt;**| List of formats for search. | [optional] 
  **regex** | **string**| Formats are specified as a regular expression. | [optional] 
  **splitRects** | **bool?**| Split result fragments (default is true). | [optional] 
@@ -2483,7 +2484,7 @@ Converts PDF document (located on storage) to EPUB format and returns resulting 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The document name. | 
- **contentRecognitionMode** | **string**| Рroperty tunes conversion for this or that desirable method of recognition of content. | [optional] 
+ **contentRecognitionMode** | **string**| Property tunes conversion for this or that desirable method of recognition of content. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
 
@@ -3042,10 +3043,10 @@ Read document text.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The document name. | 
- **LLX** | **double?**|  | 
- **LLY** | **double?**|  | 
- **URX** | **double?**|  | 
- **URY** | **double?**|  | 
+ **LLX** | **double?**| X-coordinate of lower - left corner. | 
+ **LLY** | **double?**| Y - coordinate of lower-left corner. | 
+ **URX** | **double?**| X - coordinate of upper-right corner. | 
+ **URY** | **double?**| Y - coordinate of upper-right corner. | 
  **format** | **List&lt;string&gt;**| List of formats for search. | [optional] 
  **regex** | **string**| Formats are specified as a regular expression. | [optional] 
  **splitRects** | **bool?**| Split result fragments (default is true). | [optional] 
@@ -3381,6 +3382,35 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TextReplaceResponse**](TextReplaceResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postflattendocument"></a>
+# **PostFlattenDocument**
+> AsposeResponse PostFlattenDocument (string name, bool? updateAppearances = null, bool? callEvents = null, bool? hideButtons = null, string storage = null, string folder = null)
+
+Removes all fields from the document and place their values instead.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **updateAppearances** | **bool?**| If set, all field appearances will be regenerated before flattening. This option may help if field is incorrectly flattened. This option may decrease performance.. | [optional] 
+ **callEvents** | **bool?**| If set, formatting and other JavaScript events will be called. | [optional] 
+ **hideButtons** | **bool?**| If set, buttons will be removed from flattened document. | [optional] 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
 
 ### HTTP request headers
 
@@ -5029,7 +5059,7 @@ Converts PDF document (in request content) to EPUB format and uploads resulting 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.epub) | 
- **contentRecognitionMode** | **string**| Рroperty tunes conversion for this or that desirable method of recognition of content. | [optional] 
+ **contentRecognitionMode** | **string**| Property tunes conversion for this or that desirable method of recognition of content. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
  **file** | **System.IO.Stream**| A file to be converted. | [optional] 
 
@@ -5403,7 +5433,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The document name. | 
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.epub) | 
- **contentRecognitionMode** | **string**| Рroperty tunes conversion for this or that desirable method of recognition of content. | [optional] 
+ **contentRecognitionMode** | **string**| Property tunes conversion for this or that desirable method of recognition of content. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
 

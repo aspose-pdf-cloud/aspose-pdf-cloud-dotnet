@@ -91,7 +91,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PostPageLinkAnnotationsTest()
         {
             LinkAnnotation linkAnnotation = new LinkAnnotation(null, LinkActionType.GoToURIAction, "https://products.aspose.cloud/pdf",
-                LinkHighlightingMode.Invert, new Color(0xFF, 0xAA, 0xAA, 0xAA), new RectanglePdf(100, 100, 500, 500));
+                LinkHighlightingMode.Invert, new Color(0xFF, 0xAA, 0xAA, 0xAA), new Rectangle(100, 100, 500, 500));
 
             var linkAnnotations = new List<LinkAnnotation>
             {
@@ -114,7 +114,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string linkId = getLinksResponse.Links.List[0].Id;
 
             LinkAnnotation linkAnnotation = new LinkAnnotation(null, LinkActionType.GoToURIAction, "https://products.aspose.cloud/pdf",
-                LinkHighlightingMode.Invert, new Color(0xFF, 0xAA, 0xAA, 0xAA), new RectanglePdf(100, 100, 500, 500));
+                LinkHighlightingMode.Invert, new Color(0xFF, 0xAA, 0xAA, 0xAA), new Rectangle(100, 100, 500, 500));
             
             var response = PdfApi.PutLinkAnnotation(Name, linkId: linkId, link: linkAnnotation, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(201));

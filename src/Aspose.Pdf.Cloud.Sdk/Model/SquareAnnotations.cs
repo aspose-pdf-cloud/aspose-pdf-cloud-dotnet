@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// List of annotations.
+    /// Object representing a list of square annotations.
     /// </summary>
     [DataContract]
     public partial class SquareAnnotations : LinkElement,  IEquatable<SquareAnnotations>, IValidatableObject
@@ -50,7 +50,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="SquareAnnotations" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List.</param>
+        /// <param name="List">List of square annotations..</param>
         public SquareAnnotations(List<Link> Links = default(List<Link>), List<SquareAnnotation> List = default(List<SquareAnnotation>))
         {
             this.Links = Links;
@@ -65,8 +65,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Gets or Sets List
+        /// List of square annotations.
         /// </summary>
+        /// <value>List of square annotations.</value>
         [DataMember(Name="List", EmitDefaultValue=false)]
         public List<SquareAnnotation> List { get; set; }
 

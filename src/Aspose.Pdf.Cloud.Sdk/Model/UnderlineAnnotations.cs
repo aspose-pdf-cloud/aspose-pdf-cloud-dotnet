@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// List of annotations.
+    /// Object representing a list of underline annotations.
     /// </summary>
     [DataContract]
     public partial class UnderlineAnnotations : LinkElement,  IEquatable<UnderlineAnnotations>, IValidatableObject
@@ -50,7 +50,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="UnderlineAnnotations" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List.</param>
+        /// <param name="List">List of underline annotations..</param>
         public UnderlineAnnotations(List<Link> Links = default(List<Link>), List<UnderlineAnnotation> List = default(List<UnderlineAnnotation>))
         {
             this.Links = Links;
@@ -65,8 +65,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Gets or Sets List
+        /// List of underline annotations.
         /// </summary>
+        /// <value>List of underline annotations.</value>
         [DataMember(Name="List", EmitDefaultValue=false)]
         public List<UnderlineAnnotation> List { get; set; }
 

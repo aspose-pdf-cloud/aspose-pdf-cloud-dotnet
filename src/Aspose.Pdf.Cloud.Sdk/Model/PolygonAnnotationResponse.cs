@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// PolygonAnnotationResponse
+    /// Represents response containing single polygon annotation object
     /// </summary>
     [DataContract]
     public partial class PolygonAnnotationResponse : AsposeResponse,  IEquatable<PolygonAnnotationResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Annotation">Annotation.</param>
+        /// <param name="Annotation">Polygon annotation object.</param>
         public PolygonAnnotationResponse(int? Code = default(int?), string Status = default(string), PolygonAnnotation Annotation = default(PolygonAnnotation))
         {
             // to ensure "Code" is required (not null)
@@ -87,8 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Annotation
+        /// Polygon annotation object
         /// </summary>
+        /// <value>Polygon annotation object</value>
         [DataMember(Name="Annotation", EmitDefaultValue=false)]
         public PolygonAnnotation Annotation { get; set; }
 

@@ -51,9 +51,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Id">Page&#39;s id..</param>
-        /// <param name="Images">Images.</param>
-        /// <param name="Rectangle">Rectangle.</param>
-        public Page(List<Link> Links = default(List<Link>), int? Id = default(int?), Images Images = default(Images), RectanglePdf Rectangle = default(RectanglePdf))
+        /// <param name="Images">Page&#39;s images.</param>
+        /// <param name="Rectangle">Page&#39;s rectangle.</param>
+        public Page(List<Link> Links = default(List<Link>), int? Id = default(int?), Images Images = default(Images), Rectangle Rectangle = default(Rectangle))
         {
             this.Links = Links;
             this.Id = Id;
@@ -76,16 +76,18 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Images
+        /// Page&#39;s images
         /// </summary>
+        /// <value>Page&#39;s images</value>
         [DataMember(Name="Images", EmitDefaultValue=false)]
         public Images Images { get; set; }
 
         /// <summary>
-        /// Gets or Sets Rectangle
+        /// Page&#39;s rectangle
         /// </summary>
+        /// <value>Page&#39;s rectangle</value>
         [DataMember(Name="Rectangle", EmitDefaultValue=false)]
-        public RectanglePdf Rectangle { get; set; }
+        public Rectangle Rectangle { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

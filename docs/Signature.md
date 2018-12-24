@@ -1,5 +1,5 @@
 ﻿# Aspose.Pdf.Cloud.Sdk.Model.Signature
-
+Represents signature.
 
 ## Properties
 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **Contact** | **string** | Gets or sets the contact of the signature. | [optional] 
 **Location** | **string** | Gets or sets the location of the signature. | [optional] 
 **Visible** | **bool?** | Gets or sets a value indicating whether this  is visible. Supports only when signing particular page. | 
-**Rectangle** | [**RectanglePdf**](RectanglePdf.md) | Gets or sets the visible rectangle of the signature. Supports only when signing particular page. | [optional] 
+**Rectangle** | [**Rectangle**](Rectangle.md) | Gets or sets the visible rectangle of the signature. Supports only when signing particular page. | [optional] 
 **FormFieldName** | **string** | Gets or sets the name of the signature field. Supports only when signing document with particular form field. | [optional] 
 **Authority** | **string** | Gets or sets the name of the person or authority signing the document.. | [optional] 
 **Date** | **string** | Gets or sets the time of signing. | [optional] 

@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents text DTO.
+    /// Represents text occurrence.
     /// </summary>
     [DataContract]
     public partial class TextRect :  IEquatable<TextRect>, IValidatableObject
@@ -54,10 +54,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextRect" /> class.
         /// </summary>
-        /// <param name="Text">Text.</param>
-        /// <param name="Page">Page (required).</param>
-        /// <param name="Rect">Rect.</param>
-        public TextRect(string Text = default(string), int? Page = default(int?), RectanglePdf Rect = default(RectanglePdf))
+        /// <param name="Text">Text of the occurrence..</param>
+        /// <param name="Page">Page on which the occurrence is found. (required).</param>
+        /// <param name="Rect">Rectangle of the occurrence..</param>
+        public TextRect(string Text = default(string), int? Page = default(int?), Rectangle Rect = default(Rectangle))
         {
             // to ensure "Page" is required (not null)
             if (Page == null)
@@ -73,22 +73,25 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         }
         
         /// <summary>
-        /// Gets or Sets Text
+        /// Text of the occurrence.
         /// </summary>
+        /// <value>Text of the occurrence.</value>
         [DataMember(Name="Text", EmitDefaultValue=false)]
         public string Text { get; set; }
 
         /// <summary>
-        /// Gets or Sets Page
+        /// Page on which the occurrence is found.
         /// </summary>
+        /// <value>Page on which the occurrence is found.</value>
         [DataMember(Name="Page", EmitDefaultValue=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// Gets or Sets Rect
+        /// Rectangle of the occurrence.
         /// </summary>
+        /// <value>Rectangle of the occurrence.</value>
         [DataMember(Name="Rect", EmitDefaultValue=false)]
-        public RectanglePdf Rect { get; set; }
+        public Rectangle Rect { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// UnderlineAnnotationResponse
+    /// Represents response containing single underline annotation object
     /// </summary>
     [DataContract]
     public partial class UnderlineAnnotationResponse : AsposeResponse,  IEquatable<UnderlineAnnotationResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Annotation">Annotation.</param>
+        /// <param name="Annotation">Underline annotation object.</param>
         public UnderlineAnnotationResponse(int? Code = default(int?), string Status = default(string), UnderlineAnnotation Annotation = default(UnderlineAnnotation))
         {
             // to ensure "Code" is required (not null)
@@ -87,8 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Annotation
+        /// Underline annotation object
         /// </summary>
+        /// <value>Underline annotation object</value>
         [DataMember(Name="Annotation", EmitDefaultValue=false)]
         public UnderlineAnnotation Annotation { get; set; }
 

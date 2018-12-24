@@ -79,7 +79,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 new TextAnnotation()
                 {
                     Name = "Test Free Text",
-                    Rect = new RectanglePdf(100, 100, 200, 200),
+                    Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> { AnnotationFlags.Default},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     RichText = "Rich Text",
@@ -117,7 +117,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             TextAnnotation annotation = new TextAnnotation()
             {
                 Name = "Test Free Text",
-                Rect = new RectanglePdf(100, 100, 200, 200),
+                Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Default },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 RichText = "Updated Text",

@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Paragraph DTO for add text functionality.
+    /// Represents text paragraphs as multiline text object.
     /// </summary>
     [DataContract]
     public partial class Paragraph :  IEquatable<Paragraph>, IValidatableObject
@@ -54,19 +54,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Paragraph" /> class.
         /// </summary>
-        /// <param name="LineSpacing">LineSpacing.</param>
-        /// <param name="WrapMode">WrapMode.</param>
-        /// <param name="HorizontalAlignment">HorizontalAlignment.</param>
-        /// <param name="LeftMargin">LeftMargin.</param>
-        /// <param name="RightMargin">RightMargin.</param>
-        /// <param name="TopMargin">TopMargin.</param>
-        /// <param name="BottomMargin">BottomMargin.</param>
-        /// <param name="Rectangle">Rectangle.</param>
-        /// <param name="Rotation">Rotation.</param>
-        /// <param name="SubsequentLinesIndent">SubsequentLinesIndent.</param>
-        /// <param name="VerticalAlignment">VerticalAlignment.</param>
-        /// <param name="Lines">Lines (required).</param>
-        public Paragraph(LineSpacing LineSpacing = default(LineSpacing), WrapMode WrapMode = default(WrapMode), TextHorizontalAlignment HorizontalAlignment = default(TextHorizontalAlignment), double? LeftMargin = default(double?), double? RightMargin = default(double?), double? TopMargin = default(double?), double? BottomMargin = default(double?), RectanglePdf Rectangle = default(RectanglePdf), double? Rotation = default(double?), double? SubsequentLinesIndent = default(double?), VerticalAlignment VerticalAlignment = default(VerticalAlignment), List<TextLine> Lines = default(List<TextLine>))
+        /// <param name="LineSpacing">Line spacing mode..</param>
+        /// <param name="WrapMode">Word wrap mode..</param>
+        /// <param name="HorizontalAlignment">Horizontal alignment for the text inside paragrph&#39;s rectangle..</param>
+        /// <param name="LeftMargin">Left margin..</param>
+        /// <param name="RightMargin">Right margin..</param>
+        /// <param name="TopMargin">Top margin..</param>
+        /// <param name="BottomMargin">Bottom margin..</param>
+        /// <param name="Rectangle">Rectangle of the paragraph..</param>
+        /// <param name="Rotation">Rotation angle in degrees..</param>
+        /// <param name="SubsequentLinesIndent">Subsequent lines indent value..</param>
+        /// <param name="VerticalAlignment">Vertical alignment for the text inside paragrph&#39;s rectangle.</param>
+        /// <param name="Lines">An array of text lines. (required).</param>
+        public Paragraph(LineSpacing LineSpacing = default(LineSpacing), WrapMode WrapMode = default(WrapMode), TextHorizontalAlignment HorizontalAlignment = default(TextHorizontalAlignment), double? LeftMargin = default(double?), double? RightMargin = default(double?), double? TopMargin = default(double?), double? BottomMargin = default(double?), Rectangle Rectangle = default(Rectangle), double? Rotation = default(double?), double? SubsequentLinesIndent = default(double?), VerticalAlignment VerticalAlignment = default(VerticalAlignment), List<TextLine> Lines = default(List<TextLine>))
         {
             // to ensure "Lines" is required (not null)
             if (Lines == null)
@@ -91,74 +91,86 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         }
         
         /// <summary>
-        /// Gets or Sets LineSpacing
+        /// Line spacing mode.
         /// </summary>
+        /// <value>Line spacing mode.</value>
         [DataMember(Name="LineSpacing", EmitDefaultValue=true)]
         public LineSpacing LineSpacing { get; set; }
 
         /// <summary>
-        /// Gets or Sets WrapMode
+        /// Word wrap mode.
         /// </summary>
+        /// <value>Word wrap mode.</value>
         [DataMember(Name="WrapMode", EmitDefaultValue=true)]
         public WrapMode WrapMode { get; set; }
 
         /// <summary>
-        /// Gets or Sets HorizontalAlignment
+        /// Horizontal alignment for the text inside paragrph&#39;s rectangle.
         /// </summary>
+        /// <value>Horizontal alignment for the text inside paragrph&#39;s rectangle.</value>
         [DataMember(Name="HorizontalAlignment", EmitDefaultValue=true)]
         public TextHorizontalAlignment HorizontalAlignment { get; set; }
 
         /// <summary>
-        /// Gets or Sets LeftMargin
+        /// Left margin.
         /// </summary>
+        /// <value>Left margin.</value>
         [DataMember(Name="LeftMargin", EmitDefaultValue=false)]
         public double? LeftMargin { get; set; }
 
         /// <summary>
-        /// Gets or Sets RightMargin
+        /// Right margin.
         /// </summary>
+        /// <value>Right margin.</value>
         [DataMember(Name="RightMargin", EmitDefaultValue=false)]
         public double? RightMargin { get; set; }
 
         /// <summary>
-        /// Gets or Sets TopMargin
+        /// Top margin.
         /// </summary>
+        /// <value>Top margin.</value>
         [DataMember(Name="TopMargin", EmitDefaultValue=false)]
         public double? TopMargin { get; set; }
 
         /// <summary>
-        /// Gets or Sets BottomMargin
+        /// Bottom margin.
         /// </summary>
+        /// <value>Bottom margin.</value>
         [DataMember(Name="BottomMargin", EmitDefaultValue=false)]
         public double? BottomMargin { get; set; }
 
         /// <summary>
-        /// Gets or Sets Rectangle
+        /// Rectangle of the paragraph.
         /// </summary>
+        /// <value>Rectangle of the paragraph.</value>
         [DataMember(Name="Rectangle", EmitDefaultValue=false)]
-        public RectanglePdf Rectangle { get; set; }
+        public Rectangle Rectangle { get; set; }
 
         /// <summary>
-        /// Gets or Sets Rotation
+        /// Rotation angle in degrees.
         /// </summary>
+        /// <value>Rotation angle in degrees.</value>
         [DataMember(Name="Rotation", EmitDefaultValue=false)]
         public double? Rotation { get; set; }
 
         /// <summary>
-        /// Gets or Sets SubsequentLinesIndent
+        /// Subsequent lines indent value.
         /// </summary>
+        /// <value>Subsequent lines indent value.</value>
         [DataMember(Name="SubsequentLinesIndent", EmitDefaultValue=false)]
         public double? SubsequentLinesIndent { get; set; }
 
         /// <summary>
-        /// Gets or Sets VerticalAlignment
+        /// Vertical alignment for the text inside paragrph&#39;s rectangle
         /// </summary>
+        /// <value>Vertical alignment for the text inside paragrph&#39;s rectangle</value>
         [DataMember(Name="VerticalAlignment", EmitDefaultValue=true)]
         public VerticalAlignment VerticalAlignment { get; set; }
 
         /// <summary>
-        /// Gets or Sets Lines
+        /// An array of text lines.
         /// </summary>
+        /// <value>An array of text lines.</value>
         [DataMember(Name="Lines", EmitDefaultValue=false)]
         public List<TextLine> Lines { get; set; }
 

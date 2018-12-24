@@ -76,7 +76,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 new PolygonAnnotation()
                 {
                     Name = "Test Polygon Annotation",
-                    Rect = new RectanglePdf(100, 100, 200, 200),
+                    Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     RichText = "Rich Text",
@@ -119,7 +119,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             PolygonAnnotation annotation = new PolygonAnnotation()
             {
                 Name = "Updated Test",
-                Rect = new RectanglePdf(100, 100, 200, 200),
+                Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 RichText = "Rich Text Updated",

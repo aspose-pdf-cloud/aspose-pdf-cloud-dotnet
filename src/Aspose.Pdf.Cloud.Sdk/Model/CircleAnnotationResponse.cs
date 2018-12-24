@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// CircleAnnotationResponse
+    /// Represents response containing single circle annotation object
     /// </summary>
     [DataContract]
     public partial class CircleAnnotationResponse : AsposeResponse,  IEquatable<CircleAnnotationResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Annotation">Annotation.</param>
+        /// <param name="Annotation">Circle annotation object.</param>
         public CircleAnnotationResponse(int? Code = default(int?), string Status = default(string), CircleAnnotation Annotation = default(CircleAnnotation))
         {
             // to ensure "Code" is required (not null)
@@ -87,8 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Annotation
+        /// Circle annotation object
         /// </summary>
+        /// <value>Circle annotation object</value>
         [DataMember(Name="Annotation", EmitDefaultValue=false)]
         public CircleAnnotation Annotation { get; set; }
 

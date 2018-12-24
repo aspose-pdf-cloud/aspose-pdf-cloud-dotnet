@@ -76,7 +76,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 new PolyLineAnnotation()
                 {
                     Name = "Test PolyLine Annotation",
-                    Rect = new RectanglePdf(100, 100, 200, 200),
+                    Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     RichText = "Rich Text",
@@ -119,7 +119,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             PolyLineAnnotation annotation = new PolyLineAnnotation()
             {
                 Name = "Updated Test",
-                Rect = new RectanglePdf(100, 100, 200, 200),
+                Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 RichText = "Rich Text Updated",

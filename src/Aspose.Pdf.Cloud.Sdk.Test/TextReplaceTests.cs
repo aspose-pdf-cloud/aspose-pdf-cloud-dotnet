@@ -50,7 +50,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PostDocumentTextReplaceTest()
         {
-            var rect = new RectanglePdf(100, 100, 300, 300);
+            var rect = new Rectangle(100, 100, 300, 300);
             var textReplace = new TextReplace("market", "m_a_r_k_e_t", false, Rect: rect);
             var textReplaceList = new TextReplaceListRequest(new List<TextReplace> { textReplace },
                 StartIndex: 0, CountReplace: 0);
@@ -65,7 +65,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PostPageTextReplaceTest()
         {
-            var rect = new RectanglePdf(100, 100, 300, 300);
+            var rect = new Rectangle(100, 100, 300, 300);
             var textReplace = new TextReplace("market", "m_a_r_k_e_t", false, Rect: rect);
             var textReplaceList = new TextReplaceListRequest(new List<TextReplace> { textReplace },
                 StartIndex: 0, CountReplace: 0);

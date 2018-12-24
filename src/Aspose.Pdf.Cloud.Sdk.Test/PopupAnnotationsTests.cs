@@ -88,7 +88,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             PopupAnnotation annotation = new PopupAnnotation()
             {
                 Name = "Test Popup Annotation",
-                Rect = new RectanglePdf(100, 100, 200, 200),
+                Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                 HorizontalAlignment = HorizontalAlignment.Center,
                 ZIndex = 1,
@@ -121,7 +121,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             PopupAnnotation annotation = new PopupAnnotation()
             {
                 Name = "Test Popup Annotation Updated",
-                Rect = new RectanglePdf(101, 101, 201, 201),
+                Rect = new Rectangle(101, 101, 201, 201),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 ZIndex = 1,

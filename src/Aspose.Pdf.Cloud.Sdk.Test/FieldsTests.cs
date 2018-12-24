@@ -75,7 +75,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 Name: "checkboxfield",
                 Type: FieldType.Boolean,
                 Values: new List<string> {"1"},
-                Rect: new RectanglePdf(
+                Rect: new Rectangle(
                     LLX: 50,
                     LLY: 200,
                     URX: 200,
@@ -100,7 +100,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 Name: fieldName,
                 Type: FieldType.Text,
                 Values: new List<string> {"Text field updated value."},
-                Rect: new RectanglePdf(125, 735, 200, 752)                
+                Rect: new Rectangle(125, 735, 200, 752)                
                 );
 
             var response = PdfApi.PutUpdateField(name, fieldName, field, folder: TempFolder);

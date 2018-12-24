@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// DocumentPageResponse
+    /// Represents response containing single page info
     /// </summary>
     [DataContract]
     public partial class DocumentPageResponse : AsposeResponse,  IEquatable<DocumentPageResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Page">Page.</param>
+        /// <param name="Page">Page object.</param>
         public DocumentPageResponse(int? Code = default(int?), string Status = default(string), Page Page = default(Page))
         {
             // to ensure "Code" is required (not null)
@@ -87,8 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Page
+        /// Page object
         /// </summary>
+        /// <value>Page object</value>
         [DataMember(Name="Page", EmitDefaultValue=false)]
         public Page Page { get; set; }
 

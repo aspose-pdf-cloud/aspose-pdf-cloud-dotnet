@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents split result object.
+    /// Represents responce containing split result.
     /// </summary>
     [DataContract]
     public partial class SplitResultResponse : AsposeResponse,  IEquatable<SplitResultResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Result">Gets or sets the splitting result..</param>
+        /// <param name="Result">SplitResult object..</param>
         public SplitResultResponse(int? Code = default(int?), string Status = default(string), SplitResult Result = default(SplitResult))
         {
             // to ensure "Code" is required (not null)
@@ -87,9 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or sets the splitting result.
+        /// SplitResult object.
         /// </summary>
-        /// <value>Gets or sets the splitting result.</value>
+        /// <value>SplitResult object.</value>
         [DataMember(Name="Result", EmitDefaultValue=false)]
         public SplitResult Result { get; set; }
 

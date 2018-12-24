@@ -2119,10 +2119,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">Number of page (starting from 1).</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -2140,10 +2140,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">Number of page (starting from 1).</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -2302,7 +2302,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>System.IO.Stream</returns>
@@ -2316,7 +2316,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
@@ -2907,10 +2907,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -2927,10 +2927,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -3266,6 +3266,37 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder"> (optional)</param>
         /// <returns>ApiResponse of TextReplaceResponse</returns>
         ApiResponse<TextReplaceResponse> PostDocumentTextReplaceWithHttpInfo (string name, TextReplaceListRequest textReplace, string storage = null, string folder = null);
+        /// <summary>
+        /// Removes all fields from the document and place their values instead.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="updateAppearances">If set, all field appearances will be regenerated before flattening. This option may help if field is incorrectly flattened. This option may decrease performance.. (optional)</param>
+        /// <param name="callEvents">If set, formatting and other JavaScript events will be called. (optional)</param>
+        /// <param name="hideButtons">If set, buttons will be removed from flattened document. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>AsposeResponse</returns>
+        AsposeResponse PostFlattenDocument (string name, bool? updateAppearances = null, bool? callEvents = null, bool? hideButtons = null, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Removes all fields from the document and place their values instead.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="updateAppearances">If set, all field appearances will be regenerated before flattening. This option may help if field is incorrectly flattened. This option may decrease performance.. (optional)</param>
+        /// <param name="callEvents">If set, formatting and other JavaScript events will be called. (optional)</param>
+        /// <param name="hideButtons">If set, buttons will be removed from flattened document. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of AsposeResponse</returns>
+        ApiResponse<AsposeResponse> PostFlattenDocumentWithHttpInfo (string name, bool? updateAppearances = null, bool? callEvents = null, bool? hideButtons = null, string storage = null, string folder = null);
         /// <summary>
         /// Insert image to document page.
         /// </summary>
@@ -4991,7 +5022,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>AsposeResponse</returns>
@@ -5005,7 +5036,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>ApiResponse of AsposeResponse</returns>
@@ -5414,7 +5445,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>AsposeResponse</returns>
@@ -5429,7 +5460,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>ApiResponse of AsposeResponse</returns>
@@ -8536,10 +8567,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">Number of page (starting from 1).</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -8557,10 +8588,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">Number of page (starting from 1).</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -8719,7 +8750,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of System.IO.Stream</returns>
@@ -8733,7 +8764,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
@@ -9324,10 +9355,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -9344,10 +9375,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -9683,6 +9714,37 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <param name="folder"> (optional)</param>
         /// <returns>Task of ApiResponse (TextReplaceResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<TextReplaceResponse>> PostDocumentTextReplaceAsyncWithHttpInfo (string name, TextReplaceListRequest textReplace, string storage = null, string folder = null);
+        /// <summary>
+        /// Removes all fields from the document and place their values instead.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="updateAppearances">If set, all field appearances will be regenerated before flattening. This option may help if field is incorrectly flattened. This option may decrease performance.. (optional)</param>
+        /// <param name="callEvents">If set, formatting and other JavaScript events will be called. (optional)</param>
+        /// <param name="hideButtons">If set, buttons will be removed from flattened document. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of AsposeResponse</returns>
+        System.Threading.Tasks.Task<AsposeResponse> PostFlattenDocumentAsync (string name, bool? updateAppearances = null, bool? callEvents = null, bool? hideButtons = null, string storage = null, string folder = null);
+
+        /// <summary>
+        /// Removes all fields from the document and place their values instead.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="updateAppearances">If set, all field appearances will be regenerated before flattening. This option may help if field is incorrectly flattened. This option may decrease performance.. (optional)</param>
+        /// <param name="callEvents">If set, formatting and other JavaScript events will be called. (optional)</param>
+        /// <param name="hideButtons">If set, buttons will be removed from flattened document. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (AsposeResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostFlattenDocumentAsyncWithHttpInfo (string name, bool? updateAppearances = null, bool? callEvents = null, bool? hideButtons = null, string storage = null, string folder = null);
         /// <summary>
         /// Insert image to document page.
         /// </summary>
@@ -11408,7 +11470,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>Task of AsposeResponse</returns>
@@ -11422,7 +11484,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </remarks>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>
@@ -11831,7 +11893,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of AsposeResponse</returns>
@@ -11846,7 +11908,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>
@@ -25018,10 +25080,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">Number of page (starting from 1).</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -25040,10 +25102,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">Number of page (starting from 1).</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -25130,10 +25192,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">Number of page (starting from 1).</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -25153,10 +25215,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="pageNumber">Number of page (starting from 1).</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -26043,7 +26105,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>System.IO.Stream</returns>
@@ -26058,7 +26120,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>ApiResponse of System.IO.Stream</returns>
@@ -26119,7 +26181,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of System.IO.Stream</returns>
@@ -26135,7 +26197,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of ApiResponse (System.IO.Stream)</returns>
@@ -29268,10 +29330,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -29289,10 +29351,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -29374,10 +29436,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -29396,10 +29458,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
-        /// <param name="LLX"></param>
-        /// <param name="LLY"></param>
-        /// <param name="URX"></param>
-        /// <param name="URY"></param>
+        /// <param name="LLX">X-coordinate of lower - left corner.</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner.</param>
+        /// <param name="URX">X - coordinate of upper-right corner.</param>
+        /// <param name="URY">Y - coordinate of upper-right corner.</param>
         /// <param name="format">List of formats for search. (optional)</param>
         /// <param name="regex">Formats are specified as a regular expression. (optional)</param>
         /// <param name="splitRects">Split result fragments (default is true). (optional)</param>
@@ -31394,6 +31456,171 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
             return new ApiResponse<TextReplaceResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (TextReplaceResponse) ApiClient.Deserialize(localVarResponse, typeof(TextReplaceResponse)));
+        }
+
+        /// <summary>
+        /// Removes all fields from the document and place their values instead. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="updateAppearances">If set, all field appearances will be regenerated before flattening. This option may help if field is incorrectly flattened. This option may decrease performance.. (optional)</param>
+        /// <param name="callEvents">If set, formatting and other JavaScript events will be called. (optional)</param>
+        /// <param name="hideButtons">If set, buttons will be removed from flattened document. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>AsposeResponse</returns>
+        public AsposeResponse PostFlattenDocument (string name, bool? updateAppearances = null, bool? callEvents = null, bool? hideButtons = null, string storage = null, string folder = null)
+        {
+             ApiResponse<AsposeResponse> localVarResponse = PostFlattenDocumentWithHttpInfo(name, updateAppearances, callEvents, hideButtons, storage, folder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Removes all fields from the document and place their values instead. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="updateAppearances">If set, all field appearances will be regenerated before flattening. This option may help if field is incorrectly flattened. This option may decrease performance.. (optional)</param>
+        /// <param name="callEvents">If set, formatting and other JavaScript events will be called. (optional)</param>
+        /// <param name="hideButtons">If set, buttons will be removed from flattened document. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>ApiResponse of AsposeResponse</returns>
+        public ApiResponse< AsposeResponse > PostFlattenDocumentWithHttpInfo (string name, bool? updateAppearances = null, bool? callEvents = null, bool? hideButtons = null, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostFlattenDocument");
+
+            var localVarPath = "/pdf/{name}/flatten";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (updateAppearances != null) localVarQueryParams.Add("updateAppearances", ApiClient.ParameterToString(updateAppearances)); // query parameter
+            if (callEvents != null) localVarQueryParams.Add("callEvents", ApiClient.ParameterToString(callEvents)); // query parameter
+            if (hideButtons != null) localVarQueryParams.Add("hideButtons", ApiClient.ParameterToString(hideButtons)); // query parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostFlattenDocument", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AsposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AsposeResponse) ApiClient.Deserialize(localVarResponse, typeof(AsposeResponse)));
+        }
+
+        /// <summary>
+        /// Removes all fields from the document and place their values instead. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="updateAppearances">If set, all field appearances will be regenerated before flattening. This option may help if field is incorrectly flattened. This option may decrease performance.. (optional)</param>
+        /// <param name="callEvents">If set, formatting and other JavaScript events will be called. (optional)</param>
+        /// <param name="hideButtons">If set, buttons will be removed from flattened document. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of AsposeResponse</returns>
+        public async System.Threading.Tasks.Task<AsposeResponse> PostFlattenDocumentAsync (string name, bool? updateAppearances = null, bool? callEvents = null, bool? hideButtons = null, string storage = null, string folder = null)
+        {
+             ApiResponse<AsposeResponse> localVarResponse = await PostFlattenDocumentAsyncWithHttpInfo(name, updateAppearances, callEvents, hideButtons, storage, folder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Removes all fields from the document and place their values instead. 
+        /// </summary>
+        /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="name">The document name.</param>
+        /// <param name="updateAppearances">If set, all field appearances will be regenerated before flattening. This option may help if field is incorrectly flattened. This option may decrease performance.. (optional)</param>
+        /// <param name="callEvents">If set, formatting and other JavaScript events will be called. (optional)</param>
+        /// <param name="hideButtons">If set, buttons will be removed from flattened document. (optional)</param>
+        /// <param name="storage">The document storage. (optional)</param>
+        /// <param name="folder">The document folder. (optional)</param>
+        /// <returns>Task of ApiResponse (AsposeResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AsposeResponse>> PostFlattenDocumentAsyncWithHttpInfo (string name, bool? updateAppearances = null, bool? callEvents = null, bool? hideButtons = null, string storage = null, string folder = null)
+        {
+            // verify the required parameter 'name' is set
+            if (name == null)
+                throw new ApiException(400, "Missing required parameter 'name' when calling PdfApi->PostFlattenDocument");
+
+            var localVarPath = "/pdf/{name}/flatten";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (name != null) localVarPathParams.Add("name", ApiClient.ParameterToString(name)); // path parameter
+            if (updateAppearances != null) localVarQueryParams.Add("updateAppearances", ApiClient.ParameterToString(updateAppearances)); // query parameter
+            if (callEvents != null) localVarQueryParams.Add("callEvents", ApiClient.ParameterToString(callEvents)); // query parameter
+            if (hideButtons != null) localVarQueryParams.Add("hideButtons", ApiClient.ParameterToString(hideButtons)); // query parameter
+            if (storage != null) localVarQueryParams.Add("storage", ApiClient.ParameterToString(storage)); // query parameter
+            if (folder != null) localVarQueryParams.Add("folder", ApiClient.ParameterToString(folder)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostFlattenDocument", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<AsposeResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (AsposeResponse) ApiClient.Deserialize(localVarResponse, typeof(AsposeResponse)));
         }
 
         /// <summary>
@@ -41580,7 +41807,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>AsposeResponse</returns>
@@ -41595,7 +41822,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>ApiResponse of AsposeResponse</returns>
@@ -41656,7 +41883,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>Task of AsposeResponse</returns>
@@ -41672,7 +41899,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// </summary>
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <param name="file">A file to be converted. (optional)</param>
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>
@@ -43723,7 +43950,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>AsposeResponse</returns>
@@ -43739,7 +43966,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>ApiResponse of AsposeResponse</returns>
@@ -43805,7 +44032,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of AsposeResponse</returns>
@@ -43822,7 +44049,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Api
         /// <exception cref="Aspose.Pdf.Cloud.Sdk.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The document name.</param>
         /// <param name="outPath">Full resulting filename (ex. /folder1/folder2/result.epub)</param>
-        /// <param name="contentRecognitionMode">Рroperty tunes conversion for this or that desirable method of recognition of content. (optional)</param>
+        /// <param name="contentRecognitionMode">Property tunes conversion for this or that desirable method of recognition of content. (optional)</param>
         /// <param name="folder">The document folder. (optional)</param>
         /// <param name="storage">The document storage. (optional)</param>
         /// <returns>Task of ApiResponse (AsposeResponse)</returns>

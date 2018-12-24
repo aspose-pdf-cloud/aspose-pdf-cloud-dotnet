@@ -50,6 +50,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="LineAnnotation" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
+        /// <param name="Color">Color of the annotation..</param>
         /// <param name="Contents">Get the annotation content..</param>
         /// <param name="Modified">The date and time when the annotation was last modified..</param>
         /// <param name="Id">Gets ID of the annotation..</param>
@@ -75,11 +76,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="ShowCaption">Gets or sets boolean flag which determinies is contents must be shown as caption..</param>
         /// <param name="CaptionOffset">Gets or sets caption text offset from its normal position..</param>
         /// <param name="CaptionPosition">Gets or sets annotation caption position..</param>
-        /// <param name="Color">Color of the annotation..</param>
         /// <param name="Intent">Gets or sets the intent of the line annotation..</param>
-        public LineAnnotation(List<Link> Links = default(List<Link>), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), Point Starting = default(Point), LineEnding StartingStyle = default(LineEnding), Point Ending = default(Point), LineEnding EndingStyle = default(LineEnding), Color InteriorColor = default(Color), double? LeaderLine = default(double?), double? LeaderLineExtension = default(double?), double? LeaderLineOffset = default(double?), bool? ShowCaption = default(bool?), Point CaptionOffset = default(Point), CaptionPosition CaptionPosition = default(CaptionPosition), Color Color = default(Color), LineIntent Intent = default(LineIntent))
+        public LineAnnotation(List<Link> Links = default(List<Link>), Color Color = default(Color), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), Rectangle Rect = default(Rectangle), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), Point Starting = default(Point), LineEnding StartingStyle = default(LineEnding), Point Ending = default(Point), LineEnding EndingStyle = default(LineEnding), Color InteriorColor = default(Color), double? LeaderLine = default(double?), double? LeaderLineExtension = default(double?), double? LeaderLineOffset = default(double?), bool? ShowCaption = default(bool?), Point CaptionOffset = default(Point), CaptionPosition CaptionPosition = default(CaptionPosition), LineIntent Intent = default(LineIntent))
         {
             this.Links = Links;
+            this.Color = Color;
             this.Contents = Contents;
             this.Modified = Modified;
             this.Id = Id;
@@ -105,7 +106,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.ShowCaption = ShowCaption;
             this.CaptionOffset = CaptionOffset;
             this.CaptionPosition = CaptionPosition;
-            this.Color = Color;
             this.Intent = Intent;
         }
         
@@ -115,6 +115,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <value>Link to the document.</value>
         [DataMember(Name="Links", EmitDefaultValue=false)]
         public List<Link> Links { get; set; }
+
+        /// <summary>
+        /// Color of the annotation.
+        /// </summary>
+        /// <value>Color of the annotation.</value>
+        [DataMember(Name="Color", EmitDefaultValue=false)]
+        public Color Color { get; set; }
 
         /// <summary>
         /// Get the annotation content.
@@ -156,7 +163,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Gets Rect of the annotation.</value>
         [DataMember(Name="Rect", EmitDefaultValue=false)]
-        public RectanglePdf Rect { get; set; }
+        public Rectangle Rect { get; set; }
 
         /// <summary>
         /// Gets PageIndex of the annotation.
@@ -292,13 +299,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public CaptionPosition CaptionPosition { get; set; }
 
         /// <summary>
-        /// Color of the annotation.
-        /// </summary>
-        /// <value>Color of the annotation.</value>
-        [DataMember(Name="Color", EmitDefaultValue=false)]
-        public Color Color { get; set; }
-
-        /// <summary>
         /// Gets or sets the intent of the line annotation.
         /// </summary>
         /// <value>Gets or sets the intent of the line annotation.</value>
@@ -314,6 +314,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class LineAnnotation {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("  Color: ").Append(Color).Append("\n");
             sb.Append("  Contents: ").Append(Contents).Append("\n");
             sb.Append("  Modified: ").Append(Modified).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -339,7 +340,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  ShowCaption: ").Append(ShowCaption).Append("\n");
             sb.Append("  CaptionOffset: ").Append(CaptionOffset).Append("\n");
             sb.Append("  CaptionPosition: ").Append(CaptionPosition).Append("\n");
-            sb.Append("  Color: ").Append(Color).Append("\n");
             sb.Append("  Intent: ").Append(Intent).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -381,6 +381,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Links == other.Links ||
                     this.Links != null &&
                     this.Links.SequenceEqual(other.Links)
+                ) && 
+                (
+                    this.Color == other.Color ||
+                    this.Color != null &&
+                    this.Color.Equals(other.Color)
                 ) && 
                 (
                     this.Contents == other.Contents ||
@@ -508,11 +513,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.CaptionPosition.Equals(other.CaptionPosition)
                 ) && 
                 (
-                    this.Color == other.Color ||
-                    this.Color != null &&
-                    this.Color.Equals(other.Color)
-                ) && 
-                (
                     this.Intent == other.Intent ||
                     this.Intent != null &&
                     this.Intent.Equals(other.Intent)
@@ -532,6 +532,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Links != null)
                     hash = hash * 59 + this.Links.GetHashCode();
+                if (this.Color != null)
+                    hash = hash * 59 + this.Color.GetHashCode();
                 if (this.Contents != null)
                     hash = hash * 59 + this.Contents.GetHashCode();
                 if (this.Modified != null)
@@ -582,8 +584,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.CaptionOffset.GetHashCode();
                 if (this.CaptionPosition != null)
                     hash = hash * 59 + this.CaptionPosition.GetHashCode();
-                if (this.Color != null)
-                    hash = hash * 59 + this.Color.GetHashCode();
                 if (this.Intent != null)
                     hash = hash * 59 + this.Intent.GetHashCode();
                 return hash;

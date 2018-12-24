@@ -55,7 +55,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Type">Field type..</param>
         /// <param name="Rect">Field rectangle..</param>
         /// <param name="Values">Field values..</param>
-        public Field(List<Link> Links = default(List<Link>), string Name = default(string), List<int?> SelectedItems = default(List<int?>), FieldType Type = default(FieldType), RectanglePdf Rect = default(RectanglePdf), List<string> Values = default(List<string>))
+        public Field(List<Link> Links = default(List<Link>), string Name = default(string), List<int?> SelectedItems = default(List<int?>), FieldType Type = default(FieldType), Rectangle Rect = default(Rectangle), List<string> Values = default(List<string>))
         {
             this.Links = Links;
             this.Name = Name;
@@ -98,7 +98,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Field rectangle.</value>
         [DataMember(Name="Rect", EmitDefaultValue=false)]
-        public RectanglePdf Rect { get; set; }
+        public Rectangle Rect { get; set; }
 
         /// <summary>
         /// Field values.
