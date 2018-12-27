@@ -39,7 +39,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     public class StorageTests : TestsBase
     {
         /// <summary>
-        /// Test Upload file
+        /// Test PutCreate
         /// </summary>
         [Test]
         public void PutCreateTest()
@@ -54,10 +54,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         }
 
         /// <summary>
-        /// Test Download file
+        /// Test GetDownload
         /// </summary>
         [Test]
-        public void GetDonloadFileTest()
+        public void GetDownloadTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
