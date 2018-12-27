@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// SquigglyAnnotationsResponse
+    /// Represents response containing multiple squiggly-underline annotation objects
     /// </summary>
     [DataContract]
     public partial class SquigglyAnnotationsResponse : AsposeResponse,  IEquatable<SquigglyAnnotationsResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Annotations">Annotations.</param>
+        /// <param name="Annotations">Squiggly-underline annotations object.</param>
         public SquigglyAnnotationsResponse(int? Code = default(int?), string Status = default(string), SquigglyAnnotations Annotations = default(SquigglyAnnotations))
         {
             // to ensure "Code" is required (not null)
@@ -87,8 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Annotations
+        /// Squiggly-underline annotations object
         /// </summary>
+        /// <value>Squiggly-underline annotations object</value>
         [DataMember(Name="Annotations", EmitDefaultValue=false)]
         public SquigglyAnnotations Annotations { get; set; }
 

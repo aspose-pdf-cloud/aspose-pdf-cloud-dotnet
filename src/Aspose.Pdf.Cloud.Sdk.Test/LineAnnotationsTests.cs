@@ -76,7 +76,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 new LineAnnotation()
                 {
                     Name = "Test Line Annotation",
-                    Rect = new RectanglePdf(100, 100, 300, 300),
+                    Rect = new Rectangle(100, 100, 300, 300),
                     Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     RichText = "Rich Text",
@@ -116,7 +116,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             LineAnnotation annotation = new LineAnnotation()
             {
                 Name = "Test Line Annotation",
-                Rect = new RectanglePdf(100, 100, 300, 300),
+                Rect = new Rectangle(100, 100, 300, 300),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 RichText = "Updated Rich Text",

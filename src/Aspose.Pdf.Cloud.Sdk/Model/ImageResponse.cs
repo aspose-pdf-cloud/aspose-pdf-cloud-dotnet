@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// ImageResponse
+    /// Represents response containing single image info
     /// </summary>
     [DataContract]
     public partial class ImageResponse : AsposeResponse,  IEquatable<ImageResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Image">Image.</param>
+        /// <param name="Image">Image object.</param>
         public ImageResponse(int? Code = default(int?), string Status = default(string), Image Image = default(Image))
         {
             // to ensure "Code" is required (not null)
@@ -87,8 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Image
+        /// Image object
         /// </summary>
+        /// <value>Image object</value>
         [DataMember(Name="Image", EmitDefaultValue=false)]
         public Image Image { get; set; }
 

@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// InkAnnotationResponse
+    /// Represents response containing single ink annotation object
     /// </summary>
     [DataContract]
     public partial class InkAnnotationResponse : AsposeResponse,  IEquatable<InkAnnotationResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Annotation">Annotation.</param>
+        /// <param name="Annotation">Ink annotation object.</param>
         public InkAnnotationResponse(int? Code = default(int?), string Status = default(string), InkAnnotation Annotation = default(InkAnnotation))
         {
             // to ensure "Code" is required (not null)
@@ -87,8 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Annotation
+        /// Ink annotation object
         /// </summary>
+        /// <value>Ink annotation object</value>
         [DataMember(Name="Annotation", EmitDefaultValue=false)]
         public InkAnnotation Annotation { get; set; }
 

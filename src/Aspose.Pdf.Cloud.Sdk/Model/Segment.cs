@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Segment
+    /// Represents segment of Pdf text.
     /// </summary>
     [DataContract]
     public partial class Segment :  IEquatable<Segment>, IValidatableObject
@@ -54,8 +54,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Segment" /> class.
         /// </summary>
-        /// <param name="Value">Value (required).</param>
-        /// <param name="TextState">TextState.</param>
+        /// <param name="Value">Text that the Segment object represents. (required).</param>
+        /// <param name="TextState">Text state for the text that Segment object represents..</param>
         public Segment(string Value = default(string), TextState TextState = default(TextState))
         {
             // to ensure "Value" is required (not null)
@@ -71,14 +71,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         }
         
         /// <summary>
-        /// Gets or Sets Value
+        /// Text that the Segment object represents.
         /// </summary>
+        /// <value>Text that the Segment object represents.</value>
         [DataMember(Name="Value", EmitDefaultValue=false)]
         public string Value { get; set; }
 
         /// <summary>
-        /// Gets or Sets TextState
+        /// Text state for the text that Segment object represents.
         /// </summary>
+        /// <value>Text state for the text that Segment object represents.</value>
         [DataMember(Name="TextState", EmitDefaultValue=false)]
         public TextState TextState { get; set; }
 

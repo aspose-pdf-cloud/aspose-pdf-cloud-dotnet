@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// List of form fields.
+    /// Represents list of form fields.
     /// </summary>
     [DataContract]
     public partial class Fields : LinkElement,  IEquatable<Fields>, IValidatableObject
@@ -50,7 +50,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="Fields" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List.</param>
+        /// <param name="List">List of form fields..</param>
         public Fields(List<Link> Links = default(List<Link>), List<Field> List = default(List<Field>))
         {
             this.Links = Links;
@@ -65,8 +65,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Gets or Sets List
+        /// List of form fields.
         /// </summary>
+        /// <value>List of form fields.</value>
         [DataMember(Name="List", EmitDefaultValue=false)]
         public List<Field> List { get; set; }
 

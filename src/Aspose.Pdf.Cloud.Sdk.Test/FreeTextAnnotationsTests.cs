@@ -57,7 +57,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 {
                     Name = "Test Free Text",
                     TextStyle = new TextStyle(FontSize: 12, Font: "Arial", ForegroundColor: new Color(0xFF, 0, 0xFF, 0), BackgroundColor: new Color(0xFF, 0xFF, 0, 0)),
-                    Rect = new RectanglePdf(100, 100, 200, 200),
+                    Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> { AnnotationFlags.Default},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     Intent = FreeTextIntent.FreeTextTypeWriter,
@@ -117,7 +117,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             {
                 Name = "Test Free Text",
                 TextStyle = new TextStyle(FontSize: 12, Font: "Arial", ForegroundColor: new Color(0xFF, 0, 0xFF, 0), BackgroundColor: new Color(0xFF, 0xFF, 0, 0)),
-                Rect = new RectanglePdf(100, 100, 200, 200),
+                Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Default },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 Intent = FreeTextIntent.FreeTextTypeWriter,

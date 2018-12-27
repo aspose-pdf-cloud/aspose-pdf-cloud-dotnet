@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// HighlightAnnotationsResponse
+    /// Represents response containing multiple highlight annotation objects
     /// </summary>
     [DataContract]
     public partial class HighlightAnnotationsResponse : AsposeResponse,  IEquatable<HighlightAnnotationsResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Annotations">Annotations.</param>
+        /// <param name="Annotations">Highlight annotations object.</param>
         public HighlightAnnotationsResponse(int? Code = default(int?), string Status = default(string), HighlightAnnotations Annotations = default(HighlightAnnotations))
         {
             // to ensure "Code" is required (not null)
@@ -87,8 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Annotations
+        /// Highlight annotations object
         /// </summary>
+        /// <value>Highlight annotations object</value>
         [DataMember(Name="Annotations", EmitDefaultValue=false)]
         public HighlightAnnotations Annotations { get; set; }
 

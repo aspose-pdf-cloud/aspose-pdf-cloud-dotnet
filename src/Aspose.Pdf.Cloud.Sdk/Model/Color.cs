@@ -54,10 +54,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Color" /> class.
         /// </summary>
-        /// <param name="A">A (required).</param>
-        /// <param name="R">R (required).</param>
-        /// <param name="G">G (required).</param>
-        /// <param name="B">B (required).</param>
+        /// <param name="A">Alpha component. (required).</param>
+        /// <param name="R">Red component. (required).</param>
+        /// <param name="G">Green component. (required).</param>
+        /// <param name="B">Blue component. (required).</param>
         public Color(int? A = default(int?), int? R = default(int?), int? G = default(int?), int? B = default(int?))
         {
             // to ensure "A" is required (not null)
@@ -99,26 +99,30 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         }
         
         /// <summary>
-        /// Gets or Sets A
+        /// Alpha component.
         /// </summary>
+        /// <value>Alpha component.</value>
         [DataMember(Name="A", EmitDefaultValue=false)]
         public int? A { get; set; }
 
         /// <summary>
-        /// Gets or Sets R
+        /// Red component.
         /// </summary>
+        /// <value>Red component.</value>
         [DataMember(Name="R", EmitDefaultValue=false)]
         public int? R { get; set; }
 
         /// <summary>
-        /// Gets or Sets G
+        /// Green component.
         /// </summary>
+        /// <value>Green component.</value>
         [DataMember(Name="G", EmitDefaultValue=false)]
         public int? G { get; set; }
 
         /// <summary>
-        /// Gets or Sets B
+        /// Blue component.
         /// </summary>
+        /// <value>Blue component.</value>
         [DataMember(Name="B", EmitDefaultValue=false)]
         public int? B { get; set; }
 

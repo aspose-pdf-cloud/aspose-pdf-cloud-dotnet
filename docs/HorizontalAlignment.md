@@ -1,5 +1,5 @@
 ﻿# Aspose.Pdf.Cloud.Sdk.Model.HorizontalAlignment
-
+Describes horizontal alignment.
 
 ## Enum
 

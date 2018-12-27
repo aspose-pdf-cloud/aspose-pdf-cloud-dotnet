@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Signature
+    /// Represents signature.
     /// </summary>
     [DataContract]
     public partial class Signature :  IEquatable<Signature>, IValidatableObject
@@ -67,7 +67,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Authority">Gets or sets the name of the person or authority signing the document...</param>
         /// <param name="Date">Gets or sets the time of signing..</param>
         /// <param name="ShowProperties">Gets or sets the showproperties in signature field (required).</param>
-        public Signature(string SignaturePath = default(string), SignatureType SignatureType = default(SignatureType), string Password = default(string), string Appearance = default(string), string Reason = default(string), string Contact = default(string), string Location = default(string), bool? Visible = default(bool?), RectanglePdf Rectangle = default(RectanglePdf), string FormFieldName = default(string), string Authority = default(string), string Date = default(string), bool? ShowProperties = default(bool?))
+        public Signature(string SignaturePath = default(string), SignatureType SignatureType = default(SignatureType), string Password = default(string), string Appearance = default(string), string Reason = default(string), string Contact = default(string), string Location = default(string), bool? Visible = default(bool?), Rectangle Rectangle = default(Rectangle), string FormFieldName = default(string), string Authority = default(string), string Date = default(string), bool? ShowProperties = default(bool?))
         {
             // to ensure "SignaturePath" is required (not null)
             if (SignaturePath == null)
@@ -177,7 +177,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Gets or sets the visible rectangle of the signature. Supports only when signing particular page.</value>
         [DataMember(Name="Rectangle", EmitDefaultValue=false)]
-        public RectanglePdf Rectangle { get; set; }
+        public Rectangle Rectangle { get; set; }
 
         /// <summary>
         /// Gets or sets the name of the signature field. Supports only when signing document with particular form field.

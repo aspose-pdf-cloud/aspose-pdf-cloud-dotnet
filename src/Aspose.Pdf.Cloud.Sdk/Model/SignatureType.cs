@@ -41,9 +41,9 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// The type of signature.
     /// </summary>
-    /// <value></value>
+    /// <value>The type of signature.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum SignatureType
     {

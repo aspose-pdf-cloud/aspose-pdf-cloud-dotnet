@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// PopupAnnotationResponse
+    /// Represents response containing single popup annotation object
     /// </summary>
     [DataContract]
     public partial class PopupAnnotationResponse : AsposeResponse,  IEquatable<PopupAnnotationResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Annotation">Annotation.</param>
+        /// <param name="Annotation">Popup annotation object.</param>
         public PopupAnnotationResponse(int? Code = default(int?), string Status = default(string), PopupAnnotationWithParent Annotation = default(PopupAnnotationWithParent))
         {
             // to ensure "Code" is required (not null)
@@ -87,8 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Annotation
+        /// Popup annotation object
         /// </summary>
+        /// <value>Popup annotation object</value>
         [DataMember(Name="Annotation", EmitDefaultValue=false)]
         public PopupAnnotationWithParent Annotation { get; set; }
 

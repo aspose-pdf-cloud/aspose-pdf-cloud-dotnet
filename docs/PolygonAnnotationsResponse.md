@@ -1,5 +1,5 @@
 ﻿# Aspose.Pdf.Cloud.Sdk.Model.PolygonAnnotationsResponse
-
+Represents response containing multiple polygon annotation objects
 
 ## Properties
 
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | **int?** | Response status code. | 
 **Status** | **string** | Response status. | [optional] 
-**Annotations** | [**PolygonAnnotations**](PolygonAnnotations.md) |  | [optional] 
+**Annotations** | [**PolygonAnnotations**](PolygonAnnotations.md) | Polygon annotations object | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

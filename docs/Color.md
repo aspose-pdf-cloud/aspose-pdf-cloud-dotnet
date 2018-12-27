@@ -5,10 +5,10 @@ Represents color DTO.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**A** | **int?** |  | 
-**R** | **int?** |  | 
-**G** | **int?** |  | 
-**B** | **int?** |  | 
+**A** | **int?** | Alpha component. | 
+**R** | **int?** | Red component. | 
+**G** | **int?** | Green component. | 
+**B** | **int?** | Blue component. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

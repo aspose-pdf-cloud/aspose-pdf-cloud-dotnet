@@ -76,14 +76,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 new CaretAnnotation()
                 {
                     Name = "Test Caret Annotation",
-                    Rect = new RectanglePdf(100, 100, 200, 200),
+                    Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     RichText = "Rich Text",
                     Subject = "Subj",
                     ZIndex = 1,
                     Title = "Title",
-                    Frame = new RectanglePdf(100, 100, 200, 200),
+                    Frame = new Rectangle(100, 100, 200, 200),
                     Modified = "01/01/2018 00:00:00.000 AM"
                 }
             };
@@ -114,14 +114,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             CaretAnnotation annotation = new CaretAnnotation()
             {
                 Name = "Test Caret Annotation Updated",
-                Rect = new RectanglePdf(101, 101, 201, 201),
+                Rect = new Rectangle(101, 101, 201, 201),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 RichText = "Rich Text Updated",
                 Subject = "Subj Updated",
                 ZIndex = 1,
                 Title = "Title Updated",
-                Frame = new RectanglePdf(100, 100, 200, 200),
+                Frame = new Rectangle(100, 100, 200, 200),
                 Modified = "02/02/2018 00:00:00.000 AM"
             };
 

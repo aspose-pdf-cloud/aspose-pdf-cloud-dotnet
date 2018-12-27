@@ -47,7 +47,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutAddTextTest()
         {
             var paragraph = new Paragraph(
-                Rectangle: new RectanglePdf(100, 100, 200, 200),
+                Rectangle: new Rectangle(100, 100, 200, 200),
                 LeftMargin: 10,
                 RightMargin: 10,
                 TopMargin: 20,

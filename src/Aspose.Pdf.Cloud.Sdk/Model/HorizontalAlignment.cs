@@ -41,9 +41,9 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// 
+    /// Describes horizontal alignment.
     /// </summary>
-    /// <value></value>
+    /// <value>Describes horizontal alignment.</value>
     [JsonConverter(typeof(StringEnumConverter))]
     public enum HorizontalAlignment
     {

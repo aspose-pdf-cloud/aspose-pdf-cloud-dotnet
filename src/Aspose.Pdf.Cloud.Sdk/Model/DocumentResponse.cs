@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// DocumentResponse
+    /// Represents response containing document info
     /// </summary>
     [DataContract]
     public partial class DocumentResponse : AsposeResponse,  IEquatable<DocumentResponse>, IValidatableObject
@@ -56,8 +56,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Document">Document.</param>
-        /// <param name="Messages">Messages.</param>
+        /// <param name="Document">Document object.</param>
+        /// <param name="Messages">A list of messages obtained while producing the responce.</param>
         public DocumentResponse(int? Code = default(int?), string Status = default(string), Document Document = default(Document), List<string> Messages = default(List<string>))
         {
             // to ensure "Code" is required (not null)
@@ -89,14 +89,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Document
+        /// Document object
         /// </summary>
+        /// <value>Document object</value>
         [DataMember(Name="Document", EmitDefaultValue=false)]
         public Document Document { get; set; }
 
         /// <summary>
-        /// Gets or Sets Messages
+        /// A list of messages obtained while producing the responce
         /// </summary>
+        /// <value>A list of messages obtained while producing the responce</value>
         [DataMember(Name="Messages", EmitDefaultValue=false)]
         public List<string> Messages { get; set; }
 

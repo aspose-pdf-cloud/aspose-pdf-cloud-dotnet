@@ -50,9 +50,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="DocumentProperty" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="Value">Value.</param>
-        /// <param name="BuiltIn">BuiltIn.</param>
+        /// <param name="Name">Pame of the property..</param>
+        /// <param name="Value">Property value..</param>
+        /// <param name="BuiltIn">Value indicating whether it is a built-in property..</param>
         public DocumentProperty(List<Link> Links = default(List<Link>), string Name = default(string), string Value = default(string), bool? BuiltIn = default(bool?))
         {
             this.Links = Links;
@@ -69,20 +69,23 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Pame of the property.
         /// </summary>
+        /// <value>Pame of the property.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets Value
+        /// Property value.
         /// </summary>
+        /// <value>Property value.</value>
         [DataMember(Name="Value", EmitDefaultValue=false)]
         public string Value { get; set; }
 
         /// <summary>
-        /// Gets or Sets BuiltIn
+        /// Value indicating whether it is a built-in property.
         /// </summary>
+        /// <value>Value indicating whether it is a built-in property.</value>
         [DataMember(Name="BuiltIn", EmitDefaultValue=false)]
         public bool? BuiltIn { get; set; }
 

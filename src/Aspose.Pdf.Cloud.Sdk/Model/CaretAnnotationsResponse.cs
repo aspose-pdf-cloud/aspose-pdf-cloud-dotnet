@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// CaretAnnotationsResponse
+    /// Represents response containing multiple caret annotation objects
     /// </summary>
     [DataContract]
     public partial class CaretAnnotationsResponse : AsposeResponse,  IEquatable<CaretAnnotationsResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Annotations">Annotations.</param>
+        /// <param name="Annotations">Caret annotations object.</param>
         public CaretAnnotationsResponse(int? Code = default(int?), string Status = default(string), CaretAnnotations Annotations = default(CaretAnnotations))
         {
             // to ensure "Code" is required (not null)
@@ -87,8 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Annotations
+        /// Caret annotations object
         /// </summary>
+        /// <value>Caret annotations object</value>
         [DataMember(Name="Annotations", EmitDefaultValue=false)]
         public CaretAnnotations Annotations { get; set; }
 

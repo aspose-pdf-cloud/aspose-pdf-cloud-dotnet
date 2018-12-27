@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// TextRectsResponse
+    /// Represents response containing multiple text occurrences info
     /// </summary>
     [DataContract]
     public partial class TextRectsResponse : AsposeResponse,  IEquatable<TextRectsResponse>, IValidatableObject
@@ -56,8 +56,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="TextOccurences">TextOccurences.</param>
-        public TextRectsResponse(int? Code = default(int?), string Status = default(string), TextRects TextOccurences = default(TextRects))
+        /// <param name="TextOccurrences">TextRects object.</param>
+        public TextRectsResponse(int? Code = default(int?), string Status = default(string), TextRects TextOccurrences = default(TextRects))
         {
             // to ensure "Code" is required (not null)
             if (Code == null)
@@ -69,7 +69,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                 this.Code = Code;
             }
             this.Status = Status;
-            this.TextOccurences = TextOccurences;
+            this.TextOccurrences = TextOccurrences;
         }
         
         /// <summary>
@@ -87,10 +87,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets TextOccurences
+        /// TextRects object
         /// </summary>
-        [DataMember(Name="TextOccurences", EmitDefaultValue=false)]
-        public TextRects TextOccurences { get; set; }
+        /// <value>TextRects object</value>
+        [DataMember(Name="TextOccurrences", EmitDefaultValue=false)]
+        public TextRects TextOccurrences { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -102,7 +103,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("class TextRectsResponse {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  TextOccurences: ").Append(TextOccurences).Append("\n");
+            sb.Append("  TextOccurrences: ").Append(TextOccurrences).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -150,9 +151,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Status.Equals(other.Status)
                 ) && 
                 (
-                    this.TextOccurences == other.TextOccurences ||
-                    this.TextOccurences != null &&
-                    this.TextOccurences.Equals(other.TextOccurences)
+                    this.TextOccurrences == other.TextOccurrences ||
+                    this.TextOccurrences != null &&
+                    this.TextOccurrences.Equals(other.TextOccurrences)
                 );
         }
 
@@ -171,8 +172,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Code.GetHashCode();
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                if (this.TextOccurences != null)
-                    hash = hash * 59 + this.TextOccurences.GetHashCode();
+                if (this.TextOccurrences != null)
+                    hash = hash * 59 + this.TextOccurrences.GetHashCode();
                 return hash;
             }
         }

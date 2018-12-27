@@ -75,7 +75,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 Name: "checkboxfield",
                 Type: FieldType.Boolean,
                 Values: new List<string> {"1"},
-                Rect: new RectanglePdf(
+                Rect: new Rectangle(
                     LLX: 50,
                     LLY: 200,
                     URX: 200,
@@ -100,7 +100,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 Name: fieldName,
                 Type: FieldType.Text,
                 Values: new List<string> {"Text field updated value."},
-                Rect: new RectanglePdf(125, 735, 200, 752)                
+                Rect: new Rectangle(125, 735, 200, 752)                
                 );
 
             var response = PdfApi.PutUpdateField(name, fieldName, field, folder: TempFolder);
@@ -157,6 +157,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(name, name);
 
             var response = PdfApi.PutFieldsFlatten(name, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PutFieldsFlatten
+        /// </summary>
+        [Test]
+        public void PostFlattenDocumentTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.PostFlattenDocument(name, updateAppearances: true, hideButtons: true, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
     }

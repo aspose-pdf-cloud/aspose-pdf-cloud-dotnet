@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents text items DTO.
+    /// Represents multiple text occurrences DTO.
     /// </summary>
     [DataContract]
     public partial class TextRects :  IEquatable<TextRects>, IValidatableObject
@@ -49,15 +49,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextRects" /> class.
         /// </summary>
-        /// <param name="List">List.</param>
+        /// <param name="List">The list of text occurrences..</param>
         public TextRects(List<TextRect> List = default(List<TextRect>))
         {
             this.List = List;
         }
         
         /// <summary>
-        /// Gets or Sets List
+        /// The list of text occurrences.
         /// </summary>
+        /// <value>The list of text occurrences.</value>
         [DataMember(Name="List", EmitDefaultValue=false)]
         public List<TextRect> List { get; set; }
 

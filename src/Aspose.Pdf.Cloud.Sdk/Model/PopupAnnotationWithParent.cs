@@ -50,6 +50,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="PopupAnnotationWithParent" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
+        /// <param name="Color">Color of the annotation..</param>
         /// <param name="Contents">Get the annotation content..</param>
         /// <param name="Modified">The date and time when the annotation was last modified..</param>
         /// <param name="Id">Gets ID of the annotation..</param>
@@ -60,12 +61,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
         /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation..</param>
         /// <param name="VerticalAlignment">Gets VerticalAlignment of the annotation..</param>
-        /// <param name="Color">Color of the annotation..</param>
         /// <param name="Open">Gets or sets a flag specifying whether the pop-up annotation should initially be displayed open..</param>
         /// <param name="Parent">Parent of annotation..</param>
-        public PopupAnnotationWithParent(List<Link> Links = default(List<Link>), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), Color Color = default(Color), bool? Open = default(bool?), AnnotationInfo Parent = default(AnnotationInfo))
+        public PopupAnnotationWithParent(List<Link> Links = default(List<Link>), Color Color = default(Color), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), Rectangle Rect = default(Rectangle), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), bool? Open = default(bool?), AnnotationInfo Parent = default(AnnotationInfo))
         {
             this.Links = Links;
+            this.Color = Color;
             this.Contents = Contents;
             this.Modified = Modified;
             this.Id = Id;
@@ -76,7 +77,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.ZIndex = ZIndex;
             this.HorizontalAlignment = HorizontalAlignment;
             this.VerticalAlignment = VerticalAlignment;
-            this.Color = Color;
             this.Open = Open;
             this.Parent = Parent;
         }
@@ -87,6 +87,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <value>Link to the document.</value>
         [DataMember(Name="Links", EmitDefaultValue=false)]
         public List<Link> Links { get; set; }
+
+        /// <summary>
+        /// Color of the annotation.
+        /// </summary>
+        /// <value>Color of the annotation.</value>
+        [DataMember(Name="Color", EmitDefaultValue=false)]
+        public Color Color { get; set; }
 
         /// <summary>
         /// Get the annotation content.
@@ -128,7 +135,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Gets Rect of the annotation.</value>
         [DataMember(Name="Rect", EmitDefaultValue=false)]
-        public RectanglePdf Rect { get; set; }
+        public Rectangle Rect { get; set; }
 
         /// <summary>
         /// Gets PageIndex of the annotation.
@@ -159,13 +166,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public VerticalAlignment VerticalAlignment { get; set; }
 
         /// <summary>
-        /// Color of the annotation.
-        /// </summary>
-        /// <value>Color of the annotation.</value>
-        [DataMember(Name="Color", EmitDefaultValue=false)]
-        public Color Color { get; set; }
-
-        /// <summary>
         /// Gets or sets a flag specifying whether the pop-up annotation should initially be displayed open.
         /// </summary>
         /// <value>Gets or sets a flag specifying whether the pop-up annotation should initially be displayed open.</value>
@@ -188,6 +188,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class PopupAnnotationWithParent {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("  Color: ").Append(Color).Append("\n");
             sb.Append("  Contents: ").Append(Contents).Append("\n");
             sb.Append("  Modified: ").Append(Modified).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -198,7 +199,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  ZIndex: ").Append(ZIndex).Append("\n");
             sb.Append("  HorizontalAlignment: ").Append(HorizontalAlignment).Append("\n");
             sb.Append("  VerticalAlignment: ").Append(VerticalAlignment).Append("\n");
-            sb.Append("  Color: ").Append(Color).Append("\n");
             sb.Append("  Open: ").Append(Open).Append("\n");
             sb.Append("  Parent: ").Append(Parent).Append("\n");
             sb.Append("}\n");
@@ -241,6 +241,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Links == other.Links ||
                     this.Links != null &&
                     this.Links.SequenceEqual(other.Links)
+                ) && 
+                (
+                    this.Color == other.Color ||
+                    this.Color != null &&
+                    this.Color.Equals(other.Color)
                 ) && 
                 (
                     this.Contents == other.Contents ||
@@ -293,11 +298,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.VerticalAlignment.Equals(other.VerticalAlignment)
                 ) && 
                 (
-                    this.Color == other.Color ||
-                    this.Color != null &&
-                    this.Color.Equals(other.Color)
-                ) && 
-                (
                     this.Open == other.Open ||
                     this.Open != null &&
                     this.Open.Equals(other.Open)
@@ -322,6 +322,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Links != null)
                     hash = hash * 59 + this.Links.GetHashCode();
+                if (this.Color != null)
+                    hash = hash * 59 + this.Color.GetHashCode();
                 if (this.Contents != null)
                     hash = hash * 59 + this.Contents.GetHashCode();
                 if (this.Modified != null)
@@ -342,8 +344,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.HorizontalAlignment.GetHashCode();
                 if (this.VerticalAlignment != null)
                     hash = hash * 59 + this.VerticalAlignment.GetHashCode();
-                if (this.Color != null)
-                    hash = hash * 59 + this.Color.GetHashCode();
                 if (this.Open != null)
                     hash = hash * 59 + this.Open.GetHashCode();
                 if (this.Parent != null)

@@ -1,12 +1,12 @@
 ﻿# Aspose.Pdf.Cloud.Sdk.Model.DocumentProperties
-Pdf document properties.
+Represents list of PDF document properties.
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Links** | [**List&lt;Link&gt;**](Link.md) | Link to the document. | [optional] 
-**List** | [**List&lt;DocumentProperty&gt;**](DocumentProperty.md) |  | [optional] 
+**List** | [**List&lt;DocumentProperty&gt;**](DocumentProperty.md) | List of PDF document properties. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

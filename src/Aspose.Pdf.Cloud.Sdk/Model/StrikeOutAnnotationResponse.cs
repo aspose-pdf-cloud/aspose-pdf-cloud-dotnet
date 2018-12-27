@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// StrikeOutAnnotationResponse
+    /// Represents response containing single strikeout annotation object
     /// </summary>
     [DataContract]
     public partial class StrikeOutAnnotationResponse : AsposeResponse,  IEquatable<StrikeOutAnnotationResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Annotation">Annotation.</param>
+        /// <param name="Annotation">Strikeout annotation object.</param>
         public StrikeOutAnnotationResponse(int? Code = default(int?), string Status = default(string), StrikeOutAnnotation Annotation = default(StrikeOutAnnotation))
         {
             // to ensure "Code" is required (not null)
@@ -87,8 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Annotation
+        /// Strikeout annotation object
         /// </summary>
+        /// <value>Strikeout annotation object</value>
         [DataMember(Name="Annotation", EmitDefaultValue=false)]
         public StrikeOutAnnotation Annotation { get; set; }
 

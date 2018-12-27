@@ -46,7 +46,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             FormFieldName: "Signature1",
             Location: "Ukraine",
             Password: "test1234",
-            Rectangle: new RectanglePdf(
+            Rectangle: new Rectangle(
                 LLX: 100,
                 LLY: 100,
                 URX: 0,

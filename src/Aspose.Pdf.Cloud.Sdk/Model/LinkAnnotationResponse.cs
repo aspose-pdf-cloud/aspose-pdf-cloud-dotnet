@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// LinkAnnotationResponse
+    /// Represents response containing single link info
     /// </summary>
     [DataContract]
     public partial class LinkAnnotationResponse : AsposeResponse,  IEquatable<LinkAnnotationResponse>, IValidatableObject
@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Link">Link.</param>
+        /// <param name="Link">LinkAnnotation object.</param>
         public LinkAnnotationResponse(int? Code = default(int?), string Status = default(string), LinkAnnotation Link = default(LinkAnnotation))
         {
             // to ensure "Code" is required (not null)
@@ -87,8 +87,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets Link
+        /// LinkAnnotation object
         /// </summary>
+        /// <value>LinkAnnotation object</value>
         [DataMember(Name="Link", EmitDefaultValue=false)]
         public LinkAnnotation Link { get; set; }
 

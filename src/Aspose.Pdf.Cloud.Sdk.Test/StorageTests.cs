@@ -39,7 +39,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     public class StorageTests : TestsBase
     {
         /// <summary>
-        /// Test Upload file
+        /// Test PutCreate
         /// </summary>
         [Test]
         public void PutCreateTest()
@@ -54,10 +54,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         }
 
         /// <summary>
-        /// Test Download file
+        /// Test GetDownload
         /// </summary>
         [Test]
-        public void GetDonloadFileTest()
+        public void GetDownloadTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
@@ -67,12 +67,128 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         }
 
         /// <summary>
+        /// Test PostMoveFile
+        /// </summary>
+        [Test]
+        public void PostMoveFileTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+            string src = Path.Combine(TempFolder, name);
+            string dest = Path.Combine(TempFolder, "4pages_renamed.pdf");
+
+            var response = PdfApi.PostMoveFile(src, dest);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test DeleteFile
+        /// </summary>
+        [Test]
+        public void DeleteFileTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+            string path = Path.Combine(TempFolder, name);
+
+            var response = PdfApi.DeleteFile(path);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
         /// Test GetListFiles
         /// </summary>
         [Test]
         public void GetListFilesTest()
         {
             var response = PdfApi.GetListFiles(TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PutCreateFolder
+        /// </summary>
+        [Test]
+        public void PutCreateFolderTest()
+        {
+            string path = Path.Combine(TempFolder, "testFolder");
+            var response = PdfApi.PutCreateFolder(path);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PostMoveFolder
+        /// </summary>
+        [Test]
+        public void PostMoveFolderTest()
+        {
+            string src = Path.Combine(TempFolder, "testFolder");
+            var createFolderresponse = PdfApi.PutCreateFolder(src);
+            Assert.That(createFolderresponse.Code, Is.EqualTo(200));
+
+            string dest = Path.Combine(TempFolder, "testFolderRenamed");
+
+            var response = PdfApi.PostMoveFolder(src, dest);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test DeleteFolder
+        /// </summary>
+        [Test]
+        public void DeleteFolderTest()
+        {
+            string path = Path.Combine(TempFolder, "testFolderRenamed");
+            var createFolderresponse = PdfApi.PutCreateFolder(path);
+
+            var response = PdfApi.DeleteFolder(path);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetIsStorageExist
+        /// </summary>
+        [Test]
+        public void GetIsStorageExistTest()
+        {
+            string name = "PDF-CI";
+            var response = PdfApi.GetIsStorageExist(name);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetIsExist
+        /// </summary>
+        [Test]
+        public void GetIsExistTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetIsExist(Path.Combine(TempFolder, name));
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetDiscUsage
+        /// </summary>
+        [Test]
+        public void GetDiscUsageTest()
+        {
+            var response = PdfApi.GetDiscUsage();
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetListFileVersions
+        /// </summary>
+        [Test]
+        public void GetListFileVersionsTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetListFileVersions(Path.Combine(TempFolder, name));
             Assert.That(response.Code, Is.EqualTo(200));
         }
     }

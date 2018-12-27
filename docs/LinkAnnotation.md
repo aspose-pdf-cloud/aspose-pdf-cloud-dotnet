@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Action** | **string** |  | [optional] 
 **Highlighting** | [**LinkHighlightingMode**](LinkHighlightingMode.md) |  | [optional] 
 **Color** | [**Color**](Color.md) |  | [optional] 
-**Rect** | [**RectanglePdf**](RectanglePdf.md) |  | [optional] 
+**Rect** | [**Rectangle**](Rectangle.md) |  | [optional] 
 **Id** | **string** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

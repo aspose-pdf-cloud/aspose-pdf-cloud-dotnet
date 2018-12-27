@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Pdf document properties.
+    /// Represents list of PDF document properties.
     /// </summary>
     [DataContract]
     public partial class DocumentProperties : LinkElement,  IEquatable<DocumentProperties>, IValidatableObject
@@ -50,7 +50,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="DocumentProperties" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List.</param>
+        /// <param name="List">List of PDF document properties..</param>
         public DocumentProperties(List<Link> Links = default(List<Link>), List<DocumentProperty> List = default(List<DocumentProperty>))
         {
             this.Links = Links;
@@ -65,8 +65,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Gets or Sets List
+        /// List of PDF document properties.
         /// </summary>
+        /// <value>List of PDF document properties.</value>
         [DataMember(Name="List", EmitDefaultValue=false)]
         public List<DocumentProperty> List { get; set; }
 

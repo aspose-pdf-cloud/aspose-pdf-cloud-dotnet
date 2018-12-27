@@ -76,7 +76,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 new StrikeOutAnnotation()
                 {
                     Name = "Test StrikeOut Annotation",
-                    Rect = new RectanglePdf(100, 100, 200, 200),
+                    Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     RichText = "Rich Text",
@@ -120,7 +120,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             StrikeOutAnnotation annotation = new StrikeOutAnnotation()
             {
                 Name = "Test StrikeOut Annotation Updated",
-                Rect = new RectanglePdf(101, 101, 201, 201),
+                Rect = new Rectangle(101, 101, 201, 201),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 RichText = "Rich Text Updated",

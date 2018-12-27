@@ -50,6 +50,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="StrikeOutAnnotation" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
+        /// <param name="Color">Color of the annotation..</param>
         /// <param name="Contents">Get the annotation content..</param>
         /// <param name="Modified">The date and time when the annotation was last modified..</param>
         /// <param name="Id">Gets ID of the annotation..</param>
@@ -64,11 +65,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Subject">Get the annotation subject..</param>
         /// <param name="Title">Get the annotation title..</param>
         /// <param name="RichText">Get the annotation RichText..</param>
-        /// <param name="Color">Color of the annotation..</param>
         /// <param name="QuadPoints">Gets or sets an array of points specifying the coordinates of n quadrilaterals. Each quadrilateral encompasses a word or group of contiguous words in the text underlying the annotation..</param>
-        public StrikeOutAnnotation(List<Link> Links = default(List<Link>), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), Color Color = default(Color), List<Point> QuadPoints = default(List<Point>))
+        public StrikeOutAnnotation(List<Link> Links = default(List<Link>), Color Color = default(Color), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), Rectangle Rect = default(Rectangle), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), List<Point> QuadPoints = default(List<Point>))
         {
             this.Links = Links;
+            this.Color = Color;
             this.Contents = Contents;
             this.Modified = Modified;
             this.Id = Id;
@@ -83,7 +84,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Subject = Subject;
             this.Title = Title;
             this.RichText = RichText;
-            this.Color = Color;
             this.QuadPoints = QuadPoints;
         }
         
@@ -93,6 +93,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <value>Link to the document.</value>
         [DataMember(Name="Links", EmitDefaultValue=false)]
         public List<Link> Links { get; set; }
+
+        /// <summary>
+        /// Color of the annotation.
+        /// </summary>
+        /// <value>Color of the annotation.</value>
+        [DataMember(Name="Color", EmitDefaultValue=false)]
+        public Color Color { get; set; }
 
         /// <summary>
         /// Get the annotation content.
@@ -134,7 +141,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Gets Rect of the annotation.</value>
         [DataMember(Name="Rect", EmitDefaultValue=false)]
-        public RectanglePdf Rect { get; set; }
+        public Rectangle Rect { get; set; }
 
         /// <summary>
         /// Gets PageIndex of the annotation.
@@ -193,13 +200,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string RichText { get; set; }
 
         /// <summary>
-        /// Color of the annotation.
-        /// </summary>
-        /// <value>Color of the annotation.</value>
-        [DataMember(Name="Color", EmitDefaultValue=false)]
-        public Color Color { get; set; }
-
-        /// <summary>
         /// Gets or sets an array of points specifying the coordinates of n quadrilaterals. Each quadrilateral encompasses a word or group of contiguous words in the text underlying the annotation.
         /// </summary>
         /// <value>Gets or sets an array of points specifying the coordinates of n quadrilaterals. Each quadrilateral encompasses a word or group of contiguous words in the text underlying the annotation.</value>
@@ -215,6 +215,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class StrikeOutAnnotation {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("  Color: ").Append(Color).Append("\n");
             sb.Append("  Contents: ").Append(Contents).Append("\n");
             sb.Append("  Modified: ").Append(Modified).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -229,7 +230,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  RichText: ").Append(RichText).Append("\n");
-            sb.Append("  Color: ").Append(Color).Append("\n");
             sb.Append("  QuadPoints: ").Append(QuadPoints).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -271,6 +271,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Links == other.Links ||
                     this.Links != null &&
                     this.Links.SequenceEqual(other.Links)
+                ) && 
+                (
+                    this.Color == other.Color ||
+                    this.Color != null &&
+                    this.Color.Equals(other.Color)
                 ) && 
                 (
                     this.Contents == other.Contents ||
@@ -343,11 +348,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.RichText.Equals(other.RichText)
                 ) && 
                 (
-                    this.Color == other.Color ||
-                    this.Color != null &&
-                    this.Color.Equals(other.Color)
-                ) && 
-                (
                     this.QuadPoints == other.QuadPoints ||
                     this.QuadPoints != null &&
                     this.QuadPoints.SequenceEqual(other.QuadPoints)
@@ -367,6 +367,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Links != null)
                     hash = hash * 59 + this.Links.GetHashCode();
+                if (this.Color != null)
+                    hash = hash * 59 + this.Color.GetHashCode();
                 if (this.Contents != null)
                     hash = hash * 59 + this.Contents.GetHashCode();
                 if (this.Modified != null)
@@ -395,8 +397,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Title.GetHashCode();
                 if (this.RichText != null)
                     hash = hash * 59 + this.RichText.GetHashCode();
-                if (this.Color != null)
-                    hash = hash * 59 + this.Color.GetHashCode();
                 if (this.QuadPoints != null)
                     hash = hash * 59 + this.QuadPoints.GetHashCode();
                 return hash;

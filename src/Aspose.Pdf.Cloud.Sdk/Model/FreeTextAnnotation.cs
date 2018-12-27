@@ -50,6 +50,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="FreeTextAnnotation" /> class.
         /// </summary>
         /// <param name="Links">Link to the document..</param>
+        /// <param name="Color">Color of the annotation..</param>
         /// <param name="Contents">Get the annotation content..</param>
         /// <param name="Modified">The date and time when the annotation was last modified..</param>
         /// <param name="Id">Gets ID of the annotation..</param>
@@ -68,9 +69,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Intent">Gets or sets the intent of the free text annotation..</param>
         /// <param name="Rotate">Angle of annotation rotation..</param>
         /// <param name="TextStyle">Text style of the annotation..</param>
-        public FreeTextAnnotation(List<Link> Links = default(List<Link>), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), RectanglePdf Rect = default(RectanglePdf), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), Justification Justification = default(Justification), FreeTextIntent Intent = default(FreeTextIntent), Rotation Rotate = default(Rotation), TextStyle TextStyle = default(TextStyle))
+        public FreeTextAnnotation(List<Link> Links = default(List<Link>), Color Color = default(Color), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), Rectangle Rect = default(Rectangle), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), Justification Justification = default(Justification), FreeTextIntent Intent = default(FreeTextIntent), Rotation Rotate = default(Rotation), TextStyle TextStyle = default(TextStyle))
         {
             this.Links = Links;
+            this.Color = Color;
             this.Contents = Contents;
             this.Modified = Modified;
             this.Id = Id;
@@ -97,6 +99,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <value>Link to the document.</value>
         [DataMember(Name="Links", EmitDefaultValue=false)]
         public List<Link> Links { get; set; }
+
+        /// <summary>
+        /// Color of the annotation.
+        /// </summary>
+        /// <value>Color of the annotation.</value>
+        [DataMember(Name="Color", EmitDefaultValue=false)]
+        public Color Color { get; set; }
 
         /// <summary>
         /// Get the annotation content.
@@ -138,7 +147,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <value>Gets Rect of the annotation.</value>
         [DataMember(Name="Rect", EmitDefaultValue=false)]
-        public RectanglePdf Rect { get; set; }
+        public Rectangle Rect { get; set; }
 
         /// <summary>
         /// Gets PageIndex of the annotation.
@@ -233,6 +242,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             var sb = new StringBuilder();
             sb.Append("class FreeTextAnnotation {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
+            sb.Append("  Color: ").Append(Color).Append("\n");
             sb.Append("  Contents: ").Append(Contents).Append("\n");
             sb.Append("  Modified: ").Append(Modified).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -291,6 +301,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Links == other.Links ||
                     this.Links != null &&
                     this.Links.SequenceEqual(other.Links)
+                ) && 
+                (
+                    this.Color == other.Color ||
+                    this.Color != null &&
+                    this.Color.Equals(other.Color)
                 ) && 
                 (
                     this.Contents == other.Contents ||
@@ -397,6 +412,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Links != null)
                     hash = hash * 59 + this.Links.GetHashCode();
+                if (this.Color != null)
+                    hash = hash * 59 + this.Color.GetHashCode();
                 if (this.Contents != null)
                     hash = hash * 59 + this.Contents.GetHashCode();
                 if (this.Modified != null)

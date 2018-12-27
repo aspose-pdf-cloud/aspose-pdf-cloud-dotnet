@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="RectanglePdf.cs">
+// <copyright company="Aspose" file="Rectangle.cs">
 //   Copyright (c) 2018 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -44,26 +44,26 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
     /// Represents rectangle DTO.
     /// </summary>
     [DataContract]
-    public partial class RectanglePdf :  IEquatable<RectanglePdf>, IValidatableObject
+    public partial class Rectangle :  IEquatable<Rectangle>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RectanglePdf" /> class.
+        /// Initializes a new instance of the <see cref="Rectangle" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RectanglePdf() { }
+        protected Rectangle() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RectanglePdf" /> class.
+        /// Initializes a new instance of the <see cref="Rectangle" /> class.
         /// </summary>
-        /// <param name="LLX">LLX (required).</param>
-        /// <param name="LLY">LLY (required).</param>
-        /// <param name="URX">URX (required).</param>
-        /// <param name="URY">URY (required).</param>
-        public RectanglePdf(double? LLX = default(double?), double? LLY = default(double?), double? URX = default(double?), double? URY = default(double?))
+        /// <param name="LLX">X-coordinate of lower - left corner. (required).</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner. (required).</param>
+        /// <param name="URX">X - coordinate of upper-right corner. (required).</param>
+        /// <param name="URY">Y - coordinate of upper-right corner. (required).</param>
+        public Rectangle(double? LLX = default(double?), double? LLY = default(double?), double? URX = default(double?), double? URY = default(double?))
         {
             // to ensure "LLX" is required (not null)
             if (LLX == null)
             {
-                throw new InvalidDataException("LLX is a required property for RectanglePdf and cannot be null");
+                throw new InvalidDataException("LLX is a required property for Rectangle and cannot be null");
             }
             else
             {
@@ -72,7 +72,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             // to ensure "LLY" is required (not null)
             if (LLY == null)
             {
-                throw new InvalidDataException("LLY is a required property for RectanglePdf and cannot be null");
+                throw new InvalidDataException("LLY is a required property for Rectangle and cannot be null");
             }
             else
             {
@@ -81,7 +81,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             // to ensure "URX" is required (not null)
             if (URX == null)
             {
-                throw new InvalidDataException("URX is a required property for RectanglePdf and cannot be null");
+                throw new InvalidDataException("URX is a required property for Rectangle and cannot be null");
             }
             else
             {
@@ -90,7 +90,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             // to ensure "URY" is required (not null)
             if (URY == null)
             {
-                throw new InvalidDataException("URY is a required property for RectanglePdf and cannot be null");
+                throw new InvalidDataException("URY is a required property for Rectangle and cannot be null");
             }
             else
             {
@@ -99,26 +99,30 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         }
         
         /// <summary>
-        /// Gets or Sets LLX
+        /// X-coordinate of lower - left corner.
         /// </summary>
+        /// <value>X-coordinate of lower - left corner.</value>
         [DataMember(Name="LLX", EmitDefaultValue=false)]
         public double? LLX { get; set; }
 
         /// <summary>
-        /// Gets or Sets LLY
+        /// Y - coordinate of lower-left corner.
         /// </summary>
+        /// <value>Y - coordinate of lower-left corner.</value>
         [DataMember(Name="LLY", EmitDefaultValue=false)]
         public double? LLY { get; set; }
 
         /// <summary>
-        /// Gets or Sets URX
+        /// X - coordinate of upper-right corner.
         /// </summary>
+        /// <value>X - coordinate of upper-right corner.</value>
         [DataMember(Name="URX", EmitDefaultValue=false)]
         public double? URX { get; set; }
 
         /// <summary>
-        /// Gets or Sets URY
+        /// Y - coordinate of upper-right corner.
         /// </summary>
+        /// <value>Y - coordinate of upper-right corner.</value>
         [DataMember(Name="URY", EmitDefaultValue=false)]
         public double? URY { get; set; }
 
@@ -129,7 +133,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RectanglePdf {\n");
+            sb.Append("class Rectangle {\n");
             sb.Append("  LLX: ").Append(LLX).Append("\n");
             sb.Append("  LLY: ").Append(LLY).Append("\n");
             sb.Append("  URX: ").Append(URX).Append("\n");
@@ -155,15 +159,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as RectanglePdf);
+            return this.Equals(obj as Rectangle);
         }
 
         /// <summary>
-        /// Returns true if RectanglePdf instances are equal
+        /// Returns true if Rectangle instances are equal
         /// </summary>
-        /// <param name="other">Instance of RectanglePdf to be compared</param>
+        /// <param name="other">Instance of Rectangle to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RectanglePdf other)
+        public bool Equals(Rectangle other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
