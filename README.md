@@ -1,7 +1,7 @@
 # Aspose.Pdf for Cloud
 
 - API version: 2.0
-- SDK version: 18.11.0
+- SDK version: 18.12.0
 
 [Aspose.Pdf for Cloud](https://products.aspose.cloud/pdf) is a true REST API that enables you to perform a wide range of document processing operations including creation, manipulation, conversion and rendering of Pdf documents in the cloud.
 
@@ -55,6 +55,8 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**DeleteDocumentAnnotations**](docs/PdfApi.md#deletedocumentannotations) | **DELETE** /pdf/\{name}/annotations | Delete all annotations from the document
 *PdfApi* | [**DeleteDocumentLinkAnnotations**](docs/PdfApi.md#deletedocumentlinkannotations) | **DELETE** /pdf/\{name}/links | Delete all link annotations from the document
 *PdfApi* | [**DeleteField**](docs/PdfApi.md#deletefield) | **DELETE** /pdf/\{name}/fields/\{fieldName} | Delete document field by name.
+*PdfApi* | [**DeleteFile**](docs/PdfApi.md#deletefile) | **DELETE** /storage/file | Remove a specific file 
+*PdfApi* | [**DeleteFolder**](docs/PdfApi.md#deletefolder) | **DELETE** /storage/folder | Remove a specific folder 
 *PdfApi* | [**DeleteImage**](docs/PdfApi.md#deleteimage) | **DELETE** /pdf/\{name}/images/\{imageId} | Delete image from document page.
 *PdfApi* | [**DeleteLinkAnnotation**](docs/PdfApi.md#deletelinkannotation) | **DELETE** /pdf/\{name}/links/\{linkId} | Delete document page link annotation by ID
 *PdfApi* | [**DeletePage**](docs/PdfApi.md#deletepage) | **DELETE** /pdf/\{name}/pages/\{pageNumber} | Delete document page by its number.
@@ -64,6 +66,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**DeleteProperty**](docs/PdfApi.md#deleteproperty) | **DELETE** /pdf/\{name}/documentproperties/\{propertyName} | Delete document property.
 *PdfApi* | [**GetCaretAnnotation**](docs/PdfApi.md#getcaretannotation) | **GET** /pdf/\{name}/annotations/caret/\{annotationId} | Read document page caret annotation by ID.
 *PdfApi* | [**GetCircleAnnotation**](docs/PdfApi.md#getcircleannotation) | **GET** /pdf/\{name}/annotations/circle/\{annotationId} | Read document page circle annotation by ID.
+*PdfApi* | [**GetDiscUsage**](docs/PdfApi.md#getdiscusage) | **GET** /storage/disc | Check the disk usage of the current account 
 *PdfApi* | [**GetDocument**](docs/PdfApi.md#getdocument) | **GET** /pdf/\{name} | Read common document info.
 *PdfApi* | [**GetDocumentAnnotations**](docs/PdfApi.md#getdocumentannotations) | **GET** /pdf/\{name}/annotations | Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
 *PdfApi* | [**GetDocumentAttachmentByIndex**](docs/PdfApi.md#getdocumentattachmentbyindex) | **GET** /pdf/\{name}/attachments/\{attachmentIndex} | Read document attachment info by its index.
@@ -101,9 +104,12 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**GetImageExtractAsTiff**](docs/PdfApi.md#getimageextractastiff) | **GET** /pdf/\{name}/images/\{imageId}/extract/tiff | Extract document image in TIFF format
 *PdfApi* | [**GetImages**](docs/PdfApi.md#getimages) | **GET** /pdf/\{name}/pages/\{pageNumber}/images | Read document images.
 *PdfApi* | [**GetInkAnnotation**](docs/PdfApi.md#getinkannotation) | **GET** /pdf/\{name}/annotations/ink/\{annotationId} | Read document page ink annotation by ID.
+*PdfApi* | [**GetIsExist**](docs/PdfApi.md#getisexist) | **GET** /storage/exist | Check if a specific file or folder exists
+*PdfApi* | [**GetIsStorageExist**](docs/PdfApi.md#getisstorageexist) | **GET** /storage/\{name}/exist | Check if storage exists 
 *PdfApi* | [**GetLaTeXInStorageToPdf**](docs/PdfApi.md#getlatexinstoragetopdf) | **GET** /pdf/create/latex | Convert LaTeX file (located on storage) to PDF format and return resulting file in response. 
 *PdfApi* | [**GetLineAnnotation**](docs/PdfApi.md#getlineannotation) | **GET** /pdf/\{name}/annotations/line/\{annotationId} | Read document page line annotation by ID.
 *PdfApi* | [**GetLinkAnnotation**](docs/PdfApi.md#getlinkannotation) | **GET** /pdf/\{name}/links/\{linkId} | Read document link annotation by ID.
+*PdfApi* | [**GetListFileVersions**](docs/PdfApi.md#getlistfileversions) | **GET** /storage/version | Get the file's versions list 
 *PdfApi* | [**GetListFiles**](docs/PdfApi.md#getlistfiles) | **GET** /storage/folder | Get the file listing of a specific folder 
 *PdfApi* | [**GetMhtInStorageToPdf**](docs/PdfApi.md#getmhtinstoragetopdf) | **GET** /pdf/create/mht | Convert MHT file (located on storage) to PDF format and return resulting file in response. 
 *PdfApi* | [**GetPage**](docs/PdfApi.md#getpage) | **GET** /pdf/\{name}/pages/\{pageNumber} | Read document page info.
@@ -168,6 +174,8 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**PostDocumentTextReplace**](docs/PdfApi.md#postdocumenttextreplace) | **POST** /pdf/\{name}/text/replace | Document's replace text method.
 *PdfApi* | [**PostFlattenDocument**](docs/PdfApi.md#postflattendocument) | **POST** /pdf/\{name}/flatten | Removes all fields from the document and place their values instead.
 *PdfApi* | [**PostInsertImage**](docs/PdfApi.md#postinsertimage) | **POST** /pdf/\{name}/pages/\{pageNumber}/images | Insert image to document page.
+*PdfApi* | [**PostMoveFile**](docs/PdfApi.md#postmovefile) | **POST** /storage/file | Move a specific file
+*PdfApi* | [**PostMoveFolder**](docs/PdfApi.md#postmovefolder) | **POST** /storage/folder | Move a specific folder 
 *PdfApi* | [**PostMovePage**](docs/PdfApi.md#postmovepage) | **POST** /pdf/\{name}/pages/\{pageNumber}/movePage | Move page to new position.
 *PdfApi* | [**PostOptimizeDocument**](docs/PdfApi.md#postoptimizedocument) | **POST** /pdf/\{name}/optimize | Optimize document.
 *PdfApi* | [**PostPageCaretAnnotations**](docs/PdfApi.md#postpagecaretannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/caret | Add document page caret annotations.
@@ -195,6 +203,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**PutCircleAnnotation**](docs/PdfApi.md#putcircleannotation) | **PUT** /pdf/\{name}/annotations/circle/\{annotationId} | Replace document circle annotation
 *PdfApi* | [**PutCreate**](docs/PdfApi.md#putcreate) | **PUT** /storage/file | Upload a specific file 
 *PdfApi* | [**PutCreateDocument**](docs/PdfApi.md#putcreatedocument) | **PUT** /pdf/\{name} | Create empty document.
+*PdfApi* | [**PutCreateFolder**](docs/PdfApi.md#putcreatefolder) | **PUT** /storage/folder | Create the folder 
 *PdfApi* | [**PutEpubInStorageToPdf**](docs/PdfApi.md#putepubinstoragetopdf) | **PUT** /pdf/\{name}/create/epub | Convert EPUB file (located on storage) to PDF format and upload resulting file to storage. 
 *PdfApi* | [**PutFieldsFlatten**](docs/PdfApi.md#putfieldsflatten) | **PUT** /pdf/\{name}/fields/flatten | Flatten form fields in document.
 *PdfApi* | [**PutFreeTextAnnotation**](docs/PdfApi.md#putfreetextannotation) | **PUT** /pdf/\{name}/annotations/freetext/\{annotationId} | Replace document free text annotation
@@ -286,12 +295,14 @@ Class | Method | HTTP request | Description
  - [Model.Color](docs/Color.md)
  - [Model.ColorDepth](docs/ColorDepth.md)
  - [Model.CompressionType](docs/CompressionType.md)
+ - [Model.DiscUsage](docs/DiscUsage.md)
  - [Model.DocFormat](docs/DocFormat.md)
  - [Model.DocRecognitionMode](docs/DocRecognitionMode.md)
  - [Model.DocumentPrivilege](docs/DocumentPrivilege.md)
  - [Model.EpubRecognitionMode](docs/EpubRecognitionMode.md)
  - [Model.FieldType](docs/FieldType.md)
  - [Model.File](docs/File.md)
+ - [Model.FileExist](docs/FileExist.md)
  - [Model.FontEncodingRules](docs/FontEncodingRules.md)
  - [Model.FontSavingModes](docs/FontSavingModes.md)
  - [Model.FontStyles](docs/FontStyles.md)
@@ -355,6 +366,7 @@ Class | Method | HTTP request | Description
  - [Model.CircleAnnotationResponse](docs/CircleAnnotationResponse.md)
  - [Model.CircleAnnotations](docs/CircleAnnotations.md)
  - [Model.CircleAnnotationsResponse](docs/CircleAnnotationsResponse.md)
+ - [Model.DiscUsageResponse](docs/DiscUsageResponse.md)
  - [Model.Document](docs/Document.md)
  - [Model.DocumentPageResponse](docs/DocumentPageResponse.md)
  - [Model.DocumentPagesResponse](docs/DocumentPagesResponse.md)
@@ -367,6 +379,9 @@ Class | Method | HTTP request | Description
  - [Model.FieldResponse](docs/FieldResponse.md)
  - [Model.Fields](docs/Fields.md)
  - [Model.FieldsResponse](docs/FieldsResponse.md)
+ - [Model.FileExistResponse](docs/FileExistResponse.md)
+ - [Model.FileVersion](docs/FileVersion.md)
+ - [Model.FileVersionsResponse](docs/FileVersionsResponse.md)
  - [Model.FilesResponse](docs/FilesResponse.md)
  - [Model.FreeTextAnnotationResponse](docs/FreeTextAnnotationResponse.md)
  - [Model.FreeTextAnnotations](docs/FreeTextAnnotations.md)
@@ -408,6 +423,7 @@ Class | Method | HTTP request | Description
  - [Model.SquigglyAnnotationResponse](docs/SquigglyAnnotationResponse.md)
  - [Model.SquigglyAnnotations](docs/SquigglyAnnotations.md)
  - [Model.SquigglyAnnotationsResponse](docs/SquigglyAnnotationsResponse.md)
+ - [Model.StorageExistResponse](docs/StorageExistResponse.md)
  - [Model.StrikeOutAnnotationResponse](docs/StrikeOutAnnotationResponse.md)
  - [Model.StrikeOutAnnotations](docs/StrikeOutAnnotations.md)
  - [Model.StrikeOutAnnotationsResponse](docs/StrikeOutAnnotationsResponse.md)

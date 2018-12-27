@@ -64,6 +64,8 @@
     <Compile Include="Model\ColorDepth.cs" />
     <Compile Include="Model\CommonFigureAnnotation.cs" />
     <Compile Include="Model\CompressionType.cs" />
+    <Compile Include="Model\DiscUsage.cs" />
+    <Compile Include="Model\DiscUsageResponse.cs" />
     <Compile Include="Model\DocFormat.cs" />
     <Compile Include="Model\DocRecognitionMode.cs" />
     <Compile Include="Model\Document.cs" />
@@ -82,7 +84,11 @@
     <Compile Include="Model\FieldsResponse.cs" />
     <Compile Include="Model\FieldType.cs" />
     <Compile Include="Model\File.cs" />
+    <Compile Include="Model\FileExist.cs" />
+    <Compile Include="Model\FileExistResponse.cs" />
     <Compile Include="Model\FilesResponse.cs" />
+    <Compile Include="Model\FileVersion.cs" />
+    <Compile Include="Model\FileVersionsResponse.cs" />
     <Compile Include="Model\FontEncodingRules.cs" />
     <Compile Include="Model\FontSavingModes.cs" />
     <Compile Include="Model\FontStyles.cs" />
@@ -153,7 +159,7 @@
     <Compile Include="Model\PopupAnnotationsResponse.cs" />
     <Compile Include="Model\PopupAnnotationWithParent.cs" />
     <Compile Include="Model\RasterImagesSavingModes.cs" />
-    <Compile Include="Model\RectanglePdf.cs" />
+    <Compile Include="Model\Rectangle.cs" />
     <Compile Include="Model\Rotation.cs" />
     <Compile Include="Model\Segment.cs" />
     <Compile Include="Model\ShapeType.cs" />
@@ -173,6 +179,7 @@
     <Compile Include="Model\SquigglyAnnotationsResponse.cs" />
     <Compile Include="Model\Stamp.cs" />
     <Compile Include="Model\StampType.cs" />
+    <Compile Include="Model\StorageExistResponse.cs" />
     <Compile Include="Model\StrikeOutAnnotation.cs" />
     <Compile Include="Model\StrikeOutAnnotationResponse.cs" />
     <Compile Include="Model\StrikeOutAnnotations.cs" />

@@ -8,6 +8,8 @@ Method | HTTP request | Description
 [**DeleteDocumentAnnotations**](PdfApi.md#deletedocumentannotations) | **DELETE** /pdf/\{name}/annotations | Delete all annotations from the document
 [**DeleteDocumentLinkAnnotations**](PdfApi.md#deletedocumentlinkannotations) | **DELETE** /pdf/\{name}/links | Delete all link annotations from the document
 [**DeleteField**](PdfApi.md#deletefield) | **DELETE** /pdf/\{name}/fields/\{fieldName} | Delete document field by name.
+[**DeleteFile**](PdfApi.md#deletefile) | **DELETE** /storage/file | Remove a specific file 
+[**DeleteFolder**](PdfApi.md#deletefolder) | **DELETE** /storage/folder | Remove a specific folder 
 [**DeleteImage**](PdfApi.md#deleteimage) | **DELETE** /pdf/\{name}/images/\{imageId} | Delete image from document page.
 [**DeleteLinkAnnotation**](PdfApi.md#deletelinkannotation) | **DELETE** /pdf/\{name}/links/\{linkId} | Delete document page link annotation by ID
 [**DeletePage**](PdfApi.md#deletepage) | **DELETE** /pdf/\{name}/pages/\{pageNumber} | Delete document page by its number.
@@ -17,6 +19,7 @@ Method | HTTP request | Description
 [**DeleteProperty**](PdfApi.md#deleteproperty) | **DELETE** /pdf/\{name}/documentproperties/\{propertyName} | Delete document property.
 [**GetCaretAnnotation**](PdfApi.md#getcaretannotation) | **GET** /pdf/\{name}/annotations/caret/\{annotationId} | Read document page caret annotation by ID.
 [**GetCircleAnnotation**](PdfApi.md#getcircleannotation) | **GET** /pdf/\{name}/annotations/circle/\{annotationId} | Read document page circle annotation by ID.
+[**GetDiscUsage**](PdfApi.md#getdiscusage) | **GET** /storage/disc | Check the disk usage of the current account 
 [**GetDocument**](PdfApi.md#getdocument) | **GET** /pdf/\{name} | Read common document info.
 [**GetDocumentAnnotations**](PdfApi.md#getdocumentannotations) | **GET** /pdf/\{name}/annotations | Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
 [**GetDocumentAttachmentByIndex**](PdfApi.md#getdocumentattachmentbyindex) | **GET** /pdf/\{name}/attachments/\{attachmentIndex} | Read document attachment info by its index.
@@ -54,9 +57,12 @@ Method | HTTP request | Description
 [**GetImageExtractAsTiff**](PdfApi.md#getimageextractastiff) | **GET** /pdf/\{name}/images/\{imageId}/extract/tiff | Extract document image in TIFF format
 [**GetImages**](PdfApi.md#getimages) | **GET** /pdf/\{name}/pages/\{pageNumber}/images | Read document images.
 [**GetInkAnnotation**](PdfApi.md#getinkannotation) | **GET** /pdf/\{name}/annotations/ink/\{annotationId} | Read document page ink annotation by ID.
+[**GetIsExist**](PdfApi.md#getisexist) | **GET** /storage/exist | Check if a specific file or folder exists
+[**GetIsStorageExist**](PdfApi.md#getisstorageexist) | **GET** /storage/\{name}/exist | Check if storage exists 
 [**GetLaTeXInStorageToPdf**](PdfApi.md#getlatexinstoragetopdf) | **GET** /pdf/create/latex | Convert LaTeX file (located on storage) to PDF format and return resulting file in response. 
 [**GetLineAnnotation**](PdfApi.md#getlineannotation) | **GET** /pdf/\{name}/annotations/line/\{annotationId} | Read document page line annotation by ID.
 [**GetLinkAnnotation**](PdfApi.md#getlinkannotation) | **GET** /pdf/\{name}/links/\{linkId} | Read document link annotation by ID.
+[**GetListFileVersions**](PdfApi.md#getlistfileversions) | **GET** /storage/version | Get the file&#39;s versions list 
 [**GetListFiles**](PdfApi.md#getlistfiles) | **GET** /storage/folder | Get the file listing of a specific folder 
 [**GetMhtInStorageToPdf**](PdfApi.md#getmhtinstoragetopdf) | **GET** /pdf/create/mht | Convert MHT file (located on storage) to PDF format and return resulting file in response. 
 [**GetPage**](PdfApi.md#getpage) | **GET** /pdf/\{name}/pages/\{pageNumber} | Read document page info.
@@ -121,6 +127,8 @@ Method | HTTP request | Description
 [**PostDocumentTextReplace**](PdfApi.md#postdocumenttextreplace) | **POST** /pdf/\{name}/text/replace | Document&#39;s replace text method.
 [**PostFlattenDocument**](PdfApi.md#postflattendocument) | **POST** /pdf/\{name}/flatten | Removes all fields from the document and place their values instead.
 [**PostInsertImage**](PdfApi.md#postinsertimage) | **POST** /pdf/\{name}/pages/\{pageNumber}/images | Insert image to document page.
+[**PostMoveFile**](PdfApi.md#postmovefile) | **POST** /storage/file | Move a specific file
+[**PostMoveFolder**](PdfApi.md#postmovefolder) | **POST** /storage/folder | Move a specific folder 
 [**PostMovePage**](PdfApi.md#postmovepage) | **POST** /pdf/\{name}/pages/\{pageNumber}/movePage | Move page to new position.
 [**PostOptimizeDocument**](PdfApi.md#postoptimizedocument) | **POST** /pdf/\{name}/optimize | Optimize document.
 [**PostPageCaretAnnotations**](PdfApi.md#postpagecaretannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/caret | Add document page caret annotations.
@@ -148,6 +156,7 @@ Method | HTTP request | Description
 [**PutCircleAnnotation**](PdfApi.md#putcircleannotation) | **PUT** /pdf/\{name}/annotations/circle/\{annotationId} | Replace document circle annotation
 [**PutCreate**](PdfApi.md#putcreate) | **PUT** /storage/file | Upload a specific file 
 [**PutCreateDocument**](PdfApi.md#putcreatedocument) | **PUT** /pdf/\{name} | Create empty document.
+[**PutCreateFolder**](PdfApi.md#putcreatefolder) | **PUT** /storage/folder | Create the folder 
 [**PutEpubInStorageToPdf**](PdfApi.md#putepubinstoragetopdf) | **PUT** /pdf/\{name}/create/epub | Convert EPUB file (located on storage) to PDF format and upload resulting file to storage. 
 [**PutFieldsFlatten**](PdfApi.md#putfieldsflatten) | **PUT** /pdf/\{name}/fields/flatten | Flatten form fields in document.
 [**PutFreeTextAnnotation**](PdfApi.md#putfreetextannotation) | **PUT** /pdf/\{name}/annotations/freetext/\{annotationId} | Replace document free text annotation
@@ -318,6 +327,58 @@ Name | Type | Description  | Notes
  **fieldName** | **string**| The field name/ | 
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletefile"></a>
+# **DeleteFile**
+> AsposeResponse DeleteFile (string path, string versionId = null, string storage = null)
+
+Remove a specific file 
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **path** | **string**| Path of the file including file name and extension e.g. /Folder1/file.ext | 
+ **versionId** | **string**| File&#39;s version | [optional] 
+ **storage** | **string**| User&#39;s storage name | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletefolder"></a>
+# **DeleteFolder**
+> AsposeResponse DeleteFolder (string path, string storage = null, bool? recursive = null)
+
+Remove a specific folder 
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **path** | **string**| Folder path e.g. /Folder1 | 
+ **storage** | **string**| User&#39;s storage name | [optional] 
+ **recursive** | **bool?**| Remove recursivelly inner folder/files. If false and folder contains data than exception is raised. | [optional] [default to false]
 
 ### Return type
 
@@ -564,6 +625,30 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CircleAnnotationResponse**](CircleAnnotationResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdiscusage"></a>
+# **GetDiscUsage**
+> DiscUsageResponse GetDiscUsage (string storage = null)
+
+Check the disk usage of the current account 
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **storage** | **string**| User&#39;s storage name | [optional] 
+
+### Return type
+
+[**DiscUsageResponse**](DiscUsageResponse.md)
 
 ### HTTP request headers
 
@@ -1563,6 +1648,56 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getisexist"></a>
+# **GetIsExist**
+> FileExistResponse GetIsExist (string path, string versionId = null, string storage = null)
+
+Check if a specific file or folder exists
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **path** | **string**| File or folder path e.g. /file.ext or /Folder1 | 
+ **versionId** | **string**| File&#39;s version | [optional] 
+ **storage** | **string**| User&#39;s storage name | [optional] 
+
+### Return type
+
+[**FileExistResponse**](FileExistResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getisstorageexist"></a>
+# **GetIsStorageExist**
+> StorageExistResponse GetIsStorageExist (string name)
+
+Check if storage exists 
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| Storage name | 
+
+### Return type
+
+[**StorageExistResponse**](StorageExistResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getlatexinstoragetopdf"></a>
 # **GetLaTeXInStorageToPdf**
 > System.IO.Stream GetLaTeXInStorageToPdf (string srcPath, string storage = null)
@@ -1634,6 +1769,31 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LinkAnnotationResponse**](LinkAnnotationResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getlistfileversions"></a>
+# **GetListFileVersions**
+> FileVersionsResponse GetListFileVersions (string path, string storage = null)
+
+Get the file's versions list 
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **path** | **string**| File path e.g. /file.ext or /Folder1/file.ext | 
+ **storage** | **string**| User&#39;s storage name | [optional] 
+
+### Return type
+
+[**FileVersionsResponse**](FileVersionsResponse.md)
 
 ### HTTP request headers
 
@@ -3452,6 +3612,61 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="postmovefile"></a>
+# **PostMoveFile**
+> AsposeResponse PostMoveFile (string src, string dest, string versionId = null, string storage = null, string destStorage = null)
+
+Move a specific file
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **src** | **string**| Source file path e.g. /fileSource.ext | 
+ **dest** | **string**| Destination file path e.g. /fileDestination.ext | 
+ **versionId** | **string**| Source file&#39;s version, | [optional] 
+ **storage** | **string**| User&#39;s source storage name | [optional] 
+ **destStorage** | **string**| User&#39;s destination storage name | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postmovefolder"></a>
+# **PostMoveFolder**
+> AsposeResponse PostMoveFolder (string src, string dest, string storage = null, string destStorage = null)
+
+Move a specific folder 
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **src** | **string**| Source folder path e.g. /Folder1 | 
+ **dest** | **string**| Destination folder path e.g. /Folder2 | 
+ **storage** | **string**| User&#39;s source storage name | [optional] 
+ **destStorage** | **string**| User&#39;s destination storage name | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="postmovepage"></a>
 # **PostMovePage**
 > AsposeResponse PostMovePage (string name, int? pageNumber, int? newIndex, string storage = null, string folder = null)
@@ -4194,6 +4409,32 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DocumentResponse**](DocumentResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putcreatefolder"></a>
+# **PutCreateFolder**
+> AsposeResponse PutCreateFolder (string path, string storage = null, string destStorage = null)
+
+Create the folder 
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **path** | **string**| Target folder&#39;s path e.g. Folder1/Folder2/. The folders will be created recursively | 
+ **storage** | **string**| User&#39;s source storage name | [optional] 
+ **destStorage** | **string**| User&#39;s destination storage name | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
 
 ### HTTP request headers
 
