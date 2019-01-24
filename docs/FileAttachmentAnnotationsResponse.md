@@ -1,0 +1,13 @@
+﻿# Aspose.Pdf.Cloud.Sdk.Model.FileAttachmentAnnotationsResponse
+Represents response containing multiple FileAttachment annotation objects
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Code** | **int?** | Response status code. | 
+**Status** | **string** | Response status. | [optional] 
+**Annotations** | [**FileAttachmentAnnotations**](FileAttachmentAnnotations.md) | Free text annotations object | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
