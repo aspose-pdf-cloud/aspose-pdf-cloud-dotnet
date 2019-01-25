@@ -44,6 +44,7 @@
     <Compile Include="ConvertToPdfTests.cs" />
     <Compile Include="DocumentTests.cs" />
     <Compile Include="FieldsTests.cs" />
+    <Compile Include="FileAttachmentAnnotationsTests.cs" />
     <Compile Include="FreeTextAnnotationsTests.cs" />
     <Compile Include="HighlightAnnotationsTests.cs" />
     <Compile Include="ImagesTests.cs" />
@@ -51,11 +52,14 @@
     <Compile Include="LineAnnotationsTests.cs" />
     <Compile Include="LinkAnnotationsTests.cs" />
     <Compile Include="MergeTests.cs" />
+    <Compile Include="MovieAnnotationsTests.cs" />
     <Compile Include="PageConvertToImageTests.cs" />
     <Compile Include="PolygonAnnotationsTests.cs" />
     <Compile Include="PolyLineAnnotationsTests.cs" />
     <Compile Include="PopupAnnotationsTests.cs" />
     <Compile Include="PrivilegesTests.cs" />
+    <Compile Include="RedactionAnnotationsTests.cs" />
+    <Compile Include="SoundAnnotationsTests.cs" />
     <Compile Include="SquareAnnotationsTests.cs" />
     <Compile Include="SquigglyAnnotationsTests.cs" />
     <Compile Include="StrikeOutAnnotationsTests.cs" />
