@@ -161,7 +161,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         }
 
         /// <summary>
-        /// Test PutFieldsFlatten
+        /// Test PostFlattenDocument
         /// </summary>
         [Test]
         public void PostFlattenDocumentTest()
