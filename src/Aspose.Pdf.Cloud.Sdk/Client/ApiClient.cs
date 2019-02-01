@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="ApiClient.cs">
-//   Copyright (c) 2018 Aspose.PDF Cloud
+// <copyright company="Aspose" file=".cs">
+//   Copyright (c) 2019 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -22,6 +22,7 @@
 //  SOFTWARE.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
+
 
 using System;
 using System.Collections;
