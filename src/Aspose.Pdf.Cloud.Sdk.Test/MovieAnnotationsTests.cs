@@ -43,7 +43,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public override void SetUp()
         {
             base.SetUp();
-            //UploadFile(Name, Name);
+            UploadFile(Name, Name);
         }
 
         /// <summary>
@@ -113,13 +113,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(AttachmentFile, AttachmentFile);
             MovieAnnotation annotation = new MovieAnnotation()
             {
-                Name = "Updated Test Movie",
-                Rect = new Rectangle(101, 102, 203, 204),
+                Name = "Updated Test",
+                Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 ZIndex = 1,
                 FilePath = AttachmentFile,
-                Modified = "01/01/2018 01:02:03.000 AM"
+                Modified = "01/01/2018 00:00:00.000 AM"
             };
 
             var lineResponse = PdfApi.GetDocumentMovieAnnotations(Name, folder: TempFolder);
