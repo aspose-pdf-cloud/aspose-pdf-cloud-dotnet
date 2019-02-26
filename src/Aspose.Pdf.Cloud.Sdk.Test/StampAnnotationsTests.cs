@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="FileAttachmentAnnotationsTests.cs">
+// <copyright company="Aspose" file="StampAnnotationsTests.cs">
 //   Copyright (c) 2019 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -32,10 +32,10 @@ using NUnit.Framework;
 namespace Aspose.Pdf.Cloud.Sdk.Test
 {
     /// <summary>
-    ///  Class for testing FileAttachment Annotations Api
+    ///  Class for testing Stamp Annotations Api
     /// </summary>
     [TestFixture]
-    public class FileAttachmentAnnotationsTests : TestsBase
+    public class StampAnnotationsTests : TestsBase
     {
         private const string Name = "PdfWithAnnotations.pdf";
         private const int PageNumber = 2;
@@ -48,37 +48,37 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         }
 
         /// <summary>
-        /// Test GetDocumentFileAttachmentAnnotations
+        /// Test GetDocumentStampAnnotations
         /// </summary>
         [Test]
-        public void GetDocumentFileAttachmentAnnotationsTest()
+        public void GetDocumentStampAnnotationsTest()
         {
-            var response = PdfApi.GetDocumentFileAttachmentAnnotations(Name, folder: TempFolder);
+            var response = PdfApi.GetDocumentStampAnnotations(Name, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
-        /// Test GetPageFileAttachmentAnnotations
+        /// Test GetPageStampAnnotations
         /// </summary>
         [Test]
-        public void GetPageFileAttachmentAnnotationsTest()
+        public void GetPageStampAnnotationsTest()
         {
-            var response = PdfApi.GetPageFileAttachmentAnnotations(Name, PageNumber, folder: TempFolder);
+            var response = PdfApi.GetPageStampAnnotations(Name, PageNumber, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
-        /// Test PostPageFileAttachmentAnnotations
+        /// Test PostPageStampAnnotations
         /// </summary>
         [Test]
-        public void PostPageFileAttachmentAnnotationsTest()
+        public void PostPageStampAnnotationsTest()
         {
             UploadFile(AttachmentFile, AttachmentFile);
-            List<FileAttachmentAnnotation> annotations = new List<FileAttachmentAnnotation>
+            List<StampAnnotation> annotations = new List<StampAnnotation>
             {
-                new FileAttachmentAnnotation()
+                new StampAnnotation()
                 {
-                    Name = "Test FileAttachment Annotation",
+                    Name = "Test Stamp Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -88,35 +88,34 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                     Title = "Title",
                     Modified = "01/01/2018 00:00:00.000 AM",
                     FilePath = Path.Combine(TempFolder, AttachmentFile),
-                    FileName = AttachmentFile
                 }
             };
 
-            var response = PdfApi.PostPageFileAttachmentAnnotations(Name, 1, annotations, folder: TempFolder);
+            var response = PdfApi.PostPageStampAnnotations(Name, 1, annotations, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(201));
         }
 
         /// <summary>
-        /// Test GetFileAttachmentAnnotation
+        /// Test GetStampAnnotation
         /// </summary>
         [Test]
-        public void GetFileAttachmentAnnotationTest()
+        public void GetStampAnnotationTest()
         {
-            var annotationresponse = PdfApi.GetDocumentFileAttachmentAnnotations(Name, folder: TempFolder);
+            var annotationresponse = PdfApi.GetDocumentStampAnnotations(Name, folder: TempFolder);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
-            var response = PdfApi.GetFileAttachmentAnnotation(Name, annotationId, folder: TempFolder);
+            var response = PdfApi.GetStampAnnotation(Name, annotationId, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
-        /// Test PutFileAttachmentAnnotation
+        /// Test PutStampAnnotation
         /// </summary>
         [Test]
-        public void PutFileAttachmentAnnotationTest()
+        public void PutStampAnnotationTest()
         {
             UploadFile(AttachmentFile, AttachmentFile);
-            FileAttachmentAnnotation annotation = new FileAttachmentAnnotation()
+            StampAnnotation annotation = new StampAnnotation()
             {
                 Name = "Updated Test",
                 Rect = new Rectangle(100, 100, 200, 200),
@@ -128,39 +127,38 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 Title = "Title Updated",
                 Modified = "01/01/2018 00:00:00.000 AM",
                 FilePath = Path.Combine(TempFolder, AttachmentFile),
-                FileName = AttachmentFile
             };
 
-            var lineResponse = PdfApi.GetDocumentFileAttachmentAnnotations(Name, folder: TempFolder);
+            var lineResponse = PdfApi.GetDocumentStampAnnotations(Name, folder: TempFolder);
             string annotationId = lineResponse.Annotations.List[0].Id;
 
-            var response = PdfApi.PutFileAttachmentAnnotation(Name, annotationId, annotation, folder: TempFolder);
+            var response = PdfApi.PutStampAnnotation(Name, annotationId, annotation, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(201));
         }
 
         /// <summary>
-        /// Test GetFileAttachmentAnnotationData
+        /// Test GetStampAnnotationData
         /// </summary>
         [Test]
-        public void GetFileAttachmentAnnotationDataTest()
+        public void GetStampAnnotationDataTest()
         {
-            var annotationresponse = PdfApi.GetDocumentFileAttachmentAnnotations(Name, folder: TempFolder);
+            var annotationresponse = PdfApi.GetDocumentStampAnnotations(Name, folder: TempFolder);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
-            var response = PdfApi.GetFileAttachmentAnnotationData(Name, annotationId, folder: TempFolder);
-            Assert.That(response.Length, Is.GreaterThan(0));
+            var response = PdfApi.GetStampAnnotationData(Name, annotationId, folder: TempFolder);
+            Assert.That(response.Length, Is.EqualTo(0));
         }
 
         /// <summary>
-        /// Test PutFileAttachmentAnnotationDataExtract
+        /// Test PutStampAnnotationDataExtract
         /// </summary>
         [Test]
-        public void PutFileAttachmentAnnotationDataExtractTest()
+        public void PutStampAnnotationDataExtractTest()
         {
-            var annotationresponse = PdfApi.GetDocumentFileAttachmentAnnotations(Name, folder: TempFolder);
+            var annotationresponse = PdfApi.GetDocumentStampAnnotations(Name, folder: TempFolder);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
-            var response = PdfApi.PutFileAttachmentAnnotationDataExtract(Name, annotationId, folder: TempFolder);
+            var response = PdfApi.PutStampAnnotationDataExtract(Name, annotationId, outFilePath: "stamp.dat", folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(201));
         }
     }
