@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="RedactionAnnotationsResponse.cs">
+// <copyright company="Aspose" file="ScreenAnnotationsResponse.cs">
 //   Copyright (c) 2019 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,28 +41,28 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents response containing multiple redaction annotation objects
+    /// Represents response containing multiple screen annotation objects
     /// </summary>
     [DataContract]
-    public partial class RedactionAnnotationsResponse : AsposeResponse,  IEquatable<RedactionAnnotationsResponse>, IValidatableObject
+    public partial class ScreenAnnotationsResponse : AsposeResponse,  IEquatable<ScreenAnnotationsResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="RedactionAnnotationsResponse" /> class.
+        /// Initializes a new instance of the <see cref="ScreenAnnotationsResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected RedactionAnnotationsResponse() { }
+        protected ScreenAnnotationsResponse() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="RedactionAnnotationsResponse" /> class.
+        /// Initializes a new instance of the <see cref="ScreenAnnotationsResponse" /> class.
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Annotations">Redaction annotations object.</param>
-        public RedactionAnnotationsResponse(int? Code = default(int?), string Status = default(string), RedactionAnnotations Annotations = default(RedactionAnnotations))
+        /// <param name="Annotations">Screen annotations object.</param>
+        public ScreenAnnotationsResponse(int? Code = default(int?), string Status = default(string), ScreenAnnotations Annotations = default(ScreenAnnotations))
         {
             // to ensure "Code" is required (not null)
             if (Code == null)
             {
-                throw new InvalidDataException("Code is a required property for RedactionAnnotationsResponse and cannot be null");
+                throw new InvalidDataException("Code is a required property for ScreenAnnotationsResponse and cannot be null");
             }
             else
             {
@@ -87,11 +87,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Redaction annotations object
+        /// Screen annotations object
         /// </summary>
-        /// <value>Redaction annotations object</value>
+        /// <value>Screen annotations object</value>
         [DataMember(Name="Annotations", EmitDefaultValue=false)]
-        public RedactionAnnotations Annotations { get; set; }
+        public ScreenAnnotations Annotations { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -100,7 +100,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class RedactionAnnotationsResponse {\n");
+            sb.Append("class ScreenAnnotationsResponse {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Annotations: ").Append(Annotations).Append("\n");
@@ -125,15 +125,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as RedactionAnnotationsResponse);
+            return this.Equals(obj as ScreenAnnotationsResponse);
         }
 
         /// <summary>
-        /// Returns true if RedactionAnnotationsResponse instances are equal
+        /// Returns true if ScreenAnnotationsResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of RedactionAnnotationsResponse to be compared</param>
+        /// <param name="other">Instance of ScreenAnnotationsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(RedactionAnnotationsResponse other)
+        public bool Equals(ScreenAnnotationsResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

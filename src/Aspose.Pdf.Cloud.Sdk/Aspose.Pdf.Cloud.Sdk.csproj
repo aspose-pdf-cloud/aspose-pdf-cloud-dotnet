@@ -205,6 +205,10 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\RedactionAnnotations.cs" />
     <Compile Include="Model\RedactionAnnotationsResponse.cs" />
     <Compile Include="Model\Rotation.cs" />
+    <Compile Include="Model\ScreenAnnotation.cs" />
+    <Compile Include="Model\ScreenAnnotationResponse.cs" />
+    <Compile Include="Model\ScreenAnnotations.cs" />
+    <Compile Include="Model\ScreenAnnotationsResponse.cs" />
     <Compile Include="Model\Segment.cs" />
     <Compile Include="Model\ShapeType.cs" />
     <Compile Include="Model\Signature.cs" />
@@ -228,6 +232,11 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\SquigglyAnnotations.cs" />
     <Compile Include="Model\SquigglyAnnotationsResponse.cs" />
     <Compile Include="Model\Stamp.cs" />
+    <Compile Include="Model\StampAnnotation.cs" />
+    <Compile Include="Model\StampAnnotationResponse.cs" />
+    <Compile Include="Model\StampAnnotations.cs" />
+    <Compile Include="Model\StampAnnotationsResponse.cs" />
+    <Compile Include="Model\StampIcon.cs" />
     <Compile Include="Model\StampType.cs" />
     <Compile Include="Model\StorageExistResponse.cs" />
     <Compile Include="Model\StrikeOutAnnotation.cs" />

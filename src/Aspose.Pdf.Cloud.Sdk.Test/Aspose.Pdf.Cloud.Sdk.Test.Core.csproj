@@ -59,9 +59,11 @@
     <Compile Include="PopupAnnotationsTests.cs" />
     <Compile Include="PrivilegesTests.cs" />
     <Compile Include="RedactionAnnotationsTests.cs" />
+    <Compile Include="ScreenAnnotationsTests.cs" />
     <Compile Include="SoundAnnotationsTests.cs" />
     <Compile Include="SquareAnnotationsTests.cs" />
     <Compile Include="SquigglyAnnotationsTests.cs" />
+    <Compile Include="StampAnnotationsTests.cs" />
     <Compile Include="StrikeOutAnnotationsTests.cs" />
     <Compile Include="TextAnnotationsTests.cs" />
     <Compile Include="TextTests.cs" />

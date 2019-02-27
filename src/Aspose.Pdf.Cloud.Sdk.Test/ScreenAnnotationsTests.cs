@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="FileAttachmentAnnotationsTests.cs">
+// <copyright company="Aspose" file="ScreenAnnotationsTests.cs">
 //   Copyright (c) 2019 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -32,14 +32,14 @@ using NUnit.Framework;
 namespace Aspose.Pdf.Cloud.Sdk.Test
 {
     /// <summary>
-    ///  Class for testing FileAttachment Annotations Api
+    ///  Class for testing Screen Annotations Api
     /// </summary>
     [TestFixture]
-    public class FileAttachmentAnnotationsTests : TestsBase
+    public class ScreenAnnotationsTests : TestsBase
     {
-        private const string Name = "PdfWithAnnotations.pdf";
-        private const int PageNumber = 2;
-        private const string AttachmentFile = "4pages.pdf";
+        private const string Name = "PdfWithScreenAnnotations.pdf";
+        private const int PageNumber = 1;
+        private const string NameSwf = "ScreenMovie.swf";
 
         public override void SetUp()
         {
@@ -48,121 +48,118 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         }
 
         /// <summary>
-        /// Test GetDocumentFileAttachmentAnnotations
+        /// Test GetDocumentScreenAnnotations
         /// </summary>
         [Test]
-        public void GetDocumentFileAttachmentAnnotationsTest()
+        public void GetDocumentScreenAnnotationsTest()
         {
-            var response = PdfApi.GetDocumentFileAttachmentAnnotations(Name, folder: TempFolder);
+            var response = PdfApi.GetDocumentScreenAnnotations(Name, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
-        /// Test GetPageFileAttachmentAnnotations
+        /// Test GetPageScreenAnnotations
         /// </summary>
         [Test]
-        public void GetPageFileAttachmentAnnotationsTest()
+        public void GetPageScreenAnnotationsTest()
         {
-            var response = PdfApi.GetPageFileAttachmentAnnotations(Name, PageNumber, folder: TempFolder);
+            var response = PdfApi.GetPageScreenAnnotations(Name, PageNumber, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
-        /// Test PostPageFileAttachmentAnnotations
+        /// Test PostPageScreenAnnotations
         /// </summary>
         [Test]
-        public void PostPageFileAttachmentAnnotationsTest()
+        public void PostPageScreenAnnotationsTest()
         {
-            UploadFile(AttachmentFile, AttachmentFile);
-            List<FileAttachmentAnnotation> annotations = new List<FileAttachmentAnnotation>
+            UploadFile(NameSwf, NameSwf);
+            List<ScreenAnnotation> annotations = new List<ScreenAnnotation>
             {
-                new FileAttachmentAnnotation()
+                new ScreenAnnotation()
                 {
-                    Name = "Test FileAttachment Annotation",
+                    Name = "Test Screen Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
-                    RichText = "Rich Text",
-                    Subject = "Subj",
                     ZIndex = 1,
                     Title = "Title",
-                    Modified = "01/01/2018 00:00:00.000 AM",
-                    FilePath = Path.Combine(TempFolder, AttachmentFile),
-                    FileName = AttachmentFile
+                    Modified = "01/01/2018 12:00:00.000 AM",
+                    FilePath = Path.Combine(TempFolder, NameSwf),
                 }
             };
 
-            var response = PdfApi.PostPageFileAttachmentAnnotations(Name, 1, annotations, folder: TempFolder);
+            var response = PdfApi.PostPageScreenAnnotations(Name, 1, annotations, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(201));
         }
 
         /// <summary>
-        /// Test GetFileAttachmentAnnotation
+        /// Test GetScreenAnnotation
         /// </summary>
         [Test]
-        public void GetFileAttachmentAnnotationTest()
+        public void GetScreenAnnotationTest()
         {
-            var annotationresponse = PdfApi.GetDocumentFileAttachmentAnnotations(Name, folder: TempFolder);
+            var annotationresponse = PdfApi.GetDocumentScreenAnnotations(Name, folder: TempFolder);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
-            var response = PdfApi.GetFileAttachmentAnnotation(Name, annotationId, folder: TempFolder);
+            var response = PdfApi.GetScreenAnnotation(Name, annotationId, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
-        /// Test PutFileAttachmentAnnotation
+        /// Test PutScreenAnnotation
         /// </summary>
         [Test]
-        public void PutFileAttachmentAnnotationTest()
+        public void PutScreenAnnotationTest()
         {
-            UploadFile(AttachmentFile, AttachmentFile);
-            FileAttachmentAnnotation annotation = new FileAttachmentAnnotation()
+            UploadFile(NameSwf, NameSwf);
+            ScreenAnnotation annotation = new ScreenAnnotation()
             {
                 Name = "Updated Test",
                 Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
-                RichText = "Rich Text Updated",
-                Subject = "Subj Updated",
                 ZIndex = 1,
                 Title = "Title Updated",
                 Modified = "01/01/2018 00:00:00.000 AM",
-                FilePath = Path.Combine(TempFolder, AttachmentFile),
-                FileName = AttachmentFile
+                FilePath = Path.Combine(TempFolder, NameSwf),
             };
 
-            var lineResponse = PdfApi.GetDocumentFileAttachmentAnnotations(Name, folder: TempFolder);
+            var lineResponse = PdfApi.GetDocumentScreenAnnotations(Name, folder: TempFolder);
             string annotationId = lineResponse.Annotations.List[0].Id;
 
-            var response = PdfApi.PutFileAttachmentAnnotation(Name, annotationId, annotation, folder: TempFolder);
+            var response = PdfApi.PutScreenAnnotation(Name, annotationId, annotation, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(201));
         }
 
+        /*
         /// <summary>
-        /// Test GetFileAttachmentAnnotationData
+        /// Test GetScreenAnnotationData
         /// </summary>
         [Test]
-        public void GetFileAttachmentAnnotationDataTest()
+        public void GetScreenAnnotationDataTest()
         {
-            var annotationresponse = PdfApi.GetDocumentFileAttachmentAnnotations(Name, folder: TempFolder);
+            var annotationresponse = PdfApi.GetDocumentScreenAnnotations(Name, folder: TempFolder);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
-            var response = PdfApi.GetFileAttachmentAnnotationData(Name, annotationId, folder: TempFolder);
+            var response = PdfApi.GetScreenAnnotationData(Name, annotationId, folder: TempFolder);
             Assert.That(response.Length, Is.GreaterThan(0));
         }
 
         /// <summary>
-        /// Test PutFileAttachmentAnnotationDataExtract
+        /// Test PutScreenAnnotationDataExtract
         /// </summary>
         [Test]
-        public void PutFileAttachmentAnnotationDataExtractTest()
+        public void PutScreenAnnotationDataExtractTest()
         {
-            var annotationresponse = PdfApi.GetDocumentFileAttachmentAnnotations(Name, folder: TempFolder);
+            var annotationresponse = PdfApi.GetDocumentScreenAnnotations(Name, folder: TempFolder);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
-            var response = PdfApi.PutFileAttachmentAnnotationDataExtract(Name, annotationId, folder: TempFolder);
+            var response = PdfApi.PutScreenAnnotationDataExtract(Name, annotationId, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(201));
         }
+        */
     }
 }
+
 

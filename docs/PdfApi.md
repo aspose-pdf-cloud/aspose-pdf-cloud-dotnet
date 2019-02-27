@@ -40,9 +40,11 @@ Method | HTTP request | Description
 [**GetDocumentProperties**](PdfApi.md#getdocumentproperties) | **GET** /pdf/\{name}/documentproperties | Read document properties.
 [**GetDocumentProperty**](PdfApi.md#getdocumentproperty) | **GET** /pdf/\{name}/documentproperties/\{propertyName} | Read document property by name.
 [**GetDocumentRedactionAnnotations**](PdfApi.md#getdocumentredactionannotations) | **GET** /pdf/\{name}/annotations/redaction | Read document redaction annotations.
+[**GetDocumentScreenAnnotations**](PdfApi.md#getdocumentscreenannotations) | **GET** /pdf/\{name}/annotations/screen | Read document screen annotations.
 [**GetDocumentSoundAnnotations**](PdfApi.md#getdocumentsoundannotations) | **GET** /pdf/\{name}/annotations/sound | Read document sound annotations.
 [**GetDocumentSquareAnnotations**](PdfApi.md#getdocumentsquareannotations) | **GET** /pdf/\{name}/annotations/square | Read document square annotations.
 [**GetDocumentSquigglyAnnotations**](PdfApi.md#getdocumentsquigglyannotations) | **GET** /pdf/\{name}/annotations/squiggly | Read document squiggly annotations.
+[**GetDocumentStampAnnotations**](PdfApi.md#getdocumentstampannotations) | **GET** /pdf/\{name}/annotations/stamp | Read document stamp annotations.
 [**GetDocumentStrikeOutAnnotations**](PdfApi.md#getdocumentstrikeoutannotations) | **GET** /pdf/\{name}/annotations/strikeout | Read document StrikeOut annotations.
 [**GetDocumentTextAnnotations**](PdfApi.md#getdocumenttextannotations) | **GET** /pdf/\{name}/annotations/text | Read document text annotations.
 [**GetDocumentUnderlineAnnotations**](PdfApi.md#getdocumentunderlineannotations) | **GET** /pdf/\{name}/annotations/underline | Read document underline annotations.
@@ -94,9 +96,11 @@ Method | HTTP request | Description
 [**GetPagePolygonAnnotations**](PdfApi.md#getpagepolygonannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/polygon | Read document page polygon annotations.
 [**GetPagePopupAnnotations**](PdfApi.md#getpagepopupannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/popup | Read document page popup annotations.
 [**GetPageRedactionAnnotations**](PdfApi.md#getpageredactionannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/redaction | Read document page redaction annotations.
+[**GetPageScreenAnnotations**](PdfApi.md#getpagescreenannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/screen | Read document page screen annotations.
 [**GetPageSoundAnnotations**](PdfApi.md#getpagesoundannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/sound | Read document page sound annotations.
 [**GetPageSquareAnnotations**](PdfApi.md#getpagesquareannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/square | Read document page square annotations.
 [**GetPageSquigglyAnnotations**](PdfApi.md#getpagesquigglyannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/squiggly | Read document page squiggly annotations.
+[**GetPageStampAnnotations**](PdfApi.md#getpagestampannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/stamp | Read document page stamp annotations.
 [**GetPageStrikeOutAnnotations**](PdfApi.md#getpagestrikeoutannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/strikeout | Read document page StrikeOut annotations.
 [**GetPageText**](PdfApi.md#getpagetext) | **GET** /pdf/\{name}/pages/\{pageNumber}/text | Read page text items.
 [**GetPageTextAnnotations**](PdfApi.md#getpagetextannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/text | Read document page text annotations.
@@ -120,10 +124,13 @@ Method | HTTP request | Description
 [**GetPopupAnnotation**](PdfApi.md#getpopupannotation) | **GET** /pdf/\{name}/annotations/popup/\{annotationId} | Read document page popup annotation by ID.
 [**GetPsInStorageToPdf**](PdfApi.md#getpsinstoragetopdf) | **GET** /pdf/create/ps | Convert PS file (located on storage) to PDF format and return resulting file in response. 
 [**GetRedactionAnnotation**](PdfApi.md#getredactionannotation) | **GET** /pdf/\{name}/annotations/redaction/\{annotationId} | Read document page redaction annotation by ID.
+[**GetScreenAnnotation**](PdfApi.md#getscreenannotation) | **GET** /pdf/\{name}/annotations/screen/\{annotationId} | Read document page screen annotation by ID.
 [**GetSoundAnnotation**](PdfApi.md#getsoundannotation) | **GET** /pdf/\{name}/annotations/sound/\{annotationId} | Read document page sound annotation by ID.
 [**GetSoundAnnotationData**](PdfApi.md#getsoundannotationdata) | **GET** /pdf/\{name}/annotations/sound/\{annotationId}/data | Read document page sound annotation by ID.
 [**GetSquareAnnotation**](PdfApi.md#getsquareannotation) | **GET** /pdf/\{name}/annotations/square/\{annotationId} | Read document page square annotation by ID.
 [**GetSquigglyAnnotation**](PdfApi.md#getsquigglyannotation) | **GET** /pdf/\{name}/annotations/squiggly/\{annotationId} | Read document page squiggly annotation by ID.
+[**GetStampAnnotation**](PdfApi.md#getstampannotation) | **GET** /pdf/\{name}/annotations/stamp/\{annotationId} | Read document page stamp annotation by ID.
+[**GetStampAnnotationData**](PdfApi.md#getstampannotationdata) | **GET** /pdf/\{name}/annotations/stamp/\{annotationId}/data | Read document page stamp annotation by ID.
 [**GetStrikeOutAnnotation**](PdfApi.md#getstrikeoutannotation) | **GET** /pdf/\{name}/annotations/strikeout/\{annotationId} | Read document page StrikeOut annotation by ID.
 [**GetSvgInStorageToPdf**](PdfApi.md#getsvginstoragetopdf) | **GET** /pdf/create/svg | Convert SVG file (located on storage) to PDF format and return resulting file in response. 
 [**GetText**](PdfApi.md#gettext) | **GET** /pdf/\{name}/text | Read document text.
@@ -157,9 +164,11 @@ Method | HTTP request | Description
 [**PostPagePolyLineAnnotations**](PdfApi.md#postpagepolylineannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/polyline | Add document page polyline annotations.
 [**PostPagePolygonAnnotations**](PdfApi.md#postpagepolygonannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/polygon | Add document page polygon annotations.
 [**PostPageRedactionAnnotations**](PdfApi.md#postpageredactionannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/redaction | Add document page redaction annotations.
+[**PostPageScreenAnnotations**](PdfApi.md#postpagescreenannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/screen | Add document page screen annotations.
 [**PostPageSoundAnnotations**](PdfApi.md#postpagesoundannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/sound | Add document page sound annotations.
 [**PostPageSquareAnnotations**](PdfApi.md#postpagesquareannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/square | Add document page square annotations.
 [**PostPageSquigglyAnnotations**](PdfApi.md#postpagesquigglyannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/squiggly | Add document page squiggly annotations.
+[**PostPageStampAnnotations**](PdfApi.md#postpagestampannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/stamp | Add document page stamp annotations.
 [**PostPageStrikeOutAnnotations**](PdfApi.md#postpagestrikeoutannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/strikeout | Add document page StrikeOut annotations.
 [**PostPageTextAnnotations**](PdfApi.md#postpagetextannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/text | Add document page text annotations.
 [**PostPageTextReplace**](PdfApi.md#postpagetextreplace) | **POST** /pdf/\{name}/pages/\{pageNumber}/text/replace | Page&#39;s replace text method.
@@ -170,6 +179,7 @@ Method | HTTP request | Description
 [**PostSplitDocument**](PdfApi.md#postsplitdocument) | **POST** /pdf/\{name}/split | Split document to parts.
 [**PutAddNewPage**](PdfApi.md#putaddnewpage) | **PUT** /pdf/\{name}/pages | Add new page to end of the document.
 [**PutAddText**](PdfApi.md#putaddtext) | **PUT** /pdf/\{name}/pages/\{pageNumber}/text | Add text to PDF document page.
+[**PutAnnotationsFlatten**](PdfApi.md#putannotationsflatten) | **PUT** /pdf/\{name}/annotations/flatten | Flattens the annotations of the specified types
 [**PutCaretAnnotation**](PdfApi.md#putcaretannotation) | **PUT** /pdf/\{name}/annotations/caret/\{annotationId} | Replace document caret annotation
 [**PutCircleAnnotation**](PdfApi.md#putcircleannotation) | **PUT** /pdf/\{name}/annotations/circle/\{annotationId} | Replace document circle annotation
 [**PutCreate**](PdfApi.md#putcreate) | **PUT** /storage/file | Upload a specific file 
@@ -237,12 +247,15 @@ Method | HTTP request | Description
 [**PutPsInStorageToPdf**](PdfApi.md#putpsinstoragetopdf) | **PUT** /pdf/\{name}/create/ps | Convert PS file (located on storage) to PDF format and upload resulting file to storage. 
 [**PutRedactionAnnotation**](PdfApi.md#putredactionannotation) | **PUT** /pdf/\{name}/annotations/redaction/\{annotationId} | Replace document redaction annotation
 [**PutReplaceImage**](PdfApi.md#putreplaceimage) | **PUT** /pdf/\{name}/images/\{imageId} | Replace document image.
+[**PutScreenAnnotation**](PdfApi.md#putscreenannotation) | **PUT** /pdf/\{name}/annotations/screen/\{annotationId} | Replace document screen annotation
 [**PutSearchableDocument**](PdfApi.md#putsearchabledocument) | **PUT** /pdf/\{name}/ocr | Create searchable PDF document. Generate OCR layer for images in input PDF document.
 [**PutSetProperty**](PdfApi.md#putsetproperty) | **PUT** /pdf/\{name}/documentproperties/\{propertyName} | Add/update document property.
 [**PutSoundAnnotation**](PdfApi.md#putsoundannotation) | **PUT** /pdf/\{name}/annotations/sound/\{annotationId} | Replace document sound annotation
 [**PutSoundAnnotationDataExtract**](PdfApi.md#putsoundannotationdataextract) | **PUT** /pdf/\{name}/annotations/sound/\{annotationId}/data/extract | Extract document sound annotation content to storage
 [**PutSquareAnnotation**](PdfApi.md#putsquareannotation) | **PUT** /pdf/\{name}/annotations/square/\{annotationId} | Replace document square annotation
 [**PutSquigglyAnnotation**](PdfApi.md#putsquigglyannotation) | **PUT** /pdf/\{name}/annotations/squiggly/\{annotationId} | Replace document squiggly annotation
+[**PutStampAnnotation**](PdfApi.md#putstampannotation) | **PUT** /pdf/\{name}/annotations/stamp/\{annotationId} | Replace document stamp annotation
+[**PutStampAnnotationDataExtract**](PdfApi.md#putstampannotationdataextract) | **PUT** /pdf/\{name}/annotations/stamp/\{annotationId}/data/extract | Extract document stamp annotation content to storage
 [**PutStrikeOutAnnotation**](PdfApi.md#putstrikeoutannotation) | **PUT** /pdf/\{name}/annotations/strikeout/\{annotationId} | Replace document StrikeOut annotation
 [**PutSvgInStorageToPdf**](PdfApi.md#putsvginstoragetopdf) | **PUT** /pdf/\{name}/create/svg | Convert SVG file (located on storage) to PDF format and upload resulting file to storage. 
 [**PutTextAnnotation**](PdfApi.md#puttextannotation) | **PUT** /pdf/\{name}/annotations/text/\{annotationId} | Replace document text annotation
@@ -1205,6 +1218,32 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getdocumentscreenannotations"></a>
+# **GetDocumentScreenAnnotations**
+> ScreenAnnotationsResponse GetDocumentScreenAnnotations (string name, string storage = null, string folder = null)
+
+Read document screen annotations.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**ScreenAnnotationsResponse**](ScreenAnnotationsResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getdocumentsoundannotations"></a>
 # **GetDocumentSoundAnnotations**
 > SoundAnnotationsResponse GetDocumentSoundAnnotations (string name, string storage = null, string folder = null)
@@ -1275,6 +1314,32 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SquigglyAnnotationsResponse**](SquigglyAnnotationsResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdocumentstampannotations"></a>
+# **GetDocumentStampAnnotations**
+> StampAnnotationsResponse GetDocumentStampAnnotations (string name, string storage = null, string folder = null)
+
+Read document stamp annotations.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**StampAnnotationsResponse**](StampAnnotationsResponse.md)
 
 ### HTTP request headers
 
@@ -1515,7 +1580,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1542,7 +1607,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1656,7 +1721,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1685,7 +1750,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1714,7 +1779,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1743,7 +1808,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1772,7 +1837,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2084,7 +2149,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2194,7 +2259,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2223,7 +2288,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2252,7 +2317,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2281,7 +2346,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2310,7 +2375,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2339,7 +2404,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2668,6 +2733,33 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getpagescreenannotations"></a>
+# **GetPageScreenAnnotations**
+> ScreenAnnotationsResponse GetPageScreenAnnotations (string name, int? pageNumber, string storage = null, string folder = null)
+
+Read document page screen annotations.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **pageNumber** | **int?**| The page number. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**ScreenAnnotationsResponse**](ScreenAnnotationsResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getpagesoundannotations"></a>
 # **GetPageSoundAnnotations**
 > SoundAnnotationsResponse GetPageSoundAnnotations (string name, int? pageNumber, string storage = null, string folder = null)
@@ -2741,6 +2833,33 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SquigglyAnnotationsResponse**](SquigglyAnnotationsResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpagestampannotations"></a>
+# **GetPageStampAnnotations**
+> StampAnnotationsResponse GetPageStampAnnotations (string name, int? pageNumber, string storage = null, string folder = null)
+
+Read document page stamp annotations.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **pageNumber** | **int?**| The page number. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**StampAnnotationsResponse**](StampAnnotationsResponse.md)
 
 ### HTTP request headers
 
@@ -3421,6 +3540,33 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getscreenannotation"></a>
+# **GetScreenAnnotation**
+> ScreenAnnotationResponse GetScreenAnnotation (string name, string annotationId, string storage = null, string folder = null)
+
+Read document page screen annotation by ID.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **annotationId** | **string**| The annotation ID. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**ScreenAnnotationResponse**](ScreenAnnotationResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getsoundannotation"></a>
 # **GetSoundAnnotation**
 > SoundAnnotationResponse GetSoundAnnotation (string name, string annotationId, string storage = null, string folder = null)
@@ -3444,7 +3590,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3471,7 +3617,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3521,6 +3667,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SquigglyAnnotationResponse**](SquigglyAnnotationResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getstampannotation"></a>
+# **GetStampAnnotation**
+> StampAnnotationResponse GetStampAnnotation (string name, string annotationId, string storage = null, string folder = null)
+
+Read document page stamp annotation by ID.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **annotationId** | **string**| The annotation ID. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**StampAnnotationResponse**](StampAnnotationResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getstampannotationdata"></a>
+# **GetStampAnnotationData**
+> System.IO.Stream GetStampAnnotationData (string name, string annotationId, string storage = null, string folder = null)
+
+Read document page stamp annotation by ID.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **annotationId** | **string**| The annotation ID. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+**System.IO.Stream**
 
 ### HTTP request headers
 
@@ -4456,6 +4656,34 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="postpagescreenannotations"></a>
+# **PostPageScreenAnnotations**
+> AsposeResponse PostPageScreenAnnotations (string name, int? pageNumber, List<ScreenAnnotation> annotations, string storage = null, string folder = null)
+
+Add document page screen annotations.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **pageNumber** | **int?**| The page number. | 
+ **annotations** | [**List&lt;ScreenAnnotation&gt;**](ScreenAnnotation.md)| The array of annotation. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="postpagesoundannotations"></a>
 # **PostPageSoundAnnotations**
 > AsposeResponse PostPageSoundAnnotations (string name, int? pageNumber, List<SoundAnnotation> annotations, string storage = null, string folder = null)
@@ -4526,6 +4754,34 @@ Name | Type | Description  | Notes
  **name** | **string**| The document name. | 
  **pageNumber** | **int?**| The page number. | 
  **annotations** | [**List&lt;SquigglyAnnotation&gt;**](SquigglyAnnotation.md)| The array of annotation. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postpagestampannotations"></a>
+# **PostPageStampAnnotations**
+> AsposeResponse PostPageStampAnnotations (string name, int? pageNumber, List<StampAnnotation> annotations, string storage = null, string folder = null)
+
+Add document page stamp annotations.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **pageNumber** | **int?**| The page number. | 
+ **annotations** | [**List&lt;StampAnnotation&gt;**](StampAnnotation.md)| The array of annotation. | 
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
 
@@ -4806,6 +5062,35 @@ Name | Type | Description  | Notes
  **paragraph** | [**Paragraph**](Paragraph.md)| Paragraph data. | [optional] 
  **folder** | **string**| Document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putannotationsflatten"></a>
+# **PutAnnotationsFlatten**
+> AsposeResponse PutAnnotationsFlatten (string name, int? startPage = null, int? endPage = null, List<AnnotationType> annotationTypes = null, string storage = null, string folder = null)
+
+Flattens the annotations of the specified types
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **startPage** | **int?**| The start page number. | [optional] 
+ **endPage** | **int?**| The end page number. | [optional] 
+ **annotationTypes** | [**List&lt;AnnotationType&gt;**](AnnotationType.md)| Array of annotation types. | [optional] 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
 
 ### Return type
 
@@ -5533,7 +5818,7 @@ Name | Type | Description  | Notes
 
 <a name="putmergedocuments"></a>
 # **PutMergeDocuments**
-> System.IO.Stream PutMergeDocuments (string name, MergeDocuments mergeDocuments = null, string storage = null, string folder = null)
+> DocumentResponse PutMergeDocuments (string name, MergeDocuments mergeDocuments = null, string storage = null, string folder = null)
 
 Merge a list of documents.
 
@@ -5549,7 +5834,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**System.IO.Stream**
+[**DocumentResponse**](DocumentResponse.md)
 
 ### HTTP request headers
 
@@ -6799,6 +7084,34 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="putscreenannotation"></a>
+# **PutScreenAnnotation**
+> ScreenAnnotationResponse PutScreenAnnotation (string name, string annotationId, ScreenAnnotation annotation, string storage = null, string folder = null)
+
+Replace document screen annotation
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **annotationId** | **string**| The annotation ID. | 
+ **annotation** | [**ScreenAnnotation**](ScreenAnnotation.md)| Annotation. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**ScreenAnnotationResponse**](ScreenAnnotationResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="putsearchabledocument"></a>
 # **PutSearchableDocument**
 > AsposeResponse PutSearchableDocument (string name, string storage = null, string folder = null, string lang = null)
@@ -6958,6 +7271,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SquigglyAnnotationResponse**](SquigglyAnnotationResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putstampannotation"></a>
+# **PutStampAnnotation**
+> StampAnnotationResponse PutStampAnnotation (string name, string annotationId, StampAnnotation annotation, string storage = null, string folder = null)
+
+Replace document stamp annotation
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **annotationId** | **string**| The annotation ID. | 
+ **annotation** | [**StampAnnotation**](StampAnnotation.md)| Annotation. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**StampAnnotationResponse**](StampAnnotationResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putstampannotationdataextract"></a>
+# **PutStampAnnotationDataExtract**
+> AsposeResponse PutStampAnnotationDataExtract (string name, string annotationId, string outFilePath, string storage = null, string folder = null)
+
+Extract document stamp annotation content to storage
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **annotationId** | **string**| The annotation ID. | 
+ **outFilePath** | **string**| The output file path. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
 
 ### HTTP request headers
 

@@ -105,12 +105,22 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
 
         /// <summary>
-        /// Test DeletePageAnnotations
+        /// Test DeleteAnnotation
         /// </summary>
         [Test]
         public void DeleteAnnotationTest()
         {
             var response = PdfApi.DeleteAnnotation(Name, AnnotationId, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PutAnnotationsFlatten
+        /// </summary>
+        [Test]
+        public void PutAnnotationsFlattenTest()
+        {
+            var response = PdfApi.PutAnnotationsFlatten(Name, endPage: 2, annotationTypes: new List<AnnotationType>{ AnnotationType .Stamp}, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
     }

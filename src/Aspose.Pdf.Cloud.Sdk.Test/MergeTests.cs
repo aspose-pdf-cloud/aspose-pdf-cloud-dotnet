@@ -53,10 +53,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 mergeDocuments.List.Add(Path.Combine(TempFolder, name));
             }
 
-            using (var response = PdfApi.PutMergeDocuments(resultName, mergeDocuments, folder: TempFolder))
-            {
-                Assert.That(response.Length, Is.GreaterThan(0));
-            }
+            var response = PdfApi.PutMergeDocuments(resultName, mergeDocuments, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }
