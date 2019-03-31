@@ -1,0 +1,118 @@
+
+using System.Collections.Generic;
+using System.Net;
+using Aspose.Pdf.Cloud.Sdk.Model;
+
+using Aspose.Pdf.Cloud.Sdk.Api;
+using System;
+using System.IO;
+
+namespace Aspose.Pdf.Cloud.Sdk.InkAnnotationsAPI
+{
+    public class InkAnnotationsExamples
+    {        
+        
+        PdfApi api = new PdfApi("b125f13bf6b76ed81ee990142d841195", "78946fb4-3bd4-4d3e-b309-f9e2ff9ac6f9");
+        string FolderName = "";
+        private const string Name = "PdfWithAnnotations.pdf";
+        private const int PageNumber = 2;
+
+        public void GetDocumentInkAnnotationsTest()
+        {
+            var response = api.GetDocumentInkAnnotations(Name, folder: FolderName);
+             Console.WriteLine(response);
+        }
+
+
+        public void GetPageInkAnnotationsTest()
+        {
+            var response = api.GetPageInkAnnotations(Name, PageNumber, folder: FolderName);
+             Console.WriteLine(response);
+        }
+
+
+        public void PostPageInkAnnotationsTest()
+        {
+            List<InkAnnotation> annotations = new List<InkAnnotation>
+            {
+                new InkAnnotation()
+                {
+                    Name = "Test Ink Annotation",
+                    Rect = new Rectangle(100, 100, 200, 200),
+                    Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    RichText = "Rich Text",
+                    Subject = "Subj",
+                    ZIndex = 1,
+                    Title = "Title",
+                    InkList = new List<List<Point>>
+                    {
+                        new List<Point>
+                        {
+                            new Point(10, 40),
+                            new Point(30, 40)
+                        },
+                        new List<Point>
+                        {
+                            new Point(10, 20),
+                            new Point(20, 20),
+                            new Point(30, 20)
+                        }
+                    },
+                    CapStyle = CapStyle.Rounded,
+                    Modified = "01/01/2018 00:00:00.000 AM"
+                }
+            };
+
+            var response = api.PostPageInkAnnotations(Name, 1, annotations, folder: FolderName);
+             Console.WriteLine(response);
+        }
+
+        public void GetInkAnnotationTest()
+        {
+            var Inkresponse = api.GetDocumentInkAnnotations(Name, folder: FolderName);
+            string annotationId = Inkresponse.Annotations.List[0].Id;
+
+            var response = api.GetInkAnnotation(Name, annotationId, folder: FolderName);
+             Console.WriteLine(response);
+        }
+
+
+        public void PutInkAnnotationTest()
+        {
+            InkAnnotation annotation = new InkAnnotation()
+            {
+                Name = "Test Ink Annotation Updated",
+                Rect = new Rectangle(101, 101, 201, 201),
+                Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
+                HorizontalAlignment = HorizontalAlignment.Center,
+                RichText = "Rich Text Updated",
+                Subject = "Subj Updated",
+                ZIndex = 1,
+                Title = "Title Updated",
+                InkList = new List<List<Point>>
+                {
+                    new List<Point>
+                    {
+                        new Point(10, 40),
+                        new Point(30, 40)
+                    },
+                    new List<Point>
+                    {
+                        new Point(10, 20),
+                        new Point(20, 20),
+                        new Point(30, 20)
+                    }
+                },
+                CapStyle = CapStyle.Rounded,
+                Modified = "02/02/2018 00:00:00.000 AM"
+            };
+
+            var lineResponse = api.GetDocumentInkAnnotations(Name, folder: FolderName);
+            string annotationId = lineResponse.Annotations.List[0].Id;
+
+            var response = api.PutInkAnnotation(Name, annotationId, annotation, folder: FolderName);
+             Console.WriteLine(response);
+        }
+    }
+}
