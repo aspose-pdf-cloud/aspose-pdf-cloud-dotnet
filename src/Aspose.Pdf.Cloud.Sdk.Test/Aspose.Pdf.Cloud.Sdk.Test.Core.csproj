@@ -64,7 +64,9 @@
     <Compile Include="SquareAnnotationsTests.cs" />
     <Compile Include="SquigglyAnnotationsTests.cs" />
     <Compile Include="StampAnnotationsTests.cs" />
+    <Compile Include="StampsTests.cs" />
     <Compile Include="StrikeOutAnnotationsTests.cs" />
+    <Compile Include="TablesTests.cs" />
     <Compile Include="TextAnnotationsTests.cs" />
     <Compile Include="TextTests.cs" />
     <Compile Include="OcrTests.cs" />

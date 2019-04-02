@@ -7,6 +7,8 @@ Method | HTTP request | Description
 [**DeleteAnnotation**](PdfApi.md#deleteannotation) | **DELETE** /pdf/\{name}/annotations/\{annotationId} | Delete document annotation by ID
 [**DeleteDocumentAnnotations**](PdfApi.md#deletedocumentannotations) | **DELETE** /pdf/\{name}/annotations | Delete all annotations from the document
 [**DeleteDocumentLinkAnnotations**](PdfApi.md#deletedocumentlinkannotations) | **DELETE** /pdf/\{name}/links | Delete all link annotations from the document
+[**DeleteDocumentStamps**](PdfApi.md#deletedocumentstamps) | **DELETE** /pdf/\{name}/stamps | Delete all stamps from the document
+[**DeleteDocumentTables**](PdfApi.md#deletedocumenttables) | **DELETE** /pdf/\{name}/tables | Delete all tables from the document
 [**DeleteField**](PdfApi.md#deletefield) | **DELETE** /pdf/\{name}/fields/\{fieldName} | Delete document field by name.
 [**DeleteFile**](PdfApi.md#deletefile) | **DELETE** /storage/file | Remove a specific file 
 [**DeleteFolder**](PdfApi.md#deletefolder) | **DELETE** /storage/folder | Remove a specific folder 
@@ -15,8 +17,12 @@ Method | HTTP request | Description
 [**DeletePage**](PdfApi.md#deletepage) | **DELETE** /pdf/\{name}/pages/\{pageNumber} | Delete document page by its number.
 [**DeletePageAnnotations**](PdfApi.md#deletepageannotations) | **DELETE** /pdf/\{name}/pages/\{pageNumber}/annotations | Delete all annotations from the page
 [**DeletePageLinkAnnotations**](PdfApi.md#deletepagelinkannotations) | **DELETE** /pdf/\{name}/pages/\{pageNumber}/links | Delete all link annotations from the page
+[**DeletePageStamps**](PdfApi.md#deletepagestamps) | **DELETE** /pdf/\{name}/pages/\{pageNumber}/stamps | Delete all stamps from the page
+[**DeletePageTables**](PdfApi.md#deletepagetables) | **DELETE** /pdf/\{name}/pages/\{pageNumber}/tables | Delete all tables from the page
 [**DeleteProperties**](PdfApi.md#deleteproperties) | **DELETE** /pdf/\{name}/documentproperties | Delete custom document properties.
 [**DeleteProperty**](PdfApi.md#deleteproperty) | **DELETE** /pdf/\{name}/documentproperties/\{propertyName} | Delete document property.
+[**DeleteStamp**](PdfApi.md#deletestamp) | **DELETE** /pdf/\{name}/stamps/\{stampId} | Delete document stamp by ID
+[**DeleteTable**](PdfApi.md#deletetable) | **DELETE** /pdf/\{name}/tables/\{tableId} | Delete document table by ID
 [**GetCaretAnnotation**](PdfApi.md#getcaretannotation) | **GET** /pdf/\{name}/annotations/caret/\{annotationId} | Read document page caret annotation by ID.
 [**GetCircleAnnotation**](PdfApi.md#getcircleannotation) | **GET** /pdf/\{name}/annotations/circle/\{annotationId} | Read document page circle annotation by ID.
 [**GetDiscUsage**](PdfApi.md#getdiscusage) | **GET** /storage/disc | Check the disk usage of the current account 
@@ -45,7 +51,9 @@ Method | HTTP request | Description
 [**GetDocumentSquareAnnotations**](PdfApi.md#getdocumentsquareannotations) | **GET** /pdf/\{name}/annotations/square | Read document square annotations.
 [**GetDocumentSquigglyAnnotations**](PdfApi.md#getdocumentsquigglyannotations) | **GET** /pdf/\{name}/annotations/squiggly | Read document squiggly annotations.
 [**GetDocumentStampAnnotations**](PdfApi.md#getdocumentstampannotations) | **GET** /pdf/\{name}/annotations/stamp | Read document stamp annotations.
+[**GetDocumentStamps**](PdfApi.md#getdocumentstamps) | **GET** /pdf/\{name}/stamps | Read document stamps.
 [**GetDocumentStrikeOutAnnotations**](PdfApi.md#getdocumentstrikeoutannotations) | **GET** /pdf/\{name}/annotations/strikeout | Read document StrikeOut annotations.
+[**GetDocumentTables**](PdfApi.md#getdocumenttables) | **GET** /pdf/\{name}/tables | Read document tables.
 [**GetDocumentTextAnnotations**](PdfApi.md#getdocumenttextannotations) | **GET** /pdf/\{name}/annotations/text | Read document text annotations.
 [**GetDocumentUnderlineAnnotations**](PdfApi.md#getdocumentunderlineannotations) | **GET** /pdf/\{name}/annotations/underline | Read document underline annotations.
 [**GetDownload**](PdfApi.md#getdownload) | **GET** /storage/file | Download a specific file 
@@ -75,7 +83,7 @@ Method | HTTP request | Description
 [**GetMhtInStorageToPdf**](PdfApi.md#getmhtinstoragetopdf) | **GET** /pdf/create/mht | Convert MHT file (located on storage) to PDF format and return resulting file in response. 
 [**GetMovieAnnotation**](PdfApi.md#getmovieannotation) | **GET** /pdf/\{name}/annotations/movie/\{annotationId} | Read document page movie annotation by ID.
 [**GetPage**](PdfApi.md#getpage) | **GET** /pdf/\{name}/pages/\{pageNumber} | Read document page info.
-[**GetPageAnnotations**](PdfApi.md#getpageannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations | Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
+[**GetPageAnnotations**](PdfApi.md#getpageannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations | Read document page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
 [**GetPageCaretAnnotations**](PdfApi.md#getpagecaretannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/caret | Read document page caret annotations.
 [**GetPageCircleAnnotations**](PdfApi.md#getpagecircleannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/circle | Read document page circle annotations.
 [**GetPageConvertToBmp**](PdfApi.md#getpageconverttobmp) | **GET** /pdf/\{name}/pages/\{pageNumber}/convert/bmp | Convert document page to Bmp image and return resulting file in response.
@@ -101,7 +109,9 @@ Method | HTTP request | Description
 [**GetPageSquareAnnotations**](PdfApi.md#getpagesquareannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/square | Read document page square annotations.
 [**GetPageSquigglyAnnotations**](PdfApi.md#getpagesquigglyannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/squiggly | Read document page squiggly annotations.
 [**GetPageStampAnnotations**](PdfApi.md#getpagestampannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/stamp | Read document page stamp annotations.
+[**GetPageStamps**](PdfApi.md#getpagestamps) | **GET** /pdf/\{name}/pages/\{pageNumber}/stamps | Read page document stamps.
 [**GetPageStrikeOutAnnotations**](PdfApi.md#getpagestrikeoutannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/strikeout | Read document page StrikeOut annotations.
+[**GetPageTables**](PdfApi.md#getpagetables) | **GET** /pdf/\{name}/pages/\{pageNumber}/tables | Read document page tables.
 [**GetPageText**](PdfApi.md#getpagetext) | **GET** /pdf/\{name}/pages/\{pageNumber}/text | Read page text items.
 [**GetPageTextAnnotations**](PdfApi.md#getpagetextannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/text | Read document page text annotations.
 [**GetPageUnderlineAnnotations**](PdfApi.md#getpageunderlineannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/underline | Read document page underline annotations.
@@ -125,6 +135,7 @@ Method | HTTP request | Description
 [**GetPsInStorageToPdf**](PdfApi.md#getpsinstoragetopdf) | **GET** /pdf/create/ps | Convert PS file (located on storage) to PDF format and return resulting file in response. 
 [**GetRedactionAnnotation**](PdfApi.md#getredactionannotation) | **GET** /pdf/\{name}/annotations/redaction/\{annotationId} | Read document page redaction annotation by ID.
 [**GetScreenAnnotation**](PdfApi.md#getscreenannotation) | **GET** /pdf/\{name}/annotations/screen/\{annotationId} | Read document page screen annotation by ID.
+[**GetScreenAnnotationData**](PdfApi.md#getscreenannotationdata) | **GET** /pdf/\{name}/annotations/screen/\{annotationId}/data | Read document page screen annotation by ID.
 [**GetSoundAnnotation**](PdfApi.md#getsoundannotation) | **GET** /pdf/\{name}/annotations/sound/\{annotationId} | Read document page sound annotation by ID.
 [**GetSoundAnnotationData**](PdfApi.md#getsoundannotationdata) | **GET** /pdf/\{name}/annotations/sound/\{annotationId}/data | Read document page sound annotation by ID.
 [**GetSquareAnnotation**](PdfApi.md#getsquareannotation) | **GET** /pdf/\{name}/annotations/square/\{annotationId} | Read document page square annotation by ID.
@@ -133,6 +144,7 @@ Method | HTTP request | Description
 [**GetStampAnnotationData**](PdfApi.md#getstampannotationdata) | **GET** /pdf/\{name}/annotations/stamp/\{annotationId}/data | Read document page stamp annotation by ID.
 [**GetStrikeOutAnnotation**](PdfApi.md#getstrikeoutannotation) | **GET** /pdf/\{name}/annotations/strikeout/\{annotationId} | Read document page StrikeOut annotation by ID.
 [**GetSvgInStorageToPdf**](PdfApi.md#getsvginstoragetopdf) | **GET** /pdf/create/svg | Convert SVG file (located on storage) to PDF format and return resulting file in response. 
+[**GetTable**](PdfApi.md#gettable) | **GET** /pdf/\{name}/tables/\{tableId} | Read document page table by ID.
 [**GetText**](PdfApi.md#gettext) | **GET** /pdf/\{name}/text | Read document text.
 [**GetTextAnnotation**](PdfApi.md#gettextannotation) | **GET** /pdf/\{name}/annotations/text/\{annotationId} | Read document page text annotation by ID.
 [**GetUnderlineAnnotation**](PdfApi.md#getunderlineannotation) | **GET** /pdf/\{name}/annotations/underline/\{annotationId} | Read document page underline annotation by ID.
@@ -157,10 +169,12 @@ Method | HTTP request | Description
 [**PostPageFileAttachmentAnnotations**](PdfApi.md#postpagefileattachmentannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/fileattachment | Add document page FileAttachment annotations.
 [**PostPageFreeTextAnnotations**](PdfApi.md#postpagefreetextannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/freetext | Add document page free text annotations.
 [**PostPageHighlightAnnotations**](PdfApi.md#postpagehighlightannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/highlight | Add document page highlight annotations.
+[**PostPageImageStamps**](PdfApi.md#postpageimagestamps) | **POST** /pdf/\{name}/pages/\{pageNumber}/stamps/image | Add document page image stamps.
 [**PostPageInkAnnotations**](PdfApi.md#postpageinkannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/ink | Add document page ink annotations.
 [**PostPageLineAnnotations**](PdfApi.md#postpagelineannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/line | Add document page line annotations.
 [**PostPageLinkAnnotations**](PdfApi.md#postpagelinkannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/links | Add document page link annotations.
 [**PostPageMovieAnnotations**](PdfApi.md#postpagemovieannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/movie | Add document page movie annotations.
+[**PostPagePdfPageStamps**](PdfApi.md#postpagepdfpagestamps) | **POST** /pdf/\{name}/pages/\{pageNumber}/stamps/pdfpage | Add document pdf page stamps.
 [**PostPagePolyLineAnnotations**](PdfApi.md#postpagepolylineannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/polyline | Add document page polyline annotations.
 [**PostPagePolygonAnnotations**](PdfApi.md#postpagepolygonannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/polygon | Add document page polygon annotations.
 [**PostPageRedactionAnnotations**](PdfApi.md#postpageredactionannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/redaction | Add document page redaction annotations.
@@ -172,6 +186,7 @@ Method | HTTP request | Description
 [**PostPageStrikeOutAnnotations**](PdfApi.md#postpagestrikeoutannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/strikeout | Add document page StrikeOut annotations.
 [**PostPageTextAnnotations**](PdfApi.md#postpagetextannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/text | Add document page text annotations.
 [**PostPageTextReplace**](PdfApi.md#postpagetextreplace) | **POST** /pdf/\{name}/pages/\{pageNumber}/text/replace | Page&#39;s replace text method.
+[**PostPageTextStamps**](PdfApi.md#postpagetextstamps) | **POST** /pdf/\{name}/pages/\{pageNumber}/stamps/text | Add document page text stamps.
 [**PostPageUnderlineAnnotations**](PdfApi.md#postpageunderlineannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/underline | Add document page underline annotations.
 [**PostPopupAnnotation**](PdfApi.md#postpopupannotation) | **POST** /pdf/\{name}/annotations/\{annotationId}/popup | Add document popup annotations.
 [**PostSignDocument**](PdfApi.md#postsigndocument) | **POST** /pdf/\{name}/sign | Sign document.
@@ -248,6 +263,7 @@ Method | HTTP request | Description
 [**PutRedactionAnnotation**](PdfApi.md#putredactionannotation) | **PUT** /pdf/\{name}/annotations/redaction/\{annotationId} | Replace document redaction annotation
 [**PutReplaceImage**](PdfApi.md#putreplaceimage) | **PUT** /pdf/\{name}/images/\{imageId} | Replace document image.
 [**PutScreenAnnotation**](PdfApi.md#putscreenannotation) | **PUT** /pdf/\{name}/annotations/screen/\{annotationId} | Replace document screen annotation
+[**PutScreenAnnotationDataExtract**](PdfApi.md#putscreenannotationdataextract) | **PUT** /pdf/\{name}/annotations/screen/\{annotationId}/data/extract | Extract document screen annotation content to storage
 [**PutSearchableDocument**](PdfApi.md#putsearchabledocument) | **PUT** /pdf/\{name}/ocr | Create searchable PDF document. Generate OCR layer for images in input PDF document.
 [**PutSetProperty**](PdfApi.md#putsetproperty) | **PUT** /pdf/\{name}/documentproperties/\{propertyName} | Add/update document property.
 [**PutSoundAnnotation**](PdfApi.md#putsoundannotation) | **PUT** /pdf/\{name}/annotations/sound/\{annotationId} | Replace document sound annotation
@@ -328,6 +344,58 @@ Name | Type | Description  | Notes
 > AsposeResponse DeleteDocumentLinkAnnotations (string name, string storage = null, string folder = null)
 
 Delete all link annotations from the document
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletedocumentstamps"></a>
+# **DeleteDocumentStamps**
+> AsposeResponse DeleteDocumentStamps (string name, string storage = null, string folder = null)
+
+Delete all stamps from the document
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletedocumenttables"></a>
+# **DeleteDocumentTables**
+> AsposeResponse DeleteDocumentTables (string name, string storage = null, string folder = null)
+
+Delete all tables from the document
 
 
 ### Parameters
@@ -563,6 +631,60 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="deletepagestamps"></a>
+# **DeletePageStamps**
+> AsposeResponse DeletePageStamps (string name, int? pageNumber, string storage = null, string folder = null)
+
+Delete all stamps from the page
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **pageNumber** | **int?**| The page number. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletepagetables"></a>
+# **DeletePageTables**
+> AsposeResponse DeletePageTables (string name, int? pageNumber, string storage = null, string folder = null)
+
+Delete all tables from the page
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **pageNumber** | **int?**| The page number. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="deleteproperties"></a>
 # **DeleteProperties**
 > AsposeResponse DeleteProperties (string name, string storage = null, string folder = null)
@@ -604,6 +726,60 @@ Name | Type | Description  | Notes
  **propertyName** | **string**|  | 
  **storage** | **string**|  | [optional] 
  **folder** | **string**|  | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletestamp"></a>
+# **DeleteStamp**
+> AsposeResponse DeleteStamp (string name, string stampId, string storage = null, string folder = null)
+
+Delete document stamp by ID
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **stampId** | **string**| The stamp ID. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="deletetable"></a>
+# **DeleteTable**
+> AsposeResponse DeleteTable (string name, string tableId, string storage = null, string folder = null)
+
+Delete document table by ID
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **tableId** | **string**| The table ID. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
 
 ### Return type
 
@@ -1348,6 +1524,32 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getdocumentstamps"></a>
+# **GetDocumentStamps**
+> StampsInfoResponse GetDocumentStamps (string name, string storage = null, string folder = null)
+
+Read document stamps.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**StampsInfoResponse**](StampsInfoResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getdocumentstrikeoutannotations"></a>
 # **GetDocumentStrikeOutAnnotations**
 > StrikeOutAnnotationsResponse GetDocumentStrikeOutAnnotations (string name, string storage = null, string folder = null)
@@ -1366,6 +1568,32 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StrikeOutAnnotationsResponse**](StrikeOutAnnotationsResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdocumenttables"></a>
+# **GetDocumentTables**
+> TablesRecognizedResponse GetDocumentTables (string name, string storage = null, string folder = null)
+
+Read document tables.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**|  | 
+ **storage** | **string**|  | [optional] 
+ **folder** | **string**|  | [optional] 
+
+### Return type
+
+[**TablesRecognizedResponse**](TablesRecognizedResponse.md)
 
 ### HTTP request headers
 
@@ -2157,7 +2385,7 @@ Name | Type | Description  | Notes
 # **GetPageAnnotations**
 > AnnotationsInfoResponse GetPageAnnotations (string name, int? pageNumber, string storage = null, string folder = null)
 
-Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
+Read document page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
 
 
 ### Parameters
@@ -2868,6 +3096,33 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getpagestamps"></a>
+# **GetPageStamps**
+> StampsInfoResponse GetPageStamps (string name, int? pageNumber, string storage = null, string folder = null)
+
+Read page document stamps.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **pageNumber** | **int?**| The page number. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**StampsInfoResponse**](StampsInfoResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getpagestrikeoutannotations"></a>
 # **GetPageStrikeOutAnnotations**
 > StrikeOutAnnotationsResponse GetPageStrikeOutAnnotations (string name, int? pageNumber, string storage = null, string folder = null)
@@ -2887,6 +3142,33 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**StrikeOutAnnotationsResponse**](StrikeOutAnnotationsResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpagetables"></a>
+# **GetPageTables**
+> TablesRecognizedResponse GetPageTables (string name, int? pageNumber, string storage = null, string folder = null)
+
+Read document page tables.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**|  | 
+ **pageNumber** | **int?**|  | 
+ **storage** | **string**|  | [optional] 
+ **folder** | **string**|  | [optional] 
+
+### Return type
+
+[**TablesRecognizedResponse**](TablesRecognizedResponse.md)
 
 ### HTTP request headers
 
@@ -3563,7 +3845,34 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getscreenannotationdata"></a>
+# **GetScreenAnnotationData**
+> System.IO.Stream GetScreenAnnotationData (string name, string annotationId, string storage = null, string folder = null)
+
+Read document page screen annotation by ID.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **annotationId** | **string**| The annotation ID. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+**System.IO.Stream**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3786,6 +4095,33 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="gettable"></a>
+# **GetTable**
+> TableRecognizedResponse GetTable (string name, string tableId, string storage = null, string folder = null)
+
+Read document page table by ID.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **tableId** | **string**| The table ID. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**TableRecognizedResponse**](TableRecognizedResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4460,6 +4796,34 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="postpageimagestamps"></a>
+# **PostPageImageStamps**
+> AsposeResponse PostPageImageStamps (string name, int? pageNumber, List<ImageStamp> stamps, string storage = null, string folder = null)
+
+Add document page image stamps.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **pageNumber** | **int?**| The page number. | 
+ **stamps** | [**List&lt;ImageStamp&gt;**](ImageStamp.md)| The array of stamp. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="postpageinkannotations"></a>
 # **PostPageInkAnnotations**
 > AsposeResponse PostPageInkAnnotations (string name, int? pageNumber, List<InkAnnotation> annotations, string storage = null, string folder = null)
@@ -4558,6 +4922,34 @@ Name | Type | Description  | Notes
  **name** | **string**| The document name. | 
  **pageNumber** | **int?**| The page number. | 
  **annotations** | [**List&lt;MovieAnnotation&gt;**](MovieAnnotation.md)| The array of annotation. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postpagepdfpagestamps"></a>
+# **PostPagePdfPageStamps**
+> AsposeResponse PostPagePdfPageStamps (string name, int? pageNumber, List<PdfPageStamp> stamps, string storage = null, string folder = null)
+
+Add document pdf page stamps.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **pageNumber** | **int?**| The page number. | 
+ **stamps** | [**List&lt;PdfPageStamp&gt;**](PdfPageStamp.md)| The array of stamp. | 
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
 
@@ -4872,6 +5264,34 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TextReplaceResponse**](TextReplaceResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postpagetextstamps"></a>
+# **PostPageTextStamps**
+> AsposeResponse PostPageTextStamps (string name, int? pageNumber, List<TextStamp> stamps, string storage = null, string folder = null)
+
+Add document page text stamps.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **pageNumber** | **int?**| The page number. | 
+ **stamps** | [**List&lt;TextStamp&gt;**](TextStamp.md)| The array of stamp. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
 
 ### HTTP request headers
 
@@ -7104,6 +7524,34 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ScreenAnnotationResponse**](ScreenAnnotationResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putscreenannotationdataextract"></a>
+# **PutScreenAnnotationDataExtract**
+> AsposeResponse PutScreenAnnotationDataExtract (string name, string annotationId, string outFilePath, string storage = null, string folder = null)
+
+Extract document screen annotation content to storage
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **annotationId** | **string**| The annotation ID. | 
+ **outFilePath** | **string**| The output file path. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
 
 ### HTTP request headers
 

@@ -56,6 +56,7 @@
     <Compile Include="Model\CaretAnnotations.cs" />
     <Compile Include="Model\CaretAnnotationsResponse.cs" />
     <Compile Include="Model\CaretSymbol.cs" />
+    <Compile Include="Model\CellRecognized.cs" />
     <Compile Include="Model\CircleAnnotation.cs" />
     <Compile Include="Model\CircleAnnotationResponse.cs" />
     <Compile Include="Model\CircleAnnotations.cs" />
@@ -114,6 +115,7 @@
     <Compile Include="Model\Images.cs" />
     <Compile Include="Model\ImageSrcType.cs" />
     <Compile Include="Model\ImagesResponse.cs" />
+    <Compile Include="Model\ImageStamp.cs" />
     <Compile Include="Model\ImageTemplate.cs" />
     <Compile Include="Model\ImageTemplatesRequest.cs" />
     <Compile Include="Model\InkAnnotation.cs" />
@@ -151,6 +153,7 @@
     <Compile Include="Model\Paragraph.cs" />
     <Compile Include="Model\PartsEmbeddingModes.cs" />
     <Compile Include="Model\PdfAType.cs" />
+    <Compile Include="Model\PdfPageStamp.cs" />
     <Compile Include="Model\Point.cs" />
     <Compile Include="Model\PolyAnnotation.cs" />
     <Compile Include="Model\PolygonAnnotation.cs" />
@@ -167,6 +170,7 @@
     <Compile Include="Model\PopupAnnotations.cs" />
     <Compile Include="Model\PopupAnnotationsResponse.cs" />
     <Compile Include="Model\PopupAnnotationWithParent.cs" />
+    <Compile Include="Model\Position.cs" />
     <Compile Include="Model\RasterImagesSavingModes.cs" />
     <Compile Include="Model\Rectangle.cs" />
     <Compile Include="Model\RedactionAnnotation.cs" />
@@ -174,6 +178,7 @@
     <Compile Include="Model\RedactionAnnotations.cs" />
     <Compile Include="Model\RedactionAnnotationsResponse.cs" />
     <Compile Include="Model\Rotation.cs" />
+    <Compile Include="Model\RowRecognized.cs" />
     <Compile Include="Model\ScreenAnnotation.cs" />
     <Compile Include="Model\ScreenAnnotationResponse.cs" />
     <Compile Include="Model\ScreenAnnotations.cs" />
@@ -205,13 +210,21 @@
     <Compile Include="Model\StampAnnotationResponse.cs" />
     <Compile Include="Model\StampAnnotations.cs" />
     <Compile Include="Model\StampAnnotationsResponse.cs" />
+    <Compile Include="Model\StampBase.cs" />
     <Compile Include="Model\StampIcon.cs" />
+    <Compile Include="Model\StampInfo.cs" />
+    <Compile Include="Model\StampsInfo.cs" />
+    <Compile Include="Model\StampsInfoResponse.cs" />
     <Compile Include="Model\StampType.cs" />
     <Compile Include="Model\StorageExistResponse.cs" />
     <Compile Include="Model\StrikeOutAnnotation.cs" />
     <Compile Include="Model\StrikeOutAnnotationResponse.cs" />
     <Compile Include="Model\StrikeOutAnnotations.cs" />
     <Compile Include="Model\StrikeOutAnnotationsResponse.cs" />
+    <Compile Include="Model\TableRecognized.cs" />
+    <Compile Include="Model\TableRecognizedResponse.cs" />
+    <Compile Include="Model\TablesRecognized.cs" />
+    <Compile Include="Model\TablesRecognizedResponse.cs" />
     <Compile Include="Model\TextAnnotation.cs" />
     <Compile Include="Model\TextAnnotationResponse.cs" />
     <Compile Include="Model\TextAnnotations.cs" />
@@ -225,6 +238,7 @@
     <Compile Include="Model\TextReplace.cs" />
     <Compile Include="Model\TextReplaceListRequest.cs" />
     <Compile Include="Model\TextReplaceResponse.cs" />
+    <Compile Include="Model\TextStamp.cs" />
     <Compile Include="Model\TextState.cs" />
     <Compile Include="Model\TextStyle.cs" />
     <Compile Include="Model\UnderlineAnnotation.cs" />

@@ -132,7 +132,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             Assert.That(response.Code, Is.EqualTo(201));
         }
 
-        /*
+        
         /// <summary>
         /// Test GetScreenAnnotationData
         /// </summary>
@@ -155,10 +155,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var annotationresponse = PdfApi.GetDocumentScreenAnnotations(Name, folder: TempFolder);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
-            var response = PdfApi.PutScreenAnnotationDataExtract(Name, annotationId, folder: TempFolder);
+            var response = PdfApi.PutScreenAnnotationDataExtract(Name, annotationId, outFilePath: Path.Combine(TempFolder, "screen.dat"), folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(201));
         }
-        */
+        
     }
 }
 
