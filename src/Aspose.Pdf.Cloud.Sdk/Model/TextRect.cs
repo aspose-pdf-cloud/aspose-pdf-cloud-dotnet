@@ -49,27 +49,24 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextRect" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected TextRect() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TextRect" /> class.
-        /// </summary>
         /// <param name="Text">Text of the occurrence..</param>
-        /// <param name="Page">Page on which the occurrence is found. (required).</param>
+        /// <param name="Page">Page on which the occurrence is found..</param>
         /// <param name="Rect">Rectangle of the occurrence..</param>
-        public TextRect(string Text = default(string), int? Page = default(int?), Rectangle Rect = default(Rectangle))
+        /// <param name="HorizontalAlignment">Gets or sets a horizontal alignment of text fragment. .</param>
+        /// <param name="VerticalAlignment">Gets or sets a vertical alignment of text fragment. .</param>
+        /// <param name="Position">Gets or sets text position for text, represented with  object..</param>
+        /// <param name="BaselinePosition">Gets text position for text, represented with  object. The YIndent of the Position structure represents baseline coordinate of the text fragment..</param>
+        /// <param name="TextState">Gets or sets text state for the text that  object represents..</param>
+        public TextRect(string Text = default(string), int? Page = default(int?), Rectangle Rect = default(Rectangle), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), Position Position = default(Position), Position BaselinePosition = default(Position), TextState TextState = default(TextState))
         {
-            // to ensure "Page" is required (not null)
-            if (Page == null)
-            {
-                throw new InvalidDataException("Page is a required property for TextRect and cannot be null");
-            }
-            else
-            {
-                this.Page = Page;
-            }
             this.Text = Text;
+            this.Page = Page;
             this.Rect = Rect;
+            this.HorizontalAlignment = HorizontalAlignment;
+            this.VerticalAlignment = VerticalAlignment;
+            this.Position = Position;
+            this.BaselinePosition = BaselinePosition;
+            this.TextState = TextState;
         }
         
         /// <summary>
@@ -94,6 +91,41 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public Rectangle Rect { get; set; }
 
         /// <summary>
+        /// Gets or sets a horizontal alignment of text fragment. 
+        /// </summary>
+        /// <value>Gets or sets a horizontal alignment of text fragment. </value>
+        [DataMember(Name="HorizontalAlignment", EmitDefaultValue=true)]
+        public HorizontalAlignment HorizontalAlignment { get; set; }
+
+        /// <summary>
+        /// Gets or sets a vertical alignment of text fragment. 
+        /// </summary>
+        /// <value>Gets or sets a vertical alignment of text fragment. </value>
+        [DataMember(Name="VerticalAlignment", EmitDefaultValue=true)]
+        public VerticalAlignment VerticalAlignment { get; set; }
+
+        /// <summary>
+        /// Gets or sets text position for text, represented with  object.
+        /// </summary>
+        /// <value>Gets or sets text position for text, represented with  object.</value>
+        [DataMember(Name="Position", EmitDefaultValue=false)]
+        public Position Position { get; set; }
+
+        /// <summary>
+        /// Gets text position for text, represented with  object. The YIndent of the Position structure represents baseline coordinate of the text fragment.
+        /// </summary>
+        /// <value>Gets text position for text, represented with  object. The YIndent of the Position structure represents baseline coordinate of the text fragment.</value>
+        [DataMember(Name="BaselinePosition", EmitDefaultValue=false)]
+        public Position BaselinePosition { get; set; }
+
+        /// <summary>
+        /// Gets or sets text state for the text that  object represents.
+        /// </summary>
+        /// <value>Gets or sets text state for the text that  object represents.</value>
+        [DataMember(Name="TextState", EmitDefaultValue=false)]
+        public TextState TextState { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -104,6 +136,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Page: ").Append(Page).Append("\n");
             sb.Append("  Rect: ").Append(Rect).Append("\n");
+            sb.Append("  HorizontalAlignment: ").Append(HorizontalAlignment).Append("\n");
+            sb.Append("  VerticalAlignment: ").Append(VerticalAlignment).Append("\n");
+            sb.Append("  Position: ").Append(Position).Append("\n");
+            sb.Append("  BaselinePosition: ").Append(BaselinePosition).Append("\n");
+            sb.Append("  TextState: ").Append(TextState).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -154,6 +191,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Rect == other.Rect ||
                     this.Rect != null &&
                     this.Rect.Equals(other.Rect)
+                ) && 
+                (
+                    this.HorizontalAlignment == other.HorizontalAlignment ||
+                    this.HorizontalAlignment != null &&
+                    this.HorizontalAlignment.Equals(other.HorizontalAlignment)
+                ) && 
+                (
+                    this.VerticalAlignment == other.VerticalAlignment ||
+                    this.VerticalAlignment != null &&
+                    this.VerticalAlignment.Equals(other.VerticalAlignment)
+                ) && 
+                (
+                    this.Position == other.Position ||
+                    this.Position != null &&
+                    this.Position.Equals(other.Position)
+                ) && 
+                (
+                    this.BaselinePosition == other.BaselinePosition ||
+                    this.BaselinePosition != null &&
+                    this.BaselinePosition.Equals(other.BaselinePosition)
+                ) && 
+                (
+                    this.TextState == other.TextState ||
+                    this.TextState != null &&
+                    this.TextState.Equals(other.TextState)
                 );
         }
 
@@ -174,6 +236,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Page.GetHashCode();
                 if (this.Rect != null)
                     hash = hash * 59 + this.Rect.GetHashCode();
+                if (this.HorizontalAlignment != null)
+                    hash = hash * 59 + this.HorizontalAlignment.GetHashCode();
+                if (this.VerticalAlignment != null)
+                    hash = hash * 59 + this.VerticalAlignment.GetHashCode();
+                if (this.Position != null)
+                    hash = hash * 59 + this.Position.GetHashCode();
+                if (this.BaselinePosition != null)
+                    hash = hash * 59 + this.BaselinePosition.GetHashCode();
+                if (this.TextState != null)
+                    hash = hash * 59 + this.TextState.GetHashCode();
                 return hash;
             }
         }
