@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// MarginInfo
+    /// This class represents a margin for different objects.
     /// </summary>
     [DataContract]
     public partial class MarginInfo :  IEquatable<MarginInfo>, IValidatableObject
@@ -49,76 +49,43 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MarginInfo" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected MarginInfo() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MarginInfo" /> class.
-        /// </summary>
-        /// <param name="Left">Left (required).</param>
-        /// <param name="Right">Right (required).</param>
-        /// <param name="Top">Top (required).</param>
-        /// <param name="Bottom">Bottom (required).</param>
+        /// <param name="Left">Gets or sets a float value that indicates the left margin..</param>
+        /// <param name="Right">Gets or sets a float value that indicates the right margin..</param>
+        /// <param name="Top">Gets or sets a float value that indicates the top margin..</param>
+        /// <param name="Bottom">Gets or sets a float value that indicates the bottom margin..</param>
         public MarginInfo(double? Left = default(double?), double? Right = default(double?), double? Top = default(double?), double? Bottom = default(double?))
         {
-            // to ensure "Left" is required (not null)
-            if (Left == null)
-            {
-                throw new InvalidDataException("Left is a required property for MarginInfo and cannot be null");
-            }
-            else
-            {
-                this.Left = Left;
-            }
-            // to ensure "Right" is required (not null)
-            if (Right == null)
-            {
-                throw new InvalidDataException("Right is a required property for MarginInfo and cannot be null");
-            }
-            else
-            {
-                this.Right = Right;
-            }
-            // to ensure "Top" is required (not null)
-            if (Top == null)
-            {
-                throw new InvalidDataException("Top is a required property for MarginInfo and cannot be null");
-            }
-            else
-            {
-                this.Top = Top;
-            }
-            // to ensure "Bottom" is required (not null)
-            if (Bottom == null)
-            {
-                throw new InvalidDataException("Bottom is a required property for MarginInfo and cannot be null");
-            }
-            else
-            {
-                this.Bottom = Bottom;
-            }
+            this.Left = Left;
+            this.Right = Right;
+            this.Top = Top;
+            this.Bottom = Bottom;
         }
         
         /// <summary>
-        /// Gets or Sets Left
+        /// Gets or sets a float value that indicates the left margin.
         /// </summary>
+        /// <value>Gets or sets a float value that indicates the left margin.</value>
         [DataMember(Name="Left", EmitDefaultValue=false)]
         public double? Left { get; set; }
 
         /// <summary>
-        /// Gets or Sets Right
+        /// Gets or sets a float value that indicates the right margin.
         /// </summary>
+        /// <value>Gets or sets a float value that indicates the right margin.</value>
         [DataMember(Name="Right", EmitDefaultValue=false)]
         public double? Right { get; set; }
 
         /// <summary>
-        /// Gets or Sets Top
+        /// Gets or sets a float value that indicates the top margin.
         /// </summary>
+        /// <value>Gets or sets a float value that indicates the top margin.</value>
         [DataMember(Name="Top", EmitDefaultValue=false)]
         public double? Top { get; set; }
 
         /// <summary>
-        /// Gets or Sets Bottom
+        /// Gets or sets a float value that indicates the bottom margin.
         /// </summary>
+        /// <value>Gets or sets a float value that indicates the bottom margin.</value>
         [DataMember(Name="Bottom", EmitDefaultValue=false)]
         public double? Bottom { get; set; }
 

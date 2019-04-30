@@ -63,7 +63,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="PageWidth">PageWidth.</param>
         /// <param name="PageHeight">PageHeight.</param>
         /// <param name="MarginInfo">MarginInfo.</param>
-        public ImageTemplate(string ImagePath = default(string), ImageSrcType ImageSrcType = default(ImageSrcType), double? LeftMargin = default(double?), double? RightMargin = default(double?), double? TopMargin = default(double?), double? BottomMargin = default(double?), double? PageWidth = default(double?), double? PageHeight = default(double?), MarginInfo MarginInfo = default(MarginInfo))
+        public ImageTemplate(string ImagePath = default(string), ImageSrcType ImageSrcType = default(ImageSrcType), double? LeftMargin = default(double?), double? RightMargin = default(double?), double? TopMargin = default(double?), double? BottomMargin = default(double?), double? PageWidth = default(double?), double? PageHeight = default(double?), MarginInfo2 MarginInfo = default(MarginInfo2))
         {
             // to ensure "ImagePath" is required (not null)
             if (ImagePath == null)
@@ -146,7 +146,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Gets or Sets MarginInfo
         /// </summary>
         [DataMember(Name="MarginInfo", EmitDefaultValue=false)]
-        public MarginInfo MarginInfo { get; set; }
+        public MarginInfo2 MarginInfo { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -200,5 +200,37 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.DeleteStamp(Name, stampId, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
+
+        /// <summary>
+        /// Test PostDocumentPageNumberStamps
+        /// </summary>
+        [Test]
+        public void PostDocumentPageNumberStampsTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            PageNumberStamp stamp = new PageNumberStamp
+            {
+                Background = true,
+                LeftMargin = 1,
+                RightMargin = 2,
+                TopMargin = 3,
+                BottomMargin = 4,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Bottom,
+                Opacity = 1,
+                Rotate = Rotation.None,
+                RotateAngle = 0,
+                XIndent = 0,
+                YIndent = 0,
+                Zoom = 1,
+                StartingNumber = 3,
+                Value = "Page #"
+            };
+
+            var response = PdfApi.PostDocumentPageNumberStamps(name, stamp, startPageNumber: 2, endPageNumber: 3, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(201));
+        }
     }
 }

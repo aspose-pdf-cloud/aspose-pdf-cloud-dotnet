@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **BottomMargin** | **double?** |  | [optional] 
 **PageWidth** | **double?** |  | [optional] 
 **PageHeight** | **double?** |  | [optional] 
-**MarginInfo** | [**MarginInfo**](MarginInfo.md) |  | [optional] 
+**MarginInfo** | [**MarginInfo2**](MarginInfo2.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -68,9 +68,11 @@ OpenAPI spec version: 1.1
     <Compile Include="ConvertTests.cs" />
     <Compile Include="ConvertToPdfTests.cs" />
     <Compile Include="DocumentTests.cs" />
+    <Compile Include="EncryptDecryptTests.cs" />
     <Compile Include="FieldsTests.cs" />
     <Compile Include="FileAttachmentAnnotationsTests.cs" />
     <Compile Include="FreeTextAnnotationsTests.cs" />
+    <Compile Include="HeaderFooterTests.cs" />
     <Compile Include="HighlightAnnotationsTests.cs" />
     <Compile Include="ImagesTests.cs" />
     <Compile Include="InkAnnotationsTests.cs" />
