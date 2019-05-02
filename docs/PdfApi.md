@@ -7210,7 +7210,7 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinrequesttoxls"></a>
 # **PutPdfInRequestToXls**
-> AsposeResponse PutPdfInRequestToXls (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string storage = null, System.IO.Stream file = null, System.IO.Stream file2 = null)
+> AsposeResponse PutPdfInRequestToXls (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string storage = null, System.IO.Stream file = null)
 
 Converts PDF document (in request content) to XLS format and uploads resulting file to storage.
 
@@ -7226,7 +7226,6 @@ Name | Type | Description  | Notes
  **uniformWorksheets** | **bool?**| Uniform worksheets | [optional] 
  **storage** | **string**| The document storage. | [optional] 
  **file** | **System.IO.Stream**| A file to be converted. | [optional] 
- **file2** | **System.IO.Stream**| A file to be converted. | [optional] 
 
 ### Return type
 

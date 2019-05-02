@@ -140,12 +140,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             const string name = "4pagesEncrypted.pdf";
             UploadFile(name, name);
 
+            string outPath = Path.Combine(TempFolder, name);
             string ownerPassword = @"owner\//? $12^Password!&";
             string newUserPassword = @"user new\//? $12^Password!&";
             string newOwnerPassword = @"owner new\//? $12^Password!&";
             using (Stream file = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
-                var response = PdfApi.PutChangePasswordDocument(name,
+                var response = PdfApi.PutChangePasswordDocument(outPath,
                     ToBase64(ownerPassword), ToBase64(newUserPassword), ToBase64(newOwnerPassword),
                     file: file);
                 Assert.That(response.Code, Is.EqualTo(200));
