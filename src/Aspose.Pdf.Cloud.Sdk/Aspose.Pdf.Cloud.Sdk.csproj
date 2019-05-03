@@ -179,7 +179,6 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\LinkElement.cs" />
     <Compile Include="Model\LinkHighlightingMode.cs" />
     <Compile Include="Model\MarginInfo.cs" />
-    <Compile Include="Model\MarginInfo2.cs" />
     <Compile Include="Model\MarkupAnnotation.cs" />
     <Compile Include="Model\MergeDocuments.cs" />
     <Compile Include="Model\MovieAnnotation.cs" />

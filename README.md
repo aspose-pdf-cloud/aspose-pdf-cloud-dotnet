@@ -399,7 +399,6 @@ Class | Method | HTTP request | Description
  - [Model.LinkElement](docs/LinkElement.md)
  - [Model.LinkHighlightingMode](docs/LinkHighlightingMode.md)
  - [Model.MarginInfo](docs/MarginInfo.md)
- - [Model.MarginInfo2](docs/MarginInfo2.md)
  - [Model.MergeDocuments](docs/MergeDocuments.md)
  - [Model.OptimizeOptions](docs/OptimizeOptions.md)
  - [Model.PageWordCount](docs/PageWordCount.md)
