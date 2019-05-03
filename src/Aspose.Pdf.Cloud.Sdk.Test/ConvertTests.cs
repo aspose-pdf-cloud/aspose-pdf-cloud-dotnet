@@ -603,5 +603,49 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 Assert.That(response.Code, Is.EqualTo(201));
             }
         }
+
+        /// <summary>
+        /// Test GetPdfInStorageToXlsx
+        /// </summary>
+        [Test]
+        public void GetPdfInStorageToXlsxTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetPdfInStorageToXlsx(name, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
+
+        /// <summary>
+        /// Test PutPdfInStorageToXlsx
+        /// </summary>
+        [Test]
+        public void PutPdfInStorageToXlsxTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);
+            string resFileName = "result.xlsx";
+
+            var response = PdfApi.PutPdfInStorageToXlsx(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(201));
+        }
+
+        /// <summary>
+        /// Test PutPdfInRequestToXls
+        /// </summary>
+        [Test]
+        public void PutPdfInRequestToXlsxTest()
+        {
+            string name = "4pages.pdf";
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
+            {
+                string resFileName = "result.xlsx";
+
+                var response = PdfApi.PutPdfInRequestToXlsx(Path.Combine(TempFolder, resFileName), file: stream);
+                Assert.That(response.Code, Is.EqualTo(201));
+            }
+        }
+
     }
 }

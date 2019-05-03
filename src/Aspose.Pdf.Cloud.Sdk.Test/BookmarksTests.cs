@@ -23,7 +23,9 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Collections.Generic;
 using System.Net;
+using Aspose.Pdf.Cloud.Sdk.Model;
 using NUnit.Framework;
 
 namespace Aspose.Pdf.Cloud.Sdk.Test
@@ -34,6 +36,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     [TestFixture]
     public class BookmarksTests : TestsBase
     {
+        /*
         /// <summary>
         /// Test GetDocumentBookmarks
         /// </summary>
@@ -44,7 +47,126 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(name, name);
 
             var response = PdfApi.GetDocumentBookmarks(name, folder: TempFolder);
-            Assert.That(response.Length, Is.GreaterThan(0));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
+
+        /// <summary>
+        /// Test GetBookmarks
+        /// </summary>
+        [Test]
+        public void GetBookmarksTest()
+        {
+            const string name = "PdfWithBookmarks.pdf";
+            UploadFile(name, name);
+
+            string bookmarkPath = "1";
+
+            var response = PdfApi.GetBookmarks(name, bookmarkPath, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetBookmark
+        /// </summary>
+        [Test]
+        public void GetBookmarkTest()
+        {
+            const string name = "PdfWithBookmarks.pdf";
+            UploadFile(name, name);
+
+            string bookmarkPath = "1";
+
+            var response = PdfApi.GetBookmark(name, bookmarkPath, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test DeleteDocumentBookmarks
+        /// </summary>
+        [Test]
+        public void DeleteDocumentBookmarksTest()
+        {
+            const string name = "PdfWithBookmarks.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.DeleteDocumentBookmarks(name, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test DeleteBookmark
+        /// </summary>
+        [Test]
+        public void DeleteBookmarkByPathTest()
+        {
+            const string name = "PdfWithBookmarks.pdf";
+            UploadFile(name, name);
+
+            string bookmarkPath = "1/1";
+
+            var response = PdfApi.DeleteBookmark(name, bookmarkPath, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PostBookmark
+        /// </summary>
+        [Test]
+        public void PostBookmarkTest()
+        {
+            const string name = "PdfWithBookmarks.pdf";
+            UploadFile(name, name);
+
+            string bookmarkPath = "1/1";
+
+            var bookmark = new Bookmark();
+            bookmark.Action = "GoTo";
+            bookmark.Bold = true;
+            bookmark.Italic = false;
+            bookmark.Title = "New Bookmark XYZ";
+            bookmark.PageDisplay = "XYZ";
+            bookmark.PageDisplayBottom = 10;
+            bookmark.PageDisplayLeft = 10;
+            bookmark.PageDisplayRight = 10;
+            bookmark.PageDisplayTop = 10;
+            bookmark.PageDisplayZoom = 2;
+            bookmark.PageNumber = 2;
+            bookmark.Color = new Color(255, 255, 0, 0);
+            var bookmarks = new List<Bookmark>();
+            bookmarks.Add(bookmark);
+
+            var response = PdfApi.PostBookmark(name, bookmarkPath, bookmarks, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PutBookmark
+        /// </summary>
+        [Test]
+        public void PutBookmarkTest()
+        {
+            const string name = "PdfWithBookmarks.pdf";
+            UploadFile(name, name);
+
+            string bookmarkPath = "2";
+
+            var bookmark = new Bookmark();
+            bookmark.Action = "GoTo";
+            bookmark.Bold = true;
+            bookmark.Italic = false;
+            bookmark.Title = "New Bookmark XYZ";
+            bookmark.PageDisplay = "XYZ";
+            bookmark.PageDisplayBottom = 10;
+            bookmark.PageDisplayLeft = 10;
+            bookmark.PageDisplayRight = 10;
+            bookmark.PageDisplayTop = 10;
+            bookmark.PageDisplayZoom = 2;
+            bookmark.PageNumber = 2;
+            bookmark.Color = new Color(255, 255, 0, 0);
+
+            var response = PdfApi.PutBookmark(name, bookmarkPath, bookmark, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+        */
     }
 }

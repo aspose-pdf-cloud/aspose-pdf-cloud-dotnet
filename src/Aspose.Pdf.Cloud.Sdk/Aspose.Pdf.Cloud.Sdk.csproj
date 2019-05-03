@@ -80,6 +80,8 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\AttachmentResponse.cs" />
     <Compile Include="Model\Attachments.cs" />
     <Compile Include="Model\AttachmentsResponse.cs" />
+    <Compile Include="Model\BorderCornerStyle.cs" />
+    <Compile Include="Model\BorderInfo.cs" />
     <Compile Include="Model\CapStyle.cs" />
     <Compile Include="Model\CaptionPosition.cs" />
     <Compile Include="Model\CaretAnnotation.cs" />
@@ -87,6 +89,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\CaretAnnotations.cs" />
     <Compile Include="Model\CaretAnnotationsResponse.cs" />
     <Compile Include="Model\CaretSymbol.cs" />
+    <Compile Include="Model\Cell.cs" />
     <Compile Include="Model\CellRecognized.cs" />
     <Compile Include="Model\CircleAnnotation.cs" />
     <Compile Include="Model\CircleAnnotationResponse.cs" />
@@ -94,8 +97,10 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\CircleAnnotationsResponse.cs" />
     <Compile Include="Model\Color.cs" />
     <Compile Include="Model\ColorDepth.cs" />
+    <Compile Include="Model\ColumnAdjustment.cs" />
     <Compile Include="Model\CommonFigureAnnotation.cs" />
     <Compile Include="Model\CompressionType.cs" />
+    <Compile Include="Model\CryptoAlgorithm.cs" />
     <Compile Include="Model\DiscUsage.cs" />
     <Compile Include="Model\DiscUsageResponse.cs" />
     <Compile Include="Model\DocFormat.cs" />
@@ -134,6 +139,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\FreeTextAnnotations.cs" />
     <Compile Include="Model\FreeTextAnnotationsResponse.cs" />
     <Compile Include="Model\FreeTextIntent.cs" />
+    <Compile Include="Model\GraphInfo.cs" />
     <Compile Include="Model\HighlightAnnotation.cs" />
     <Compile Include="Model\HighlightAnnotationResponse.cs" />
     <Compile Include="Model\HighlightAnnotations.cs" />
@@ -142,6 +148,8 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\HtmlDocumentType.cs" />
     <Compile Include="Model\HtmlMarkupGenerationModes.cs" />
     <Compile Include="Model\Image.cs" />
+    <Compile Include="Model\ImageFooter.cs" />
+    <Compile Include="Model\ImageHeader.cs" />
     <Compile Include="Model\ImageResponse.cs" />
     <Compile Include="Model\Images.cs" />
     <Compile Include="Model\ImageSrcType.cs" />
@@ -179,12 +187,14 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\MovieAnnotationsResponse.cs" />
     <Compile Include="Model\OptimizeOptions.cs" />
     <Compile Include="Model\Page.cs" />
+    <Compile Include="Model\PageNumberStamp.cs" />
     <Compile Include="Model\Pages.cs" />
     <Compile Include="Model\PageWordCount.cs" />
     <Compile Include="Model\Paragraph.cs" />
     <Compile Include="Model\PartsEmbeddingModes.cs" />
     <Compile Include="Model\PdfAType.cs" />
     <Compile Include="Model\PdfPageStamp.cs" />
+    <Compile Include="Model\PermissionsFlags.cs" />
     <Compile Include="Model\Point.cs" />
     <Compile Include="Model\PolyAnnotation.cs" />
     <Compile Include="Model\PolygonAnnotation.cs" />
@@ -209,6 +219,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\RedactionAnnotations.cs" />
     <Compile Include="Model\RedactionAnnotationsResponse.cs" />
     <Compile Include="Model\Rotation.cs" />
+    <Compile Include="Model\Row.cs" />
     <Compile Include="Model\RowRecognized.cs" />
     <Compile Include="Model\ScreenAnnotation.cs" />
     <Compile Include="Model\ScreenAnnotationResponse.cs" />
@@ -252,6 +263,8 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\StrikeOutAnnotationResponse.cs" />
     <Compile Include="Model\StrikeOutAnnotations.cs" />
     <Compile Include="Model\StrikeOutAnnotationsResponse.cs" />
+    <Compile Include="Model\Table.cs" />
+    <Compile Include="Model\TableBroken.cs" />
     <Compile Include="Model\TableRecognized.cs" />
     <Compile Include="Model\TableRecognizedResponse.cs" />
     <Compile Include="Model\TablesRecognized.cs" />
@@ -260,6 +273,8 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\TextAnnotationResponse.cs" />
     <Compile Include="Model\TextAnnotations.cs" />
     <Compile Include="Model\TextAnnotationsResponse.cs" />
+    <Compile Include="Model\TextFooter.cs" />
+    <Compile Include="Model\TextHeader.cs" />
     <Compile Include="Model\TextHorizontalAlignment.cs" />
     <Compile Include="Model\TextIcon.cs" />
     <Compile Include="Model\TextLine.cs" />

@@ -111,5 +111,136 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.DeleteTable(Name, tableId, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
+
+        /// <summary>
+        /// Test PostPageTables
+        /// </summary>
+        [Test]
+        public void PostPageTablesTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            int pageNumber = 1;
+
+            var tables = new List<Table>
+            {
+                DrawTable()
+            };
+
+            var response = PdfApi.PostPageTables(name, pageNumber, tables, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(201));
+        }
+
+        /// <summary>
+        /// Test PutTable
+        /// </summary>
+        [Test]
+        public void PutTableTest()
+        {
+            var tablesResponse = PdfApi.GetDocumentTables(Name, folder: TempFolder);
+            string tableId = tablesResponse.Tables.List[0].Id;
+
+            var response = PdfApi.PutTable(Name, tableId, DrawTable(), folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(201));
+        }
+
+        #region private methods
+        private Table DrawTable()
+        {
+            TextState textState = new TextState(FontSize: 10d, BackgroundColor: new Color(255, 255, 0, 0));
+
+            int numOfCols = 5;
+            int numOfRows = 5;
+
+            var table = new Table();
+            table.Rows = new List<Row>();
+
+            string colWidths = "";
+            for (int c = 0; c < numOfCols; c++)
+            {
+                colWidths += " 30";
+            }
+            table.ColumnWidths = colWidths;
+
+            table.DefaultCellTextState = textState;
+
+
+
+            GraphInfo borderTableBorder = new GraphInfo();
+            borderTableBorder.Color = new Color(255, 0, 255, 0);
+            borderTableBorder.LineWidth = 1;
+
+            table.DefaultCellBorder = new BorderInfo
+            {
+                Top = borderTableBorder,
+                Right = borderTableBorder,
+                Bottom = borderTableBorder,
+                Left = borderTableBorder
+            };
+            table.Top = 100;
+
+            for (int r = 0; r < numOfRows; r++)
+            {
+
+                Row row = new Row(Cells: new List<Cell>());
+
+                for (int c = 0; c < numOfCols; c++)
+                {
+
+                    Cell cell = new Cell();
+                    cell.BackgroundColor = new Color(255, 0, 128, 0);
+                    cell.DefaultCellTextState = textState;
+                    cell.Paragraphs = new List<TextRect>
+                    {
+                        new TextRect() { Text = "value" }
+                    };
+                    //
+                    // change properties on cell
+                    //
+                    if (c == 1)
+                    {
+                        cell.DefaultCellTextState.ForegroundColor = new Color(255, 0, 0, 255);
+                    }
+
+                    //
+                    // change properties on cell AFTER first clearing and re-adding paragraphs
+                    //
+                    else if (c == 2)
+                    {
+                        cell.Paragraphs.Clear();
+                        cell.Paragraphs.Add(new TextRect() { Text = "y" });
+                        cell.DefaultCellTextState.ForegroundColor = new Color(255, 0, 0, 255);
+                    }
+
+                    //
+                    // change properties on paragraph
+                    //
+                    else if (c == 3)
+                    {
+                        cell.Paragraphs[0].TextState = textState;
+                        cell.Paragraphs[0].TextState.ForegroundColor = new Color(255, 0, 0, 255);
+                    }
+
+                    //
+                    // change properties on paragraph AFTER first clearing and re-adding paragraphs
+                    //
+                    else if (c == 4)
+                    {
+                        cell.Paragraphs.Clear();
+                        cell.Paragraphs.Add(new TextRect() { Text = "y" });
+                        cell.Paragraphs[0].TextState = textState;
+                        cell.Paragraphs[0].TextState.ForegroundColor = new Color(255, 0, 0, 255);
+                    }
+                    row.Cells.Add(cell);
+
+                }
+                table.Rows.Add(row);
+            }
+
+            return table;
+        }
+
+        #endregion private methods
     }
 }
