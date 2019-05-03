@@ -47,7 +47,7 @@ NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploa
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api-dev.aspose.cloud/v2.0*
+All URIs are relative to *https://api.aspose.cloud/v2.0*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
