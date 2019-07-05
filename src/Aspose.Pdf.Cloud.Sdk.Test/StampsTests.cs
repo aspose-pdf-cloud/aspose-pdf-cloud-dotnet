@@ -116,7 +116,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             };
 
             var response = PdfApi.PostPageTextStamps(Name, 1, stamps, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -149,7 +149,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             };
 
             var response = PdfApi.PostPageImageStamps(Name, 1, stamps, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
 
@@ -185,7 +185,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             };
 
             var response = PdfApi.PostPagePdfPageStamps(fileName, 1, stamps, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -230,7 +230,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             };
 
             var response = PdfApi.PostDocumentPageNumberStamps(name, stamp, startPageNumber: 2, endPageNumber: 3, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

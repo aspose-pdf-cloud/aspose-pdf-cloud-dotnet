@@ -85,10 +85,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             const string parentId = "GI5TCMR3GE2TQLBSGM3CYMJYGUWDENRV";
 
-            PopupAnnotation annotation = new PopupAnnotation()
+            PopupAnnotation annotation = new PopupAnnotation(Rect: new Rectangle(100, 100, 200, 200))
             {
                 Name = "Test Popup Annotation",
-                Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                 HorizontalAlignment = HorizontalAlignment.Center,
                 ZIndex = 1,
@@ -96,7 +95,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             };
 
             var response = PdfApi.PostPopupAnnotation(Name, parentId, annotation, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -118,10 +117,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PutPopupAnnotationTest()
         {
-            PopupAnnotation annotation = new PopupAnnotation()
+            PopupAnnotation annotation = new PopupAnnotation(Rect: new Rectangle(101, 101, 201, 201))
             {
                 Name = "Test Popup Annotation Updated",
-                Rect = new Rectangle(101, 101, 201, 201),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 ZIndex = 1,
@@ -132,7 +130,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string annotationId = lineResponse.Annotations.List[0].Id;
 
             var response = PdfApi.PutPopupAnnotation(Name, annotationId, annotation, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

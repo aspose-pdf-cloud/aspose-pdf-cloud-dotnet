@@ -49,14 +49,27 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Page" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Page() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Page" /> class.
+        /// </summary>
         /// <param name="Links">Link to the document..</param>
-        /// <param name="Id">Page&#39;s id..</param>
+        /// <param name="Id">Page&#39;s id. (required).</param>
         /// <param name="Images">Page&#39;s images.</param>
         /// <param name="Rectangle">Page&#39;s rectangle.</param>
         public Page(List<Link> Links = default(List<Link>), int? Id = default(int?), Images Images = default(Images), Rectangle Rectangle = default(Rectangle))
         {
+            // to ensure "Id" is required (not null)
+            if (Id == null)
+            {
+                throw new InvalidDataException("Id is a required property for Page and cannot be null");
+            }
+            else
+            {
+                this.Id = Id;
+            }
             this.Links = Links;
-            this.Id = Id;
             this.Images = Images;
             this.Rectangle = Rectangle;
         }

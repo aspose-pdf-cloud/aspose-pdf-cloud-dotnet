@@ -73,10 +73,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             List<RedactionAnnotation> annotations = new List<RedactionAnnotation>
             {
-                new RedactionAnnotation()
+                new RedactionAnnotation(Rect: new Rectangle(100, 100, 200, 200))
                 {
                     Name = "Test Redaction Annotation",
-                    Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     ZIndex = 1,
@@ -90,7 +89,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             };
 
             var response = PdfApi.PostPageRedactionAnnotations(Name, 1, annotations, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -112,10 +111,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PutRedactionAnnotationTest()
         {
-            RedactionAnnotation annotation = new RedactionAnnotation()
+            RedactionAnnotation annotation = new RedactionAnnotation(Rect: new Rectangle(100, 100, 200, 200))
             {
                 Name = "Updated Test",
-                Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 ZIndex = 1,
@@ -130,7 +128,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string annotationId = lineResponse.Annotations.List[0].Id;
 
             var response = PdfApi.PutRedactionAnnotation(Name, annotationId, annotation, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

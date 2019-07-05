@@ -61,7 +61,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Reason">Gets or sets the reason of the signature..</param>
         /// <param name="Contact">Gets or sets the contact of the signature..</param>
         /// <param name="Location">Gets or sets the location of the signature..</param>
-        /// <param name="Visible">Gets or sets a value indicating whether this  is visible. Supports only when signing particular page. (required).</param>
+        /// <param name="Visible">Gets or sets a value indicating whether this Signature is visible. Supports only when signing particular page. (required).</param>
         /// <param name="Rectangle">Gets or sets the visible rectangle of the signature. Supports only when signing particular page..</param>
         /// <param name="FormFieldName">Gets or sets the name of the signature field. Supports only when signing document with particular form field..</param>
         /// <param name="Authority">Gets or sets the name of the person or authority signing the document...</param>
@@ -166,9 +166,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Location { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this  is visible. Supports only when signing particular page.
+        /// Gets or sets a value indicating whether this Signature is visible. Supports only when signing particular page.
         /// </summary>
-        /// <value>Gets or sets a value indicating whether this  is visible. Supports only when signing particular page.</value>
+        /// <value>Gets or sets a value indicating whether this Signature is visible. Supports only when signing particular page.</value>
         [DataMember(Name="Visible", EmitDefaultValue=false)]
         public bool? Visible { get; set; }
 
@@ -379,6 +379,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // SignaturePath (string) minLength
+            if(this.SignaturePath != null && this.SignaturePath.Length < 1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for SignaturePath, length must be greater than 1.", new [] { "SignaturePath" });
+            }
+
             yield break;
         }
     }

@@ -49,6 +49,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FreeTextAnnotation" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected FreeTextAnnotation() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FreeTextAnnotation" /> class.
+        /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Color">Color of the annotation..</param>
         /// <param name="Contents">Get the annotation content..</param>
@@ -56,7 +61,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Id">Gets ID of the annotation..</param>
         /// <param name="Flags">Gets Flags of the annotation..</param>
         /// <param name="Name">Gets Name of the annotation..</param>
-        /// <param name="Rect">Gets Rect of the annotation..</param>
+        /// <param name="Rect">Gets Rect of the annotation. (required).</param>
         /// <param name="PageIndex">Gets PageIndex of the annotation..</param>
         /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
         /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation..</param>
@@ -68,9 +73,27 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Justification">Gets Justification of the annotation..</param>
         /// <param name="Intent">Gets or sets the intent of the free text annotation..</param>
         /// <param name="Rotate">Angle of annotation rotation..</param>
-        /// <param name="TextStyle">Text style of the annotation..</param>
+        /// <param name="TextStyle">Text style of the annotation. (required).</param>
         public FreeTextAnnotation(List<Link> Links = default(List<Link>), Color Color = default(Color), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), Rectangle Rect = default(Rectangle), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), Justification Justification = default(Justification), FreeTextIntent Intent = default(FreeTextIntent), Rotation Rotate = default(Rotation), TextStyle TextStyle = default(TextStyle))
         {
+            // to ensure "Rect" is required (not null)
+            if (Rect == null)
+            {
+                throw new InvalidDataException("Rect is a required property for FreeTextAnnotation and cannot be null");
+            }
+            else
+            {
+                this.Rect = Rect;
+            }
+            // to ensure "TextStyle" is required (not null)
+            if (TextStyle == null)
+            {
+                throw new InvalidDataException("TextStyle is a required property for FreeTextAnnotation and cannot be null");
+            }
+            else
+            {
+                this.TextStyle = TextStyle;
+            }
             this.Links = Links;
             this.Color = Color;
             this.Contents = Contents;
@@ -78,7 +101,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Id = Id;
             this.Flags = Flags;
             this.Name = Name;
-            this.Rect = Rect;
             this.PageIndex = PageIndex;
             this.ZIndex = ZIndex;
             this.HorizontalAlignment = HorizontalAlignment;
@@ -90,7 +112,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Justification = Justification;
             this.Intent = Intent;
             this.Rotate = Rotate;
-            this.TextStyle = TextStyle;
         }
         
         /// <summary>

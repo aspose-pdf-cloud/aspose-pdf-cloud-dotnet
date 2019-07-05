@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Id** | **string** | Gets ID of the annotation. | [optional] 
 **Flags** | [**List&lt;AnnotationFlags&gt;**](AnnotationFlags.md) | Gets Flags of the annotation. | [optional] 
 **Name** | **string** | Gets Name of the annotation. | [optional] 
-**Rect** | [**Rectangle**](Rectangle.md) | Gets Rect of the annotation. | [optional] 
+**Rect** | [**Rectangle**](Rectangle.md) | Gets Rect of the annotation. | 
 **PageIndex** | **int?** | Gets PageIndex of the annotation. | [optional] 
 **ZIndex** | **int?** | Gets ZIndex of the annotation. | [optional] 
 **HorizontalAlignment** | [**HorizontalAlignment**](HorizontalAlignment.md) | Gets HorizontalAlignment of the annotation. | [optional] 
@@ -21,9 +21,9 @@ Name | Type | Description | Notes
 **Subject** | **string** | Get the annotation subject. | [optional] 
 **Title** | **string** | Get the annotation title. | [optional] 
 **RichText** | **string** | Get the annotation RichText. | [optional] 
-**Starting** | [**Point**](Point.md) | Gets or sets starting point of line. | [optional] 
+**Starting** | [**Point**](Point.md) | Gets or sets starting point of line. | 
 **StartingStyle** | [**LineEnding**](LineEnding.md) | Gets or sets line ending style for line starting point. | [optional] 
-**Ending** | [**Point**](Point.md) | Gets or sets ending point of line. | [optional] 
+**Ending** | [**Point**](Point.md) | Gets or sets ending point of line. | 
 **EndingStyle** | [**LineEnding**](LineEnding.md) | Gets or sets ending style for end point of line. | [optional] 
 **InteriorColor** | [**Color**](Color.md) | Gets or sets interior color of the annotation. | [optional] 
 **LeaderLine** | **double?** | Gets or sets leader line length. | [optional] 

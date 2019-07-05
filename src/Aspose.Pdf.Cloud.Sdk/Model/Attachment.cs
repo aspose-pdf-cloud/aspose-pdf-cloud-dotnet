@@ -49,23 +49,36 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Attachment" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Attachment() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Attachment" /> class.
+        /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Description">Gets text associated with the attachment. .</param>
         /// <param name="MimeType">Gets subtype of the attachment file..</param>
         /// <param name="Name">Gets the name of the attachment. .</param>
         /// <param name="CreationDate">The date and time when the embedded file was created..</param>
         /// <param name="ModificationDate">The date and time when the embedded file was last modified..</param>
-        /// <param name="Size">The size of the uncompressed embedded file, in bytes..</param>
+        /// <param name="Size">The size of the uncompressed embedded file, in bytes. (required).</param>
         /// <param name="CheckSum">A 16-byte string that is the checksum of the bytes of the uncompressed embedded file.  The checksum is calculated by applying the standard MD5 message-digest algorithm  to the bytes of the embedded file stream..</param>
         public Attachment(List<Link> Links = default(List<Link>), string Description = default(string), string MimeType = default(string), string Name = default(string), string CreationDate = default(string), string ModificationDate = default(string), int? Size = default(int?), string CheckSum = default(string))
         {
+            // to ensure "Size" is required (not null)
+            if (Size == null)
+            {
+                throw new InvalidDataException("Size is a required property for Attachment and cannot be null");
+            }
+            else
+            {
+                this.Size = Size;
+            }
             this.Links = Links;
             this.Description = Description;
             this.MimeType = MimeType;
             this.Name = Name;
             this.CreationDate = CreationDate;
             this.ModificationDate = ModificationDate;
-            this.Size = Size;
             this.CheckSum = CheckSum;
         }
         

@@ -42,14 +42,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test PutCreate
         /// </summary>
         [Test]
-        public void PutCreateTest()
+        public void UploadFileTest()
         {
             string name = "4pages.pdf";
 
             using (var file = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
-                var response = PdfApi.PutCreate(Path.Combine(TempFolder, name), file);
-                Assert.That(response.Code, Is.EqualTo(200));
+                var response = PdfApi.UploadFile(Path.Combine(TempFolder, name), file);
+                Assert.That(response.Uploaded.Count, Is.EqualTo(1));
             }
         }
 
@@ -57,12 +57,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test GetDownload
         /// </summary>
         [Test]
-        public void GetDownloadTest()
+        public void DownloadFileTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
 
-            var response = PdfApi.GetDownload(Path.Combine(TempFolder, name));
+            var response = PdfApi.DownloadFile(Path.Combine(TempFolder, name));
             Assert.That(response.Length, Is.GreaterThan(0));
         }
 
@@ -70,15 +70,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test PostMoveFile
         /// </summary>
         [Test]
-        public void PostMoveFileTest()
+        public void MoveFileTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
             string src = Path.Combine(TempFolder, name);
             string dest = Path.Combine(TempFolder, "4pages_renamed.pdf");
 
-            var response = PdfApi.PostMoveFile(src, dest);
-            Assert.That(response.Code, Is.EqualTo(200));
+            PdfApi.MoveFile(src, dest);
         }
 
         /// <summary>
@@ -91,45 +90,41 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(name, name);
             string path = Path.Combine(TempFolder, name);
 
-            var response = PdfApi.DeleteFile(path);
-            Assert.That(response.Code, Is.EqualTo(200));
+            PdfApi.DeleteFile(path);
         }
 
         /// <summary>
         /// Test GetListFiles
         /// </summary>
         [Test]
-        public void GetListFilesTest()
+        public void GetFilesListTest()
         {
-            var response = PdfApi.GetListFiles(TempFolder);
-            Assert.That(response.Code, Is.EqualTo(200));
+            var response = PdfApi.GetFilesList(TempFolder);
+            Assert.That(response.Value.Count, Is.GreaterThan(0));
         }
 
         /// <summary>
         /// Test PutCreateFolder
         /// </summary>
         [Test]
-        public void PutCreateFolderTest()
+        public void CreateFolderTest()
         {
             string path = Path.Combine(TempFolder, "testFolder");
-            var response = PdfApi.PutCreateFolder(path);
-            Assert.That(response.Code, Is.EqualTo(200));
+            PdfApi.CreateFolder(path);
         }
 
         /// <summary>
         /// Test PostMoveFolder
         /// </summary>
         [Test]
-        public void PostMoveFolderTest()
+        public void MoveFolderTest()
         {
             string src = Path.Combine(TempFolder, "testFolder");
-            var createFolderresponse = PdfApi.PutCreateFolder(src);
-            Assert.That(createFolderresponse.Code, Is.EqualTo(200));
-
+            PdfApi.CreateFolder(src);
+            
             string dest = Path.Combine(TempFolder, "testFolderRenamed");
 
-            var response = PdfApi.PostMoveFolder(src, dest);
-            Assert.That(response.Code, Is.EqualTo(200));
+            PdfApi.MoveFolder(src, dest);
         }
 
         /// <summary>
@@ -139,34 +134,32 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void DeleteFolderTest()
         {
             string path = Path.Combine(TempFolder, "testFolderRenamed");
-            var createFolderresponse = PdfApi.PutCreateFolder(path);
-
-            var response = PdfApi.DeleteFolder(path);
-            Assert.That(response.Code, Is.EqualTo(200));
+            PdfApi.CreateFolder(path);
+            PdfApi.DeleteFolder(path);
         }
 
         /// <summary>
         /// Test GetIsStorageExist
         /// </summary>
         [Test]
-        public void GetIsStorageExistTest()
+        public void StorageExistTest()
         {
             string name = "PDF-CI";
-            var response = PdfApi.GetIsStorageExist(name);
-            Assert.That(response.Code, Is.EqualTo(200));
+            var response = PdfApi.StorageExists(name);
+            Assert.That(response.Exists, Is.True);
         }
 
         /// <summary>
         /// Test GetIsExist
         /// </summary>
         [Test]
-        public void GetIsExistTest()
+        public void ObjectExistsTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
 
-            var response = PdfApi.GetIsExist(Path.Combine(TempFolder, name));
-            Assert.That(response.Code, Is.EqualTo(200));
+            var response = PdfApi.ObjectExists(Path.Combine(TempFolder, name));
+            Assert.That(response.Exists, Is.True);
         }
 
         /// <summary>
@@ -176,20 +169,20 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void GetDiscUsageTest()
         {
             var response = PdfApi.GetDiscUsage();
-            Assert.That(response.Code, Is.EqualTo(200));
+            Assert.That(response.TotalSize, Is.GreaterThan(0));
         }
 
         /// <summary>
         /// Test GetListFileVersions
         /// </summary>
         [Test]
-        public void GetListFileVersionsTest()
+        public void GetFileVersionsTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
 
-            var response = PdfApi.GetListFileVersions(Path.Combine(TempFolder, name));
-            Assert.That(response.Code, Is.EqualTo(200));
+            var response = PdfApi.GetFileVersions(Path.Combine(TempFolder, name));
+            Assert.That(response.Value.Count, Is.GreaterThan(0));
         }
     }
 }

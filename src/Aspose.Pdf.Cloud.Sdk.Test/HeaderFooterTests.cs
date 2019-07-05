@@ -73,7 +73,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             int startPage = 2;
             int endPage = 3;
             var response = PdfApi.PostDocumentTextHeader(name, header, startPage, endPage, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
 
@@ -109,7 +109,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             int startPage = 2;
             int endPage = 3;
             var response = PdfApi.PostDocumentTextFooter(name, footer, startPage, endPage, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -143,7 +143,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             int startPage = 2;
             int endPage = 3;
             var response = PdfApi.PostDocumentImageHeader(name, header, startPage, endPage, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             int startPage = 2;
             int endPage = 3;
             var response = PdfApi.PostDocumentImageFooter(name, footer, startPage, endPage, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
     }

@@ -42,31 +42,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         private const int EndPage = 4;
 
         /// <summary>
-        ///     Test PostAppendDocument using query parameters
+        ///     Test PostAppendDocument
         /// </summary>
         [Test]
-        public void PostAppendDocumentUsingQueryParamsTest()
+        public void PostAppendDocument()
         {
             UploadFile(Name, Name);
             UploadFile(AppendFile, AppendFile);
 
             var responce =
-                PdfApi.PostAppendDocument(Name, appendFile: Path.Combine(TempFolder, AppendFile), startPage: StartPage, endPage: EndPage, folder: TempFolder);
-            Assert.That(responce.Code, Is.EqualTo(200));
-        }
-
-        /// <summary>
-        ///     Test PostAppendDocument using json
-        /// </summary>
-        [Test]
-        public void PostAppendDocumentUsingBodyParamsTest()
-        {
-            UploadFile(Name, Name);
-            UploadFile(AppendFile, AppendFile);
-
-            var appendDocument = new AppendDocument(Path.Combine(TempFolder, AppendFile), StartPage, EndPage);
-            var responce =
-                PdfApi.PostAppendDocument(Name, appendDocument, folder: TempFolder);
+                PdfApi.PostAppendDocument(Name, appendDocument: null, appendFile: Path.Combine(TempFolder, AppendFile), startPage: StartPage, endPage: EndPage, folder: TempFolder);
             Assert.That(responce.Code, Is.EqualTo(200));
         }
     }

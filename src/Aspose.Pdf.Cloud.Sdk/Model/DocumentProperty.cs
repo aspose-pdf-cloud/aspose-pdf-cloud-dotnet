@@ -49,16 +49,29 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentProperty" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected DocumentProperty() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DocumentProperty" /> class.
+        /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Name">Pame of the property..</param>
         /// <param name="Value">Property value..</param>
-        /// <param name="BuiltIn">Value indicating whether it is a built-in property..</param>
+        /// <param name="BuiltIn">Value indicating whether it is a built-in property. (required).</param>
         public DocumentProperty(List<Link> Links = default(List<Link>), string Name = default(string), string Value = default(string), bool? BuiltIn = default(bool?))
         {
+            // to ensure "BuiltIn" is required (not null)
+            if (BuiltIn == null)
+            {
+                throw new InvalidDataException("BuiltIn is a required property for DocumentProperty and cannot be null");
+            }
+            else
+            {
+                this.BuiltIn = BuiltIn;
+            }
             this.Links = Links;
             this.Name = Name;
             this.Value = Value;
-            this.BuiltIn = BuiltIn;
         }
         
         /// <summary>

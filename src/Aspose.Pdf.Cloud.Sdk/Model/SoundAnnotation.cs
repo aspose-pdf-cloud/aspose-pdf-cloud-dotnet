@@ -49,6 +49,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SoundAnnotation" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected SoundAnnotation() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SoundAnnotation" /> class.
+        /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Color">Color of the annotation..</param>
         /// <param name="Contents">Get the annotation content..</param>
@@ -56,7 +61,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Id">Gets ID of the annotation..</param>
         /// <param name="Flags">Gets Flags of the annotation..</param>
         /// <param name="Name">Gets Name of the annotation..</param>
-        /// <param name="Rect">Gets Rect of the annotation..</param>
+        /// <param name="Rect">Gets Rect of the annotation. (required).</param>
         /// <param name="PageIndex">Gets PageIndex of the annotation..</param>
         /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
         /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation..</param>
@@ -65,7 +70,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Subject">Get the annotation subject..</param>
         /// <param name="Title">Get the annotation title..</param>
         /// <param name="RichText">Get the annotation RichText..</param>
-        /// <param name="FilePath">A sound file path defining the sound to be played when the annotation is activated..</param>
+        /// <param name="FilePath">A sound file path defining the sound to be played when the annotation is activated. (required).</param>
         /// <param name="Icon">Gets or sets an icon to be used in displaying the annotation..</param>
         /// <param name="Rate">Gets or sets the sampling rate, in samples per second..</param>
         /// <param name="Channels">Gets or sets the number of sound channels..</param>
@@ -73,6 +78,24 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Encoding">Gets or sets the encoding format for the sample data..</param>
         public SoundAnnotation(List<Link> Links = default(List<Link>), Color Color = default(Color), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), Rectangle Rect = default(Rectangle), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), string FilePath = default(string), SoundIcon Icon = default(SoundIcon), int? Rate = default(int?), int? Channels = default(int?), int? Bits = default(int?), SoundEncoding Encoding = default(SoundEncoding))
         {
+            // to ensure "Rect" is required (not null)
+            if (Rect == null)
+            {
+                throw new InvalidDataException("Rect is a required property for SoundAnnotation and cannot be null");
+            }
+            else
+            {
+                this.Rect = Rect;
+            }
+            // to ensure "FilePath" is required (not null)
+            if (FilePath == null)
+            {
+                throw new InvalidDataException("FilePath is a required property for SoundAnnotation and cannot be null");
+            }
+            else
+            {
+                this.FilePath = FilePath;
+            }
             this.Links = Links;
             this.Color = Color;
             this.Contents = Contents;
@@ -80,7 +103,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Id = Id;
             this.Flags = Flags;
             this.Name = Name;
-            this.Rect = Rect;
             this.PageIndex = PageIndex;
             this.ZIndex = ZIndex;
             this.HorizontalAlignment = HorizontalAlignment;
@@ -89,7 +111,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Subject = Subject;
             this.Title = Title;
             this.RichText = RichText;
-            this.FilePath = FilePath;
             this.Icon = Icon;
             this.Rate = Rate;
             this.Channels = Channels;
@@ -495,6 +516,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // FilePath (string) minLength
+            if(this.FilePath != null && this.FilePath.Length < 1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for FilePath, length must be greater than 1.", new [] { "FilePath" });
+            }
+
             yield break;
         }
     }

@@ -78,7 +78,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(Name, Name);
             UploadFile(SignatureName, SignatureName);
 
-            var response = PdfApi.PostSignPage(Name, pageNumber: 1, signature: Signature, folder: TempFolder);
+            var response = PdfApi.PostSignPage(Name, pageNumber: 1, sign: Signature, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 

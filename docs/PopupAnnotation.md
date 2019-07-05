@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Id** | **string** | Gets ID of the annotation. | [optional] 
 **Flags** | [**List&lt;AnnotationFlags&gt;**](AnnotationFlags.md) | Gets Flags of the annotation. | [optional] 
 **Name** | **string** | Gets Name of the annotation. | [optional] 
-**Rect** | [**Rectangle**](Rectangle.md) | Gets Rect of the annotation. | [optional] 
+**Rect** | [**Rectangle**](Rectangle.md) | Gets Rect of the annotation. | 
 **PageIndex** | **int?** | Gets PageIndex of the annotation. | [optional] 
 **ZIndex** | **int?** | Gets ZIndex of the annotation. | [optional] 
 **HorizontalAlignment** | [**HorizontalAlignment**](HorizontalAlignment.md) | Gets HorizontalAlignment of the annotation. | [optional] 

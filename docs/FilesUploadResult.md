@@ -1,15 +1,12 @@
-﻿# Aspose.Pdf.Cloud.Sdk.Model.File
-Represents file DTO.
+﻿# Aspose.Pdf.Cloud.Sdk.Model.FilesUploadResult
+File upload result
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** |  | [optional] 
-**IsFolder** | **bool?** |  | 
-**ModifiedDate** | **DateTime?** |  | [optional] 
-**Size** | **long?** |  | 
-**Path** | **string** |  | [optional] 
+**Uploaded** | **List&lt;string&gt;** | List of uploaded file names | [optional] 
+**Errors** | [**List&lt;Error&gt;**](Error.md) | List of errors. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

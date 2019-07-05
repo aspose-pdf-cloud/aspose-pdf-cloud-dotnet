@@ -50,10 +50,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="GraphInfo" /> class.
         /// </summary>
         /// <param name="LineWidth">Gets or sets a float value that indicates the line width of the graph..</param>
-        /// <param name="Color">Gets or sets a  object that indicates the color of the graph..</param>
+        /// <param name="Color">Gets or sets a Color object that indicates the color of the graph..</param>
         /// <param name="DashArray">Gets or sets a dash array..</param>
         /// <param name="DashPhase">Gets or sets a dash phase..</param>
-        /// <param name="FillColor">Gets or sets a  object that indicates the fill color of the graph..</param>
+        /// <param name="FillColor">Gets or sets a Color object that indicates the fill color of the graph..</param>
         /// <param name="IsDoubled">Gets or sets is border doubled..</param>
         /// <param name="SkewAngleX">Gets or sets a float value that indicates the skew angle of the x-coordinate when transforming a coordinate system..</param>
         /// <param name="SkewAngleY">Gets or sets a float value that indicates the skew angle of the y-coordinate when transforming a coordinate system..</param>
@@ -83,9 +83,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public double? LineWidth { get; set; }
 
         /// <summary>
-        /// Gets or sets a  object that indicates the color of the graph.
+        /// Gets or sets a Color object that indicates the color of the graph.
         /// </summary>
-        /// <value>Gets or sets a  object that indicates the color of the graph.</value>
+        /// <value>Gets or sets a Color object that indicates the color of the graph.</value>
         [DataMember(Name="Color", EmitDefaultValue=false)]
         public Color Color { get; set; }
 
@@ -104,9 +104,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public int? DashPhase { get; set; }
 
         /// <summary>
-        /// Gets or sets a  object that indicates the fill color of the graph.
+        /// Gets or sets a Color object that indicates the fill color of the graph.
         /// </summary>
-        /// <value>Gets or sets a  object that indicates the fill color of the graph.</value>
+        /// <value>Gets or sets a Color object that indicates the fill color of the graph.</value>
         [DataMember(Name="FillColor", EmitDefaultValue=false)]
         public Color FillColor { get; set; }
 

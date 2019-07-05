@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Id** | **string** | Gets ID of the annotation. | [optional] 
 **Flags** | [**List&lt;AnnotationFlags&gt;**](AnnotationFlags.md) | Gets Flags of the annotation. | [optional] 
 **Name** | **string** | Gets Name of the annotation. | [optional] 
-**Rect** | [**Rectangle**](Rectangle.md) | Gets Rect of the annotation. | [optional] 
+**Rect** | [**Rectangle**](Rectangle.md) | Gets Rect of the annotation. | 
 **PageIndex** | **int?** | Gets PageIndex of the annotation. | [optional] 
 **ZIndex** | **int?** | Gets ZIndex of the annotation. | [optional] 
 **HorizontalAlignment** | [**HorizontalAlignment**](HorizontalAlignment.md) | Gets HorizontalAlignment of the annotation. | [optional] 
@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **Subject** | **string** | Get the annotation subject. | [optional] 
 **Title** | **string** | Get the annotation title. | [optional] 
 **RichText** | **string** | Get the annotation RichText. | [optional] 
-**FilePath** | **string** | A sound file path defining the sound to be played when the annotation is activated. | [optional] 
+**FilePath** | **string** | A sound file path defining the sound to be played when the annotation is activated. | 
 **Icon** | [**SoundIcon**](SoundIcon.md) | Gets or sets an icon to be used in displaying the annotation. | [optional] 
 **Rate** | **int?** | Gets or sets the sampling rate, in samples per second. | [optional] 
 **Channels** | **int?** | Gets or sets the number of sound channels. | [optional] 

@@ -73,28 +73,28 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             List<PolygonAnnotation> annotations = new List<PolygonAnnotation>
             {
-                new PolygonAnnotation()
-                {
-                    Name = "Test Polygon Annotation",
-                    Rect = new Rectangle(100, 100, 200, 200),
-                    Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    RichText = "Rich Text",
-                    Subject = "Subj",
-                    ZIndex = 1,
-                    Title = "Title",
-                    Vertices = new List<Point>
+                new PolygonAnnotation(Rect: new Rectangle(100, 100, 200, 200),
+                    Vertices: new List<Point>
                     {
                         new Point(10, 10),
                         new Point(20, 10),
                         new Point(10, 20),
                         new Point(10, 10)
-                    }
+                    })
+                {
+                    Name = "Test Polygon Annotation",
+                    
+                    Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    RichText = "Rich Text",
+                    Subject = "Subj",
+                    ZIndex = 1,
+                    Title = "Title"
                 }
             };
 
             var response = PdfApi.PostPagePolygonAnnotations(Name, 1, annotations, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -116,30 +116,29 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PutPolygonAnnotationTest()
         {
-            PolygonAnnotation annotation = new PolygonAnnotation()
-            {
-                Name = "Updated Test",
-                Rect = new Rectangle(100, 100, 200, 200),
-                Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
-                HorizontalAlignment = HorizontalAlignment.Center,
-                RichText = "Rich Text Updated",
-                Subject = "Subj Updated",
-                ZIndex = 1,
-                Title = "Title Updated",
-                Vertices = new List<Point>
+            PolygonAnnotation annotation = new PolygonAnnotation(Rect: new Rectangle(100, 100, 200, 200),
+                Vertices: new List<Point>
                 {
                     new Point(10, 10),
                     new Point(20, 10),
                     new Point(10, 20),
                     new Point(10, 10)
-                }
+                })
+            {
+                Name = "Updated Test",
+                Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
+                HorizontalAlignment = HorizontalAlignment.Center,
+                RichText = "Rich Text Updated",
+                Subject = "Subj Updated",
+                ZIndex = 1,
+                Title = "Title Updated"
             };
 
             var lineResponse = PdfApi.GetDocumentPolygonAnnotations(Name, folder: TempFolder);
             string annotationId = lineResponse.Annotations.List[0].Id;
 
             var response = PdfApi.PutPolygonAnnotation(Name, annotationId, annotation, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

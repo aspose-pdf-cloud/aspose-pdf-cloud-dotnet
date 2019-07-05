@@ -41,10 +41,10 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// FileVersion
+    /// File Version
     /// </summary>
     [DataContract]
-    public partial class FileVersion : File,  IEquatable<FileVersion>, IValidatableObject
+    public partial class FileVersion : StorageFile,  IEquatable<FileVersion>, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="FileVersion" /> class.
@@ -54,13 +54,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FileVersion" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="IsFolder">IsFolder (required).</param>
-        /// <param name="ModifiedDate">ModifiedDate.</param>
-        /// <param name="Size">Size (required).</param>
-        /// <param name="Path">Path.</param>
-        /// <param name="VersionId">VersionId.</param>
-        /// <param name="IsLatest">IsLatest.</param>
+        /// <param name="Name">File or folder name..</param>
+        /// <param name="IsFolder">True if it is a folder. (required).</param>
+        /// <param name="ModifiedDate">File or folder last modified DateTime..</param>
+        /// <param name="Size">File or folder size. (required).</param>
+        /// <param name="Path">File or folder path..</param>
+        /// <param name="VersionId">File Version ID..</param>
+        /// <param name="IsLatest">Specifies whether the file is (true) or is not (false) the latest version of an file. (required).</param>
         public FileVersion(string Name = default(string), bool? IsFolder = default(bool?), DateTime? ModifiedDate = default(DateTime?), long? Size = default(long?), string Path = default(string), string VersionId = default(string), bool? IsLatest = default(bool?))
         {
             // to ensure "IsFolder" is required (not null)
@@ -81,52 +81,67 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 this.Size = Size;
             }
+            // to ensure "IsLatest" is required (not null)
+            if (IsLatest == null)
+            {
+                throw new InvalidDataException("IsLatest is a required property for FileVersion and cannot be null");
+            }
+            else
+            {
+                this.IsLatest = IsLatest;
+            }
             this.Name = Name;
             this.ModifiedDate = ModifiedDate;
             this.Path = Path;
             this.VersionId = VersionId;
-            this.IsLatest = IsLatest;
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// File or folder name.
         /// </summary>
+        /// <value>File or folder name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsFolder
+        /// True if it is a folder.
         /// </summary>
+        /// <value>True if it is a folder.</value>
         [DataMember(Name="IsFolder", EmitDefaultValue=false)]
         public bool? IsFolder { get; set; }
 
         /// <summary>
-        /// Gets or Sets ModifiedDate
+        /// File or folder last modified DateTime.
         /// </summary>
+        /// <value>File or folder last modified DateTime.</value>
         [DataMember(Name="ModifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets Size
+        /// File or folder size.
         /// </summary>
+        /// <value>File or folder size.</value>
         [DataMember(Name="Size", EmitDefaultValue=false)]
         public long? Size { get; set; }
 
         /// <summary>
-        /// Gets or Sets Path
+        /// File or folder path.
         /// </summary>
+        /// <value>File or folder path.</value>
         [DataMember(Name="Path", EmitDefaultValue=false)]
         public string Path { get; set; }
 
         /// <summary>
-        /// Gets or Sets VersionId
+        /// File Version ID.
         /// </summary>
+        /// <value>File Version ID.</value>
         [DataMember(Name="VersionId", EmitDefaultValue=false)]
         public string VersionId { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsLatest
+        /// Specifies whether the file is (true) or is not (false) the latest version of an file.
         /// </summary>
+        /// <value>Specifies whether the file is (true) or is not (false) the latest version of an file.</value>
         [DataMember(Name="IsLatest", EmitDefaultValue=false)]
         public bool? IsLatest { get; set; }
 

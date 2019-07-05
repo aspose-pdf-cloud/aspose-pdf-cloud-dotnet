@@ -49,6 +49,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LineAnnotation" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected LineAnnotation() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LineAnnotation" /> class.
+        /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Color">Color of the annotation..</param>
         /// <param name="Contents">Get the annotation content..</param>
@@ -56,7 +61,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Id">Gets ID of the annotation..</param>
         /// <param name="Flags">Gets Flags of the annotation..</param>
         /// <param name="Name">Gets Name of the annotation..</param>
-        /// <param name="Rect">Gets Rect of the annotation..</param>
+        /// <param name="Rect">Gets Rect of the annotation. (required).</param>
         /// <param name="PageIndex">Gets PageIndex of the annotation..</param>
         /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
         /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation..</param>
@@ -65,9 +70,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Subject">Get the annotation subject..</param>
         /// <param name="Title">Get the annotation title..</param>
         /// <param name="RichText">Get the annotation RichText..</param>
-        /// <param name="Starting">Gets or sets starting point of line..</param>
+        /// <param name="Starting">Gets or sets starting point of line. (required).</param>
         /// <param name="StartingStyle">Gets or sets line ending style for line starting point..</param>
-        /// <param name="Ending">Gets or sets ending point of line..</param>
+        /// <param name="Ending">Gets or sets ending point of line. (required).</param>
         /// <param name="EndingStyle">Gets or sets ending style for end point of line..</param>
         /// <param name="InteriorColor">Gets or sets interior color of the annotation..</param>
         /// <param name="LeaderLine">Gets or sets leader line length..</param>
@@ -79,6 +84,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Intent">Gets or sets the intent of the line annotation..</param>
         public LineAnnotation(List<Link> Links = default(List<Link>), Color Color = default(Color), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), Rectangle Rect = default(Rectangle), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), Point Starting = default(Point), LineEnding StartingStyle = default(LineEnding), Point Ending = default(Point), LineEnding EndingStyle = default(LineEnding), Color InteriorColor = default(Color), double? LeaderLine = default(double?), double? LeaderLineExtension = default(double?), double? LeaderLineOffset = default(double?), bool? ShowCaption = default(bool?), Point CaptionOffset = default(Point), CaptionPosition CaptionPosition = default(CaptionPosition), LineIntent Intent = default(LineIntent))
         {
+            // to ensure "Rect" is required (not null)
+            if (Rect == null)
+            {
+                throw new InvalidDataException("Rect is a required property for LineAnnotation and cannot be null");
+            }
+            else
+            {
+                this.Rect = Rect;
+            }
+            // to ensure "Starting" is required (not null)
+            if (Starting == null)
+            {
+                throw new InvalidDataException("Starting is a required property for LineAnnotation and cannot be null");
+            }
+            else
+            {
+                this.Starting = Starting;
+            }
+            // to ensure "Ending" is required (not null)
+            if (Ending == null)
+            {
+                throw new InvalidDataException("Ending is a required property for LineAnnotation and cannot be null");
+            }
+            else
+            {
+                this.Ending = Ending;
+            }
             this.Links = Links;
             this.Color = Color;
             this.Contents = Contents;
@@ -86,7 +118,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Id = Id;
             this.Flags = Flags;
             this.Name = Name;
-            this.Rect = Rect;
             this.PageIndex = PageIndex;
             this.ZIndex = ZIndex;
             this.HorizontalAlignment = HorizontalAlignment;
@@ -95,9 +126,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Subject = Subject;
             this.Title = Title;
             this.RichText = RichText;
-            this.Starting = Starting;
             this.StartingStyle = StartingStyle;
-            this.Ending = Ending;
             this.EndingStyle = EndingStyle;
             this.InteriorColor = InteriorColor;
             this.LeaderLine = LeaderLine;

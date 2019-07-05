@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="FilesResponse.cs">
+// <copyright company="Aspose" file="FileVersions.cs">
 //   Copyright (c) 2019 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,56 +41,26 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// FilesResponse
+    /// File versions FileVersion.
     /// </summary>
     [DataContract]
-    public partial class FilesResponse : AsposeResponse,  IEquatable<FilesResponse>, IValidatableObject
+    public partial class FileVersions :  IEquatable<FileVersions>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FilesResponse" /> class.
+        /// Initializes a new instance of the <see cref="FileVersions" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected FilesResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FilesResponse" /> class.
-        /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Files">Files.</param>
-        public FilesResponse(int? Code = default(int?), string Status = default(string), List<File> Files = default(List<File>))
+        /// <param name="Value">File versions FileVersion..</param>
+        public FileVersions(List<FileVersion> Value = default(List<FileVersion>))
         {
-            // to ensure "Code" is required (not null)
-            if (Code == null)
-            {
-                throw new InvalidDataException("Code is a required property for FilesResponse and cannot be null");
-            }
-            else
-            {
-                this.Code = Code;
-            }
-            this.Status = Status;
-            this.Files = Files;
+            this.Value = Value;
         }
         
         /// <summary>
-        /// Response status code.
+        /// File versions FileVersion.
         /// </summary>
-        /// <value>Response status code.</value>
-        [DataMember(Name="Code", EmitDefaultValue=false)]
-        public int? Code { get; set; }
-
-        /// <summary>
-        /// Response status.
-        /// </summary>
-        /// <value>Response status.</value>
-        [DataMember(Name="Status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Files
-        /// </summary>
-        [DataMember(Name="Files", EmitDefaultValue=false)]
-        public List<File> Files { get; set; }
+        /// <value>File versions FileVersion.</value>
+        [DataMember(Name="Value", EmitDefaultValue=false)]
+        public List<FileVersion> Value { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,10 +69,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FilesResponse {\n");
-            sb.Append("  Code: ").Append(Code).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  Files: ").Append(Files).Append("\n");
+            sb.Append("class FileVersions {\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,7 +79,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  new string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -124,15 +92,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FilesResponse);
+            return this.Equals(obj as FileVersions);
         }
 
         /// <summary>
-        /// Returns true if FilesResponse instances are equal
+        /// Returns true if FileVersions instances are equal
         /// </summary>
-        /// <param name="other">Instance of FilesResponse to be compared</param>
+        /// <param name="other">Instance of FileVersions to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FilesResponse other)
+        public bool Equals(FileVersions other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -140,19 +108,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
 
             return 
                 (
-                    this.Code == other.Code ||
-                    this.Code != null &&
-                    this.Code.Equals(other.Code)
-                ) && 
-                (
-                    this.Status == other.Status ||
-                    this.Status != null &&
-                    this.Status.Equals(other.Status)
-                ) && 
-                (
-                    this.Files == other.Files ||
-                    this.Files != null &&
-                    this.Files.SequenceEqual(other.Files)
+                    this.Value == other.Value ||
+                    this.Value != null &&
+                    this.Value.SequenceEqual(other.Value)
                 );
         }
 
@@ -167,12 +125,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Code != null)
-                    hash = hash * 59 + this.Code.GetHashCode();
-                if (this.Status != null)
-                    hash = hash * 59 + this.Status.GetHashCode();
-                if (this.Files != null)
-                    hash = hash * 59 + this.Files.GetHashCode();
+                if (this.Value != null)
+                    hash = hash * 59 + this.Value.GetHashCode();
                 return hash;
             }
         }

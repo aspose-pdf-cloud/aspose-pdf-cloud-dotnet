@@ -114,7 +114,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(imageName, imageName);
 
             var response = PdfApi.PostInsertImage(name: Name, pageNumber: 1, llx: 10, lly:10, urx: 100, ury: 100, imageFilePath: Path.Combine(TempFolder, imageName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>

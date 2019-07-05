@@ -75,10 +75,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(AttachmentFile, AttachmentFile);
             List<MovieAnnotation> annotations = new List<MovieAnnotation>
             {
-                new MovieAnnotation()
+                new MovieAnnotation(Rect: new Rectangle(100, 100, 200, 200))
                 {
                     Name = "Test Movie Annotation",
-                    Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     ZIndex = 1,
@@ -88,7 +87,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             };
 
             var response = PdfApi.PostPageMovieAnnotations(Name, 1, annotations, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -111,10 +110,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void PutMovieAnnotationTest()
         {
             UploadFile(AttachmentFile, AttachmentFile);
-            MovieAnnotation annotation = new MovieAnnotation()
+            MovieAnnotation annotation = new MovieAnnotation(Rect: new Rectangle(100, 100, 200, 200))
             {
                 Name = "Updated Test",
-                Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 ZIndex = 1,
@@ -126,7 +124,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string annotationId = lineResponse.Annotations.List[0].Id;
 
             var response = PdfApi.PutMovieAnnotation(Name, annotationId, annotation, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

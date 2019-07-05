@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="File.cs">
+// <copyright company="Aspose" file="BookmarksResponse.cs">
 //   Copyright (c) 2019 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,78 +41,57 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents file DTO.
+    /// Represents response containing multiple bookmarks info
     /// </summary>
     [DataContract]
-    public partial class File :  IEquatable<File>, IValidatableObject
+    public partial class BookmarksResponse : AsposeResponse,  IEquatable<BookmarksResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="File" /> class.
+        /// Initializes a new instance of the <see cref="BookmarksResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected File() { }
+        protected BookmarksResponse() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="File" /> class.
+        /// Initializes a new instance of the <see cref="BookmarksResponse" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="IsFolder">IsFolder (required).</param>
-        /// <param name="ModifiedDate">ModifiedDate.</param>
-        /// <param name="Size">Size (required).</param>
-        /// <param name="Path">Path.</param>
-        public File(string Name = default(string), bool? IsFolder = default(bool?), DateTime? ModifiedDate = default(DateTime?), long? Size = default(long?), string Path = default(string))
+        /// <param name="Code">Response status code. (required).</param>
+        /// <param name="Status">Response status..</param>
+        /// <param name="Bookmarks">Bookmarks object.</param>
+        public BookmarksResponse(int? Code = default(int?), string Status = default(string), Bookmarks Bookmarks = default(Bookmarks))
         {
-            // to ensure "IsFolder" is required (not null)
-            if (IsFolder == null)
+            // to ensure "Code" is required (not null)
+            if (Code == null)
             {
-                throw new InvalidDataException("IsFolder is a required property for File and cannot be null");
+                throw new InvalidDataException("Code is a required property for BookmarksResponse and cannot be null");
             }
             else
             {
-                this.IsFolder = IsFolder;
+                this.Code = Code;
             }
-            // to ensure "Size" is required (not null)
-            if (Size == null)
-            {
-                throw new InvalidDataException("Size is a required property for File and cannot be null");
-            }
-            else
-            {
-                this.Size = Size;
-            }
-            this.Name = Name;
-            this.ModifiedDate = ModifiedDate;
-            this.Path = Path;
+            this.Status = Status;
+            this.Bookmarks = Bookmarks;
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Response status code.
         /// </summary>
-        [DataMember(Name="Name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        /// <value>Response status code.</value>
+        [DataMember(Name="Code", EmitDefaultValue=false)]
+        public int? Code { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsFolder
+        /// Response status.
         /// </summary>
-        [DataMember(Name="IsFolder", EmitDefaultValue=false)]
-        public bool? IsFolder { get; set; }
+        /// <value>Response status.</value>
+        [DataMember(Name="Status", EmitDefaultValue=false)]
+        public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets ModifiedDate
+        /// Bookmarks object
         /// </summary>
-        [DataMember(Name="ModifiedDate", EmitDefaultValue=false)]
-        public DateTime? ModifiedDate { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Size
-        /// </summary>
-        [DataMember(Name="Size", EmitDefaultValue=false)]
-        public long? Size { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Path
-        /// </summary>
-        [DataMember(Name="Path", EmitDefaultValue=false)]
-        public string Path { get; set; }
+        /// <value>Bookmarks object</value>
+        [DataMember(Name="Bookmarks", EmitDefaultValue=false)]
+        public Bookmarks Bookmarks { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -121,12 +100,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class File {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  IsFolder: ").Append(IsFolder).Append("\n");
-            sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
-            sb.Append("  Size: ").Append(Size).Append("\n");
-            sb.Append("  Path: ").Append(Path).Append("\n");
+            sb.Append("class BookmarksResponse {\n");
+            sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  Bookmarks: ").Append(Bookmarks).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -135,7 +112,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public  new string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -148,15 +125,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as File);
+            return this.Equals(obj as BookmarksResponse);
         }
 
         /// <summary>
-        /// Returns true if File instances are equal
+        /// Returns true if BookmarksResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of File to be compared</param>
+        /// <param name="other">Instance of BookmarksResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(File other)
+        public bool Equals(BookmarksResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -164,29 +141,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
 
             return 
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Code == other.Code ||
+                    this.Code != null &&
+                    this.Code.Equals(other.Code)
                 ) && 
                 (
-                    this.IsFolder == other.IsFolder ||
-                    this.IsFolder != null &&
-                    this.IsFolder.Equals(other.IsFolder)
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
                 ) && 
                 (
-                    this.ModifiedDate == other.ModifiedDate ||
-                    this.ModifiedDate != null &&
-                    this.ModifiedDate.Equals(other.ModifiedDate)
-                ) && 
-                (
-                    this.Size == other.Size ||
-                    this.Size != null &&
-                    this.Size.Equals(other.Size)
-                ) && 
-                (
-                    this.Path == other.Path ||
-                    this.Path != null &&
-                    this.Path.Equals(other.Path)
+                    this.Bookmarks == other.Bookmarks ||
+                    this.Bookmarks != null &&
+                    this.Bookmarks.Equals(other.Bookmarks)
                 );
         }
 
@@ -201,16 +168,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                if (this.IsFolder != null)
-                    hash = hash * 59 + this.IsFolder.GetHashCode();
-                if (this.ModifiedDate != null)
-                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
-                if (this.Size != null)
-                    hash = hash * 59 + this.Size.GetHashCode();
-                if (this.Path != null)
-                    hash = hash * 59 + this.Path.GetHashCode();
+                if (this.Code != null)
+                    hash = hash * 59 + this.Code.GetHashCode();
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
+                if (this.Bookmarks != null)
+                    hash = hash * 59 + this.Bookmarks.GetHashCode();
                 return hash;
             }
         }

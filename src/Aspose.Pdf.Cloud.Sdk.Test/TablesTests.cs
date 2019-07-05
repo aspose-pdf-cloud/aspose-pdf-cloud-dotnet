@@ -129,7 +129,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             };
 
             var response = PdfApi.PostPageTables(name, pageNumber, tables, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -142,7 +142,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string tableId = tablesResponse.Tables.List[0].Id;
 
             var response = PdfApi.PutTable(Name, tableId, DrawTable(), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         #region private methods
@@ -153,8 +153,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             int numOfCols = 5;
             int numOfRows = 5;
 
-            var table = new Table();
-            table.Rows = new List<Row>();
+            var table = new Table(Rows: new List<Row>());
 
             string colWidths = "";
             for (int c = 0; c < numOfCols; c++)

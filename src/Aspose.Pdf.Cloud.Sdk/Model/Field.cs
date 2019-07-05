@@ -49,20 +49,33 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Field" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Field() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Field" /> class.
+        /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Name">Field name..</param>
         /// <param name="SelectedItems">Selected items..</param>
         /// <param name="Type">Field type..</param>
         /// <param name="Rect">Field rectangle..</param>
-        /// <param name="Values">Field values..</param>
+        /// <param name="Values">Field values. (required).</param>
         public Field(List<Link> Links = default(List<Link>), string Name = default(string), List<int?> SelectedItems = default(List<int?>), FieldType Type = default(FieldType), Rectangle Rect = default(Rectangle), List<string> Values = default(List<string>))
         {
+            // to ensure "Values" is required (not null)
+            if (Values == null)
+            {
+                throw new InvalidDataException("Values is a required property for Field and cannot be null");
+            }
+            else
+            {
+                this.Values = Values;
+            }
             this.Links = Links;
             this.Name = Name;
             this.SelectedItems = SelectedItems;
             this.Type = Type;
             this.Rect = Rect;
-            this.Values = Values;
         }
         
         /// <summary>

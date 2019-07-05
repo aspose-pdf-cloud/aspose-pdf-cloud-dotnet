@@ -76,10 +76,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             List<TextAnnotation> annotations = new List<TextAnnotation>
             {
-                new TextAnnotation()
+                new TextAnnotation(Rect: new Rectangle(100, 100, 200, 200))
                 {
                     Name = "Test Free Text",
-                    Rect = new Rectangle(100, 100, 200, 200),
+                    
                     Flags = new List<AnnotationFlags> { AnnotationFlags.Default},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     RichText = "Rich Text",
@@ -90,7 +90,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             };
 
             var response = PdfApi.PostPageTextAnnotations(Name, 1, annotations, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
 
@@ -114,10 +114,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PutTextAnnotationTest()
         {
-            TextAnnotation annotation = new TextAnnotation()
+            TextAnnotation annotation = new TextAnnotation(Rect: new Rectangle(100, 100, 200, 200))
             {
                 Name = "Test Free Text",
-                Rect = new Rectangle(100, 100, 200, 200),
+                
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Default },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 RichText = "Updated Text",
@@ -130,7 +130,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string annotationId = textresponse.Annotations.List[0].Id;
 
             var response = PdfApi.PutTextAnnotation(Name, annotationId, annotation, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }
