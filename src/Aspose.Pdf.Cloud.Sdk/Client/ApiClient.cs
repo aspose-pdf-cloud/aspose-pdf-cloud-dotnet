@@ -96,8 +96,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
             var request = new RestRequest(requestUrl, Method.POST);
             request.AddParameter("application/x-www-form-urlencoded", postData, ParameterType.RequestBody);
-            RestClient rc = new RestClient("https://api-qa.aspose.cloud");
-            var responce = rc.Execute(request);
+            var responce = RestClient.Execute(request);
 
             var result = (GetAccessTokenResult)Deserialize(responce, typeof(GetAccessTokenResult));
 
@@ -131,8 +130,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
             var request = new RestRequest(requestUrl, Method.POST);
             request.AddParameter("application/x-www-form-urlencoded", postData, ParameterType.RequestBody);
-            RestClient rc = new RestClient("https://api-qa.aspose.cloud"); 
-            var responce = await rc.ExecuteTaskAsync(request);
+            var responce = await RestClient.ExecuteTaskAsync(request);
 
             var result = (GetAccessTokenResult)Deserialize(responce, typeof(GetAccessTokenResult));
 
@@ -219,7 +217,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
             String contentType)
         {
-            path = "/v3.0" + path;
+            path = "/v3.0/" + path;
             var request = new RestRequest(path, method);
 
             // add path parameter, if any

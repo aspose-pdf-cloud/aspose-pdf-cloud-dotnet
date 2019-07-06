@@ -364,7 +364,6 @@ Class | Method | HTTP request | Description
  - [Model.AnnotationState](docs/AnnotationState.md)
  - [Model.AnnotationType](docs/AnnotationType.md)
  - [Model.AntialiasingProcessingType](docs/AntialiasingProcessingType.md)
- - [Model.AppendDocument](docs/AppendDocument.md)
  - [Model.AsposeResponse](docs/AsposeResponse.md)
  - [Model.BorderCornerStyle](docs/BorderCornerStyle.md)
  - [Model.BorderInfo](docs/BorderInfo.md)

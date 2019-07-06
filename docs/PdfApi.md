@@ -4672,7 +4672,7 @@ Name | Type | Description  | Notes
 
 <a name="postappenddocument"></a>
 # **PostAppendDocument**
-> DocumentResponse PostAppendDocument (string name, AppendDocument appendDocument = null, string appendFile = null, int? startPage = null, int? endPage = null, string storage = null, string folder = null)
+> DocumentResponse PostAppendDocument (string name, string appendFile, int? startPage = null, int? endPage = null, string storage = null, string folder = null)
 
 Append document to existing one.
 
@@ -4682,8 +4682,7 @@ Append document to existing one.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The original document name. | 
- **appendDocument** | [**AppendDocument**](AppendDocument.md)| AppendDocument with the append document data. | [optional] 
- **appendFile** | **string**| Append file server path. | [optional] 
+ **appendFile** | **string**| Append file server path. | 
  **startPage** | **int?**| Appending start page. | [optional] [default to 0]
  **endPage** | **int?**| Appending end page. | [optional] [default to 0]
  **storage** | **string**| The documents storage. | [optional] 
