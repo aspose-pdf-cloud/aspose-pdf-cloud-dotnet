@@ -35,7 +35,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 {
     public abstract class TestsBase
     {
-        private const string BaseProductUri = @"https://billing.cloud.saltov.dynabic.com";
+        private const string BaseProductUri = @"https://api-qa.aspose.cloud";
 
         protected const string TestDataFolder = @"..\..\..\..\testData";
         private const string ServerCredsFile = @"..\..\..\Settings\servercreds.json";
@@ -76,7 +76,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             using (var file = File.OpenRead(Path.Combine(TestDataFolder, sourcePath)))
             {
-                var response = PdfApi.PutCreate(Path.Combine(TempFolder, serverFileName), file);
+                var response = PdfApi.UploadFile(Path.Combine(TempFolder, serverFileName), file);
             }
         }
 
