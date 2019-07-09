@@ -49,21 +49,58 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LinkAnnotation" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected LinkAnnotation() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LinkAnnotation" /> class.
+        /// </summary>
         /// <param name="Links">Link to the document..</param>
-        /// <param name="ActionType">ActionType.</param>
-        /// <param name="Action">Action.</param>
-        /// <param name="Highlighting">Highlighting.</param>
+        /// <param name="ActionType">ActionType (required).</param>
+        /// <param name="Action">Action (required).</param>
+        /// <param name="Highlighting">Highlighting (required).</param>
         /// <param name="Color">Color.</param>
-        /// <param name="Rect">Rect.</param>
+        /// <param name="Rect">Rect (required).</param>
         /// <param name="Id">Id.</param>
         public LinkAnnotation(List<Link> Links = default(List<Link>), LinkActionType ActionType = default(LinkActionType), string Action = default(string), LinkHighlightingMode Highlighting = default(LinkHighlightingMode), Color Color = default(Color), Rectangle Rect = default(Rectangle), string Id = default(string))
         {
+            // to ensure "ActionType" is required (not null)
+            if (ActionType == null)
+            {
+                throw new InvalidDataException("ActionType is a required property for LinkAnnotation and cannot be null");
+            }
+            else
+            {
+                this.ActionType = ActionType;
+            }
+            // to ensure "Action" is required (not null)
+            if (Action == null)
+            {
+                throw new InvalidDataException("Action is a required property for LinkAnnotation and cannot be null");
+            }
+            else
+            {
+                this.Action = Action;
+            }
+            // to ensure "Highlighting" is required (not null)
+            if (Highlighting == null)
+            {
+                throw new InvalidDataException("Highlighting is a required property for LinkAnnotation and cannot be null");
+            }
+            else
+            {
+                this.Highlighting = Highlighting;
+            }
+            // to ensure "Rect" is required (not null)
+            if (Rect == null)
+            {
+                throw new InvalidDataException("Rect is a required property for LinkAnnotation and cannot be null");
+            }
+            else
+            {
+                this.Rect = Rect;
+            }
             this.Links = Links;
-            this.ActionType = ActionType;
-            this.Action = Action;
-            this.Highlighting = Highlighting;
             this.Color = Color;
-            this.Rect = Rect;
             this.Id = Id;
         }
         
@@ -234,6 +271,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // Action (string) minLength
+            if(this.Action != null && this.Action.Length < 1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for Action, length must be greater than 1.", new [] { "Action" });
+            }
+
             yield break;
         }
     }

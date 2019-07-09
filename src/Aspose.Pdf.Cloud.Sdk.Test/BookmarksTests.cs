@@ -36,7 +36,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     [TestFixture]
     public class BookmarksTests : TestsBase
     {
-        /*
+        
         /// <summary>
         /// Test GetDocumentBookmarks
         /// </summary>
@@ -167,6 +167,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.PutBookmark(name, bookmarkPath, bookmark, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
-        */
+        
     }
 }

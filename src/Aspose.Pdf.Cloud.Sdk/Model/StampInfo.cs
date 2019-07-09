@@ -49,6 +49,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StampInfo" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected StampInfo() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="StampInfo" /> class.
+        /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Id">Gets ID of the stamp..</param>
         /// <param name="IndexOnPage">Gets index on page of the stamp..</param>
@@ -56,9 +61,18 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Rect">Gets Rect of the annotation..</param>
         /// <param name="Text">Get the text content..</param>
         /// <param name="Visible">Gets the stamp is visible..</param>
-        /// <param name="StampType">Gets stamp type..</param>
+        /// <param name="StampType">Gets stamp type. (required).</param>
         public StampInfo(List<Link> Links = default(List<Link>), string Id = default(string), int? IndexOnPage = default(int?), int? PageIndex = default(int?), Rectangle Rect = default(Rectangle), string Text = default(string), bool? Visible = default(bool?), StampType StampType = default(StampType))
         {
+            // to ensure "StampType" is required (not null)
+            if (StampType == null)
+            {
+                throw new InvalidDataException("StampType is a required property for StampInfo and cannot be null");
+            }
+            else
+            {
+                this.StampType = StampType;
+            }
             this.Links = Links;
             this.Id = Id;
             this.IndexOnPage = IndexOnPage;
@@ -66,7 +80,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Rect = Rect;
             this.Text = Text;
             this.Visible = Visible;
-            this.StampType = StampType;
         }
         
         /// <summary>

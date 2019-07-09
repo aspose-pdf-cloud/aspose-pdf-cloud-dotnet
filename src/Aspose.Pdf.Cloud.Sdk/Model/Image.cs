@@ -49,20 +49,49 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Image" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Image() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Image" /> class.
+        /// </summary>
         /// <param name="Links">Link to the document..</param>
-        /// <param name="Width">Gets width of the image..</param>
-        /// <param name="Height">Gets height of the image..</param>
+        /// <param name="Width">Gets width of the image. (required).</param>
+        /// <param name="Height">Gets height of the image. (required).</param>
         /// <param name="Id">Gets ID of the image..</param>
         /// <param name="Rectangle">Gets rectangle of the image..</param>
-        /// <param name="PageNumber">Gets page number..</param>
+        /// <param name="PageNumber">Gets page number. (required).</param>
         public Image(List<Link> Links = default(List<Link>), int? Width = default(int?), int? Height = default(int?), string Id = default(string), Rectangle Rectangle = default(Rectangle), int? PageNumber = default(int?))
         {
+            // to ensure "Width" is required (not null)
+            if (Width == null)
+            {
+                throw new InvalidDataException("Width is a required property for Image and cannot be null");
+            }
+            else
+            {
+                this.Width = Width;
+            }
+            // to ensure "Height" is required (not null)
+            if (Height == null)
+            {
+                throw new InvalidDataException("Height is a required property for Image and cannot be null");
+            }
+            else
+            {
+                this.Height = Height;
+            }
+            // to ensure "PageNumber" is required (not null)
+            if (PageNumber == null)
+            {
+                throw new InvalidDataException("PageNumber is a required property for Image and cannot be null");
+            }
+            else
+            {
+                this.PageNumber = PageNumber;
+            }
             this.Links = Links;
-            this.Width = Width;
-            this.Height = Height;
             this.Id = Id;
             this.Rectangle = Rectangle;
-            this.PageNumber = PageNumber;
         }
         
         /// <summary>

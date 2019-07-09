@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Reason** | **string** | Gets or sets the reason of the signature. | [optional] 
 **Contact** | **string** | Gets or sets the contact of the signature. | [optional] 
 **Location** | **string** | Gets or sets the location of the signature. | [optional] 
-**Visible** | **bool?** | Gets or sets a value indicating whether this  is visible. Supports only when signing particular page. | 
+**Visible** | **bool?** | Gets or sets a value indicating whether this Signature is visible. Supports only when signing particular page. | 
 **Rectangle** | [**Rectangle**](Rectangle.md) | Gets or sets the visible rectangle of the signature. Supports only when signing particular page. | [optional] 
 **FormFieldName** | **string** | Gets or sets the name of the signature field. Supports only when signing document with particular form field. | [optional] 
 **Authority** | **string** | Gets or sets the name of the person or authority signing the document.. | [optional] 

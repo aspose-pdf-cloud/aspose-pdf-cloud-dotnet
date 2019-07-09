@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="FileVersionsResponse.cs">
+// <copyright company="Aspose" file="StorageExist.cs">
 //   Copyright (c) 2019 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,56 +41,39 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// FileVersionsResponse
+    /// Storage exists
     /// </summary>
     [DataContract]
-    public partial class FileVersionsResponse : AsposeResponse,  IEquatable<FileVersionsResponse>, IValidatableObject
+    public partial class StorageExist :  IEquatable<StorageExist>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FileVersionsResponse" /> class.
+        /// Initializes a new instance of the <see cref="StorageExist" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected FileVersionsResponse() { }
+        protected StorageExist() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="FileVersionsResponse" /> class.
+        /// Initializes a new instance of the <see cref="StorageExist" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="FileVersions">FileVersions.</param>
-        public FileVersionsResponse(int? Code = default(int?), string Status = default(string), List<FileVersion> FileVersions = default(List<FileVersion>))
+        /// <param name="Exists">Shows that the storage exists.              (required).</param>
+        public StorageExist(bool? Exists = default(bool?))
         {
-            // to ensure "Code" is required (not null)
-            if (Code == null)
+            // to ensure "Exists" is required (not null)
+            if (Exists == null)
             {
-                throw new InvalidDataException("Code is a required property for FileVersionsResponse and cannot be null");
+                throw new InvalidDataException("Exists is a required property for StorageExist and cannot be null");
             }
             else
             {
-                this.Code = Code;
+                this.Exists = Exists;
             }
-            this.Status = Status;
-            this.FileVersions = FileVersions;
         }
         
         /// <summary>
-        /// Response status code.
+        /// Shows that the storage exists.             
         /// </summary>
-        /// <value>Response status code.</value>
-        [DataMember(Name="Code", EmitDefaultValue=false)]
-        public int? Code { get; set; }
-
-        /// <summary>
-        /// Response status.
-        /// </summary>
-        /// <value>Response status.</value>
-        [DataMember(Name="Status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-
-        /// <summary>
-        /// Gets or Sets FileVersions
-        /// </summary>
-        [DataMember(Name="FileVersions", EmitDefaultValue=false)]
-        public List<FileVersion> FileVersions { get; set; }
+        /// <value>Shows that the storage exists.             </value>
+        [DataMember(Name="Exists", EmitDefaultValue=false)]
+        public bool? Exists { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,10 +82,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FileVersionsResponse {\n");
-            sb.Append("  Code: ").Append(Code).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  FileVersions: ").Append(FileVersions).Append("\n");
+            sb.Append("class StorageExist {\n");
+            sb.Append("  Exists: ").Append(Exists).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,7 +92,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  new string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -124,15 +105,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FileVersionsResponse);
+            return this.Equals(obj as StorageExist);
         }
 
         /// <summary>
-        /// Returns true if FileVersionsResponse instances are equal
+        /// Returns true if StorageExist instances are equal
         /// </summary>
-        /// <param name="other">Instance of FileVersionsResponse to be compared</param>
+        /// <param name="other">Instance of StorageExist to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FileVersionsResponse other)
+        public bool Equals(StorageExist other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -140,19 +121,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
 
             return 
                 (
-                    this.Code == other.Code ||
-                    this.Code != null &&
-                    this.Code.Equals(other.Code)
-                ) && 
-                (
-                    this.Status == other.Status ||
-                    this.Status != null &&
-                    this.Status.Equals(other.Status)
-                ) && 
-                (
-                    this.FileVersions == other.FileVersions ||
-                    this.FileVersions != null &&
-                    this.FileVersions.SequenceEqual(other.FileVersions)
+                    this.Exists == other.Exists ||
+                    this.Exists != null &&
+                    this.Exists.Equals(other.Exists)
                 );
         }
 
@@ -167,12 +138,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Code != null)
-                    hash = hash * 59 + this.Code.GetHashCode();
-                if (this.Status != null)
-                    hash = hash * 59 + this.Status.GetHashCode();
-                if (this.FileVersions != null)
-                    hash = hash * 59 + this.FileVersions.GetHashCode();
+                if (this.Exists != null)
+                    hash = hash * 59 + this.Exists.GetHashCode();
                 return hash;
             }
         }

@@ -49,12 +49,25 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Fields" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Fields() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Fields" /> class.
+        /// </summary>
         /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of form fields..</param>
+        /// <param name="List">List of form fields. (required).</param>
         public Fields(List<Link> Links = default(List<Link>), List<Field> List = default(List<Field>))
         {
+            // to ensure "List" is required (not null)
+            if (List == null)
+            {
+                throw new InvalidDataException("List is a required property for Fields and cannot be null");
+            }
+            else
+            {
+                this.List = List;
+            }
             this.Links = Links;
-            this.List = List;
         }
         
         /// <summary>

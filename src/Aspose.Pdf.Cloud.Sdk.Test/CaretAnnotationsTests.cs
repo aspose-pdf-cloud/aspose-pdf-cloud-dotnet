@@ -73,10 +73,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             List<CaretAnnotation> annotations = new List<CaretAnnotation>
             {
-                new CaretAnnotation()
+                new CaretAnnotation(Rect: new Rectangle(100, 100, 200, 200))
                 {
                     Name = "Test Caret Annotation",
-                    Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     RichText = "Rich Text",
@@ -89,7 +88,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             };
 
             var response = PdfApi.PostPageCaretAnnotations(Name, 1, annotations, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -111,10 +110,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PutCaretAnnotationTest()
         {
-            CaretAnnotation annotation = new CaretAnnotation()
+            CaretAnnotation annotation = new CaretAnnotation(Rect: new Rectangle(101, 101, 201, 201))
             {
                 Name = "Test Caret Annotation Updated",
-                Rect = new Rectangle(101, 101, 201, 201),
+                
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 RichText = "Rich Text Updated",
@@ -129,7 +128,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string annotationId = lineResponse.Annotations.List[0].Id;
 
             var response = PdfApi.PutCaretAnnotation(Name, annotationId, annotation, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

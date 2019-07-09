@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="AppendDocument.cs">
+// <copyright company="Aspose" file="ErrorDetails.cs">
 //   Copyright (c) 2019 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,73 +41,48 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Class for appendDocument service request building.
+    /// The error details
     /// </summary>
     [DataContract]
-    public partial class AppendDocument :  IEquatable<AppendDocument>, IValidatableObject
+    public partial class ErrorDetails :  IEquatable<ErrorDetails>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppendDocument" /> class.
+        /// Initializes a new instance of the <see cref="ErrorDetails" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected AppendDocument() { }
+        protected ErrorDetails() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppendDocument" /> class.
+        /// Initializes a new instance of the <see cref="ErrorDetails" /> class.
         /// </summary>
-        /// <param name="Document">Document to append (server path). (required).</param>
-        /// <param name="StartPage">Appending start page. (required).</param>
-        /// <param name="EndPage">Appending end page. (required).</param>
-        public AppendDocument(string Document = default(string), int? StartPage = default(int?), int? EndPage = default(int?))
+        /// <param name="RequestId">The request id.</param>
+        /// <param name="Date">Date (required).</param>
+        public ErrorDetails(string RequestId = default(string), DateTime? Date = default(DateTime?))
         {
-            // to ensure "Document" is required (not null)
-            if (Document == null)
+            // to ensure "Date" is required (not null)
+            if (Date == null)
             {
-                throw new InvalidDataException("Document is a required property for AppendDocument and cannot be null");
+                throw new InvalidDataException("Date is a required property for ErrorDetails and cannot be null");
             }
             else
             {
-                this.Document = Document;
+                this.Date = Date;
             }
-            // to ensure "StartPage" is required (not null)
-            if (StartPage == null)
-            {
-                throw new InvalidDataException("StartPage is a required property for AppendDocument and cannot be null");
-            }
-            else
-            {
-                this.StartPage = StartPage;
-            }
-            // to ensure "EndPage" is required (not null)
-            if (EndPage == null)
-            {
-                throw new InvalidDataException("EndPage is a required property for AppendDocument and cannot be null");
-            }
-            else
-            {
-                this.EndPage = EndPage;
-            }
+            this.RequestId = RequestId;
         }
         
         /// <summary>
-        /// Document to append (server path).
+        /// The request id
         /// </summary>
-        /// <value>Document to append (server path).</value>
-        [DataMember(Name="Document", EmitDefaultValue=false)]
-        public string Document { get; set; }
+        /// <value>The request id</value>
+        [DataMember(Name="RequestId", EmitDefaultValue=false)]
+        public string RequestId { get; set; }
 
         /// <summary>
-        /// Appending start page.
+        /// Date
         /// </summary>
-        /// <value>Appending start page.</value>
-        [DataMember(Name="StartPage", EmitDefaultValue=false)]
-        public int? StartPage { get; set; }
-
-        /// <summary>
-        /// Appending end page.
-        /// </summary>
-        /// <value>Appending end page.</value>
-        [DataMember(Name="EndPage", EmitDefaultValue=false)]
-        public int? EndPage { get; set; }
+        /// <value>Date</value>
+        [DataMember(Name="Date", EmitDefaultValue=false)]
+        public DateTime? Date { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -116,10 +91,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AppendDocument {\n");
-            sb.Append("  Document: ").Append(Document).Append("\n");
-            sb.Append("  StartPage: ").Append(StartPage).Append("\n");
-            sb.Append("  EndPage: ").Append(EndPage).Append("\n");
+            sb.Append("class ErrorDetails {\n");
+            sb.Append("  RequestId: ").Append(RequestId).Append("\n");
+            sb.Append("  Date: ").Append(Date).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,15 +115,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AppendDocument);
+            return this.Equals(obj as ErrorDetails);
         }
 
         /// <summary>
-        /// Returns true if AppendDocument instances are equal
+        /// Returns true if ErrorDetails instances are equal
         /// </summary>
-        /// <param name="other">Instance of AppendDocument to be compared</param>
+        /// <param name="other">Instance of ErrorDetails to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppendDocument other)
+        public bool Equals(ErrorDetails other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -157,19 +131,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
 
             return 
                 (
-                    this.Document == other.Document ||
-                    this.Document != null &&
-                    this.Document.Equals(other.Document)
+                    this.RequestId == other.RequestId ||
+                    this.RequestId != null &&
+                    this.RequestId.Equals(other.RequestId)
                 ) && 
                 (
-                    this.StartPage == other.StartPage ||
-                    this.StartPage != null &&
-                    this.StartPage.Equals(other.StartPage)
-                ) && 
-                (
-                    this.EndPage == other.EndPage ||
-                    this.EndPage != null &&
-                    this.EndPage.Equals(other.EndPage)
+                    this.Date == other.Date ||
+                    this.Date != null &&
+                    this.Date.Equals(other.Date)
                 );
         }
 
@@ -184,12 +153,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Document != null)
-                    hash = hash * 59 + this.Document.GetHashCode();
-                if (this.StartPage != null)
-                    hash = hash * 59 + this.StartPage.GetHashCode();
-                if (this.EndPage != null)
-                    hash = hash * 59 + this.EndPage.GetHashCode();
+                if (this.RequestId != null)
+                    hash = hash * 59 + this.RequestId.GetHashCode();
+                if (this.Date != null)
+                    hash = hash * 59 + this.Date.GetHashCode();
                 return hash;
             }
         }

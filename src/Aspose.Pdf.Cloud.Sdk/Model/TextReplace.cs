@@ -235,6 +235,18 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // OldValue (string) minLength
+            if(this.OldValue != null && this.OldValue.Length < 1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for OldValue, length must be greater than 1.", new [] { "OldValue" });
+            }
+
+            // NewValue (string) minLength
+            if(this.NewValue != null && this.NewValue.Length < 1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for NewValue, length must be greater than 1.", new [] { "NewValue" });
+            }
+
             yield break;
         }
     }

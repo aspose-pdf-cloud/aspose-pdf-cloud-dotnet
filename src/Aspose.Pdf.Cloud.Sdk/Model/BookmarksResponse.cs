@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="DiscUsageResponse.cs">
+// <copyright company="Aspose" file="BookmarksResponse.cs">
 //   Copyright (c) 2019 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,35 +41,35 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// DiscUsageResponse
+    /// Represents response containing multiple bookmarks info
     /// </summary>
     [DataContract]
-    public partial class DiscUsageResponse : AsposeResponse,  IEquatable<DiscUsageResponse>, IValidatableObject
+    public partial class BookmarksResponse : AsposeResponse,  IEquatable<BookmarksResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DiscUsageResponse" /> class.
+        /// Initializes a new instance of the <see cref="BookmarksResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected DiscUsageResponse() { }
+        protected BookmarksResponse() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="DiscUsageResponse" /> class.
+        /// Initializes a new instance of the <see cref="BookmarksResponse" /> class.
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="DiscUsage">DiscUsage.</param>
-        public DiscUsageResponse(int? Code = default(int?), string Status = default(string), DiscUsage DiscUsage = default(DiscUsage))
+        /// <param name="Bookmarks">Bookmarks object.</param>
+        public BookmarksResponse(int? Code = default(int?), string Status = default(string), Bookmarks Bookmarks = default(Bookmarks))
         {
             // to ensure "Code" is required (not null)
             if (Code == null)
             {
-                throw new InvalidDataException("Code is a required property for DiscUsageResponse and cannot be null");
+                throw new InvalidDataException("Code is a required property for BookmarksResponse and cannot be null");
             }
             else
             {
                 this.Code = Code;
             }
             this.Status = Status;
-            this.DiscUsage = DiscUsage;
+            this.Bookmarks = Bookmarks;
         }
         
         /// <summary>
@@ -87,10 +87,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Status { get; set; }
 
         /// <summary>
-        /// Gets or Sets DiscUsage
+        /// Bookmarks object
         /// </summary>
-        [DataMember(Name="DiscUsage", EmitDefaultValue=false)]
-        public DiscUsage DiscUsage { get; set; }
+        /// <value>Bookmarks object</value>
+        [DataMember(Name="Bookmarks", EmitDefaultValue=false)]
+        public Bookmarks Bookmarks { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,10 +100,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DiscUsageResponse {\n");
+            sb.Append("class BookmarksResponse {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  DiscUsage: ").Append(DiscUsage).Append("\n");
+            sb.Append("  Bookmarks: ").Append(Bookmarks).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,15 +125,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as DiscUsageResponse);
+            return this.Equals(obj as BookmarksResponse);
         }
 
         /// <summary>
-        /// Returns true if DiscUsageResponse instances are equal
+        /// Returns true if BookmarksResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of DiscUsageResponse to be compared</param>
+        /// <param name="other">Instance of BookmarksResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DiscUsageResponse other)
+        public bool Equals(BookmarksResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -150,9 +151,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Status.Equals(other.Status)
                 ) && 
                 (
-                    this.DiscUsage == other.DiscUsage ||
-                    this.DiscUsage != null &&
-                    this.DiscUsage.Equals(other.DiscUsage)
+                    this.Bookmarks == other.Bookmarks ||
+                    this.Bookmarks != null &&
+                    this.Bookmarks.Equals(other.Bookmarks)
                 );
         }
 
@@ -171,8 +172,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Code.GetHashCode();
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                if (this.DiscUsage != null)
-                    hash = hash * 59 + this.DiscUsage.GetHashCode();
+                if (this.Bookmarks != null)
+                    hash = hash * 59 + this.Bookmarks.GetHashCode();
                 return hash;
             }
         }

@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="StorageExistResponse.cs">
+// <copyright company="Aspose" file="FilesList.cs">
 //   Copyright (c) 2019 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,56 +41,26 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// StorageExistResponse
+    /// Files list
     /// </summary>
     [DataContract]
-    public partial class StorageExistResponse : AsposeResponse,  IEquatable<StorageExistResponse>, IValidatableObject
+    public partial class FilesList :  IEquatable<FilesList>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="StorageExistResponse" /> class.
+        /// Initializes a new instance of the <see cref="FilesList" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected StorageExistResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="StorageExistResponse" /> class.
-        /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="IsExist">IsExist.</param>
-        public StorageExistResponse(int? Code = default(int?), string Status = default(string), bool? IsExist = default(bool?))
+        /// <param name="Value">Files and folders contained by folder StorageFile..</param>
+        public FilesList(List<StorageFile> Value = default(List<StorageFile>))
         {
-            // to ensure "Code" is required (not null)
-            if (Code == null)
-            {
-                throw new InvalidDataException("Code is a required property for StorageExistResponse and cannot be null");
-            }
-            else
-            {
-                this.Code = Code;
-            }
-            this.Status = Status;
-            this.IsExist = IsExist;
+            this.Value = Value;
         }
         
         /// <summary>
-        /// Response status code.
+        /// Files and folders contained by folder StorageFile.
         /// </summary>
-        /// <value>Response status code.</value>
-        [DataMember(Name="Code", EmitDefaultValue=false)]
-        public int? Code { get; set; }
-
-        /// <summary>
-        /// Response status.
-        /// </summary>
-        /// <value>Response status.</value>
-        [DataMember(Name="Status", EmitDefaultValue=false)]
-        public string Status { get; set; }
-
-        /// <summary>
-        /// Gets or Sets IsExist
-        /// </summary>
-        [DataMember(Name="IsExist", EmitDefaultValue=false)]
-        public bool? IsExist { get; set; }
+        /// <value>Files and folders contained by folder StorageFile.</value>
+        [DataMember(Name="Value", EmitDefaultValue=false)]
+        public List<StorageFile> Value { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,10 +69,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class StorageExistResponse {\n");
-            sb.Append("  Code: ").Append(Code).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  IsExist: ").Append(IsExist).Append("\n");
+            sb.Append("class FilesList {\n");
+            sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,7 +79,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  new string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -124,15 +92,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as StorageExistResponse);
+            return this.Equals(obj as FilesList);
         }
 
         /// <summary>
-        /// Returns true if StorageExistResponse instances are equal
+        /// Returns true if FilesList instances are equal
         /// </summary>
-        /// <param name="other">Instance of StorageExistResponse to be compared</param>
+        /// <param name="other">Instance of FilesList to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(StorageExistResponse other)
+        public bool Equals(FilesList other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -140,19 +108,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
 
             return 
                 (
-                    this.Code == other.Code ||
-                    this.Code != null &&
-                    this.Code.Equals(other.Code)
-                ) && 
-                (
-                    this.Status == other.Status ||
-                    this.Status != null &&
-                    this.Status.Equals(other.Status)
-                ) && 
-                (
-                    this.IsExist == other.IsExist ||
-                    this.IsExist != null &&
-                    this.IsExist.Equals(other.IsExist)
+                    this.Value == other.Value ||
+                    this.Value != null &&
+                    this.Value.SequenceEqual(other.Value)
                 );
         }
 
@@ -167,12 +125,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Code != null)
-                    hash = hash * 59 + this.Code.GetHashCode();
-                if (this.Status != null)
-                    hash = hash * 59 + this.Status.GetHashCode();
-                if (this.IsExist != null)
-                    hash = hash * 59 + this.IsExist.GetHashCode();
+                if (this.Value != null)
+                    hash = hash * 59 + this.Value.GetHashCode();
                 return hash;
             }
         }

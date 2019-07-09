@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Rect">Rectangle of the occurrence..</param>
         /// <param name="HorizontalAlignment">Gets or sets a horizontal alignment of text fragment. .</param>
         /// <param name="VerticalAlignment">Gets or sets a vertical alignment of text fragment. .</param>
-        /// <param name="Position">Gets or sets text position for text, represented with  object..</param>
-        /// <param name="BaselinePosition">Gets text position for text, represented with  object. The YIndent of the Position structure represents baseline coordinate of the text fragment..</param>
-        /// <param name="TextState">Gets or sets text state for the text that  object represents..</param>
+        /// <param name="Position">Gets or sets text position for text, represented with TextRect object..</param>
+        /// <param name="BaselinePosition">Gets text position for text, represented with TextRect object. The YIndent of the Position structure represents baseline coordinate of the text fragment..</param>
+        /// <param name="TextState">Gets or sets text state for the text that TextRect object represents..</param>
         public TextRect(string Text = default(string), int? Page = default(int?), Rectangle Rect = default(Rectangle), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), Position Position = default(Position), Position BaselinePosition = default(Position), TextState TextState = default(TextState))
         {
             this.Text = Text;
@@ -105,23 +105,23 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public VerticalAlignment VerticalAlignment { get; set; }
 
         /// <summary>
-        /// Gets or sets text position for text, represented with  object.
+        /// Gets or sets text position for text, represented with TextRect object.
         /// </summary>
-        /// <value>Gets or sets text position for text, represented with  object.</value>
+        /// <value>Gets or sets text position for text, represented with TextRect object.</value>
         [DataMember(Name="Position", EmitDefaultValue=false)]
         public Position Position { get; set; }
 
         /// <summary>
-        /// Gets text position for text, represented with  object. The YIndent of the Position structure represents baseline coordinate of the text fragment.
+        /// Gets text position for text, represented with TextRect object. The YIndent of the Position structure represents baseline coordinate of the text fragment.
         /// </summary>
-        /// <value>Gets text position for text, represented with  object. The YIndent of the Position structure represents baseline coordinate of the text fragment.</value>
+        /// <value>Gets text position for text, represented with TextRect object. The YIndent of the Position structure represents baseline coordinate of the text fragment.</value>
         [DataMember(Name="BaselinePosition", EmitDefaultValue=false)]
         public Position BaselinePosition { get; set; }
 
         /// <summary>
-        /// Gets or sets text state for the text that  object represents.
+        /// Gets or sets text state for the text that TextRect object represents.
         /// </summary>
-        /// <value>Gets or sets text state for the text that  object represents.</value>
+        /// <value>Gets or sets text state for the text that TextRect object represents.</value>
         [DataMember(Name="TextState", EmitDefaultValue=false)]
         public TextState TextState { get; set; }
 

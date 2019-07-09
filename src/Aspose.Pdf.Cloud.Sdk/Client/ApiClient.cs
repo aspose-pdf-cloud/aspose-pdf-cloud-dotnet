@@ -88,7 +88,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
         private void RequestToken()
         {
-            var requestUrl = "/oauth2/token";
+            var requestUrl = "/connect/token";
 
             var postData = "grant_type=client_credentials";
             postData += "&client_id=" + Configuration.AppSid;
@@ -101,9 +101,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             var result = (GetAccessTokenResult)Deserialize(responce, typeof(GetAccessTokenResult));
 
             accessToken = result.AccessToken;
-            refreshToken = result.RefreshToken;
         }
-
+        /*
         private void RefreshToken()
         {
             var requestUrl = "/oauth2/token";
@@ -120,10 +119,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             accessToken = result.AccessToken;
             refreshToken = result.RefreshToken;
         }
-
+        */
         private async System.Threading.Tasks.Task RequestTokenAsync()
         {
-            var requestUrl = "/oauth2/token";
+            var requestUrl = "/connect/token";
 
             var postData = "grant_type=client_credentials";
             postData += "&client_id=" + Configuration.AppSid;
@@ -136,9 +135,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             var result = (GetAccessTokenResult)Deserialize(responce, typeof(GetAccessTokenResult));
 
             accessToken = result.AccessToken;
-            refreshToken = result.RefreshToken;
         }
-
+        /*
         private async System.Threading.Tasks.Task RefreshTokenAsync()
         {
             var requestUrl = "/oauth2/token";
@@ -155,6 +153,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             accessToken = result.AccessToken;
             refreshToken = result.RefreshToken;
         }
+        */
 
         /// <summary>
         /// Allows for extending response processing for <see cref="ApiClient"/> generated code.
@@ -165,7 +164,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         {
             if (response.StatusCode == HttpStatusCode.Unauthorized)
             {
-                RefreshToken();
+                RequestToken();
                 return false;
             }
 
@@ -181,7 +180,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         {
             if (response.StatusCode == HttpStatusCode.Unauthorized)
             {
-                await RefreshTokenAsync();
+                await RequestTokenAsync();
                 return false;
             }
 
@@ -218,7 +217,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
             String contentType)
         {
-            path = "/v2.0/" + path;
+            path = "/v3.0/" + path;
             var request = new RestRequest(path, method);
 
             // add path parameter, if any
@@ -608,9 +607,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         {
             [JsonProperty(PropertyName = "access_token")]
             public string AccessToken { get; set; }
-
-            [JsonProperty(PropertyName = "refresh_token")]
-            public string RefreshToken { get; set; }
         }        
     }
 }

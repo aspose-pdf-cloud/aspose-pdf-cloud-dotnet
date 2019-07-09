@@ -61,7 +61,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.doc";
 
             var response = PdfApi.PutPdfInStorageToDoc(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -76,7 +76,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 string resFileName = "result.doc";
 
                 var response = PdfApi.PutPdfInRequestToDoc(Path.Combine(TempFolder, resFileName), file: stream);
-                Assert.That(response.Code, Is.EqualTo(201));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 
@@ -104,7 +104,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.pdf";
 
             var response = PdfApi.PutPdfInStorageToPdfA(name, Path.Combine(TempFolder, resFileName), type: PdfAType.PDFA1A.ToString(), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
                 var response = PdfApi.PutPdfInRequestToPdfA(Path.Combine(TempFolder, resFileName),
                     type: PdfAType.PDFA1A.ToString(), file: stream);
-                Assert.That(response.Code, Is.EqualTo(201));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 
@@ -148,7 +148,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.tiff";
 
             var response = PdfApi.PutPdfInStorageToTiff(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -163,7 +163,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 string resFileName = "result.tiff";
 
                 var response = PdfApi.PutPdfInRequestToTiff(Path.Combine(TempFolder, resFileName), file: stream);
-                Assert.That(response.Code, Is.EqualTo(201));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 
@@ -192,7 +192,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.svg";
 
             var response = PdfApi.PutPdfInStorageToSvg(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -207,7 +207,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 string resFileName = "result.svg";
 
                 var response = PdfApi.PutPdfInRequestToSvg(Path.Combine(TempFolder, resFileName), file: stream);
-                Assert.That(response.Code, Is.EqualTo(201));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 
@@ -235,7 +235,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.xps";
 
             var response = PdfApi.PutPdfInStorageToXps(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -250,7 +250,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 string resFileName = "result.xps";
 
                 var response = PdfApi.PutPdfInRequestToXps(Path.Combine(TempFolder, resFileName), file: stream);
-                Assert.That(response.Code, Is.EqualTo(201));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 
@@ -278,7 +278,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.xls";
 
             var response = PdfApi.PutPdfInStorageToXls(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -293,7 +293,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 string resFileName = "result.xls";
 
                 var response = PdfApi.PutPdfInRequestToXls(Path.Combine(TempFolder, resFileName), file: stream);
-                Assert.That(response.Code, Is.EqualTo(201));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 
@@ -322,7 +322,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.zip";
 
             var response = PdfApi.PutPdfInStorageToHtml(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -337,7 +337,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 string resFileName = "result.zip";
 
                 var response = PdfApi.PutPdfInRequestToHtml(Path.Combine(TempFolder, resFileName), file: stream);
-                Assert.That(response.Code, Is.EqualTo(201));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 
@@ -365,7 +365,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.epub";
 
             var response = PdfApi.PutPdfInStorageToEpub(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -380,7 +380,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 string resFileName = "result.epub";
 
                 var response = PdfApi.PutPdfInRequestToEpub(Path.Combine(TempFolder, resFileName), file: stream);
-                Assert.That(response.Code, Is.EqualTo(201));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 
@@ -409,7 +409,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.pptx";
 
             var response = PdfApi.PutPdfInStorageToPptx(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -424,7 +424,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 string resFileName = "result.pptx";
 
                 var response = PdfApi.PutPdfInRequestToPptx(Path.Combine(TempFolder, resFileName), file: stream);
-                Assert.That(response.Code, Is.EqualTo(201));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 
@@ -453,7 +453,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.latex";
 
             var response = PdfApi.PutPdfInStorageToLaTeX(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -468,7 +468,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 string resFileName = "result.latex";
 
                 var response = PdfApi.PutPdfInRequestToLaTeX(Path.Combine(TempFolder, resFileName), file: stream);
-                Assert.That(response.Code, Is.EqualTo(201));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 
@@ -497,7 +497,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.mobi";
 
             var response = PdfApi.PutPdfInStorageToMobiXml(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -512,7 +512,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 string resFileName = "result.mobi";
 
                 var response = PdfApi.PutPdfInRequestToMobiXml(Path.Combine(TempFolder, resFileName), file: stream);
-                Assert.That(response.Code, Is.EqualTo(201));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 
@@ -541,7 +541,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.pdf";
 
             var response = PdfApi.PutXfaPdfInStorageToAcroForm(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -556,7 +556,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 string resFileName = "result.pdf";
 
                 var response = PdfApi.PutXfaPdfInRequestToAcroForm(Path.Combine(TempFolder, resFileName), file: stream);
-                Assert.That(response.Code, Is.EqualTo(201));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 
@@ -585,7 +585,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.xml";
 
             var response = PdfApi.PutPdfInStorageToXml(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -600,7 +600,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 string resFileName = "result.xml";
 
                 var response = PdfApi.PutPdfInRequestToXml(Path.Combine(TempFolder, resFileName), file: stream);
-                Assert.That(response.Code, Is.EqualTo(201));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 
@@ -628,7 +628,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.xlsx";
 
             var response = PdfApi.PutPdfInStorageToXlsx(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -643,7 +643,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 string resFileName = "result.xlsx";
 
                 var response = PdfApi.PutPdfInRequestToXlsx(Path.Combine(TempFolder, resFileName), file: stream);
-                Assert.That(response.Code, Is.EqualTo(201));
+                Assert.That(response.Code, Is.EqualTo(200));
             }
         }
 

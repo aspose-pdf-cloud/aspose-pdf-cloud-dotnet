@@ -99,7 +99,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             };
 
             var response = PdfApi.PostPageLinkAnnotations(Name, pageNumber: 1, links: linkAnnotations, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 LinkHighlightingMode.Invert, new Color(0xFF, 0xAA, 0xAA, 0xAA), new Rectangle(100, 100, 500, 500));
             
             var response = PdfApi.PutLinkAnnotation(Name, linkId: linkId, link: linkAnnotation, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>

@@ -49,6 +49,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PolyLineAnnotation" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected PolyLineAnnotation() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PolyLineAnnotation" /> class.
+        /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Color">Color of the annotation..</param>
         /// <param name="Contents">Get the annotation content..</param>
@@ -56,7 +61,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Id">Gets ID of the annotation..</param>
         /// <param name="Flags">Gets Flags of the annotation..</param>
         /// <param name="Name">Gets Name of the annotation..</param>
-        /// <param name="Rect">Gets Rect of the annotation..</param>
+        /// <param name="Rect">Gets Rect of the annotation. (required).</param>
         /// <param name="PageIndex">Gets PageIndex of the annotation..</param>
         /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
         /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation..</param>
@@ -69,9 +74,27 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="StartingStyle">Gets or sets the style of first line ending..</param>
         /// <param name="EndingStyle">Gets or sets the style of second line ending..</param>
         /// <param name="Intent">Gets or sets the intent of the polygon or polyline annotation..</param>
-        /// <param name="Vertices">Gets or sets an array of points representing the horizontal and vertical coordinates of each vertex..</param>
+        /// <param name="Vertices">Gets or sets an array of points representing the horizontal and vertical coordinates of each vertex. (required).</param>
         public PolyLineAnnotation(List<Link> Links = default(List<Link>), Color Color = default(Color), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), Rectangle Rect = default(Rectangle), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), Color InteriorColor = default(Color), LineEnding StartingStyle = default(LineEnding), LineEnding EndingStyle = default(LineEnding), PolyIntent Intent = default(PolyIntent), List<Point> Vertices = default(List<Point>))
         {
+            // to ensure "Rect" is required (not null)
+            if (Rect == null)
+            {
+                throw new InvalidDataException("Rect is a required property for PolyLineAnnotation and cannot be null");
+            }
+            else
+            {
+                this.Rect = Rect;
+            }
+            // to ensure "Vertices" is required (not null)
+            if (Vertices == null)
+            {
+                throw new InvalidDataException("Vertices is a required property for PolyLineAnnotation and cannot be null");
+            }
+            else
+            {
+                this.Vertices = Vertices;
+            }
             this.Links = Links;
             this.Color = Color;
             this.Contents = Contents;
@@ -79,7 +102,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Id = Id;
             this.Flags = Flags;
             this.Name = Name;
-            this.Rect = Rect;
             this.PageIndex = PageIndex;
             this.ZIndex = ZIndex;
             this.HorizontalAlignment = HorizontalAlignment;
@@ -92,7 +114,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.StartingStyle = StartingStyle;
             this.EndingStyle = EndingStyle;
             this.Intent = Intent;
-            this.Vertices = Vertices;
         }
         
         /// <summary>

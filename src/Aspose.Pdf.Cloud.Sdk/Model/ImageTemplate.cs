@@ -288,6 +288,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <returns>Validation Result</returns>
         IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
         {
+            // ImagePath (string) minLength
+            if(this.ImagePath != null && this.ImagePath.Length < 1)
+            {
+                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ImagePath, length must be greater than 1.", new [] { "ImagePath" });
+            }
+
             yield break;
         }
     }

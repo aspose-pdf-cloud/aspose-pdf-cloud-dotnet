@@ -53,14 +53,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Background">Sets or gets a bool value that indicates the content is stamped as background. If the value is true, the stamp content is layed at the bottom. By defalt, the value is false, the stamp content is layed at the top..</param>
         /// <param name="HorizontalAlignment">Gets or sets Horizontal alignment of stamp on the page. .</param>
         /// <param name="Opacity">Gets or sets a value to indicate the stamp opacity. The value is from 0.0 to 1.0. By default the value is 1.0..</param>
-        /// <param name="Rotate">Sets or gets the rotation of stamp content according  values. Note. This property is for set angles which are multiples of 90 degrees (0, 90, 180, 270 degrees). To set arbitrary angle use RotateAngle property.  If angle set by ArbitraryAngle is not multiple of 90 then Rotate property returns Rotation.None..</param>
+        /// <param name="Rotate">Sets or gets the rotation of stamp content according Rotation values. Note. This property is for set angles which are multiples of 90 degrees (0, 90, 180, 270 degrees). To set arbitrary angle use RotateAngle property.  If angle set by ArbitraryAngle is not multiple of 90 then Rotate property returns Rotation.None..</param>
         /// <param name="RotateAngle">Gets or sets rotate angle of stamp in degrees. This property allows to set arbitrary rotate angle. .</param>
         /// <param name="XIndent">Horizontal stamp coordinate, starting from the left..</param>
         /// <param name="YIndent">Vertical stamp coordinate, starting from the bottom..</param>
         /// <param name="Zoom">Zooming factor of the stamp. Allows to scale stamp..</param>
         /// <param name="TextAlignment">Alignment of the text inside the stamp..</param>
         /// <param name="Value">Gets or sets string value which is used as stamp on the page..</param>
-        /// <param name="TextState">Gets text properties of the stamp. See  for details..</param>
+        /// <param name="TextState">Gets text properties of the stamp. See TextState for details..</param>
         /// <param name="VerticalAlignment">Gets or sets vertical alignment of stamp on page..</param>
         /// <param name="BottomMargin">Gets or sets bottom margin of stamp..</param>
         /// <param name="LeftMargin">Gets or sets left margin of stamp..</param>
@@ -116,9 +116,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public double? Opacity { get; set; }
 
         /// <summary>
-        /// Sets or gets the rotation of stamp content according  values. Note. This property is for set angles which are multiples of 90 degrees (0, 90, 180, 270 degrees). To set arbitrary angle use RotateAngle property.  If angle set by ArbitraryAngle is not multiple of 90 then Rotate property returns Rotation.None.
+        /// Sets or gets the rotation of stamp content according Rotation values. Note. This property is for set angles which are multiples of 90 degrees (0, 90, 180, 270 degrees). To set arbitrary angle use RotateAngle property.  If angle set by ArbitraryAngle is not multiple of 90 then Rotate property returns Rotation.None.
         /// </summary>
-        /// <value>Sets or gets the rotation of stamp content according  values. Note. This property is for set angles which are multiples of 90 degrees (0, 90, 180, 270 degrees). To set arbitrary angle use RotateAngle property.  If angle set by ArbitraryAngle is not multiple of 90 then Rotate property returns Rotation.None.</value>
+        /// <value>Sets or gets the rotation of stamp content according Rotation values. Note. This property is for set angles which are multiples of 90 degrees (0, 90, 180, 270 degrees). To set arbitrary angle use RotateAngle property.  If angle set by ArbitraryAngle is not multiple of 90 then Rotate property returns Rotation.None.</value>
         [DataMember(Name="Rotate", EmitDefaultValue=true)]
         public Rotation Rotate { get; set; }
 
@@ -165,9 +165,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Value { get; set; }
 
         /// <summary>
-        /// Gets text properties of the stamp. See  for details.
+        /// Gets text properties of the stamp. See TextState for details.
         /// </summary>
-        /// <value>Gets text properties of the stamp. See  for details.</value>
+        /// <value>Gets text properties of the stamp. See TextState for details.</value>
         [DataMember(Name="TextState", EmitDefaultValue=false)]
         public TextState TextState { get; set; }
 

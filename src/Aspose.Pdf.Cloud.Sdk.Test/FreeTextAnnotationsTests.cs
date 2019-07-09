@@ -53,11 +53,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             List<FreeTextAnnotation> annotations = new List<FreeTextAnnotation>
             {
-                new FreeTextAnnotation()
+                new FreeTextAnnotation(Rect: new Rectangle(100, 100, 200, 200),
+                    TextStyle: new TextStyle(FontSize: 12, Font: "Arial", ForegroundColor: new Color(0xFF, 0, 0xFF, 0), BackgroundColor: new Color(0xFF, 0xFF, 0, 0)))
                 {
                     Name = "Test Free Text",
-                    TextStyle = new TextStyle(FontSize: 12, Font: "Arial", ForegroundColor: new Color(0xFF, 0, 0xFF, 0), BackgroundColor: new Color(0xFF, 0xFF, 0, 0)),
-                    Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> { AnnotationFlags.Default},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     Intent = FreeTextIntent.FreeTextTypeWriter,
@@ -70,7 +69,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             };
 
             var response = PdfApi.PostPageFreeTextAnnotations(Name, 1, annotations, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -113,11 +112,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PutFreeTextAnnotationTest()
         {
-            FreeTextAnnotation annotation = new FreeTextAnnotation()
+            FreeTextAnnotation annotation = new FreeTextAnnotation(Rect: new Rectangle(100, 100, 200, 200),
+                TextStyle: new TextStyle(FontSize: 12, Font: "Arial", ForegroundColor: new Color(0xFF, 0, 0xFF, 0), BackgroundColor: new Color(0xFF, 0xFF, 0, 0)))
             {
                 Name = "Test Free Text",
-                TextStyle = new TextStyle(FontSize: 12, Font: "Arial", ForegroundColor: new Color(0xFF, 0, 0xFF, 0), BackgroundColor: new Color(0xFF, 0xFF, 0, 0)),
-                Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Default },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 Intent = FreeTextIntent.FreeTextTypeWriter,
@@ -132,7 +130,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string annotationId = freeTextresponse.Annotations.List[0].Id;
 
             var response = PdfApi.PutFreeTextAnnotation(Name, annotationId, annotation, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
                 
     }

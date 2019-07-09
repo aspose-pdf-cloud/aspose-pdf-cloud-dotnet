@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **SelectedItems** | **List&lt;int?&gt;** | Selected items. | [optional] 
 **Type** | [**FieldType**](FieldType.md) | Field type. | [optional] 
 **Rect** | [**Rectangle**](Rectangle.md) | Field rectangle. | [optional] 
-**Values** | **List&lt;string&gt;** | Field values. | [optional] 
+**Values** | **List&lt;string&gt;** | Field values. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

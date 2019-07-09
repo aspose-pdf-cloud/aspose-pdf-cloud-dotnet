@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Matches">Number of matches.</param>
+        /// <param name="Matches">Number of matches (required).</param>
         public TextReplaceResponse(int? Code = default(int?), string Status = default(string), int? Matches = default(int?))
         {
             // to ensure "Code" is required (not null)
@@ -68,8 +68,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 this.Code = Code;
             }
+            // to ensure "Matches" is required (not null)
+            if (Matches == null)
+            {
+                throw new InvalidDataException("Matches is a required property for TextReplaceResponse and cannot be null");
+            }
+            else
+            {
+                this.Matches = Matches;
+            }
             this.Status = Status;
-            this.Matches = Matches;
         }
         
         /// <summary>

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Rect** | [**Rectangle**](Rectangle.md) | Gets Rect of the annotation. | [optional] 
 **Text** | **string** | Get the text content. | [optional] 
 **Visible** | **bool?** | Gets the stamp is visible. | [optional] 
-**StampType** | [**StampType**](StampType.md) | Gets stamp type. | [optional] 
+**StampType** | [**StampType**](StampType.md) | Gets stamp type. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="FileExist.cs">
+// <copyright company="Aspose" file="FilesUploadResult.cs">
 //   Copyright (c) 2019 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,54 +41,35 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// FileExist
+    /// File upload result
     /// </summary>
     [DataContract]
-    public partial class FileExist :  IEquatable<FileExist>, IValidatableObject
+    public partial class FilesUploadResult :  IEquatable<FilesUploadResult>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FileExist" /> class.
+        /// Initializes a new instance of the <see cref="FilesUploadResult" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected FileExist() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FileExist" /> class.
-        /// </summary>
-        /// <param name="IsExist">IsExist (required).</param>
-        /// <param name="IsFolder">IsFolder (required).</param>
-        public FileExist(bool? IsExist = default(bool?), bool? IsFolder = default(bool?))
+        /// <param name="Uploaded">List of uploaded file names.</param>
+        /// <param name="Errors">List of errors..</param>
+        public FilesUploadResult(List<string> Uploaded = default(List<string>), List<Error> Errors = default(List<Error>))
         {
-            // to ensure "IsExist" is required (not null)
-            if (IsExist == null)
-            {
-                throw new InvalidDataException("IsExist is a required property for FileExist and cannot be null");
-            }
-            else
-            {
-                this.IsExist = IsExist;
-            }
-            // to ensure "IsFolder" is required (not null)
-            if (IsFolder == null)
-            {
-                throw new InvalidDataException("IsFolder is a required property for FileExist and cannot be null");
-            }
-            else
-            {
-                this.IsFolder = IsFolder;
-            }
+            this.Uploaded = Uploaded;
+            this.Errors = Errors;
         }
         
         /// <summary>
-        /// Gets or Sets IsExist
+        /// List of uploaded file names
         /// </summary>
-        [DataMember(Name="IsExist", EmitDefaultValue=false)]
-        public bool? IsExist { get; set; }
+        /// <value>List of uploaded file names</value>
+        [DataMember(Name="Uploaded", EmitDefaultValue=false)]
+        public List<string> Uploaded { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsFolder
+        /// List of errors.
         /// </summary>
-        [DataMember(Name="IsFolder", EmitDefaultValue=false)]
-        public bool? IsFolder { get; set; }
+        /// <value>List of errors.</value>
+        [DataMember(Name="Errors", EmitDefaultValue=false)]
+        public List<Error> Errors { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -97,9 +78,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FileExist {\n");
-            sb.Append("  IsExist: ").Append(IsExist).Append("\n");
-            sb.Append("  IsFolder: ").Append(IsFolder).Append("\n");
+            sb.Append("class FilesUploadResult {\n");
+            sb.Append("  Uploaded: ").Append(Uploaded).Append("\n");
+            sb.Append("  Errors: ").Append(Errors).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,15 +102,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FileExist);
+            return this.Equals(obj as FilesUploadResult);
         }
 
         /// <summary>
-        /// Returns true if FileExist instances are equal
+        /// Returns true if FilesUploadResult instances are equal
         /// </summary>
-        /// <param name="other">Instance of FileExist to be compared</param>
+        /// <param name="other">Instance of FilesUploadResult to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FileExist other)
+        public bool Equals(FilesUploadResult other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -137,14 +118,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
 
             return 
                 (
-                    this.IsExist == other.IsExist ||
-                    this.IsExist != null &&
-                    this.IsExist.Equals(other.IsExist)
+                    this.Uploaded == other.Uploaded ||
+                    this.Uploaded != null &&
+                    this.Uploaded.SequenceEqual(other.Uploaded)
                 ) && 
                 (
-                    this.IsFolder == other.IsFolder ||
-                    this.IsFolder != null &&
-                    this.IsFolder.Equals(other.IsFolder)
+                    this.Errors == other.Errors ||
+                    this.Errors != null &&
+                    this.Errors.SequenceEqual(other.Errors)
                 );
         }
 
@@ -159,10 +140,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.IsExist != null)
-                    hash = hash * 59 + this.IsExist.GetHashCode();
-                if (this.IsFolder != null)
-                    hash = hash * 59 + this.IsFolder.GetHashCode();
+                if (this.Uploaded != null)
+                    hash = hash * 59 + this.Uploaded.GetHashCode();
+                if (this.Errors != null)
+                    hash = hash * 59 + this.Errors.GetHashCode();
                 return hash;
             }
         }

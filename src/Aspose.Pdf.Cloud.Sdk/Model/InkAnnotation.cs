@@ -49,6 +49,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InkAnnotation" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected InkAnnotation() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InkAnnotation" /> class.
+        /// </summary>
         /// <param name="Links">Link to the document..</param>
         /// <param name="Color">Color of the annotation..</param>
         /// <param name="Contents">Get the annotation content..</param>
@@ -56,7 +61,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Id">Gets ID of the annotation..</param>
         /// <param name="Flags">Gets Flags of the annotation..</param>
         /// <param name="Name">Gets Name of the annotation..</param>
-        /// <param name="Rect">Gets Rect of the annotation..</param>
+        /// <param name="Rect">Gets Rect of the annotation. (required).</param>
         /// <param name="PageIndex">Gets PageIndex of the annotation..</param>
         /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
         /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation..</param>
@@ -69,6 +74,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="CapStyle">Style of ink annotation line endings..</param>
         public InkAnnotation(List<Link> Links = default(List<Link>), Color Color = default(Color), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), Rectangle Rect = default(Rectangle), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), List<List<Point>> InkList = default(List<List<Point>>), CapStyle CapStyle = default(CapStyle))
         {
+            // to ensure "Rect" is required (not null)
+            if (Rect == null)
+            {
+                throw new InvalidDataException("Rect is a required property for InkAnnotation and cannot be null");
+            }
+            else
+            {
+                this.Rect = Rect;
+            }
             this.Links = Links;
             this.Color = Color;
             this.Contents = Contents;
@@ -76,7 +90,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Id = Id;
             this.Flags = Flags;
             this.Name = Name;
-            this.Rect = Rect;
             this.PageIndex = PageIndex;
             this.ZIndex = ZIndex;
             this.HorizontalAlignment = HorizontalAlignment;

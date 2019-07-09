@@ -1,13 +1,11 @@
-﻿# Aspose.Pdf.Cloud.Sdk.Model.FilesResponse
-
+﻿# Aspose.Pdf.Cloud.Sdk.Model.StorageExist
+Storage exists
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Code** | **int?** | Response status code. | 
-**Status** | **string** | Response status. | [optional] 
-**Files** | **List&lt;System.IO.Stream&gt;** |  | [optional] 
+**Exists** | **bool?** | Shows that the storage exists.              | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

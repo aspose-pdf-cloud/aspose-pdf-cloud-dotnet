@@ -76,10 +76,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(AttachmentFile, AttachmentFile);
             List<SoundAnnotation> annotations = new List<SoundAnnotation>
             {
-                new SoundAnnotation()
+                new SoundAnnotation(Rect: new Rectangle(100, 100, 200, 200), FilePath: Path.Combine(TempFolder, AttachmentFile))
                 {
                     Name = "Test Sound Annotation",
-                    Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     RichText = "Rich Text",
@@ -87,12 +86,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                     ZIndex = 1,
                     Title = "Title",
                     Modified = "01/01/2018 00:00:00.000 AM",
-                    FilePath = Path.Combine(TempFolder, AttachmentFile)
                 }
             };
 
             var response = PdfApi.PostPageSoundAnnotations(Name, 1, annotations, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -114,10 +112,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PutSoundAnnotationTest()
         {
-            SoundAnnotation annotation = new SoundAnnotation()
+            SoundAnnotation annotation = new SoundAnnotation(Rect: new Rectangle(100, 100, 200, 200), FilePath: Path.Combine(TempFolder, AttachmentFile))
             {
                 Name = "Updated Test",
-                Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 RichText = "Rich Text Updated",
@@ -125,14 +122,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 ZIndex = 1,
                 Title = "Title Updated",
                 Modified = "01/01/2018 00:00:00.000 AM",
-                FilePath = Path.Combine(TempFolder, AttachmentFile)
             };
 
             var lineResponse = PdfApi.GetDocumentSoundAnnotations(Name, folder: TempFolder);
             string annotationId = lineResponse.Annotations.List[0].Id;
 
             var response = PdfApi.PutSoundAnnotation(Name, annotationId, annotation, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -158,7 +154,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
             var response = PdfApi.PutSoundAnnotationDataExtract(Name, annotationId, outFilePath: "outFile.dat", folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

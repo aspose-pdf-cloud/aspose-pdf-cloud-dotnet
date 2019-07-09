@@ -56,7 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Code">Response status code. (required).</param>
         /// <param name="Status">Response status..</param>
-        /// <param name="Valid">True if signature is valid and false if not.</param>
+        /// <param name="Valid">True if signature is valid and false if not (required).</param>
         public SignatureVerifyResponse(int? Code = default(int?), string Status = default(string), bool? Valid = default(bool?))
         {
             // to ensure "Code" is required (not null)
@@ -68,8 +68,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 this.Code = Code;
             }
+            // to ensure "Valid" is required (not null)
+            if (Valid == null)
+            {
+                throw new InvalidDataException("Valid is a required property for SignatureVerifyResponse and cannot be null");
+            }
+            else
+            {
+                this.Valid = Valid;
+            }
             this.Status = Status;
-            this.Valid = Valid;
         }
         
         /// <summary>

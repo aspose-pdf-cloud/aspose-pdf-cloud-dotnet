@@ -6,7 +6,7 @@ Multiple text replacements request.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TextReplaces** | [**List&lt;TextReplace&gt;**](TextReplace.md) | A list of text replacement settings. | 
-**DefaultFont** | **string** |  | [optional] 
+**DefaultFont** | **string** | Name of font to use if requested font is not embedded into document. | [optional] 
 **StartIndex** | **int?** | The index of first match to be replaced. | [optional] 
 **CountReplace** | **int?** | The number of matches to be replaced. | [optional] 
 

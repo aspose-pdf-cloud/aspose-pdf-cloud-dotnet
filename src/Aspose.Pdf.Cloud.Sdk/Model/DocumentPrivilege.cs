@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents the privileges for accessing Pdf file./&gt;.
+    /// Represents the privileges for accessing Pdf file./&amp;gt;.
     /// </summary>
     [DataContract]
     public partial class DocumentPrivilege :  IEquatable<DocumentPrivilege>, IValidatableObject

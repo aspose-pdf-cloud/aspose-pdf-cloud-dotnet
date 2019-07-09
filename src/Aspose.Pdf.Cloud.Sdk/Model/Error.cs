@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="FileExistResponse.cs">
+// <copyright company="Aspose" file="Error.cs">
 //   Copyright (c) 2019 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,56 +41,53 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// FileExistResponse
+    /// Error
     /// </summary>
     [DataContract]
-    public partial class FileExistResponse : AsposeResponse,  IEquatable<FileExistResponse>, IValidatableObject
+    public partial class Error :  IEquatable<Error>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="FileExistResponse" /> class.
+        /// Initializes a new instance of the <see cref="Error" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected FileExistResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="FileExistResponse" /> class.
-        /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="FileExist">FileExist.</param>
-        public FileExistResponse(int? Code = default(int?), string Status = default(string), FileExist FileExist = default(FileExist))
+        /// <param name="Code">Code             .</param>
+        /// <param name="Message">Message             .</param>
+        /// <param name="Description">Description             .</param>
+        /// <param name="InnerError">Inner Error             .</param>
+        public Error(string Code = default(string), string Message = default(string), string Description = default(string), ErrorDetails InnerError = default(ErrorDetails))
         {
-            // to ensure "Code" is required (not null)
-            if (Code == null)
-            {
-                throw new InvalidDataException("Code is a required property for FileExistResponse and cannot be null");
-            }
-            else
-            {
-                this.Code = Code;
-            }
-            this.Status = Status;
-            this.FileExist = FileExist;
+            this.Code = Code;
+            this.Message = Message;
+            this.Description = Description;
+            this.InnerError = InnerError;
         }
         
         /// <summary>
-        /// Response status code.
+        /// Code             
         /// </summary>
-        /// <value>Response status code.</value>
+        /// <value>Code             </value>
         [DataMember(Name="Code", EmitDefaultValue=false)]
-        public int? Code { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
-        /// Response status.
+        /// Message             
         /// </summary>
-        /// <value>Response status.</value>
-        [DataMember(Name="Status", EmitDefaultValue=false)]
-        public string Status { get; set; }
+        /// <value>Message             </value>
+        [DataMember(Name="Message", EmitDefaultValue=false)]
+        public string Message { get; set; }
 
         /// <summary>
-        /// Gets or Sets FileExist
+        /// Description             
         /// </summary>
-        [DataMember(Name="FileExist", EmitDefaultValue=false)]
-        public FileExist FileExist { get; set; }
+        /// <value>Description             </value>
+        [DataMember(Name="Description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+
+        /// <summary>
+        /// Inner Error             
+        /// </summary>
+        /// <value>Inner Error             </value>
+        [DataMember(Name="InnerError", EmitDefaultValue=false)]
+        public ErrorDetails InnerError { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -99,10 +96,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class FileExistResponse {\n");
+            sb.Append("class Error {\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
-            sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  FileExist: ").Append(FileExist).Append("\n");
+            sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  InnerError: ").Append(InnerError).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,7 +109,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public  new string ToJson()
+        public string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -124,15 +122,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as FileExistResponse);
+            return this.Equals(obj as Error);
         }
 
         /// <summary>
-        /// Returns true if FileExistResponse instances are equal
+        /// Returns true if Error instances are equal
         /// </summary>
-        /// <param name="other">Instance of FileExistResponse to be compared</param>
+        /// <param name="other">Instance of Error to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(FileExistResponse other)
+        public bool Equals(Error other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -145,14 +143,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Code.Equals(other.Code)
                 ) && 
                 (
-                    this.Status == other.Status ||
-                    this.Status != null &&
-                    this.Status.Equals(other.Status)
+                    this.Message == other.Message ||
+                    this.Message != null &&
+                    this.Message.Equals(other.Message)
                 ) && 
                 (
-                    this.FileExist == other.FileExist ||
-                    this.FileExist != null &&
-                    this.FileExist.Equals(other.FileExist)
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
+                ) && 
+                (
+                    this.InnerError == other.InnerError ||
+                    this.InnerError != null &&
+                    this.InnerError.Equals(other.InnerError)
                 );
         }
 
@@ -169,10 +172,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
-                if (this.Status != null)
-                    hash = hash * 59 + this.Status.GetHashCode();
-                if (this.FileExist != null)
-                    hash = hash * 59 + this.FileExist.GetHashCode();
+                if (this.Message != null)
+                    hash = hash * 59 + this.Message.GetHashCode();
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
+                if (this.InnerError != null)
+                    hash = hash * 59 + this.InnerError.GetHashCode();
                 return hash;
             }
         }

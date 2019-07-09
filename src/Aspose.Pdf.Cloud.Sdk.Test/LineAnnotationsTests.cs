@@ -73,10 +73,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             List<LineAnnotation> annotations = new List<LineAnnotation>
             {
-                new LineAnnotation()
+                new LineAnnotation(Rect: new Rectangle(100, 100, 200, 200),
+                    Starting: new Point(10, 10),
+                    Ending: new Point(100, 100))
                 {
                     Name = "Test Line Annotation",
-                    Rect = new Rectangle(100, 100, 300, 300),
                     Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     RichText = "Rich Text",
@@ -84,14 +85,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                     ZIndex = 1,
                     ShowCaption = true,
                     Title = "Title",
-                    Starting = new Point(10, 10),
-                    Ending = new Point(100, 100),
                     Color = new Color(0x99, 0xFF, 0, 0)
                 }
             };
 
             var response = PdfApi.PostPageLineAnnotations(Name, 1, annotations, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
         
         /// <summary>
@@ -113,26 +112,25 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PutLineAnnotationTest()
         {
-            LineAnnotation annotation = new LineAnnotation()
+            LineAnnotation annotation = new LineAnnotation(Rect: new Rectangle(100, 100, 200, 200),
+                Starting: new Point(10, 10),
+                Ending: new Point(100, 100))
             {
                 Name = "Test Line Annotation",
-                Rect = new Rectangle(100, 100, 300, 300),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 RichText = "Updated Rich Text",
                 Subject = "Subj",
                 ZIndex = 1,
                 ShowCaption = true,
-                Title = "Title Updated",
-                Starting = new Point(10, 10),
-                Ending = new Point(100, 100)
+                Title = "Title Updated"
             };
 
             var lineResponse = PdfApi.GetDocumentLineAnnotations(Name, folder: TempFolder);
             string annotationId = lineResponse.Annotations.List[0].Id;
 
             var response = PdfApi.PutLineAnnotation(Name, annotationId, annotation, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }

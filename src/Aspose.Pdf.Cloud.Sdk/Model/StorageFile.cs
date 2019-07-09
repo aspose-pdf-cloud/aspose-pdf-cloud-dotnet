@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright company="Aspose" file="File.cs">
+// <copyright company="Aspose" file="StorageFile.cs">
 //   Copyright (c) 2019 Aspose.PDF Cloud
 // </copyright>
 // <summary>
@@ -41,30 +41,30 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// Represents file DTO.
+    /// File or folder information
     /// </summary>
     [DataContract]
-    public partial class File :  IEquatable<File>, IValidatableObject
+    public partial class StorageFile :  IEquatable<StorageFile>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="File" /> class.
+        /// Initializes a new instance of the <see cref="StorageFile" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected File() { }
+        protected StorageFile() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="File" /> class.
+        /// Initializes a new instance of the <see cref="StorageFile" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="IsFolder">IsFolder (required).</param>
-        /// <param name="ModifiedDate">ModifiedDate.</param>
-        /// <param name="Size">Size (required).</param>
-        /// <param name="Path">Path.</param>
-        public File(string Name = default(string), bool? IsFolder = default(bool?), DateTime? ModifiedDate = default(DateTime?), long? Size = default(long?), string Path = default(string))
+        /// <param name="Name">File or folder name..</param>
+        /// <param name="IsFolder">True if it is a folder. (required).</param>
+        /// <param name="ModifiedDate">File or folder last modified DateTime..</param>
+        /// <param name="Size">File or folder size. (required).</param>
+        /// <param name="Path">File or folder path..</param>
+        public StorageFile(string Name = default(string), bool? IsFolder = default(bool?), DateTime? ModifiedDate = default(DateTime?), long? Size = default(long?), string Path = default(string))
         {
             // to ensure "IsFolder" is required (not null)
             if (IsFolder == null)
             {
-                throw new InvalidDataException("IsFolder is a required property for File and cannot be null");
+                throw new InvalidDataException("IsFolder is a required property for StorageFile and cannot be null");
             }
             else
             {
@@ -73,7 +73,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             // to ensure "Size" is required (not null)
             if (Size == null)
             {
-                throw new InvalidDataException("Size is a required property for File and cannot be null");
+                throw new InvalidDataException("Size is a required property for StorageFile and cannot be null");
             }
             else
             {
@@ -85,32 +85,37 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// File or folder name.
         /// </summary>
+        /// <value>File or folder name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsFolder
+        /// True if it is a folder.
         /// </summary>
+        /// <value>True if it is a folder.</value>
         [DataMember(Name="IsFolder", EmitDefaultValue=false)]
         public bool? IsFolder { get; set; }
 
         /// <summary>
-        /// Gets or Sets ModifiedDate
+        /// File or folder last modified DateTime.
         /// </summary>
+        /// <value>File or folder last modified DateTime.</value>
         [DataMember(Name="ModifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets Size
+        /// File or folder size.
         /// </summary>
+        /// <value>File or folder size.</value>
         [DataMember(Name="Size", EmitDefaultValue=false)]
         public long? Size { get; set; }
 
         /// <summary>
-        /// Gets or Sets Path
+        /// File or folder path.
         /// </summary>
+        /// <value>File or folder path.</value>
         [DataMember(Name="Path", EmitDefaultValue=false)]
         public string Path { get; set; }
 
@@ -121,7 +126,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class File {\n");
+            sb.Append("class StorageFile {\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  IsFolder: ").Append(IsFolder).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
@@ -148,15 +153,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as File);
+            return this.Equals(obj as StorageFile);
         }
 
         /// <summary>
-        /// Returns true if File instances are equal
+        /// Returns true if StorageFile instances are equal
         /// </summary>
-        /// <param name="other">Instance of File to be compared</param>
+        /// <param name="other">Instance of StorageFile to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(File other)
+        public bool Equals(StorageFile other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -73,10 +73,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             List<CircleAnnotation> annotations = new List<CircleAnnotation>
             {
-                new CircleAnnotation()
+                new CircleAnnotation(Rect: new Rectangle(100, 100, 200, 200))
                 {
                     Name = "Test Circle Annotation",
-                    Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
                     RichText = "Rich Text",
@@ -87,7 +86,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             };
 
             var response = PdfApi.PostPageCircleAnnotations(Name, 1, annotations, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
@@ -109,10 +108,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PutCircleAnnotationTest()
         {
-            CircleAnnotation annotation = new CircleAnnotation()
+            CircleAnnotation annotation = new CircleAnnotation(Rect: new Rectangle(100, 100, 200, 200))
             {
                 Name = "Updated Test",
-                Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
                 RichText = "Rich Text Updated",
@@ -125,7 +123,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string annotationId = lineResponse.Annotations.List[0].Id;
 
             var response = PdfApi.PutCircleAnnotation(Name, annotationId, annotation, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(201));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }
