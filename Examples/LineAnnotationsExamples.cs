@@ -16,7 +16,7 @@ namespace Aspose.Pdf.Cloud.Sdk.LineAnnotationsAPI
         private const string Name = "PdfWithAnnotations.pdf";
         private const int PageNumber = 2;
 
-        PdfApi api = new PdfApi("b125f13bf6b76ed81ee990142d841195", "78946fb4-3bd4-4d3e-b309-f9e2ff9ac6f9");
+        PdfApi api = new PdfApi("XXXXXXX", "XXXXXXX");
         string FolderName = "";
 
         protected void UploadFile(string sourcePath, string serverFileName)
