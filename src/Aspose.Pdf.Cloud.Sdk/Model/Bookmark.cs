@@ -49,23 +49,23 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Bookmark" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="Title">Get the Title;.</param>
-        /// <param name="Italic">Is bookmark italic..</param>
-        /// <param name="Bold">Is bookmark bold..</param>
-        /// <param name="Color">Get the color.</param>
-        /// <param name="Action">Gets or sets the action bound with the bookmark. If PageNumber is presented the action can not be specified. The action type includes: \&quot;GoTo\&quot;, \&quot;GoToR\&quot;, \&quot;Launch\&quot;, \&quot;Named\&quot;..</param>
-        /// <param name="Level">Gets or sets bookmark&#39;s hierarchy level..</param>
-        /// <param name="Destination">Gets or sets bookmark&#39;s destination page. Required if action is set as string.Empty..</param>
-        /// <param name="PageDisplay">Gets or sets the type of display bookmark&#39;s destination page..</param>
-        /// <param name="PageDisplayBottom">Gets or sets the bottom coordinate of page display..</param>
-        /// <param name="PageDisplayLeft">Gets or sets the left coordinate of page display..</param>
-        /// <param name="PageDisplayRight">Gets or sets the right coordinate of page display..</param>
-        /// <param name="PageDisplayTop">Gets or sets the top coordinate of page display..</param>
-        /// <param name="PageDisplayZoom">Gets or sets the zoom factor of page display..</param>
-        /// <param name="PageNumber">Gets or sets the number of bookmark&#39;s destination page. .</param>
-        /// <param name="RemoteFile">Gets or sets the file (path) which is required for \&quot;GoToR\&quot; action of bookmark..</param>
-        /// <param name="Bookmarks">The children bookmarks..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="Title">Get the Title;</param>
+        /// <param name="Italic">Is bookmark italic.</param>
+        /// <param name="Bold">Is bookmark bold.</param>
+        /// <param name="Color">Get the color</param>
+        /// <param name="Action">Gets or sets the action bound with the bookmark. If PageNumber is presented the action can not be specified. The action type includes: \&quot;GoTo\&quot;, \&quot;GoToR\&quot;, \&quot;Launch\&quot;, \&quot;Named\&quot;.</param>
+        /// <param name="Level">Gets or sets bookmark&#39;s hierarchy level.</param>
+        /// <param name="Destination">Gets or sets bookmark&#39;s destination page. Required if action is set as string.Empty.</param>
+        /// <param name="PageDisplay">Gets or sets the type of display bookmark&#39;s destination page.</param>
+        /// <param name="PageDisplayBottom">Gets or sets the bottom coordinate of page display.</param>
+        /// <param name="PageDisplayLeft">Gets or sets the left coordinate of page display.</param>
+        /// <param name="PageDisplayRight">Gets or sets the right coordinate of page display.</param>
+        /// <param name="PageDisplayTop">Gets or sets the top coordinate of page display.</param>
+        /// <param name="PageDisplayZoom">Gets or sets the zoom factor of page display.</param>
+        /// <param name="PageNumber">Gets or sets the number of bookmark&#39;s destination page. </param>
+        /// <param name="RemoteFile">Gets or sets the file (path) which is required for \&quot;GoToR\&quot; action of bookmark.</param>
+        /// <param name="Bookmarks">The children bookmarks.</param>
         public Bookmark(List<Link> Links = default(List<Link>), string Title = default(string), bool? Italic = default(bool?), bool? Bold = default(bool?), Color Color = default(Color), string Action = default(string), int? Level = default(int?), string Destination = default(string), string PageDisplay = default(string), int? PageDisplayBottom = default(int?), int? PageDisplayLeft = default(int?), int? PageDisplayRight = default(int?), int? PageDisplayTop = default(int?), int? PageDisplayZoom = default(int?), int? PageNumber = default(int?), string RemoteFile = default(string), Bookmarks Bookmarks = default(Bookmarks))
         {
             this.Links = Links;

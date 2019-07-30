@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MovieAnnotationsResponse" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Annotations">Movie annotations object.</param>
+        /// <param name="Code">Response status code. (required)</param>
+        /// <param name="Status">Response status.</param>
+        /// <param name="Annotations">Movie annotations object</param>
         public MovieAnnotationsResponse(int? Code = default(int?), string Status = default(string), MovieAnnotations Annotations = default(MovieAnnotations))
         {
             // to ensure "Code" is required (not null)

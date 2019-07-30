@@ -49,7 +49,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextRects" /> class.
         /// </summary>
-        /// <param name="List">The list of text occurrences..</param>
+        /// <param name="List">The list of text occurrences.</param>
         public TextRects(List<TextRect> List = default(List<TextRect>))
         {
             this.List = List;

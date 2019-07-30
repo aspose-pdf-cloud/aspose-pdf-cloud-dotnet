@@ -54,14 +54,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StampInfo" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="Id">Gets ID of the stamp..</param>
-        /// <param name="IndexOnPage">Gets index on page of the stamp..</param>
-        /// <param name="PageIndex">Gets PageIndex of the annotation..</param>
-        /// <param name="Rect">Gets Rect of the annotation..</param>
-        /// <param name="Text">Get the text content..</param>
-        /// <param name="Visible">Gets the stamp is visible..</param>
-        /// <param name="StampType">Gets stamp type. (required).</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="Id">Gets ID of the stamp.</param>
+        /// <param name="IndexOnPage">Gets index on page of the stamp.</param>
+        /// <param name="PageIndex">Gets PageIndex of the annotation.</param>
+        /// <param name="Rect">Gets Rect of the annotation.</param>
+        /// <param name="Text">Get the text content.</param>
+        /// <param name="Visible">Gets the stamp is visible.</param>
+        /// <param name="StampType">Gets stamp type. (required)</param>
         public StampInfo(List<Link> Links = default(List<Link>), string Id = default(string), int? IndexOnPage = default(int?), int? PageIndex = default(int?), Rectangle Rect = default(Rectangle), string Text = default(string), bool? Visible = default(bool?), StampType StampType = default(StampType))
         {
             // to ensure "StampType" is required (not null)

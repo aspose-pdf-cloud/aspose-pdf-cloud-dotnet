@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentProperties" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of PDF document properties..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of PDF document properties.</param>
         public DocumentProperties(List<Link> Links = default(List<Link>), List<DocumentProperty> List = default(List<DocumentProperty>))
         {
             this.Links = Links;

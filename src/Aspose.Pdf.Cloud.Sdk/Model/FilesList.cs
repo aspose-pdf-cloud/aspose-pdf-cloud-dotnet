@@ -49,7 +49,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FilesList" /> class.
         /// </summary>
-        /// <param name="Value">Files and folders contained by folder StorageFile..</param>
+        /// <param name="Value">Files and folders contained by folder StorageFile.</param>
         public FilesList(List<StorageFile> Value = default(List<StorageFile>))
         {
             this.Value = Value;

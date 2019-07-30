@@ -54,7 +54,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MergeDocuments" /> class.
         /// </summary>
-        /// <param name="List">List of documents for merging. (required).</param>
+        /// <param name="List">List of documents for merging. (required)</param>
         public MergeDocuments(List<string> List = default(List<string>))
         {
             // to ensure "List" is required (not null)

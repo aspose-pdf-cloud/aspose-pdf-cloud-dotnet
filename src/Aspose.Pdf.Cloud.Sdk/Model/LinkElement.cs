@@ -49,7 +49,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LinkElement" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
+        /// <param name="Links">Link to the document.</param>
         public LinkElement(List<Link> Links = default(List<Link>))
         {
             this.Links = Links;

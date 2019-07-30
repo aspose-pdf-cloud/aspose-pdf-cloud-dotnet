@@ -54,10 +54,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextStyle" /> class.
         /// </summary>
-        /// <param name="FontSize">Gets or sets font size of the text. (required).</param>
-        /// <param name="Font">Gets or sets font of the text..</param>
-        /// <param name="ForegroundColor">Gets or sets foreground color of the text..</param>
-        /// <param name="BackgroundColor">Sets background color of the text..</param>
+        /// <param name="FontSize">Gets or sets font size of the text. (required)</param>
+        /// <param name="Font">Gets or sets font of the text.</param>
+        /// <param name="ForegroundColor">Gets or sets foreground color of the text.</param>
+        /// <param name="BackgroundColor">Sets background color of the text.</param>
         public TextStyle(double? FontSize = default(double?), string Font = default(string), Color ForegroundColor = default(Color), Color BackgroundColor = default(Color))
         {
             // to ensure "FontSize" is required (not null)

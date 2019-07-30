@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FilesUploadResult" /> class.
         /// </summary>
-        /// <param name="Uploaded">List of uploaded file names.</param>
-        /// <param name="Errors">List of errors..</param>
+        /// <param name="Uploaded">List of uploaded file names</param>
+        /// <param name="Errors">List of errors.</param>
         public FilesUploadResult(List<string> Uploaded = default(List<string>), List<Error> Errors = default(List<Error>))
         {
             this.Uploaded = Uploaded;

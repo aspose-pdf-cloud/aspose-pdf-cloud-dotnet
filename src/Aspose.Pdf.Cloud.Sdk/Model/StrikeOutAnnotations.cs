@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StrikeOutAnnotations" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of strikeout annotations..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of strikeout annotations.</param>
         public StrikeOutAnnotations(List<Link> Links = default(List<Link>), List<StrikeOutAnnotation> List = default(List<StrikeOutAnnotation>))
         {
             this.Links = Links;

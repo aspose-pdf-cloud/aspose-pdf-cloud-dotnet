@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LineAnnotationResponse" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Annotation">Line annotation object.</param>
+        /// <param name="Code">Response status code. (required)</param>
+        /// <param name="Status">Response status.</param>
+        /// <param name="Annotation">Line annotation object</param>
         public LineAnnotationResponse(int? Code = default(int?), string Status = default(string), LineAnnotation Annotation = default(LineAnnotation))
         {
             // to ensure "Code" is required (not null)

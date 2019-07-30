@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScreenAnnotations" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of screen annotations..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of screen annotations.</param>
         public ScreenAnnotations(List<Link> Links = default(List<Link>), List<ScreenAnnotation> List = default(List<ScreenAnnotation>))
         {
             this.Links = Links;

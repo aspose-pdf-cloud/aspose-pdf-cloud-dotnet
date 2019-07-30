@@ -54,8 +54,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ErrorDetails" /> class.
         /// </summary>
-        /// <param name="RequestId">The request id.</param>
-        /// <param name="Date">Date (required).</param>
+        /// <param name="RequestId">The request id</param>
+        /// <param name="Date">Date (required)</param>
         public ErrorDetails(string RequestId = default(string), DateTime? Date = default(DateTime?))
         {
             // to ensure "Date" is required (not null)

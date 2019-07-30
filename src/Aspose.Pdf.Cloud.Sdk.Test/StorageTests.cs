@@ -146,7 +146,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             string name = "PDF-CI";
             var response = PdfApi.StorageExists(name);
-            Assert.That(response.Exists, Is.True);
+            if (PdfApi.Configuration.BasePath.Contains("qa"))
+            {
+                Assert.That(response.Exists, Is.True);
+            }
+            else
+            {
+                Assert.That(response.Exists, Is.False);
+            }
         }
 
         /// <summary>

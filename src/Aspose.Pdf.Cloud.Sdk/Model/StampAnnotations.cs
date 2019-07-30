@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StampAnnotations" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of stamp annotations..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of stamp annotations.</param>
         public StampAnnotations(List<Link> Links = default(List<Link>), List<StampAnnotation> List = default(List<StampAnnotation>))
         {
             this.Links = Links;

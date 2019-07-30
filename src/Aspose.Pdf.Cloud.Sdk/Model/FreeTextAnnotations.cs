@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FreeTextAnnotations" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of free text annotations..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of free text annotations.</param>
         public FreeTextAnnotations(List<Link> Links = default(List<Link>), List<FreeTextAnnotation> List = default(List<FreeTextAnnotation>))
         {
             this.Links = Links;

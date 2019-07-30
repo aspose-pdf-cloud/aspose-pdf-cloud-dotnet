@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UnderlineAnnotations" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of underline annotations..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of underline annotations.</param>
         public UnderlineAnnotations(List<Link> Links = default(List<Link>), List<UnderlineAnnotation> List = default(List<UnderlineAnnotation>))
         {
             this.Links = Links;

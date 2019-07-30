@@ -54,8 +54,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ObjectExist" /> class.
         /// </summary>
-        /// <param name="Exists">Indicates that the file or folder exists. (required).</param>
-        /// <param name="IsFolder">True if it is a folder, false if it is a file. (required).</param>
+        /// <param name="Exists">Indicates that the file or folder exists. (required)</param>
+        /// <param name="IsFolder">True if it is a folder, false if it is a file. (required)</param>
         public ObjectExist(bool? Exists = default(bool?), bool? IsFolder = default(bool?))
         {
             // to ensure "Exists" is required (not null)

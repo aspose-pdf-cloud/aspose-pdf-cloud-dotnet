@@ -54,12 +54,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Image" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="Width">Gets width of the image. (required).</param>
-        /// <param name="Height">Gets height of the image. (required).</param>
-        /// <param name="Id">Gets ID of the image..</param>
-        /// <param name="Rectangle">Gets rectangle of the image..</param>
-        /// <param name="PageNumber">Gets page number. (required).</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="Width">Gets width of the image. (required)</param>
+        /// <param name="Height">Gets height of the image. (required)</param>
+        /// <param name="Id">Gets ID of the image.</param>
+        /// <param name="Rectangle">Gets rectangle of the image.</param>
+        /// <param name="PageNumber">Gets page number. (required)</param>
         public Image(List<Link> Links = default(List<Link>), int? Width = default(int?), int? Height = default(int?), string Id = default(string), Rectangle Rectangle = default(Rectangle), int? PageNumber = default(int?))
         {
             // to ensure "Width" is required (not null)

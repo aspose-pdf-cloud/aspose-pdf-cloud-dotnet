@@ -54,8 +54,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextLine" /> class.
         /// </summary>
-        /// <param name="HorizontalAlignment">Line&#39;s horizontal alignment.</param>
-        /// <param name="Segments">Segments that form the line. Every segment has its own formatting. (required).</param>
+        /// <param name="HorizontalAlignment">Line&#39;s horizontal alignment</param>
+        /// <param name="Segments">Segments that form the line. Every segment has its own formatting. (required)</param>
         public TextLine(TextHorizontalAlignment HorizontalAlignment = default(TextHorizontalAlignment), List<Segment> Segments = default(List<Segment>))
         {
             // to ensure "Segments" is required (not null)

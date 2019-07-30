@@ -54,8 +54,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Segment" /> class.
         /// </summary>
-        /// <param name="Value">Text that the Segment object represents. (required).</param>
-        /// <param name="TextState">Text state for the text that Segment object represents..</param>
+        /// <param name="Value">Text that the Segment object represents. (required)</param>
+        /// <param name="TextState">Text state for the text that Segment object represents.</param>
         public Segment(string Value = default(string), TextState TextState = default(TextState))
         {
             // to ensure "Value" is required (not null)

@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PolyLineAnnotations" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of polyline annotations..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of polyline annotations.</param>
         public PolyLineAnnotations(List<Link> Links = default(List<Link>), List<PolyLineAnnotation> List = default(List<PolyLineAnnotation>))
         {
             this.Links = Links;

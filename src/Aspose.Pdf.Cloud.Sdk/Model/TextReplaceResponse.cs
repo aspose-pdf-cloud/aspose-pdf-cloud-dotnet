@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextReplaceResponse" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Matches">Number of matches (required).</param>
+        /// <param name="Code">Response status code. (required)</param>
+        /// <param name="Status">Response status.</param>
+        /// <param name="Matches">Number of matches (required)</param>
         public TextReplaceResponse(int? Code = default(int?), string Status = default(string), int? Matches = default(int?))
         {
             // to ensure "Code" is required (not null)

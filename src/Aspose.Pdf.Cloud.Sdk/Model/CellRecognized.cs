@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CellRecognized" /> class.
         /// </summary>
-        /// <param name="TextRects">Gets collection of TextRect objects that describes text containing in the cell.</param>
-        /// <param name="Rectangle">Gets rectangle that describes position of the cell on page.</param>
+        /// <param name="TextRects">Gets collection of TextRect objects that describes text containing in the cell</param>
+        /// <param name="Rectangle">Gets rectangle that describes position of the cell on page</param>
         public CellRecognized(TextRects TextRects = default(TextRects), Rectangle Rectangle = default(Rectangle))
         {
             this.TextRects = TextRects;

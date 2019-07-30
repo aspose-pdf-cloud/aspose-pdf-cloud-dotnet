@@ -49,7 +49,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FileVersions" /> class.
         /// </summary>
-        /// <param name="Value">File versions FileVersion..</param>
+        /// <param name="Value">File versions FileVersion.</param>
         public FileVersions(List<FileVersion> Value = default(List<FileVersion>))
         {
             this.Value = Value;

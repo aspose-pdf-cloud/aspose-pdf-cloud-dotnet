@@ -54,15 +54,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ImageTemplate" /> class.
         /// </summary>
-        /// <param name="ImagePath">A path for image. (required).</param>
-        /// <param name="ImageSrcType">Image type. (required).</param>
-        /// <param name="LeftMargin">LeftMargin.</param>
-        /// <param name="RightMargin">RightMargin.</param>
-        /// <param name="TopMargin">TopMargin.</param>
-        /// <param name="BottomMargin">BottomMargin.</param>
-        /// <param name="PageWidth">PageWidth.</param>
-        /// <param name="PageHeight">PageHeight.</param>
-        /// <param name="MarginInfo">MarginInfo.</param>
+        /// <param name="ImagePath">A path for image. (required)</param>
+        /// <param name="ImageSrcType">Image type. (required)</param>
+        /// <param name="LeftMargin">LeftMargin</param>
+        /// <param name="RightMargin">RightMargin</param>
+        /// <param name="TopMargin">TopMargin</param>
+        /// <param name="BottomMargin">BottomMargin</param>
+        /// <param name="PageWidth">PageWidth</param>
+        /// <param name="PageHeight">PageHeight</param>
+        /// <param name="MarginInfo">MarginInfo</param>
         public ImageTemplate(string ImagePath = default(string), ImageSrcType ImageSrcType = default(ImageSrcType), double? LeftMargin = default(double?), double? RightMargin = default(double?), double? TopMargin = default(double?), double? BottomMargin = default(double?), double? PageWidth = default(double?), double? PageHeight = default(double?), MarginInfo MarginInfo = default(MarginInfo))
         {
             // to ensure "ImagePath" is required (not null)

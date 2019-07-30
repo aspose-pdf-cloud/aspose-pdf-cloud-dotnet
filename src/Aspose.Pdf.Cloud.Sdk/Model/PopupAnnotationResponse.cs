@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PopupAnnotationResponse" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Annotation">Popup annotation object.</param>
+        /// <param name="Code">Response status code. (required)</param>
+        /// <param name="Status">Response status.</param>
+        /// <param name="Annotation">Popup annotation object</param>
         public PopupAnnotationResponse(int? Code = default(int?), string Status = default(string), PopupAnnotationWithParent Annotation = default(PopupAnnotationWithParent))
         {
             // to ensure "Code" is required (not null)

@@ -54,10 +54,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Color" /> class.
         /// </summary>
-        /// <param name="A">Alpha component. (required).</param>
-        /// <param name="R">Red component. (required).</param>
-        /// <param name="G">Green component. (required).</param>
-        /// <param name="B">Blue component. (required).</param>
+        /// <param name="A">Alpha component. (required)</param>
+        /// <param name="R">Red component. (required)</param>
+        /// <param name="G">Green component. (required)</param>
+        /// <param name="B">Blue component. (required)</param>
         public Color(int? A = default(int?), int? R = default(int?), int? G = default(int?), int? B = default(int?))
         {
             // to ensure "A" is required (not null)

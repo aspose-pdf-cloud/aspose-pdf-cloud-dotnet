@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StrikeOutAnnotationResponse" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Annotation">Strikeout annotation object.</param>
+        /// <param name="Code">Response status code. (required)</param>
+        /// <param name="Status">Response status.</param>
+        /// <param name="Annotation">Strikeout annotation object</param>
         public StrikeOutAnnotationResponse(int? Code = default(int?), string Status = default(string), StrikeOutAnnotation Annotation = default(StrikeOutAnnotation))
         {
             // to ensure "Code" is required (not null)

@@ -54,21 +54,21 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MovieAnnotation" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="Color">Color of the annotation..</param>
-        /// <param name="Contents">Get the annotation content..</param>
-        /// <param name="Modified">The date and time when the annotation was last modified..</param>
-        /// <param name="Id">Gets ID of the annotation..</param>
-        /// <param name="Flags">Gets Flags of the annotation..</param>
-        /// <param name="Name">Gets Name of the annotation..</param>
-        /// <param name="Rect">Gets Rect of the annotation. (required).</param>
-        /// <param name="PageIndex">Gets PageIndex of the annotation..</param>
-        /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
-        /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation..</param>
-        /// <param name="VerticalAlignment">Gets VerticalAlignment of the annotation..</param>
-        /// <param name="Title">Get the annotation title..</param>
-        /// <param name="FileName">Gets or sets file specification name. .</param>
-        /// <param name="FilePath">Sets content file path. .</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="Color">Color of the annotation.</param>
+        /// <param name="Contents">Get the annotation content.</param>
+        /// <param name="Modified">The date and time when the annotation was last modified.</param>
+        /// <param name="Id">Gets ID of the annotation.</param>
+        /// <param name="Flags">Gets Flags of the annotation.</param>
+        /// <param name="Name">Gets Name of the annotation.</param>
+        /// <param name="Rect">Gets Rect of the annotation. (required)</param>
+        /// <param name="PageIndex">Gets PageIndex of the annotation.</param>
+        /// <param name="ZIndex">Gets ZIndex of the annotation.</param>
+        /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation.</param>
+        /// <param name="VerticalAlignment">Gets VerticalAlignment of the annotation.</param>
+        /// <param name="Title">Get the annotation title.</param>
+        /// <param name="FileName">Gets or sets file specification name. </param>
+        /// <param name="FilePath">Sets content file path. </param>
         public MovieAnnotation(List<Link> Links = default(List<Link>), Color Color = default(Color), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), Rectangle Rect = default(Rectangle), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string Title = default(string), string FileName = default(string), string FilePath = default(string))
         {
             // to ensure "Rect" is required (not null)

@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MovieAnnotations" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of movie annotations..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of movie annotations.</param>
         public MovieAnnotations(List<Link> Links = default(List<Link>), List<MovieAnnotation> List = default(List<MovieAnnotation>))
         {
             this.Links = Links;

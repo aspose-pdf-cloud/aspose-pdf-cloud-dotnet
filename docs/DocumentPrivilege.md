@@ -1,5 +1,5 @@
 ﻿# Aspose.Pdf.Cloud.Sdk.Model.DocumentPrivilege
-Represents the privileges for accessing Pdf file./&gt;.
+Represents the privileges for accessing Pdf file.
 
 ## Properties
 

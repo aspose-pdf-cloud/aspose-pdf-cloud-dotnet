@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LinkAnnotationsResponse" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Links">LinkAnnotations object.</param>
+        /// <param name="Code">Response status code. (required)</param>
+        /// <param name="Status">Response status.</param>
+        /// <param name="Links">LinkAnnotations object</param>
         public LinkAnnotationsResponse(int? Code = default(int?), string Status = default(string), LinkAnnotations Links = default(LinkAnnotations))
         {
             // to ensure "Code" is required (not null)

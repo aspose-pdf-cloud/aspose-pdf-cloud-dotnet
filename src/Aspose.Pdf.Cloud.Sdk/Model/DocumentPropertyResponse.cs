@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentPropertyResponse" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="DocumentProperty">DocumentProperty object.</param>
+        /// <param name="Code">Response status code. (required)</param>
+        /// <param name="Status">Response status.</param>
+        /// <param name="DocumentProperty">DocumentProperty object</param>
         public DocumentPropertyResponse(int? Code = default(int?), string Status = default(string), DocumentProperty DocumentProperty = default(DocumentProperty))
         {
             // to ensure "Code" is required (not null)
