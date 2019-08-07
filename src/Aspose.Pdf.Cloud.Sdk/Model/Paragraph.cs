@@ -54,18 +54,18 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Paragraph" /> class.
         /// </summary>
-        /// <param name="LineSpacing">Line spacing mode..</param>
-        /// <param name="WrapMode">Word wrap mode..</param>
-        /// <param name="HorizontalAlignment">Horizontal alignment for the text inside paragrph&#39;s rectangle..</param>
-        /// <param name="LeftMargin">Left margin..</param>
-        /// <param name="RightMargin">Right margin..</param>
-        /// <param name="TopMargin">Top margin..</param>
-        /// <param name="BottomMargin">Bottom margin..</param>
-        /// <param name="Rectangle">Rectangle of the paragraph..</param>
-        /// <param name="Rotation">Rotation angle in degrees..</param>
-        /// <param name="SubsequentLinesIndent">Subsequent lines indent value..</param>
-        /// <param name="VerticalAlignment">Vertical alignment for the text inside paragrph&#39;s rectangle.</param>
-        /// <param name="Lines">An array of text lines. (required).</param>
+        /// <param name="LineSpacing">Line spacing mode.</param>
+        /// <param name="WrapMode">Word wrap mode.</param>
+        /// <param name="HorizontalAlignment">Horizontal alignment for the text inside paragrph&#39;s rectangle.</param>
+        /// <param name="LeftMargin">Left margin.</param>
+        /// <param name="RightMargin">Right margin.</param>
+        /// <param name="TopMargin">Top margin.</param>
+        /// <param name="BottomMargin">Bottom margin.</param>
+        /// <param name="Rectangle">Rectangle of the paragraph.</param>
+        /// <param name="Rotation">Rotation angle in degrees.</param>
+        /// <param name="SubsequentLinesIndent">Subsequent lines indent value.</param>
+        /// <param name="VerticalAlignment">Vertical alignment for the text inside paragrph&#39;s rectangle</param>
+        /// <param name="Lines">An array of text lines. (required)</param>
         public Paragraph(LineSpacing LineSpacing = default(LineSpacing), WrapMode WrapMode = default(WrapMode), TextHorizontalAlignment HorizontalAlignment = default(TextHorizontalAlignment), double? LeftMargin = default(double?), double? RightMargin = default(double?), double? TopMargin = default(double?), double? BottomMargin = default(double?), Rectangle Rectangle = default(Rectangle), double? Rotation = default(double?), double? SubsequentLinesIndent = default(double?), VerticalAlignment VerticalAlignment = default(VerticalAlignment), List<TextLine> Lines = default(List<TextLine>))
         {
             // to ensure "Lines" is required (not null)

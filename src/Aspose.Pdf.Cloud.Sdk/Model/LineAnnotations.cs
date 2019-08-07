@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LineAnnotations" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of line annotations..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of line annotations.</param>
         public LineAnnotations(List<Link> Links = default(List<Link>), List<LineAnnotation> List = default(List<LineAnnotation>))
         {
             this.Links = Links;

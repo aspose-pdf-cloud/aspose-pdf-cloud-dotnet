@@ -50,6 +50,7 @@
     <Compile Include="HeaderFooterTests.cs" />
     <Compile Include="HighlightAnnotationsTests.cs" />
     <Compile Include="ImagesTests.cs" />
+    <Compile Include="ImportExportTests.cs" />
     <Compile Include="InkAnnotationsTests.cs" />
     <Compile Include="LineAnnotationsTests.cs" />
     <Compile Include="LinkAnnotationsTests.cs" />

@@ -66,6 +66,9 @@ Method | HTTP request | Description
 [**GetDocumentUnderlineAnnotations**](PdfApi.md#getdocumentunderlineannotations) | **GET** /pdf/\{name}/annotations/underline | Read document underline annotations.
 [**GetDownloadDocumentAttachmentByIndex**](PdfApi.md#getdownloaddocumentattachmentbyindex) | **GET** /pdf/\{name}/attachments/\{attachmentIndex}/download | Download document attachment content by its index.
 [**GetEpubInStorageToPdf**](PdfApi.md#getepubinstoragetopdf) | **GET** /pdf/create/epub | Convert EPUB file (located on storage) to PDF format and return resulting file in response. 
+[**GetExportFieldsFromPdfToFdfInStorage**](PdfApi.md#getexportfieldsfrompdftofdfinstorage) | **GET** /pdf/\{name}/export/fdf | Export fields from from PDF in storage to FDF file.
+[**GetExportFieldsFromPdfToXfdfInStorage**](PdfApi.md#getexportfieldsfrompdftoxfdfinstorage) | **GET** /pdf/\{name}/export/xfdf | Export fields from from PDF in storage to XFDF file.
+[**GetExportFieldsFromPdfToXmlInStorage**](PdfApi.md#getexportfieldsfrompdftoxmlinstorage) | **GET** /pdf/\{name}/export/xml | Export fields from from PDF in storage to XML file.
 [**GetField**](PdfApi.md#getfield) | **GET** /pdf/\{name}/fields/\{fieldName} | Get document field by name.
 [**GetFields**](PdfApi.md#getfields) | **GET** /pdf/\{name}/fields | Get document fields.
 [**GetFileAttachmentAnnotation**](PdfApi.md#getfileattachmentannotation) | **GET** /pdf/\{name}/annotations/fileattachment/\{annotationId} | Read document page FileAttachment annotation by ID.
@@ -81,6 +84,9 @@ Method | HTTP request | Description
 [**GetImageExtractAsPng**](PdfApi.md#getimageextractaspng) | **GET** /pdf/\{name}/images/\{imageId}/extract/png | Extract document image in PNG format
 [**GetImageExtractAsTiff**](PdfApi.md#getimageextractastiff) | **GET** /pdf/\{name}/images/\{imageId}/extract/tiff | Extract document image in TIFF format
 [**GetImages**](PdfApi.md#getimages) | **GET** /pdf/\{name}/pages/\{pageNumber}/images | Read document images.
+[**GetImportFieldsFromFdfInStorage**](PdfApi.md#getimportfieldsfromfdfinstorage) | **GET** /pdf/\{name}/import/fdf | Update fields from FDF file in storage.
+[**GetImportFieldsFromXfdfInStorage**](PdfApi.md#getimportfieldsfromxfdfinstorage) | **GET** /pdf/\{name}/import/xfdf | Update fields from XFDF file in storage.
+[**GetImportFieldsFromXmlInStorage**](PdfApi.md#getimportfieldsfromxmlinstorage) | **GET** /pdf/\{name}/import/xml | Import from XML file (located on storage) to PDF format and return resulting file in response. 
 [**GetInkAnnotation**](PdfApi.md#getinkannotation) | **GET** /pdf/\{name}/annotations/ink/\{annotationId} | Read document page ink annotation by ID.
 [**GetLaTeXInStorageToPdf**](PdfApi.md#getlatexinstoragetopdf) | **GET** /pdf/create/latex | Convert LaTeX file (located on storage) to PDF format and return resulting file in response. 
 [**GetLineAnnotation**](PdfApi.md#getlineannotation) | **GET** /pdf/\{name}/annotations/line/\{annotationId} | Read document page line annotation by ID.
@@ -177,6 +183,9 @@ Method | HTTP request | Description
 [**PostDocumentTextReplace**](PdfApi.md#postdocumenttextreplace) | **POST** /pdf/\{name}/text/replace | Document&#39;s replace text method.
 [**PostEncryptDocumentInStorage**](PdfApi.md#postencryptdocumentinstorage) | **POST** /pdf/\{name}/encrypt | Encrypt document in storage.
 [**PostFlattenDocument**](PdfApi.md#postflattendocument) | **POST** /pdf/\{name}/flatten | Flatten the document.
+[**PostImportFieldsFromFdf**](PdfApi.md#postimportfieldsfromfdf) | **POST** /pdf/\{name}/import/fdf | Update fields from FDF file in request.
+[**PostImportFieldsFromXfdf**](PdfApi.md#postimportfieldsfromxfdf) | **POST** /pdf/\{name}/import/xfdf | Update fields from XFDF file in request.
+[**PostImportFieldsFromXml**](PdfApi.md#postimportfieldsfromxml) | **POST** /pdf/\{name}/import/xml | Update fields from XML file in request.
 [**PostInsertImage**](PdfApi.md#postinsertimage) | **POST** /pdf/\{name}/pages/\{pageNumber}/images | Insert image to document page.
 [**PostMovePage**](PdfApi.md#postmovepage) | **POST** /pdf/\{name}/pages/\{pageNumber}/movePage | Move page to new position.
 [**PostOptimizeDocument**](PdfApi.md#postoptimizedocument) | **POST** /pdf/\{name}/optimize | Optimize document.
@@ -220,6 +229,9 @@ Method | HTTP request | Description
 [**PutDecryptDocument**](PdfApi.md#putdecryptdocument) | **PUT** /pdf/decrypt | Decrypt document from content.
 [**PutEncryptDocument**](PdfApi.md#putencryptdocument) | **PUT** /pdf/encrypt | Encrypt document from content.
 [**PutEpubInStorageToPdf**](PdfApi.md#putepubinstoragetopdf) | **PUT** /pdf/\{name}/create/epub | Convert EPUB file (located on storage) to PDF format and upload resulting file to storage. 
+[**PutExportFieldsFromPdfToFdfInStorage**](PdfApi.md#putexportfieldsfrompdftofdfinstorage) | **PUT** /pdf/\{name}/export/fdf | Export fields from from PDF in storage to FDF file in storage.
+[**PutExportFieldsFromPdfToXfdfInStorage**](PdfApi.md#putexportfieldsfrompdftoxfdfinstorage) | **PUT** /pdf/\{name}/export/xfdf | Export fields from from PDF in storage to XFDF file in storage.
+[**PutExportFieldsFromPdfToXmlInStorage**](PdfApi.md#putexportfieldsfrompdftoxmlinstorage) | **PUT** /pdf/\{name}/export/xml | Export fields from from PDF in storage to XML file in storage.
 [**PutFieldsFlatten**](PdfApi.md#putfieldsflatten) | **PUT** /pdf/\{name}/fields/flatten | Flatten form fields in document.
 [**PutFileAttachmentAnnotation**](PdfApi.md#putfileattachmentannotation) | **PUT** /pdf/\{name}/annotations/fileattachment/\{annotationId} | Replace document FileAttachment annotation
 [**PutFileAttachmentAnnotationDataExtract**](PdfApi.md#putfileattachmentannotationdataextract) | **PUT** /pdf/\{name}/annotations/fileattachment/\{annotationId}/data/extract | Extract document FileAttachment annotation content to storage
@@ -235,6 +247,9 @@ Method | HTTP request | Description
 [**PutImagesExtractAsJpeg**](PdfApi.md#putimagesextractasjpeg) | **PUT** /pdf/\{name}/pages/\{pageNumber}/images/extract/jpeg | Extract document images in JPEG format to folder.
 [**PutImagesExtractAsPng**](PdfApi.md#putimagesextractaspng) | **PUT** /pdf/\{name}/pages/\{pageNumber}/images/extract/png | Extract document images in PNG format to folder.
 [**PutImagesExtractAsTiff**](PdfApi.md#putimagesextractastiff) | **PUT** /pdf/\{name}/pages/\{pageNumber}/images/extract/tiff | Extract document images in TIFF format to folder.
+[**PutImportFieldsFromFdfInStorage**](PdfApi.md#putimportfieldsfromfdfinstorage) | **PUT** /pdf/\{name}/import/fdf | Update fields from FDF file in storage.
+[**PutImportFieldsFromXfdfInStorage**](PdfApi.md#putimportfieldsfromxfdfinstorage) | **PUT** /pdf/\{name}/import/xfdf | Update fields from XFDF file in storage.
+[**PutImportFieldsFromXmlInStorage**](PdfApi.md#putimportfieldsfromxmlinstorage) | **PUT** /pdf/\{name}/import/xml | Update fields from XML file in storage.
 [**PutInkAnnotation**](PdfApi.md#putinkannotation) | **PUT** /pdf/\{name}/annotations/ink/\{annotationId} | Replace document ink annotation
 [**PutLaTeXInStorageToPdf**](PdfApi.md#putlatexinstoragetopdf) | **PUT** /pdf/\{name}/create/latex | Convert LaTeX file (located on storage) to PDF format and upload resulting file to storage. 
 [**PutLineAnnotation**](PdfApi.md#putlineannotation) | **PUT** /pdf/\{name}/annotations/line/\{annotationId} | Replace document line annotation
@@ -1942,6 +1957,84 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getexportfieldsfrompdftofdfinstorage"></a>
+# **GetExportFieldsFromPdfToFdfInStorage**
+> System.IO.Stream GetExportFieldsFromPdfToFdfInStorage (string name, string storage = null, string folder = null)
+
+Export fields from from PDF in storage to FDF file.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+**System.IO.Stream**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getexportfieldsfrompdftoxfdfinstorage"></a>
+# **GetExportFieldsFromPdfToXfdfInStorage**
+> System.IO.Stream GetExportFieldsFromPdfToXfdfInStorage (string name, string storage = null, string folder = null)
+
+Export fields from from PDF in storage to XFDF file.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+**System.IO.Stream**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getexportfieldsfrompdftoxmlinstorage"></a>
+# **GetExportFieldsFromPdfToXmlInStorage**
+> System.IO.Stream GetExportFieldsFromPdfToXmlInStorage (string name, string storage = null, string folder = null)
+
+Export fields from from PDF in storage to XML file.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+**System.IO.Stream**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getfield"></a>
 # **GetField**
 > FieldResponse GetField (string name, string fieldName, string storage = null, string folder = null)
@@ -1954,7 +2047,7 @@ Get document field by name.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The document name. | 
- **fieldName** | **string**| The field name/ | 
+ **fieldName** | **string**| The field name (name should be encoded). | 
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
 
@@ -2353,6 +2446,87 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getimportfieldsfromfdfinstorage"></a>
+# **GetImportFieldsFromFdfInStorage**
+> System.IO.Stream GetImportFieldsFromFdfInStorage (string name, string fdfFilePath, string storage = null, string folder = null)
+
+Update fields from FDF file in storage.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **fdfFilePath** | **string**| The Fdf file path. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+**System.IO.Stream**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getimportfieldsfromxfdfinstorage"></a>
+# **GetImportFieldsFromXfdfInStorage**
+> System.IO.Stream GetImportFieldsFromXfdfInStorage (string name, string xfdfFilePath, string storage = null, string folder = null)
+
+Update fields from XFDF file in storage.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **xfdfFilePath** | **string**| The XFDF file path. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+**System.IO.Stream**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getimportfieldsfromxmlinstorage"></a>
+# **GetImportFieldsFromXmlInStorage**
+> System.IO.Stream GetImportFieldsFromXmlInStorage (string name, string xmlFilePath, string storage = null, string folder = null)
+
+Import from XML file (located on storage) to PDF format and return resulting file in response. 
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **xmlFilePath** | **string**| Full source filename (ex. /folder1/folder2/template.xml) | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+**System.IO.Stream**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -5043,6 +5217,87 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="postimportfieldsfromfdf"></a>
+# **PostImportFieldsFromFdf**
+> AsposeResponse PostImportFieldsFromFdf (string name, string storage = null, string folder = null, System.IO.Stream fdfData = null)
+
+Update fields from FDF file in request.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+ **fdfData** | **System.IO.Stream**| Fdf file. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postimportfieldsfromxfdf"></a>
+# **PostImportFieldsFromXfdf**
+> AsposeResponse PostImportFieldsFromXfdf (string name, string storage = null, string folder = null, System.IO.Stream xfdfData = null)
+
+Update fields from XFDF file in request.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+ **xfdfData** | **System.IO.Stream**| Xfdf file. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postimportfieldsfromxml"></a>
+# **PostImportFieldsFromXml**
+> AsposeResponse PostImportFieldsFromXml (string name, string storage = null, string folder = null, System.IO.Stream xmlData = null)
+
+Update fields from XML file in request.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+ **xmlData** | **System.IO.Stream**| Xml file. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="postinsertimage"></a>
 # **PostInsertImage**
 > AsposeResponse PostInsertImage (string name, int? pageNumber, double? llx, double? lly, double? urx, double? ury, string imageFilePath = null, string storage = null, string folder = null, System.IO.Stream image = null)
@@ -6250,6 +6505,87 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="putexportfieldsfrompdftofdfinstorage"></a>
+# **PutExportFieldsFromPdfToFdfInStorage**
+> AsposeResponse PutExportFieldsFromPdfToFdfInStorage (string name, string fdfOutputFilePath, string storage = null, string folder = null)
+
+Export fields from from PDF in storage to FDF file in storage.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **fdfOutputFilePath** | **string**| The output Fdf file path. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putexportfieldsfrompdftoxfdfinstorage"></a>
+# **PutExportFieldsFromPdfToXfdfInStorage**
+> AsposeResponse PutExportFieldsFromPdfToXfdfInStorage (string name, string xfdfOutputFilePath, string storage = null, string folder = null)
+
+Export fields from from PDF in storage to XFDF file in storage.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **xfdfOutputFilePath** | **string**| The output xfdf file path. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putexportfieldsfrompdftoxmlinstorage"></a>
+# **PutExportFieldsFromPdfToXmlInStorage**
+> AsposeResponse PutExportFieldsFromPdfToXmlInStorage (string name, string xmlOutputFilePath, string storage = null, string folder = null)
+
+Export fields from from PDF in storage to XML file in storage.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **xmlOutputFilePath** | **string**| The output xml file path. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="putfieldsflatten"></a>
 # **PutFieldsFlatten**
 > AsposeResponse PutFieldsFlatten (string name, string storage = null, string folder = null)
@@ -6678,6 +7014,87 @@ Name | Type | Description  | Notes
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **destFolder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putimportfieldsfromfdfinstorage"></a>
+# **PutImportFieldsFromFdfInStorage**
+> AsposeResponse PutImportFieldsFromFdfInStorage (string name, string fdfFilePath, string storage = null, string folder = null)
+
+Update fields from FDF file in storage.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **fdfFilePath** | **string**| The Fdf file path. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putimportfieldsfromxfdfinstorage"></a>
+# **PutImportFieldsFromXfdfInStorage**
+> AsposeResponse PutImportFieldsFromXfdfInStorage (string name, string xfdfFilePath, string storage = null, string folder = null)
+
+Update fields from XFDF file in storage.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **xfdfFilePath** | **string**| The XFDF file path. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putimportfieldsfromxmlinstorage"></a>
+# **PutImportFieldsFromXmlInStorage**
+> AsposeResponse PutImportFieldsFromXmlInStorage (string name, string xmlFilePath, string storage = null, string folder = null)
+
+Update fields from XML file in storage.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **xmlFilePath** | **string**| Full source filename (ex. /folder1/folder2/template.xml) | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
 
 ### Return type
 

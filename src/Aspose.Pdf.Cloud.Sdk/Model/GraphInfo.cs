@@ -49,17 +49,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GraphInfo" /> class.
         /// </summary>
-        /// <param name="LineWidth">Gets or sets a float value that indicates the line width of the graph..</param>
-        /// <param name="Color">Gets or sets a Color object that indicates the color of the graph..</param>
-        /// <param name="DashArray">Gets or sets a dash array..</param>
-        /// <param name="DashPhase">Gets or sets a dash phase..</param>
-        /// <param name="FillColor">Gets or sets a Color object that indicates the fill color of the graph..</param>
-        /// <param name="IsDoubled">Gets or sets is border doubled..</param>
-        /// <param name="SkewAngleX">Gets or sets a float value that indicates the skew angle of the x-coordinate when transforming a coordinate system..</param>
-        /// <param name="SkewAngleY">Gets or sets a float value that indicates the skew angle of the y-coordinate when transforming a coordinate system..</param>
-        /// <param name="ScalingRateX">Gets or sets a float value that indicates the scaling rate of the x-coordinate when transforming a coordinate system..</param>
-        /// <param name="ScalingRateY">Gets or sets a float value that indicates the scaling rate of the y-coordinate when transforming a coordinate system..</param>
-        /// <param name="RotationAngle">Gets or sets a float value that indicates the rotation angle of the coordinate system  when transforming a coordinate system..</param>
+        /// <param name="LineWidth">Gets or sets a float value that indicates the line width of the graph.</param>
+        /// <param name="Color">Gets or sets a Color object that indicates the color of the graph.</param>
+        /// <param name="DashArray">Gets or sets a dash array.</param>
+        /// <param name="DashPhase">Gets or sets a dash phase.</param>
+        /// <param name="FillColor">Gets or sets a Color object that indicates the fill color of the graph.</param>
+        /// <param name="IsDoubled">Gets or sets is border doubled.</param>
+        /// <param name="SkewAngleX">Gets or sets a float value that indicates the skew angle of the x-coordinate when transforming a coordinate system.</param>
+        /// <param name="SkewAngleY">Gets or sets a float value that indicates the skew angle of the y-coordinate when transforming a coordinate system.</param>
+        /// <param name="ScalingRateX">Gets or sets a float value that indicates the scaling rate of the x-coordinate when transforming a coordinate system.</param>
+        /// <param name="ScalingRateY">Gets or sets a float value that indicates the scaling rate of the y-coordinate when transforming a coordinate system.</param>
+        /// <param name="RotationAngle">Gets or sets a float value that indicates the rotation angle of the coordinate system  when transforming a coordinate system.</param>
         public GraphInfo(double? LineWidth = default(double?), Color Color = default(Color), List<int?> DashArray = default(List<int?>), int? DashPhase = default(int?), Color FillColor = default(Color), bool? IsDoubled = default(bool?), double? SkewAngleX = default(double?), double? SkewAngleY = default(double?), double? ScalingRateX = default(double?), double? ScalingRateY = default(double?), double? RotationAngle = default(double?))
         {
             this.LineWidth = LineWidth;

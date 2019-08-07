@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CircleAnnotations" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of circle annotations..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of circle annotations.</param>
         public CircleAnnotations(List<Link> Links = default(List<Link>), List<CircleAnnotation> List = default(List<CircleAnnotation>))
         {
             this.Links = Links;

@@ -54,17 +54,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Row" /> class.
         /// </summary>
-        /// <param name="BackgroundColor">Gets or sets the background color..</param>
-        /// <param name="Border">Gets or sets the border..</param>
-        /// <param name="Cells">Sets the cells of the row. (required).</param>
-        /// <param name="DefaultCellBorder">Gets default cell border;.</param>
-        /// <param name="MinRowHeight">Gets height for row;.</param>
-        /// <param name="FixedRowHeight">Gets fixed row height - row may have fixed height;.</param>
-        /// <param name="IsInNewPage">Gets fixed row is in new page - page with this property should be printed to next page Default false;.</param>
-        /// <param name="IsRowBroken">Gets is row can be broken between two pages.</param>
-        /// <param name="DefaultCellTextState">Gets or sets default text state for row cells.</param>
-        /// <param name="DefaultCellPadding">Gets or sets default margin for row cells.</param>
-        /// <param name="VerticalAlignment">Gets or sets the vertical alignment..</param>
+        /// <param name="BackgroundColor">Gets or sets the background color.</param>
+        /// <param name="Border">Gets or sets the border.</param>
+        /// <param name="Cells">Sets the cells of the row. (required)</param>
+        /// <param name="DefaultCellBorder">Gets default cell border;</param>
+        /// <param name="MinRowHeight">Gets height for row;</param>
+        /// <param name="FixedRowHeight">Gets fixed row height - row may have fixed height;</param>
+        /// <param name="IsInNewPage">Gets fixed row is in new page - page with this property should be printed to next page Default false;</param>
+        /// <param name="IsRowBroken">Gets is row can be broken between two pages</param>
+        /// <param name="DefaultCellTextState">Gets or sets default text state for row cells</param>
+        /// <param name="DefaultCellPadding">Gets or sets default margin for row cells</param>
+        /// <param name="VerticalAlignment">Gets or sets the vertical alignment.</param>
         public Row(Color BackgroundColor = default(Color), BorderInfo Border = default(BorderInfo), List<Cell> Cells = default(List<Cell>), BorderInfo DefaultCellBorder = default(BorderInfo), double? MinRowHeight = default(double?), double? FixedRowHeight = default(double?), bool? IsInNewPage = default(bool?), bool? IsRowBroken = default(bool?), TextState DefaultCellTextState = default(TextState), MarginInfo DefaultCellPadding = default(MarginInfo), VerticalAlignment VerticalAlignment = default(VerticalAlignment))
         {
             // to ensure "Cells" is required (not null)

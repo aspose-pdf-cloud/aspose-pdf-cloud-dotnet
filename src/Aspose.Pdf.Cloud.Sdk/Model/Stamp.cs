@@ -54,28 +54,28 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Stamp" /> class.
         /// </summary>
-        /// <param name="Type">Gets the stamp type. (required).</param>
-        /// <param name="Background">Sets or gets a bool value that indicates the content is stamped as background. If the value is true, the stamp content is layed at the bottom. By defalt, the value is false, the stamp content is layed at the top..</param>
-        /// <param name="BottomMargin">Gets or sets bottom margin of stamp..</param>
-        /// <param name="HorizontalAlignment">Gets or sets Horizontal alignment of stamp on the page. .</param>
-        /// <param name="LeftMargin">Gets or sets left margin of stamp..</param>
-        /// <param name="Opacity">Gets or sets a value to indicate the stamp opacity. The value is from 0.0 to 1.0. By default the value is 1.0..</param>
-        /// <param name="RightMargin">Gets or sets right margin of stamp..</param>
-        /// <param name="Rotate">Sets or gets the rotation of stamp content according Rotation values. Note. This property is for set angles which are multiples of 90 degrees (0, 90, 180, 270 degrees). To set arbitrary angle use RotateAngle property.  If angle set by ArbitraryAngle is not multiple of 90 then Rotate property returns Rotation.None..</param>
-        /// <param name="RotateAngle">Gets or sets rotate angle of stamp in degrees. This property allows to set arbitrary rotate angle. .</param>
-        /// <param name="TopMargin">Gets or sets top margin of stamp..</param>
-        /// <param name="VerticalAlignment">Gets or sets vertical alignment of stamp on page..</param>
-        /// <param name="XIndent">Horizontal stamp coordinate, starting from the left..</param>
-        /// <param name="YIndent">Vertical stamp coordinate, starting from the bottom..</param>
-        /// <param name="Zoom">Zooming factor of the stamp. Allows to scale stamp..</param>
-        /// <param name="TextAlignment">Alignment of the text inside the stamp..</param>
-        /// <param name="Value">Gets or sets string value which is used as stamp on the page..</param>
-        /// <param name="TextState">Gets text properties of the stamp. See TextState for details..</param>
-        /// <param name="FileName">Gets or sets the file name..</param>
-        /// <param name="Width">Gets or sets image width. Setting this property allos to scal image horizontally..</param>
-        /// <param name="Height">Gets or sets image height. Setting this image allows to scale image vertically..</param>
-        /// <param name="PageIndex">Gets or sets the index of the page..</param>
-        /// <param name="StartingNumber">Gets or sets value of the number of starting page. Other pages will be numbered starting from this value..</param>
+        /// <param name="Type">Gets the stamp type. (required)</param>
+        /// <param name="Background">Sets or gets a bool value that indicates the content is stamped as background. If the value is true, the stamp content is layed at the bottom. By defalt, the value is false, the stamp content is layed at the top.</param>
+        /// <param name="BottomMargin">Gets or sets bottom margin of stamp.</param>
+        /// <param name="HorizontalAlignment">Gets or sets Horizontal alignment of stamp on the page. </param>
+        /// <param name="LeftMargin">Gets or sets left margin of stamp.</param>
+        /// <param name="Opacity">Gets or sets a value to indicate the stamp opacity. The value is from 0.0 to 1.0. By default the value is 1.0.</param>
+        /// <param name="RightMargin">Gets or sets right margin of stamp.</param>
+        /// <param name="Rotate">Sets or gets the rotation of stamp content according Rotation values. Note. This property is for set angles which are multiples of 90 degrees (0, 90, 180, 270 degrees). To set arbitrary angle use RotateAngle property.  If angle set by ArbitraryAngle is not multiple of 90 then Rotate property returns Rotation.None.</param>
+        /// <param name="RotateAngle">Gets or sets rotate angle of stamp in degrees. This property allows to set arbitrary rotate angle. </param>
+        /// <param name="TopMargin">Gets or sets top margin of stamp.</param>
+        /// <param name="VerticalAlignment">Gets or sets vertical alignment of stamp on page.</param>
+        /// <param name="XIndent">Horizontal stamp coordinate, starting from the left.</param>
+        /// <param name="YIndent">Vertical stamp coordinate, starting from the bottom.</param>
+        /// <param name="Zoom">Zooming factor of the stamp. Allows to scale stamp.</param>
+        /// <param name="TextAlignment">Alignment of the text inside the stamp.</param>
+        /// <param name="Value">Gets or sets string value which is used as stamp on the page.</param>
+        /// <param name="TextState">Gets text properties of the stamp. See TextState for details.</param>
+        /// <param name="FileName">Gets or sets the file name.</param>
+        /// <param name="Width">Gets or sets image width. Setting this property allos to scal image horizontally.</param>
+        /// <param name="Height">Gets or sets image height. Setting this image allows to scale image vertically.</param>
+        /// <param name="PageIndex">Gets or sets the index of the page.</param>
+        /// <param name="StartingNumber">Gets or sets value of the number of starting page. Other pages will be numbered starting from this value.</param>
         public Stamp(StampType Type = default(StampType), bool? Background = default(bool?), double? BottomMargin = default(double?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), double? LeftMargin = default(double?), double? Opacity = default(double?), double? RightMargin = default(double?), Rotation Rotate = default(Rotation), double? RotateAngle = default(double?), double? TopMargin = default(double?), VerticalAlignment VerticalAlignment = default(VerticalAlignment), double? XIndent = default(double?), double? YIndent = default(double?), double? Zoom = default(double?), HorizontalAlignment TextAlignment = default(HorizontalAlignment), string Value = default(string), TextState TextState = default(TextState), string FileName = default(string), double? Width = default(double?), double? Height = default(double?), int? PageIndex = default(int?), int? StartingNumber = default(int?))
         {
             // to ensure "Type" is required (not null)

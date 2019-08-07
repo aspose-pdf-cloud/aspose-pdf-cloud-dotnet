@@ -49,10 +49,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MarginInfo" /> class.
         /// </summary>
-        /// <param name="Left">Gets or sets a float value that indicates the left margin..</param>
-        /// <param name="Right">Gets or sets a float value that indicates the right margin..</param>
-        /// <param name="Top">Gets or sets a float value that indicates the top margin..</param>
-        /// <param name="Bottom">Gets or sets a float value that indicates the bottom margin..</param>
+        /// <param name="Left">Gets or sets a float value that indicates the left margin.</param>
+        /// <param name="Right">Gets or sets a float value that indicates the right margin.</param>
+        /// <param name="Top">Gets or sets a float value that indicates the top margin.</param>
+        /// <param name="Bottom">Gets or sets a float value that indicates the bottom margin.</param>
         public MarginInfo(double? Left = default(double?), double? Right = default(double?), double? Top = default(double?), double? Bottom = default(double?))
         {
             this.Left = Left;

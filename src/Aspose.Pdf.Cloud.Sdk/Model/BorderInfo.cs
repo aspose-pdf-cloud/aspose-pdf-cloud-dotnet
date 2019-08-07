@@ -49,11 +49,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BorderInfo" /> class.
         /// </summary>
-        /// <param name="Left">Gets or sets a object that indicates left of the border..</param>
-        /// <param name="Right">Gets or sets a object that indicates right of the border..</param>
-        /// <param name="Top">Gets or sets a object that indicates the top border..</param>
-        /// <param name="Bottom">Gets or sets a object that indicates bottom of the border..</param>
-        /// <param name="RoundedBorderRadius">Gets or sets a rouded border radius.</param>
+        /// <param name="Left">Gets or sets a object that indicates left of the border.</param>
+        /// <param name="Right">Gets or sets a object that indicates right of the border.</param>
+        /// <param name="Top">Gets or sets a object that indicates the top border.</param>
+        /// <param name="Bottom">Gets or sets a object that indicates bottom of the border.</param>
+        /// <param name="RoundedBorderRadius">Gets or sets a rouded border radius</param>
         public BorderInfo(GraphInfo Left = default(GraphInfo), GraphInfo Right = default(GraphInfo), GraphInfo Top = default(GraphInfo), GraphInfo Bottom = default(GraphInfo), double? RoundedBorderRadius = default(double?))
         {
             this.Left = Left;

@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ImageTemplatesRequest" /> class.
         /// </summary>
-        /// <param name="IsOCR">Using OCR function. (required).</param>
-        /// <param name="OCRLangs">Language for recognition possible values: eng, ara, bel, ben, bul, ces, dan, deu, ell, fin, fra, heb, hin, ind, isl, ita, jpn, kor, nld, nor, pol, por, ron, rus, spa, swe, tha, tur, ukr, vie, chi_sim, chi_tra      or thier combination e.g. eng+rus.</param>
-        /// <param name="ImagesList">A List of objects describing images to be added. (required).</param>
+        /// <param name="IsOCR">Using OCR function. (required)</param>
+        /// <param name="OCRLangs">Language for recognition possible values: eng, ara, bel, ben, bul, ces, dan, deu, ell, fin, fra, heb, hin, ind, isl, ita, jpn, kor, nld, nor, pol, por, ron, rus, spa, swe, tha, tur, ukr, vie, chi_sim, chi_tra      or thier combination e.g. eng+rus</param>
+        /// <param name="ImagesList">A List of objects describing images to be added. (required)</param>
         public ImageTemplatesRequest(bool? IsOCR = default(bool?), string OCRLangs = default(string), List<ImageTemplate> ImagesList = default(List<ImageTemplate>))
         {
             // to ensure "IsOCR" is required (not null)

@@ -54,8 +54,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Position" /> class.
         /// </summary>
-        /// <param name="XIndent">Gets the X coordinate of the object (required).</param>
-        /// <param name="YIndent">Gets the Y coordinate of the object (required).</param>
+        /// <param name="XIndent">Gets the X coordinate of the object (required)</param>
+        /// <param name="YIndent">Gets the Y coordinate of the object (required)</param>
         public Position(double? XIndent = default(double?), double? YIndent = default(double?))
         {
             // to ensure "XIndent" is required (not null)

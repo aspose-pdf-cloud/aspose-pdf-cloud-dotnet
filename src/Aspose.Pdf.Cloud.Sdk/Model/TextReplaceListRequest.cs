@@ -54,10 +54,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextReplaceListRequest" /> class.
         /// </summary>
-        /// <param name="TextReplaces">A list of text replacement settings. (required).</param>
-        /// <param name="DefaultFont">Name of font to use if requested font is not embedded into document..</param>
-        /// <param name="StartIndex">The index of first match to be replaced..</param>
-        /// <param name="CountReplace">The number of matches to be replaced..</param>
+        /// <param name="TextReplaces">A list of text replacement settings. (required)</param>
+        /// <param name="DefaultFont">Name of font to use if requested font is not embedded into document.</param>
+        /// <param name="StartIndex">The index of first match to be replaced.</param>
+        /// <param name="CountReplace">The number of matches to be replaced.</param>
         public TextReplaceListRequest(List<TextReplace> TextReplaces = default(List<TextReplace>), string DefaultFont = default(string), int? StartIndex = default(int?), int? CountReplace = default(int?))
         {
             // to ensure "TextReplaces" is required (not null)

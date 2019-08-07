@@ -54,8 +54,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Fields" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of form fields. (required).</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of form fields. (required)</param>
         public Fields(List<Link> Links = default(List<Link>), List<Field> List = default(List<Field>))
         {
             // to ensure "List" is required (not null)

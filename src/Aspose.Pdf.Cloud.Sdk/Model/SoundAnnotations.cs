@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SoundAnnotations" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of Sound annotations..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of Sound annotations.</param>
         public SoundAnnotations(List<Link> Links = default(List<Link>), List<SoundAnnotation> List = default(List<SoundAnnotation>))
         {
             this.Links = Links;

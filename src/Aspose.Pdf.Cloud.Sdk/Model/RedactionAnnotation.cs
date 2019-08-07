@@ -54,24 +54,24 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RedactionAnnotation" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="Color">Color of the annotation..</param>
-        /// <param name="Contents">Get the annotation content..</param>
-        /// <param name="Modified">The date and time when the annotation was last modified..</param>
-        /// <param name="Id">Gets ID of the annotation..</param>
-        /// <param name="Flags">Gets Flags of the annotation..</param>
-        /// <param name="Name">Gets Name of the annotation..</param>
-        /// <param name="Rect">Gets Rect of the annotation. (required).</param>
-        /// <param name="PageIndex">Gets PageIndex of the annotation..</param>
-        /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
-        /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation..</param>
-        /// <param name="VerticalAlignment">Gets VerticalAlignment of the annotation..</param>
-        /// <param name="QuadPoint">An array of 8xN numbers specifying the coordinates of content region that is intended to be removed. .</param>
-        /// <param name="FillColor">Gets or sets color to fill annotation..</param>
-        /// <param name="BorderColor">Gets or sets color of border which is drawn when redaction is not active..</param>
-        /// <param name="OverlayText">Text to print on redact annotation..</param>
-        /// <param name="Repeat">If true overlay text will be repated on the annotation. .</param>
-        /// <param name="TextAlignment">Gets or sets. Alignment of Overlay Text..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="Color">Color of the annotation.</param>
+        /// <param name="Contents">Get the annotation content.</param>
+        /// <param name="Modified">The date and time when the annotation was last modified.</param>
+        /// <param name="Id">Gets ID of the annotation.</param>
+        /// <param name="Flags">Gets Flags of the annotation.</param>
+        /// <param name="Name">Gets Name of the annotation.</param>
+        /// <param name="Rect">Gets Rect of the annotation. (required)</param>
+        /// <param name="PageIndex">Gets PageIndex of the annotation.</param>
+        /// <param name="ZIndex">Gets ZIndex of the annotation.</param>
+        /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation.</param>
+        /// <param name="VerticalAlignment">Gets VerticalAlignment of the annotation.</param>
+        /// <param name="QuadPoint">An array of 8xN numbers specifying the coordinates of content region that is intended to be removed. </param>
+        /// <param name="FillColor">Gets or sets color to fill annotation.</param>
+        /// <param name="BorderColor">Gets or sets color of border which is drawn when redaction is not active.</param>
+        /// <param name="OverlayText">Text to print on redact annotation.</param>
+        /// <param name="Repeat">If true overlay text will be repated on the annotation. </param>
+        /// <param name="TextAlignment">Gets or sets. Alignment of Overlay Text.</param>
         public RedactionAnnotation(List<Link> Links = default(List<Link>), Color Color = default(Color), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), Rectangle Rect = default(Rectangle), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), List<Point> QuadPoint = default(List<Point>), Color FillColor = default(Color), Color BorderColor = default(Color), string OverlayText = default(string), bool? Repeat = default(bool?), HorizontalAlignment TextAlignment = default(HorizontalAlignment))
         {
             // to ensure "Rect" is required (not null)

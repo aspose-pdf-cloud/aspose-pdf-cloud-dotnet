@@ -54,27 +54,27 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PolygonAnnotation" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="Color">Color of the annotation..</param>
-        /// <param name="Contents">Get the annotation content..</param>
-        /// <param name="Modified">The date and time when the annotation was last modified..</param>
-        /// <param name="Id">Gets ID of the annotation..</param>
-        /// <param name="Flags">Gets Flags of the annotation..</param>
-        /// <param name="Name">Gets Name of the annotation..</param>
-        /// <param name="Rect">Gets Rect of the annotation. (required).</param>
-        /// <param name="PageIndex">Gets PageIndex of the annotation..</param>
-        /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
-        /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation..</param>
-        /// <param name="VerticalAlignment">Gets VerticalAlignment of the annotation..</param>
-        /// <param name="CreationDate">The date and time when the annotation was created..</param>
-        /// <param name="Subject">Get the annotation subject..</param>
-        /// <param name="Title">Get the annotation title..</param>
-        /// <param name="RichText">Get the annotation RichText..</param>
-        /// <param name="InteriorColor">Gets or sets the interior color with which to fill the annotation’s line endings..</param>
-        /// <param name="StartingStyle">Gets or sets the style of first line ending..</param>
-        /// <param name="EndingStyle">Gets or sets the style of second line ending..</param>
-        /// <param name="Intent">Gets or sets the intent of the polygon or polyline annotation..</param>
-        /// <param name="Vertices">Gets or sets an array of points representing the horizontal and vertical coordinates of each vertex. (required).</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="Color">Color of the annotation.</param>
+        /// <param name="Contents">Get the annotation content.</param>
+        /// <param name="Modified">The date and time when the annotation was last modified.</param>
+        /// <param name="Id">Gets ID of the annotation.</param>
+        /// <param name="Flags">Gets Flags of the annotation.</param>
+        /// <param name="Name">Gets Name of the annotation.</param>
+        /// <param name="Rect">Gets Rect of the annotation. (required)</param>
+        /// <param name="PageIndex">Gets PageIndex of the annotation.</param>
+        /// <param name="ZIndex">Gets ZIndex of the annotation.</param>
+        /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the annotation.</param>
+        /// <param name="VerticalAlignment">Gets VerticalAlignment of the annotation.</param>
+        /// <param name="CreationDate">The date and time when the annotation was created.</param>
+        /// <param name="Subject">Get the annotation subject.</param>
+        /// <param name="Title">Get the annotation title.</param>
+        /// <param name="RichText">Get the annotation RichText.</param>
+        /// <param name="InteriorColor">Gets or sets the interior color with which to fill the annotation’s line endings.</param>
+        /// <param name="StartingStyle">Gets or sets the style of first line ending.</param>
+        /// <param name="EndingStyle">Gets or sets the style of second line ending.</param>
+        /// <param name="Intent">Gets or sets the intent of the polygon or polyline annotation.</param>
+        /// <param name="Vertices">Gets or sets an array of points representing the horizontal and vertical coordinates of each vertex. (required)</param>
         public PolygonAnnotation(List<Link> Links = default(List<Link>), Color Color = default(Color), string Contents = default(string), string Modified = default(string), string Id = default(string), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), string Name = default(string), Rectangle Rect = default(Rectangle), int? PageIndex = default(int?), int? ZIndex = default(int?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), string CreationDate = default(string), string Subject = default(string), string Title = default(string), string RichText = default(string), Color InteriorColor = default(Color), LineEnding StartingStyle = default(LineEnding), LineEnding EndingStyle = default(LineEnding), PolyIntent Intent = default(PolyIntent), List<Point> Vertices = default(List<Point>))
         {
             // to ensure "Rect" is required (not null)

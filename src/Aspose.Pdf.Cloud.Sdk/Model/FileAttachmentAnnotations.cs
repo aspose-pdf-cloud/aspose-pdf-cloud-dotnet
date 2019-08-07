@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FileAttachmentAnnotations" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of FileAttachment annotations..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of FileAttachment annotations.</param>
         public FileAttachmentAnnotations(List<Link> Links = default(List<Link>), List<FileAttachmentAnnotation> List = default(List<FileAttachmentAnnotation>))
         {
             this.Links = Links;

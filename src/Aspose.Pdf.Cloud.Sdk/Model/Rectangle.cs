@@ -54,10 +54,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Rectangle" /> class.
         /// </summary>
-        /// <param name="LLX">X-coordinate of lower - left corner. (required).</param>
-        /// <param name="LLY">Y - coordinate of lower-left corner. (required).</param>
-        /// <param name="URX">X - coordinate of upper-right corner. (required).</param>
-        /// <param name="URY">Y - coordinate of upper-right corner. (required).</param>
+        /// <param name="LLX">X-coordinate of lower - left corner. (required)</param>
+        /// <param name="LLY">Y - coordinate of lower-left corner. (required)</param>
+        /// <param name="URX">X - coordinate of upper-right corner. (required)</param>
+        /// <param name="URY">Y - coordinate of upper-right corner. (required)</param>
         public Rectangle(double? LLX = default(double?), double? LLY = default(double?), double? URX = default(double?), double? URY = default(double?))
         {
             // to ensure "LLX" is required (not null)

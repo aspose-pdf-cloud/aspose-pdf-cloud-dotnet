@@ -117,7 +117,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             const string name = "PdfWithBookmarks.pdf";
             UploadFile(name, name);
 
-            string bookmarkPath = "1/1";
+            string bookmarkPath = "2";
 
             var bookmark = new Bookmark();
             bookmark.Action = "GoTo";

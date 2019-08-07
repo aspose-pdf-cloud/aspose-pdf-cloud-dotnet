@@ -54,13 +54,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LinkAnnotation" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="ActionType">ActionType (required).</param>
-        /// <param name="Action">Action (required).</param>
-        /// <param name="Highlighting">Highlighting (required).</param>
-        /// <param name="Color">Color.</param>
-        /// <param name="Rect">Rect (required).</param>
-        /// <param name="Id">Id.</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="ActionType">ActionType (required)</param>
+        /// <param name="Action">Action (required)</param>
+        /// <param name="Highlighting">Highlighting (required)</param>
+        /// <param name="Color">Color</param>
+        /// <param name="Rect">Rect (required)</param>
+        /// <param name="Id">Id</param>
         public LinkAnnotation(List<Link> Links = default(List<Link>), LinkActionType ActionType = default(LinkActionType), string Action = default(string), LinkHighlightingMode Highlighting = default(LinkHighlightingMode), Color Color = default(Color), Rectangle Rect = default(Rectangle), string Id = default(string))
         {
             // to ensure "ActionType" is required (not null)

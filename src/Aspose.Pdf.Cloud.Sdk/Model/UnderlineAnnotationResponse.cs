@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UnderlineAnnotationResponse" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Annotation">Underline annotation object.</param>
+        /// <param name="Code">Response status code. (required)</param>
+        /// <param name="Status">Response status.</param>
+        /// <param name="Annotation">Underline annotation object</param>
         public UnderlineAnnotationResponse(int? Code = default(int?), string Status = default(string), UnderlineAnnotation Annotation = default(UnderlineAnnotation))
         {
             // to ensure "Code" is required (not null)

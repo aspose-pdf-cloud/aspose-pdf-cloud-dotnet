@@ -54,11 +54,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StorageFile" /> class.
         /// </summary>
-        /// <param name="Name">File or folder name..</param>
-        /// <param name="IsFolder">True if it is a folder. (required).</param>
-        /// <param name="ModifiedDate">File or folder last modified DateTime..</param>
-        /// <param name="Size">File or folder size. (required).</param>
-        /// <param name="Path">File or folder path..</param>
+        /// <param name="Name">File or folder name.</param>
+        /// <param name="IsFolder">True if it is a folder. (required)</param>
+        /// <param name="ModifiedDate">File or folder last modified DateTime.</param>
+        /// <param name="Size">File or folder size. (required)</param>
+        /// <param name="Path">File or folder path.</param>
         public StorageFile(string Name = default(string), bool? IsFolder = default(bool?), DateTime? ModifiedDate = default(DateTime?), long? Size = default(long?), string Path = default(string))
         {
             // to ensure "IsFolder" is required (not null)

@@ -54,7 +54,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StorageExist" /> class.
         /// </summary>
-        /// <param name="Exists">Shows that the storage exists.              (required).</param>
+        /// <param name="Exists">Shows that the storage exists.              (required)</param>
         public StorageExist(bool? Exists = default(bool?))
         {
             // to ensure "Exists" is required (not null)

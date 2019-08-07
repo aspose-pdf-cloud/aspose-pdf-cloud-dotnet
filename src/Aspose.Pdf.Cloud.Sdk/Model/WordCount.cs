@@ -49,7 +49,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WordCount" /> class.
         /// </summary>
-        /// <param name="List">List.</param>
+        /// <param name="List">List</param>
         public WordCount(List<PageWordCount> List = default(List<PageWordCount>))
         {
             this.List = List;

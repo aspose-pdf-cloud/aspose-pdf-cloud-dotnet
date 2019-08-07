@@ -54,29 +54,29 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Table" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="Alignment">Gets HorizontalAlignment of the table alignment..</param>
-        /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the table alignment..</param>
-        /// <param name="VerticalAlignment">Gets VerticalAlignment of the annotation..</param>
-        /// <param name="Top">Gets or sets the table top coordinate..</param>
-        /// <param name="Left">Gets or sets the table left coordinate..</param>
-        /// <param name="DefaultCellTextState">Gets or sets the default cell text state..</param>
-        /// <param name="DefaultCellPadding">Gets or sets the default cell padding..</param>
-        /// <param name="Border">Gets or sets the border..</param>
-        /// <param name="Rows">Sets the rows of the table. (required).</param>
-        /// <param name="DefaultColumnWidth">Gets default cell border;.</param>
-        /// <param name="DefaultCellBorder">Gets default cell border;.</param>
-        /// <param name="Broken">Gets or sets table vertial broken;.</param>
-        /// <param name="ColumnWidths">Gets the column widths of the table..</param>
-        /// <param name="RepeatingRowsCount">Gets the first rows count repeated for several pages.</param>
-        /// <param name="RepeatingColumnsCount">Gets or sets the maximum columns count for table.</param>
-        /// <param name="RepeatingRowsStyle">Gets the style for repeating rows.</param>
-        /// <param name="CornerStyle">Gets or sets the styles of the border corners.</param>
-        /// <param name="BreakText">Gets or sets break text for table.</param>
-        /// <param name="BackgroundColor">Gets or sets table background color.</param>
-        /// <param name="IsBordersIncluded">Gets or sets border included in column widhts..</param>
-        /// <param name="ColumnAdjustment">Gets or sets the table column adjustment..</param>
-        /// <param name="ZIndex">Gets ZIndex of the annotation..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="Alignment">Gets HorizontalAlignment of the table alignment.</param>
+        /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the table alignment.</param>
+        /// <param name="VerticalAlignment">Gets VerticalAlignment of the annotation.</param>
+        /// <param name="Top">Gets or sets the table top coordinate.</param>
+        /// <param name="Left">Gets or sets the table left coordinate.</param>
+        /// <param name="DefaultCellTextState">Gets or sets the default cell text state.</param>
+        /// <param name="DefaultCellPadding">Gets or sets the default cell padding.</param>
+        /// <param name="Border">Gets or sets the border.</param>
+        /// <param name="Rows">Sets the rows of the table. (required)</param>
+        /// <param name="DefaultColumnWidth">Gets default cell border;</param>
+        /// <param name="DefaultCellBorder">Gets default cell border;</param>
+        /// <param name="Broken">Gets or sets table vertial broken;</param>
+        /// <param name="ColumnWidths">Gets the column widths of the table.</param>
+        /// <param name="RepeatingRowsCount">Gets the first rows count repeated for several pages</param>
+        /// <param name="RepeatingColumnsCount">Gets or sets the maximum columns count for table</param>
+        /// <param name="RepeatingRowsStyle">Gets the style for repeating rows</param>
+        /// <param name="CornerStyle">Gets or sets the styles of the border corners</param>
+        /// <param name="BreakText">Gets or sets break text for table</param>
+        /// <param name="BackgroundColor">Gets or sets table background color</param>
+        /// <param name="IsBordersIncluded">Gets or sets border included in column widhts.</param>
+        /// <param name="ColumnAdjustment">Gets or sets the table column adjustment.</param>
+        /// <param name="ZIndex">Gets ZIndex of the annotation.</param>
         public Table(List<Link> Links = default(List<Link>), HorizontalAlignment Alignment = default(HorizontalAlignment), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), double? Top = default(double?), double? Left = default(double?), TextState DefaultCellTextState = default(TextState), MarginInfo DefaultCellPadding = default(MarginInfo), BorderInfo Border = default(BorderInfo), List<Row> Rows = default(List<Row>), string DefaultColumnWidth = default(string), BorderInfo DefaultCellBorder = default(BorderInfo), TableBroken Broken = default(TableBroken), string ColumnWidths = default(string), int? RepeatingRowsCount = default(int?), int? RepeatingColumnsCount = default(int?), TextState RepeatingRowsStyle = default(TextState), BorderCornerStyle CornerStyle = default(BorderCornerStyle), TextRect BreakText = default(TextRect), Color BackgroundColor = default(Color), bool? IsBordersIncluded = default(bool?), ColumnAdjustment ColumnAdjustment = default(ColumnAdjustment), int? ZIndex = default(int?))
         {
             // to ensure "Rows" is required (not null)

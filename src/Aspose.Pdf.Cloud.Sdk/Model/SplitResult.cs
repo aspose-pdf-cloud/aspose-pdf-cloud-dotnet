@@ -49,7 +49,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SplitResult" /> class.
         /// </summary>
-        /// <param name="Documents">Gets or sets the list of documents..</param>
+        /// <param name="Documents">Gets or sets the list of documents.</param>
         public SplitResult(List<SplitResultDocument> Documents = default(List<SplitResultDocument>))
         {
             this.Documents = Documents;

@@ -49,10 +49,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Error" /> class.
         /// </summary>
-        /// <param name="Code">Code             .</param>
-        /// <param name="Message">Message             .</param>
-        /// <param name="Description">Description             .</param>
-        /// <param name="InnerError">Inner Error             .</param>
+        /// <param name="Code">Code             </param>
+        /// <param name="Message">Message             </param>
+        /// <param name="Description">Description             </param>
+        /// <param name="InnerError">Inner Error             </param>
         public Error(string Code = default(string), string Message = default(string), string Description = default(string), ErrorDetails InnerError = default(ErrorDetails))
         {
             this.Code = Code;

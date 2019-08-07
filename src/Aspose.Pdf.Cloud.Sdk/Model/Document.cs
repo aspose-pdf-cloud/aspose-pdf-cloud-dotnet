@@ -49,9 +49,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Document" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="DocumentProperties">Document properties..</param>
-        /// <param name="Pages">Document pages..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="DocumentProperties">Document properties.</param>
+        /// <param name="Pages">Document pages.</param>
         public Document(List<Link> Links = default(List<Link>), DocumentProperties DocumentProperties = default(DocumentProperties), Pages Pages = default(Pages))
         {
             this.Links = Links;

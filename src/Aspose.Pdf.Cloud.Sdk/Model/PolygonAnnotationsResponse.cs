@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PolygonAnnotationsResponse" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Annotations">Polygon annotations object.</param>
+        /// <param name="Code">Response status code. (required)</param>
+        /// <param name="Status">Response status.</param>
+        /// <param name="Annotations">Polygon annotations object</param>
         public PolygonAnnotationsResponse(int? Code = default(int?), string Status = default(string), PolygonAnnotations Annotations = default(PolygonAnnotations))
         {
             // to ensure "Code" is required (not null)

@@ -54,8 +54,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Point" /> class.
         /// </summary>
-        /// <param name="X">X coordinate value. (required).</param>
-        /// <param name="Y">Y coordinate value. (required).</param>
+        /// <param name="X">X coordinate value. (required)</param>
+        /// <param name="Y">Y coordinate value. (required)</param>
         public Point(double? X = default(double?), double? Y = default(double?))
         {
             // to ensure "X" is required (not null)

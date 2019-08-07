@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TablesRecognized" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of tables..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of tables.</param>
         public TablesRecognized(List<Link> Links = default(List<Link>), List<TableRecognized> List = default(List<TableRecognized>))
         {
             this.Links = Links;

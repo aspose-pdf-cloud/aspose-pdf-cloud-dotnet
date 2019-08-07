@@ -49,11 +49,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TableRecognized" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="RowList">Gets readonly IList containing rows of the table.</param>
-        /// <param name="Rectangle">Gets rectangle that describes position of the table on page.</param>
-        /// <param name="PageNum">Gets number of the page containing this table.</param>
-        /// <param name="Id">Gets ID of the table..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="RowList">Gets readonly IList containing rows of the table</param>
+        /// <param name="Rectangle">Gets rectangle that describes position of the table on page</param>
+        /// <param name="PageNum">Gets number of the page containing this table</param>
+        /// <param name="Id">Gets ID of the table.</param>
         public TableRecognized(List<Link> Links = default(List<Link>), List<RowRecognized> RowList = default(List<RowRecognized>), Rectangle Rectangle = default(Rectangle), int? PageNum = default(int?), string Id = default(string))
         {
             this.Links = Links;

@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FreeTextAnnotationsResponse" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Annotations">Free text annotations object.</param>
+        /// <param name="Code">Response status code. (required)</param>
+        /// <param name="Status">Response status.</param>
+        /// <param name="Annotations">Free text annotations object</param>
         public FreeTextAnnotationsResponse(int? Code = default(int?), string Status = default(string), FreeTextAnnotations Annotations = default(FreeTextAnnotations))
         {
             // to ensure "Code" is required (not null)

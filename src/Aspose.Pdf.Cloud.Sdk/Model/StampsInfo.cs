@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StampsInfo" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of stamps..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of stamps.</param>
         public StampsInfo(List<Link> Links = default(List<Link>), List<StampInfo> List = default(List<StampInfo>))
         {
             this.Links = Links;

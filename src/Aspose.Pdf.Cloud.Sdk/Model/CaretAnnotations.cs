@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CaretAnnotations" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of caret annotations..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of caret annotations.</param>
         public CaretAnnotations(List<Link> Links = default(List<Link>), List<CaretAnnotation> List = default(List<CaretAnnotation>))
         {
             this.Links = Links;

@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SquigglyAnnotationResponse" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Annotation">Squiggly-underline annotation object.</param>
+        /// <param name="Code">Response status code. (required)</param>
+        /// <param name="Status">Response status.</param>
+        /// <param name="Annotation">Squiggly-underline annotation object</param>
         public SquigglyAnnotationResponse(int? Code = default(int?), string Status = default(string), SquigglyAnnotation Annotation = default(SquigglyAnnotation))
         {
             // to ensure "Code" is required (not null)

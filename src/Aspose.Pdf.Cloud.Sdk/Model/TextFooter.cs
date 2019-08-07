@@ -49,21 +49,21 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextFooter" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="Background">Sets or gets a bool value that indicates the content is stamped as background. If the value is true, the stamp content is layed at the bottom. By defalt, the value is false, the stamp content is layed at the top..</param>
-        /// <param name="HorizontalAlignment">Gets or sets Horizontal alignment of stamp on the page. .</param>
-        /// <param name="Opacity">Gets or sets a value to indicate the stamp opacity. The value is from 0.0 to 1.0. By default the value is 1.0..</param>
-        /// <param name="Rotate">Sets or gets the rotation of stamp content according Rotation values. Note. This property is for set angles which are multiples of 90 degrees (0, 90, 180, 270 degrees). To set arbitrary angle use RotateAngle property.  If angle set by ArbitraryAngle is not multiple of 90 then Rotate property returns Rotation.None..</param>
-        /// <param name="RotateAngle">Gets or sets rotate angle of stamp in degrees. This property allows to set arbitrary rotate angle. .</param>
-        /// <param name="XIndent">Horizontal stamp coordinate, starting from the left..</param>
-        /// <param name="YIndent">Vertical stamp coordinate, starting from the bottom..</param>
-        /// <param name="Zoom">Zooming factor of the stamp. Allows to scale stamp..</param>
-        /// <param name="TextAlignment">Alignment of the text inside the stamp..</param>
-        /// <param name="Value">Gets or sets string value which is used as stamp on the page..</param>
-        /// <param name="TextState">Gets text properties of the stamp. See TextState for details..</param>
-        /// <param name="BottomMargin">Gets or sets bottom margin of stamp..</param>
-        /// <param name="LeftMargin">Gets or sets left margin of stamp..</param>
-        /// <param name="RightMargin">Gets or sets right margin of stamp..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="Background">Sets or gets a bool value that indicates the content is stamped as background. If the value is true, the stamp content is layed at the bottom. By defalt, the value is false, the stamp content is layed at the top.</param>
+        /// <param name="HorizontalAlignment">Gets or sets Horizontal alignment of stamp on the page. </param>
+        /// <param name="Opacity">Gets or sets a value to indicate the stamp opacity. The value is from 0.0 to 1.0. By default the value is 1.0.</param>
+        /// <param name="Rotate">Sets or gets the rotation of stamp content according Rotation values. Note. This property is for set angles which are multiples of 90 degrees (0, 90, 180, 270 degrees). To set arbitrary angle use RotateAngle property.  If angle set by ArbitraryAngle is not multiple of 90 then Rotate property returns Rotation.None.</param>
+        /// <param name="RotateAngle">Gets or sets rotate angle of stamp in degrees. This property allows to set arbitrary rotate angle. </param>
+        /// <param name="XIndent">Horizontal stamp coordinate, starting from the left.</param>
+        /// <param name="YIndent">Vertical stamp coordinate, starting from the bottom.</param>
+        /// <param name="Zoom">Zooming factor of the stamp. Allows to scale stamp.</param>
+        /// <param name="TextAlignment">Alignment of the text inside the stamp.</param>
+        /// <param name="Value">Gets or sets string value which is used as stamp on the page.</param>
+        /// <param name="TextState">Gets text properties of the stamp. See TextState for details.</param>
+        /// <param name="BottomMargin">Gets or sets bottom margin of stamp.</param>
+        /// <param name="LeftMargin">Gets or sets left margin of stamp.</param>
+        /// <param name="RightMargin">Gets or sets right margin of stamp.</param>
         public TextFooter(List<Link> Links = default(List<Link>), bool? Background = default(bool?), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), double? Opacity = default(double?), Rotation Rotate = default(Rotation), double? RotateAngle = default(double?), double? XIndent = default(double?), double? YIndent = default(double?), double? Zoom = default(double?), HorizontalAlignment TextAlignment = default(HorizontalAlignment), string Value = default(string), TextState TextState = default(TextState), double? BottomMargin = default(double?), double? LeftMargin = default(double?), double? RightMargin = default(double?))
         {
             this.Links = Links;

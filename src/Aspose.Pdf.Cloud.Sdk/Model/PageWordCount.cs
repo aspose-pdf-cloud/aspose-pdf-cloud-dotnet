@@ -54,8 +54,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PageWordCount" /> class.
         /// </summary>
-        /// <param name="PageNumber">Page number. (required).</param>
-        /// <param name="Count">Number of words at the page. (required).</param>
+        /// <param name="PageNumber">Page number. (required)</param>
+        /// <param name="Count">Number of words at the page. (required)</param>
         public PageWordCount(int? PageNumber = default(int?), int? Count = default(int?))
         {
             // to ensure "PageNumber" is required (not null)

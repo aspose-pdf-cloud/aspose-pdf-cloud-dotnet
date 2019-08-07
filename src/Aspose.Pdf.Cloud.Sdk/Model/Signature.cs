@@ -54,19 +54,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Signature" /> class.
         /// </summary>
-        /// <param name="SignaturePath">Gets or sets the signature path. (required).</param>
-        /// <param name="SignatureType">Gets or sets the type of the signature. (required).</param>
-        /// <param name="Password">Gets or sets the signature password..</param>
-        /// <param name="Appearance">Sets or gets a graphic appearance for the signature. Property value represents an image file name..</param>
-        /// <param name="Reason">Gets or sets the reason of the signature..</param>
-        /// <param name="Contact">Gets or sets the contact of the signature..</param>
-        /// <param name="Location">Gets or sets the location of the signature..</param>
-        /// <param name="Visible">Gets or sets a value indicating whether this Signature is visible. Supports only when signing particular page. (required).</param>
-        /// <param name="Rectangle">Gets or sets the visible rectangle of the signature. Supports only when signing particular page..</param>
-        /// <param name="FormFieldName">Gets or sets the name of the signature field. Supports only when signing document with particular form field..</param>
-        /// <param name="Authority">Gets or sets the name of the person or authority signing the document...</param>
-        /// <param name="Date">Gets or sets the time of signing..</param>
-        /// <param name="ShowProperties">Gets or sets the showproperties in signature field (required).</param>
+        /// <param name="SignaturePath">Gets or sets the signature path. (required)</param>
+        /// <param name="SignatureType">Gets or sets the type of the signature. (required)</param>
+        /// <param name="Password">Gets or sets the signature password.</param>
+        /// <param name="Appearance">Sets or gets a graphic appearance for the signature. Property value represents an image file name.</param>
+        /// <param name="Reason">Gets or sets the reason of the signature.</param>
+        /// <param name="Contact">Gets or sets the contact of the signature.</param>
+        /// <param name="Location">Gets or sets the location of the signature.</param>
+        /// <param name="Visible">Gets or sets a value indicating whether this Signature is visible. Supports only when signing particular page. (required)</param>
+        /// <param name="Rectangle">Gets or sets the visible rectangle of the signature. Supports only when signing particular page.</param>
+        /// <param name="FormFieldName">Gets or sets the name of the signature field. Supports only when signing document with particular form field.</param>
+        /// <param name="Authority">Gets or sets the name of the person or authority signing the document..</param>
+        /// <param name="Date">Gets or sets the time of signing.</param>
+        /// <param name="ShowProperties">Gets or sets the showproperties in signature field (required)</param>
         public Signature(string SignaturePath = default(string), SignatureType SignatureType = default(SignatureType), string Password = default(string), string Appearance = default(string), string Reason = default(string), string Contact = default(string), string Location = default(string), bool? Visible = default(bool?), Rectangle Rectangle = default(Rectangle), string FormFieldName = default(string), string Authority = default(string), string Date = default(string), bool? ShowProperties = default(bool?))
         {
             // to ensure "SignaturePath" is required (not null)

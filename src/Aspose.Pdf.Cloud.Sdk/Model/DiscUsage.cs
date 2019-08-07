@@ -54,8 +54,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DiscUsage" /> class.
         /// </summary>
-        /// <param name="UsedSize">Application used disc space. (required).</param>
-        /// <param name="TotalSize">Total disc space. (required).</param>
+        /// <param name="UsedSize">Application used disc space. (required)</param>
+        /// <param name="TotalSize">Total disc space. (required)</param>
         public DiscUsage(long? UsedSize = default(long?), long? TotalSize = default(long?))
         {
             // to ensure "UsedSize" is required (not null)

@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SquareAnnotationsResponse" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Annotations">Square annotations object.</param>
+        /// <param name="Code">Response status code. (required)</param>
+        /// <param name="Status">Response status.</param>
+        /// <param name="Annotations">Square annotations object</param>
         public SquareAnnotationsResponse(int? Code = default(int?), string Status = default(string), SquareAnnotations Annotations = default(SquareAnnotations))
         {
             // to ensure "Code" is required (not null)

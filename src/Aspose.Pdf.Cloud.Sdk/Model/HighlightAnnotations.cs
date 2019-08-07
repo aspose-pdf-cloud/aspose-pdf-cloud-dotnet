@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="HighlightAnnotations" /> class.
         /// </summary>
-        /// <param name="Links">Link to the document..</param>
-        /// <param name="List">List of highlight annotations..</param>
+        /// <param name="Links">Link to the document.</param>
+        /// <param name="List">List of highlight annotations.</param>
         public HighlightAnnotations(List<Link> Links = default(List<Link>), List<HighlightAnnotation> List = default(List<HighlightAnnotation>))
         {
             this.Links = Links;

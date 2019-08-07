@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SignatureVerifyResponse" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Valid">True if signature is valid and false if not (required).</param>
+        /// <param name="Code">Response status code. (required)</param>
+        /// <param name="Status">Response status.</param>
+        /// <param name="Valid">True if signature is valid and false if not (required)</param>
         public SignatureVerifyResponse(int? Code = default(int?), string Status = default(string), bool? Valid = default(bool?))
         {
             // to ensure "Code" is required (not null)

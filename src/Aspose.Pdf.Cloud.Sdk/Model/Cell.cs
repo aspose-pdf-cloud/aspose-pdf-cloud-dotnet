@@ -49,19 +49,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Cell" /> class.
         /// </summary>
-        /// <param name="IsNoBorder">Gets or sets the cell have border..</param>
-        /// <param name="Margin">Gets or sets the padding..</param>
-        /// <param name="Border">Gets or sets the border..</param>
-        /// <param name="BackgroundColor">Gets or sets the background color..</param>
-        /// <param name="BackgroundImageFile">Gets or sets the background image file..</param>
-        /// <param name="Alignment">Gets or sets the alignment..</param>
-        /// <param name="DefaultCellTextState">Gets or sets the default cell text state..</param>
-        /// <param name="Paragraphs">Gets or sets the cell&#39;s formatted text..</param>
-        /// <param name="IsWordWrapped">Gets or sets the cell&#39;s text word wrapped..</param>
-        /// <param name="VerticalAlignment">Gets or sets the vertical alignment..</param>
-        /// <param name="ColSpan">Gets or sets the column span..</param>
-        /// <param name="RowSpan">Gets or sets the row span..</param>
-        /// <param name="Width">Gets or sets the column width..</param>
+        /// <param name="IsNoBorder">Gets or sets the cell have border.</param>
+        /// <param name="Margin">Gets or sets the padding.</param>
+        /// <param name="Border">Gets or sets the border.</param>
+        /// <param name="BackgroundColor">Gets or sets the background color.</param>
+        /// <param name="BackgroundImageFile">Gets or sets the background image file.</param>
+        /// <param name="Alignment">Gets or sets the alignment.</param>
+        /// <param name="DefaultCellTextState">Gets or sets the default cell text state.</param>
+        /// <param name="Paragraphs">Gets or sets the cell&#39;s formatted text.</param>
+        /// <param name="IsWordWrapped">Gets or sets the cell&#39;s text word wrapped.</param>
+        /// <param name="VerticalAlignment">Gets or sets the vertical alignment.</param>
+        /// <param name="ColSpan">Gets or sets the column span.</param>
+        /// <param name="RowSpan">Gets or sets the row span.</param>
+        /// <param name="Width">Gets or sets the column width.</param>
         public Cell(bool? IsNoBorder = default(bool?), MarginInfo Margin = default(MarginInfo), BorderInfo Border = default(BorderInfo), Color BackgroundColor = default(Color), string BackgroundImageFile = default(string), HorizontalAlignment Alignment = default(HorizontalAlignment), TextState DefaultCellTextState = default(TextState), List<TextRect> Paragraphs = default(List<TextRect>), bool? IsWordWrapped = default(bool?), VerticalAlignment VerticalAlignment = default(VerticalAlignment), int? ColSpan = default(int?), int? RowSpan = default(int?), double? Width = default(double?))
         {
             this.IsNoBorder = IsNoBorder;

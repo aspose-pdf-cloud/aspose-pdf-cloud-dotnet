@@ -49,14 +49,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TextRect" /> class.
         /// </summary>
-        /// <param name="Text">Text of the occurrence..</param>
-        /// <param name="Page">Page on which the occurrence is found..</param>
-        /// <param name="Rect">Rectangle of the occurrence..</param>
-        /// <param name="HorizontalAlignment">Gets or sets a horizontal alignment of text fragment. .</param>
-        /// <param name="VerticalAlignment">Gets or sets a vertical alignment of text fragment. .</param>
-        /// <param name="Position">Gets or sets text position for text, represented with TextRect object..</param>
-        /// <param name="BaselinePosition">Gets text position for text, represented with TextRect object. The YIndent of the Position structure represents baseline coordinate of the text fragment..</param>
-        /// <param name="TextState">Gets or sets text state for the text that TextRect object represents..</param>
+        /// <param name="Text">Text of the occurrence.</param>
+        /// <param name="Page">Page on which the occurrence is found.</param>
+        /// <param name="Rect">Rectangle of the occurrence.</param>
+        /// <param name="HorizontalAlignment">Gets or sets a horizontal alignment of text fragment. </param>
+        /// <param name="VerticalAlignment">Gets or sets a vertical alignment of text fragment. </param>
+        /// <param name="Position">Gets or sets text position for text, represented with TextRect object.</param>
+        /// <param name="BaselinePosition">Gets text position for text, represented with TextRect object. The YIndent of the Position structure represents baseline coordinate of the text fragment.</param>
+        /// <param name="TextState">Gets or sets text state for the text that TextRect object represents.</param>
         public TextRect(string Text = default(string), int? Page = default(int?), Rectangle Rect = default(Rectangle), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), Position Position = default(Position), Position BaselinePosition = default(Position), TextState TextState = default(TextState))
         {
             this.Text = Text;

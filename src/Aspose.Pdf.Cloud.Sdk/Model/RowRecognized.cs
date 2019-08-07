@@ -49,8 +49,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RowRecognized" /> class.
         /// </summary>
-        /// <param name="CellList">Gets readonly IList containing cells of the row.</param>
-        /// <param name="Rectangle">Gets rectangle that describes position of the row on page.</param>
+        /// <param name="CellList">Gets readonly IList containing cells of the row</param>
+        /// <param name="Rectangle">Gets rectangle that describes position of the row on page</param>
         public RowRecognized(List<CellRecognized> CellList = default(List<CellRecognized>), Rectangle Rectangle = default(Rectangle))
         {
             this.CellList = CellList;

@@ -54,9 +54,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SoundAnnotationsResponse" /> class.
         /// </summary>
-        /// <param name="Code">Response status code. (required).</param>
-        /// <param name="Status">Response status..</param>
-        /// <param name="Annotations">Sound annotations object.</param>
+        /// <param name="Code">Response status code. (required)</param>
+        /// <param name="Status">Response status.</param>
+        /// <param name="Annotations">Sound annotations object</param>
         public SoundAnnotationsResponse(int? Code = default(int?), string Status = default(string), SoundAnnotations Annotations = default(SoundAnnotations))
         {
             // to ensure "Code" is required (not null)
