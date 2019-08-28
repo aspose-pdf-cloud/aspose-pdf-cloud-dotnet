@@ -59,7 +59,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             const string name = "PdfWithBookmarks.pdf";
             UploadFile(name, name);
 
-            string bookmarkPath = "1";
+            string bookmarkPath = "1/1";
 
             var response = PdfApi.GetBookmarks(name, bookmarkPath, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
@@ -74,7 +74,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             const string name = "PdfWithBookmarks.pdf";
             UploadFile(name, name);
 
-            string bookmarkPath = "1";
+            string bookmarkPath = "1/1";
 
             var response = PdfApi.GetBookmark(name, bookmarkPath, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
@@ -148,7 +148,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             const string name = "PdfWithBookmarks.pdf";
             UploadFile(name, name);
 
-            string bookmarkPath = "2";
+            string bookmarkPath = "1/1";
 
             var bookmark = new Bookmark();
             bookmark.Action = "GoTo";

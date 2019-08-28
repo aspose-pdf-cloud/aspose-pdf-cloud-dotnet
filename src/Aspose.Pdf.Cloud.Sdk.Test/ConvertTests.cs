@@ -334,7 +334,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string name = "4pages.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
-                string resFileName = "result.zip";
+                string resFileName = "result_html.zip";
 
                 var response = PdfApi.PutPdfInRequestToHtml(Path.Combine(TempFolder, resFileName), file: stream);
                 Assert.That(response.Code, Is.EqualTo(200));

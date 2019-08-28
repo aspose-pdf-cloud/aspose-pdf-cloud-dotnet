@@ -97,5 +97,43 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.GetVerifySignature(Name, Signature.FormFieldName, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
+
+        /// <summary>
+        /// Test PostPageCertify
+        /// </summary>
+        [Test]
+        public void PostPageCertifyTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            const string signatureName = "33226.p12";
+            UploadFile(signatureName, signatureName);
+
+            const string pass = "sIikZSmz";
+
+            DocMDPAccessPermissionType permissionType = DocMDPAccessPermissionType.NoChanges;
+
+            Signature signature = new Signature(
+                Authority: "Sergey Smal",
+                Contact: "test@mail.ru",
+                Date: "08/01/2012 12:15:00.000 PM",
+                FormFieldName: "Signature1",
+                Location: "Ukraine",
+                Password: pass,
+                Rectangle: new Rectangle(
+                    LLX: 100,
+                    LLY: 100,
+                    URX: 500,
+                    URY: 200),
+                SignaturePath: Path.Combine(TempFolder, signatureName),
+                SignatureType: SignatureType.PKCS7,
+                Visible: true,
+                ShowProperties: false);
+
+            var response = PdfApi.PostPageCertify(name, pageNumber: 1, sign: signature, 
+                docMdpAccessPermissionType: permissionType.ToString(), folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
     }
 }

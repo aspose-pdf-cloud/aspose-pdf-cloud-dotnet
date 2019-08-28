@@ -67,7 +67,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Authority">Gets or sets the name of the person or authority signing the document..</param>
         /// <param name="Date">Gets or sets the time of signing.</param>
         /// <param name="ShowProperties">Gets or sets the showproperties in signature field (required)</param>
-        public Signature(string SignaturePath = default(string), SignatureType SignatureType = default(SignatureType), string Password = default(string), string Appearance = default(string), string Reason = default(string), string Contact = default(string), string Location = default(string), bool? Visible = default(bool?), Rectangle Rectangle = default(Rectangle), string FormFieldName = default(string), string Authority = default(string), string Date = default(string), bool? ShowProperties = default(bool?))
+        /// <param name="TimestampSettings">Gets/sets timestamp settings.</param>
+        /// <param name="IsValid">Verify the document regarding this signature and return true if document is valid or otherwise false.</param>
+        /// <param name="CustomAppearance">Gets/sets the custom appearance.</param>
+        public Signature(string SignaturePath = default(string), SignatureType SignatureType = default(SignatureType), string Password = default(string), string Appearance = default(string), string Reason = default(string), string Contact = default(string), string Location = default(string), bool? Visible = default(bool?), Rectangle Rectangle = default(Rectangle), string FormFieldName = default(string), string Authority = default(string), string Date = default(string), bool? ShowProperties = default(bool?), TimestampSettings TimestampSettings = default(TimestampSettings), bool? IsValid = default(bool?), SignatureCustomAppearance CustomAppearance = default(SignatureCustomAppearance))
         {
             // to ensure "SignaturePath" is required (not null)
             if (SignaturePath == null)
@@ -114,6 +117,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.FormFieldName = FormFieldName;
             this.Authority = Authority;
             this.Date = Date;
+            this.TimestampSettings = TimestampSettings;
+            this.IsValid = IsValid;
+            this.CustomAppearance = CustomAppearance;
         }
         
         /// <summary>
@@ -208,6 +214,27 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public bool? ShowProperties { get; set; }
 
         /// <summary>
+        /// Gets/sets timestamp settings.
+        /// </summary>
+        /// <value>Gets/sets timestamp settings.</value>
+        [DataMember(Name="TimestampSettings", EmitDefaultValue=false)]
+        public TimestampSettings TimestampSettings { get; set; }
+
+        /// <summary>
+        /// Verify the document regarding this signature and return true if document is valid or otherwise false.
+        /// </summary>
+        /// <value>Verify the document regarding this signature and return true if document is valid or otherwise false.</value>
+        [DataMember(Name="IsValid", EmitDefaultValue=false)]
+        public bool? IsValid { get; set; }
+
+        /// <summary>
+        /// Gets/sets the custom appearance.
+        /// </summary>
+        /// <value>Gets/sets the custom appearance.</value>
+        [DataMember(Name="CustomAppearance", EmitDefaultValue=false)]
+        public SignatureCustomAppearance CustomAppearance { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -228,6 +255,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  Authority: ").Append(Authority).Append("\n");
             sb.Append("  Date: ").Append(Date).Append("\n");
             sb.Append("  ShowProperties: ").Append(ShowProperties).Append("\n");
+            sb.Append("  TimestampSettings: ").Append(TimestampSettings).Append("\n");
+            sb.Append("  IsValid: ").Append(IsValid).Append("\n");
+            sb.Append("  CustomAppearance: ").Append(CustomAppearance).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -328,6 +358,21 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.ShowProperties == other.ShowProperties ||
                     this.ShowProperties != null &&
                     this.ShowProperties.Equals(other.ShowProperties)
+                ) && 
+                (
+                    this.TimestampSettings == other.TimestampSettings ||
+                    this.TimestampSettings != null &&
+                    this.TimestampSettings.Equals(other.TimestampSettings)
+                ) && 
+                (
+                    this.IsValid == other.IsValid ||
+                    this.IsValid != null &&
+                    this.IsValid.Equals(other.IsValid)
+                ) && 
+                (
+                    this.CustomAppearance == other.CustomAppearance ||
+                    this.CustomAppearance != null &&
+                    this.CustomAppearance.Equals(other.CustomAppearance)
                 );
         }
 
@@ -368,6 +413,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Date.GetHashCode();
                 if (this.ShowProperties != null)
                     hash = hash * 59 + this.ShowProperties.GetHashCode();
+                if (this.TimestampSettings != null)
+                    hash = hash * 59 + this.TimestampSettings.GetHashCode();
+                if (this.IsValid != null)
+                    hash = hash * 59 + this.IsValid.GetHashCode();
+                if (this.CustomAppearance != null)
+                    hash = hash * 59 + this.CustomAppearance.GetHashCode();
                 return hash;
             }
         }
