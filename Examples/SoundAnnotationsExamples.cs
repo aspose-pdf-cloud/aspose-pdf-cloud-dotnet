@@ -5,10 +5,10 @@ using Aspose.Pdf.Cloud.Sdk.Model;
 using System;
 using Aspose.Pdf.Cloud.Sdk.Api;
 
-namespace Aspose.Pdf.Cloud.Sdk.Test
+namespace Aspose.Pdf.Cloud.Sdk.Example
 {
  
-    public class SoundAnnotationsTests
+    public class SoundAnnotationsExamples
 
     {
         PdfApi api = new PdfApi("XXXXXXX", "XXXXXXX");
@@ -21,35 +21,40 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
 
         private const string AttachmentFile = "4pages.pdf";
 
-        public void GetDocumentSoundAnnotationsTest()
+        public void GetDocumentSoundAnnotationsExample()
         {
+            //ExStart: GetDocumentSoundAnnotationsExample
             var response = api.GetDocumentSoundAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetDocumentSoundAnnotationsExample
         }
 
 
-        public void GetPageSoundAnnotationsTest()
+        public void GetPageSoundAnnotationsExample()
         {
+            //ExStart: GetPageSoundAnnotationsExample
             var response = api.GetPageSoundAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPageSoundAnnotationsExample
         }
 
 
-        public void PostPageSoundAnnotationsTest()
+        public void PostPageSoundAnnotationsExample()
         {
+            //ExStart: PostPageSoundAnnotationsExample
             UploadFile(AttachmentFile, AttachmentFile);
             List<SoundAnnotation> annotations = new List<SoundAnnotation>
             {
                 new SoundAnnotation()
                 {
-                    Name = "Test Sound Annotation",
+                    Name = "Example Sound Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -64,24 +69,28 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var response = api.PostPageSoundAnnotations(Name, 1, annotations, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PostPageSoundAnnotationsExample
         }
 
 
-        public void GetSoundAnnotationTest()
+        public void GetSoundAnnotationExample()
         {
+            //ExStart: GetSoundAnnotationExample
             var annotationresponse = api.GetDocumentSoundAnnotations(Name, folder: FolderName);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
             var response = api.GetSoundAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetSoundAnnotationExample
         }
 
 
-        public void PutSoundAnnotationTest()
+        public void PutSoundAnnotationExample()
         {
+            //ExStart: PutSoundAnnotationExample
             SoundAnnotation annotation = new SoundAnnotation()
             {
-                Name = "Updated Test",
+                Name = "Updated Example",
                 Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -98,26 +107,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var response = api.PutSoundAnnotation(Name, annotationId, annotation, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutSoundAnnotationExample
         }
 
 
-        public void GetSoundAnnotationDataTest()
+        public void GetSoundAnnotationDataExample()
         {
+            //ExStart: GetSoundAnnotationDataExample
             var annotationresponse = api.GetDocumentSoundAnnotations(Name, folder: FolderName);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
             var response = api.GetSoundAnnotationData(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetVerifySignatureExample
         }
 
 
-        public void PutSoundAnnotationDataExtractTest()
+        public void PutSoundAnnotationDataExtractExample()
         {
+            //ExStart: GetVerifySignatureExample
             var annotationresponse = api.GetDocumentSoundAnnotations(Name, folder: FolderName);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
             var response = api.PutSoundAnnotationDataExtract(Name, annotationId, outFilePath: "outFile.dat", folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetSoundAnnotationDataExample
         }
     }
 }

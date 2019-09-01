@@ -22,32 +22,38 @@ namespace Aspose.Pdf.Cloud.Sdk.StrikeOutAnnotationsAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
 
-        public void GetDocumentStrikeOutAnnotationsTest()
+        public void GetDocumentStrikeOutAnnotationsExample()
         {
+            //ExStart: GetDocumentStrikeOutAnnotationsExample
             var response = api.GetDocumentStrikeOutAnnotations(Name, folder: FolderName);
+            Console.WriteLine(response);
+            //ExEnd: GetDocumentStrikeOutAnnotationsExample
            
         }
 
 
-        public void GetPageStrikeOutAnnotationsTest()
+        public void GetPageStrikeOutAnnotationsExample()
         {
+            //ExStart: GetPageStrikeOutAnnotationsExample
             var response = api.GetPageStrikeOutAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPageStrikeOutAnnotationsExample
         }
 
 
-        public void PostPageStrikeOutAnnotationsTest()
+        public void PostPageStrikeOutAnnotationsExample()
         {
+            //ExStart: PostPageStrikeOutAnnotationsExample
             List<StrikeOutAnnotation> annotations = new List<StrikeOutAnnotation>
             {
                 new StrikeOutAnnotation()
                 {
-                    Name = "Test StrikeOut Annotation",
+                    Name = "Example StrikeOut Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -68,24 +74,28 @@ namespace Aspose.Pdf.Cloud.Sdk.StrikeOutAnnotationsAPI
 
             var response = api.PostPageStrikeOutAnnotations(Name, 1, annotations, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PostPageStrikeOutAnnotationsExample
         }
 
 
-        public void GetStrikeOutAnnotationTest()
+        public void GetStrikeOutAnnotationExample()
         {
+            //ExStart: GetStrikeOutAnnotationExample
             var StrikeOutresponse = api.GetDocumentStrikeOutAnnotations(Name, folder: FolderName);
             string annotationId = StrikeOutresponse.Annotations.List[0].Id;
 
             var response = api.GetStrikeOutAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetStrikeOutAnnotationExample
         }
 
 
-        public void PutStrikeOutAnnotationTest()
+        public void PutStrikeOutAnnotationExample()
         {
+            //ExStart: PutStrikeOutAnnotationExample
             StrikeOutAnnotation annotation = new StrikeOutAnnotation()
             {
-                Name = "Test StrikeOut Annotation Updated",
+                Name = "Example StrikeOut Annotation Updated",
                 Rect = new Rectangle(101, 101, 201, 201),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -108,6 +118,7 @@ namespace Aspose.Pdf.Cloud.Sdk.StrikeOutAnnotationsAPI
 
             var response = api.PutStrikeOutAnnotation(Name, annotationId, annotation, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutStrikeOutAnnotationExample
         }
     }
 }

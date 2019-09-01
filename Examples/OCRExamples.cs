@@ -16,26 +16,30 @@ namespace Aspose.Pdf.Cloud.Sdk.OcrAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
-        public void PutSearchableDocumentTest()
+        public void PutSearchableDocumentExample()
         {
+            //ExStart: PutSearchableDocumentExample
             const string name = "rusdoc.pdf";
             UploadFile(name, name);
 
             var response = api.PutSearchableDocument(name, folder: FolderName, lang: "rus,eng");
             Console.WriteLine(response);
+            //ExExnd: PutSearchableDocumentExample
         }
 
 
-        public void PutSearchableDocumentWithDefaultLangTest()
+        public void PutSearchableDocumentWithDefaultLangExample()
         {
+            //ExStart: PutSearchableDocumentWithDefaultLangExample
             const string name = "rusdoc.pdf";
             UploadFile(name, name);
 
             var response = api.PutSearchableDocument(name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutSearchableDocumentWithDefaultLangExample
         }
     }
 }

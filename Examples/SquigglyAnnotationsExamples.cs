@@ -4,10 +4,10 @@ using Aspose.Pdf.Cloud.Sdk.Model;
 using System;
 using Aspose.Pdf.Cloud.Sdk.Api;
 
-namespace Aspose.Pdf.Cloud.Sdk.Test
+namespace Aspose.Pdf.Cloud.Sdk.Example
 {
 
-    public class SquigglyAnnotationsTests
+    public class SquigglyAnnotationsExamples
     {
         private const string Name = "PdfWithAnnotations.pdf";
         private const int PageNumber = 2;
@@ -16,27 +16,32 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         string FolderName = "";
 
 
-        public void GetDocumentSquigglyAnnotationsTest()
+        public void GetDocumentSquigglyAnnotationsExample()
         {
+            //ExStart: GetDocumentSquigglyAnnotationsExample
             var response = api.GetDocumentSquigglyAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetDocumentSquigglyAnnotationsExample
         }
 
 
-        public void GetPageSquigglyAnnotationsTest()
+        public void GetPageSquigglyAnnotationsExample()
         {
+            //ExStart: GetPageSquigglyAnnotationsExample
             var response = api.GetPageSquigglyAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPageSquigglyAnnotationsExample
         }
 
 
-        public void PostPageSquigglyAnnotationsTest()
+        public void PostPageSquigglyAnnotationsExample()
         {
+            //ExStart: PostPageSquigglyAnnotationsExample
             List<SquigglyAnnotation> annotations = new List<SquigglyAnnotation>
             {
                 new SquigglyAnnotation()
                 {
-                    Name = "Test Squiggly Annotation",
+                    Name = "Example Squiggly Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -57,24 +62,28 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var response = api.PostPageSquigglyAnnotations(Name, 1, annotations, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PostPageSquigglyAnnotationsExample
         }
 
 
-        public void GetSquigglyAnnotationTest()
+        public void GetSquigglyAnnotationExample()
         {
+            //ExStart: GetSquigglyAnnotationExample
             var Squigglyresponse = api.GetDocumentSquigglyAnnotations(Name, folder: FolderName);
             string annotationId = Squigglyresponse.Annotations.List[0].Id;
 
             var response = api.GetSquigglyAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetSquigglyAnnotationExample
         }
 
 
-        public void PutSquigglyAnnotationTest()
+        public void PutSquigglyAnnotationExample()
         {
+            //ExStart: PutSquigglyAnnotationExample
             SquigglyAnnotation annotation = new SquigglyAnnotation()
             {
-                Name = "Test Squiggly Annotation Updated",
+                Name = "Example Squiggly Annotation Updated",
                 Rect = new Rectangle(101, 101, 201, 201),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -97,6 +106,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var response = api.PutSquigglyAnnotation(Name, annotationId, annotation, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutSquigglyAnnotationExample
         }
     }
 }

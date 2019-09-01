@@ -17,27 +17,33 @@ namespace Aspose.Pdf.Cloud.Sdk.InkAnnotationsAPI
         private const string Name = "PdfWithAnnotations.pdf";
         private const int PageNumber = 2;
 
-        public void GetDocumentInkAnnotationsTest()
+        public void GetDocumentInkAnnotationsExample()
         {
+            //ExStart: GetDocumentInkAnnotationsExample
             var response = api.GetDocumentInkAnnotations(Name, folder: FolderName);
              Console.WriteLine(response);
+             //ExEnd: GetDocumentInkAnnotationsExample
+             
         }
 
 
-        public void GetPageInkAnnotationsTest()
+        public void GetPageInkAnnotationsExample()
         {
+            //ExStart: GetPageInkAnnotationsExample
             var response = api.GetPageInkAnnotations(Name, PageNumber, folder: FolderName);
              Console.WriteLine(response);
+            //ExEnd: GetPageInkAnnotationsExample
         }
 
 
-        public void PostPageInkAnnotationsTest()
+        public void PostPageInkAnnotationsExample()
         {
+            //ExStart: PostPageInkAnnotationsExample
             List<InkAnnotation> annotations = new List<InkAnnotation>
             {
                 new InkAnnotation()
                 {
-                    Name = "Test Ink Annotation",
+                    Name = "Example Ink Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -66,23 +72,27 @@ namespace Aspose.Pdf.Cloud.Sdk.InkAnnotationsAPI
 
             var response = api.PostPageInkAnnotations(Name, 1, annotations, folder: FolderName);
              Console.WriteLine(response);
+             //ExEnd: PostPageInkAnnotationsExample
         }
 
-        public void GetInkAnnotationTest()
+        public void GetInkAnnotationExample()
         {
+            //ExStart: GetInkAnnotationExample
             var Inkresponse = api.GetDocumentInkAnnotations(Name, folder: FolderName);
             string annotationId = Inkresponse.Annotations.List[0].Id;
 
             var response = api.GetInkAnnotation(Name, annotationId, folder: FolderName);
              Console.WriteLine(response);
+             //ExEnd: GetInkAnnotationExample
         }
 
 
-        public void PutInkAnnotationTest()
+        public void PutInkAnnotationExample()
         {
+            //ExStart: PutInkAnnotationExample
             InkAnnotation annotation = new InkAnnotation()
             {
-                Name = "Test Ink Annotation Updated",
+                Name = "Example Ink Annotation Updated",
                 Rect = new Rectangle(101, 101, 201, 201),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -113,6 +123,7 @@ namespace Aspose.Pdf.Cloud.Sdk.InkAnnotationsAPI
 
             var response = api.PutInkAnnotation(Name, annotationId, annotation, folder: FolderName);
              Console.WriteLine(response);
+            //ExEnd: PutInkAnnotationExample
         }
     }
 }

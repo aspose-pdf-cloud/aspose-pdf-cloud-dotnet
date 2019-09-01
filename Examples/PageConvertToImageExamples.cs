@@ -15,108 +15,132 @@ namespace Aspose.Pdf.Cloud.Sdk.PageConvertToImageAPI
         const int pageNumber = 2;
 
 
-        public void GetPageConvertToTiffTest()
+        public void GetPageConvertToTiffExample()
         {
+            //ExStart: GetPageConvertToTiffExample
             var response = api.GetPageConvertToTiff(Name, pageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPageConvertToTiffExample
         }
         
 
 
-        public void PutPageConvertToTiffTest()
+        public void PutPageConvertToTiffExample()
         {
+            //ExStart: PutPageConvertToTiffExample
             string resultFile = "page.tiff";
             string outPath = Path.Combine(FolderName, resultFile);
             var response = api.PutPageConvertToTiff(Name, pageNumber, outPath: outPath, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutPageConvertToTiffExample
         }
 
 
-        public void GetPageConvertToJpegTest()
+        public void GetPageConvertToJpegExample()
         {
+            //ExStart: GetPageConvertToJpegExample
             var response = api.GetPageConvertToJpeg(Name, pageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPageConvertToJpegExample
         }
 
 
  
-        public void PutPageConvertToJpegTest()
+        public void PutPageConvertToJpegExample()
         {
+            //ExStart: PutPageConvertToJpegExample
             string resultFile = "page.jpeg";
             string outPath = Path.Combine(FolderName, resultFile);
             var response = api.PutPageConvertToJpeg(Name, pageNumber, outPath: outPath, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutPageConvertToJpegExample
         }
 
 
  
-        public void GetPageConvertToPngTest()
+        public void GetPageConvertToPngExample()
         {
+            //ExStart: GetPageConvertToPngExample
             var response = api.GetPageConvertToPng(Name, pageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPageConvertToPngExample
         }
 
 
 
-        public void PutPageConvertToPngTest()
+        public void PutPageConvertToPngExample()
         {
+            //ExStart: PutPageConvertToPngExample
             string resultFile = "page.png";
             string outPath = Path.Combine(FolderName, resultFile);
             var response = api.PutPageConvertToPng(Name, pageNumber, outPath: outPath, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutPageConvertToPngExample
         }
 
 
-        public void GetPageConvertToEmfTest()
+        public void GetPageConvertToEmfExample()
         {
+            //ExStart: GetPageConvertToEmfExample
             var response = api.GetPageConvertToEmf(Name, pageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPageConvertToEmfExample
         }
 
 
 
-        public void PutPageConvertToEmfTest()
+        public void PutPageConvertToEmfExample()
         {
+            //ExStart: PutPageConvertToEmfExample
             string resultFile = "page.emf";
             string outPath = Path.Combine(FolderName, resultFile);
             var response = api.PutPageConvertToEmf(Name, pageNumber, outPath: outPath, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutPageConvertToEmfExample
         }
 
 
   
-        public void GetPageConvertToBmpTest()
+        public void GetPageConvertToBmpExample()
         {
+            //ExStart: GetPageConvertToBmpExample
             var response = api.GetPageConvertToBmp(Name, pageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPageConvertToBmpExample
         }
 
 
  
-        public void PutPageConvertToBmpTest()
+        public void PutPageConvertToBmpExample()
         {
+            //ExStart: PutPageConvertToBmpExample
             string resultFile = "page.bmp";
             string outPath = Path.Combine(FolderName, resultFile);
             var response = api.PutPageConvertToBmp(Name, pageNumber, outPath: outPath, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutPageConvertToBmpExample
         }
 
 
    
-        public void GetPageConvertToGifTest()
+        public void GetPageConvertToGifExample()
         {
+            //ExStart: GetPageConvertToGifExample
             var response = api.GetPageConvertToBmp(Name, pageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPageConvertToGifExample
         }
 
 
 
-        public void PutPageConvertToGifTest()
+        public void PutPageConvertToGifExample()
         {
+            //ExStart: PutPageConvertToGifExample
             string resultFile = "page.gif";
             string outPath = Path.Combine(FolderName, resultFile);
             var response = api.PutPageConvertToGif(Name, pageNumber, outPath: outPath, folder: FolderName);
            Console.WriteLine(response);
+           //ExEnd: PutPageConvertToGifExample
         }
     }
 

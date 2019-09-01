@@ -6,7 +6,7 @@ using System.IO;
 using System;
 
 
-namespace Aspose.Pdf.Cloud.Sdk.Test
+namespace Aspose.Pdf.Cloud.Sdk.Example
 {
 
     public class UnderlineAnnotationsExamples
@@ -23,30 +23,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
 
-        public void GetDocumentUnderlineAnnotationsTest()
+        public void GetDocumentUnderlineAnnotationsExample()
         {
+             //ExStart: GetDocumentUnderlineAnnotationsExample
             var response = api.GetDocumentUnderlineAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
+             //ExStart: GetDocumentUnderlineAnnotationsExample
         }
 
-        public void GetPageUnderlineAnnotationsTest()
+        public void GetPageUnderlineAnnotationsExample()
         {
+             //ExStart: GetPageUnderlineAnnotationsExample
             var response = api.GetPageUnderlineAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetPageUnderlineAnnotationsExample
         }
 
-        public void PostPageUnderlineAnnotationsTest()
+        public void PostPageUnderlineAnnotationsExample()
         {
+             //ExStart: PostPageUnderlineAnnotationsExample
             List<UnderlineAnnotation> annotations = new List<UnderlineAnnotation>
             {
                 new UnderlineAnnotation()
                 {
-                    Name = "Test Underline Annotation",
+                    Name = "Example Underline Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -67,24 +72,28 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var response = api.PostPageUnderlineAnnotations(Name, 1, annotations, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: PostPageUnderlineAnnotationsExample
         }
 
  
-        public void GetUnderlineAnnotationTest()
+        public void GetUnderlineAnnotationExample()
         {
+             //ExStart: GetUnderlineAnnotationExample
             var Underlineresponse = api.GetDocumentUnderlineAnnotations(Name, folder: FolderName);
             string annotationId = Underlineresponse.Annotations.List[0].Id;
 
             var response = api.GetUnderlineAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetUnderlineAnnotationExample
         }
 
 
-        public void PutUnderlineAnnotationTest()
+        public void PutUnderlineAnnotationExample()
         {
+            //ExStart: PutUnderlineAnnotationExample
             UnderlineAnnotation annotation = new UnderlineAnnotation()
             {
-                Name = "Test Underline Annotation Updated",
+                Name = "Example Underline Annotation Updated",
                 Rect = new Rectangle(101, 101, 201, 201),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -107,6 +116,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var response = api.PutUnderlineAnnotation(Name, annotationId, annotation, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: PutUnderlineAnnotationExample
         }
     }
 }

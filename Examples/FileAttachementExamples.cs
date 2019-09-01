@@ -21,33 +21,38 @@ namespace Aspose.Pdf.Cloud.Sdk.FileAttachementAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
 
-        public void GetDocumentFileAttachmentAnnotationsTest()
+        public void GetDocumentFileAttachmentAnnotationsExample()
         {
+            //ExStart: GetDocumentFileAttachmentAnnotationsExample
             var response = api.GetDocumentFileAttachmentAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetDocumentFileAttachmentAnnotationsExample
         }
 
 
-        public void GetPageFileAttachmentAnnotationsTest()
+        public void GetPageFileAttachmentAnnotationsExample()
         {
+            //ExStart: GetPageFileAttachmentAnnotationsExample
             var response = api.GetPageFileAttachmentAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPageFileAttachmentAnnotationsExample
         }
 
 
-        public void PostPageFileAttachmentAnnotationsTest()
+        public void PostPageFileAttachmentAnnotationsExample()
         {
+            //ExStart: PostPageFileAttachmentAnnotationsExample
             UploadFile(AttachmentFile, AttachmentFile);
             List<FileAttachmentAnnotation> annotations = new List<FileAttachmentAnnotation>
             {
                 new FileAttachmentAnnotation()
                 {
-                    Name = "Test FileAttachmrizontalAlignment.Center",
+                    Name = "Example FileAttachmrizontalAlignment.Center",
                     RichText = "Rich Texent Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
@@ -63,23 +68,27 @@ namespace Aspose.Pdf.Cloud.Sdk.FileAttachementAPI
 
             var response = api.PostPageFileAttachmentAnnotations(Name, 1, annotations, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PostPageFileAttachmentAnnotationsExample
         }
 
-        public void GetFileAttachmentAnnotationTest()
+        public void GetFileAttachmentAnnotationExample()
         {
+            //ExStart: GetFileAttachmentAnnotationExample
             var annotationresponse = api.GetDocumentFileAttachmentAnnotations(Name, folder: FolderName);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
             var response = api.GetFileAttachmentAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetFileAttachmentAnnotationExample
         }
 
-        public void PutFileAttachmentAnnotationTest()
+        public void PutFileAttachmentAnnotationExample()
         {
+            //ExStart: PutFileAttachmentAnnotationExample
             UploadFile(AttachmentFile, AttachmentFile);
             FileAttachmentAnnotation annotation = new FileAttachmentAnnotation()
             {
-                Name = "Updated Test",
+                Name = "Updated Example",
                 Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -97,24 +106,29 @@ namespace Aspose.Pdf.Cloud.Sdk.FileAttachementAPI
 
             var response = api.PutFileAttachmentAnnotation(Name, annotationId, annotation, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutFileAttachmentAnnotationExample
         }
 
-        public void GetFileAttachmentAnnotationDataTest()
+        public void GetFileAttachmentAnnotationDataExample()
         {
+            //ExStart: GetFileAttachmentAnnotationDataExample
             var annotationresponse = api.GetDocumentFileAttachmentAnnotations(Name, folder: FolderName);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
             var response = api.GetFileAttachmentAnnotationData(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetFileAttachmentAnnotationDataExample
         }
 
-        public void PutFileAttachmentAnnotationDataExtractTest()
+        public void PutFileAttachmentAnnotationDataExtractExample()
         {
+            //ExStart: PutFileAttachmentAnnotationDataExtractExample
             var annotationresponse = api.GetDocumentFileAttachmentAnnotations(Name, folder: FolderName);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
             var response = api.PutFileAttachmentAnnotationDataExtract(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutFileAttachmentAnnotationDataExtractExample
         }
     }
 }

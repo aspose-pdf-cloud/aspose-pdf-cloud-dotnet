@@ -20,27 +20,31 @@ namespace Aspose.Pdf.Cloud.Sdk.TextAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
-        public void GetTextTest()
+        public void GetTextExample()
         {
+            //ExStart: DeletePageTablesExample
             var response = api.GetText(Name, LLX: 0, LLY: 0, URX: 0, URY: 0, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: DeletePageTablesExample
         }
 
 
-        public void GetPageTextTest()
+        public void GetPageTextExample()
         {
+             //ExStart: GetPageTextExample
             var format = new List<string> { "First Page", "Second Page" };
             var response = api.GetPageText(Name, pageNumber: 1, LLX: 0, LLY: 0, URX: 0, URY: 0, folder: FolderName, format: format);
-           
+            //ExEnd: GetPageTextExample
         }
 
 
-        public void PutAddTextTest()
+        public void PutAddTextExample()
         {
+            //ExStart: PutAddTextExample
             var paragraph = new Paragraph(
                 Rectangle: new Rectangle(100, 100, 200, 200),
                 LeftMargin: 10,
@@ -77,6 +81,7 @@ namespace Aspose.Pdf.Cloud.Sdk.TextAPI
 
             var response = api.PutAddText(Name, 1, paragraph, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutAddTextExample
         }
     }
 }

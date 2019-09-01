@@ -22,33 +22,39 @@ namespace Aspose.Pdf.Cloud.Sdk.Examples
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
-        public void GetDocumentCaretAnnotationsTest()
+        public void GetDocumentCaretAnnotationsExample()
         {
+             //ExStart: GetDocumentCaretAnnotationsExample
             UploadFile(Name, Name);
             var response = api.GetDocumentCaretAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetDocumentCaretAnnotationsExample
+
         }
 
-        public void GetPageCaretAnnotationsTest()
+        public void GetPageCaretAnnotationsExample()
         {
+             //ExStart: GetPageCaretAnnotationsExample
             UploadFile(Name, Name);
             var response = api.GetPageCaretAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetPageCaretAnnotationsExample
         }
 
 
-        public void PostPageCaretAnnotationsTest()
+        public void PostPageCaretAnnotationsExample()
         {
+             //ExStart: PostPageCaretAnnotationsExample
             UploadFile(Name, Name);
             List<CaretAnnotation> annotations = new List<CaretAnnotation>
             {
                 new CaretAnnotation()
                 {
-                    Name = "Test Caret Annotation",
+                    Name = "Example Caret Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -63,26 +69,32 @@ namespace Aspose.Pdf.Cloud.Sdk.Examples
 
             var response = api.PostPageCaretAnnotations(Name, 1, annotations, folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: PostPageCaretAnnotationsExample
+
         }
 
 
-        public void GetCaretAnnotationTest()
+        public void GetCaretAnnotationExample()
         {
+             //ExStart: GetCaretAnnotationExample
             UploadFile(Name, Name);
             var Caretresponse = api.GetDocumentCaretAnnotations(Name, folder: FolderName);
             string annotationId = Caretresponse.Annotations.List[0].Id;
 
             var response = api.GetCaretAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+                         //ExEnd: GetCaretAnnotationExample
+
         }
 
 
-        public void PutCaretAnnotationTest()
+        public void PutCaretAnnotationExample()
         {
+             //ExStart: PutCaretAnnotationExample
             UploadFile(Name, Name);
             CaretAnnotation annotation = new CaretAnnotation()
             {
-                Name = "Test Caret Annotation Updated",
+                Name = "Example Caret Annotation Updated",
                 Rect = new Rectangle(101, 101, 201, 201),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -99,6 +111,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Examples
 
             var response = api.PutCaretAnnotation(Name, annotationId, annotation, folder: FolderName);
             Console.WriteLine(response);
+                         //ExEnd: PutCaretAnnotationExample
+
         }
     }
 }

@@ -14,14 +14,15 @@ namespace Aspose.Pdf.Cloud.Sdk.MergeAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
         PdfApi api = new PdfApi("XXXXXXX", "XXXXXXX");
         string FolderName = "";
 
-        public void PutMergeDocumentsTest()
+        public void PutMergeDocumentsExample()
         {
+            //ExStart: PutMergeDocumentsExample
             var names = new[] { "4pages.pdf", "PdfWithImages2.pdf", "marketing.pdf" };
             const string resultName = "MergingResult.pdf";
 
@@ -34,6 +35,7 @@ namespace Aspose.Pdf.Cloud.Sdk.MergeAPI
 
             var response = api.PutMergeDocuments(resultName, mergeDocuments, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutMergeDocumentsExample
         }
     }
 }

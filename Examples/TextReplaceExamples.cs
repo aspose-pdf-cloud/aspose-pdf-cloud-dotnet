@@ -5,7 +5,7 @@ using System;
 using Aspose.Pdf.Cloud.Sdk.Api;
 using System.IO;
 
-namespace Aspose.Pdf.Cloud.Sdk.Test
+namespace Aspose.Pdf.Cloud.Sdk.Example
 {
 
     public class TextReplaceExamples
@@ -20,12 +20,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
-        public void PostDocumentTextReplaceTest()
+        public void PostDocumentTextReplaceExample()
         {
+             //ExStart: PostDocumentTextReplaceExample
             var rect = new Rectangle(100, 100, 300, 300);
             var textReplace = new TextReplace("market", "m_a_r_k_e_t", false, Rect: rect);
             var textReplaceList = new TextReplaceListRequest(new List<TextReplace> { textReplace },
@@ -33,11 +34,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var response = api.PostDocumentTextReplace(Name, textReplaceList, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: PostDocumentTextReplaceExample
         }
 
 
-        public void PostPageTextReplaceTest()
+        public void PostPageTextReplaceExample()
         {
+             //ExStart: PostPageTextReplaceExample
             var rect = new Rectangle(100, 100, 300, 300);
             var textReplace = new TextReplace("market", "m_a_r_k_e_t", false, Rect: rect);
             var textReplaceList = new TextReplaceListRequest(new List<TextReplace> { textReplace },
@@ -45,6 +48,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var response = api.PostPageTextReplace(Name, 1, textReplaceList, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: PostPageTextReplaceExample
         }
     }
 }

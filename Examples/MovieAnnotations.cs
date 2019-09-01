@@ -20,34 +20,39 @@ namespace Aspose.Pdf.Cloud.Sdk.MovieAnnotationsAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
         PdfApi api = new PdfApi("XXXXXXX", "XXXXXXX");
         string FolderName = "";
 
 
-        public void GetDocumentMovieAnnotationsTest()
+        public void GetDocumentMovieAnnotationsExample()
         {
+            //ExStart: GetDocumentMovieAnnotationsExample
             var response = api.GetDocumentMovieAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetDocumentMovieAnnotationsExample
         }
 
 
-        public void GetPageMovieAnnotationsTest()
+        public void GetPageMovieAnnotationsExample()
         {
+            //ExStart: GetPageMovieAnnotationsExample
             var response = api.GetPageMovieAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPageMovieAnnotationsExample
         }
 
-        public void PostPageMovieAnnotationsTest()
+        public void PostPageMovieAnnotationsExample()
         {
+            //ExStart: PostPageMovieAnnotationsExample
             UploadFile(AttachmentFile, AttachmentFile);
             List<MovieAnnotation> annotations = new List<MovieAnnotation>
             {
                 new MovieAnnotation()
                 {
-                    Name = "Test Movie Annotation",
+                    Name = "Example Movie Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -59,24 +64,28 @@ namespace Aspose.Pdf.Cloud.Sdk.MovieAnnotationsAPI
 
             var response = api.PostPageMovieAnnotations(Name, 1, annotations, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PostPageMovieAnnotationsExample
         }
 
-        public void GetMovieAnnotationTest()
+        public void GetMovieAnnotationExample()
         {
+            //ExStart: GetMovieAnnotationExample
             var Movieresponse = api.GetDocumentMovieAnnotations(Name, folder: FolderName);
             string annotationId = Movieresponse.Annotations.List[0].Id;
 
             var response = api.GetMovieAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetMovieAnnotationExample
         }
 
 
-        public void PutMovieAnnotationTest()
+        public void PutMovieAnnotationExample()
         {
+             //ExStart: PutMovieAnnotationExample
             UploadFile(AttachmentFile, AttachmentFile);
             MovieAnnotation annotation = new MovieAnnotation()
             {
-                Name = "Updated Test",
+                Name = "Updated Example",
                 Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -90,6 +99,8 @@ namespace Aspose.Pdf.Cloud.Sdk.MovieAnnotationsAPI
 
             var response = api.PutMovieAnnotation(Name, annotationId, annotation, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: PutMovieAnnotationExample
+            
         }
     }
 }

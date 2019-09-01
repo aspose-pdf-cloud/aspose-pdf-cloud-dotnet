@@ -16,26 +16,31 @@ namespace Aspose.Pdf.Cloud.Sdk.PolyLineAnnotationsAPI
         private const int PageNumber = 2;
 
 
-        public void GetDocumentPolyLineAnnotationsTest()
+        public void GetDocumentPolyLineAnnotationsExample()
         {
+            //ExStart: GetDocumentPolyLineAnnotationsExample
             var response = api.GetDocumentPolyLineAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetDocumentPolyLineAnnotationsExample
         }
 
 
-        public void GetPagePolyLineAnnotationsTest()
+        public void GetPagePolyLineAnnotationsExample()
         {
+            //ExStart: GetPagePolyLineAnnotationsExample
             var response = api.GetPagePolyLineAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPagePolyLineAnnotationsExample
         }
 
-        public void PostPagePolyLineAnnotationsTest()
+        public void PostPagePolyLineAnnotationsExample()
         {
+            //ExStart: PostPagePolyLineAnnotationsExample
             List<PolyLineAnnotation> annotations = new List<PolyLineAnnotation>
             {
                 new PolyLineAnnotation()
                 {
-                    Name = "Test PolyLine Annotation",
+                    Name = "Example PolyLine Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -55,23 +60,27 @@ namespace Aspose.Pdf.Cloud.Sdk.PolyLineAnnotationsAPI
 
             var response = api.PostPagePolyLineAnnotations(Name, 1, annotations, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PostPagePolyLineAnnotationsExample
         }
 
-        public void GetPolyLineAnnotationTest()
+        public void GetPolyLineAnnotationExample()
         {
+            //ExStart: GetPolyLineAnnotationExample
             var polyLineResponse = api.GetDocumentPolyLineAnnotations(Name, folder: FolderName);
             string annotationId = polyLineResponse.Annotations.List[0].Id;
 
             var response = api.GetPolyLineAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPolyLineAnnotationExample
         }
 
 
-        public void PutPolyLineAnnotationTest()
+        public void PutPolyLineAnnotationExample()
         {
+            //ExStart: PutPolyLineAnnotationExample
             PolyLineAnnotation annotation = new PolyLineAnnotation()
             {
-                Name = "Updated Test",
+                Name = "Updated Example",
                 Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -93,6 +102,7 @@ namespace Aspose.Pdf.Cloud.Sdk.PolyLineAnnotationsAPI
 
             var response = api.PutPolyLineAnnotation(Name, annotationId, annotation, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutPolyLineAnnotationExample
         }
     }
 }

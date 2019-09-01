@@ -7,10 +7,10 @@ using System;
 using Aspose.Pdf.Cloud.Sdk.Api;
 
 
-namespace Aspose.Pdf.Cloud.Sdk.Test
+namespace Aspose.Pdf.Cloud.Sdk.Example
 {
 
-    public class StorageTests
+    public class StorageExamples
     {
         private const string Name = "PdfWithAnnotations.pdf";
         private const int PageNumber = 2;
@@ -24,123 +24,145 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
-        public void PutCreateTest()
+        public void PutCreateExample()
         {
+            //ExStart: PutCreateExample
             string name = "4pages.pdf";
 
             using (var file = System.IO.File.OpenRead(Path.Combine("", name)))
             {
-                var response = api.PutCreate(Path.Combine(FolderName, name), file);
+                var response = api.UploadFile(Path.Combine(FolderName, name), file);
                 Console.WriteLine(response);
+                
             }
+            //ExEnd: PutCreateExample
         }
 
 
-        public void GetDownloadTest()
+        public void GetDownloadExample()
         {
+            //ExStart: GetDownloadExample
             string name = "4pages.pdf";
             UploadFile(name, name);
 
-            var response = api.GetDownload(Path.Combine(FolderName, name));
+            var response = api.DownloadFile(Path.Combine(FolderName, name));
             Console.WriteLine(response);
+            //ExEnd: GetDownloadExample
         }
 
 
-        public void PostMoveFileTest()
+        public void PostMoveFileExample()
         {
+            //ExStart: PostMoveFileExample
             string name = "4pages.pdf";
             UploadFile(name, name);
             string src = Path.Combine(FolderName, name);
             string dest = Path.Combine(FolderName, "4pages_renamed.pdf");
 
-            var response = api.PostMoveFile(src, dest);
-            Console.WriteLine(response);
+            api.MoveFile(src, dest);
+            //ExEnd: PostMoveFileExample
+
         }
 
 
-        public void DeleteFileTest()
+        public void DeleteFileExample()
         {
+            //ExStart: DeleteFileExample
             string name = "4pages.pdf";
             UploadFile(name, name);
             string path = Path.Combine(FolderName, name);
 
-            var response = api.DeleteFile(path);
-            Console.WriteLine(response);
+            api.DeleteFile(path);
+            //ExEnd: DeleteFileExample
         }
 
-        public void GetListFilesTest()
+        public void GetListFilesExample()
         {
-            var response = api.GetListFiles(FolderName);
+             //ExStart: GetListFilesExample
+            var response = api.GetFilesList(FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetListFilesExample
         }
 
   
-        public void PutCreateFolderTest()
+        public void PutCreateFolderExample()
         {
-            string path = Path.Combine(FolderName, "testFolder");
-            var response = api.PutCreateFolder(path);
-            Console.WriteLine(response);
+            //ExStart: PutCreateFolderExample
+            string path = Path.Combine(FolderName, "ExampleFolder");
+            api.CreateFolder(path);
+            //ExEnd: PutCreateFolderExample
         }
 
 
-        public void PostMoveFolderTest()
+        public void PostMoveFolderExample()
         {
-            string src = Path.Combine(FolderName, "testFolder");
-            var createFolderresponse = api.PutCreateFolder(src);
+            //ExStart: PostMoveFolderExample
+            string src = Path.Combine(FolderName, "ExampleFolder");
+            api.CreateFolder(src);
 
-            string dest = Path.Combine(FolderName, "testFolderRenamed");
+            string dest = Path.Combine(FolderName, "ExampleFolderRenamed");
 
-            var response = api.PostMoveFolder(src, dest);
-            Console.WriteLine(response);
+            api.MoveFolder(src, dest);
+            //ExEnd: PostMoveFolderExample
         }
 
 
-        public void DeleteFolderTest()
+        public void DeleteFolderExample()
         {
-            string path = Path.Combine(FolderName, "testFolderRenamed");
-            var createFolderresponse = api.PutCreateFolder(path);
+            //ExStart: DeleteFolderExample
+            string path = Path.Combine(FolderName, "ExampleFolderRenamed");
+            api.CreateFolder(path);
 
-            var response = api.DeleteFolder(path);
-            Console.WriteLine(response);
+            api.DeleteFolder(path);
+            //ExEnd: DeleteFolderExample
+
         }
 
 
-        public void GetIsStorageExistTest()
+        public void GetIsStorageExistExample()
         {
+            //ExStart: GetIsStorageExistExample
             string name = "PDF-CI";
-            var response = api.GetIsStorageExist(name);
+            var response = api.StorageExists(name);
             Console.WriteLine(response);
+            //ExEnd: GetIsStorageExistExample
         }
 
 
-        public void GetIsExistTest()
+        public void GetIsExistExample()
         {
+            //ExStart: GetIsExistExample
             string name = "4pages.pdf";
             UploadFile(name, name);
 
-            var response = api.GetIsExist(Path.Combine(FolderName, name));
+            var response = api.ObjectExists(Path.Combine(FolderName, name));
             Console.WriteLine(response);
+            //ExEnd: GetIsExistExample
         }
 
 
-        public void GetDiscUsageTest()
+        public void GetDiscUsageExample()
         {
+            //ExStart: GetDiscUsageExample
             var response = api.GetDiscUsage();
             Console.WriteLine(response);
+            //ExEnd: GetDiscUsageExample
         }
 
 
-        public void GetListFileVersionsTest()
+        public void GetListFileVersionsExample()
         {
+            //ExStart: GetListFileVersionsExample
             string name = "4pages.pdf";
             UploadFile(name, name);
 
-            var response = api.GetListFileVersions(Path.Combine(FolderName, name));
+            var response = api.GetFileVersions(Path.Combine(FolderName, name));
             Console.WriteLine(response);
+            //ExEnd: GetListFileVersionsExample
         }
     }
 }

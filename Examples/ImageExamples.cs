@@ -32,155 +32,187 @@ namespace Aspose.Pdf.Cloud.Sdk.ImageAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
 
 
-        public void GetImageTest()
-        {
+        public void GetImageExample()
+        { 
+            //ExStart: GetImageExample
             var response = api.GetImage(Name, ImageId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetImageExample
         }
 
 
 
-        public void DeleteImageTest()
+        public void DeleteImageExample()
         {
+            //ExStart: DeleteImageExample
             var response = api.DeleteImage(Name, ImageId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: DeleteImageExample
         }
 
 
-        public void GetImagesTest()
+        public void GetImagesExample()
         {
+            //ExStart: GetImagesExample
             var response = api.GetImages(Name, 1, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetImagesExample
         }
         
 
-        public void PutReplaceImageTest()
+        public void PutReplaceImageExample()
         {
+            //ExStart: PutReplaceImageExample
             const string imageName = "Koala.jpg";
             UploadFile(imageName, imageName);
             
             var response = api.PutReplaceImage(name: Name, imageId: ImageId, imageFilePath: Path.Combine(FolderName, imageName), folder: FolderName);
-             Console.WriteLine(response);;
+             Console.WriteLine(response);
+             //ExEnd: PutReplaceImageExample
         }
 
-
-
-        public void PostInsertImageTest()
+        public void PostInsertImageExample()
         {
+            //ExStart: PostInsertImageExample
             const string imageName = "Koala.jpg";
             UploadFile(imageName, imageName);
 
             var response = api.PostInsertImage(name: Name, pageNumber: 1, llx: 10, lly:10, urx: 100, ury: 100, imageFilePath: Path.Combine(FolderName, imageName), folder: FolderName);
              Console.WriteLine(response);
+             //ExEnd: PostInsertImageExample
         }
 
 
-        public void PutImagesExtractAsJpegTest()
+        public void PutImagesExtractAsJpegExample()
         {
+           //ExStart: PutImagesExtractAsJpegExample   
             const int pageNumber = 1;
             const string destFolder = "extract_jpg";
 
             var response = api.PutImagesExtractAsJpeg(Name, pageNumber: pageNumber, 
                 folder: FolderName, destFolder: Path.Combine(FolderName, destFolder));
              Console.WriteLine(response);
+             //ExEnd: PutImagesExtractAsJpegExample 
         }
 
 
-        public void PutImagesExtractAsTiffTest()
+        public void PutImagesExtractAsTiffExample()
         {
+            //ExStart: PutImagesExtractAsTiffExample 
             const int pageNumber = 1;
             const string destFolder = "extract_tiff";
 
             var response = api.PutImagesExtractAsTiff(Name, pageNumber: pageNumber,
                 folder: FolderName, destFolder: Path.Combine(FolderName, destFolder));
              Console.WriteLine(response);
+             //ExEnd: PutImagesExtractAsTiffExample 
         }
 
-        public void PutImagesExtractAsGifTest()
+        public void PutImagesExtractAsGifExample()
         {
+            //ExStart: PutImagesExtractAsGifExample 
             const int pageNumber = 1;
             const string destFolder = "extract_gif";
 
             var response = api.PutImagesExtractAsGif(Name, pageNumber: pageNumber,
                 folder: FolderName, destFolder: Path.Combine(FolderName, destFolder));
             Console.WriteLine(response);
+             //ExEnd: PutImagesExtractAsGifExample 
         }
 
 
-        public void PutImagesExtractAsPngTest()
+        public void PutImagesExtractAsPngExample()
         {
+             //ExStart: PutImagesExtractAsPngExample 
             const int pageNumber = 1;
             const string destFolder = "extract_png";
 
             var response = api.PutImagesExtractAsPng(Name, pageNumber: pageNumber,
                 folder: FolderName, destFolder: Path.Combine(FolderName, destFolder));
              Console.WriteLine(response);
+              //ExEnd: PutImagesExtractAsPngExample 
         }
 
 
 
-        public void PutImageExtractAsJpegTest()
+        public void PutImageExtractAsJpegExample()
         {
+         //ExStart: PutImageExtractAsJpegExample    
             const string destFolder = "extract_jpg";
             var response = api.PutImageExtractAsJpeg(Name, ImageId, folder: FolderName, destFolder: Path.Combine(FolderName, destFolder));
              Console.WriteLine(response);
+             //ExEnd: PutImageExtractAsJpegExample   
         }
 
 
-        public void GetImageExtractAsJpegTest()
+        public void GetImageExtractAsJpegExample()
         {
+            //ExStart: GetImageExtractAsJpegExample   
             var response = api.GetImageExtractAsJpeg(Name, ImageId, folder: FolderName);
              Console.WriteLine(response);
+             //ExEnd: GetImageExtractAsJpegExample   
         }
 
 
-        public void PutImageExtractAsTiffTest()
+        public void PutImageExtractAsTiffExample()
         {
+            //ExStart: PutImageExtractAsTiffExample   
             const string destFolder = "extract_tiff";
             var response = api.PutImageExtractAsTiff(Name, ImageId, folder: FolderName, destFolder: Path.Combine(FolderName, destFolder));
              Console.WriteLine(response);
+             //ExEnd: PutImageExtractAsTiffExample   
         }
 
 
-        public void GetImageExtractAsTiffTest()
+        public void GetImageExtractAsTiffExample()
         {
+             //ExStart: GetImageExtractAsTiffExample
             var response = api.GetImageExtractAsTiff(Name, ImageId, folder: FolderName);
              Console.WriteLine(response);
+              //ExEnd: GetImageExtractAsTiffExample
         }
 
  
-        public void PutImageExtractAsGifTest()
+        public void PutImageExtractAsGifExample()
         {
+            //ExStart: PutImageExtractAsGifExample
             const string destFolder = "extract_gif";
             var response = api.PutImageExtractAsGif(Name, ImageId, folder: FolderName, destFolder: Path.Combine(FolderName, destFolder));
             Console.WriteLine(response);
+            //ExEnd: PutImageExtractAsGifExample
         }
 
-        public void GetImageExtractAsGifTest()
+        public void GetImageExtractAsGifExample()
         {
+            //ExStart: GetImageExtractAsGifExample
             var response = api.GetImageExtractAsGif(Name, ImageId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetImageExtractAsGifExample
         }
 
 
-        public void PutImageExtractAsPngTest()
+        public void PutImageExtractAsPngExample()
         {
+            //ExStart: PutImageExtractAsPngExample
             const string destFolder = "extract_png";
             var response = api.PutImageExtractAsPng(Name, ImageId, folder: FolderName, destFolder: Path.Combine(FolderName, destFolder));
             Console.WriteLine(response);
+            //ExEnd: PutImageExtractAsPngExample
         }
 
     
-        public void GetImageExtractAsPngTest()
+        public void GetImageExtractAsPngExample()
         {
+            //ExStart: GetImageExtractAsPngExample
             var response = api.GetImageExtractAsPng(Name, ImageId, folder: FolderName);
              Console.WriteLine(response);
+             //ExEnd: GetImageExtractAsPngExample
         }
     }
 }

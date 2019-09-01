@@ -17,6 +17,7 @@ namespace Aspose.Pdf.Cloud.Sdk.FreeTextAnnotationsAPI
         string FolderName = "";
         public void PostPageFreeTextAnnotationsTest()
         {
+            //ExStart: PostPageFreeTextAnnotationsTest
             List<FreeTextAnnotation> annotations = new List<FreeTextAnnotation>
             {
                 new FreeTextAnnotation()
@@ -37,34 +38,42 @@ namespace Aspose.Pdf.Cloud.Sdk.FreeTextAnnotationsAPI
 
             var response = api.PostPageFreeTextAnnotations(Name, 1, annotations, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PostPageFreeTextAnnotationsTest
         }
 
 
         public void GetDocumentFreeTextAnnotationsTest()
         {
+            //ExStart: GetDocumentFreeTextAnnotationsTest
             var response = api.GetDocumentFreeTextAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetDocumentFreeTextAnnotationsTest
         }
 
         public void GetPageFreeTextAnnotationsTest()
         {
+            //ExStart: GetPageFreeTextAnnotationsTest
             var response = api.GetPageFreeTextAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPageFreeTextAnnotationsTest
         }
 
 
         public void GetFreeTextAnnotationTest()
         {
+            //ExStart: GetFreeTextAnnotationTest
             var freeTextresponse = api.GetDocumentFreeTextAnnotations(Name, folder: FolderName);
             string annotationId = freeTextresponse.Annotations.List[0].Id;
 
             var response = api.GetFreeTextAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetFreeTextAnnotationTest
         }
 
 
         public void PutFreeTextAnnotationTest()
         {
+            //ExStart: PutFreeTextAnnotationTest
             FreeTextAnnotation annotation = new FreeTextAnnotation()
             {
                 Name = "Test Free Text",
@@ -84,7 +93,8 @@ namespace Aspose.Pdf.Cloud.Sdk.FreeTextAnnotationsAPI
             string annotationId = freeTextresponse.Annotations.List[0].Id;
 
             var response = api.PutFreeTextAnnotation(Name, annotationId, annotation, folder: FolderName);
-            Console.WriteLine(response);        
+            Console.WriteLine(response); 
+            //ExEnd: PutFreeTextAnnotationTest       
         }
                 
     }

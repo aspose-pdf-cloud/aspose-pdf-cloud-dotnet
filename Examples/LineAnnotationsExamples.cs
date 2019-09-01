@@ -23,32 +23,32 @@ namespace Aspose.Pdf.Cloud.Sdk.LineAnnotationsAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
         
 
-        public void GetDocumentLineAnnotationsTest()
+        public void GetDocumentLineAnnotationsExample()
         {
             var response = api.GetDocumentLineAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
         }
 
 
-        public void GetPageLineAnnotationsTest()
+        public void GetPageLineAnnotationsExample()
         {
             var response = api.GetPageLineAnnotations(Name, 1, folder: FolderName);
             Console.WriteLine(response);
         }
 
 
-        public void PostPageLineAnnotationsTest()
+        public void PostPageLineAnnotationsExample()
         {
             List<LineAnnotation> annotations = new List<LineAnnotation>
             {
                 new LineAnnotation()
                 {
-                    Name = "Test Line Annotation",
+                    Name = "Example Line Annotation",
                     Rect = new Rectangle(100, 100, 300, 300),
                     Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -68,20 +68,23 @@ namespace Aspose.Pdf.Cloud.Sdk.LineAnnotationsAPI
         }
         
 
-        public void GetLineAnnotationTest()
+        public void GetLineAnnotationExample()
         {
+            //ExStart: GetLineAnnotationExample
             var lineresponse = api.GetDocumentLineAnnotations(Name, folder: FolderName);
             string annotationId = lineresponse.Annotations.List[0].Id;
 
             var response = api.GetLineAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetLineAnnotationExample
         }
 
-        public void PutLineAnnotationTest()
+        public void PutLineAnnotationExample()
         {
+            //ExStart: PutLineAnnotationExample
             LineAnnotation annotation = new LineAnnotation()
             {
-                Name = "Test Line Annotation",
+                Name = "Example Line Annotation",
                 Rect = new Rectangle(100, 100, 300, 300),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -99,6 +102,7 @@ namespace Aspose.Pdf.Cloud.Sdk.LineAnnotationsAPI
 
             var response = api.PutLineAnnotation(Name, annotationId, annotation, folder: FolderName);
            Console.WriteLine(response);
+             //ExEnd: PutLineAnnotationExample
         }
     }
 }

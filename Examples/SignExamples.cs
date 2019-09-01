@@ -19,18 +19,18 @@ namespace Aspose.Pdf.Cloud.Sdk.SignAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
-        private const string SignatureName = "test1234.pfx";
+        private const string SignatureName = "Example1234.pfx";
 
-        private static readonly Signature Signature = new Signature(
+        private static readonly Signature signature = new Signature(
             Authority: "Sergey Smal",
-            Contact: "test@mail.ru",
+            Contact: "Example@mail.ru",
             Date: "08/01/2012 12:15:00.000 PM",
             FormFieldName: "Signature1",
             Location: "Ukraine",
-            Password: "test1234",
+            Password: "Example1234",
             Rectangle: new Rectangle(
                 LLX: 100,
                 LLY: 100,
@@ -42,34 +42,40 @@ namespace Aspose.Pdf.Cloud.Sdk.SignAPI
             ShowProperties: false);
 
 
-        public void PostSignDocumentTest()
+        public void PostSignDocumentExample()
         {
+            //ExStart: PostSignDocumentExample
             UploadFile(Name, Name);
             UploadFile(SignatureName, SignatureName);
 
-            var response = api.PostSignDocument(Name, Signature, folder: FolderName);
+            var response = api.PostSignDocument(Name, signature, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PostSignDocumentExample
         }
 
-        public void PagesPostSignPageTest()
+        public void PagesPostSignPageExample()
         {
+            //ExStart: PagesPostSignPageExample
             UploadFile(Name, Name);
             UploadFile(SignatureName, SignatureName);
 
-            var response = api.PostSignPage(Name, pageNumber: 1, signature: Signature, folder: FolderName);
+            var response = api.PostSignPage(Name, pageNumber: 1, signature, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PagesPostSignPageExample
         }
 
 
-        public void GetVerifySignatureTest()
+        public void GetVerifySignatureExample()
         {
+            //ExStart: GetVerifySignatureExample
             UploadFile(Name, Name);
             UploadFile(SignatureName, SignatureName);
 
-            var responseSignature = api.PostSignDocument(Name, Signature, folder: FolderName);
+            var responseSignature = api.PostSignDocument(Name, signature, folder: FolderName);
 
-            var response = api.GetVerifySignature(Name, Signature.FormFieldName, folder: FolderName);
+            var response = api.GetVerifySignature(Name, signature.FormFieldName, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetVerifySignatureExample
         }
     }
 }

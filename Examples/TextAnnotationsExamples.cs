@@ -22,34 +22,39 @@ namespace Aspose.Pdf.Cloud.Sdk.TextAnnotationsAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
 
-        public void GetDocumentTextAnnotationsTest()
+        public void GetDocumentTextAnnotationsExample()
         {
+             //ExStart: GetDocumentTextAnnotationsExample
             var response = api.GetDocumentTextAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetDocumentTextAnnotationsExample
         }
 
 
 
-        public void GetPageTextAnnotationsTest()
+        public void GetPageTextAnnotationsExample()
         {
+             //ExStart: GetPageTextAnnotationsExample
             var response = api.GetPageTextAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetPageTextAnnotationsExample
         }
 
 
 
-        public void PostPageTextAnnotationsTest()
+        public void PostPageTextAnnotationsExample()
         {
+             //ExStart: PostPageTextAnnotationsExample
             List<TextAnnotation> annotations = new List<TextAnnotation>
             {
                 new TextAnnotation()
                 {
-                    Name = "Test Free Text",
+                    Name = "Example Free Text",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> { AnnotationFlags.Default},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -62,25 +67,29 @@ namespace Aspose.Pdf.Cloud.Sdk.TextAnnotationsAPI
 
             var response = api.PostPageTextAnnotations(Name, 1, annotations, folder: FolderName);
             Console.WriteLine(response);
+             //v: PostPageTextAnnotationsExample
         }
 
 
-        public void GetTextAnnotationTest()
+        public void GetTextAnnotationExample()
         {
+             //ExStart: GetTextAnnotationExample
             var textresponse = api.GetDocumentTextAnnotations(Name, folder: FolderName);
             string annotationId = textresponse.Annotations.List[0].Id;
 
             var response = api.GetTextAnnotation(Name, annotationId, folder: FolderName);
              Console.WriteLine(response);
+              //ExEnd: DeletePageTaGetTextAnnotationExampleblesExample
         }
 
 
 
-        public void PutTextAnnotationTest()
+        public void PutTextAnnotationExample()
         {
+             //ExStart: DeletePageTablesExample
             TextAnnotation annotation = new TextAnnotation()
             {
-                Name = "Test Free Text",
+                Name = "Example Free Text",
                 Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Default },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -95,6 +104,7 @@ namespace Aspose.Pdf.Cloud.Sdk.TextAnnotationsAPI
 
             var response = api.PutTextAnnotation(Name, annotationId, annotation, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: DeletePageTablesExample
         }
     }
 }

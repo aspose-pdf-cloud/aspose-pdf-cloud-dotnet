@@ -16,36 +16,42 @@ namespace Aspose.Pdf.Cloud.Sdk.PopupAnnotationsAPI
         private const int PageNumber = 2;
 
 
-        public void GetDocumentPopupAnnotationsTest()
+        public void GetDocumentPopupAnnotationsExample()
         {
+            //ExStart: GetDocumentPopupAnnotationsExample
             var response = api.GetDocumentPopupAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetDocumentPopupAnnotationsExample
         }
 
 
-        public void GetDocumentPopupAnnotationsByParentTest()
+        public void GetDocumentPopupAnnotationsByParentExample()
         {
+            //ExStart: GetDocumentPopupAnnotationsByParentExample
             const string parentId = "GI5TAOZRGU3CYNZSGEWDCNZWFQ3TGOI";
             var response = api.GetDocumentPopupAnnotationsByParent(Name, parentId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetDocumentPopupAnnotationsByParentExample
         }
 
 
-        public void GetPagePopupAnnotationsTest()
+        public void GetPagePopupAnnotationsExample()
         {
+            //ExStart: GetPagePopupAnnotationsExample
             var response = api.GetPagePopupAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPagePopupAnnotationsExample
         }
 
 
-        public void PostPopupAnnotationTest()
+        public void PostPopupAnnotationExample()
         {
-
+            //ExStart: PostPopupAnnotationExample
             const string parentId = "GI5TCMR3GE2TQLBSGM3CYMJYGUWDENRV";
 
             PopupAnnotation annotation = new PopupAnnotation()
             {
-                Name = "Test Popup Annotation",
+                Name = "Example Popup Annotation",
                 Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -55,23 +61,27 @@ namespace Aspose.Pdf.Cloud.Sdk.PopupAnnotationsAPI
 
             var response = api.PostPopupAnnotation(Name, parentId, annotation, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PostPopupAnnotationExample
         }
 
 
-        public void GetPopupAnnotationTest()
+        public void GetPopupAnnotationExample()
         {
+            //ExStart: GetPopupAnnotationExample
             var Popupresponse = api.GetDocumentPopupAnnotations(Name, folder: FolderName);
             string annotationId = Popupresponse.Annotations.List[0].Id;
 
             var response = api.GetPopupAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPopupAnnotationExample
         }
 
-        public void PutPopupAnnotationTest()
+        public void PutPopupAnnotationExample()
         {
+            //ExStart: PutPopupAnnotationExample
             PopupAnnotation annotation = new PopupAnnotation()
             {
-                Name = "Test Popup Annotation Updated",
+                Name = "Example Popup Annotation Updated",
                 Rect = new Rectangle(101, 101, 201, 201),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -84,6 +94,7 @@ namespace Aspose.Pdf.Cloud.Sdk.PopupAnnotationsAPI
 
             var response = api.PutPopupAnnotation(Name, annotationId, annotation, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutPopupAnnotationExample
         }
     }
 }

@@ -16,18 +16,22 @@ namespace Aspose.Pdf.Cloud.Sdk.BookmarkAPI
 
         protected void UploadFile(string sourcePath, string serverFileName)
         {
+            //ExStart: UploadFile
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
+            //ExEnd: UploadFile
         }
-        public void GetDocumentBookmarksTest()
+        public void GetDocumentBookmarksExample()
         {
+            //ExStart: GetDocumentBookmarksExample
             const string name = "PdfWithBookmarks.pdf";
             UploadFile(name, name);
 
             var response = api.GetDocumentBookmarks(name, folder: FolderName);
             Console.WriteLine( response);
+            //ExEnd: GetDocumentBookmarksExample
         }
     }
 }

@@ -8,10 +8,10 @@ using System.IO;
 
 
 
-namespace Aspose.Pdf.Cloud.Sdk.Test
+namespace Aspose.Pdf.Cloud.Sdk.Example
 {
 
-    public class CircleAnnotationsTests 
+    public class CircleAnnotationsExamples 
     {
         
         PdfApi api = new PdfApi("XXXXXXX", "XXXXXXX");
@@ -24,30 +24,37 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
  
-        public void GetDocumentCircleAnnotationsTest()
+        public void GetDocumentCircleAnnotationsExample()
         {
+            //ExStart: GetDocumentCircleAnnotationsExample
             var response = api.GetDocumentCircleAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetDocumentCircleAnnotationsExample
+
         }
 
-        public void GetPageCircleAnnotationsTest()
+        public void GetPageCircleAnnotationsExample()
         {
+             //ExStart: GetPageCircleAnnotationsExample
             var response = api.GetPageCircleAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPageCircleAnnotationsExample
+
         }
 
 
-        public void PostPageCircleAnnotationsTest()
+        public void PostPageCircleAnnotationsExample()
         {
+             //ExStart: PostPageCircleAnnotationsExample
             List<CircleAnnotation> annotations = new List<CircleAnnotation>
             {
                 new CircleAnnotation()
                 {
-                    Name = "Test Circle Annotation",
+                    Name = "Example Circle Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -60,24 +67,30 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var response = api.PostPageCircleAnnotations(Name, 1, annotations, folder: FolderName);
             Console.WriteLine(response);
+                         //ExStart: PostPageCircleAnnotationsExample
+
         }
 
 
-        public void GetCircleAnnotationTest()
+        public void GetCircleAnnotationExample()
         {
+             //ExStart: GetCircleAnnotationExample
             var circleresponse = api.GetDocumentCircleAnnotations(Name, folder: FolderName);
             string annotationId = circleresponse.Annotations.List[0].Id;
 
             var response = api.GetCircleAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetCircleAnnotationExample
+
         }
 
 
-        public void PutCircleAnnotationTest()
+        public void PutCircleAnnotationExample()
         {
+             //ExStart: PutCircleAnnotationExample
             CircleAnnotation annotation = new CircleAnnotation()
             {
-                Name = "Updated Test",
+                Name = "Updated Example",
                 Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -92,6 +105,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var response = api.PutCircleAnnotation(Name, annotationId, annotation, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutCircleAnnotationExample
+
         }
     }
 }

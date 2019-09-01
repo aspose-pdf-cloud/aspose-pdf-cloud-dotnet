@@ -19,31 +19,36 @@ namespace Aspose.Pdf.Cloud.Sdk.RedactionAnnotationsAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
-        public void GetDocumentRedactionAnnotationsTest()
+        public void GetDocumentRedactionAnnotationsExample()
         {
+            //ExStart: GetDocumentRedactionAnnotationsExample
             var response = api.GetDocumentRedactionAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetDocumentRedactionAnnotationsExample
         }
 
 
-        public void GetPageRedactionAnnotationsTest()
+        public void GetPageRedactionAnnotationsExample()
         {
+            //ExStart: GetPageRedactionAnnotationsExample
             var response = api.GetPageRedactionAnnotations(Name, PageNumber, folder: FolderName);
              Console.WriteLine(response);
+             //ExEnd: GetPageRedactionAnnotationsExample
         }
 
 
-        public void PostPageRedactionAnnotationsTest()
+        public void PostPageRedactionAnnotationsExample()
         {
+            //ExStart: PostPageRedactionAnnotationsExample
             List<RedactionAnnotation> annotations = new List<RedactionAnnotation>
             {
                 new RedactionAnnotation()
                 {
-                    Name = "Test Redaction Annotation",
+                    Name = "Example Redaction Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -59,24 +64,28 @@ namespace Aspose.Pdf.Cloud.Sdk.RedactionAnnotationsAPI
 
             var response = api.PostPageRedactionAnnotations(Name, 1, annotations, folder: FolderName);
              Console.WriteLine(response);
+             //ExEnd: PostPageRedactionAnnotationsExample
         }
 
 
-        public void GetRedactionAnnotationTest()
+        public void GetRedactionAnnotationExample()
         {
+            //ExStart: GetRedactionAnnotationExample
             var Redactionresponse = api.GetDocumentRedactionAnnotations(Name, folder: FolderName);
             string annotationId = Redactionresponse.Annotations.List[0].Id;
 
             var response = api.GetRedactionAnnotation(Name, annotationId, folder: FolderName);
              Console.WriteLine(response);
+             //ExEnd: GetRedactionAnnotationExample
         }
 
 
-        public void PutRedactionAnnotationTest()
+        public void PutRedactionAnnotationExample()
         {
+            //ExStart: PutRedactionAnnotationExample
             RedactionAnnotation annotation = new RedactionAnnotation()
             {
-                Name = "Updated Test",
+                Name = "Updated Example",
                 Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -93,6 +102,7 @@ namespace Aspose.Pdf.Cloud.Sdk.RedactionAnnotationsAPI
 
             var response = api.PutRedactionAnnotation(Name, annotationId, annotation, folder: FolderName);
              Console.WriteLine(response);
+             //ExEnd: PutRedactionAnnotationExample
         }
     }
 }

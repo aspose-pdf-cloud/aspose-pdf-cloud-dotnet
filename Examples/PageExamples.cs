@@ -20,57 +20,70 @@ namespace Aspose.Pdf.Cloud.Sdk.PagesAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
         private const string Name = "4pages.pdf";
 
 
-        public void DeletePageTest()
+        public void DeletePageExample()
         {
+            //ExStart: DeletePageExample
             var response = api.DeletePage(Name, 3, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: DeletePageExample
         }
 
-        public void GetPageTest()
+        public void GetPageExample()
         {
+            //ExStart: GetPageExample
             var response = api.GetPage(Name, pageNumber: 1, folder: FolderName);
             
             Console.WriteLine(response);
+            //ExEnd: GetPageExample
         }
         
      
-        public void GetPagesTest()
+        public void GetPagesExample()
         {
+            //ExStart: GetPagesExample
             var response = api.GetPages(Name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPagesExample
         }
 
   
-        public void GetWordsPerPageTest()
+        public void GetWordsPerPageExample()
         {
+            //ExStart: GetWordsPerPageExample
             var response = api.GetWordsPerPage(Name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetWordsPerPageExample
         }
 
   
-        public void PostMovePageTest()
+        public void PostMovePageExample()
         {
+            //ExStart: PostMovePageExample
             var response = api.PostMovePage(Name, 3, 2, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PostMovePageExample
         }
 
  
-        public void PutAddNewPageTest()
+        public void PutAddNewPageExample()
         {
+            //ExStart: PutAddNewPageExample
             var response = api.PutAddNewPage(Name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutAddNewPageExample
         }
 
    
-        public void PutPageAddStampTest()
+        public void PutPageAddStampExample()
         {
+            //ExStart: PutPageAddStampExample
             const string stampFile = "Penguins.jpg";
             UploadFile(stampFile, stampFile);
 
@@ -85,6 +98,7 @@ namespace Aspose.Pdf.Cloud.Sdk.PagesAPI
 
             var response = api.PutPageAddStamp(Name, 1, stamp, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutPageAddStampExample
         }
     }
 }

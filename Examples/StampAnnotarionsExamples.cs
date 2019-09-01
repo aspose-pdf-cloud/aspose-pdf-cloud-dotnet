@@ -21,33 +21,38 @@ namespace Aspose.Pdf.Cloud.Sdk.StampAnnotationsAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
 
-        public void GetDocumentStampAnnotationsTest()
+        public void GetDocumentStampAnnotationsExample()
         {
+             //ExStart: GetDocumentSquigglyAnnotationsExample
             var response = api.GetDocumentStampAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetDocumentSquigglyAnnotationsExample
         }
 
 
-        public void GetPageStampAnnotationsTest()
+        public void GetPageStampAnnotationsExample()
         {
+             //ExStart: GetDocumentSquigglyAnnotationsExample
             var response = api.GetPageStampAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetDocumentSquigglyAnnotationsExample
         }
 
 
-        public void PostPageStampAnnotationsTest()
+        public void PostPageStampAnnotationsExample()
         {
+             //ExStart: GetDocumentSquigglyAnnotationsExample
             UploadFile(AttachmentFile, AttachmentFile);
             List<StampAnnotation> annotations = new List<StampAnnotation>
             {
                 new StampAnnotation()
                 {
-                    Name = "Test Stamp Annotation",
+                    Name = "Example Stamp Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -62,25 +67,29 @@ namespace Aspose.Pdf.Cloud.Sdk.StampAnnotationsAPI
 
             var response = api.PostPageStampAnnotations(Name, 1, annotations, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetDocumentSquigglyAnnotationsExample
         }
 
 
-        public void GetStampAnnotationTest()
+        public void GetStampAnnotationExample()
         {
+             //ExStart: GetDocumentSquigglyAnnotationsExample
             var annotationresponse = api.GetDocumentStampAnnotations(Name, folder: FolderName);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
             var response = api.GetStampAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetDocumentSquigglyAnnotationsExample
         }
 
 
-        public void PutStampAnnotationTest()
+        public void PutStampAnnotationExample()
         {
+             //ExStart: GetDocumentSquigglyAnnotationsExample
             UploadFile(AttachmentFile, AttachmentFile);
             StampAnnotation annotation = new StampAnnotation()
             {
-                Name = "Updated Test",
+                Name = "Updated Example",
                 Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -97,26 +106,31 @@ namespace Aspose.Pdf.Cloud.Sdk.StampAnnotationsAPI
 
             var response = api.PutStampAnnotation(Name, annotationId, annotation, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetDocumentSquigglyAnnotationsExample
         }
 
 
-        public void GetStampAnnotationDataTest()
+        public void GetStampAnnotationDataExample()
         {
+             //ExStart: GetDocumentSquigglyAnnotationsExample
             var annotationresponse = api.GetDocumentStampAnnotations(Name, folder: FolderName);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
             var response = api.GetStampAnnotationData(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetDocumentSquigglyAnnotationsExample
         }
 
 
-        public void PutStampAnnotationDataExtractTest()
+        public void PutStampAnnotationDataExtractExample()
         {
+             //ExStart: GetDocumentSquigglyAnnotationsExample
             var annotationresponse = api.GetDocumentStampAnnotations(Name, folder: FolderName);
             string annotationId = annotationresponse.Annotations.List[0].Id;
 
             var response = api.PutStampAnnotationDataExtract(Name, annotationId, outFilePath: "stamp.dat", folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: GetDocumentSquigglyAnnotationsExample
         }
     }
 }

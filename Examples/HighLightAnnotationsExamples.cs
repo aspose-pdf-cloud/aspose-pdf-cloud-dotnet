@@ -25,12 +25,16 @@ namespace Aspose.Pdf.Cloud.Sdk.HighlightAnnotationsAPI
 
         public void GetPageHighlightAnnotationsTest()
         {
+            //ExStart: GetPageHighlightAnnotationsTest
+
             var response = api.GetPageHighlightAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPageHighlightAnnotationsTest
         }
 
         public void PostPageHighlightAnnotationsTest()
         {
+            //ExStart: PostPageHighlightAnnotationsTest
             List<HighlightAnnotation> annotations = new List<HighlightAnnotation>
             {
                 new HighlightAnnotation()
@@ -56,19 +60,23 @@ namespace Aspose.Pdf.Cloud.Sdk.HighlightAnnotationsAPI
 
             var response = api.PostPageHighlightAnnotations(Name, 1, annotations, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PostPageHighlightAnnotationsTest
         }
 
         public void GetHighlightAnnotationTest()
         {
+            //ExStart: GetHighlightAnnotationTest
             var Highlightresponse = api.GetDocumentHighlightAnnotations(Name, folder: FolderName);
             string annotationId = Highlightresponse.Annotations.List[0].Id;
 
             var response = api.GetHighlightAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetHighlightAnnotationTest
         }
 
         public void PutHighlightAnnotationTest()
         {
+            //ExStart: PutHighlightAnnotationTest
             HighlightAnnotation annotation = new HighlightAnnotation()
             {
                 Name = "Test Highlight Annotation Updated",
@@ -94,6 +102,7 @@ namespace Aspose.Pdf.Cloud.Sdk.HighlightAnnotationsAPI
 
             var response = api.PutHighlightAnnotation(Name, annotationId, annotation, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutHighlightAnnotationTest
         }
     }
 }

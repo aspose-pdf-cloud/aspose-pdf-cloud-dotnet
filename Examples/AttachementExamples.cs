@@ -13,24 +13,30 @@ namespace Aspose.Pdf.Cloud.Sdk.AttachmentExamples
         private const string Name = "PdfWithEmbeddedFiles.pdf";
        
 
-        public void GetDocumentAttachmentByIndexTest()
+        public void GetDocumentAttachmentByIndexExample()
         {
+            //ExStart: GetDocumentAttachmentByIndexExample
             var response = api.GetDocumentAttachmentByIndex(Name, 1, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetDocumentAttachmentByIndexExample
         }
         
 
-        public void GetDocumentAttachmentsTest()
+        public void GetDocumentAttachmentsExample()
         {
+            //ExStart: GetDocumentAttachmentsExample
             var response = api.GetDocumentAttachments(Name, folder: FolderName);
              Console.WriteLine(response);
+             //ExEnd: GetDocumentAttachmentsExample
         }
 
 
-        public void GetDownloadDocumentAttachmentByIndexTest()
+        public void GetDownloadDocumentAttachmentByIndexExample()
         {
+             //ExStart: GetDownloadDocumentAttachmentByIndexExample
             var result = api.GetDownloadDocumentAttachmentByIndex(Name, 1, folder: FolderName);
             Console.WriteLine(result);
+            //ExEnd: GetDownloadDocumentAttachmentByIndexExample
         }
 
     }

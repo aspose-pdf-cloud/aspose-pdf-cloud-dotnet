@@ -15,7 +15,7 @@ namespace Aspose.Pdf.Cloud.Sdk.AppendAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
@@ -27,26 +27,18 @@ namespace Aspose.Pdf.Cloud.Sdk.AppendAPI
         private const int EndPage = 4;
         string FolderName="";
 
-        public void PostAppendDocumentUsingQueryParamsTest()
+        public void PostAppendDocumentUsingQueryParamsExample()
         {
+            //ExStart: PostAppendDocumentUsingQueryParamsExample
             UploadFile(Name, Name);
             UploadFile(AppendFile, AppendFile);
 
             var responce =
                 api.PostAppendDocument(Name, appendFile: Path.Combine(FolderName, AppendFile), startPage: StartPage, endPage: EndPage, folder: FolderName);
            Console.WriteLine(responce);
+           //ExEnd: PostAppendDocumentUsingQueryParamsExample
+
         }
 
-
-        public void PostAppendDocumentUsingBodyParamsTest()
-        {
-            UploadFile(Name, Name);
-            UploadFile(AppendFile, AppendFile);
-
-            var appendDocument = new AppendDocument(Path.Combine(FolderName, AppendFile), StartPage, EndPage);
-            var responce =
-                api.PostAppendDocument(Name, appendDocument, folder: FolderName);
-             Console.WriteLine(responce);
-        }
     }
 }

@@ -19,33 +19,38 @@ namespace Aspose.Pdf.Cloud.Sdk.PolygonAnnotationsAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
-        public void GetDocumentPolygonAnnotationsTest()
+        public void GetDocumentPolygonAnnotationsExample()
         {
+            //ExStart: GetDocumentPolygonAnnotationsExample
             var response = api.GetDocumentPolygonAnnotations(Name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetDocumentPolygonAnnotationsExample
 
         }
 
 
-        public void GetPagePolygonAnnotationsTest()
+        public void GetPagePolygonAnnotationsExample()
         {
+            //ExStart: GetPagePolygonAnnotationsExample
             var response = api.GetPagePolygonAnnotations(Name, PageNumber, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPagePolygonAnnotationsExample
 
         }
 
 
-        public void PostPagePolygonAnnotationsTest()
+        public void PostPagePolygonAnnotationsExample()
         {
+            //ExStart: PostPagePolygonAnnotationsExample
             List<PolygonAnnotation> annotations = new List<PolygonAnnotation>
             {
                 new PolygonAnnotation()
                 {
-                    Name = "Test Polygon Annotation",
+                    Name = "Example Polygon Annotation",
                     Rect = new Rectangle(100, 100, 200, 200),
                     Flags = new List<AnnotationFlags> {AnnotationFlags.Hidden, AnnotationFlags.NoView},
                     HorizontalAlignment = HorizontalAlignment.Center,
@@ -65,26 +70,30 @@ namespace Aspose.Pdf.Cloud.Sdk.PolygonAnnotationsAPI
 
             var response = api.PostPagePolygonAnnotations(Name, 1, annotations, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PostPagePolygonAnnotationsExample
 
         }
 
 
-        public void GetPolygonAnnotationTest()
+        public void GetPolygonAnnotationExample()
         {
+            //ExStart: GetPolygonAnnotationExample
             var polygonresponse = api.GetDocumentPolygonAnnotations(Name, folder: FolderName);
             string annotationId = polygonresponse.Annotations.List[0].Id;
 
             var response = api.GetPolygonAnnotation(Name, annotationId, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPolygonAnnotationExample
 
         }
 
 
-        public void PutPolygonAnnotationTest()
+        public void PutPolygonAnnotationExample()
         {
+            //ExStart: PutPolygonAnnotationExample
             PolygonAnnotation annotation = new PolygonAnnotation()
             {
-                Name = "Updated Test",
+                Name = "Updated Example",
                 Rect = new Rectangle(100, 100, 200, 200),
                 Flags = new List<AnnotationFlags> { AnnotationFlags.Hidden, AnnotationFlags.NoView },
                 HorizontalAlignment = HorizontalAlignment.Center,
@@ -106,6 +115,7 @@ namespace Aspose.Pdf.Cloud.Sdk.PolygonAnnotationsAPI
 
             var response = api.PutPolygonAnnotation(Name, annotationId, annotation, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutPolygonAnnotationExample
 
         }
     }

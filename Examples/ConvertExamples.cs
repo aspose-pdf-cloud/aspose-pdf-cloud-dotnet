@@ -19,32 +19,39 @@ namespace Aspose.Pdf.Cloud.Sdk.ConvertExamples
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
-        public void GetPdfInStorageToDocTest()
+        public void GetPdfInStorageToDocExample()
         {
+            //ExStart: GetPdfInStorageToDocExample
             string name = "4pages.pdf";
             UploadFile(name, name);
          
             var response = api.GetPdfInStorageToDoc(name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPdfInStorageToDocExample
+
         }
         
 
-        public void PutPdfInStorageToDocTest()
+        public void PutPdfInStorageToDocExample()
         {
+            //ExStart: PutPdfInStorageToDocExample
             string name = "4pages.pdf";
             UploadFile(name, name);
             string resFileName = "result.doc";
 
             var response = api.PutPdfInStorageToDoc(name, Path.Combine(FolderName, resFileName), folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: PutPdfInStorageToDocExample
+
         }
 
 
-        public void PutPdfInRequestToDocTest()
+        public void PutPdfInRequestToDocExample()
         {
+         //ExStart: PutPdfInRequestToDocExample   
             string name = "4pages.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine("", name)))
             {
@@ -53,31 +60,41 @@ namespace Aspose.Pdf.Cloud.Sdk.ConvertExamples
                 var response = api.PutPdfInRequestToDoc(Path.Combine(FolderName, resFileName), file: stream);
                 Console.WriteLine(response);
             }
+                     //ExEnd: PutPdfInRequestToDocExample   
+
         }
 
 
-        public void GetPdfInStorageToPdfATest()
+        public void GetPdfInStorageToPdfAExample()
         {
+            //ExStart: GetPdfInStorageToPdfAExample
             string name = "4pages.pdf";
             UploadFile(name, name);
 
             var response = api.GetPdfInStorageToPdfA(name, type: PdfAType.PDFA1A.ToString(), folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: GetPdfInStorageToPdfAExample
+
         }
 
 
-        public void PutPdfInStorageToPdfATest()
+        public void PutPdfInStorageToPdfAExample()
         {
+            //ExStart: PutPdfInStorageToPdfAExample
             string name = "4pages.pdf";
             UploadFile(name, name);
             string resFileName = "result.pdf";
 
             var response = api.PutPdfInStorageToPdfA(name, Path.Combine(FolderName, resFileName), type: PdfAType.PDFA1A.ToString(), folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: PutPdfInStorageToPdfAExample
+
         }
 
-        public void PutPdfInRequestToPdfATest()
+        public void PutPdfInRequestToPdfAExample()
         {
+            //ExStart: PutPdfInRequestToPdfAExample
+
             string name = "4pages.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine("", name)))
             {
@@ -87,30 +104,42 @@ namespace Aspose.Pdf.Cloud.Sdk.ConvertExamples
                     type: PdfAType.PDFA1A.ToString(), file: stream);
                 Console.WriteLine(response);
             }
+                        //ExEnd: PutPdfInRequestToPdfAExample
+
         }
 
 
-        public void GetPdfInStorageToTiffTest()
+        public void GetPdfInStorageToTiffExample()
         {
+            //ExStart: GetPdfInStorageToTiffExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
 
             var response = api.GetPdfInStorageToTiff(name, folder: FolderName);
-            Console.WriteLine(response);        
+            Console.WriteLine(response);
+                        //ExEnd: GetPdfInStorageToTiffExample
+
         }
 
-        public void PutPdfInStorageToTiffTest()
+        public void PutPdfInStorageToTiffExample()
         {
+            //ExStart: PutPdfInStorageToTiffExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
             string resFileName = "result.tiff";
 
             var response = api.PutPdfInStorageToTiff(name, Path.Combine(FolderName, resFileName), folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: PutPdfInStorageToTiffExample
+
         }
 
-        public void PutPdfInRequestToTiffTest()
+        public void PutPdfInRequestToTiffExample()
         {
+            //ExStart: PutPdfInRequestToTiffExample
+
             string name = "4pages.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine("", name)))
             {
@@ -119,32 +148,44 @@ namespace Aspose.Pdf.Cloud.Sdk.ConvertExamples
                 var response = api.PutPdfInRequestToTiff(Path.Combine(FolderName, resFileName), file: stream);
                 Console.WriteLine(response);
             }
+            //ExEnd: PutPdfInRequestToTiffExample
+
         }
 
 
-        public void GetPdfInStorageToSvgTest()
+        public void GetPdfInStorageToSvgExample()
         {
+            //ExStart: GetPdfInStorageToSvgExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
 
             var response = api.GetPdfInStorageToSvg(name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPdfInStorageToSvgExample
+
         }
 
 
-        public void PutPdfInStorageToSvgTest()
+        public void PutPdfInStorageToSvgExample()
         {
+            //ExStart: PutPdfInStorageToSvgExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
             string resFileName = "result.svg";
 
             var response = api.PutPdfInStorageToSvg(name, Path.Combine(FolderName, resFileName), folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutPdfInStorageToSvgExample
+
         }
 
 
-        public void PutPdfInRequestToSvgTest()
+        public void PutPdfInRequestToSvgExample()
         {
+            //ExStart: PutPdfInRequestToSvgExample
+
             string name = "4pages.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine("", name)))
             {
@@ -153,31 +194,43 @@ namespace Aspose.Pdf.Cloud.Sdk.ConvertExamples
                 var response = api.PutPdfInRequestToSvg(Path.Combine(FolderName, resFileName), file: stream);
                 Console.WriteLine(response);
             }
+            //ExEnd: PutPdfInRequestToSvgExample
+
         }
 
 
-        public void GetPdfInStorageToXpsTest()
+        public void GetPdfInStorageToXpsExample()
         {
+            //ExStart: GetPdfInStorageToXpsExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
 
             var response = api.GetPdfInStorageToXps(name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetPdfInStorageToXpsExample
+
         }
 
 
-        public void PutPdfInStorageToXpsTest()
+        public void PutPdfInStorageToXpsExample()
         {
+            //ExStart: PutPdfInStorageToXpsExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
             string resFileName = "result.xps";
 
             var response = api.PutPdfInStorageToXps(name, Path.Combine(FolderName, resFileName), folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: PutPdfInStorageToXpsExample
+
         }
 
-        public void PutPdfInRequestToXpsTest()
+        public void PutPdfInRequestToXpsExample()
         {
+            //ExStart: PutPdfInRequestToXpsExample
+
             string name = "4pages.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine("", name)))
             {
@@ -185,32 +238,44 @@ namespace Aspose.Pdf.Cloud.Sdk.ConvertExamples
 
                 var response = api.PutPdfInRequestToXps(Path.Combine(FolderName, resFileName), file: stream);
                 Console.WriteLine(response);
+                            //ExEnd: PutPdfInRequestToXpsExample
+
             }
         }
 
 
-        public void GetPdfInStorageToXlsTest()
+        public void GetPdfInStorageToXlsExample()
         {
+            //ExStart: GetPdfInStorageToXlsExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
 
             var response = api.GetPdfInStorageToXls(name, folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: GetPdfInStorageToXlsExample
+
         }
 
-        public void PutPdfInStorageToXlsTest()
+        public void PutPdfInStorageToXlsExample()
         {
+            //ExStart: PutPdfInStorageToXlsExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
             string resFileName = "result.xls";
 
             var response = api.PutPdfInStorageToXls(name, Path.Combine(FolderName, resFileName), folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: PutPdfInStorageToXlsExample
+
         }
 
 
-        public void PutPdfInRequestToXlsTest()
+        public void PutPdfInRequestToXlsExample()
         {
+            //ExStart: PutPdfInStorageToXlsExample
+
             string name = "4pages.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine("", name)))
             {
@@ -219,31 +284,43 @@ namespace Aspose.Pdf.Cloud.Sdk.ConvertExamples
                 var response = api.PutPdfInRequestToXls(Path.Combine(FolderName, resFileName), file: stream);
                 Console.WriteLine(response);
             }
+                        //ExEnd: PutPdfInStorageToXlsExample
+
         }
 
 
 
-        public void GetPdfInStorageToHtmlTest()
+        public void GetPdfInStorageToHtmlExample()
         {
+            //ExStart: GetPdfInStorageToHtmlExample
+   
             string name = "4pages.pdf";
             UploadFile(name, name);
 
             var response = api.GetPdfInStorageToHtml(name, folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: GetPdfInStorageToHtmlExample
+
         }
 
-        public void PutPdfInStorageToHtmlTest()
+        public void PutPdfInStorageToHtmlExample()
         {
+            //ExStart: PutPdfInStorageToHtmlExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
             string resFileName = "result.zip";
 
             var response = api.PutPdfInStorageToHtml(name, Path.Combine(FolderName, resFileName), folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: PutPdfInStorageToHtmlExample
+
         }
 
-        public void PutPdfInRequestToHtmlTest()
+        public void PutPdfInRequestToHtmlExample()
         {
+            //ExStart: PutPdfInRequestToHtmlExample
+
             string name = "4pages.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine("", name)))
             {
@@ -252,32 +329,44 @@ namespace Aspose.Pdf.Cloud.Sdk.ConvertExamples
                 var response = api.PutPdfInRequestToHtml(Path.Combine(FolderName, resFileName), file: stream);
                 Console.WriteLine(response);
             }
+                        //ExEnd: PutPdfInRequestToHtmlExample
+
         }
 
 
-        public void GetPdfInStorageToEpubTest()
+        public void GetPdfInStorageToEpubExample()
         {
+            //ExStart: GetPdfInStorageToEpubExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
 
             var response = api.GetPdfInStorageToEpub(name, folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: GetPdfInStorageToEpubExample
+
         }
 
 
-        public void PutPdfInStorageToEpubTest()
+        public void PutPdfInStorageToEpubExample()
         {
+            //ExStart: PutPdfInStorageToEpubExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
             string resFileName = "result.epub";
 
             var response = api.PutPdfInStorageToEpub(name, Path.Combine(FolderName, resFileName), folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: PutPdfInStorageToEpubExample
+
         }
 
 
-        public void PutPdfInRequestToEpubTest()
+        public void PutPdfInRequestToEpubExample()
         {
+            //ExStart: PutPdfInRequestToEpubExample
+
             string name = "4pages.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine("", name)))
             {
@@ -286,33 +375,45 @@ namespace Aspose.Pdf.Cloud.Sdk.ConvertExamples
                 var response = api.PutPdfInRequestToEpub(Path.Combine(FolderName, resFileName), file: stream);
                 Console.WriteLine(response);
             }
+                        //ExEnd: PutPdfInRequestToEpubExample
+
         }
 
 
 
-        public void GetPdfInStorageToPptxTest()
+        public void GetPdfInStorageToPptxExample()
         {
+            //ExStart: GetPdfInStorageToPptxExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
 
             var response = api.GetPdfInStorageToPptx(name, folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: GetPdfInStorageToPptxExample
+
         }
 
 
-        public void PutPdfInStorageToPptxTest()
+        public void PutPdfInStorageToPptxExample()
         {
+            //ExStart: PutPdfInStorageToPptxExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
             string resFileName = "result.pptx";
 
             var response = api.PutPdfInStorageToPptx(name, Path.Combine(FolderName, resFileName), folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: PutPdfInStorageToPptxExample
+
         }
 
 
-        public void PutPdfInRequestToPptxTest()
+        public void PutPdfInRequestToPptxExample()
         {
+            //ExStart: PutPdfInRequestToPptxExample
+
             string name = "4pages.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine("", name)))
             {
@@ -321,31 +422,43 @@ namespace Aspose.Pdf.Cloud.Sdk.ConvertExamples
                 var response = api.PutPdfInRequestToPptx(Path.Combine(FolderName, resFileName), file: stream);
                 Console.WriteLine(response);
             }
+            //ExEnd: PutPdfInRequestToPptxExample
+
         }
 
 
-        public void GetPdfInStorageToLaTeXTest()
+        public void GetPdfInStorageToLaTeXExample()
         {
+            //ExStart: GetPdfInStorageToLaTeXExample
+
             string name = "Hello world.pdf";
             UploadFile(name, name);
 
             var response = api.GetPdfInStorageToLaTeX(name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutPdfInRequestToPptxExample
+
         }
 
-        public void PutPdfInStorageToLaTeXTest()
+        public void PutPdfInStorageToLaTeXExample()
         {
+            //ExStart: PutPdfInStorageToLaTeXExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
             string resFileName = "result.latex";
 
             var response = api.PutPdfInStorageToLaTeX(name, Path.Combine(FolderName, resFileName), folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutPdfInStorageToLaTeXExample
+
         }
 
 
-        public void PutPdfInRequestToLaTeXTest()
+        public void PutPdfInRequestToLaTeXExample()
         {
+            //ExStart: PutPdfInRequestToLaTeXExample
+
             string name = "4pages.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine("", name)))
             {
@@ -354,30 +467,42 @@ namespace Aspose.Pdf.Cloud.Sdk.ConvertExamples
                 var response = api.PutPdfInRequestToLaTeX(Path.Combine(FolderName, resFileName), file: stream);
                 Console.WriteLine(response);
             }
+            //ExEnd: PutPdfInStorageToLaTeXExample
+
         }
 
 
-        public void GetPdfInStorageToMobiXmlTest()
+        public void GetPdfInStorageToMobiXmlExample()
         {
+            //ExStart: GetPdfInStorageToMobiXmlExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
 
             var response = api.GetPdfInStorageToMobiXml(name, folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: PutPdfInStorageToLaTeXExample
+
         }
 
-        public void PutPdfInStorageToMobiXmlTest()
+        public void PutPdfInStorageToMobiXmlExample()
         {
+                        //ExStart: PutPdfInStorageToMobiXmlExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
             string resFileName = "result.mobi";
 
             var response = api.PutPdfInStorageToMobiXml(name, Path.Combine(FolderName, resFileName), folder: FolderName);
             Console.WriteLine(response);
+                                    //ExEnd: PutPdfInStorageToMobiXmlExample
+
         }
 
-        public void PutPdfInRequestToMobiXmlTest()
+        public void PutPdfInRequestToMobiXmlExample()
         {
+            //ExStart: PutPdfInRequestToMobiXmlExample
+
             string name = "4pages.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine("", name)))
             {
@@ -386,32 +511,45 @@ namespace Aspose.Pdf.Cloud.Sdk.ConvertExamples
                 var response = api.PutPdfInRequestToMobiXml(Path.Combine(FolderName, resFileName), file: stream);
                 Console.WriteLine(response);
             }
+                        //ExEnd: PutPdfInRequestToMobiXmlExample
+
         }
 
 
-        public void GetXfaPdfInStorageToAcroFormTest()
+        public void GetXfaPdfInStorageToAcroFormExample()
         {
+            //ExStart: PutPdfInRequestToMobiXmlExample
+
             string name = "PdfWithXfaForm.pdf";
             UploadFile(name, name);
 
             var response = api.GetXfaPdfInStorageToAcroForm(name, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PutPdfInRequestToMobiXmlExample
+
         }
 
 
-        public void PutXfaPdfInStorageToAcroFormTest()
+        public void PutXfaPdfInStorageToAcroFormExample()
         {
+            //ExStart: PutXfaPdfInStorageToAcroFormExample
+
             string name = "PdfWithXfaForm.pdf";
             UploadFile(name, name);
             string resFileName = "result.pdf";
 
             var response = api.PutXfaPdfInStorageToAcroForm(name, Path.Combine(FolderName, resFileName), folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: PutXfaPdfInStorageToAcroFormExample
+
+            
         }
 
 
-        public void PutXfaPdfInRequestToAcroFormTest()
+        public void PutXfaPdfInRequestToAcroFormExample()
         {
+            //ExStart: PutXfaPdfInStorageToAcroFormExample
+
             string name = "PdfWithXfaForm.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine("", name)))
             {
@@ -420,33 +558,45 @@ namespace Aspose.Pdf.Cloud.Sdk.ConvertExamples
                 var response = api.PutXfaPdfInRequestToAcroForm(Path.Combine(FolderName, resFileName), file: stream);
                 Console.WriteLine(response);
             }
+                        //ExEnd: PutXfaPdfInStorageToAcroFormExample
+
         }
 
 
 
-        public void GetPdfInStorageToXmlTest()
+        public void GetPdfInStorageToXmlExample()
         {
+            //ExStart: GetPdfInStorageToXmlExample
+
             string name = "Hello world.pdf";
             UploadFile(name, name);
 
             var response = api.GetPdfInStorageToXml(name, folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: GetPdfInStorageToXmlExample
+
         }
 
 
-        public void PutPdfInStorageToXmlTest()
+        public void PutPdfInStorageToXmlExample()
         {
+            //ExStart: PutPdfInStorageToXmlExample
+
             string name = "4pages.pdf";
             UploadFile(name, name);
             string resFileName = "result.xml";
 
             var response = api.PutPdfInStorageToXml(name, Path.Combine(FolderName, resFileName), folder: FolderName);
             Console.WriteLine(response);
+                        //ExEnd: PutPdfInStorageToXmlExample
+
         }
 
 
-        public void PutPdfInRequestToXmlTest()
+        public void PutPdfInRequestToXmlExample()
         {
+            //ExStart: PutPdfInRequestToXmlExample
+
             string name = "4pages.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine("", name)))
             {
@@ -455,6 +605,8 @@ namespace Aspose.Pdf.Cloud.Sdk.ConvertExamples
                 var response = api.PutPdfInRequestToXml(Path.Combine(FolderName, resFileName), file: stream);
                 Console.WriteLine(response);
             }
+            //ExEnd: PutPdfInRequestToXmlExample
+
         }
     }
 }

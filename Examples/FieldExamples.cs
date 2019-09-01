@@ -16,33 +16,37 @@ namespace Aspose.Pdf.Cloud.Sdk.FieldsAPI
         {
             using (var file = System.IO.File.OpenRead(Path.Combine("", sourcePath)))
             {
-                var response = api.PutCreate(Path.Combine("", serverFileName), file);
+                var response = api.UploadFile(Path.Combine("", serverFileName), file);
             }
         }
 
-        public void GetFieldTest()
+        public void GetFieldExample()
         {
+            //ExStart: GetFieldExample
             const string name = "PdfWithAcroForm.pdf";
             UploadFile(name, name);
 
             var response = api.GetField(name, "textField", folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: GetFieldExample
         }
 
 
-        public void GetFieldsTest()
+        public void GetFieldsExample()
         {
+            //ExStart: GetFieldsExample
             const string name = "PdfWithAcroForm.pdf";
             UploadFile(name, name);
 
             var response = api.GetFields(name, folder: FolderName);
             Console.WriteLine(response);
-
+            //ExEnd: GetFieldsExample
         }
 
 
-        public void PostCreateFieldTest()
+        public void PostCreateFieldExample()
         {
+            //ExStart: PostCreateFieldExample
             const string name = "Hello world.pdf";
             UploadFile(name, name);
 
@@ -58,11 +62,12 @@ namespace Aspose.Pdf.Cloud.Sdk.FieldsAPI
                     ));
             var response = api.PostCreateField(name, 1, field, folder: FolderName);
             Console.WriteLine(response);
-
+            //ExEnd: PostCreateFieldExample
         }
 
-        public void PutUpdateFieldTest()
+        public void PutUpdateFieldExample()
         {
+             //ExStart: PutUpdateFieldExample
             const string name = "PdfWithAcroForm.pdf";
             UploadFile(name, name);
 
@@ -77,12 +82,14 @@ namespace Aspose.Pdf.Cloud.Sdk.FieldsAPI
 
             var response = api.PutUpdateField(name, fieldName, field, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: PutUpdateFieldExample
 
         }
 
 
-        public void PutUpdateFieldsTest()
+        public void PutUpdateFieldsExample()
         {
+             //ExStart: PutUpdateFieldsExample
             const string name = "PdfWithAcroForm.pdf";
             UploadFile(name, name);
 
@@ -99,12 +106,14 @@ namespace Aspose.Pdf.Cloud.Sdk.FieldsAPI
             
             var response = api.PutUpdateFields(name, fields, folder: FolderName);
             Console.WriteLine(response);
+             //ExEnd: PutUpdateFieldsExample
 
         }
 
 
-        public void DeleteFieldTest()
+        public void DeleteFieldExample()
         {
+             //ExStart: DeleteFieldExample
             const string name = "PdfWithAcroForm.pdf";
             UploadFile(name, name);
 
@@ -112,26 +121,29 @@ namespace Aspose.Pdf.Cloud.Sdk.FieldsAPI
 
             var response = api.DeleteField(name, fieldName, folder: FolderName);
             Console.WriteLine(response);
-
+            //ExEnd: DeleteFieldExample
         }
 
-        public void PutFieldsFlattenTest()
+        public void PutFieldsFlattenExample()
         {
+            //ExStart: PutFieldsFlattenExample
             const string name = "PdfWithAcroForm.pdf";
             UploadFile(name, name);
 
             var response = api.PutFieldsFlatten(name, folder: FolderName);
             Console.WriteLine(response);
-
+            //ExEnd: PutFieldsFlattenExample
         }
 
-        public void PostFlattenDocumentTest()
+        public void PostFlattenDocumentExample()
         {
+             //ExStart: PostFlattenDocumentExample
             const string name = "PdfWithAcroForm.pdf";
             UploadFile(name, name);
 
             var response = api.PostFlattenDocument(name, updateAppearances: true, hideButtons: true, folder: FolderName);
             Console.WriteLine(response);
+            //ExEnd: PostFlattenDocumentExample
         }
     }
 
