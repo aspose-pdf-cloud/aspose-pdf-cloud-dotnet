@@ -172,6 +172,45 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.PostFlattenDocument(name, updateAppearances: true, hideButtons: true, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
+
+        /// <summary>
+        /// Test GetDocumentSignatureFields
+        /// </summary>
+        [Test]
+        public void GetDocumentSignatureFieldsTest()
+        {
+            const string name = "adbe.x509.rsa_sha1.valid.pdf";
+            UploadFile(name, name);
+            
+            var response = PdfApi.GetDocumentSignatureFields(name, folder: TempFolder);
+            Assert.That(response.Fields, Is.Not.Null);
+        }
+
+        /// <summary>
+        /// Test GetPageSignatureFields
+        /// </summary>
+        [Test]
+        public void GetPageSignatureFieldsTest()
+        {
+            const string name = "adbe.x509.rsa_sha1.valid.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetPageSignatureFields(name, pageNumber: 1, folder: TempFolder);
+            Assert.That(response.Fields, Is.Not.Null);
+        }
+
+        /// <summary>
+        /// Test GetSignatureField
+        /// </summary>
+        [Test]
+        public void GetSignatureFieldTest()
+        {
+            const string name = "adbe.x509.rsa_sha1.valid.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetSignatureField(name, fieldName: "Signature1", folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
     }
 
 }

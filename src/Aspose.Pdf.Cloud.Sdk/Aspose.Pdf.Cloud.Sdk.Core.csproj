@@ -75,6 +75,7 @@
     <Compile Include="Model\CryptoAlgorithm.cs" />
     <Compile Include="Model\DiscUsage.cs" />
     <Compile Include="Model\DocFormat.cs" />
+    <Compile Include="Model\DocMDPAccessPermissionType.cs" />
     <Compile Include="Model\DocRecognitionMode.cs" />
     <Compile Include="Model\Document.cs" />
     <Compile Include="Model\DocumentPageResponse.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="Model\FontEncodingRules.cs" />
     <Compile Include="Model\FontSavingModes.cs" />
     <Compile Include="Model\FontStyles.cs" />
+    <Compile Include="Model\FormField.cs" />
     <Compile Include="Model\FreeTextAnnotation.cs" />
     <Compile Include="Model\FreeTextAnnotationResponse.cs" />
     <Compile Include="Model\FreeTextAnnotations.cs" />
@@ -200,6 +202,11 @@
     <Compile Include="Model\Segment.cs" />
     <Compile Include="Model\ShapeType.cs" />
     <Compile Include="Model\Signature.cs" />
+    <Compile Include="Model\SignatureCustomAppearance.cs" />
+    <Compile Include="Model\SignatureField.cs" />
+    <Compile Include="Model\SignatureFieldResponse.cs" />
+    <Compile Include="Model\SignatureFields.cs" />
+    <Compile Include="Model\SignatureFieldsResponse.cs" />
     <Compile Include="Model\SignatureType.cs" />
     <Compile Include="Model\SignatureVerifyResponse.cs" />
     <Compile Include="Model\SoundAnnotation.cs" />
@@ -260,6 +267,7 @@
     <Compile Include="Model\TextStamp.cs" />
     <Compile Include="Model\TextState.cs" />
     <Compile Include="Model\TextStyle.cs" />
+    <Compile Include="Model\TimestampSettings.cs" />
     <Compile Include="Model\UnderlineAnnotation.cs" />
     <Compile Include="Model\UnderlineAnnotationResponse.cs" />
     <Compile Include="Model\UnderlineAnnotations.cs" />

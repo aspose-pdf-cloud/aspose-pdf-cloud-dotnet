@@ -18,6 +18,9 @@ Name | Type | Description | Notes
 **Authority** | **string** | Gets or sets the name of the person or authority signing the document.. | [optional] 
 **Date** | **string** | Gets or sets the time of signing. | [optional] 
 **ShowProperties** | **bool?** | Gets or sets the showproperties in signature field | 
+**TimestampSettings** | [**TimestampSettings**](TimestampSettings.md) | Gets/sets timestamp settings. | [optional] 
+**IsValid** | **bool?** | Verify the document regarding this signature and return true if document is valid or otherwise false. | [optional] 
+**CustomAppearance** | [**SignatureCustomAppearance**](SignatureCustomAppearance.md) | Gets/sets the custom appearance. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
