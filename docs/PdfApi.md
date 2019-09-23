@@ -64,6 +64,7 @@ Method | HTTP request | Description
 [**GetDocumentStrikeOutAnnotations**](PdfApi.md#getdocumentstrikeoutannotations) | **GET** /pdf/\{name}/annotations/strikeout | Read document StrikeOut annotations.
 [**GetDocumentTables**](PdfApi.md#getdocumenttables) | **GET** /pdf/\{name}/tables | Read document tables.
 [**GetDocumentTextAnnotations**](PdfApi.md#getdocumenttextannotations) | **GET** /pdf/\{name}/annotations/text | Read document text annotations.
+[**GetDocumentTextBoxFields**](PdfApi.md#getdocumenttextboxfields) | **GET** /pdf/\{name}/fields/textbox | Read document text box fields.
 [**GetDocumentUnderlineAnnotations**](PdfApi.md#getdocumentunderlineannotations) | **GET** /pdf/\{name}/annotations/underline | Read document underline annotations.
 [**GetDownloadDocumentAttachmentByIndex**](PdfApi.md#getdownloaddocumentattachmentbyindex) | **GET** /pdf/\{name}/attachments/\{attachmentIndex}/download | Download document attachment content by its index.
 [**GetEpubInStorageToPdf**](PdfApi.md#getepubinstoragetopdf) | **GET** /pdf/create/epub | Convert EPUB file (located on storage) to PDF format and return resulting file in response. 
@@ -128,6 +129,7 @@ Method | HTTP request | Description
 [**GetPageTables**](PdfApi.md#getpagetables) | **GET** /pdf/\{name}/pages/\{pageNumber}/tables | Read document page tables.
 [**GetPageText**](PdfApi.md#getpagetext) | **GET** /pdf/\{name}/pages/\{pageNumber}/text | Read page text items.
 [**GetPageTextAnnotations**](PdfApi.md#getpagetextannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/text | Read document page text annotations.
+[**GetPageTextBoxFields**](PdfApi.md#getpagetextboxfields) | **GET** /pdf/\{name}/page/\{pageNumber}/fields/textbox | Read document page text box fields.
 [**GetPageUnderlineAnnotations**](PdfApi.md#getpageunderlineannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/underline | Read document page underline annotations.
 [**GetPages**](PdfApi.md#getpages) | **GET** /pdf/\{name}/pages | Read document pages info.
 [**GetPclInStorageToPdf**](PdfApi.md#getpclinstoragetopdf) | **GET** /pdf/create/pcl | Convert PCL file (located on storage) to PDF format and return resulting file in response. 
@@ -163,6 +165,7 @@ Method | HTTP request | Description
 [**GetTable**](PdfApi.md#gettable) | **GET** /pdf/\{name}/tables/\{tableId} | Read document page table by ID.
 [**GetText**](PdfApi.md#gettext) | **GET** /pdf/\{name}/text | Read document text.
 [**GetTextAnnotation**](PdfApi.md#gettextannotation) | **GET** /pdf/\{name}/annotations/text/\{annotationId} | Read document page text annotation by ID.
+[**GetTextBoxField**](PdfApi.md#gettextboxfield) | **GET** /pdf/\{name}/fields/textbox/\{fieldName} | Read document text box field by name.
 [**GetUnderlineAnnotation**](PdfApi.md#getunderlineannotation) | **GET** /pdf/\{name}/annotations/underline/\{annotationId} | Read document page underline annotation by ID.
 [**GetVerifySignature**](PdfApi.md#getverifysignature) | **GET** /pdf/\{name}/verifySignature | Verify signature document.
 [**GetWebInStorageToPdf**](PdfApi.md#getwebinstoragetopdf) | **GET** /pdf/create/web | Convert web page to PDF format and return resulting file in response. 
@@ -223,6 +226,7 @@ Method | HTTP request | Description
 [**PostSignDocument**](PdfApi.md#postsigndocument) | **POST** /pdf/\{name}/sign | Sign document.
 [**PostSignPage**](PdfApi.md#postsignpage) | **POST** /pdf/\{name}/pages/\{pageNumber}/sign | Sign page.
 [**PostSplitDocument**](PdfApi.md#postsplitdocument) | **POST** /pdf/\{name}/split | Split document to parts.
+[**PostTextBoxFields**](PdfApi.md#posttextboxfields) | **POST** /pdf/\{name}/fields/textbox | Add document text box fields.
 [**PutAddNewPage**](PdfApi.md#putaddnewpage) | **PUT** /pdf/\{name}/pages | Add new page to end of the document.
 [**PutAddText**](PdfApi.md#putaddtext) | **PUT** /pdf/\{name}/pages/\{pageNumber}/text | Add text to PDF document page.
 [**PutAnnotationsFlatten**](PdfApi.md#putannotationsflatten) | **PUT** /pdf/\{name}/annotations/flatten | Flattens the annotations of the specified types
@@ -318,6 +322,7 @@ Method | HTTP request | Description
 [**PutSvgInStorageToPdf**](PdfApi.md#putsvginstoragetopdf) | **PUT** /pdf/\{name}/create/svg | Convert SVG file (located on storage) to PDF format and upload resulting file to storage. 
 [**PutTable**](PdfApi.md#puttable) | **PUT** /pdf/\{name}/tables/\{tableId} | Replace document page table.
 [**PutTextAnnotation**](PdfApi.md#puttextannotation) | **PUT** /pdf/\{name}/annotations/text/\{annotationId} | Replace document text annotation
+[**PutTextBoxField**](PdfApi.md#puttextboxfield) | **PUT** /pdf/\{name}/fields/textbox/\{fieldName} | Replace document text box field
 [**PutUnderlineAnnotation**](PdfApi.md#putunderlineannotation) | **PUT** /pdf/\{name}/annotations/underline/\{annotationId} | Replace document underline annotation
 [**PutUpdateField**](PdfApi.md#putupdatefield) | **PUT** /pdf/\{name}/fields/\{fieldName} | Update field.
 [**PutUpdateFields**](PdfApi.md#putupdatefields) | **PUT** /pdf/\{name}/fields | Update fields.
@@ -1903,6 +1908,32 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TextAnnotationsResponse**](TextAnnotationsResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdocumenttextboxfields"></a>
+# **GetDocumentTextBoxFields**
+> TextBoxFieldsResponse GetDocumentTextBoxFields (string name, string storage = null, string folder = null)
+
+Read document text box fields.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**TextBoxFieldsResponse**](TextBoxFieldsResponse.md)
 
 ### HTTP request headers
 
@@ -3656,6 +3687,33 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getpagetextboxfields"></a>
+# **GetPageTextBoxFields**
+> TextBoxFieldsResponse GetPageTextBoxFields (string name, int? pageNumber, string storage = null, string folder = null)
+
+Read document page text box fields.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **pageNumber** | **int?**| The page number. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**TextBoxFieldsResponse**](TextBoxFieldsResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getpageunderlineannotations"></a>
 # **GetPageUnderlineAnnotations**
 > UnderlineAnnotationsResponse GetPageUnderlineAnnotations (string name, int? pageNumber, string storage = null, string folder = null)
@@ -4652,6 +4710,33 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TextAnnotationResponse**](TextAnnotationResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="gettextboxfield"></a>
+# **GetTextBoxField**
+> TextBoxFieldResponse GetTextBoxField (string name, string fieldName, string storage = null, string folder = null)
+
+Read document text box field by name.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **fieldName** | **string**| The field name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**TextBoxFieldResponse**](TextBoxFieldResponse.md)
 
 ### HTTP request headers
 
@@ -6330,6 +6415,33 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SplitResultResponse**](SplitResultResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="posttextboxfields"></a>
+# **PostTextBoxFields**
+> AsposeResponse PostTextBoxFields (string name, List<TextBoxField> fields, string storage = null, string folder = null)
+
+Add document text box fields.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **fields** | [**List&lt;TextBoxField&gt;**](TextBoxField.md)| The array of field. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
 
 ### HTTP request headers
 
@@ -9104,6 +9216,34 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TextAnnotationResponse**](TextAnnotationResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="puttextboxfield"></a>
+# **PutTextBoxField**
+> TextBoxFieldResponse PutTextBoxField (string name, string fieldName, TextBoxField field, string storage = null, string folder = null)
+
+Replace document text box field
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **fieldName** | **string**| The field name. | 
+ **field** | [**TextBoxField**](TextBoxField.md)| The field. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**TextBoxFieldResponse**](TextBoxFieldResponse.md)
 
 ### HTTP request headers
 

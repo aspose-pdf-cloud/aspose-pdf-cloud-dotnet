@@ -253,6 +253,10 @@
     <Compile Include="Model\TextAnnotationResponse.cs" />
     <Compile Include="Model\TextAnnotations.cs" />
     <Compile Include="Model\TextAnnotationsResponse.cs" />
+    <Compile Include="Model\TextBoxField.cs" />
+    <Compile Include="Model\TextBoxFieldResponse.cs" />
+    <Compile Include="Model\TextBoxFields.cs" />
+    <Compile Include="Model\TextBoxFieldsResponse.cs" />
     <Compile Include="Model\TextFooter.cs" />
     <Compile Include="Model\TextHeader.cs" />
     <Compile Include="Model\TextHorizontalAlignment.cs" />
