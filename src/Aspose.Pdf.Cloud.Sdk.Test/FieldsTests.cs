@@ -276,7 +276,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                     MaxLen = 100,
                     Rect = new Rectangle(100, 100, 500, 200),
                     Value = "Page 2\nValue",
-                    PartialName = "testField",
+                    PartialName = "testField1",
                 }
             };
 

@@ -52,8 +52,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
         };
 
-        private string accessToken;
-        private string refreshToken;
+        private string _accessToken;
+
+        public string AccessToken
+        {
+            set => _accessToken = value;
+        }
 
         /// <summary>
         /// Allows for extending request processing for <see cref="ApiClient"/> generated code.
@@ -61,7 +65,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="request">The RestSharp request object</param>
         private async System.Threading.Tasks.Task InterceptRequestAsync(IRestRequest request)
         {
-            if (null == accessToken)
+            if (null == _accessToken)
             {
                 await RequestTokenAsync();
             }
@@ -74,7 +78,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="request">The RestSharp request object</param>
         private void InterceptRequest(IRestRequest request)
         {
-            if (null == accessToken)
+            if (null == _accessToken)
             {
                 RequestToken();
             }
@@ -83,7 +87,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
         private void AddOAuthToken(IRestRequest request)
         {
-            request.AddHeader("Authorization", "Bearer " + accessToken);
+            request.AddHeader("Authorization", "Bearer " + _accessToken);
         }
 
         private void RequestToken()
@@ -100,26 +104,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
             var result = (GetAccessTokenResult)Deserialize(responce, typeof(GetAccessTokenResult));
 
-            accessToken = result.AccessToken;
+            _accessToken = result.AccessToken;
         }
-        /*
-        private void RefreshToken()
-        {
-            var requestUrl = "/oauth2/token";
-
-            var postData = "grant_type=refresh_token";
-            postData += "&refresh_token=" + refreshToken;
-
-            var request = new RestRequest(requestUrl, Method.POST);
-            request.AddParameter("application/x-www-form-urlencoded", postData, ParameterType.RequestBody);
-            var responce = RestClient.Execute(request);
-
-            var result = (GetAccessTokenResult)Deserialize(responce, typeof(GetAccessTokenResult));
-
-            accessToken = result.AccessToken;
-            refreshToken = result.RefreshToken;
-        }
-        */
+        
         private async System.Threading.Tasks.Task RequestTokenAsync()
         {
             var requestUrl = "/connect/token";
@@ -134,27 +121,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
             var result = (GetAccessTokenResult)Deserialize(responce, typeof(GetAccessTokenResult));
 
-            accessToken = result.AccessToken;
+            _accessToken = result.AccessToken;
         }
-        /*
-        private async System.Threading.Tasks.Task RefreshTokenAsync()
-        {
-            var requestUrl = "/oauth2/token";
-
-            var postData = "grant_type=refresh_token";
-            postData += "&refresh_token=" + refreshToken;
-
-            var request = new RestRequest(requestUrl, Method.POST);
-            request.AddParameter("application/x-www-form-urlencoded", postData, ParameterType.RequestBody);
-            var responce = await RestClient.ExecuteTaskAsync(request);
-
-            var result = (GetAccessTokenResult)Deserialize(responce, typeof(GetAccessTokenResult));
-
-            accessToken = result.AccessToken;
-            refreshToken = result.RefreshToken;
-        }
-        */
-
+        
         /// <summary>
         /// Allows for extending response processing for <see cref="ApiClient"/> generated code.
         /// </summary>
