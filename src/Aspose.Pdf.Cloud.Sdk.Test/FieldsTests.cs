@@ -211,6 +211,101 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.GetSignatureField(name, fieldName: "Signature1", folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
+
+        /// <summary>
+        /// Test GetDocumentTextBoxFields
+        /// </summary>
+        [Test]
+        public void GetDocumentTextBoxFieldsTest()
+        {
+            const string name = "FormDataTextBox.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetDocumentTextBoxFields(name, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetPageTextBoxFields
+        /// </summary>
+        [Test]
+        public void GetPageTextBoxFieldsTest()
+        {
+            const string name = "FormDataTextBox.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetPageTextBoxFields(name, pageNumber: 1, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetTextBoxField
+        /// </summary>
+        [Test]
+        public void GetTextBoxFieldTest()
+        {
+            const string name = "FormDataTextBox.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetTextBoxField(name, fieldName: "Petitioner", folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PostTextBoxFieldTest
+        /// </summary>
+        [Test]
+        public void PostTextBoxFieldTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+            var textBoxes = new List<TextBoxField> {
+                new TextBoxField(PageIndex: 1, IsGroup: false)
+                {
+                    Color = new Color(255, 255, 0, 0),
+                    Multiline = true,
+                    MaxLen = 100,
+                    Rect = new Rectangle(100, 100, 500, 200),
+                    Value = "Page 1\nValue",
+                    PartialName = "testField",
+                },
+                new TextBoxField(PageIndex: 2, IsGroup: false)
+                {
+                    Color = new Color(255, 255, 0, 0),
+                    Multiline = true,
+                    MaxLen = 100,
+                    Rect = new Rectangle(100, 100, 500, 200),
+                    Value = "Page 2\nValue",
+                    PartialName = "testField",
+                }
+            };
+
+            var response = PdfApi.PostTextBoxFields(name, textBoxes, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PutTextBoxFieldTest
+        /// </summary>
+        [Test]
+        public void PutTextBoxFieldTest()
+        {
+            const string name = "FormDataTextBox.pdf";
+            UploadFile(name, name);
+
+            var textBox = new TextBoxField(PageIndex: 1, IsGroup: false)
+            {
+                Color = new Color(255, 255, 0, 0),
+                Multiline = false,
+                MaxLen = 100,
+                Rect = new Rectangle(35, 650, 290, 600),
+                Value = "Value!\nValue",
+                PartialName = "testField",
+            };
+
+            var response = PdfApi.PutTextBoxField(name, "Petitioner", textBox, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
     }
 
 }

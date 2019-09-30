@@ -1,7 +1,7 @@
 # Aspose.Pdf for Cloud
 
 - API version: 3.0
-- SDK version: 19.8.0
+- SDK version: 19.9.0
 
 [Aspose.Pdf for Cloud](https://products.aspose.cloud/pdf) is a true REST API that enables you to perform a wide range of document processing operations including creation, manipulation, conversion and rendering of Pdf documents in the cloud.
 
@@ -111,6 +111,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**GetDocumentStrikeOutAnnotations**](docs/PdfApi.md#getdocumentstrikeoutannotations) | **GET** /pdf/\{name}/annotations/strikeout | Read document StrikeOut annotations.
 *PdfApi* | [**GetDocumentTables**](docs/PdfApi.md#getdocumenttables) | **GET** /pdf/\{name}/tables | Read document tables.
 *PdfApi* | [**GetDocumentTextAnnotations**](docs/PdfApi.md#getdocumenttextannotations) | **GET** /pdf/\{name}/annotations/text | Read document text annotations.
+*PdfApi* | [**GetDocumentTextBoxFields**](docs/PdfApi.md#getdocumenttextboxfields) | **GET** /pdf/\{name}/fields/textbox | Read document text box fields.
 *PdfApi* | [**GetDocumentUnderlineAnnotations**](docs/PdfApi.md#getdocumentunderlineannotations) | **GET** /pdf/\{name}/annotations/underline | Read document underline annotations.
 *PdfApi* | [**GetDownloadDocumentAttachmentByIndex**](docs/PdfApi.md#getdownloaddocumentattachmentbyindex) | **GET** /pdf/\{name}/attachments/\{attachmentIndex}/download | Download document attachment content by its index.
 *PdfApi* | [**GetEpubInStorageToPdf**](docs/PdfApi.md#getepubinstoragetopdf) | **GET** /pdf/create/epub | Convert EPUB file (located on storage) to PDF format and return resulting file in response. 
@@ -175,6 +176,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**GetPageTables**](docs/PdfApi.md#getpagetables) | **GET** /pdf/\{name}/pages/\{pageNumber}/tables | Read document page tables.
 *PdfApi* | [**GetPageText**](docs/PdfApi.md#getpagetext) | **GET** /pdf/\{name}/pages/\{pageNumber}/text | Read page text items.
 *PdfApi* | [**GetPageTextAnnotations**](docs/PdfApi.md#getpagetextannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/text | Read document page text annotations.
+*PdfApi* | [**GetPageTextBoxFields**](docs/PdfApi.md#getpagetextboxfields) | **GET** /pdf/\{name}/page/\{pageNumber}/fields/textbox | Read document page text box fields.
 *PdfApi* | [**GetPageUnderlineAnnotations**](docs/PdfApi.md#getpageunderlineannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/underline | Read document page underline annotations.
 *PdfApi* | [**GetPages**](docs/PdfApi.md#getpages) | **GET** /pdf/\{name}/pages | Read document pages info.
 *PdfApi* | [**GetPclInStorageToPdf**](docs/PdfApi.md#getpclinstoragetopdf) | **GET** /pdf/create/pcl | Convert PCL file (located on storage) to PDF format and return resulting file in response. 
@@ -210,6 +212,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**GetTable**](docs/PdfApi.md#gettable) | **GET** /pdf/\{name}/tables/\{tableId} | Read document page table by ID.
 *PdfApi* | [**GetText**](docs/PdfApi.md#gettext) | **GET** /pdf/\{name}/text | Read document text.
 *PdfApi* | [**GetTextAnnotation**](docs/PdfApi.md#gettextannotation) | **GET** /pdf/\{name}/annotations/text/\{annotationId} | Read document page text annotation by ID.
+*PdfApi* | [**GetTextBoxField**](docs/PdfApi.md#gettextboxfield) | **GET** /pdf/\{name}/fields/textbox/\{fieldName} | Read document text box field by name.
 *PdfApi* | [**GetUnderlineAnnotation**](docs/PdfApi.md#getunderlineannotation) | **GET** /pdf/\{name}/annotations/underline/\{annotationId} | Read document page underline annotation by ID.
 *PdfApi* | [**GetVerifySignature**](docs/PdfApi.md#getverifysignature) | **GET** /pdf/\{name}/verifySignature | Verify signature document.
 *PdfApi* | [**GetWebInStorageToPdf**](docs/PdfApi.md#getwebinstoragetopdf) | **GET** /pdf/create/web | Convert web page to PDF format and return resulting file in response. 
@@ -270,6 +273,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**PostSignDocument**](docs/PdfApi.md#postsigndocument) | **POST** /pdf/\{name}/sign | Sign document.
 *PdfApi* | [**PostSignPage**](docs/PdfApi.md#postsignpage) | **POST** /pdf/\{name}/pages/\{pageNumber}/sign | Sign page.
 *PdfApi* | [**PostSplitDocument**](docs/PdfApi.md#postsplitdocument) | **POST** /pdf/\{name}/split | Split document to parts.
+*PdfApi* | [**PostTextBoxFields**](docs/PdfApi.md#posttextboxfields) | **POST** /pdf/\{name}/fields/textbox | Add document text box fields.
 *PdfApi* | [**PutAddNewPage**](docs/PdfApi.md#putaddnewpage) | **PUT** /pdf/\{name}/pages | Add new page to end of the document.
 *PdfApi* | [**PutAddText**](docs/PdfApi.md#putaddtext) | **PUT** /pdf/\{name}/pages/\{pageNumber}/text | Add text to PDF document page.
 *PdfApi* | [**PutAnnotationsFlatten**](docs/PdfApi.md#putannotationsflatten) | **PUT** /pdf/\{name}/annotations/flatten | Flattens the annotations of the specified types
@@ -365,6 +369,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**PutSvgInStorageToPdf**](docs/PdfApi.md#putsvginstoragetopdf) | **PUT** /pdf/\{name}/create/svg | Convert SVG file (located on storage) to PDF format and upload resulting file to storage. 
 *PdfApi* | [**PutTable**](docs/PdfApi.md#puttable) | **PUT** /pdf/\{name}/tables/\{tableId} | Replace document page table.
 *PdfApi* | [**PutTextAnnotation**](docs/PdfApi.md#puttextannotation) | **PUT** /pdf/\{name}/annotations/text/\{annotationId} | Replace document text annotation
+*PdfApi* | [**PutTextBoxField**](docs/PdfApi.md#puttextboxfield) | **PUT** /pdf/\{name}/fields/textbox/\{fieldName} | Replace document text box field
 *PdfApi* | [**PutUnderlineAnnotation**](docs/PdfApi.md#putunderlineannotation) | **PUT** /pdf/\{name}/annotations/underline/\{annotationId} | Replace document underline annotation
 *PdfApi* | [**PutUpdateField**](docs/PdfApi.md#putupdatefield) | **PUT** /pdf/\{name}/fields/\{fieldName} | Update field.
 *PdfApi* | [**PutUpdateFields**](docs/PdfApi.md#putupdatefields) | **PUT** /pdf/\{name}/fields | Update fields.
@@ -582,6 +587,9 @@ Class | Method | HTTP request | Description
  - [Model.TextAnnotationResponse](docs/TextAnnotationResponse.md)
  - [Model.TextAnnotations](docs/TextAnnotations.md)
  - [Model.TextAnnotationsResponse](docs/TextAnnotationsResponse.md)
+ - [Model.TextBoxFieldResponse](docs/TextBoxFieldResponse.md)
+ - [Model.TextBoxFields](docs/TextBoxFields.md)
+ - [Model.TextBoxFieldsResponse](docs/TextBoxFieldsResponse.md)
  - [Model.TextRectsResponse](docs/TextRectsResponse.md)
  - [Model.TextReplaceResponse](docs/TextReplaceResponse.md)
  - [Model.UnderlineAnnotationResponse](docs/UnderlineAnnotationResponse.md)
@@ -600,6 +608,7 @@ Class | Method | HTTP request | Description
  - [Model.RedactionAnnotation](docs/RedactionAnnotation.md)
  - [Model.ScreenAnnotation](docs/ScreenAnnotation.md)
  - [Model.SignatureField](docs/SignatureField.md)
+ - [Model.TextBoxField](docs/TextBoxField.md)
  - [Model.TextFooter](docs/TextFooter.md)
  - [Model.TextHeader](docs/TextHeader.md)
  - [Model.TextStamp](docs/TextStamp.md)
