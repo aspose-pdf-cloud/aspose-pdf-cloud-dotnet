@@ -306,6 +306,214 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.PutTextBoxField(name, "Petitioner", textBox, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
+
+
+        /// <summary>
+        /// Test GetDocumentCheckBoxFieldsTest
+        /// </summary>
+        [Test]
+        public void GetDocumentCheckBoxFieldsTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetDocumentCheckBoxFields(name, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetPageCheckBoxFieldsTest
+        /// </summary>
+        [Test]
+        public void GetPageCheckBoxFieldsTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetPageCheckBoxFields(name, pageNumber: 1, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetCheckBoxFieldTest
+        /// </summary>
+        [Test]
+        public void GetCheckBoxFieldTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetCheckBoxField(name, fieldName: "checkboxField", folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+
+        /// <summary>
+        /// Test PostCheckBoxFieldsTest
+        /// </summary>
+        [Test]
+        public void PostCheckBoxFieldsTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+            var checkBoxes = new List<CheckBoxField> {
+                new CheckBoxField(PageIndex: 1, IsGroup: false, _Checked: true)
+                {
+                    Color = new Color(255, 255, 0, 0),
+                    Rect = new Rectangle(100, 100, 200, 200),
+                    ExportValue = "true",
+                    PartialName = "testField",
+                    Style = BoxStyle.Cross
+                },
+                new CheckBoxField(PageIndex: 1, IsGroup: false, _Checked: false)
+                {
+                    Color = new Color(255, 0, 255, 0),
+                    Rect = new Rectangle(200, 200, 400, 400),
+                    ExportValue = "false",
+                    PartialName = "testField1",
+                    _Checked = false,
+                    Style = BoxStyle.Diamond
+                }
+            };
+
+            var response = PdfApi.PostCheckBoxFields(name, checkBoxes, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PutCheckBoxFieldTest
+        /// </summary>
+        [Test]
+        public void PutCheckBoxFieldTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+            var checkBox = new CheckBoxField(PageIndex: 1, IsGroup: false, _Checked: true)
+                {
+                    Color = new Color(255, 255, 0, 0),
+                    Rect = new Rectangle(100, 100, 200, 200),
+                    ExportValue = "true",
+                    PartialName = "testField",
+                    Style = BoxStyle.Star
+                };
+
+            var response = PdfApi.PutCheckBoxField(name, fieldName: "checkboxField", field: checkBox, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+
+        /// <summary>
+        /// Test GetDocumentRadioButtonFieldsTest
+        /// </summary>
+        [Test]
+        public void GetDocumentRadioButtonFieldsTest()
+        {
+            //const string name = "4pages.pdf";
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetDocumentRadioButtonFields(name, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetPageRadioButtonFieldsTest
+        /// </summary>
+        [Test]
+        public void GetPageRadioButtonFieldsTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetPageRadioButtonFields(name, pageNumber: 1, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetRadioButtonFieldTest
+        /// </summary>
+        [Test]
+        public void GetRadioButtonFieldTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetRadioButtonField(name, fieldName: "radiobuttonField", folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PostRadioButtonFieldsTest
+        /// </summary>
+        [Test]
+        public void PostRadioButtonFieldsTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+            var radioButtons = new List<RadioButtonField> {
+                new RadioButtonField(PageIndex: 1, IsGroup: false, Selected: 1)
+                {
+                    Color = new Color(255, 255, 0, 0),
+                    Rect = new Rectangle(100, 100, 160, 140),
+                    PartialName = "testField",
+                    Style = BoxStyle.Cross,
+                    Margin = new MarginInfo{ Bottom = 0, Left = 0, Right = 0, Top = 0 },
+                    RadioButtonOptionsField = new List<RadioButtonOptionField>
+                    {
+                        new RadioButtonOptionField(PageIndex: 1, IsGroup: false)
+                        {
+                            OptionName = "1",
+                            Rect = new Rectangle(100, 130, 160, 140),
+                            Style = BoxStyle.Square
+                        },
+                        new RadioButtonOptionField(PageIndex: 1, IsGroup: false)
+                        {
+                            OptionName = "2",
+                            Rect = new Rectangle(150, 120, 160, 130),
+                        }
+                    }
+                }
+            };
+
+            var response = PdfApi.PostRadioButtonFields(name, radioButtons, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PutRadioButtonFieldTest
+        /// </summary>
+        [Test]
+        public void PutRadioButtonFieldTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+            RadioButtonField field =
+                new RadioButtonField(PageIndex: 1, IsGroup: false, Selected: 1)
+                {
+                    Color = new Color(255, 255, 0, 0),
+                    Rect = new Rectangle(100, 100, 160, 140),
+                    PartialName = "testField",
+                    Style = BoxStyle.Cross,
+                    Margin = new MarginInfo {Bottom = 0, Left = 0, Right = 0, Top = 0},
+                    RadioButtonOptionsField = new List<RadioButtonOptionField>
+                    {
+                        new RadioButtonOptionField(PageIndex: 1, IsGroup: false)
+                        {
+                            OptionName = "1",
+                            Rect = new Rectangle(100, 130, 160, 140),
+                            Style = BoxStyle.Square
+                        },
+                        new RadioButtonOptionField(PageIndex: 1, IsGroup: false)
+                        {
+                            OptionName = "2",
+                            Rect = new Rectangle(150, 120, 160, 130),
+                        }
+                    }
+                };
+
+            var response = PdfApi.PutRadioButtonField(name, fieldName: "radiobuttonField", field: field, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
     }
 
 }
