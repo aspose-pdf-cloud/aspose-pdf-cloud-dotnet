@@ -485,7 +485,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PutRadioButtonFieldTest()
         {
-            const string name = "4pages.pdf";
+            const string name = "PdfWithAcroForm.pdf";
             UploadFile(name, name);
             RadioButtonField field =
                 new RadioButtonField(PageIndex: 1, IsGroup: false, Selected: 1)
