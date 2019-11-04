@@ -54,6 +54,7 @@
     <Compile Include="Model\BookmarksResponse.cs" />
     <Compile Include="Model\BorderCornerStyle.cs" />
     <Compile Include="Model\BorderInfo.cs" />
+    <Compile Include="Model\BoxStyle.cs" />
     <Compile Include="Model\CapStyle.cs" />
     <Compile Include="Model\CaptionPosition.cs" />
     <Compile Include="Model\CaretAnnotation.cs" />
@@ -63,6 +64,11 @@
     <Compile Include="Model\CaretSymbol.cs" />
     <Compile Include="Model\Cell.cs" />
     <Compile Include="Model\CellRecognized.cs" />
+    <Compile Include="Model\CheckBoxField.cs" />
+    <Compile Include="Model\CheckBoxFieldResponse.cs" />
+    <Compile Include="Model\CheckBoxFields.cs" />
+    <Compile Include="Model\CheckBoxFieldsResponse.cs" />
+    <Compile Include="Model\ChoiceField.cs" />
     <Compile Include="Model\CircleAnnotation.cs" />
     <Compile Include="Model\CircleAnnotationResponse.cs" />
     <Compile Include="Model\CircleAnnotations.cs" />
@@ -160,6 +166,7 @@
     <Compile Include="Model\MovieAnnotationsResponse.cs" />
     <Compile Include="Model\ObjectExist.cs" />
     <Compile Include="Model\OptimizeOptions.cs" />
+    <Compile Include="Model\Option.cs" />
     <Compile Include="Model\Page.cs" />
     <Compile Include="Model\PageNumberStamp.cs" />
     <Compile Include="Model\Pages.cs" />
@@ -186,6 +193,11 @@
     <Compile Include="Model\PopupAnnotationsResponse.cs" />
     <Compile Include="Model\PopupAnnotationWithParent.cs" />
     <Compile Include="Model\Position.cs" />
+    <Compile Include="Model\RadioButtonField.cs" />
+    <Compile Include="Model\RadioButtonFieldResponse.cs" />
+    <Compile Include="Model\RadioButtonFields.cs" />
+    <Compile Include="Model\RadioButtonFieldsResponse.cs" />
+    <Compile Include="Model\RadioButtonOptionField.cs" />
     <Compile Include="Model\RasterImagesSavingModes.cs" />
     <Compile Include="Model\Rectangle.cs" />
     <Compile Include="Model\RedactionAnnotation.cs" />
