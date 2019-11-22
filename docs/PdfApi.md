@@ -34,6 +34,7 @@ Method | HTTP request | Description
 [**GetCaretAnnotation**](PdfApi.md#getcaretannotation) | **GET** /pdf/\{name}/annotations/caret/\{annotationId} | Read document page caret annotation by ID.
 [**GetCheckBoxField**](PdfApi.md#getcheckboxfield) | **GET** /pdf/\{name}/fields/checkbox/\{fieldName} | Read document checkbox field by name.
 [**GetCircleAnnotation**](PdfApi.md#getcircleannotation) | **GET** /pdf/\{name}/annotations/circle/\{annotationId} | Read document page circle annotation by ID.
+[**GetComboBoxField**](PdfApi.md#getcomboboxfield) | **GET** /pdf/\{name}/fields/combobox/\{fieldName} | Read document combobox field by name.
 [**GetDiscUsage**](PdfApi.md#getdiscusage) | **GET** /pdf/storage/disc | Get disc usage
 [**GetDocument**](PdfApi.md#getdocument) | **GET** /pdf/\{name} | Read common document info.
 [**GetDocumentAnnotations**](PdfApi.md#getdocumentannotations) | **GET** /pdf/\{name}/annotations | Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
@@ -43,6 +44,7 @@ Method | HTTP request | Description
 [**GetDocumentCaretAnnotations**](PdfApi.md#getdocumentcaretannotations) | **GET** /pdf/\{name}/annotations/caret | Read document caret annotations.
 [**GetDocumentCheckBoxFields**](PdfApi.md#getdocumentcheckboxfields) | **GET** /pdf/\{name}/fields/checkbox | Read document checkbox fields.
 [**GetDocumentCircleAnnotations**](PdfApi.md#getdocumentcircleannotations) | **GET** /pdf/\{name}/annotations/circle | Read document circle annotations.
+[**GetDocumentComboBoxFields**](PdfApi.md#getdocumentcomboboxfields) | **GET** /pdf/\{name}/fields/combobox | Read document combobox fields.
 [**GetDocumentFileAttachmentAnnotations**](PdfApi.md#getdocumentfileattachmentannotations) | **GET** /pdf/\{name}/annotations/fileattachment | Read document FileAttachment annotations.
 [**GetDocumentFreeTextAnnotations**](PdfApi.md#getdocumentfreetextannotations) | **GET** /pdf/\{name}/annotations/freetext | Read document free text annotations.
 [**GetDocumentHighlightAnnotations**](PdfApi.md#getdocumenthighlightannotations) | **GET** /pdf/\{name}/annotations/highlight | Read document highlight annotations.
@@ -104,6 +106,7 @@ Method | HTTP request | Description
 [**GetPageCaretAnnotations**](PdfApi.md#getpagecaretannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/caret | Read document page caret annotations.
 [**GetPageCheckBoxFields**](PdfApi.md#getpagecheckboxfields) | **GET** /pdf/\{name}/page/\{pageNumber}/fields/checkbox | Read document page checkbox fields.
 [**GetPageCircleAnnotations**](PdfApi.md#getpagecircleannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/circle | Read document page circle annotations.
+[**GetPageComboBoxFields**](PdfApi.md#getpagecomboboxfields) | **GET** /pdf/\{name}/page/\{pageNumber}/fields/combobox | Read document page combobox fields.
 [**GetPageConvertToBmp**](PdfApi.md#getpageconverttobmp) | **GET** /pdf/\{name}/pages/\{pageNumber}/convert/bmp | Convert document page to Bmp image and return resulting file in response.
 [**GetPageConvertToEmf**](PdfApi.md#getpageconverttoemf) | **GET** /pdf/\{name}/pages/\{pageNumber}/convert/emf | Convert document page to Emf image and return resulting file in response.
 [**GetPageConvertToGif**](PdfApi.md#getpageconverttogif) | **GET** /pdf/\{name}/pages/\{pageNumber}/convert/gif | Convert document page to Gif image and return resulting file in response.
@@ -187,6 +190,7 @@ Method | HTTP request | Description
 [**PostBookmark**](PdfApi.md#postbookmark) | **POST** /pdf/\{name}/bookmarks/bookmark/\{bookmarkPath} | Add document bookmarks.
 [**PostChangePasswordDocumentInStorage**](PdfApi.md#postchangepassworddocumentinstorage) | **POST** /pdf/\{name}/changepassword | Change document password in storage.
 [**PostCheckBoxFields**](PdfApi.md#postcheckboxfields) | **POST** /pdf/\{name}/fields/checkbox | Add document checkbox fields.
+[**PostComboBoxFields**](PdfApi.md#postcomboboxfields) | **POST** /pdf/\{name}/fields/combobox | Add document combobox fields.
 [**PostCreateField**](PdfApi.md#postcreatefield) | **POST** /pdf/\{name}/fields | Create field.
 [**PostDecryptDocumentInStorage**](PdfApi.md#postdecryptdocumentinstorage) | **POST** /pdf/\{name}/decrypt | Decrypt document in storage.
 [**PostDocumentImageFooter**](PdfApi.md#postdocumentimagefooter) | **POST** /pdf/\{name}/footer/image | Add document image footer.
@@ -243,6 +247,7 @@ Method | HTTP request | Description
 [**PutChangePasswordDocument**](PdfApi.md#putchangepassworddocument) | **PUT** /pdf/changepassword | Change document password from content.
 [**PutCheckBoxField**](PdfApi.md#putcheckboxfield) | **PUT** /pdf/\{name}/fields/checkbox/\{fieldName} | Replace document checkbox field
 [**PutCircleAnnotation**](PdfApi.md#putcircleannotation) | **PUT** /pdf/\{name}/annotations/circle/\{annotationId} | Replace document circle annotation
+[**PutComboBoxField**](PdfApi.md#putcomboboxfield) | **PUT** /pdf/\{name}/fields/combobox/\{fieldName} | Replace document combobox field
 [**PutCreateDocument**](PdfApi.md#putcreatedocument) | **PUT** /pdf/\{name} | Create empty document.
 [**PutDecryptDocument**](PdfApi.md#putdecryptdocument) | **PUT** /pdf/decrypt | Decrypt document from content.
 [**PutEncryptDocument**](PdfApi.md#putencryptdocument) | **PUT** /pdf/encrypt | Encrypt document from content.
@@ -1146,6 +1151,33 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getcomboboxfield"></a>
+# **GetComboBoxField**
+> ComboBoxFieldResponse GetComboBoxField (string name, string fieldName, string storage = null, string folder = null)
+
+Read document combobox field by name.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **fieldName** | **string**| The field name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**ComboBoxFieldResponse**](ComboBoxFieldResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getdiscusage"></a>
 # **GetDiscUsage**
 > DiscUsage GetDiscUsage (string storageName = null)
@@ -1371,6 +1403,32 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CircleAnnotationsResponse**](CircleAnnotationsResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getdocumentcomboboxfields"></a>
+# **GetDocumentComboBoxFields**
+> ComboBoxFieldsResponse GetDocumentComboBoxFields (string name, string storage = null, string folder = null)
+
+Read document combobox fields.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**ComboBoxFieldsResponse**](ComboBoxFieldsResponse.md)
 
 ### HTTP request headers
 
@@ -2992,6 +3050,33 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CircleAnnotationsResponse**](CircleAnnotationsResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpagecomboboxfields"></a>
+# **GetPageComboBoxFields**
+> ComboBoxFieldsResponse GetPageComboBoxFields (string name, int? pageNumber, string storage = null, string folder = null)
+
+Read document page combobox fields.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **pageNumber** | **int?**| The page number. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**ComboBoxFieldsResponse**](ComboBoxFieldsResponse.md)
 
 ### HTTP request headers
 
@@ -5323,6 +5408,33 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="postcomboboxfields"></a>
+# **PostComboBoxFields**
+> AsposeResponse PostComboBoxFields (string name, List<ComboBoxField> fields, string storage = null, string folder = null)
+
+Add document combobox fields.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **fields** | [**List&lt;ComboBoxField&gt;**](ComboBoxField.md)| The array of field. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="postcreatefield"></a>
 # **PostCreateField**
 > AsposeResponse PostCreateField (string name, int? page, Field field, string storage = null, string folder = null)
@@ -6890,6 +7002,34 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CircleAnnotationResponse**](CircleAnnotationResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putcomboboxfield"></a>
+# **PutComboBoxField**
+> ComboBoxFieldResponse PutComboBoxField (string name, string fieldName, ComboBoxField field, string storage = null, string folder = null)
+
+Replace document combobox field
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **fieldName** | **string**| The field name. | 
+ **field** | [**ComboBoxField**](ComboBoxField.md)| The field. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**ComboBoxFieldResponse**](ComboBoxFieldResponse.md)
 
 ### HTTP request headers
 

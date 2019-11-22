@@ -1,7 +1,7 @@
 # Aspose.Pdf for Cloud
 
 - API version: 3.0
-- SDK version: 19.10.0
+- SDK version: 19.11.0
 
 [Aspose.Pdf for Cloud](https://products.aspose.cloud/pdf) is a true REST API that enables you to perform a wide range of document processing operations including creation, manipulation, conversion and rendering of Pdf documents in the cloud.
 
@@ -81,6 +81,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**GetCaretAnnotation**](docs/PdfApi.md#getcaretannotation) | **GET** /pdf/\{name}/annotations/caret/\{annotationId} | Read document page caret annotation by ID.
 *PdfApi* | [**GetCheckBoxField**](docs/PdfApi.md#getcheckboxfield) | **GET** /pdf/\{name}/fields/checkbox/\{fieldName} | Read document checkbox field by name.
 *PdfApi* | [**GetCircleAnnotation**](docs/PdfApi.md#getcircleannotation) | **GET** /pdf/\{name}/annotations/circle/\{annotationId} | Read document page circle annotation by ID.
+*PdfApi* | [**GetComboBoxField**](docs/PdfApi.md#getcomboboxfield) | **GET** /pdf/\{name}/fields/combobox/\{fieldName} | Read document combobox field by name.
 *PdfApi* | [**GetDiscUsage**](docs/PdfApi.md#getdiscusage) | **GET** /pdf/storage/disc | Get disc usage
 *PdfApi* | [**GetDocument**](docs/PdfApi.md#getdocument) | **GET** /pdf/\{name} | Read common document info.
 *PdfApi* | [**GetDocumentAnnotations**](docs/PdfApi.md#getdocumentannotations) | **GET** /pdf/\{name}/annotations | Read documant page annotations. Returns only FreeTextAnnotations, TextAnnotations, other annotations will implemented next releases.
@@ -90,6 +91,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**GetDocumentCaretAnnotations**](docs/PdfApi.md#getdocumentcaretannotations) | **GET** /pdf/\{name}/annotations/caret | Read document caret annotations.
 *PdfApi* | [**GetDocumentCheckBoxFields**](docs/PdfApi.md#getdocumentcheckboxfields) | **GET** /pdf/\{name}/fields/checkbox | Read document checkbox fields.
 *PdfApi* | [**GetDocumentCircleAnnotations**](docs/PdfApi.md#getdocumentcircleannotations) | **GET** /pdf/\{name}/annotations/circle | Read document circle annotations.
+*PdfApi* | [**GetDocumentComboBoxFields**](docs/PdfApi.md#getdocumentcomboboxfields) | **GET** /pdf/\{name}/fields/combobox | Read document combobox fields.
 *PdfApi* | [**GetDocumentFileAttachmentAnnotations**](docs/PdfApi.md#getdocumentfileattachmentannotations) | **GET** /pdf/\{name}/annotations/fileattachment | Read document FileAttachment annotations.
 *PdfApi* | [**GetDocumentFreeTextAnnotations**](docs/PdfApi.md#getdocumentfreetextannotations) | **GET** /pdf/\{name}/annotations/freetext | Read document free text annotations.
 *PdfApi* | [**GetDocumentHighlightAnnotations**](docs/PdfApi.md#getdocumenthighlightannotations) | **GET** /pdf/\{name}/annotations/highlight | Read document highlight annotations.
@@ -151,6 +153,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**GetPageCaretAnnotations**](docs/PdfApi.md#getpagecaretannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/caret | Read document page caret annotations.
 *PdfApi* | [**GetPageCheckBoxFields**](docs/PdfApi.md#getpagecheckboxfields) | **GET** /pdf/\{name}/page/\{pageNumber}/fields/checkbox | Read document page checkbox fields.
 *PdfApi* | [**GetPageCircleAnnotations**](docs/PdfApi.md#getpagecircleannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/circle | Read document page circle annotations.
+*PdfApi* | [**GetPageComboBoxFields**](docs/PdfApi.md#getpagecomboboxfields) | **GET** /pdf/\{name}/page/\{pageNumber}/fields/combobox | Read document page combobox fields.
 *PdfApi* | [**GetPageConvertToBmp**](docs/PdfApi.md#getpageconverttobmp) | **GET** /pdf/\{name}/pages/\{pageNumber}/convert/bmp | Convert document page to Bmp image and return resulting file in response.
 *PdfApi* | [**GetPageConvertToEmf**](docs/PdfApi.md#getpageconverttoemf) | **GET** /pdf/\{name}/pages/\{pageNumber}/convert/emf | Convert document page to Emf image and return resulting file in response.
 *PdfApi* | [**GetPageConvertToGif**](docs/PdfApi.md#getpageconverttogif) | **GET** /pdf/\{name}/pages/\{pageNumber}/convert/gif | Convert document page to Gif image and return resulting file in response.
@@ -234,6 +237,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**PostBookmark**](docs/PdfApi.md#postbookmark) | **POST** /pdf/\{name}/bookmarks/bookmark/\{bookmarkPath} | Add document bookmarks.
 *PdfApi* | [**PostChangePasswordDocumentInStorage**](docs/PdfApi.md#postchangepassworddocumentinstorage) | **POST** /pdf/\{name}/changepassword | Change document password in storage.
 *PdfApi* | [**PostCheckBoxFields**](docs/PdfApi.md#postcheckboxfields) | **POST** /pdf/\{name}/fields/checkbox | Add document checkbox fields.
+*PdfApi* | [**PostComboBoxFields**](docs/PdfApi.md#postcomboboxfields) | **POST** /pdf/\{name}/fields/combobox | Add document combobox fields.
 *PdfApi* | [**PostCreateField**](docs/PdfApi.md#postcreatefield) | **POST** /pdf/\{name}/fields | Create field.
 *PdfApi* | [**PostDecryptDocumentInStorage**](docs/PdfApi.md#postdecryptdocumentinstorage) | **POST** /pdf/\{name}/decrypt | Decrypt document in storage.
 *PdfApi* | [**PostDocumentImageFooter**](docs/PdfApi.md#postdocumentimagefooter) | **POST** /pdf/\{name}/footer/image | Add document image footer.
@@ -290,6 +294,7 @@ Class | Method | HTTP request | Description
 *PdfApi* | [**PutChangePasswordDocument**](docs/PdfApi.md#putchangepassworddocument) | **PUT** /pdf/changepassword | Change document password from content.
 *PdfApi* | [**PutCheckBoxField**](docs/PdfApi.md#putcheckboxfield) | **PUT** /pdf/\{name}/fields/checkbox/\{fieldName} | Replace document checkbox field
 *PdfApi* | [**PutCircleAnnotation**](docs/PdfApi.md#putcircleannotation) | **PUT** /pdf/\{name}/annotations/circle/\{annotationId} | Replace document circle annotation
+*PdfApi* | [**PutComboBoxField**](docs/PdfApi.md#putcomboboxfield) | **PUT** /pdf/\{name}/fields/combobox/\{fieldName} | Replace document combobox field
 *PdfApi* | [**PutCreateDocument**](docs/PdfApi.md#putcreatedocument) | **PUT** /pdf/\{name} | Create empty document.
 *PdfApi* | [**PutDecryptDocument**](docs/PdfApi.md#putdecryptdocument) | **PUT** /pdf/decrypt | Decrypt document from content.
 *PdfApi* | [**PutEncryptDocument**](docs/PdfApi.md#putencryptdocument) | **PUT** /pdf/encrypt | Encrypt document from content.
@@ -512,6 +517,9 @@ Class | Method | HTTP request | Description
  - [Model.CircleAnnotationResponse](docs/CircleAnnotationResponse.md)
  - [Model.CircleAnnotations](docs/CircleAnnotations.md)
  - [Model.CircleAnnotationsResponse](docs/CircleAnnotationsResponse.md)
+ - [Model.ComboBoxFieldResponse](docs/ComboBoxFieldResponse.md)
+ - [Model.ComboBoxFields](docs/ComboBoxFields.md)
+ - [Model.ComboBoxFieldsResponse](docs/ComboBoxFieldsResponse.md)
  - [Model.Document](docs/Document.md)
  - [Model.DocumentPageResponse](docs/DocumentPageResponse.md)
  - [Model.DocumentPagesResponse](docs/DocumentPagesResponse.md)
@@ -634,6 +642,7 @@ Class | Method | HTTP request | Description
  - [Model.TextHeader](docs/TextHeader.md)
  - [Model.TextStamp](docs/TextStamp.md)
  - [Model.CaretAnnotation](docs/CaretAnnotation.md)
+ - [Model.ComboBoxField](docs/ComboBoxField.md)
  - [Model.CommonFigureAnnotation](docs/CommonFigureAnnotation.md)
  - [Model.FileAttachmentAnnotation](docs/FileAttachmentAnnotation.md)
  - [Model.FreeTextAnnotation](docs/FreeTextAnnotation.md)

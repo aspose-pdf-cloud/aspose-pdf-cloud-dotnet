@@ -107,6 +107,10 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\Color.cs" />
     <Compile Include="Model\ColorDepth.cs" />
     <Compile Include="Model\ColumnAdjustment.cs" />
+    <Compile Include="Model\ComboBoxField.cs" />
+    <Compile Include="Model\ComboBoxFieldResponse.cs" />
+    <Compile Include="Model\ComboBoxFields.cs" />
+    <Compile Include="Model\ComboBoxFieldsResponse.cs" />
     <Compile Include="Model\CommonFigureAnnotation.cs" />
     <Compile Include="Model\CompressionType.cs" />
     <Compile Include="Model\CryptoAlgorithm.cs" />
