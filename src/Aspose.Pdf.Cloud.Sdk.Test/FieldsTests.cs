@@ -80,7 +80,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                     LLY: 200,
                     URX: 200,
                     URY: 400
-                    ));
+                ));
             var response = PdfApi.PostCreateField(name, 1, field, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
@@ -100,8 +100,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 Name: fieldName,
                 Type: FieldType.Text,
                 Values: new List<string> {"Text field updated value."},
-                Rect: new Rectangle(125, 735, 200, 752)                
-                );
+                Rect: new Rectangle(125, 735, 200, 752)
+            );
 
             var response = PdfApi.PutUpdateField(name, fieldName, field, folder: TempFolder);
             Assert.That(response.Field, Is.Not.Null);
@@ -124,9 +124,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                     Name: fieldName,
                     Type: FieldType.Text,
                     Values: new List<string> {"Text field updated value."})
-                
+
             });
-            
+
             var response = PdfApi.PutUpdateFields(name, fields, folder: TempFolder);
             Assert.That(response.Fields, Is.Not.Null);
         }
@@ -169,7 +169,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             const string name = "PdfWithAcroForm.pdf";
             UploadFile(name, name);
 
-            var response = PdfApi.PostFlattenDocument(name, updateAppearances: true, hideButtons: true, folder: TempFolder);
+            var response =
+                PdfApi.PostFlattenDocument(name, updateAppearances: true, hideButtons: true, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
@@ -181,7 +182,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             const string name = "adbe.x509.rsa_sha1.valid.pdf";
             UploadFile(name, name);
-            
+
             var response = PdfApi.GetDocumentSignatureFields(name, folder: TempFolder);
             Assert.That(response.Fields, Is.Not.Null);
         }
@@ -259,7 +260,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             const string name = "4pages.pdf";
             UploadFile(name, name);
-            var textBoxes = new List<TextBoxField> {
+            var textBoxes = new List<TextBoxField>
+            {
                 new TextBoxField(PageIndex: 1, IsGroup: false)
                 {
                     Color = new Color(255, 255, 0, 0),
@@ -356,7 +358,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             const string name = "4pages.pdf";
             UploadFile(name, name);
-            var checkBoxes = new List<CheckBoxField> {
+            var checkBoxes = new List<CheckBoxField>
+            {
                 new CheckBoxField(PageIndex: 1, IsGroup: false, _Checked: true)
                 {
                     Color = new Color(255, 255, 0, 0),
@@ -389,15 +392,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             const string name = "PdfWithAcroForm.pdf";
             UploadFile(name, name);
             var checkBox = new CheckBoxField(PageIndex: 1, IsGroup: false, _Checked: true)
-                {
-                    Color = new Color(255, 255, 0, 0),
-                    Rect = new Rectangle(100, 100, 200, 200),
-                    ExportValue = "true",
-                    PartialName = "testField",
-                    Style = BoxStyle.Star
-                };
+            {
+                Color = new Color(255, 255, 0, 0),
+                Rect = new Rectangle(100, 100, 200, 200),
+                ExportValue = "true",
+                PartialName = "testField",
+                Style = BoxStyle.Star
+            };
 
-            var response = PdfApi.PutCheckBoxField(name, fieldName: "checkboxField", field: checkBox, folder: TempFolder);
+            var response =
+                PdfApi.PutCheckBoxField(name, fieldName: "checkboxField", field: checkBox, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
@@ -450,14 +454,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             const string name = "4pages.pdf";
             UploadFile(name, name);
-            var radioButtons = new List<RadioButtonField> {
+            var radioButtons = new List<RadioButtonField>
+            {
                 new RadioButtonField(PageIndex: 1, IsGroup: false, Selected: 1)
                 {
                     Color = new Color(255, 255, 0, 0),
                     Rect = new Rectangle(100, 100, 160, 140),
                     PartialName = "testField",
                     Style = BoxStyle.Cross,
-                    Margin = new MarginInfo{ Bottom = 0, Left = 0, Right = 0, Top = 0 },
+                    Margin = new MarginInfo {Bottom = 0, Left = 0, Right = 0, Top = 0},
                     RadioButtonOptionsField = new List<RadioButtonOptionField>
                     {
                         new RadioButtonOptionField(PageIndex: 1, IsGroup: false)
@@ -511,9 +516,124 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                     }
                 };
 
-            var response = PdfApi.PutRadioButtonField(name, fieldName: "radiobuttonField", field: field, folder: TempFolder);
+            var response =
+                PdfApi.PutRadioButtonField(name, fieldName: "radiobuttonField", field: field, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        // ComboBoxField
+
+        /// <summary>
+        /// Test GetDocumentComboBoxFieldsTest
+        /// </summary>
+        [Test]
+        public void GetDocumentComboBoxFieldsTest()
+        {
+            //const string name = "4pages.pdf";
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetDocumentComboBoxFields(name, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetPageComboBoxFieldsTest
+        /// </summary>
+        [Test]
+        public void GetPageComboBoxFieldsTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetPageComboBoxFields(name, pageNumber: 1, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetComboBoxFieldTest
+        /// </summary>
+        [Test]
+        public void GetComboBoxFieldTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetComboBoxField(name, fieldName: "comboboxField", folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+
+        /// <summary>
+        /// Test PostComboBoxFieldsTest
+        /// </summary>
+        [Test]
+        public void PostComboBoxFieldsTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+            var comboBoxes = new List<ComboBoxField>
+            {
+                new ComboBoxField(PageIndex: 1, IsGroup: false, Selected: 2)
+                {
+                    Color = new Color(255, 255, 0, 0),
+                    Rect = new Rectangle(100, 100, 160, 140),
+                    PartialName = "testField",
+                    Margin = new MarginInfo {Bottom = 0, Left = 0, Right = 0, Top = 0},
+                    Options = new List<Option>
+                    {
+                        new Option
+                        {
+                            Name = "one",
+                            Value = "one",
+                        },
+                        new Option
+                        {
+                            Name = "two",
+                            Value = "two",
+                            Selected = true,
+                        },
+                    }
+                }
+            };
+
+            var response = PdfApi.PostComboBoxFields(name, comboBoxes, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PutComboBoxFieldTest
+        /// </summary>
+        [Test]
+        public void PutComboBoxFieldTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+            var comboBox = new ComboBoxField(PageIndex: 1, IsGroup: false, Selected: 2)
+            {
+                Color = new Color(255, 255, 0, 0),
+                Rect = new Rectangle(100, 100, 160, 140),
+                PartialName = "testField",
+                Margin = new MarginInfo {Bottom = 0, Left = 0, Right = 0, Top = 0},
+                Options = new List<Option>
+                {
+                    new Option
+                    {
+                        Name = "one",
+                        Value = "one",
+                    },
+                    new Option
+                    {
+                        Name = "two",
+                        Value = "two",
+                        Selected = true,
+                    },
+                }
+            };
+
+
+            var response = PdfApi.PutComboBoxField(name, fieldName: "comboboxField", comboBox, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
     }
-
 }
