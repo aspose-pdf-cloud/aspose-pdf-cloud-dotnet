@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspose.Pdf.Cloud.Sdk.core", "src\Aspose.Pdf.Cloud.Sdk\Aspose.Pdf.Cloud.Sdk.Core.csproj", "{92ED9056-EC18-4591-B2BA-34FBDDC59B93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspose.Pdf.Cloud.Sdk.Core", "src\Aspose.Pdf.Cloud.Sdk\Aspose.Pdf.Cloud.Sdk.Core.csproj", "{92ED9056-EC18-4591-B2BA-34FBDDC59B93}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspose.Pdf.Cloud.Sdk.Test.core", "src\Aspose.Pdf.Cloud.Sdk.Test\Aspose.Pdf.Cloud.Sdk.Test.Core.csproj", "{39E66748-F38A-417C-9398-CB4F0FC0B3E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspose.Pdf.Cloud.Sdk.Test.Core", "src\Aspose.Pdf.Cloud.Sdk.Test\Aspose.Pdf.Cloud.Sdk.Test.Core.csproj", "{39E66748-F38A-417C-9398-CB4F0FC0B3E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
