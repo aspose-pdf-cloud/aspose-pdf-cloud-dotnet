@@ -109,7 +109,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void CreateFolderTest()
         {
-            string path = Path.Combine(TempFolder, "testFolder");
+            string path = $"{TempFolder}/testFolder/test";
             PdfApi.CreateFolder(path);
         }
 
@@ -133,7 +133,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void DeleteFolderTest()
         {
-            string path = Path.Combine(TempFolder, "testFolderRenamed");
+            string path = Path.Combine(TempFolder, "testFolderForDelete");
             PdfApi.CreateFolder(path);
             PdfApi.DeleteFolder(path);
         }
@@ -144,16 +144,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void StorageExistTest()
         {
-            string name = "PDF-CI";
+            string name = "First Storage";
             var response = PdfApi.StorageExists(name);
-            if (PdfApi.Configuration.BasePath.Contains("qa"))
-            {
-                Assert.That(response.Exists, Is.True);
-            }
-            else
-            {
-                Assert.That(response.Exists, Is.False);
-            }
+            Assert.That(response.Exists, Is.True);
         }
 
         /// <summary>

@@ -187,11 +187,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             String contentType)
         {
             path = "/v3.0" + path;
-            var request = new RestRequest(path, method);
-
+            
             // add path parameter, if any
-            foreach(var param in pathParams)
-                request.AddParameter(param.Key, param.Value, ParameterType.UrlSegment);
+            foreach (var param in pathParams)
+            {
+                string val = HttpUtility.UrlEncode(param.Value)
+                    ?.Replace("%2f", "/")
+                    .Replace("%5c", @"\");
+                path = path.Replace("{" + param.Key + "}", val);
+                //request.AddParameter(param.Key, param.Value, ParameterType.UrlSegment);
+            }
+            var request = new RestRequest(path, method);
 
             // add header parameter, if any
             foreach(var param in headerParams)
