@@ -155,6 +155,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             var table = new Table(Rows: new List<Row>());
 
+            table.Margin = new MarginInfo {Left = 50, Bottom = 40, Right = 30, Top = 20};
+
             string colWidths = "";
             for (int c = 0; c < numOfCols; c++)
             {

@@ -193,7 +193,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             {
                 string val = HttpUtility.UrlEncode(param.Value)
                     ?.Replace("%2f", "/")
-                    .Replace("%5c", @"\");
+                    .Replace("%5c", @"\")
+                    .Replace("+", @"%20");
                 path = path.Replace("{" + param.Key + "}", val);
                 //request.AddParameter(param.Key, param.Value, ParameterType.UrlSegment);
             }
