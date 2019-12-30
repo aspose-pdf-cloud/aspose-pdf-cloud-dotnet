@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="FieldsTests.cs">
-//   Copyright (c) 2019 Aspose.PDF Cloud
+//   Copyright (c) 2020 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -268,13 +268,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 {
                     Border = new Border()
                     {
-                        Style = BorderStyle.Solid,
-                        //HCornerRadius = 4,
-                        //VCornerRadius = 2,
-                        Width = 1,
+                        Style = BorderStyle.Underline,
+                        Width = 3,
                         EffectIntensity = 0,
                         Effect = BorderEffect.None,
-                        //Dash = new Dash(On: 3, Off: 6),
+                        Dash = new Dash(On: 3, Off: 6),
                     },
                     Color = new Color(255, 0, 0, 0),
                     Multiline = false,

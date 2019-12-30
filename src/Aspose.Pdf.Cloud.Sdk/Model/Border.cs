@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="Border.cs">
-//   Copyright (c) 2019 Aspose.PDF Cloud
+//   Copyright (c) 2020 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,38 +49,22 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Border" /> class.
         /// </summary>
-        /// <param name="HCornerRadius">Gets or sets horizontal corner radius.</param>
-        /// <param name="VCornerRadius">Gets or sets vertical corner radius.</param>
         /// <param name="Width">Gets or sets border width.</param>
         /// <param name="EffectIntensity">Gets or sets effect intencity. Valid range of value is [0..2].</param>
         /// <param name="Style">Gets or sets border style.</param>
         /// <param name="Effect">Gets or sets border effect.</param>
         /// <param name="Dash">Gets or sets dash pattern.</param>
-        public Border(int? HCornerRadius = default(int?), int? VCornerRadius = default(int?), int? Width = default(int?), int? EffectIntensity = default(int?), BorderStyle Style = default(BorderStyle), BorderEffect Effect = default(BorderEffect), Dash Dash = default(Dash))
+        /// <param name="Color">Gets or sets border color.</param>
+        public Border(int? Width = default(int?), int? EffectIntensity = default(int?), BorderStyle Style = default(BorderStyle), BorderEffect Effect = default(BorderEffect), Dash Dash = default(Dash), Color Color = default(Color))
         {
-            this.HCornerRadius = HCornerRadius;
-            this.VCornerRadius = VCornerRadius;
             this.Width = Width;
             this.EffectIntensity = EffectIntensity;
             this.Style = Style;
             this.Effect = Effect;
             this.Dash = Dash;
+            this.Color = Color;
         }
         
-        /// <summary>
-        /// Gets or sets horizontal corner radius.
-        /// </summary>
-        /// <value>Gets or sets horizontal corner radius.</value>
-        [DataMember(Name="HCornerRadius", EmitDefaultValue=false)]
-        public int? HCornerRadius { get; set; }
-
-        /// <summary>
-        /// Gets or sets vertical corner radius.
-        /// </summary>
-        /// <value>Gets or sets vertical corner radius.</value>
-        [DataMember(Name="VCornerRadius", EmitDefaultValue=false)]
-        public int? VCornerRadius { get; set; }
-
         /// <summary>
         /// Gets or sets border width.
         /// </summary>
@@ -117,6 +101,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public Dash Dash { get; set; }
 
         /// <summary>
+        /// Gets or sets border color.
+        /// </summary>
+        /// <value>Gets or sets border color.</value>
+        [DataMember(Name="Color", EmitDefaultValue=false)]
+        public Color Color { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -124,13 +115,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Border {\n");
-            sb.Append("  HCornerRadius: ").Append(HCornerRadius).Append("\n");
-            sb.Append("  VCornerRadius: ").Append(VCornerRadius).Append("\n");
             sb.Append("  Width: ").Append(Width).Append("\n");
             sb.Append("  EffectIntensity: ").Append(EffectIntensity).Append("\n");
             sb.Append("  Style: ").Append(Style).Append("\n");
             sb.Append("  Effect: ").Append(Effect).Append("\n");
             sb.Append("  Dash: ").Append(Dash).Append("\n");
+            sb.Append("  Color: ").Append(Color).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -168,16 +158,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
 
             return 
                 (
-                    this.HCornerRadius == other.HCornerRadius ||
-                    this.HCornerRadius != null &&
-                    this.HCornerRadius.Equals(other.HCornerRadius)
-                ) && 
-                (
-                    this.VCornerRadius == other.VCornerRadius ||
-                    this.VCornerRadius != null &&
-                    this.VCornerRadius.Equals(other.VCornerRadius)
-                ) && 
-                (
                     this.Width == other.Width ||
                     this.Width != null &&
                     this.Width.Equals(other.Width)
@@ -201,6 +181,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Dash == other.Dash ||
                     this.Dash != null &&
                     this.Dash.Equals(other.Dash)
+                ) && 
+                (
+                    this.Color == other.Color ||
+                    this.Color != null &&
+                    this.Color.Equals(other.Color)
                 );
         }
 
@@ -215,10 +200,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.HCornerRadius != null)
-                    hash = hash * 59 + this.HCornerRadius.GetHashCode();
-                if (this.VCornerRadius != null)
-                    hash = hash * 59 + this.VCornerRadius.GetHashCode();
                 if (this.Width != null)
                     hash = hash * 59 + this.Width.GetHashCode();
                 if (this.EffectIntensity != null)
@@ -229,6 +210,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Effect.GetHashCode();
                 if (this.Dash != null)
                     hash = hash * 59 + this.Dash.GetHashCode();
+                if (this.Color != null)
+                    hash = hash * 59 + this.Color.GetHashCode();
                 return hash;
             }
         }

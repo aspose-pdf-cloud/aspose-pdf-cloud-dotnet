@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Aspose Pty Ltd")]
 [assembly: AssemblyProduct("Aspose.PDF Cloud")]
-[assembly: AssemblyCopyright("Copyright (c) 2019 Aspose.PDF Cloud")]
+[assembly: AssemblyCopyright("Copyright (c) 2020 Aspose.PDF Cloud")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
