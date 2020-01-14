@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="RedactionAnnotationResponse.cs">
-//   Copyright (c) 2019 Aspose.PDF Cloud
+//   Copyright (c) 2020 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy

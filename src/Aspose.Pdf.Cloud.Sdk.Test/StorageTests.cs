@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="MergeTests.cs">
-//   Copyright (c) 2019 Aspose.PDF Cloud
+//   Copyright (c) 2020 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,9 +23,12 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
+using Aspose.Pdf.Cloud.Sdk.Client;
 using Aspose.Pdf.Cloud.Sdk.Model;
 using NUnit.Framework;
 
@@ -107,10 +110,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         /// Test PutCreateFolder
         /// </summary>
         [Test]
-        public void CreateFolderTest()
+        public async Task CreateFolderTest()
         {
-            string path = $"{TempFolder}/testFolder/test";
-            PdfApi.CreateFolder(path);
+            string path = $"{TempFolder}/testFolder/test1";
+            await PdfApi.CreateFolderAsync(path);
+            Assert.IsTrue(true);
         }
 
         /// <summary>

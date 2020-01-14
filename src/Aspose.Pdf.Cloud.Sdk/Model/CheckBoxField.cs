@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="CheckBoxField.cs">
-//   Copyright (c) 2019 Aspose.PDF Cloud
+//   Copyright (c) 2020 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,7 +62,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Height">Gets or sets height of the field.</param>
         /// <param name="Width">Gets or sets width of the field.</param>
         /// <param name="ZIndex">Z index.</param>
-        /// <param name="IsGroup">Is group. (required)</param>
+        /// <param name="IsGroup">Is group.</param>
         /// <param name="Parent">Gets field parent.</param>
         /// <param name="IsSharedField">Property for Generator support. Used when field is added to header or footer. If true, this field will created once and it&#39;s appearance will be visible on all pages of the document. If false, separated field will be created for every document page.</param>
         /// <param name="Flags">Gets Flags of the field.</param>
@@ -72,12 +72,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Highlighting">Field highlighting mode.</param>
         /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the field.</param>
         /// <param name="VerticalAlignment">Gets VerticalAlignment of the field.</param>
+        /// <param name="Border">Gets or sets annotation border characteristics.</param>
         /// <param name="AllowedStates">Returns list of allowed states.</param>
         /// <param name="Style">Gets or sets style of check box.</param>
         /// <param name="ActiveState">Gets or sets current annotation appearance state.</param>
         /// <param name="_Checked">Gets or sets state of check box. (required)</param>
         /// <param name="ExportValue">Gets or sets export value of CheckBox field.</param>
-        public CheckBoxField(List<Link> Links = default(List<Link>), string PartialName = default(string), Rectangle Rect = default(Rectangle), string Value = default(string), int? PageIndex = default(int?), double? Height = default(double?), double? Width = default(double?), int? ZIndex = default(int?), bool? IsGroup = default(bool?), FormField Parent = default(FormField), bool? IsSharedField = default(bool?), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), Color Color = default(Color), string Contents = default(string), MarginInfo Margin = default(MarginInfo), LinkHighlightingMode Highlighting = default(LinkHighlightingMode), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), List<string> AllowedStates = default(List<string>), BoxStyle Style = default(BoxStyle), string ActiveState = default(string), bool? _Checked = default(bool?), string ExportValue = default(string))
+        public CheckBoxField(List<Link> Links = default(List<Link>), string PartialName = default(string), Rectangle Rect = default(Rectangle), string Value = default(string), int? PageIndex = default(int?), double? Height = default(double?), double? Width = default(double?), int? ZIndex = default(int?), bool? IsGroup = default(bool?), FormField Parent = default(FormField), bool? IsSharedField = default(bool?), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), Color Color = default(Color), string Contents = default(string), MarginInfo Margin = default(MarginInfo), LinkHighlightingMode Highlighting = default(LinkHighlightingMode), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), Border Border = default(Border), List<string> AllowedStates = default(List<string>), BoxStyle Style = default(BoxStyle), string ActiveState = default(string), bool? _Checked = default(bool?), string ExportValue = default(string))
         {
             // to ensure "PageIndex" is required (not null)
             if (PageIndex == null)
@@ -87,15 +88,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             else
             {
                 this.PageIndex = PageIndex;
-            }
-            // to ensure "IsGroup" is required (not null)
-            if (IsGroup == null)
-            {
-                throw new InvalidDataException("IsGroup is a required property for CheckBoxField and cannot be null");
-            }
-            else
-            {
-                this.IsGroup = IsGroup;
             }
             // to ensure "_Checked" is required (not null)
             if (_Checked == null)
@@ -113,6 +105,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Height = Height;
             this.Width = Width;
             this.ZIndex = ZIndex;
+            this.IsGroup = IsGroup;
             this.Parent = Parent;
             this.IsSharedField = IsSharedField;
             this.Flags = Flags;
@@ -122,6 +115,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Highlighting = Highlighting;
             this.HorizontalAlignment = HorizontalAlignment;
             this.VerticalAlignment = VerticalAlignment;
+            this.Border = Border;
             this.AllowedStates = AllowedStates;
             this.Style = Style;
             this.ActiveState = ActiveState;
@@ -255,6 +249,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public VerticalAlignment VerticalAlignment { get; set; }
 
         /// <summary>
+        /// Gets or sets annotation border characteristics.
+        /// </summary>
+        /// <value>Gets or sets annotation border characteristics.</value>
+        [DataMember(Name="Border", EmitDefaultValue=false)]
+        public Border Border { get; set; }
+
+        /// <summary>
         /// Returns list of allowed states.
         /// </summary>
         /// <value>Returns list of allowed states.</value>
@@ -315,6 +316,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  Highlighting: ").Append(Highlighting).Append("\n");
             sb.Append("  HorizontalAlignment: ").Append(HorizontalAlignment).Append("\n");
             sb.Append("  VerticalAlignment: ").Append(VerticalAlignment).Append("\n");
+            sb.Append("  Border: ").Append(Border).Append("\n");
             sb.Append("  AllowedStates: ").Append(AllowedStates).Append("\n");
             sb.Append("  Style: ").Append(Style).Append("\n");
             sb.Append("  ActiveState: ").Append(ActiveState).Append("\n");
@@ -447,6 +449,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.VerticalAlignment.Equals(other.VerticalAlignment)
                 ) && 
                 (
+                    this.Border == other.Border ||
+                    this.Border != null &&
+                    this.Border.Equals(other.Border)
+                ) && 
+                (
                     this.AllowedStates == other.AllowedStates ||
                     this.AllowedStates != null &&
                     this.AllowedStates.SequenceEqual(other.AllowedStates)
@@ -520,6 +527,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.HorizontalAlignment.GetHashCode();
                 if (this.VerticalAlignment != null)
                     hash = hash * 59 + this.VerticalAlignment.GetHashCode();
+                if (this.Border != null)
+                    hash = hash * 59 + this.Border.GetHashCode();
                 if (this.AllowedStates != null)
                     hash = hash * 59 + this.AllowedStates.GetHashCode();
                 if (this.Style != null)

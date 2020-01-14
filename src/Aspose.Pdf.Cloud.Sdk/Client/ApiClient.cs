@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="ApiClient.cs">
-//   Copyright (c) 2019 Aspose.PDF Cloud
+//   Copyright (c) 2020 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -193,7 +193,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             {
                 string val = HttpUtility.UrlEncode(param.Value)
                     ?.Replace("%2f", "/")
-                    .Replace("%5c", @"\");
+                    .Replace("%5c", @"\")
+                    .Replace("+", @"%20");
                 path = path.Replace("{" + param.Key + "}", val);
                 //request.AddParameter(param.Key, param.Value, ParameterType.UrlSegment);
             }

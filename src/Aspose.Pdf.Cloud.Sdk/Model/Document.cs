@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="Document.cs">
-//   Copyright (c) 2019 Aspose.PDF Cloud
+//   Copyright (c) 2020 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -51,11 +51,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Links">Link to the document.</param>
         /// <param name="DocumentProperties">Document properties.</param>
+        /// <param name="DisplayProperties">Document display properties.</param>
         /// <param name="Pages">Document pages.</param>
-        public Document(List<Link> Links = default(List<Link>), DocumentProperties DocumentProperties = default(DocumentProperties), Pages Pages = default(Pages))
+        public Document(List<Link> Links = default(List<Link>), DocumentProperties DocumentProperties = default(DocumentProperties), DisplayProperties DisplayProperties = default(DisplayProperties), Pages Pages = default(Pages))
         {
             this.Links = Links;
             this.DocumentProperties = DocumentProperties;
+            this.DisplayProperties = DisplayProperties;
             this.Pages = Pages;
         }
         
@@ -74,6 +76,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public DocumentProperties DocumentProperties { get; set; }
 
         /// <summary>
+        /// Document display properties.
+        /// </summary>
+        /// <value>Document display properties.</value>
+        [DataMember(Name="DisplayProperties", EmitDefaultValue=false)]
+        public DisplayProperties DisplayProperties { get; set; }
+
+        /// <summary>
         /// Document pages.
         /// </summary>
         /// <value>Document pages.</value>
@@ -90,6 +99,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("class Document {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  DocumentProperties: ").Append(DocumentProperties).Append("\n");
+            sb.Append("  DisplayProperties: ").Append(DisplayProperties).Append("\n");
             sb.Append("  Pages: ").Append(Pages).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -138,6 +148,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.DocumentProperties.Equals(other.DocumentProperties)
                 ) && 
                 (
+                    this.DisplayProperties == other.DisplayProperties ||
+                    this.DisplayProperties != null &&
+                    this.DisplayProperties.Equals(other.DisplayProperties)
+                ) && 
+                (
                     this.Pages == other.Pages ||
                     this.Pages != null &&
                     this.Pages.Equals(other.Pages)
@@ -159,6 +174,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Links.GetHashCode();
                 if (this.DocumentProperties != null)
                     hash = hash * 59 + this.DocumentProperties.GetHashCode();
+                if (this.DisplayProperties != null)
+                    hash = hash * 59 + this.DisplayProperties.GetHashCode();
                 if (this.Pages != null)
                     hash = hash * 59 + this.Pages.GetHashCode();
                 return hash;

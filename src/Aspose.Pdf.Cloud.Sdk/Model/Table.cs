@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="Table.cs">
-//   Copyright (c) 2019 Aspose.PDF Cloud
+//   Copyright (c) 2020 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -63,6 +63,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="DefaultCellTextState">Gets or sets the default cell text state.</param>
         /// <param name="DefaultCellPadding">Gets or sets the default cell padding.</param>
         /// <param name="Border">Gets or sets the border.</param>
+        /// <param name="Margin">Gets or sets a outer margin for paragraph (for pdf generation)</param>
         /// <param name="Rows">Sets the rows of the table. (required)</param>
         /// <param name="DefaultColumnWidth">Gets default cell border;</param>
         /// <param name="DefaultCellBorder">Gets default cell border;</param>
@@ -77,7 +78,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="IsBordersIncluded">Gets or sets border included in column widhts.</param>
         /// <param name="ColumnAdjustment">Gets or sets the table column adjustment.</param>
         /// <param name="ZIndex">Gets ZIndex of the annotation.</param>
-        public Table(List<Link> Links = default(List<Link>), HorizontalAlignment Alignment = default(HorizontalAlignment), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), double? Top = default(double?), double? Left = default(double?), TextState DefaultCellTextState = default(TextState), MarginInfo DefaultCellPadding = default(MarginInfo), BorderInfo Border = default(BorderInfo), List<Row> Rows = default(List<Row>), string DefaultColumnWidth = default(string), BorderInfo DefaultCellBorder = default(BorderInfo), TableBroken Broken = default(TableBroken), string ColumnWidths = default(string), int? RepeatingRowsCount = default(int?), int? RepeatingColumnsCount = default(int?), TextState RepeatingRowsStyle = default(TextState), BorderCornerStyle CornerStyle = default(BorderCornerStyle), TextRect BreakText = default(TextRect), Color BackgroundColor = default(Color), bool? IsBordersIncluded = default(bool?), ColumnAdjustment ColumnAdjustment = default(ColumnAdjustment), int? ZIndex = default(int?))
+        public Table(List<Link> Links = default(List<Link>), HorizontalAlignment Alignment = default(HorizontalAlignment), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), double? Top = default(double?), double? Left = default(double?), TextState DefaultCellTextState = default(TextState), MarginInfo DefaultCellPadding = default(MarginInfo), BorderInfo Border = default(BorderInfo), MarginInfo Margin = default(MarginInfo), List<Row> Rows = default(List<Row>), string DefaultColumnWidth = default(string), BorderInfo DefaultCellBorder = default(BorderInfo), TableBroken Broken = default(TableBroken), string ColumnWidths = default(string), int? RepeatingRowsCount = default(int?), int? RepeatingColumnsCount = default(int?), TextState RepeatingRowsStyle = default(TextState), BorderCornerStyle CornerStyle = default(BorderCornerStyle), TextRect BreakText = default(TextRect), Color BackgroundColor = default(Color), bool? IsBordersIncluded = default(bool?), ColumnAdjustment ColumnAdjustment = default(ColumnAdjustment), int? ZIndex = default(int?))
         {
             // to ensure "Rows" is required (not null)
             if (Rows == null)
@@ -97,6 +98,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.DefaultCellTextState = DefaultCellTextState;
             this.DefaultCellPadding = DefaultCellPadding;
             this.Border = Border;
+            this.Margin = Margin;
             this.DefaultColumnWidth = DefaultColumnWidth;
             this.DefaultCellBorder = DefaultCellBorder;
             this.Broken = Broken;
@@ -174,6 +176,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <value>Gets or sets the border.</value>
         [DataMember(Name="Border", EmitDefaultValue=false)]
         public BorderInfo Border { get; set; }
+
+        /// <summary>
+        /// Gets or sets a outer margin for paragraph (for pdf generation)
+        /// </summary>
+        /// <value>Gets or sets a outer margin for paragraph (for pdf generation)</value>
+        [DataMember(Name="Margin", EmitDefaultValue=false)]
+        public MarginInfo Margin { get; set; }
 
         /// <summary>
         /// Sets the rows of the table.
@@ -290,6 +299,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  DefaultCellTextState: ").Append(DefaultCellTextState).Append("\n");
             sb.Append("  DefaultCellPadding: ").Append(DefaultCellPadding).Append("\n");
             sb.Append("  Border: ").Append(Border).Append("\n");
+            sb.Append("  Margin: ").Append(Margin).Append("\n");
             sb.Append("  Rows: ").Append(Rows).Append("\n");
             sb.Append("  DefaultColumnWidth: ").Append(DefaultColumnWidth).Append("\n");
             sb.Append("  DefaultCellBorder: ").Append(DefaultCellBorder).Append("\n");
@@ -384,6 +394,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Border == other.Border ||
                     this.Border != null &&
                     this.Border.Equals(other.Border)
+                ) && 
+                (
+                    this.Margin == other.Margin ||
+                    this.Margin != null &&
+                    this.Margin.Equals(other.Margin)
                 ) && 
                 (
                     this.Rows == other.Rows ||
@@ -486,6 +501,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.DefaultCellPadding.GetHashCode();
                 if (this.Border != null)
                     hash = hash * 59 + this.Border.GetHashCode();
+                if (this.Margin != null)
+                    hash = hash * 59 + this.Margin.GetHashCode();
                 if (this.Rows != null)
                     hash = hash * 59 + this.Rows.GetHashCode();
                 if (this.DefaultColumnWidth != null)

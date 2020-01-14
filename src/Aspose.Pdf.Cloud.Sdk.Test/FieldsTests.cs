@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="FieldsTests.cs">
-//   Copyright (c) 2019 Aspose.PDF Cloud
+//   Copyright (c) 2020 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -247,7 +247,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             const string name = "FormDataTextBox.pdf";
             UploadFile(name, name);
+            //const string name = "4pages.pdf";
 
+            //var response = PdfApi.GetTextBoxField(name, fieldName: "testField", folder: TempFolder);
             var response = PdfApi.GetTextBoxField(name, fieldName: "Petitioner", folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
@@ -264,12 +266,26 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             {
                 new TextBoxField(PageIndex: 1, IsGroup: false)
                 {
-                    Color = new Color(255, 255, 0, 0),
-                    Multiline = true,
+                    Border = new Border()
+                    {
+                        Style = BorderStyle.Underline,
+                        Width = 3,
+                        EffectIntensity = 0,
+                        Effect = BorderEffect.None,
+                        Dash = new Dash(On: 3, Off: 6),
+                    },
+                    Color = new Color(255, 0, 0, 0),
+                    Multiline = false,
+                    SpellCheck = true,
+                    Scrollable = true,
                     MaxLen = 100,
-                    Rect = new Rectangle(100, 100, 500, 200),
-                    Value = "Page 1\nValue",
+                    Rect = new Rectangle(35.5669, 650.061, 290.567, 671.181),
+                    Value = null,
                     PartialName = "testField",
+                    Highlighting = LinkHighlightingMode.Invert,
+                    HorizontalAlignment = HorizontalAlignment.Left,
+                    VerticalAlignment = VerticalAlignment.Top,
+
                 },
                 new TextBoxField(PageIndex: 2, IsGroup: false)
                 {
@@ -633,6 +649,143 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
 
             var response = PdfApi.PutComboBoxField(name, fieldName: "comboboxField", comboBox, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+
+        // ListBoxField
+
+        /// <summary>
+        /// Test GetDocumentListBoxFieldsTest
+        /// </summary>
+        [Test]
+        public void GetDocumentListBoxFieldsTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetDocumentListBoxFields(name, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetPageListBoxFieldsTest
+        /// </summary>
+        [Test]
+        public void GetPageListBoxFieldsTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetPageListBoxFields(name, pageNumber: 1, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test GetListBoxFieldTest
+        /// </summary>
+        [Test]
+        public void GetListBoxFieldTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+
+            var response = PdfApi.GetListBoxField(name, fieldName: "listboxField", folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+
+        /// <summary>
+        /// Test PostListBoxFieldsTest
+        /// </summary>
+        [Test]
+        public void PostListBoxFieldsTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+            var listBoxes = new List<ListBoxField>
+            {
+                new ListBoxField(PageIndex: 1)
+                {
+                    SelectedItems = new List<int?> {1, 4},
+                    MultiSelect = true,
+                    Color = new Color(255, 255, 0, 0),
+                    Rect = new Rectangle(100, 100, 180, 180),
+                    PartialName = "testField",
+                    Margin = new MarginInfo {Bottom = 0, Left = 0, Right = 0, Top = 0},
+                    Options = new List<Option>
+                    {
+                        new Option
+                        {
+                            Name = "one",
+                            Value = "one",
+                        },
+                        new Option
+                        {
+                            Name = "two",
+                            Value = "two",
+                        },
+                        new Option
+                        {
+                            Name = "three",
+                            Value = "three",
+                        },
+                        new Option
+                        {
+                            Name = "four",
+                            Value = "four",
+                        },
+                    }
+                }
+            };
+
+            var response = PdfApi.PostListBoxFields(name, listBoxes, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PutListBoxFieldTest
+        /// </summary>
+        [Test]
+        public void PutListBoxFieldTest()
+        {
+            const string name = "PdfWithAcroForm.pdf";
+            UploadFile(name, name);
+            var listBox = new ListBoxField(PageIndex: 1)
+            {
+                SelectedItems = new List<int?> { 1, 4 },
+                MultiSelect = true,
+                Color = new Color(255, 255, 0, 0),
+                Rect = new Rectangle(100, 100, 180, 180),
+                PartialName = "testField",
+                Margin = new MarginInfo { Bottom = 0, Left = 0, Right = 0, Top = 0 },
+                Options = new List<Option>
+                {
+                    new Option
+                    {
+                        Name = "one",
+                        Value = "one",
+                    },
+                    new Option
+                    {
+                        Name = "two",
+                        Value = "two",
+                    },
+                    new Option
+                    {
+                        Name = "three",
+                        Value = "three",
+                    },
+                    new Option
+                    {
+                        Name = "four",
+                        Value = "four",
+                    },
+                }
+            };
+
+
+            var response = PdfApi.PutListBoxField(name, fieldName: "listboxField", listBox, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
     }

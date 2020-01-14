@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="DocumentTests.cs">
-//   Copyright (c) 2019 Aspose.PDF Cloud
+//   Copyright (c) 2020 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,10 +23,12 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using Aspose.Pdf.Cloud.Sdk.Model;
+using Newtonsoft.Json;
 using NUnit.Framework;
 
 namespace Aspose.Pdf.Cloud.Sdk.Test
@@ -95,6 +97,83 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             const string name = "empty.pdf";
             var response = PdfApi.PutCreateDocument(name, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PosttCreateDocument
+        /// </summary>
+        [Test]
+        public void PostCreateEmptyDocumentTest()
+        {
+            const string name = "empty_post.pdf";
+            DocumentConfig config = new DocumentConfig(PagesCount: 2)
+            {
+                DocumentProperties = new DocumentProperties()
+                {
+                    List = new List<DocumentProperty>
+                    {
+                        new DocumentProperty(BuiltIn: false)
+                        {
+                            Name = "prop1",
+                            Value = "Val1"
+                        }
+                    }
+                },
+                DisplayProperties = new DisplayProperties()
+                {
+                    CenterWindow = true,
+                    HideMenuBar = true,
+                },
+                DefaultPageConfig = new DefaultPageConfig()
+                {
+                    Height = 100,
+                    Width = 100
+                },
+            };
+            var response = PdfApi.PostCreateDocument(name, config, folder: TempFolder);
+
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+
+        /// <summary>
+        /// Test GetDocumentDisplayProperties
+        /// </summary>
+        [Test]
+        public void GetDocumentDisplayPropertiesTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            var result = PdfApi.GetDocumentDisplayProperties(name, folder: TempFolder);
+            Assert.That(result.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PutDocumentDisplayProperties
+        /// </summary>
+        [Test]
+        public void PutDocumentDisplayPropertiesTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            DisplayProperties displayProperties = new DisplayProperties()
+            {
+                CenterWindow = true,
+                Direction = Direction.L2R,
+                DisplayDocTitle = true,
+                HideMenuBar = true,
+                HideToolBar = true,
+                HideWindowUI = true,
+                NonFullScreenPageMode = PageMode.UseNone,
+                PageLayout = PageLayout.TwoPageLeft,
+                PageMode = PageMode.UseOC,
+            };
+
+            var result = PdfApi.PutDocumentDisplayProperties(name, displayProperties, folder: TempFolder);
+
+            Assert.That(result.Code, Is.EqualTo(200));
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="ChoiceField.cs">
-//   Copyright (c) 2019 Aspose.PDF Cloud
+//   Copyright (c) 2020 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,7 +62,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Height">Gets or sets height of the field.</param>
         /// <param name="Width">Gets or sets width of the field.</param>
         /// <param name="ZIndex">Z index.</param>
-        /// <param name="IsGroup">Is group. (required)</param>
+        /// <param name="IsGroup">Is group.</param>
         /// <param name="Parent">Gets field parent.</param>
         /// <param name="IsSharedField">Property for Generator support. Used when field is added to header or footer. If true, this field will created once and it&#39;s appearance will be visible on all pages of the document. If false, separated field will be created for every document page.</param>
         /// <param name="Flags">Gets Flags of the field.</param>
@@ -72,8 +72,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Highlighting">Field highlighting mode.</param>
         /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the field.</param>
         /// <param name="VerticalAlignment">Gets VerticalAlignment of the field.</param>
+        /// <param name="Border">Gets or sets annotation border characteristics.</param>
         /// <param name="MultiSelect">Gets or sets multiselection flag.</param>
-        public ChoiceField(List<Link> Links = default(List<Link>), string PartialName = default(string), Rectangle Rect = default(Rectangle), string Value = default(string), int? PageIndex = default(int?), double? Height = default(double?), double? Width = default(double?), int? ZIndex = default(int?), bool? IsGroup = default(bool?), FormField Parent = default(FormField), bool? IsSharedField = default(bool?), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), Color Color = default(Color), string Contents = default(string), MarginInfo Margin = default(MarginInfo), LinkHighlightingMode Highlighting = default(LinkHighlightingMode), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), bool? MultiSelect = default(bool?))
+        /// <param name="Selected">Gets or sets index of selected item. Numbering of items is started from 1.</param>
+        public ChoiceField(List<Link> Links = default(List<Link>), string PartialName = default(string), Rectangle Rect = default(Rectangle), string Value = default(string), int? PageIndex = default(int?), double? Height = default(double?), double? Width = default(double?), int? ZIndex = default(int?), bool? IsGroup = default(bool?), FormField Parent = default(FormField), bool? IsSharedField = default(bool?), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), Color Color = default(Color), string Contents = default(string), MarginInfo Margin = default(MarginInfo), LinkHighlightingMode Highlighting = default(LinkHighlightingMode), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), Border Border = default(Border), bool? MultiSelect = default(bool?), int? Selected = default(int?))
         {
             // to ensure "PageIndex" is required (not null)
             if (PageIndex == null)
@@ -84,15 +86,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 this.PageIndex = PageIndex;
             }
-            // to ensure "IsGroup" is required (not null)
-            if (IsGroup == null)
-            {
-                throw new InvalidDataException("IsGroup is a required property for ChoiceField and cannot be null");
-            }
-            else
-            {
-                this.IsGroup = IsGroup;
-            }
             this.Links = Links;
             this.PartialName = PartialName;
             this.Rect = Rect;
@@ -100,6 +93,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Height = Height;
             this.Width = Width;
             this.ZIndex = ZIndex;
+            this.IsGroup = IsGroup;
             this.Parent = Parent;
             this.IsSharedField = IsSharedField;
             this.Flags = Flags;
@@ -109,7 +103,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Highlighting = Highlighting;
             this.HorizontalAlignment = HorizontalAlignment;
             this.VerticalAlignment = VerticalAlignment;
+            this.Border = Border;
             this.MultiSelect = MultiSelect;
+            this.Selected = Selected;
         }
         
         /// <summary>
@@ -239,11 +235,25 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public VerticalAlignment VerticalAlignment { get; set; }
 
         /// <summary>
+        /// Gets or sets annotation border characteristics.
+        /// </summary>
+        /// <value>Gets or sets annotation border characteristics.</value>
+        [DataMember(Name="Border", EmitDefaultValue=false)]
+        public Border Border { get; set; }
+
+        /// <summary>
         /// Gets or sets multiselection flag.
         /// </summary>
         /// <value>Gets or sets multiselection flag.</value>
         [DataMember(Name="MultiSelect", EmitDefaultValue=false)]
         public bool? MultiSelect { get; set; }
+
+        /// <summary>
+        /// Gets or sets index of selected item. Numbering of items is started from 1.
+        /// </summary>
+        /// <value>Gets or sets index of selected item. Numbering of items is started from 1.</value>
+        [DataMember(Name="Selected", EmitDefaultValue=false)]
+        public int? Selected { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -271,7 +281,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  Highlighting: ").Append(Highlighting).Append("\n");
             sb.Append("  HorizontalAlignment: ").Append(HorizontalAlignment).Append("\n");
             sb.Append("  VerticalAlignment: ").Append(VerticalAlignment).Append("\n");
+            sb.Append("  Border: ").Append(Border).Append("\n");
             sb.Append("  MultiSelect: ").Append(MultiSelect).Append("\n");
+            sb.Append("  Selected: ").Append(Selected).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -399,9 +411,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.VerticalAlignment.Equals(other.VerticalAlignment)
                 ) && 
                 (
+                    this.Border == other.Border ||
+                    this.Border != null &&
+                    this.Border.Equals(other.Border)
+                ) && 
+                (
                     this.MultiSelect == other.MultiSelect ||
                     this.MultiSelect != null &&
                     this.MultiSelect.Equals(other.MultiSelect)
+                ) && 
+                (
+                    this.Selected == other.Selected ||
+                    this.Selected != null &&
+                    this.Selected.Equals(other.Selected)
                 );
         }
 
@@ -452,8 +474,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.HorizontalAlignment.GetHashCode();
                 if (this.VerticalAlignment != null)
                     hash = hash * 59 + this.VerticalAlignment.GetHashCode();
+                if (this.Border != null)
+                    hash = hash * 59 + this.Border.GetHashCode();
                 if (this.MultiSelect != null)
                     hash = hash * 59 + this.MultiSelect.GetHashCode();
+                if (this.Selected != null)
+                    hash = hash * 59 + this.Selected.GetHashCode();
                 return hash;
             }
         }

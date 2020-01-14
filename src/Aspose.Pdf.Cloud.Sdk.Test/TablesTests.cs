@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="ScreenAnnotationsTests.cs">
-//   Copyright (c) 2019 Aspose.PDF Cloud
+//   Copyright (c) 2020 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -154,6 +154,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             int numOfRows = 5;
 
             var table = new Table(Rows: new List<Row>());
+
+            table.Margin = new MarginInfo {Left = 50, Bottom = 40, Right = 30, Top = 20};
 
             string colWidths = "";
             for (int c = 0; c < numOfCols; c++)

@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="TextBoxField.cs">
-//   Copyright (c) 2019 Aspose.PDF Cloud
+//   Copyright (c) 2020 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -62,7 +62,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Height">Gets or sets height of the field.</param>
         /// <param name="Width">Gets or sets width of the field.</param>
         /// <param name="ZIndex">Z index.</param>
-        /// <param name="IsGroup">Is group. (required)</param>
+        /// <param name="IsGroup">Is group.</param>
         /// <param name="Parent">Gets field parent.</param>
         /// <param name="IsSharedField">Property for Generator support. Used when field is added to header or footer. If true, this field will created once and it&#39;s appearance will be visible on all pages of the document. If false, separated field will be created for every document page.</param>
         /// <param name="Flags">Gets Flags of the field.</param>
@@ -72,13 +72,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Highlighting">Field highlighting mode.</param>
         /// <param name="HorizontalAlignment">Gets HorizontalAlignment of the field.</param>
         /// <param name="VerticalAlignment">Gets VerticalAlignment of the field.</param>
+        /// <param name="Border">Gets or sets annotation border characteristics.</param>
         /// <param name="Multiline">Gets or sets multiline flag of the field. If Multiline is true field can contain multiple lines of text.</param>
         /// <param name="SpellCheck">Gets or sets spellcheck flag for field. If true field shall be spell checked.</param>
         /// <param name="Scrollable">Gets or sets scrollable flag of field. If true field can be scrolled.</param>
         /// <param name="ForceCombs">Gets or sets flag which indicates is field divided into spaced positions.</param>
         /// <param name="MaxLen">Gets or sets maximum length of text in the field.</param>
         /// <param name="Barcode">Adds barcode 128 into the field. Field value will be changed onto the code and field become read only.</param>
-        public TextBoxField(List<Link> Links = default(List<Link>), string PartialName = default(string), Rectangle Rect = default(Rectangle), string Value = default(string), int? PageIndex = default(int?), double? Height = default(double?), double? Width = default(double?), int? ZIndex = default(int?), bool? IsGroup = default(bool?), FormField Parent = default(FormField), bool? IsSharedField = default(bool?), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), Color Color = default(Color), string Contents = default(string), MarginInfo Margin = default(MarginInfo), LinkHighlightingMode Highlighting = default(LinkHighlightingMode), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), bool? Multiline = default(bool?), bool? SpellCheck = default(bool?), bool? Scrollable = default(bool?), bool? ForceCombs = default(bool?), int? MaxLen = default(int?), string Barcode = default(string))
+        public TextBoxField(List<Link> Links = default(List<Link>), string PartialName = default(string), Rectangle Rect = default(Rectangle), string Value = default(string), int? PageIndex = default(int?), double? Height = default(double?), double? Width = default(double?), int? ZIndex = default(int?), bool? IsGroup = default(bool?), FormField Parent = default(FormField), bool? IsSharedField = default(bool?), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), Color Color = default(Color), string Contents = default(string), MarginInfo Margin = default(MarginInfo), LinkHighlightingMode Highlighting = default(LinkHighlightingMode), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), Border Border = default(Border), bool? Multiline = default(bool?), bool? SpellCheck = default(bool?), bool? Scrollable = default(bool?), bool? ForceCombs = default(bool?), int? MaxLen = default(int?), string Barcode = default(string))
         {
             // to ensure "PageIndex" is required (not null)
             if (PageIndex == null)
@@ -89,15 +90,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 this.PageIndex = PageIndex;
             }
-            // to ensure "IsGroup" is required (not null)
-            if (IsGroup == null)
-            {
-                throw new InvalidDataException("IsGroup is a required property for TextBoxField and cannot be null");
-            }
-            else
-            {
-                this.IsGroup = IsGroup;
-            }
             this.Links = Links;
             this.PartialName = PartialName;
             this.Rect = Rect;
@@ -105,6 +97,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Height = Height;
             this.Width = Width;
             this.ZIndex = ZIndex;
+            this.IsGroup = IsGroup;
             this.Parent = Parent;
             this.IsSharedField = IsSharedField;
             this.Flags = Flags;
@@ -114,6 +107,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Highlighting = Highlighting;
             this.HorizontalAlignment = HorizontalAlignment;
             this.VerticalAlignment = VerticalAlignment;
+            this.Border = Border;
             this.Multiline = Multiline;
             this.SpellCheck = SpellCheck;
             this.Scrollable = Scrollable;
@@ -249,6 +243,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public VerticalAlignment VerticalAlignment { get; set; }
 
         /// <summary>
+        /// Gets or sets annotation border characteristics.
+        /// </summary>
+        /// <value>Gets or sets annotation border characteristics.</value>
+        [DataMember(Name="Border", EmitDefaultValue=false)]
+        public Border Border { get; set; }
+
+        /// <summary>
         /// Gets or sets multiline flag of the field. If Multiline is true field can contain multiple lines of text.
         /// </summary>
         /// <value>Gets or sets multiline flag of the field. If Multiline is true field can contain multiple lines of text.</value>
@@ -316,6 +317,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  Highlighting: ").Append(Highlighting).Append("\n");
             sb.Append("  HorizontalAlignment: ").Append(HorizontalAlignment).Append("\n");
             sb.Append("  VerticalAlignment: ").Append(VerticalAlignment).Append("\n");
+            sb.Append("  Border: ").Append(Border).Append("\n");
             sb.Append("  Multiline: ").Append(Multiline).Append("\n");
             sb.Append("  SpellCheck: ").Append(SpellCheck).Append("\n");
             sb.Append("  Scrollable: ").Append(Scrollable).Append("\n");
@@ -449,6 +451,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.VerticalAlignment.Equals(other.VerticalAlignment)
                 ) && 
                 (
+                    this.Border == other.Border ||
+                    this.Border != null &&
+                    this.Border.Equals(other.Border)
+                ) && 
+                (
                     this.Multiline == other.Multiline ||
                     this.Multiline != null &&
                     this.Multiline.Equals(other.Multiline)
@@ -527,6 +534,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.HorizontalAlignment.GetHashCode();
                 if (this.VerticalAlignment != null)
                     hash = hash * 59 + this.VerticalAlignment.GetHashCode();
+                if (this.Border != null)
+                    hash = hash * 59 + this.Border.GetHashCode();
                 if (this.Multiline != null)
                     hash = hash * 59 + this.Multiline.GetHashCode();
                 if (this.SpellCheck != null)
