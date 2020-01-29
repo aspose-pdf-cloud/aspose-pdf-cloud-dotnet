@@ -24,6 +24,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using Aspose.Pdf.Cloud.Sdk.Model;
 using NUnit.Framework;
@@ -213,6 +214,82 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
+        /// <summary>
+        /// Test PostSignatureField
+        /// </summary>
+        [Test]
+        public void PostSignatureFieldTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+            const string SignatureName = "33226.p12";
+            UploadFile(SignatureName, SignatureName);
+
+            SignatureField field = new SignatureField(PageIndex: 1)
+            {
+                PartialName = "sign1",
+                Signature = new Signature(
+                    Authority: "Sergey Smal",
+                    Contact: "test@mail.ru",
+                    Date: "08/01/2012 12:15:00.000 PM",
+                    FormFieldName: "Signature1",
+                    Location: "Ukraine",
+                    Password: "sIikZSmz",
+                    Rectangle: new Rectangle(
+                        LLX: 100,
+                        LLY: 100,
+                        URX: 0,
+                        URY: 0),
+                    SignaturePath: Path.Combine(TempFolder, SignatureName),
+                    SignatureType: SignatureType.PKCS7,
+                    Visible: true,
+                    ShowProperties: false
+                ),
+                Rect = new Rectangle(100, 100, 500, 200),
+            };
+
+            var response = PdfApi.PostSignatureField(name, field, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+        
+        /// <summary>
+        /// Test PutSignatureField
+        /// </summary>
+        [Test]
+        public void PutSignatureFieldTest()
+        {
+            const string name = "adbe.x509.rsa_sha1.valid.pdf";
+            UploadFile(name, name);
+            const string SignatureName = "33226.p12";
+            UploadFile(SignatureName, SignatureName);
+
+            SignatureField field = new SignatureField(PageIndex: 1)
+            {
+                PartialName = "sign1",
+                Signature = new Signature(
+                    Authority: "Sergey Smal",
+                    Contact: "test@mail.ru",
+                    Date: "08/01/2012 12:15:00.000 PM",
+                    FormFieldName: "Signature1",
+                    Location: "Ukraine",
+                    Password: "sIikZSmz",
+                    Rectangle: new Rectangle(
+                        LLX: 100,
+                        LLY: 100,
+                        URX: 0,
+                        URY: 0),
+                    SignaturePath: Path.Combine(TempFolder, SignatureName),
+                    SignatureType: SignatureType.PKCS7,
+                    Visible: true,
+                    ShowProperties: false
+                ),
+                Rect = new Rectangle(100, 100, 500, 200),
+            };
+
+            var response = PdfApi.PutSignatureField(name, "Signature1", field, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+        
         /// <summary>
         /// Test GetDocumentTextBoxFields
         /// </summary>
