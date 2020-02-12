@@ -145,6 +145,7 @@ Method | HTTP request | Description
 [**GetPageUnderlineAnnotations**](PdfApi.md#getpageunderlineannotations) | **GET** /pdf/\{name}/pages/\{pageNumber}/annotations/underline | Read document page underline annotations.
 [**GetPages**](PdfApi.md#getpages) | **GET** /pdf/\{name}/pages | Read document pages info.
 [**GetPclInStorageToPdf**](PdfApi.md#getpclinstoragetopdf) | **GET** /pdf/create/pcl | Convert PCL file (located on storage) to PDF format and return resulting file in response. 
+[**GetPdfAInStorageToPdf**](PdfApi.md#getpdfainstoragetopdf) | **GET** /pdf/create/pdfa | Convert PDFA file (located on storage) to PDF format and return resulting file in response. 
 [**GetPdfInStorageToDoc**](PdfApi.md#getpdfinstoragetodoc) | **GET** /pdf/\{name}/convert/doc | Converts PDF document (located on storage) to DOC format and returns resulting file in response content
 [**GetPdfInStorageToEpub**](PdfApi.md#getpdfinstoragetoepub) | **GET** /pdf/\{name}/convert/epub | Converts PDF document (located on storage) to EPUB format and returns resulting file in response content
 [**GetPdfInStorageToHtml**](PdfApi.md#getpdfinstoragetohtml) | **GET** /pdf/\{name}/convert/html | Converts PDF document (located on storage) to Html format and returns resulting file in response content
@@ -298,6 +299,7 @@ Method | HTTP request | Description
 [**PutPageConvertToPng**](PdfApi.md#putpageconverttopng) | **PUT** /pdf/\{name}/pages/\{pageNumber}/convert/png | Convert document page to png image and upload resulting file to storage.
 [**PutPageConvertToTiff**](PdfApi.md#putpageconverttotiff) | **PUT** /pdf/\{name}/pages/\{pageNumber}/convert/tiff | Convert document page to Tiff image and upload resulting file to storage.
 [**PutPclInStorageToPdf**](PdfApi.md#putpclinstoragetopdf) | **PUT** /pdf/\{name}/create/pcl | Convert PCL file (located on storage) to PDF format and upload resulting file to storage. 
+[**PutPdfAInStorageToPdf**](PdfApi.md#putpdfainstoragetopdf) | **PUT** /pdf/\{name}/create/pdfa | Convert PDFA file (located on storage) to PDF format and upload resulting file to storage. 
 [**PutPdfInRequestToDoc**](PdfApi.md#putpdfinrequesttodoc) | **PUT** /pdf/convert/doc | Converts PDF document (in request content) to DOC format and uploads resulting file to storage.
 [**PutPdfInRequestToEpub**](PdfApi.md#putpdfinrequesttoepub) | **PUT** /pdf/convert/epub | Converts PDF document (in request content) to EPUB format and uploads resulting file to storage.
 [**PutPdfInRequestToHtml**](PdfApi.md#putpdfinrequesttohtml) | **PUT** /pdf/convert/html | Converts PDF document (in request content) to Html format and uploads resulting file to storage.
@@ -4136,6 +4138,32 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getpdfainstoragetopdf"></a>
+# **GetPdfAInStorageToPdf**
+> System.IO.Stream GetPdfAInStorageToPdf (string srcPath, bool? dontOptimize = null, string storage = null)
+
+Convert PDFA file (located on storage) to PDF format and return resulting file in response. 
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **srcPath** | **string**| Full source filename (ex. /folder1/folder2/template.pdf) | 
+ **dontOptimize** | **bool?**| If set, document resources will not be optimized. | [optional] 
+ **storage** | **string**| The document storage. | [optional] 
+
+### Return type
+
+**System.IO.Stream**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getpdfinstoragetodoc"></a>
 # **GetPdfInStorageToDoc**
 > System.IO.Stream GetPdfInStorageToDoc (string name, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, double? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null, string storage = null)
@@ -5453,7 +5481,7 @@ Add document bookmarks.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The document name. | 
- **bookmarkPath** | **string**| The bookmark path. | 
+ **bookmarkPath** | **string**| The parent bookmark path. Specify an empty string when adding a bookmark to the root. | 
  **bookmarks** | [**List&lt;Bookmark&gt;**](Bookmark.md)| The array of bookmark. | 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
@@ -8446,6 +8474,34 @@ Name | Type | Description  | Notes
  **name** | **string**| The document name. | 
  **srcPath** | **string**| Full source filename (ex. /folder1/folder2/template.pcl) | 
  **dstFolder** | **string**| The destination document folder. | [optional] 
+ **storage** | **string**| The document storage. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putpdfainstoragetopdf"></a>
+# **PutPdfAInStorageToPdf**
+> AsposeResponse PutPdfAInStorageToPdf (string name, string srcPath, string dstFolder = null, bool? dontOptimize = null, string storage = null)
+
+Convert PDFA file (located on storage) to PDF format and upload resulting file to storage. 
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **srcPath** | **string**| Full source filename (ex. /folder1/folder2/template.pdf) | 
+ **dstFolder** | **string**| The destination document folder. | [optional] 
+ **dontOptimize** | **bool?**| If set, document resources will not be optimized. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
 
 ### Return type
