@@ -420,5 +420,34 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.PutMarkdownInStorageToPdf(resultName, Path.Combine(TempFolder, name), dstFolder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
+
+        /// <summary>
+        /// Test GetPdfAInStorageToPdf
+        /// </summary>
+        [Test]
+        public void GetPdfAInStorageToPdfTest()
+        {
+            const string name = "4pagesPdfA.pdf";
+            UploadFile(name, name);
+
+            using (var response = PdfApi.GetPdfAInStorageToPdf(Path.Combine(TempFolder, name)))
+            {
+                Assert.That(response.Length, Is.GreaterThan(0));
+            }
+        }
+
+        /// <summary>
+        /// Test PutPdfAInStorageToPdf
+        /// </summary>
+        [Test]
+        public void PutPdfAInStorageToPdfTest()
+        {
+            const string name = "4pagesPdfA.pdf";
+            UploadFile(name, name);
+            string resultName = "pdf.pdf";
+
+            var response = PdfApi.PutPdfAInStorageToPdf(resultName, Path.Combine(TempFolder, name), dstFolder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
     }
 }
