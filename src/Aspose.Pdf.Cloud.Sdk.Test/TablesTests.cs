@@ -203,10 +203,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                         },
                         Cells = new List<Cell>
                         {
-                            // Image from Web
                             new Cell
                             {
-                                //BackgroundColor = colorBlack,
                                 Paragraphs = new List<TextRect>
                                 {
                                     new TextRect
@@ -221,11 +219,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                                     }
                                 },
                             },
-                            // Text
                             new Cell
                             {
                                 BackgroundColor = colorBlack,
-                                // 270 x 50
                                 BackgroundImageStorageFile = $"{TempFolder}/{Image}"
                             }
                         }
@@ -239,10 +235,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                         },
                         Cells = new List<Cell>
                         {
-                            // Image from Web
                             new Cell
                             {
-                                //BackgroundColor = colorBlack,
                                 Paragraphs = new List<TextRect>
                                 {
                                     new TextRect
@@ -257,7 +251,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                                     }
                                 },
                             },
-                            // Text
                             new Cell
                             {
                                 HtmlFragment = "<ul><li>First</li><li>Second</li></ul>"
@@ -273,10 +266,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                         },
                         Cells = new List<Cell>
                         {
-                            // Image from Web
                             new Cell
                             {
-                                //BackgroundColor = colorBlack,
                                 Paragraphs = new List<TextRect>
                                 {
                                     new TextRect
@@ -295,11 +286,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                                     }
                                 },
                             },
-                            // Text
                             new Cell
                             {
                                 BackgroundColor = colorBlack,
-                                // 270 x 50
                                 Images = new List<ImageFragment>{
                                     new ImageFragment(ImageFile: $"{TempFolder}/{Image}"),
                                 }
@@ -315,10 +304,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                         },
                         Cells = new List<Cell>
                         {
-                            // Image from Web
                             new Cell
                             {
-                                //BackgroundColor = colorBlack,
                                 Paragraphs = new List<TextRect>
                                 {
                                     new TextRect
@@ -337,11 +324,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                                     }
                                 },
                             },
-                            // Text
                             new Cell
                             {
                                 BackgroundColor = colorBlack,
-                                // 270 x 50
                                 Images = new List<ImageFragment>{
                                     new ImageFragment(ImageFile: $"{TempFolder}/{Image}") 
                                     {
