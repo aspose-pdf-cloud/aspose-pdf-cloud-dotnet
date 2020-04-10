@@ -38,6 +38,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     class TablesTests : TestsBase
     {
         private const string Name = "PdfWithTable.pdf";
+        private const string Image = "Penguins.jpg";
         private const int PageNumber = 1;
 
         public override void SetUp()
@@ -120,6 +121,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             const string name = "4pages.pdf";
             UploadFile(name, name);
+            UploadFile(Image, Image);
 
             int pageNumber = 1;
 
@@ -138,6 +140,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PutTableTest()
         {
+            UploadFile(Image, Image);
+
             var tablesResponse = PdfApi.GetDocumentTables(Name, folder: TempFolder);
             string tableId = tablesResponse.Tables.List[0].Id;
 
@@ -146,99 +150,209 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         }
 
         #region private methods
-        private Table DrawTable()
+        private static Table DrawTable()
         {
-            TextState textState = new TextState(FontSize: 10d, BackgroundColor: new Color(255, 255, 0, 0));
+            var colorBlack = new Color(255, 0, 0, 0);
 
-            int numOfCols = 5;
-            int numOfRows = 5;
-
-            var table = new Table(Rows: new List<Row>());
-
-            table.Margin = new MarginInfo {Left = 50, Bottom = 40, Right = 30, Top = 20};
-
-            string colWidths = "";
-            for (int c = 0; c < numOfCols; c++)
+            var borderGraphInfo = new GraphInfo
             {
-                colWidths += " 30";
-            }
-            table.ColumnWidths = colWidths;
-
-            table.DefaultCellTextState = textState;
-
-
-
-            GraphInfo borderTableBorder = new GraphInfo();
-            borderTableBorder.Color = new Color(255, 0, 255, 0);
-            borderTableBorder.LineWidth = 1;
-
-            table.DefaultCellBorder = new BorderInfo
-            {
-                Top = borderTableBorder,
-                Right = borderTableBorder,
-                Bottom = borderTableBorder,
-                Left = borderTableBorder
+                Color = colorBlack,
+                LineWidth = 1,
             };
-            table.Top = 100;
 
-            for (int r = 0; r < numOfRows; r++)
+            var table = new Table(Rows: new List<Row>())
             {
-
-                Row row = new Row(Cells: new List<Cell>());
-
-                for (int c = 0; c < numOfCols; c++)
+                Top = 100,
+                ColumnWidths = "150 300",
+                IsBordersIncluded = true,
+                DefaultCellTextState = new TextState(FontSize: 11)
                 {
-
-                    Cell cell = new Cell();
-                    cell.BackgroundColor = new Color(255, 0, 128, 0);
-                    cell.DefaultCellTextState = textState;
-                    cell.Paragraphs = new List<TextRect>
+                    ForegroundColor = new Color(255, 0, 255, 0),
+                },
+                Margin = new MarginInfo
+                {
+                    Bottom = 10,
+                    Left = 10,
+                    Right = 10,
+                    Top = 10
+                },
+                Border = new BorderInfo
+                {
+                    Top = borderGraphInfo,
+                    Left = borderGraphInfo
+                },
+                DefaultCellBorder = new BorderInfo
+                {
+                    Right = borderGraphInfo,
+                },
+                DefaultCellPadding = new MarginInfo
+                {
+                    Top = 5,
+                    Left = 5,
+                    Right = 5,
+                    Bottom = 5,
+                },
+                Rows = new List<Row>
+                {
+                    new Row(Cells: new List<Cell>())
                     {
-                        new TextRect() { Text = "value" }
-                    };
-                    //
-                    // change properties on cell
-                    //
-                    if (c == 1)
+                        MinRowHeight = 100,
+                        Border = new BorderInfo
+                        {
+                            Bottom = borderGraphInfo,
+                        },
+                        Cells = new List<Cell>
+                        {
+                            // Image from Web
+                            new Cell
+                            {
+                                //BackgroundColor = colorBlack,
+                                Paragraphs = new List<TextRect>
+                                {
+                                    new TextRect
+                                    {
+                                        Text = "BackgroundImageStorageFile field, from storage file",
+                                        HorizontalAlignment = HorizontalAlignment.Center,
+                                        TextState = new TextState(FontSize: 10)
+                                        {
+                                            ForegroundColor =
+                                                new Color(255, 0x3d, 0x8e, 0xc4),
+                                        }
+                                    }
+                                },
+                            },
+                            // Text
+                            new Cell
+                            {
+                                BackgroundColor = colorBlack,
+                                // 270 x 50
+                                BackgroundImageStorageFile = $"{TempFolder}/{Image}"
+                            }
+                        }
+                    },
+                    new Row(Cells: new List<Cell>())
                     {
-                        cell.DefaultCellTextState.ForegroundColor = new Color(255, 0, 0, 255);
-                    }
-
-                    //
-                    // change properties on cell AFTER first clearing and re-adding paragraphs
-                    //
-                    else if (c == 2)
+                        MinRowHeight = 100,
+                        Border = new BorderInfo
+                        {
+                            Bottom = borderGraphInfo,
+                        },
+                        Cells = new List<Cell>
+                        {
+                            // Image from Web
+                            new Cell
+                            {
+                                //BackgroundColor = colorBlack,
+                                Paragraphs = new List<TextRect>
+                                {
+                                    new TextRect
+                                    {
+                                        Text = "HtmlFragment",
+                                        HorizontalAlignment = HorizontalAlignment.Center,
+                                        TextState = new TextState(FontSize: 10)
+                                        {
+                                            ForegroundColor =
+                                                new Color(255, 0x3d, 0x8e, 0xc4),
+                                        }
+                                    }
+                                },
+                            },
+                            // Text
+                            new Cell
+                            {
+                                HtmlFragment = "<ul><li>First</li><li>Second</li></ul>"
+                            },
+                        }
+                    },
+                    new Row(Cells: new List<Cell>())
                     {
-                        cell.Paragraphs.Clear();
-                        cell.Paragraphs.Add(new TextRect() { Text = "y" });
-                        cell.DefaultCellTextState.ForegroundColor = new Color(255, 0, 0, 255);
-                    }
-
-                    //
-                    // change properties on paragraph
-                    //
-                    else if (c == 3)
+                        FixedRowHeight = 100,
+                        Border = new BorderInfo
+                        {
+                            Bottom = borderGraphInfo,
+                        },
+                        Cells = new List<Cell>
+                        {
+                            // Image from Web
+                            new Cell
+                            {
+                                //BackgroundColor = colorBlack,
+                                Paragraphs = new List<TextRect>
+                                {
+                                    new TextRect
+                                    {
+                                        Text = "FixedRowHeight = 100",
+                                    },
+                                    new TextRect
+                                    {
+                                        Text = "Images field, from storage file, without Margin and Size",
+                                        HorizontalAlignment = HorizontalAlignment.Center,
+                                        TextState = new TextState(FontSize: 10)
+                                        {
+                                            ForegroundColor =
+                                                new Color(255, 0x3d, 0x8e, 0xc4),
+                                        }
+                                    }
+                                },
+                            },
+                            // Text
+                            new Cell
+                            {
+                                BackgroundColor = colorBlack,
+                                // 270 x 50
+                                Images = new List<ImageFragment>{
+                                    new ImageFragment(ImageFile: $"{TempFolder}/{Image}"),
+                                }
+                            },
+                        }
+                    },
+                    new Row(Cells: new List<Cell>())
                     {
-                        cell.Paragraphs[0].TextState = textState;
-                        cell.Paragraphs[0].TextState.ForegroundColor = new Color(255, 0, 0, 255);
-                    }
-
-                    //
-                    // change properties on paragraph AFTER first clearing and re-adding paragraphs
-                    //
-                    else if (c == 4)
-                    {
-                        cell.Paragraphs.Clear();
-                        cell.Paragraphs.Add(new TextRect() { Text = "y" });
-                        cell.Paragraphs[0].TextState = textState;
-                        cell.Paragraphs[0].TextState.ForegroundColor = new Color(255, 0, 0, 255);
-                    }
-                    row.Cells.Add(cell);
-
+                        FixedRowHeight = 100,
+                        Border = new BorderInfo
+                        {
+                            Bottom = borderGraphInfo,
+                        },
+                        Cells = new List<Cell>
+                        {
+                            // Image from Web
+                            new Cell
+                            {
+                                //BackgroundColor = colorBlack,
+                                Paragraphs = new List<TextRect>
+                                {
+                                    new TextRect
+                                    {
+                                        Text = "FixedRowHeight = 100",
+                                    },
+                                    new TextRect
+                                    {
+                                        Text = "Images field, from storage file, with no Margin and Size = 150x50",
+                                        HorizontalAlignment = HorizontalAlignment.Center,
+                                        TextState = new TextState(FontSize: 10)
+                                        {
+                                            ForegroundColor =
+                                                new Color(255, 0x3d, 0x8e, 0xc4),
+                                        }
+                                    }
+                                },
+                            },
+                            // Text
+                            new Cell
+                            {
+                                BackgroundColor = colorBlack,
+                                // 270 x 50
+                                Images = new List<ImageFragment>{
+                                    new ImageFragment(ImageFile: $"{TempFolder}/{Image}") 
+                                    {
+                                        ImageScale = 0.1,
+                                    }
+                                }
+                            },
+                        }
+                    },
                 }
-                table.Rows.Add(row);
-            }
-
+            };
             return table;
         }
 
