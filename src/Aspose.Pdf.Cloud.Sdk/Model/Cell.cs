@@ -54,6 +54,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Border">Gets or sets the border.</param>
         /// <param name="BackgroundColor">Gets or sets the background color.</param>
         /// <param name="BackgroundImageFile">Gets or sets the background image file.</param>
+        /// <param name="BackgroundImageStorageFile">Gets or sets path of the background image file from storage.</param>
         /// <param name="Alignment">Gets or sets the alignment.</param>
         /// <param name="DefaultCellTextState">Gets or sets the default cell text state.</param>
         /// <param name="Paragraphs">Gets or sets the cell&#39;s formatted text.</param>
@@ -62,13 +63,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="ColSpan">Gets or sets the column span.</param>
         /// <param name="RowSpan">Gets or sets the row span.</param>
         /// <param name="Width">Gets or sets the column width.</param>
-        public Cell(bool? IsNoBorder = default(bool?), MarginInfo Margin = default(MarginInfo), BorderInfo Border = default(BorderInfo), Color BackgroundColor = default(Color), string BackgroundImageFile = default(string), HorizontalAlignment Alignment = default(HorizontalAlignment), TextState DefaultCellTextState = default(TextState), List<TextRect> Paragraphs = default(List<TextRect>), bool? IsWordWrapped = default(bool?), VerticalAlignment VerticalAlignment = default(VerticalAlignment), int? ColSpan = default(int?), int? RowSpan = default(int?), double? Width = default(double?))
+        /// <param name="HtmlFragment">Gets or sets Html fragment.</param>
+        /// <param name="Images">Gets or sets ImageFragment list.</param>
+        public Cell(bool? IsNoBorder = default(bool?), MarginInfo Margin = default(MarginInfo), BorderInfo Border = default(BorderInfo), Color BackgroundColor = default(Color), string BackgroundImageFile = default(string), string BackgroundImageStorageFile = default(string), HorizontalAlignment Alignment = default(HorizontalAlignment), TextState DefaultCellTextState = default(TextState), List<TextRect> Paragraphs = default(List<TextRect>), bool? IsWordWrapped = default(bool?), VerticalAlignment VerticalAlignment = default(VerticalAlignment), int? ColSpan = default(int?), int? RowSpan = default(int?), double? Width = default(double?), string HtmlFragment = default(string), List<ImageFragment> Images = default(List<ImageFragment>))
         {
             this.IsNoBorder = IsNoBorder;
             this.Margin = Margin;
             this.Border = Border;
             this.BackgroundColor = BackgroundColor;
             this.BackgroundImageFile = BackgroundImageFile;
+            this.BackgroundImageStorageFile = BackgroundImageStorageFile;
             this.Alignment = Alignment;
             this.DefaultCellTextState = DefaultCellTextState;
             this.Paragraphs = Paragraphs;
@@ -77,6 +81,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.ColSpan = ColSpan;
             this.RowSpan = RowSpan;
             this.Width = Width;
+            this.HtmlFragment = HtmlFragment;
+            this.Images = Images;
         }
         
         /// <summary>
@@ -113,6 +119,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <value>Gets or sets the background image file.</value>
         [DataMember(Name="BackgroundImageFile", EmitDefaultValue=false)]
         public string BackgroundImageFile { get; set; }
+
+        /// <summary>
+        /// Gets or sets path of the background image file from storage.
+        /// </summary>
+        /// <value>Gets or sets path of the background image file from storage.</value>
+        [DataMember(Name="BackgroundImageStorageFile", EmitDefaultValue=false)]
+        public string BackgroundImageStorageFile { get; set; }
 
         /// <summary>
         /// Gets or sets the alignment.
@@ -171,6 +184,20 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public double? Width { get; set; }
 
         /// <summary>
+        /// Gets or sets Html fragment.
+        /// </summary>
+        /// <value>Gets or sets Html fragment.</value>
+        [DataMember(Name="HtmlFragment", EmitDefaultValue=false)]
+        public string HtmlFragment { get; set; }
+
+        /// <summary>
+        /// Gets or sets ImageFragment list.
+        /// </summary>
+        /// <value>Gets or sets ImageFragment list.</value>
+        [DataMember(Name="Images", EmitDefaultValue=false)]
+        public List<ImageFragment> Images { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -183,6 +210,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  Border: ").Append(Border).Append("\n");
             sb.Append("  BackgroundColor: ").Append(BackgroundColor).Append("\n");
             sb.Append("  BackgroundImageFile: ").Append(BackgroundImageFile).Append("\n");
+            sb.Append("  BackgroundImageStorageFile: ").Append(BackgroundImageStorageFile).Append("\n");
             sb.Append("  Alignment: ").Append(Alignment).Append("\n");
             sb.Append("  DefaultCellTextState: ").Append(DefaultCellTextState).Append("\n");
             sb.Append("  Paragraphs: ").Append(Paragraphs).Append("\n");
@@ -191,6 +219,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  ColSpan: ").Append(ColSpan).Append("\n");
             sb.Append("  RowSpan: ").Append(RowSpan).Append("\n");
             sb.Append("  Width: ").Append(Width).Append("\n");
+            sb.Append("  HtmlFragment: ").Append(HtmlFragment).Append("\n");
+            sb.Append("  Images: ").Append(Images).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -253,6 +283,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.BackgroundImageFile.Equals(other.BackgroundImageFile)
                 ) && 
                 (
+                    this.BackgroundImageStorageFile == other.BackgroundImageStorageFile ||
+                    this.BackgroundImageStorageFile != null &&
+                    this.BackgroundImageStorageFile.Equals(other.BackgroundImageStorageFile)
+                ) && 
+                (
                     this.Alignment == other.Alignment ||
                     this.Alignment != null &&
                     this.Alignment.Equals(other.Alignment)
@@ -291,6 +326,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Width == other.Width ||
                     this.Width != null &&
                     this.Width.Equals(other.Width)
+                ) && 
+                (
+                    this.HtmlFragment == other.HtmlFragment ||
+                    this.HtmlFragment != null &&
+                    this.HtmlFragment.Equals(other.HtmlFragment)
+                ) && 
+                (
+                    this.Images == other.Images ||
+                    this.Images != null &&
+                    this.Images.SequenceEqual(other.Images)
                 );
         }
 
@@ -315,6 +360,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.BackgroundColor.GetHashCode();
                 if (this.BackgroundImageFile != null)
                     hash = hash * 59 + this.BackgroundImageFile.GetHashCode();
+                if (this.BackgroundImageStorageFile != null)
+                    hash = hash * 59 + this.BackgroundImageStorageFile.GetHashCode();
                 if (this.Alignment != null)
                     hash = hash * 59 + this.Alignment.GetHashCode();
                 if (this.DefaultCellTextState != null)
@@ -331,6 +378,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.RowSpan.GetHashCode();
                 if (this.Width != null)
                     hash = hash * 59 + this.Width.GetHashCode();
+                if (this.HtmlFragment != null)
+                    hash = hash * 59 + this.HtmlFragment.GetHashCode();
+                if (this.Images != null)
+                    hash = hash * 59 + this.Images.GetHashCode();
                 return hash;
             }
         }

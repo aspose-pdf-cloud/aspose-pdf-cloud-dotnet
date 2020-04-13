@@ -172,6 +172,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\HtmlMarkupGenerationModes.cs" />
     <Compile Include="Model\Image.cs" />
     <Compile Include="Model\ImageFooter.cs" />
+    <Compile Include="Model\ImageFragment.cs" />
     <Compile Include="Model\ImageHeader.cs" />
     <Compile Include="Model\ImageResponse.cs" />
     <Compile Include="Model\Images.cs" />

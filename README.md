@@ -1,7 +1,7 @@
 # Aspose.Pdf for Cloud
 
 - API version: 3.0
-- SDK version: 20.2.0
+- SDK version: 20.4.0
 
 [Aspose.Pdf for Cloud](https://products.aspose.cloud/pdf) is a true REST API that enables you to perform a wide range of document processing operations including creation, manipulation, conversion and rendering of Pdf documents in the cloud.
 
@@ -461,6 +461,7 @@ Class | Method | HTTP request | Description
  - [Model.HorizontalAlignment](docs/HorizontalAlignment.md)
  - [Model.HtmlDocumentType](docs/HtmlDocumentType.md)
  - [Model.HtmlMarkupGenerationModes](docs/HtmlMarkupGenerationModes.md)
+ - [Model.ImageFragment](docs/ImageFragment.md)
  - [Model.ImageSrcType](docs/ImageSrcType.md)
  - [Model.ImageTemplate](docs/ImageTemplate.md)
  - [Model.ImageTemplatesRequest](docs/ImageTemplatesRequest.md)

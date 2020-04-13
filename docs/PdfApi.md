@@ -4282,7 +4282,7 @@ Name | Type | Description  | Notes
 
 <a name="getpdfinstoragetolatex"></a>
 # **GetPdfInStorageToLaTeX**
-> System.IO.Stream GetPdfInStorageToLaTeX (string name, int? pagesCount = null, string folder = null, string storage = null)
+> System.IO.Stream GetPdfInStorageToLaTeX (string name, string folder = null, string storage = null)
 
 Converts PDF document (located on storage) to LaTeX format and returns resulting file in response content
 
@@ -4292,7 +4292,6 @@ Converts PDF document (located on storage) to LaTeX format and returns resulting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The document name. | 
- **pagesCount** | **int?**| Pages count. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
 
@@ -8633,7 +8632,7 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinrequesttolatex"></a>
 # **PutPdfInRequestToLaTeX**
-> AsposeResponse PutPdfInRequestToLaTeX (string outPath, int? pagesCount = null, string storage = null, System.IO.Stream file = null)
+> AsposeResponse PutPdfInRequestToLaTeX (string outPath, string storage = null, System.IO.Stream file = null)
 
 Converts PDF document (in request content) to LaTeX format and uploads resulting file to storage.
 
@@ -8643,7 +8642,6 @@ Converts PDF document (in request content) to LaTeX format and uploads resulting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.tex) | 
- **pagesCount** | **int?**| Pages count. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
  **file** | **System.IO.Stream**| A file to be converted. | [optional] 
 
@@ -9039,7 +9037,7 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinstoragetolatex"></a>
 # **PutPdfInStorageToLaTeX**
-> AsposeResponse PutPdfInStorageToLaTeX (string name, string outPath, int? pagesCount = null, string folder = null, string storage = null)
+> AsposeResponse PutPdfInStorageToLaTeX (string name, string outPath, string folder = null, string storage = null)
 
 Converts PDF document (located on storage) to LaTeX format and uploads resulting file to storage
 
@@ -9050,7 +9048,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The document name. | 
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.tex) | 
- **pagesCount** | **int?**| Pages count. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
 
