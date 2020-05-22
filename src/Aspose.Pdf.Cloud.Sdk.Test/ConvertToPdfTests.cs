@@ -96,31 +96,31 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
 
         /// <summary>
-        /// Test GetLaTeXInStorageToPdf
+        /// Test GetTeXInStorageToPdf
         /// </summary>
         [Test]
-        public void GetLaTeXInStorageToPdfTest()
+        public void GetTeXInStorageToPdfTest()
         {
             string name = "sample.tex";
             UploadFile(name, name);
 
-            using (var response = PdfApi.GetLaTeXInStorageToPdf(Path.Combine(TempFolder, name)))
+            using (var response = PdfApi.GetTeXInStorageToPdf(Path.Combine(TempFolder, name)))
             {
                 Assert.That(response.Length, Is.GreaterThan(0));
             }
         }
 
         /// <summary>
-        /// Test PutLaTeXInStorageToPdf
+        /// Test PutTeXInStorageToPdf
         /// </summary>
         [Test]
-        public void PutLaTeXInStorageToPdfTest()
+        public void PutTeXInStorageToPdfTest()
         {
             string name = "sample.tex";
             UploadFile(name, name);
             string resultName = "fromTex.pdf";
 
-            var response = PdfApi.PutLaTeXInStorageToPdf(resultName, Path.Combine(TempFolder, name), TempFolder);
+            var response = PdfApi.PutTeXInStorageToPdf(resultName, Path.Combine(TempFolder, name), TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 

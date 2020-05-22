@@ -430,44 +430,44 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
 
         /// <summary>
-        /// Test GetPdfInStorageToLaTeX
+        /// Test GetPdfInStorageToTeX
         /// </summary>
         [Test]
-        public void GetPdfInStorageToLaTeXTest()
+        public void GetPdfInStorageToTeXTest()
         {
             string name = "Hello world.pdf";
             UploadFile(name, name);
 
-            var response = PdfApi.GetPdfInStorageToLaTeX(name, folder: TempFolder);
+            var response = PdfApi.GetPdfInStorageToTeX(name, folder: TempFolder);
             Assert.That(response.Length, Is.GreaterThan(0));
         }
 
         /// <summary>
-        /// Test PutPdfInStorageToLaTeX
+        /// Test PutPdfInStorageToTeX
         /// </summary>
         [Test]
-        public void PutPdfInStorageToLaTeXTest()
+        public void PutPdfInStorageToTeXTest()
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
-            string resFileName = "result.latex";
+            string resFileName = "result.tex";
 
-            var response = PdfApi.PutPdfInStorageToLaTeX(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
+            var response = PdfApi.PutPdfInStorageToTeX(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
         /// <summary>
-        /// Test PutPdfInRequestToLaTeX
+        /// Test PutPdfInRequestToTeX
         /// </summary>
         [Test]
-        public void PutPdfInRequestToLaTeXTest()
+        public void PutPdfInRequestToTeXTest()
         {
             string name = "4pages.pdf";
             using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
             {
-                string resFileName = "result.latex";
+                string resFileName = "result.tex";
 
-                var response = PdfApi.PutPdfInRequestToLaTeX(Path.Combine(TempFolder, resFileName), file: stream);
+                var response = PdfApi.PutPdfInRequestToTeX(Path.Combine(TempFolder, resFileName), file: stream);
                 Assert.That(response.Code, Is.EqualTo(200));
             }
         }
