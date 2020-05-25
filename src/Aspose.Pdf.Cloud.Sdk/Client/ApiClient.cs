@@ -47,6 +47,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         private const int MAX_AUTH_TRIES_COUNT = 5;
         private int authTriesCount = 0;
 
+        private const string AsposeClientHeaderName = "x-aspose-client";
+        private const string AsposeClientVersionHeaderName = "x-aspose-client-version";
+
         private JsonSerializerSettings serializerSettings = new JsonSerializerSettings
         {
             ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor
@@ -199,6 +202,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
                 //request.AddParameter(param.Key, param.Value, ParameterType.UrlSegment);
             }
             var request = new RestRequest(path, method);
+
+            // add custom header
+            request.AddHeader(AsposeClientHeaderName, ".net sdk");
+            request.AddHeader(AsposeClientVersionHeaderName, "20.5.0");
 
             // add header parameter, if any
             foreach(var param in headerParams)
