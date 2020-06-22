@@ -319,9 +319,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             string name = "4pages.pdf";
             UploadFile(name, name);
-            string resFileName = "result.zip";
+            string resFileName = "result_4pages.html";
 
-            var response = PdfApi.PutPdfInStorageToHtml(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
+            var response = PdfApi.PutPdfInStorageToHtml(name, Path.Combine(TempFolder, resFileName), folder: TempFolder, outputFormat: OutputFormat.Folder.ToString());
             Assert.That(response.Code, Is.EqualTo(200));
         }
 

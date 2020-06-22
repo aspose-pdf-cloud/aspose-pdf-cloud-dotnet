@@ -56,6 +56,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Links">Link to the document.</param>
         /// <param name="PartialName">Field name.</param>
+        /// <param name="FullName">Full Field name.</param>
         /// <param name="Rect">Field rectangle.</param>
         /// <param name="Value">Field value.</param>
         /// <param name="PageIndex">Page index. (required)</param>
@@ -78,7 +79,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="ActiveState">Gets or sets current annotation appearance state.</param>
         /// <param name="_Checked">Gets or sets state of check box. (required)</param>
         /// <param name="ExportValue">Gets or sets export value of CheckBox field.</param>
-        public CheckBoxField(List<Link> Links = default(List<Link>), string PartialName = default(string), Rectangle Rect = default(Rectangle), string Value = default(string), int? PageIndex = default(int?), double? Height = default(double?), double? Width = default(double?), int? ZIndex = default(int?), bool? IsGroup = default(bool?), FormField Parent = default(FormField), bool? IsSharedField = default(bool?), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), Color Color = default(Color), string Contents = default(string), MarginInfo Margin = default(MarginInfo), LinkHighlightingMode Highlighting = default(LinkHighlightingMode), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), Border Border = default(Border), List<string> AllowedStates = default(List<string>), BoxStyle Style = default(BoxStyle), string ActiveState = default(string), bool? _Checked = default(bool?), string ExportValue = default(string))
+        public CheckBoxField(List<Link> Links = default(List<Link>), string PartialName = default(string), string FullName = default(string), Rectangle Rect = default(Rectangle), string Value = default(string), int? PageIndex = default(int?), double? Height = default(double?), double? Width = default(double?), int? ZIndex = default(int?), bool? IsGroup = default(bool?), FormField Parent = default(FormField), bool? IsSharedField = default(bool?), List<AnnotationFlags> Flags = default(List<AnnotationFlags>), Color Color = default(Color), string Contents = default(string), MarginInfo Margin = default(MarginInfo), LinkHighlightingMode Highlighting = default(LinkHighlightingMode), HorizontalAlignment HorizontalAlignment = default(HorizontalAlignment), VerticalAlignment VerticalAlignment = default(VerticalAlignment), Border Border = default(Border), List<string> AllowedStates = default(List<string>), BoxStyle Style = default(BoxStyle), string ActiveState = default(string), bool? _Checked = default(bool?), string ExportValue = default(string))
         {
             // to ensure "PageIndex" is required (not null)
             if (PageIndex == null)
@@ -100,6 +101,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             }
             this.Links = Links;
             this.PartialName = PartialName;
+            this.FullName = FullName;
             this.Rect = Rect;
             this.Value = Value;
             this.Height = Height;
@@ -135,6 +137,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <value>Field name.</value>
         [DataMember(Name="PartialName", EmitDefaultValue=false)]
         public string PartialName { get; set; }
+
+        /// <summary>
+        /// Full Field name.
+        /// </summary>
+        /// <value>Full Field name.</value>
+        [DataMember(Name="FullName", EmitDefaultValue=false)]
+        public string FullName { get; set; }
 
         /// <summary>
         /// Field rectangle.
@@ -300,6 +309,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("class CheckBoxField {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  PartialName: ").Append(PartialName).Append("\n");
+            sb.Append("  FullName: ").Append(FullName).Append("\n");
             sb.Append("  Rect: ").Append(Rect).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  PageIndex: ").Append(PageIndex).Append("\n");
@@ -367,6 +377,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.PartialName == other.PartialName ||
                     this.PartialName != null &&
                     this.PartialName.Equals(other.PartialName)
+                ) && 
+                (
+                    this.FullName == other.FullName ||
+                    this.FullName != null &&
+                    this.FullName.Equals(other.FullName)
                 ) && 
                 (
                     this.Rect == other.Rect ||
@@ -495,6 +510,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Links.GetHashCode();
                 if (this.PartialName != null)
                     hash = hash * 59 + this.PartialName.GetHashCode();
+                if (this.FullName != null)
+                    hash = hash * 59 + this.FullName.GetHashCode();
                 if (this.Rect != null)
                     hash = hash * 59 + this.Rect.GetHashCode();
                 if (this.Value != null)
