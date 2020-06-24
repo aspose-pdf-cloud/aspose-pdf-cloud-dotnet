@@ -185,6 +185,7 @@
     <Compile Include="Model\ObjectExist.cs" />
     <Compile Include="Model\OptimizeOptions.cs" />
     <Compile Include="Model\Option.cs" />
+    <Compile Include="Model\OutputFormat.cs" />
     <Compile Include="Model\Page.cs" />
     <Compile Include="Model\PageLayout.cs" />
     <Compile Include="Model\PageMode.cs" />
