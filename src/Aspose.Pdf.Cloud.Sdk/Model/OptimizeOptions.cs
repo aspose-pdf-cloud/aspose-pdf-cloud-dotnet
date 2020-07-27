@@ -49,83 +49,34 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OptimizeOptions" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected OptimizeOptions() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OptimizeOptions" /> class.
-        /// </summary>
-        /// <param name="AllowReusePageContent">If true page contents will be reused when document is optimized for equal pages. (required)</param>
-        /// <param name="CompressImages">If this flag is set to true images will be compressed in the document. compression level is specfied with ImageQuality property. (required)</param>
-        /// <param name="ImageQuality">Specifie slevel of image compression when CompressIamges flag is used. (required)</param>
-        /// <param name="LinkDuplcateStreams">If this flag is set to true, Resource streams will be analyzed. If duplicate streams are found (i.e. if stream contents is equal), then thes streams will be stored as one object.  This allows to decrease document size in some cases (for example, when same document was concatenedted multiple times). (required)</param>
-        /// <param name="RemoveUnusedObjects">If this flag is set to true, all document objects will be checked and unused objects (i.e. objects which does not have any reference) are removed from document. (required)</param>
-        /// <param name="RemoveUnusedStreams">If this flag set to true, every resource is checked on it&#39;s usage. If resource is never used, then resources is removed. This may decrease document size for example when pages were extracted from document.  (required)</param>
-        /// <param name="UnembedFonts">Make fonts not embedded if set to true.  (required)</param>
-        public OptimizeOptions(bool? AllowReusePageContent = default(bool?), bool? CompressImages = default(bool?), int? ImageQuality = default(int?), bool? LinkDuplcateStreams = default(bool?), bool? RemoveUnusedObjects = default(bool?), bool? RemoveUnusedStreams = default(bool?), bool? UnembedFonts = default(bool?))
+        /// <param name="AllowReusePageContent">If true page contents will be reused when document is optimized for equal pages.</param>
+        /// <param name="CompressImages">If this flag is set to true images will be compressed in the document. Compression level is specified with ImageQuality property.</param>
+        /// <param name="ImageQuality">Specifies level of image compression when CompressImages flag is used.</param>
+        /// <param name="LinkDuplcateStreams">If this flag is set to true, Resource streams will be analyzed. If duplicate streams are found (i.e. if stream contents is equal), then thees streams will be stored as one object.  This allows to decrease document size in some cases (for example, when same document was concatenated multiple times).</param>
+        /// <param name="RemoveUnusedObjects">If this flag is set to true, all document objects will be checked and unused objects (i.e. objects which does not have any reference) are removed from document.</param>
+        /// <param name="RemoveUnusedStreams">If this flag set to true, every resource is checked on it&#39;s usage. If resource is never used, then resources is removed. This may decrease document size for example when pages were extracted from document. </param>
+        /// <param name="UnembedFonts">Make fonts not embedded if set to true. </param>
+        /// <param name="ResizeImages">If this flag set to true and CompressImages is true images will be resized if image resolution is greater then specified MaxResolution parameter.</param>
+        /// <param name="MaxResolution">Specifies maximum resolution of images. If image has higher resolution it will be scaled.</param>
+        /// <param name="SubsetFonts">Fonts will be converted into subsets if set to true.</param>
+        /// <param name="RemovePrivateInfo">Remove private information (page piece info).</param>
+        /// <param name="ImageEncoding">Image encode which will be used.</param>
+        /// <param name="ImageCompressionVersion">Version of compression algorithm. Possible values are: \&quot;Standard\&quot; - standard compression, \&quot;Fast\&quot; - fast (improved compression which is faster then standard but may be applicable not for all images), \&quot;Mixed\&quot; - mixed (standard compression is applied to images which can not be compressed by  faster algorithm, this may give best compression but more slow then \&quot;Fast\&quot; algorithm. Version \&quot;Fast\&quot; is not applicable for resizing images (standard method will be used). Default is \&quot;Standard\&quot;.</param>
+        public OptimizeOptions(bool? AllowReusePageContent = default(bool?), bool? CompressImages = default(bool?), int? ImageQuality = default(int?), bool? LinkDuplcateStreams = default(bool?), bool? RemoveUnusedObjects = default(bool?), bool? RemoveUnusedStreams = default(bool?), bool? UnembedFonts = default(bool?), bool? ResizeImages = default(bool?), int? MaxResolution = default(int?), bool? SubsetFonts = default(bool?), bool? RemovePrivateInfo = default(bool?), ImageEncoding ImageEncoding = default(ImageEncoding), ImageCompressionVersion ImageCompressionVersion = default(ImageCompressionVersion))
         {
-            // to ensure "AllowReusePageContent" is required (not null)
-            if (AllowReusePageContent == null)
-            {
-                throw new InvalidDataException("AllowReusePageContent is a required property for OptimizeOptions and cannot be null");
-            }
-            else
-            {
-                this.AllowReusePageContent = AllowReusePageContent;
-            }
-            // to ensure "CompressImages" is required (not null)
-            if (CompressImages == null)
-            {
-                throw new InvalidDataException("CompressImages is a required property for OptimizeOptions and cannot be null");
-            }
-            else
-            {
-                this.CompressImages = CompressImages;
-            }
-            // to ensure "ImageQuality" is required (not null)
-            if (ImageQuality == null)
-            {
-                throw new InvalidDataException("ImageQuality is a required property for OptimizeOptions and cannot be null");
-            }
-            else
-            {
-                this.ImageQuality = ImageQuality;
-            }
-            // to ensure "LinkDuplcateStreams" is required (not null)
-            if (LinkDuplcateStreams == null)
-            {
-                throw new InvalidDataException("LinkDuplcateStreams is a required property for OptimizeOptions and cannot be null");
-            }
-            else
-            {
-                this.LinkDuplcateStreams = LinkDuplcateStreams;
-            }
-            // to ensure "RemoveUnusedObjects" is required (not null)
-            if (RemoveUnusedObjects == null)
-            {
-                throw new InvalidDataException("RemoveUnusedObjects is a required property for OptimizeOptions and cannot be null");
-            }
-            else
-            {
-                this.RemoveUnusedObjects = RemoveUnusedObjects;
-            }
-            // to ensure "RemoveUnusedStreams" is required (not null)
-            if (RemoveUnusedStreams == null)
-            {
-                throw new InvalidDataException("RemoveUnusedStreams is a required property for OptimizeOptions and cannot be null");
-            }
-            else
-            {
-                this.RemoveUnusedStreams = RemoveUnusedStreams;
-            }
-            // to ensure "UnembedFonts" is required (not null)
-            if (UnembedFonts == null)
-            {
-                throw new InvalidDataException("UnembedFonts is a required property for OptimizeOptions and cannot be null");
-            }
-            else
-            {
-                this.UnembedFonts = UnembedFonts;
-            }
+            this.AllowReusePageContent = AllowReusePageContent;
+            this.CompressImages = CompressImages;
+            this.ImageQuality = ImageQuality;
+            this.LinkDuplcateStreams = LinkDuplcateStreams;
+            this.RemoveUnusedObjects = RemoveUnusedObjects;
+            this.RemoveUnusedStreams = RemoveUnusedStreams;
+            this.UnembedFonts = UnembedFonts;
+            this.ResizeImages = ResizeImages;
+            this.MaxResolution = MaxResolution;
+            this.SubsetFonts = SubsetFonts;
+            this.RemovePrivateInfo = RemovePrivateInfo;
+            this.ImageEncoding = ImageEncoding;
+            this.ImageCompressionVersion = ImageCompressionVersion;
         }
         
         /// <summary>
@@ -136,23 +87,23 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public bool? AllowReusePageContent { get; set; }
 
         /// <summary>
-        /// If this flag is set to true images will be compressed in the document. compression level is specfied with ImageQuality property.
+        /// If this flag is set to true images will be compressed in the document. Compression level is specified with ImageQuality property.
         /// </summary>
-        /// <value>If this flag is set to true images will be compressed in the document. compression level is specfied with ImageQuality property.</value>
+        /// <value>If this flag is set to true images will be compressed in the document. Compression level is specified with ImageQuality property.</value>
         [DataMember(Name="CompressImages", EmitDefaultValue=false)]
         public bool? CompressImages { get; set; }
 
         /// <summary>
-        /// Specifie slevel of image compression when CompressIamges flag is used.
+        /// Specifies level of image compression when CompressImages flag is used.
         /// </summary>
-        /// <value>Specifie slevel of image compression when CompressIamges flag is used.</value>
+        /// <value>Specifies level of image compression when CompressImages flag is used.</value>
         [DataMember(Name="ImageQuality", EmitDefaultValue=false)]
         public int? ImageQuality { get; set; }
 
         /// <summary>
-        /// If this flag is set to true, Resource streams will be analyzed. If duplicate streams are found (i.e. if stream contents is equal), then thes streams will be stored as one object.  This allows to decrease document size in some cases (for example, when same document was concatenedted multiple times).
+        /// If this flag is set to true, Resource streams will be analyzed. If duplicate streams are found (i.e. if stream contents is equal), then thees streams will be stored as one object.  This allows to decrease document size in some cases (for example, when same document was concatenated multiple times).
         /// </summary>
-        /// <value>If this flag is set to true, Resource streams will be analyzed. If duplicate streams are found (i.e. if stream contents is equal), then thes streams will be stored as one object.  This allows to decrease document size in some cases (for example, when same document was concatenedted multiple times).</value>
+        /// <value>If this flag is set to true, Resource streams will be analyzed. If duplicate streams are found (i.e. if stream contents is equal), then thees streams will be stored as one object.  This allows to decrease document size in some cases (for example, when same document was concatenated multiple times).</value>
         [DataMember(Name="LinkDuplcateStreams", EmitDefaultValue=false)]
         public bool? LinkDuplcateStreams { get; set; }
 
@@ -178,6 +129,48 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public bool? UnembedFonts { get; set; }
 
         /// <summary>
+        /// If this flag set to true and CompressImages is true images will be resized if image resolution is greater then specified MaxResolution parameter.
+        /// </summary>
+        /// <value>If this flag set to true and CompressImages is true images will be resized if image resolution is greater then specified MaxResolution parameter.</value>
+        [DataMember(Name="ResizeImages", EmitDefaultValue=false)]
+        public bool? ResizeImages { get; set; }
+
+        /// <summary>
+        /// Specifies maximum resolution of images. If image has higher resolution it will be scaled.
+        /// </summary>
+        /// <value>Specifies maximum resolution of images. If image has higher resolution it will be scaled.</value>
+        [DataMember(Name="MaxResolution", EmitDefaultValue=false)]
+        public int? MaxResolution { get; set; }
+
+        /// <summary>
+        /// Fonts will be converted into subsets if set to true.
+        /// </summary>
+        /// <value>Fonts will be converted into subsets if set to true.</value>
+        [DataMember(Name="SubsetFonts", EmitDefaultValue=false)]
+        public bool? SubsetFonts { get; set; }
+
+        /// <summary>
+        /// Remove private information (page piece info).
+        /// </summary>
+        /// <value>Remove private information (page piece info).</value>
+        [DataMember(Name="RemovePrivateInfo", EmitDefaultValue=false)]
+        public bool? RemovePrivateInfo { get; set; }
+
+        /// <summary>
+        /// Image encode which will be used.
+        /// </summary>
+        /// <value>Image encode which will be used.</value>
+        [DataMember(Name="ImageEncoding", EmitDefaultValue=true)]
+        public ImageEncoding ImageEncoding { get; set; }
+
+        /// <summary>
+        /// Version of compression algorithm. Possible values are: \&quot;Standard\&quot; - standard compression, \&quot;Fast\&quot; - fast (improved compression which is faster then standard but may be applicable not for all images), \&quot;Mixed\&quot; - mixed (standard compression is applied to images which can not be compressed by  faster algorithm, this may give best compression but more slow then \&quot;Fast\&quot; algorithm. Version \&quot;Fast\&quot; is not applicable for resizing images (standard method will be used). Default is \&quot;Standard\&quot;.
+        /// </summary>
+        /// <value>Version of compression algorithm. Possible values are: \&quot;Standard\&quot; - standard compression, \&quot;Fast\&quot; - fast (improved compression which is faster then standard but may be applicable not for all images), \&quot;Mixed\&quot; - mixed (standard compression is applied to images which can not be compressed by  faster algorithm, this may give best compression but more slow then \&quot;Fast\&quot; algorithm. Version \&quot;Fast\&quot; is not applicable for resizing images (standard method will be used). Default is \&quot;Standard\&quot;.</value>
+        [DataMember(Name="ImageCompressionVersion", EmitDefaultValue=true)]
+        public ImageCompressionVersion ImageCompressionVersion { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -192,6 +185,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  RemoveUnusedObjects: ").Append(RemoveUnusedObjects).Append("\n");
             sb.Append("  RemoveUnusedStreams: ").Append(RemoveUnusedStreams).Append("\n");
             sb.Append("  UnembedFonts: ").Append(UnembedFonts).Append("\n");
+            sb.Append("  ResizeImages: ").Append(ResizeImages).Append("\n");
+            sb.Append("  MaxResolution: ").Append(MaxResolution).Append("\n");
+            sb.Append("  SubsetFonts: ").Append(SubsetFonts).Append("\n");
+            sb.Append("  RemovePrivateInfo: ").Append(RemovePrivateInfo).Append("\n");
+            sb.Append("  ImageEncoding: ").Append(ImageEncoding).Append("\n");
+            sb.Append("  ImageCompressionVersion: ").Append(ImageCompressionVersion).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -262,6 +261,36 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.UnembedFonts == other.UnembedFonts ||
                     this.UnembedFonts != null &&
                     this.UnembedFonts.Equals(other.UnembedFonts)
+                ) && 
+                (
+                    this.ResizeImages == other.ResizeImages ||
+                    this.ResizeImages != null &&
+                    this.ResizeImages.Equals(other.ResizeImages)
+                ) && 
+                (
+                    this.MaxResolution == other.MaxResolution ||
+                    this.MaxResolution != null &&
+                    this.MaxResolution.Equals(other.MaxResolution)
+                ) && 
+                (
+                    this.SubsetFonts == other.SubsetFonts ||
+                    this.SubsetFonts != null &&
+                    this.SubsetFonts.Equals(other.SubsetFonts)
+                ) && 
+                (
+                    this.RemovePrivateInfo == other.RemovePrivateInfo ||
+                    this.RemovePrivateInfo != null &&
+                    this.RemovePrivateInfo.Equals(other.RemovePrivateInfo)
+                ) && 
+                (
+                    this.ImageEncoding == other.ImageEncoding ||
+                    this.ImageEncoding != null &&
+                    this.ImageEncoding.Equals(other.ImageEncoding)
+                ) && 
+                (
+                    this.ImageCompressionVersion == other.ImageCompressionVersion ||
+                    this.ImageCompressionVersion != null &&
+                    this.ImageCompressionVersion.Equals(other.ImageCompressionVersion)
                 );
         }
 
@@ -290,6 +319,18 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.RemoveUnusedStreams.GetHashCode();
                 if (this.UnembedFonts != null)
                     hash = hash * 59 + this.UnembedFonts.GetHashCode();
+                if (this.ResizeImages != null)
+                    hash = hash * 59 + this.ResizeImages.GetHashCode();
+                if (this.MaxResolution != null)
+                    hash = hash * 59 + this.MaxResolution.GetHashCode();
+                if (this.SubsetFonts != null)
+                    hash = hash * 59 + this.SubsetFonts.GetHashCode();
+                if (this.RemovePrivateInfo != null)
+                    hash = hash * 59 + this.RemovePrivateInfo.GetHashCode();
+                if (this.ImageEncoding != null)
+                    hash = hash * 59 + this.ImageEncoding.GetHashCode();
+                if (this.ImageCompressionVersion != null)
+                    hash = hash * 59 + this.ImageCompressionVersion.GetHashCode();
                 return hash;
             }
         }

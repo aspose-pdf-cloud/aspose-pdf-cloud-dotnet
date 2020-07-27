@@ -58,7 +58,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Enum PDFA1B for "PDFA1B"
         /// </summary>
         [EnumMember(Value = "PDFA1B")]
-        PDFA1B
+        PDFA1B,
+        
+        /// <summary>
+        /// Enum PDFA3A for "PDFA3A"
+        /// </summary>
+        [EnumMember(Value = "PDFA3A")]
+        PDFA3A
     }
 
 }
