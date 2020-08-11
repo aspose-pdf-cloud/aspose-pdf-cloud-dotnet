@@ -59,6 +59,11 @@ namespace Aspose.Pdf.Cloud.Live.Demos.UI
 				 new { controller = "Conversion", action = "Conversion" }
 			);
 			routes.MapRoute(
+				"AsposeConversionConvertOtherFileFormatsRoute",
+				"{product}/Convert-Other-File-Formats-to-PDF",
+				 new { controller = "Conversion", action = "ConvertOtherFileFormatstoPDF" }
+			);
+			routes.MapRoute(
 				"DownloadFileRoute",
 				"common/download",
 				new { controller = "Common", action = "DownloadFile" }				

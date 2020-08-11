@@ -18,10 +18,12 @@
 	<res name="FileSelectMessage">Please select a file to convert</res>
   <res name="SaveAs">Save as</res>
 	<res name="pdfConversionSaveAsOptions">XLS,XLSX,PPTX,DOC,EPUB,HTML,TEX,,JPEG,EMF,PNG,BMP,GIF,SVG,LATEX,TIFF,XML,XPS,TEXT</res>
+	<res name="pdfConvert-Other-File-Formats-to-PDFSaveAsOptions">PDF</res>
 	<res name="DropOrUploadFile">Drop or upload your file</res>
   <res name="DropOrUploadFiles">Drop or upload your files</res>
 	<!--<res name="pdfValidationExpression">.pdf|.text|.fdf|.epub|.html|.tex|.mht|.pcl|.ps|.svg|.xml|.xps|.md</res>-->
 	<res name="pdfValidationExpression">.pdf</res>
+	<res name="pdfConvert-Other-File-Formats-to-PDFValidationExpression">.epub|.latex|.mht|.html|.ps|.xps|.svg|.pcl|.xml</res>	
 	<res name="FileConvertedSuccessMessage1">Your file has been converted successfully</res>
   <res name="DownLoadNow">DOWNLOAD NOW</res>
   <res name="FileWrongTypeMessage">You are trying to upload document(s) of unsupported type: </res>
@@ -29,24 +31,30 @@
 	<res name="pdfConversionMetaDescription">Aspose.PDF Cloud API allows you to convert PDF to many other file formats. You can convert PDF to Word, pdf to ppt, pdf to dwg, pdf to html, pdf to tiff, pdf to svg, pdf to epub, pdf to latex, pdf to xml, pdf to pcl, pdf to jpg, jpg to pdf, pdf to tiff, pdf to xps, pdf to excel by using the SDKs in various languages such as, C#, Java, Python, Ruby, PHP, Node.js, Swift, Android and Go.</res>
 	<res name="pdfConversionTitle">Free online converter</res>
 	<res name="pdfConversionSubTitle">Convert PDf document to other file formats</res>
+
+	<res name="pdfConvert-Other-File-Formats-to-PDFPageTitle">Convert Multiple File Formats to PDF - Aspose.PDF Cloud Product Family</res>
+	<res name="pdfConvert-Other-File-Formats-to-PDFMetaDescription">Aspose.PDF Cloud API allows you to convert multiple file formats to PDF. Aspose.PDF Cloud allows a flexible and easy way to convert multiple file formats to PDF. </res>
+	<res name="pdfConvert-Other-File-Formats-to-PDFTitle">Free online converter</res>
+	<res name="pdfConvert-Other-File-Formats-to-PDFSubTitle">Convert multiple file formats to PDF</res>
+	
 	<!-- Conversion App - How To-->
 	<res name="HowtoConversionTitle">How to convert {0} file using {1}</res>
 	<res name="HowtoConversionFeature1">Click inside the file drop area to upload file or drag &amp; drop file.</res>
 	<res name="HowtoConversionFeature2">Your file will be uploaded and will be converted to required format.</res>
 	<res name="HowtoConversionFeature3">Download link of converted file will be available instantly after conversion.</res>
+
+	<res name="HowtoConvert-Other-File-Formats-to-PDFTitle">How to convert {0} file using {1}</res>
+	<res name="HowtoConvert-Other-File-Formats-to-PDFFeature1">Click inside the file drop area to upload file or drag &amp; drop file.</res>
+	<res name="HowtoConvert-Other-File-Formats-to-PDFFeature2">Your file will be uploaded and will be converted to required format.</res>
+	<res name="HowtoConvert-Other-File-Formats-to-PDFFeature3">Download link of converted file will be available instantly after conversion.</res>
+	
 	<res name="WrongRegExpMessage">Wrong regular expression</res>
   <res name="ConvertAnotherFile">Convert another file</res>
   
 	<res name="AsposeProductFor"></res>
 
  
-  <res name="Feature1">Fast and Easy Conversion</res>
-  <res name="Feature1Description">Upload your document, choose the save format type and click on “Convert” button. You will get the download link as soon as the file is converted</res>
-  <res name="Feature1TasksDescription">Upload your project (or select online), choose the save format type and click on “Convert” button. You will get the download link as soon as the file is converted</res>
-  <res name="Feature2">Convert from Anywhere</res>
-  <res name="Feature2Description">It works from all platforms including Windows, Mac, Android and iOS. All files are processed on our servers. No plugin or software installation required for you</res>
-  <res name="Feature3">Conversion Quality</res>
-  <res name="Feature3Description">. All files are processed using Aspose APIs, which are being used by many Fortune 100 companies across 114 countries</res>
+ 
 	
   <res name="PoweredBy">Powered by</res>
   <res name="Conversionh4">Conversion</res>
@@ -57,15 +65,30 @@
 
 	<res name="ConversionFeature1">Fast and Easy Conversion</res>
 	<res name="ConversionFeature1Description">Upload your document, choose the save format type and click on “Convert” button. You will get the download link as soon as the file is converted</res>
-	<res name="ConversionFeature1TasksDescription">Upload your project (or select online), choose the save format type and click on “Convert” button. You will get the download link as soon as the file is converted</res>
+	
 	<res name="ConversionFeature2">Convert from Anywhere</res>
 	<res name="ConversionFeature2Description">It works from all platforms including Windows, Mac, Android and iOS. All files are processed on our servers. No plugin or software installation required for you</res>
 	<res name="ConversionFeature3">Conversion Quality</res>
+	<res name="Feature3Description">. All files are processed using Aspose APIs, which are being used by many Fortune 100 companies across 114 countries</res>
 	<res name="ConversionButton">CONVERT</res>
+	<res name="Convert-Other-File-Formats-to-PDFButton">CONVERT</res>
+	
 	<res name="ConversionAnotherFile">Convert other documents</res>
 	<res name="ConversionSuccessMessage">Your files have been processed successfully</res>
+
+	<res name="Convert-Other-File-Formats-to-PDFAnotherFile">Convert other documents</res>
+	<res name="Convert-Other-File-Formats-to-PDFSuccessMessage">Your files have been processed successfully</res>
 	
 	<res name="ConversionAction">Convert</res>
+
+	<res name="Convert-Other-File-Formats-to-PDFAction">Convert</res>
+	<res name="Convert-Other-File-Formats-to-PDFFeature1">Fast and Easy Conversion</res>
+	<res name="Convert-Other-File-Formats-to-PDFFeature1Description">Upload your document, choose the save format type and click on “Convert” button. You will get the download link as soon as the file is converted</res>
+
+	<res name="Convert-Other-File-Formats-to-PDFFeature2">Convert from Anywhere</res>
+	<res name="Convert-Other-File-Formats-to-PDFFeature2Description">It works from all platforms including Windows, Mac, Android and iOS. All files are processed on our servers. No plugin or software installation required for you</res>
+	<res name="Convert-Other-File-Formats-to-PDFFeature3">Conversion Quality</res>
+	<res name="Convert-Other-File-Formats-to-PDFh4">Conversion</res>
 </resources>
 
 

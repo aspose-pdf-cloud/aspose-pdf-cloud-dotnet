@@ -26,26 +26,60 @@ namespace Aspose.Pdf.Cloud.Live.Demos.UI.Models
 
 			PdfApi pdfApi = new PdfApi(Config.Configuration.AppKey, Config.Configuration.AppSID);
 			string fileNamewithOutExtension = Path.GetFileNameWithoutExtension(fileName);
+			string fileExtension = Path.GetExtension(fileName);
+			fileExtension = fileExtension.Replace(".", "").Trim().ToLower();
 			string outputFileName = fileNamewithOutExtension + "." + outputType;			
-
+			
 			if (pdfApi != null)
 			{
 				AsposeResponse response = null;
-				
-				if (outputType.Equals("jpeg") || outputType.Equals("emf") || outputType.Equals("png") || outputType.Equals("bmp") || outputType.Equals("gif"))
-				{					
+				if ((outputType.Equals("pdf")) && (fileExtension.Equals("epub") || fileExtension.Equals("latex") || fileExtension.Equals("mht") || fileExtension.Equals("html") || fileExtension.Equals("ps") || fileExtension.Equals("xps") || fileExtension.Equals("svg")   || fileExtension.Equals("pcl") || fileExtension.Equals("xml")))
+				{
+					switch (fileExtension)
+					{
+						case "epub":
+							response = pdfApi.PutEpubInStorageToPdf(fileName, outputFileName);
+							break;
+						case "latex":
+							response = pdfApi.PutLaTeXInStorageToPdf(fileName, outputFileName);
+							break;
+						case "mht":
+							response = pdfApi.PutMhtInStorageToPdf(fileName, outputFileName);
+							break;
+						case "html":
+							response = pdfApi.PutHtmlInStorageToPdf(fileName, outputFileName);
+							break;
+						case "ps":
+							response = pdfApi.PutPsInStorageToPdf(fileName, outputFileName);
+							break;
+						case "xps":
+							response = pdfApi.PutXpsInStorageToPdf(fileName, outputFileName);
+							break;
+						case "svg":
+							response = pdfApi.PutSvgInStorageToPdf(fileName, outputFileName);
+							break;
+						case "pcl":
+							response = pdfApi.PutPclInStorageToPdf(fileName, outputFileName);
+							break;
+						case "xml":
+							response = pdfApi.PutXmlInStorageToPdf(fileName, outputFileName);
+							break;
+					}
+				}
+				else if (outputType.Equals("jpeg") || outputType.Equals("emf") || outputType.Equals("png") || outputType.Equals("bmp") || outputType.Equals("gif"))
+				{
 					// Invoke Aspose.PDF Cloud SDK API to get page count from pdf document
 					DocumentPagesResponse apiResponse = pdfApi.GetPages(fileName, storage: null, folder: null);
 
 					if (apiResponse != null && apiResponse.Status.Equals("OK"))
 					{
 						int count = apiResponse.Pages.List.Count;
-						int pageNumber = 0;						
+						int pageNumber = 0;
 						for (int i = 0; i < count; i++)
 						{
 							pageNumber = i + 1;
-							outputFileName = Path.Combine(fileNamewithOutExtension, "Page_" + pageNumber + "." + outputType); 
-							
+							outputFileName = Path.Combine(fileNamewithOutExtension, "Page_" + pageNumber + "." + outputType);
+
 							switch (outputType)
 							{
 								case "jpeg":
@@ -66,7 +100,7 @@ namespace Aspose.Pdf.Cloud.Live.Demos.UI.Models
 							}
 						}
 					}
-					
+
 				}
 				else
 				{
@@ -110,7 +144,7 @@ namespace Aspose.Pdf.Cloud.Live.Demos.UI.Models
 							break;
 						case "text":
 							response = pdfApi.PutPdfInStorageToTeX(fileName, outputFileName, folder: null);
-							break;						
+							break;
 					}
 				}
 				

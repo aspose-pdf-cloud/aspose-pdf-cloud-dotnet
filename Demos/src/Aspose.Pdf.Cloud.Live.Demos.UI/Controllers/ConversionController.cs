@@ -47,7 +47,20 @@ namespace Aspose.Pdf.Cloud.Live.Demos.UI.Controllers
 
 		public ActionResult Conversion()
 		{
+			
 			var model = new ViewModel(this, "Conversion")
+			{
+				SaveAsComponent = true,
+				SaveAsOriginal = false,
+				MaximumUploadFiles = 1
+			};
+
+			return View(model);
+		}
+		public ActionResult ConvertOtherFileFormatstoPDF()
+		{
+
+			var model = new ViewModel(this, "Convert-Other-File-Formats-to-PDF")
 			{
 				SaveAsComponent = true,
 				SaveAsOriginal = false,
