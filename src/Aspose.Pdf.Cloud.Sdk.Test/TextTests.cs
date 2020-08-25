@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using Aspose.Pdf.Cloud.Sdk.Model;
 using NUnit.Framework;
@@ -46,6 +47,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void PutAddTextTest()
         {
+            const string fontFile = "Righteous-Regular.ttf";
+            UploadFile(fontFile, fontFile);
             var paragraph = new Paragraph(
                 Rectangle: new Rectangle(100, 100, 200, 200),
                 LeftMargin: 10,
@@ -68,11 +71,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                             new Segment(
                                 Value: "segment 1",
                                 TextState: new TextState(
-                                    Font: "Arial",
+                                    Font: "Righteous",
                                     FontSize: 10,
                                     ForegroundColor: new Color(0x00, 0x00, 0xFF, 0x00),
                                     BackgroundColor: new Color(0x00, 0xFF, 0x00, 0x00),
-                                    FontStyle: FontStyles.Bold
+                                    FontStyle: FontStyles.Regular,
+                                    FontFile: Path.Combine(TempFolder, fontFile)
                                 )
                             )
                         }

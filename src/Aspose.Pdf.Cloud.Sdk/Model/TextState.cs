@@ -55,11 +55,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="TextState" /> class.
         /// </summary>
         /// <param name="FontSize">Gets or sets font size of the text. (required)</param>
-        /// <param name="Font">Gets or sets font of the text.</param>
+        /// <param name="Font">Gets or sets font name of the text.</param>
         /// <param name="ForegroundColor">Gets or sets foreground color of the text.</param>
         /// <param name="BackgroundColor">Sets background color of the text.</param>
         /// <param name="FontStyle">Sets font style of the text. (required)</param>
-        public TextState(double? FontSize = default(double?), string Font = default(string), Color ForegroundColor = default(Color), Color BackgroundColor = default(Color), FontStyles FontStyle = default(FontStyles))
+        /// <param name="FontFile">Sets path of font file in storage.</param>
+        public TextState(double? FontSize = default(double?), string Font = default(string), Color ForegroundColor = default(Color), Color BackgroundColor = default(Color), FontStyles FontStyle = default(FontStyles), string FontFile = default(string))
         {
             // to ensure "FontSize" is required (not null)
             if (FontSize == null)
@@ -82,6 +83,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Font = Font;
             this.ForegroundColor = ForegroundColor;
             this.BackgroundColor = BackgroundColor;
+            this.FontFile = FontFile;
         }
         
         /// <summary>
@@ -92,9 +94,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public double? FontSize { get; set; }
 
         /// <summary>
-        /// Gets or sets font of the text.
+        /// Gets or sets font name of the text.
         /// </summary>
-        /// <value>Gets or sets font of the text.</value>
+        /// <value>Gets or sets font name of the text.</value>
         [DataMember(Name="Font", EmitDefaultValue=false)]
         public string Font { get; set; }
 
@@ -120,6 +122,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public FontStyles FontStyle { get; set; }
 
         /// <summary>
+        /// Sets path of font file in storage.
+        /// </summary>
+        /// <value>Sets path of font file in storage.</value>
+        [DataMember(Name="FontFile", EmitDefaultValue=false)]
+        public string FontFile { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -132,6 +141,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  ForegroundColor: ").Append(ForegroundColor).Append("\n");
             sb.Append("  BackgroundColor: ").Append(BackgroundColor).Append("\n");
             sb.Append("  FontStyle: ").Append(FontStyle).Append("\n");
+            sb.Append("  FontFile: ").Append(FontFile).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -192,6 +202,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.FontStyle == other.FontStyle ||
                     this.FontStyle != null &&
                     this.FontStyle.Equals(other.FontStyle)
+                ) && 
+                (
+                    this.FontFile == other.FontFile ||
+                    this.FontFile != null &&
+                    this.FontFile.Equals(other.FontFile)
                 );
         }
 
@@ -216,6 +231,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.BackgroundColor.GetHashCode();
                 if (this.FontStyle != null)
                     hash = hash * 59 + this.FontStyle.GetHashCode();
+                if (this.FontFile != null)
+                    hash = hash * 59 + this.FontFile.GetHashCode();
                 return hash;
             }
         }
