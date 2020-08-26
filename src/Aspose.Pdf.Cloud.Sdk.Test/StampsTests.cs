@@ -111,7 +111,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                     Zoom = 1,
                     TextAlignment = HorizontalAlignment.Center,
                     Value = "Text Stamp",
-                    TextState = new TextState(FontSize: 14D)
+                    TextState = new TextState(FontSize: 14D, Font: "Arial")
                 }
             };
 
