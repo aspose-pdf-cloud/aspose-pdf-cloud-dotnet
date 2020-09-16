@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Font** | **string** | Gets or sets font of the text. | [optional] 
 **ForegroundColor** | [**Color**](Color.md) | Gets or sets foreground color of the text. | [optional] 
 **BackgroundColor** | [**Color**](Color.md) | Sets background color of the text. | [optional] 
+**FontFile** | **string** | Sets path of font file in storage. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

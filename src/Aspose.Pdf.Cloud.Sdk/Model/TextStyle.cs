@@ -58,7 +58,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Font">Gets or sets font of the text.</param>
         /// <param name="ForegroundColor">Gets or sets foreground color of the text.</param>
         /// <param name="BackgroundColor">Sets background color of the text.</param>
-        public TextStyle(double? FontSize = default(double?), string Font = default(string), Color ForegroundColor = default(Color), Color BackgroundColor = default(Color))
+        /// <param name="FontFile">Sets path of font file in storage.</param>
+        public TextStyle(double? FontSize = default(double?), string Font = default(string), Color ForegroundColor = default(Color), Color BackgroundColor = default(Color), string FontFile = default(string))
         {
             // to ensure "FontSize" is required (not null)
             if (FontSize == null)
@@ -72,6 +73,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.Font = Font;
             this.ForegroundColor = ForegroundColor;
             this.BackgroundColor = BackgroundColor;
+            this.FontFile = FontFile;
         }
         
         /// <summary>
@@ -103,6 +105,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public Color BackgroundColor { get; set; }
 
         /// <summary>
+        /// Sets path of font file in storage.
+        /// </summary>
+        /// <value>Sets path of font file in storage.</value>
+        [DataMember(Name="FontFile", EmitDefaultValue=false)]
+        public string FontFile { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -114,6 +123,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  Font: ").Append(Font).Append("\n");
             sb.Append("  ForegroundColor: ").Append(ForegroundColor).Append("\n");
             sb.Append("  BackgroundColor: ").Append(BackgroundColor).Append("\n");
+            sb.Append("  FontFile: ").Append(FontFile).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -169,6 +179,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.BackgroundColor == other.BackgroundColor ||
                     this.BackgroundColor != null &&
                     this.BackgroundColor.Equals(other.BackgroundColor)
+                ) && 
+                (
+                    this.FontFile == other.FontFile ||
+                    this.FontFile != null &&
+                    this.FontFile.Equals(other.FontFile)
                 );
         }
 
@@ -191,6 +206,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.ForegroundColor.GetHashCode();
                 if (this.BackgroundColor != null)
                     hash = hash * 59 + this.BackgroundColor.GetHashCode();
+                if (this.FontFile != null)
+                    hash = hash * 59 + this.FontFile.GetHashCode();
                 return hash;
             }
         }
