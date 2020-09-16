@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// An abstract class which represents signature custon appearance object.
+    /// An abstract class which represents signature custom appearance object.
     /// </summary>
     [DataContract]
     public partial class SignatureCustomAppearance :  IEquatable<SignatureCustomAppearance>, IValidatableObject

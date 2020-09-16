@@ -6562,7 +6562,7 @@ Name | Type | Description  | Notes
 
 <a name="postpageredactionannotations"></a>
 # **PostPageRedactionAnnotations**
-> AsposeResponse PostPageRedactionAnnotations (string name, int? pageNumber, List<RedactionAnnotation> annotations, string storage = null, string folder = null)
+> AsposeResponse PostPageRedactionAnnotations (string name, int? pageNumber, List<RedactionAnnotation> annotations, string storage = null, string folder = null, bool? apply = null)
 
 Add document page redaction annotations.
 
@@ -6576,6 +6576,7 @@ Name | Type | Description  | Notes
  **annotations** | [**List&lt;RedactionAnnotation&gt;**](RedactionAnnotation.md)| The array of annotation. | 
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
+ **apply** | **bool?**| Apply redaction immediately after adding. | [optional] [default to false]
 
 ### Return type
 
@@ -9632,7 +9633,7 @@ Name | Type | Description  | Notes
 
 <a name="putredactionannotation"></a>
 # **PutRedactionAnnotation**
-> RedactionAnnotationResponse PutRedactionAnnotation (string name, string annotationId, RedactionAnnotation annotation, string storage = null, string folder = null)
+> RedactionAnnotationResponse PutRedactionAnnotation (string name, string annotationId, RedactionAnnotation annotation, string storage = null, string folder = null, bool? apply = null)
 
 Replace document redaction annotation
 
@@ -9646,6 +9647,7 @@ Name | Type | Description  | Notes
  **annotation** | [**RedactionAnnotation**](RedactionAnnotation.md)| Annotation. | 
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
+ **apply** | **bool?**| Apply redaction immediately after adding. | [optional] [default to false]
 
 ### Return type
 
