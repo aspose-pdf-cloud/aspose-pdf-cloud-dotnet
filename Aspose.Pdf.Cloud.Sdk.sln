@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.Pdf.Cloud.Sdk", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.Pdf.Cloud.Sdk.Test", "src\Aspose.Pdf.Cloud.Sdk.Test\Aspose.Pdf.Cloud.Sdk.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aspose.PDF.Cloud.Examples", "Aspose.PDF.Cloud.Examples\Aspose.PDF.Cloud.Examples.csproj", "{B38D6FD5-EFE5-4153-8CBD-FF98794B88B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B38D6FD5-EFE5-4153-8CBD-FF98794B88B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B38D6FD5-EFE5-4153-8CBD-FF98794B88B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B38D6FD5-EFE5-4153-8CBD-FF98794B88B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B38D6FD5-EFE5-4153-8CBD-FF98794B88B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
