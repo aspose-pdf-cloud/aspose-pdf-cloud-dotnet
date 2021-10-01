@@ -207,3 +207,4 @@ src/Settings/servercreds.json
 
 build-out/
 nuget.exe
+*.url

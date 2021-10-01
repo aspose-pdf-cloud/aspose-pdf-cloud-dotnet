@@ -10,6 +10,7 @@
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <GenerateAssemblyKeyFile>false</GenerateAssemblyKeyFile>
     <Configurations>Debug;Release</Configurations>
+    <PackageTags>QWERTY asdfgh</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -43,7 +44,6 @@
     <Compile Include="Model\AnnotationState.cs" />
     <Compile Include="Model\AnnotationType.cs" />
     <Compile Include="Model\AntialiasingProcessingType.cs" />
-    <Compile Include="Model\ApiInfo.cs" />
     <Compile Include="Model\AsposeResponse.cs" />
     <Compile Include="Model\Attachment.cs" />
     <Compile Include="Model\AttachmentResponse.cs" />

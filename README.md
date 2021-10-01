@@ -29,6 +29,9 @@ XLS, XLSX, PPTX, DOC, DOCX, MobiXML, JPEG, EMF, PNG, BMP, GIF, TIFF, Text
 ## Read PDF Formats
 MHT, PCL, PS, XSLFO, MD
 
+## Enhancements in Version 21.9
+- A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .Net.
+
 ## Enhancements in Version 20.12
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .Net.
 
@@ -49,8 +52,8 @@ Aspose PDF SDK includes a suite of unit tests. These Unit Tests also serves as e
 All Aspose.Pdf for Cloud SDKs are licensed under [MIT License](LICENSE).
 
 ## Dependencies
-- [RestSharp](https://www.nuget.org/packages/RestSharp) - 106.2.2
-- [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 11.0.2
+- [RestSharp](https://www.nuget.org/packages/RestSharp) - 106.6.10
+- [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 12.0.3
 
 The DLLs included in the package may not be the latest version. We recommend using [NuGet] (https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
 ```
