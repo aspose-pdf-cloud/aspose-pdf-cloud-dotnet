@@ -6,7 +6,7 @@ Single text replacement setting.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **OldValue** | **string** | Original text. | 
-**NewValue** | **string** | New text. | 
+**NewValue** | **string** | New text. | [optional] 
 **Regex** | **bool?** | Gets or sets a value indicating whether search text is regular expression. | 
 **TextState** | [**TextState**](TextState.md) | Text properties of a new text. | [optional] 
 **Rect** | [**Rectangle**](Rectangle.md) | Rectangle area where searched original text. | [optional] 

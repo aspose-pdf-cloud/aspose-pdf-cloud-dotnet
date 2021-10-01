@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="TestsBase.cs">
-//   Copyright (c) 2020 Aspose.PDF Cloud
+//   Copyright (c) 2021 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -35,7 +35,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 {
     public abstract class TestsBase
     {
-        private const string BaseProductUri = @"https://api-qa.aspose.cloud";
+        private const string BaseProductUri = @"https://api.aspose.cloud";
 
         protected const string TestDataFolder = @"..\..\..\..\testData";
         private const string ServerCredsFile = @"..\..\..\Settings\servercreds.json";

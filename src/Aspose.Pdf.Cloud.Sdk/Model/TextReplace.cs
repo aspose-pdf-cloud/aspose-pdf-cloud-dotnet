@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="TextReplace.cs">
-//   Copyright (c) 2020 Aspose.PDF Cloud
+//   Copyright (c) 2021 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -55,7 +55,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="TextReplace" /> class.
         /// </summary>
         /// <param name="OldValue">Original text. (required)</param>
-        /// <param name="NewValue">New text. (required)</param>
+        /// <param name="NewValue">New text.</param>
         /// <param name="Regex">Gets or sets a value indicating whether search text is regular expression. (required)</param>
         /// <param name="TextState">Text properties of a new text.</param>
         /// <param name="Rect">Rectangle area where searched original text.</param>
@@ -70,15 +70,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 this.OldValue = OldValue;
             }
-            // to ensure "NewValue" is required (not null)
-            if (NewValue == null)
-            {
-                throw new InvalidDataException("NewValue is a required property for TextReplace and cannot be null");
-            }
-            else
-            {
-                this.NewValue = NewValue;
-            }
             // to ensure "Regex" is required (not null)
             if (Regex == null)
             {
@@ -88,6 +79,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 this.Regex = Regex;
             }
+            this.NewValue = NewValue;
             this.TextState = TextState;
             this.Rect = Rect;
         }
@@ -239,12 +231,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             if(this.OldValue != null && this.OldValue.Length < 1)
             {
                 yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for OldValue, length must be greater than 1.", new [] { "OldValue" });
-            }
-
-            // NewValue (string) minLength
-            if(this.NewValue != null && this.NewValue.Length < 1)
-            {
-                yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for NewValue, length must be greater than 1.", new [] { "NewValue" });
             }
 
             yield break;
