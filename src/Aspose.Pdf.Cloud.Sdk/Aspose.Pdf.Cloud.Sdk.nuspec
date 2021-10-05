@@ -16,7 +16,8 @@
         <owners>asposemarketplace</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <developmentDependency>false</developmentDependency>
-        <iconUrl>https://www.aspose.cloud/templates/aspose/App_Themes/V3/images/pdf/272x272/aspose_pdf-for-cloud.png</iconUrl>
+        <license type="file">license\LICENSE.TXT</license>
+        <icon>images\aspose_pdf-for-cloud.png</icon>
         <tags>Aspose.PDF Aspose.PDF-Cloud Aspose.Total-Cloud Cloud REST API PDF EPUB HTML TEX MHT PCL PS PostScrtip SVG XML XPS XSLFO MD Markdown XLS XLSX PPTX DOC DOCX EPUB HTML MobiXML SVG JPEG EMF PNG BMP GIF TIFF XML XPS Text FDF XFDF PDFA3 PDF-to-DOC PDF-to-DOCX PDF-to-HTML PDF-to-PDFA PDF-to-TIFF PDF-to-SVG PDF-to-EPUB PDF-to-PPTX PDF-to-TEX PDF-to-MobiXML PDF-to-XFA PDF-to-XML PDF-to-XPS PDF-to-XLS EPUB-to-PDF Web-to-PDF TEX-to-PDF MHT-to-PDF HTML-to-PDF PS-to-PDF PostScript-to-PDF XSIF-to-PDF XPS-to-PDF SVG-to-PDF DOC-to-PDF DOCX-to-PDF PCL-to-PDF XML-to-PDF Markdown-to-PDF MD-to-PDF Annotation Line-Annotation Circle-Annotation Square-Annotation Underline-Annotation Squiggly-Annotation PDF-Bookmark PDF-Link PDF-Attachment PDF-Document PDF-Page PDF-Form-Fields PDF-Text PDF-Image Replace-Text Fetch-Text Replace-Image Extract-Image Convert-PDF Convert Converter PDF-to-Image Create-PDF Convert-PDF Stamp PDF-OCR OCR-Layers .NET C# dotnet CSharp</tags>
         <!-- The description can be used in package manager UI. Note that the
              nuget.org gallery uses information you add in the portal. -->
@@ -33,8 +34,9 @@
         </dependencies>
     </metadata>
     <files>
-
-        <!-- A readme.txt will be displayed when the package is installed -->
+        <file src="..\..\thirdpartylicenses-Aspose.PDF Cloud SDK for .NET.txt" target="license\" />
+        <file src="..\..\LICENSE.TXT" target="license\" />
+        <file src="aspose_pdf-for-cloud.png" target="images\" />
         <file src="..\..\README.md" target="" />
         <file src="bin\Release\Aspose.Pdf.Cloud.Sdk.dll" target="lib\net4.5" />
         <file src="..\..\build-out\bin\release\netstandard2.0\Aspose.Pdf.Cloud.Sdk.dll" target="lib\netstandard2.0" />
