@@ -3,7 +3,7 @@
 //   Copyright (c) 2021 Aspose.PDF Cloud
 // </copyright>
 // <summary>
-//   Permission is hereby granted, free of charge, to any person obtaining a copy
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
 //  in the Software without restriction, including without limitation the rights
 //  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
@@ -205,7 +205,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
             // add custom header
             request.AddHeader(AsposeClientHeaderName, ".net sdk");
-            request.AddHeader(AsposeClientVersionHeaderName, "21.9.0");
+            request.AddHeader(AsposeClientVersionHeaderName, "21.10.0");
 
             // add header parameter, if any
             foreach(var param in headerParams)
