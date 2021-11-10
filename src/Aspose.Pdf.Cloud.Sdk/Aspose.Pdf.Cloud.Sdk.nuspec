@@ -47,8 +47,14 @@ https://stackoverflow.com/questions/tagged/aspose.pdf</description>
 
         <!-- Dependencies are automatically installed when the package is installed -->
         <dependencies>
-            <dependency id="NewtonSoft.Json" version="12.0.3" />
-            <dependency id="RestSharp" version="106.12.0" />
+            <group targetFramework=".NETFramework4.5">
+                <dependency id="NewtonSoft.Json" version="12.0.3" />
+                <dependency id="RestSharp" version="106.12.0" />
+            </group>    
+            <group targetFramework=".NETStandard2.0">
+                <dependency id="NewtonSoft.Json" version="12.0.3" />
+                <dependency id="RestSharp" version="106.12.0" />
+            </group>    
         </dependencies>
     </metadata>
     <files>

@@ -207,6 +207,7 @@ project.lock.json
 src/Settings/servercreds.json
 
 .swagger-codegen/
+.vscode/
 
 build-out/
 nuget.exe
