@@ -23,68 +23,70 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.IO;
-using System.Net.Http;
-using System.Threading.Tasks;
 using Aspose.Pdf.Cloud.Sdk.Api;
 using Aspose.Pdf.Cloud.Sdk.Client;
 using Newtonsoft.Json;
 using NUnit.Framework;
 
-namespace Aspose.Pdf.Cloud.Sdk.Test
-{
-    public abstract class TestsBase
-    {
-        private const string BaseProductUri = @"https://api.aspose.cloud";
+namespace Aspose.Pdf.Cloud.Sdk.Test {
 
-        protected const string TestDataFolder = @"..\..\..\..\testData";
-        private const string ServerCredsFile = @"..\..\..\Settings\servercreds.json";
+  public abstract class TestsBase {
 
-        protected const string TempFolder = "TempPdfCloud";
+    private const string BaseProductUri = @"https://api.aspose.cloud";
+    protected const string TestDataFolder = @"..\..\..\..\testData";
+    private const string ServerCredsFile = @"Settings\servercreds.json";
+    protected const string TempFolder = "TempPdfCloud";
 
-        private Keys keys;
-
-        [SetUp]
-        public virtual void SetUp()
-        {
-            // To run tests with your own credentials please uncomment following line of code
-            // this.keys = new Keys { AppKey = "your app key", AppSID = "your app sid" };
-            if (null == keys)
-            {
-                keys = JsonConvert.DeserializeObject<Keys>(File.ReadAllText(ServerCredsFile));
-            }
-
-            if (string.IsNullOrEmpty(keys?.AppKey) || string.IsNullOrEmpty(keys.AppSID))
-            {
-                throw new FileNotFoundException("servercreds.json doesn't contain AppKey and AppSid");
-            }
-
-            Configuration = new Configuration(keys.AppKey, keys.AppSID, BaseProductUri);
-            PdfApi = new PdfApi(Configuration);
-        }
-
-        [TearDown]
-        public virtual void TearDown()
-        {
-        }
-
-        protected PdfApi PdfApi { get; set; }
-        protected Configuration Configuration { get; private set; }
-
-
-        protected void UploadFile(string sourcePath, string serverFileName)
-        {
-            using (var file = File.OpenRead(Path.Combine(TestDataFolder, sourcePath)))
-            {
-                var response = PdfApi.UploadFile(Path.Combine(TempFolder, serverFileName), file);
-            }
-        }
-
-        private class Keys
-        {
-            public string AppSID { get; set; }
-
-            public string AppKey { get; set; }
-        }
+    private class Keys {
+      public string AppSID { get; set; }
+      public string AppKey { get; set; }
     }
+
+    private Keys keys;
+
+    private string _GetServercredsJson() {
+      DirectoryInfo di = Directory.GetParent(Directory.GetCurrentDirectory());
+      while (di != null) {
+        string servercreds_json = Path.Combine(di.FullName, ServerCredsFile);
+        if (File.Exists(servercreds_json)) {
+          return servercreds_json;
+        }
+        di = Directory.GetParent(di.FullName);
+      }
+      return null;
+    }
+
+    private Keys _GetKeys() {
+      return JsonConvert.DeserializeObject<Keys>(File.ReadAllText(_GetServercredsJson()));
+    }
+
+    [SetUp]
+    public virtual void SetUp() {
+      Console.WriteLine(TestContext.CurrentContext.Test.Name);
+      // To run tests with your own credentials please uncomment following line of code
+      // this.keys = new Keys { AppKey = "your app key", AppSID = "your app sid" };
+      if (keys == null) {
+        keys = _GetKeys();
+      }
+      if (string.IsNullOrEmpty(keys.AppKey) || string.IsNullOrEmpty(keys.AppSID)) {
+        throw new FileNotFoundException("servercreds.json doesn't contain AppSID and/or AppKey");
+      }
+      Configuration = new Configuration(keys.AppKey, keys.AppSID, BaseProductUri);
+      PdfApi = new PdfApi(Configuration);
+    }
+
+    [TearDown]
+    public virtual void TearDown() { }
+
+    protected PdfApi PdfApi { get; set; }
+    protected Configuration Configuration { get; private set; }
+
+    protected void UploadFile(string sourcePath, string serverFileName) {
+      using (var file = File.OpenRead(Path.Combine(TestDataFolder, sourcePath))) {
+        Model.FilesUploadResult response = PdfApi.UploadFile(Path.Combine(TempFolder, serverFileName), file);
+      }
+    }
+  }
 }

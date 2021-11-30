@@ -22,18 +22,16 @@ Extract Text & Images of a PDF document online https://products.aspose.app/pdf/p
 - Extract various elements of PDF files & make PDF documents optimized.
 
 ## Read & Write PDF Formats
-
 PDF, EPUB, HTML, TeX, SVG, XML, XPS, FDF, XFDF
+
 ## Save PDF As
 XLS, XLSX, PPTX, DOC, DOCX, MobiXML, JPEG, EMF, PNG, BMP, GIF, TIFF, Text
+
 ## Read PDF Formats
 MHT, PCL, PS, XSLFO, MD
 
-## Enhancements in Version 21.10
-- A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .Net.
-
-## Enhancements in Version 21.9
-- A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .Net.
+## Enhancements in Version 21.11
+- A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
 
 ## Unit Tests
 Aspose PDF SDK includes a suite of unit tests. These Unit Tests also serves as examples of how to use the Aspose PDF SDK.
@@ -50,6 +48,7 @@ The DLLs included in the package may not be the latest version. We recommend usi
 Install-Package RestSharp
 Install-Package Newtonsoft.Json
 ```
+
 ## Convert PDF to Epub in Dotnet
 
 ```csharp
