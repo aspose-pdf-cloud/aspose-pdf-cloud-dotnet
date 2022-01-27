@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="ScreenAnnotationsTests.cs">
-//   Copyright (c) 2021 Aspose.PDF Cloud
+//   Copyright (c) 2022 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -227,6 +227,37 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 Zoom = 1,
                 StartingNumber = 3,
                 Value = "Page #"
+            };
+
+            var response = PdfApi.PostDocumentPageNumberStamps(name, stamp, startPageNumber: 2, endPageNumber: 3, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PostDocumentPageNumberStampsWithoutValueTest
+        /// </summary>
+        [Test]
+        public void PostDocumentPageNumberStampsWithoutValueTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+
+            PageNumberStamp stamp = new PageNumberStamp
+            {
+                Background = true,
+                LeftMargin = 1,
+                RightMargin = 2,
+                TopMargin = 3,
+                BottomMargin = 4,
+                HorizontalAlignment = HorizontalAlignment.Center,
+                VerticalAlignment = VerticalAlignment.Center,
+                Opacity = 1,
+                Rotate = Rotation.None,
+                RotateAngle = 0,
+                XIndent = 0,
+                YIndent = 0,
+                Zoom = 1,
+                StartingNumber = 3
             };
 
             var response = PdfApi.PostDocumentPageNumberStamps(name, stamp, startPageNumber: 2, endPageNumber: 3, folder: TempFolder);
