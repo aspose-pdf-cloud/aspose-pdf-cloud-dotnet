@@ -1,4 +1,4 @@
-// --------------------------------------------------------------------------------------------------------------------
+﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="TextReplaceTests.cs">
 //   Copyright (c) 2022 Aspose.PDF Cloud
 // </copyright>
@@ -30,48 +30,66 @@ using NUnit.Framework;
 
 namespace Aspose.Pdf.Cloud.Sdk.Test
 {
-    /// <summary>
-    ///  Class for testing TextReplace Api
-    /// </summary>
-    [TestFixture]
-    public class TextReplaceTests : TestsBase
+  /// <summary>
+  ///  Class for testing TextReplace Api
+  /// </summary>
+  [TestFixture]
+  public class TextReplaceTests : TestsBase
+  {
+    private const string Name = "marketing.pdf";
+
+    public override void SetUp()
     {
-        private const string Name = "marketing.pdf";
-
-        public override void SetUp()
-        {
-            base.SetUp();
-            UploadFile(Name, Name);
-        }
-        
-        /// <summary>
-        /// Test PostDocumentTextReplace
-        /// </summary>
-        [Test]
-        public void PostDocumentTextReplaceTest()
-        {
-            var rect = new Rectangle(100, 100, 300, 300);
-            var textReplace = new TextReplace("market", "m_a_r_k_e_t", false, Rect: rect);
-            var textReplaceList = new TextReplaceListRequest(new List<TextReplace> { textReplace },
-                StartIndex: 0, CountReplace: 0);
-
-            var response = PdfApi.PostDocumentTextReplace(Name, textReplaceList, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(200));
-        }
-
-        /// <summary>
-        /// Test PostPageTextReplace
-        /// </summary>
-        [Test]
-        public void PostPageTextReplaceTest()
-        {
-            var rect = new Rectangle(100, 100, 300, 300);
-            var textReplace = new TextReplace("market", "m_a_r_k_e_t", false, Rect: rect);
-            var textReplaceList = new TextReplaceListRequest(new List<TextReplace> { textReplace },
-                StartIndex: 0, CountReplace: 0);
-
-            var response = PdfApi.PostPageTextReplace(Name, 1, textReplaceList, folder: TempFolder);
-            Assert.That(response.Code, Is.EqualTo(200));
-        }
+      base.SetUp();
+      UploadFile(Name, Name);
     }
+
+    /// <summary>
+    /// Test PostDocumentTextReplace
+    /// </summary>
+    [Test]
+    public void PostDocumentTextReplaceTest()
+    {
+      var rect = new Rectangle(100, 100, 300, 300);
+      var textReplace = new TextReplace("market", "m_a_r_k_e_t", false, Rect: rect);
+      var textReplaceList = new TextReplaceListRequest(new List<TextReplace> { textReplace },
+          StartIndex: 0, CountReplace: 0);
+
+      var response = PdfApi.PostDocumentTextReplace(Name, textReplaceList, folder: TempFolder);
+      Assert.That(response.Code, Is.EqualTo(200));
+    }
+
+    /// <summary>
+    /// Test PostPageTextReplace
+    /// </summary>
+    [Test]
+    public void PostPageTextReplaceTest()
+    {
+      var rect = new Rectangle(100, 100, 300, 300);
+      var textReplace = new TextReplace("market", "m_a_r_k_e_t", false, Rect: rect);
+      var textReplaceList = new TextReplaceListRequest(new List<TextReplace> { textReplace },
+          StartIndex: 0, CountReplace: 0);
+
+      var response = PdfApi.PostPageTextReplace(Name, 1, textReplaceList, folder: TempFolder);
+      Assert.That(response.Code, Is.EqualTo(200));
+    }
+
+    /// <summary>
+    /// Test PostDocumentTextReplace2
+    /// </summary>
+    [Test]
+    public void PostDocumentTextReplace2Test()
+    {
+      const string Binder1_pdf = "Binder1.pdf";
+      UploadFile(Binder1_pdf, Binder1_pdf);
+      TextReplaceListRequest textReplaceList = new TextReplaceListRequest(
+        new List<TextReplace> {
+          new TextReplace(OldValue: "Name", NewValue: "David Alexander Avilés Brun", Regex: true),
+          new TextReplace(OldValue: "n_rut", NewValue: "19.670.915-0  ", Regex: true),
+        }
+      );
+      TextReplaceResponse response = PdfApi.PostDocumentTextReplace(Binder1_pdf, textReplaceList, folder: TempFolder);
+      Assert.That(response.Code, Is.EqualTo(200));
+    }
+  }
 }
