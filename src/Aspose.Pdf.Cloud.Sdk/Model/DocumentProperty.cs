@@ -55,7 +55,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="DocumentProperty" /> class.
         /// </summary>
         /// <param name="Links">Link to the document.</param>
-        /// <param name="Name">Pame of the property.</param>
+        /// <param name="Name">Name of the property.</param>
         /// <param name="Value">Property value.</param>
         /// <param name="BuiltIn">Value indicating whether it is a built-in property. (required)</param>
         public DocumentProperty(List<Link> Links = default(List<Link>), string Name = default(string), string Value = default(string), bool? BuiltIn = default(bool?))
@@ -82,9 +82,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public List<Link> Links { get; set; }
 
         /// <summary>
-        /// Pame of the property.
+        /// Name of the property.
         /// </summary>
-        /// <value>Pame of the property.</value>
+        /// <value>Name of the property.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
