@@ -97,7 +97,6 @@ Method | HTTP request | Description
 [**GetImportFieldsFromXfdfInStorage**](PdfApi.md#getimportfieldsfromxfdfinstorage) | **GET** /pdf/\{name}/import/xfdf | Update fields from XFDF file in storage.
 [**GetImportFieldsFromXmlInStorage**](PdfApi.md#getimportfieldsfromxmlinstorage) | **GET** /pdf/\{name}/import/xml | Import from XML file (located on storage) to PDF format and return resulting file in response. 
 [**GetInkAnnotation**](PdfApi.md#getinkannotation) | **GET** /pdf/\{name}/annotations/ink/\{annotationId} | Read document page ink annotation by ID.
-[**GetLaTeXInStorageToPdf**](PdfApi.md#getlatexinstoragetopdf) | **GET** /pdf/create/latex | Convert TeX file (located on storage) to PDF format and return resulting file in response. 
 [**GetLineAnnotation**](PdfApi.md#getlineannotation) | **GET** /pdf/\{name}/annotations/line/\{annotationId} | Read document page line annotation by ID.
 [**GetLinkAnnotation**](PdfApi.md#getlinkannotation) | **GET** /pdf/\{name}/links/\{linkId} | Read document link annotation by ID.
 [**GetListBoxField**](PdfApi.md#getlistboxfield) | **GET** /pdf/\{name}/fields/listbox/\{fieldName} | Read document listbox field by name.
@@ -284,7 +283,6 @@ Method | HTTP request | Description
 [**PutImportFieldsFromXfdfInStorage**](PdfApi.md#putimportfieldsfromxfdfinstorage) | **PUT** /pdf/\{name}/import/xfdf | Update fields from XFDF file in storage.
 [**PutImportFieldsFromXmlInStorage**](PdfApi.md#putimportfieldsfromxmlinstorage) | **PUT** /pdf/\{name}/import/xml | Update fields from XML file in storage.
 [**PutInkAnnotation**](PdfApi.md#putinkannotation) | **PUT** /pdf/\{name}/annotations/ink/\{annotationId} | Replace document ink annotation
-[**PutLaTeXInStorageToPdf**](PdfApi.md#putlatexinstoragetopdf) | **PUT** /pdf/\{name}/create/latex | Convert TeX file (located on storage) to PDF format and upload resulting file to storage. 
 [**PutLineAnnotation**](PdfApi.md#putlineannotation) | **PUT** /pdf/\{name}/annotations/line/\{annotationId} | Replace document line annotation
 [**PutLinkAnnotation**](PdfApi.md#putlinkannotation) | **PUT** /pdf/\{name}/links/\{linkId} | Replace document page link annotations
 [**PutListBoxField**](PdfApi.md#putlistboxfield) | **PUT** /pdf/\{name}/fields/listbox/\{fieldName} | Replace document listbox field
@@ -2833,31 +2831,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getlatexinstoragetopdf"></a>
-# **GetLaTeXInStorageToPdf**
-> System.IO.Stream GetLaTeXInStorageToPdf (string srcPath, string storage = null)
-
-Convert TeX file (located on storage) to PDF format and return resulting file in response. 
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **srcPath** | **string**| Full source filename (ex. /folder1/folder2/template.tex) | 
- **storage** | **string**| The document storage. | [optional] 
-
-### Return type
-
-**System.IO.Stream**
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: multipart/form-data
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="getlineannotation"></a>
 # **GetLineAnnotation**
 > LineAnnotationResponse GetLineAnnotation (string name, string annotationId, string storage = null, string folder = null)
@@ -4471,7 +4444,7 @@ Name | Type | Description  | Notes
  **name** | **string**| The document name. | 
  **insertBlankColumnAtFirst** | **bool?**| Insert blank column at first | [optional] 
  **minimizeTheNumberOfWorksheets** | **bool?**| Minimize the number of worksheets | [optional] 
- **scaleFactor** | **double?**| Scale factor | [optional] 
+ **scaleFactor** | **double?**| Scale factor (Obsolete) | [optional] 
  **uniformWorksheets** | **bool?**| Uniform worksheets | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
@@ -4501,7 +4474,7 @@ Name | Type | Description  | Notes
  **name** | **string**| The document name. | 
  **insertBlankColumnAtFirst** | **bool?**| Insert blank column at first | [optional] 
  **minimizeTheNumberOfWorksheets** | **bool?**| Minimize the number of worksheets | [optional] 
- **scaleFactor** | **double?**| Scale factor | [optional] 
+ **scaleFactor** | **double?**| Scale factor (Obsolete) | [optional] 
  **uniformWorksheets** | **bool?**| Uniform worksheets | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
@@ -8059,33 +8032,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="putlatexinstoragetopdf"></a>
-# **PutLaTeXInStorageToPdf**
-> AsposeResponse PutLaTeXInStorageToPdf (string name, string srcPath, string dstFolder = null, string storage = null)
-
-Convert TeX file (located on storage) to PDF format and upload resulting file to storage. 
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| The document name. | 
- **srcPath** | **string**| Full source filename (ex. /folder1/folder2/template.tex) | 
- **dstFolder** | **string**| The destination document folder. | [optional] 
- **storage** | **string**| The document storage. | [optional] 
-
-### Return type
-
-[**AsposeResponse**](AsposeResponse.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 <a name="putlineannotation"></a>
 # **PutLineAnnotation**
 > LineAnnotationResponse PutLineAnnotation (string name, string annotationId, LineAnnotation annotation, string storage = null, string folder = null)
@@ -8847,7 +8793,7 @@ Name | Type | Description  | Notes
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.xls) | 
  **insertBlankColumnAtFirst** | **bool?**| Insert blank column at first | [optional] 
  **minimizeTheNumberOfWorksheets** | **bool?**| Minimize the number of worksheets | [optional] 
- **scaleFactor** | **double?**| Scale factor | [optional] 
+ **scaleFactor** | **double?**| Scale factor (Obsolete) | [optional] 
  **uniformWorksheets** | **bool?**| Uniform worksheets | [optional] 
  **storage** | **string**| The document storage. | [optional] 
  **file** | **System.IO.Stream**| A file to be converted. | [optional] 
@@ -8877,7 +8823,7 @@ Name | Type | Description  | Notes
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.xlsx) | 
  **insertBlankColumnAtFirst** | **bool?**| Insert blank column at first | [optional] 
  **minimizeTheNumberOfWorksheets** | **bool?**| Minimize the number of worksheets | [optional] 
- **scaleFactor** | **double?**| Scale factor | [optional] 
+ **scaleFactor** | **double?**| Scale factor (Obsolete) | [optional] 
  **uniformWorksheets** | **bool?**| Uniform worksheets | [optional] 
  **storage** | **string**| The document storage. | [optional] 
  **file** | **System.IO.Stream**| A file to be converted. | [optional] 
@@ -9260,7 +9206,7 @@ Name | Type | Description  | Notes
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.xls) | 
  **insertBlankColumnAtFirst** | **bool?**| Insert blank column at first | [optional] 
  **minimizeTheNumberOfWorksheets** | **bool?**| Minimize the number of worksheets | [optional] 
- **scaleFactor** | **double?**| Scale factor | [optional] 
+ **scaleFactor** | **double?**| Scale factor (Obsolete) | [optional] 
  **uniformWorksheets** | **bool?**| Uniform worksheets | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
@@ -9291,7 +9237,7 @@ Name | Type | Description  | Notes
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.xlsx) | 
  **insertBlankColumnAtFirst** | **bool?**| Insert blank column at first | [optional] 
  **minimizeTheNumberOfWorksheets** | **bool?**| Minimize the number of worksheets | [optional] 
- **scaleFactor** | **double?**| Scale factor | [optional] 
+ **scaleFactor** | **double?**| Scale factor (Obsolete) | [optional] 
  **uniformWorksheets** | **bool?**| Uniform worksheets | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
