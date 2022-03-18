@@ -30,8 +30,14 @@ XLS, XLSX, PPTX, DOC, DOCX, MobiXML, JPEG, EMF, PNG, BMP, GIF, TIFF, Text
 ## Read PDF Formats
 MHT, PCL, PS, XSLFO, MD
 
-## Enhancements in Version 22.2
+## Enhancements in Version 22.3
+- PDFCLOUD-2729: Add Strikeout, Superscript, Subscript properties to TextState.
+- PDFCLOUD-2623: Underline property is missing in TextState.
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
+
+## Bugs fixed in Version 22.3
+- PDFCLOUD-2714: GetFields API method not extracting PDF form fields.
+- PDFCLOUD-2641: PostSplitDocument returns wrong path.
 
 ## Unit Tests
 Aspose PDF SDK includes a suite of unit tests. These Unit Tests also serves as examples of how to use the Aspose PDF SDK.
