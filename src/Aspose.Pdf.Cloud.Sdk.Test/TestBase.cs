@@ -55,7 +55,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test {
         }
         di = Directory.GetParent(di.FullName);
       }
-      return null;
+      throw new FileNotFoundException("servercreds.json not found");
     }
 
     private Keys _GetKeys() {
@@ -67,12 +67,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Test {
       Console.WriteLine(TestContext.CurrentContext.Test.Name);
       // To run tests with your own credentials please uncomment following line of code
       // this.keys = new Keys { AppKey = "your app key", AppSID = "your app sid" };
-      if (keys == null) {
+      if (keys == null)
         keys = _GetKeys();
-      }
-      if (string.IsNullOrEmpty(keys.AppKey) || string.IsNullOrEmpty(keys.AppSID)) {
+      if (string.IsNullOrEmpty(keys.AppKey) || string.IsNullOrEmpty(keys.AppSID))
         throw new FileNotFoundException("servercreds.json doesn't contain AppSID and/or AppKey");
-      }
       Configuration = new Configuration(keys.AppKey, keys.AppSID, BaseProductUri);
       PdfApi = new PdfApi(Configuration);
     }
