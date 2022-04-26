@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="Configuration.cs">
-//   Copyright (c) 2020 Aspose.PDF Cloud
+//   Copyright (c) 2022 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -50,29 +50,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="userAgent">HTTP user agent</param>
         public Configuration(string apiKey,
                              string appSid,
-                             String basePath = "https://api.aspose.cloud",
-                             Dictionary<String, String> defaultHeader = null,
+                             string basePath = "https://api.aspose.cloud",
+                             Dictionary<string, string> defaultHeader = null,
                              string tempFolderPath = null,
                              string dateTimeFormat = null,
                              int timeout = 5 * 60 * 1000,
                              string userAgent = "aspose pdf cloud sdk"
                             )
         {
-            if (String.IsNullOrEmpty(basePath))
+            if (string.IsNullOrEmpty(basePath))
                  throw new ArgumentException("basePath cannot be empty");
+            if (!_CheckSidKey(appSid, apiKey))
+                 throw new ArgumentException("appSid and apiKey are messed up or have wrong format");
             
             ApiKey = apiKey;
             AppSid = appSid;
             BasePath = basePath;
-
             UserAgent = userAgent;
-
             if (defaultHeader != null)
                 DefaultHeader = defaultHeader;
-
             TempFolderPath = tempFolderPath;
             DateTimeFormat = dateTimeFormat;
             Timeout = timeout;
+        }
+
+        private static bool _CheckSidKey(string appSid, string apiKey)
+        {
+            var ssSid = appSid.Split('-');
+            var ssKey = apiKey.Split('-');
+            return ssSid.Length == 5 && ssKey.Length == 1;
         }
 
         /// <summary>
@@ -81,8 +87,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         public static readonly ExceptionFactory DefaultExceptionFactory = (methodName, response) =>
         {
             int status = (int) response.StatusCode;
-            if (status >= 400) return new ApiException(status, String.Format("Error calling {0}: {1}", methodName, response.Content), response.Content);
-            if (status == 0) return new ApiException(status, String.Format("Error calling {0}: {1}", methodName, response.ErrorMessage), response.ErrorMessage);
+            if (status >= 400) return new ApiException(status, string.Format("Error calling {0}: {1}", methodName, response.Content), response.Content);
+            if (status == 0) return new ApiException(status, string.Format("Error calling {0}: {1}", methodName, response.ErrorMessage), response.ErrorMessage);
             return null;
         };
 
@@ -107,12 +113,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// </summary>
         public string AppSid { get; set; }
 
-        private Dictionary<String, String> _defaultHeaderMap = new Dictionary<String, String>();
+        private Dictionary<string, string> _defaultHeaderMap = new Dictionary<string, string>();
 
         /// <summary>
         /// Gets or sets the default header.
         /// </summary>
-        public Dictionary<String, String> DefaultHeader
+        public Dictionary<string, string> DefaultHeader
         {
             get { return _defaultHeaderMap; }
 
@@ -137,7 +143,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// Gets or sets the HTTP user agent.
         /// </summary>
         /// <value>Http user agent.</value>
-        public String UserAgent { get; set; }
+        public string UserAgent { get; set; }
 
         private string _tempFolderPath;
 
@@ -145,12 +151,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// Gets or sets the temporary folder path to store the files downloaded from the server.
         /// </summary>
         /// <value>Folder path.</value>
-        public String TempFolderPath
+        public string TempFolderPath
         {
             get
             {
                 // default to Path.GetTempPath() if _tempFolderPath is not set
-                if (String.IsNullOrEmpty(_tempFolderPath))
+                if (string.IsNullOrEmpty(_tempFolderPath))
                 {
                     _tempFolderPath = Path.GetTempPath();
                 }
@@ -159,7 +165,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
             set
             {
-                if (String.IsNullOrEmpty(value))
+                if (string.IsNullOrEmpty(value))
                 {
                     _tempFolderPath = value;
                     return;
@@ -189,7 +195,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// No validation is done to ensure that the string you're providing is valid
         /// </summary>
         /// <value>The DateTimeFormat string</value>
-        public String DateTimeFormat
+        public string DateTimeFormat
         {
             get
             {
@@ -213,16 +219,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <summary>
         /// Returns a string with essential information for debugging.
         /// </summary>
-        public static String ToDebugReport()
+        public static string ToDebugReport()
         {
-            String report = "C# SDK (Aspose.Pdf.Cloud.Sdk) Debug Report:\n";
+            string report = "C# SDK (Aspose.Pdf.Cloud.Sdk) Debug Report:\n";
             report += "    OS: " + Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + Assembly
                      .GetExecutingAssembly()
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: 3.0\n";
-            report += "    SDK Package Version: 22.3.0\n";
+            report += "    SDK Package Version: 22.4.0\n";
 
             return report;
         }
