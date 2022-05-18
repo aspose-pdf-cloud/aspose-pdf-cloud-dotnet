@@ -60,8 +60,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         {
             if (string.IsNullOrEmpty(basePath))
                  throw new ArgumentException("basePath cannot be empty");
-            if (!_CheckSidKey(appSid, apiKey))
-                 throw new ArgumentException("appSid and apiKey are messed up or have wrong format");
             
             ApiKey = apiKey;
             AppSid = appSid;
@@ -72,13 +70,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             TempFolderPath = tempFolderPath;
             DateTimeFormat = dateTimeFormat;
             Timeout = timeout;
-        }
-
-        private static bool _CheckSidKey(string appSid, string apiKey)
-        {
-            var ssSid = appSid.Split('-');
-            var ssKey = apiKey.Split('-');
-            return ssSid.Length == 5 && ssKey.Length == 1;
         }
 
         /// <summary>
