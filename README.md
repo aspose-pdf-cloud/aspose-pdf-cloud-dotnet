@@ -33,6 +33,9 @@ MHT, PCL, PS, XSLFO, MD
 ## Enhancements in Version 22.7
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
 
+## Bugs fixed in Version 22.7
+- Text Replace API method changes background of the elements.
+
 ## Unit Tests
 Aspose PDF SDK includes a suite of unit tests. These Unit Tests also serves as examples of how to use the Aspose PDF SDK.
 
