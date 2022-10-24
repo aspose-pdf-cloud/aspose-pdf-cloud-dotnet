@@ -145,7 +145,7 @@ Method | HTTP request | Description
 [**GetPages**](PdfApi.md#getpages) | **GET** /pdf/\{name}/pages | Read document pages info.
 [**GetPclInStorageToPdf**](PdfApi.md#getpclinstoragetopdf) | **GET** /pdf/create/pcl | Convert PCL file (located on storage) to PDF format and return resulting file in response. 
 [**GetPdfAInStorageToPdf**](PdfApi.md#getpdfainstoragetopdf) | **GET** /pdf/create/pdfa | Convert PDFA file (located on storage) to PDF format and return resulting file in response. 
-[**GetPdfInStorageToDoc**](PdfApi.md#getpdfinstoragetodoc) | **GET** /pdf/\{name}/convert/doc | Converts PDF document (located on storage) to DOC format and returns resulting file in response content
+[**GetPdfInStorageToDoc**](PdfApi.md#getpdfinstoragetodoc) | **GET** /pdf/\{name}/convert/doc | Converts PDF document (located on storage) to DOC format and returns resulting file in response content.
 [**GetPdfInStorageToEpub**](PdfApi.md#getpdfinstoragetoepub) | **GET** /pdf/\{name}/convert/epub | Converts PDF document (located on storage) to EPUB format and returns resulting file in response content
 [**GetPdfInStorageToHtml**](PdfApi.md#getpdfinstoragetohtml) | **GET** /pdf/\{name}/convert/html | Converts PDF document (located on storage) to Html format and returns resulting file in response content
 [**GetPdfInStorageToMobiXml**](PdfApi.md#getpdfinstoragetomobixml) | **GET** /pdf/\{name}/convert/mobixml | Converts PDF document (located on storage) to MOBIXML format and returns resulting ZIP archive file in response content.
@@ -246,6 +246,7 @@ Method | HTTP request | Description
 [**PostSignPage**](PdfApi.md#postsignpage) | **POST** /pdf/\{name}/pages/\{pageNumber}/sign | Sign page.
 [**PostSignatureField**](PdfApi.md#postsignaturefield) | **POST** /pdf/\{name}/fields/signature | Add document signature field.
 [**PostSplitDocument**](PdfApi.md#postsplitdocument) | **POST** /pdf/\{name}/split | Split document to parts.
+[**PostSplitRangePdfDocument**](PdfApi.md#postsplitrangepdfdocument) | **POST** /pdf/\{name}/splitrangepdf | 
 [**PostTextBoxFields**](PdfApi.md#posttextboxfields) | **POST** /pdf/\{name}/fields/textbox | Add document text box fields.
 [**PutAddNewPage**](PdfApi.md#putaddnewpage) | **PUT** /pdf/\{name}/pages | Add new page to end of the document.
 [**PutAddText**](PdfApi.md#putaddtext) | **PUT** /pdf/\{name}/pages/\{pageNumber}/text | Add text to PDF document page.
@@ -312,7 +313,7 @@ Method | HTTP request | Description
 [**PutPdfInRequestToXlsx**](PdfApi.md#putpdfinrequesttoxlsx) | **PUT** /pdf/convert/xlsx | Converts PDF document (in request content) to XLSX format and uploads resulting file to storage.
 [**PutPdfInRequestToXml**](PdfApi.md#putpdfinrequesttoxml) | **PUT** /pdf/convert/xml | Converts PDF document (in request content) to XML format and uploads resulting file to storage.
 [**PutPdfInRequestToXps**](PdfApi.md#putpdfinrequesttoxps) | **PUT** /pdf/convert/xps | Converts PDF document (in request content) to XPS format and uploads resulting file to storage.
-[**PutPdfInStorageToDoc**](PdfApi.md#putpdfinstoragetodoc) | **PUT** /pdf/\{name}/convert/doc | Converts PDF document (located on storage) to DOC format and uploads resulting file to storage
+[**PutPdfInStorageToDoc**](PdfApi.md#putpdfinstoragetodoc) | **PUT** /pdf/\{name}/convert/doc | Converts PDF document (located on storage) to DOC format and uploads resulting file to storage.
 [**PutPdfInStorageToEpub**](PdfApi.md#putpdfinstoragetoepub) | **PUT** /pdf/\{name}/convert/epub | Converts PDF document (located on storage) to EPUB format and uploads resulting file to storage
 [**PutPdfInStorageToHtml**](PdfApi.md#putpdfinstoragetohtml) | **PUT** /pdf/\{name}/convert/html | Converts PDF document (located on storage) to Html format and uploads resulting file to storage
 [**PutPdfInStorageToMobiXml**](PdfApi.md#putpdfinstoragetomobixml) | **PUT** /pdf/\{name}/convert/mobixml | Converts PDF document (located on storage) to MOBIXML format and uploads resulting ZIP archive file to storage
@@ -3153,7 +3154,7 @@ Name | Type | Description  | Notes
 
 <a name="getpageconverttobmp"></a>
 # **GetPageConvertToBmp**
-> System.IO.Stream GetPageConvertToBmp (string name, int? pageNumber, int? width = null, int? height = null, string folder = null, string storage = null)
+> System.IO.Stream GetPageConvertToBmp (string name, int? pageNumber, int? width = null, int? height = null, string folder = null, string storage = null, string password = null)
 
 Convert document page to Bmp image and return resulting file in response.
 
@@ -3168,6 +3169,7 @@ Name | Type | Description  | Notes
  **height** | **int?**| The converted image height. | [optional] [default to 0]
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -3182,7 +3184,7 @@ Name | Type | Description  | Notes
 
 <a name="getpageconverttoemf"></a>
 # **GetPageConvertToEmf**
-> System.IO.Stream GetPageConvertToEmf (string name, int? pageNumber, int? width = null, int? height = null, string folder = null, string storage = null)
+> System.IO.Stream GetPageConvertToEmf (string name, int? pageNumber, int? width = null, int? height = null, string folder = null, string storage = null, string password = null)
 
 Convert document page to Emf image and return resulting file in response.
 
@@ -3197,6 +3199,7 @@ Name | Type | Description  | Notes
  **height** | **int?**| The converted image height. | [optional] [default to 0]
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -3211,7 +3214,7 @@ Name | Type | Description  | Notes
 
 <a name="getpageconverttogif"></a>
 # **GetPageConvertToGif**
-> System.IO.Stream GetPageConvertToGif (string name, int? pageNumber, int? width = null, int? height = null, string folder = null, string storage = null)
+> System.IO.Stream GetPageConvertToGif (string name, int? pageNumber, int? width = null, int? height = null, string folder = null, string storage = null, string password = null)
 
 Convert document page to Gif image and return resulting file in response.
 
@@ -3226,6 +3229,7 @@ Name | Type | Description  | Notes
  **height** | **int?**| The converted image height. | [optional] [default to 0]
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -3240,7 +3244,7 @@ Name | Type | Description  | Notes
 
 <a name="getpageconverttojpeg"></a>
 # **GetPageConvertToJpeg**
-> System.IO.Stream GetPageConvertToJpeg (string name, int? pageNumber, int? width = null, int? height = null, string folder = null, string storage = null)
+> System.IO.Stream GetPageConvertToJpeg (string name, int? pageNumber, int? width = null, int? height = null, string folder = null, string storage = null, string password = null)
 
 Convert document page to Jpeg image and return resulting file in response.
 
@@ -3255,6 +3259,7 @@ Name | Type | Description  | Notes
  **height** | **int?**| The converted image height. | [optional] [default to 0]
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -3269,7 +3274,7 @@ Name | Type | Description  | Notes
 
 <a name="getpageconverttopng"></a>
 # **GetPageConvertToPng**
-> System.IO.Stream GetPageConvertToPng (string name, int? pageNumber, int? width = null, int? height = null, string folder = null, string storage = null)
+> System.IO.Stream GetPageConvertToPng (string name, int? pageNumber, int? width = null, int? height = null, string folder = null, string storage = null, string password = null)
 
 Convert document page to Png image and return resulting file in response.
 
@@ -3284,6 +3289,7 @@ Name | Type | Description  | Notes
  **height** | **int?**| The converted image height. | [optional] [default to 0]
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -3298,7 +3304,7 @@ Name | Type | Description  | Notes
 
 <a name="getpageconverttotiff"></a>
 # **GetPageConvertToTiff**
-> System.IO.Stream GetPageConvertToTiff (string name, int? pageNumber, int? width = null, int? height = null, string folder = null, string storage = null)
+> System.IO.Stream GetPageConvertToTiff (string name, int? pageNumber, int? width = null, int? height = null, string folder = null, string storage = null, string password = null)
 
 Convert document page to Tiff image  and return resulting file in response.
 
@@ -3313,6 +3319,7 @@ Name | Type | Description  | Notes
  **height** | **int?**| The converted image height. | [optional] [default to 0]
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -4141,9 +4148,9 @@ Name | Type | Description  | Notes
 
 <a name="getpdfinstoragetodoc"></a>
 # **GetPdfInStorageToDoc**
-> System.IO.Stream GetPdfInStorageToDoc (string name, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, double? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null, string storage = null)
+> System.IO.Stream GetPdfInStorageToDoc (string name, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, double? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null, string storage = null, string password = null)
 
-Converts PDF document (located on storage) to DOC format and returns resulting file in response content
+Converts PDF document (located on storage) to DOC format and returns resulting file in response content.
 
 
 ### Parameters
@@ -4161,6 +4168,7 @@ Name | Type | Description  | Notes
  **relativeHorizontalProximity** | **double?**| Relative horizontal proximity. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -6985,6 +6993,33 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="postsplitrangepdfdocument"></a>
+# **PostSplitRangePdfDocument**
+> SplitResultResponse PostSplitRangePdfDocument (string name, SplitRangePdfOptions options, string storage = null, string folder = null)
+
+
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**|  | 
+ **options** | [**SplitRangePdfOptions**](SplitRangePdfOptions.md)|  | 
+ **storage** | **string**|  | [optional] 
+ **folder** | **string**|  | [optional] 
+
+### Return type
+
+[**SplitResultResponse**](SplitResultResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="posttextboxfields"></a>
 # **PostTextBoxFields**
 > AsposeResponse PostTextBoxFields (string name, List<TextBoxField> fields, string storage = null, string folder = null)
@@ -8255,7 +8290,7 @@ Name | Type | Description  | Notes
 
 <a name="putpageconverttobmp"></a>
 # **PutPageConvertToBmp**
-> AsposeResponse PutPageConvertToBmp (string name, int? pageNumber, string outPath, int? width = null, int? height = null, string folder = null, string storage = null)
+> AsposeResponse PutPageConvertToBmp (string name, int? pageNumber, string outPath, int? width = null, int? height = null, string folder = null, string storage = null, string password = null)
 
 Convert document page to bmp image and upload resulting file to storage.
 
@@ -8271,6 +8306,7 @@ Name | Type | Description  | Notes
  **height** | **int?**| The converted image height. | [optional] [default to 0]
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -8285,7 +8321,7 @@ Name | Type | Description  | Notes
 
 <a name="putpageconverttoemf"></a>
 # **PutPageConvertToEmf**
-> AsposeResponse PutPageConvertToEmf (string name, int? pageNumber, string outPath, int? width = null, int? height = null, string folder = null, string storage = null)
+> AsposeResponse PutPageConvertToEmf (string name, int? pageNumber, string outPath, int? width = null, int? height = null, string folder = null, string storage = null, string password = null)
 
 Convert document page to emf image and upload resulting file to storage.
 
@@ -8301,6 +8337,7 @@ Name | Type | Description  | Notes
  **height** | **int?**| The converted image height. | [optional] [default to 0]
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -8315,7 +8352,7 @@ Name | Type | Description  | Notes
 
 <a name="putpageconverttogif"></a>
 # **PutPageConvertToGif**
-> AsposeResponse PutPageConvertToGif (string name, int? pageNumber, string outPath, int? width = null, int? height = null, string folder = null, string storage = null)
+> AsposeResponse PutPageConvertToGif (string name, int? pageNumber, string outPath, int? width = null, int? height = null, string folder = null, string storage = null, string password = null)
 
 Convert document page to gif image and upload resulting file to storage.
 
@@ -8331,6 +8368,7 @@ Name | Type | Description  | Notes
  **height** | **int?**| The converted image height. | [optional] [default to 0]
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -8345,7 +8383,7 @@ Name | Type | Description  | Notes
 
 <a name="putpageconverttojpeg"></a>
 # **PutPageConvertToJpeg**
-> AsposeResponse PutPageConvertToJpeg (string name, int? pageNumber, string outPath, int? width = null, int? height = null, string folder = null, string storage = null)
+> AsposeResponse PutPageConvertToJpeg (string name, int? pageNumber, string outPath, int? width = null, int? height = null, string folder = null, string storage = null, string password = null)
 
 Convert document page to Jpeg image and upload resulting file to storage.
 
@@ -8361,6 +8399,7 @@ Name | Type | Description  | Notes
  **height** | **int?**| The converted image height. | [optional] [default to 0]
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -8375,7 +8414,7 @@ Name | Type | Description  | Notes
 
 <a name="putpageconverttopng"></a>
 # **PutPageConvertToPng**
-> AsposeResponse PutPageConvertToPng (string name, int? pageNumber, string outPath, int? width = null, int? height = null, string folder = null, string storage = null)
+> AsposeResponse PutPageConvertToPng (string name, int? pageNumber, string outPath, int? width = null, int? height = null, string folder = null, string storage = null, string password = null)
 
 Convert document page to png image and upload resulting file to storage.
 
@@ -8391,6 +8430,7 @@ Name | Type | Description  | Notes
  **height** | **int?**| The converted image height. | [optional] [default to 0]
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -8405,7 +8445,7 @@ Name | Type | Description  | Notes
 
 <a name="putpageconverttotiff"></a>
 # **PutPageConvertToTiff**
-> AsposeResponse PutPageConvertToTiff (string name, int? pageNumber, string outPath, int? width = null, int? height = null, string folder = null, string storage = null)
+> AsposeResponse PutPageConvertToTiff (string name, int? pageNumber, string outPath, int? width = null, int? height = null, string folder = null, string storage = null, string password = null)
 
 Convert document page to Tiff image and upload resulting file to storage.
 
@@ -8421,6 +8461,7 @@ Name | Type | Description  | Notes
  **height** | **int?**| The converted image height. | [optional] [default to 0]
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -8490,7 +8531,7 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinrequesttodoc"></a>
 # **PutPdfInRequestToDoc**
-> AsposeResponse PutPdfInRequestToDoc (string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, double? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string storage = null, System.IO.Stream file = null)
+> AsposeResponse PutPdfInRequestToDoc (string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, double? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string storage = null, string password = null, System.IO.Stream file = null)
 
 Converts PDF document (in request content) to DOC format and uploads resulting file to storage.
 
@@ -8509,6 +8550,7 @@ Name | Type | Description  | Notes
  **recognizeBullets** | **bool?**| Recognize bullets. | [optional] 
  **relativeHorizontalProximity** | **double?**| Relative horizontal proximity. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
  **file** | **System.IO.Stream**| A file to be converted. | [optional] 
 
 ### Return type
@@ -8893,9 +8935,9 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinstoragetodoc"></a>
 # **PutPdfInStorageToDoc**
-> AsposeResponse PutPdfInStorageToDoc (string name, string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, double? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null, string storage = null)
+> AsposeResponse PutPdfInStorageToDoc (string name, string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, double? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string folder = null, string storage = null, string password = null)
 
-Converts PDF document (located on storage) to DOC format and uploads resulting file to storage
+Converts PDF document (located on storage) to DOC format and uploads resulting file to storage.
 
 
 ### Parameters
@@ -8914,6 +8956,7 @@ Name | Type | Description  | Notes
  **relativeHorizontalProximity** | **double?**| Relative horizontal proximity. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
