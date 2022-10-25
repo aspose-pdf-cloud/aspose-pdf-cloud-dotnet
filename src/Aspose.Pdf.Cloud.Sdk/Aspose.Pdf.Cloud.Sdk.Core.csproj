@@ -251,6 +251,8 @@
     <Compile Include="Model\SoundAnnotationsResponse.cs" />
     <Compile Include="Model\SoundEncoding.cs" />
     <Compile Include="Model\SoundIcon.cs" />
+    <Compile Include="Model\PageRange.cs" />
+    <Compile Include="Model\SplitRangePdfOptions.cs" />
     <Compile Include="Model\SplitResult.cs" />
     <Compile Include="Model\SplitResultDocument.cs" />
     <Compile Include="Model\SplitResultResponse.cs" />
