@@ -83,9 +83,30 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             const string name = "4pages.pdf";
             UploadFile(name, name);
-
             var response = PdfApi.PostSplitDocument(name, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PostSplitRangePdfDocument
+        /// </summary>
+        [Test]
+        public void PostSplitRangePdfDocumentTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+            SplitRangePdfOptions options = new SplitRangePdfOptions
+            {
+              PageRanges = new List<PageRange>
+              {
+                new PageRange { To = 2 },
+                new PageRange { From = 3 },
+                new PageRange { From = 2, To = 3 },
+              }
+            };
+            var response = PdfApi.PostSplitRangePdfDocument(name, options, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+            Assert.That(response.Result.Documents.Count, Is.EqualTo(3));
         }
 
         /// <summary>
