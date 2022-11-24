@@ -50,9 +50,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(Name, Name);
             UploadFile(AppendFile, AppendFile);
 
-            var responce =
+            var response =
                 PdfApi.PostAppendDocument(Name, appendFile: Path.Combine(TempFolder, AppendFile), startPage: StartPage, endPage: EndPage, folder: TempFolder);
-            Assert.That(responce.Code, Is.EqualTo(200));
+            Assert.That(response.Code, Is.EqualTo(200));
         }
     }
 }
