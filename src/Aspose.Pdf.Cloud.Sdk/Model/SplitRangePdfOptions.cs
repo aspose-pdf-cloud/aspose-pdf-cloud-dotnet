@@ -41,7 +41,7 @@ using SwaggerDateConverter = Aspose.Pdf.Cloud.Sdk.Client.SwaggerDateConverter;
 namespace Aspose.Pdf.Cloud.Sdk.Model
 {
     /// <summary>
-    /// SplitRangePdfOptions
+    /// Represents Pdf split into ranges options.
     /// </summary>
     [DataContract]
     public partial class SplitRangePdfOptions :  IEquatable<SplitRangePdfOptions>, IValidatableObject

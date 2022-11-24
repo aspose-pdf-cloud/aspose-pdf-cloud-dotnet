@@ -1,5 +1,5 @@
 ﻿# Aspose.Pdf.Cloud.Sdk.Model.SplitRangePdfOptions
-
+Represents Pdf split into ranges options.
 
 ## Properties
 
