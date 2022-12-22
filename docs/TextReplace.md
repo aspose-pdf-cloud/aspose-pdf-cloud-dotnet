@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Regex** | **bool?** | Gets or sets a value indicating whether search text is regular expression. | 
 **TextState** | [**TextState**](TextState.md) | Text properties of a new text. | [optional] 
 **Rect** | [**Rectangle**](Rectangle.md) | Rectangle area where searched original text. | [optional] 
+**CenterTextHorizontally** | **bool?** | The text after replacement is centered horizontally relative to the text being replaced. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
