@@ -59,7 +59,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="Regex">Gets or sets a value indicating whether search text is regular expression. (required)</param>
         /// <param name="TextState">Text properties of a new text.</param>
         /// <param name="Rect">Rectangle area where searched original text.</param>
-        public TextReplace(string OldValue = default(string), string NewValue = default(string), bool? Regex = default(bool?), TextState TextState = default(TextState), Rectangle Rect = default(Rectangle))
+        /// <param name="CenterTextHorizontally">The text after replacement is centered horizontally relative to the text being replaced.</param>
+        public TextReplace(string OldValue = default(string), string NewValue = default(string), bool? Regex = default(bool?), TextState TextState = default(TextState), Rectangle Rect = default(Rectangle), bool? CenterTextHorizontally = default(bool?))
         {
             // to ensure "OldValue" is required (not null)
             if (OldValue == null)
@@ -82,6 +83,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.NewValue = NewValue;
             this.TextState = TextState;
             this.Rect = Rect;
+            this.CenterTextHorizontally = CenterTextHorizontally;
         }
         
         /// <summary>
@@ -120,6 +122,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public Rectangle Rect { get; set; }
 
         /// <summary>
+        /// The text after replacement is centered horizontally relative to the text being replaced.
+        /// </summary>
+        /// <value>The text after replacement is centered horizontally relative to the text being replaced.</value>
+        [DataMember(Name="CenterTextHorizontally", EmitDefaultValue=false)]
+        public bool? CenterTextHorizontally { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -132,6 +141,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  Regex: ").Append(Regex).Append("\n");
             sb.Append("  TextState: ").Append(TextState).Append("\n");
             sb.Append("  Rect: ").Append(Rect).Append("\n");
+            sb.Append("  CenterTextHorizontally: ").Append(CenterTextHorizontally).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -192,6 +202,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Rect == other.Rect ||
                     this.Rect != null &&
                     this.Rect.Equals(other.Rect)
+                ) && 
+                (
+                    this.CenterTextHorizontally == other.CenterTextHorizontally ||
+                    this.CenterTextHorizontally != null &&
+                    this.CenterTextHorizontally.Equals(other.CenterTextHorizontally)
                 );
         }
 
@@ -216,6 +231,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.TextState.GetHashCode();
                 if (this.Rect != null)
                     hash = hash * 59 + this.Rect.GetHashCode();
+                if (this.CenterTextHorizontally != null)
+                    hash = hash * 59 + this.CenterTextHorizontally.GetHashCode();
                 return hash;
             }
         }
