@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="OptimizeOptions.cs">
-//   Copyright (c) 2022 Aspose.PDF Cloud
+//   Copyright (c) 2023 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -49,6 +49,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="OptimizeOptions" /> class.
         /// </summary>
+        /// <param name="Password">Specifies document password (if any) encoded with base-64.</param>
         /// <param name="AllowReusePageContent">If true page contents will be reused when document is optimized for equal pages.</param>
         /// <param name="CompressImages">If this flag is set to true images will be compressed in the document. Compression level is specified with ImageQuality property.</param>
         /// <param name="ImageQuality">Specifies level of image compression when CompressImages flag is used.</param>
@@ -62,8 +63,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="RemovePrivateInfo">Remove private information (page piece info).</param>
         /// <param name="ImageEncoding">Image encode which will be used.</param>
         /// <param name="ImageCompressionVersion">Version of compression algorithm. Possible values are: \&quot;Standard\&quot; - standard compression, \&quot;Fast\&quot; - fast (improved compression which is faster then standard but may be applicable not for all images), \&quot;Mixed\&quot; - mixed (standard compression is applied to images which can not be compressed by  faster algorithm, this may give best compression but more slow then \&quot;Fast\&quot; algorithm. Version \&quot;Fast\&quot; is not applicable for resizing images (standard method will be used). Default is \&quot;Standard\&quot;.</param>
-        public OptimizeOptions(bool? AllowReusePageContent = default(bool?), bool? CompressImages = default(bool?), int? ImageQuality = default(int?), bool? LinkDuplcateStreams = default(bool?), bool? RemoveUnusedObjects = default(bool?), bool? RemoveUnusedStreams = default(bool?), bool? UnembedFonts = default(bool?), bool? ResizeImages = default(bool?), int? MaxResolution = default(int?), bool? SubsetFonts = default(bool?), bool? RemovePrivateInfo = default(bool?), ImageEncoding ImageEncoding = default(ImageEncoding), ImageCompressionVersion ImageCompressionVersion = default(ImageCompressionVersion))
+        public OptimizeOptions(string Password = default(string), bool? AllowReusePageContent = default(bool?), bool? CompressImages = default(bool?), int? ImageQuality = default(int?), bool? LinkDuplcateStreams = default(bool?), bool? RemoveUnusedObjects = default(bool?), bool? RemoveUnusedStreams = default(bool?), bool? UnembedFonts = default(bool?), bool? ResizeImages = default(bool?), int? MaxResolution = default(int?), bool? SubsetFonts = default(bool?), bool? RemovePrivateInfo = default(bool?), ImageEncoding ImageEncoding = default(ImageEncoding), ImageCompressionVersion ImageCompressionVersion = default(ImageCompressionVersion))
         {
+            this.Password = Password;
             this.AllowReusePageContent = AllowReusePageContent;
             this.CompressImages = CompressImages;
             this.ImageQuality = ImageQuality;
@@ -79,6 +81,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.ImageCompressionVersion = ImageCompressionVersion;
         }
         
+        /// <summary>
+        /// Specifies document password (if any) encoded with base-64.
+        /// </summary>
+        /// <value>Specifies document password (if any) encoded with base-64.</value>
+        [DataMember(Name="Password", EmitDefaultValue=false)]
+        public string Password { get; set; }
+
         /// <summary>
         /// If true page contents will be reused when document is optimized for equal pages.
         /// </summary>
@@ -178,6 +187,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OptimizeOptions {\n");
+            sb.Append("  Password: ").Append(Password).Append("\n");
             sb.Append("  AllowReusePageContent: ").Append(AllowReusePageContent).Append("\n");
             sb.Append("  CompressImages: ").Append(CompressImages).Append("\n");
             sb.Append("  ImageQuality: ").Append(ImageQuality).Append("\n");
@@ -227,6 +237,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                 return false;
 
             return 
+                (
+                    this.Password == other.Password ||
+                    this.Password != null &&
+                    this.Password.Equals(other.Password)
+                ) && 
                 (
                     this.AllowReusePageContent == other.AllowReusePageContent ||
                     this.AllowReusePageContent != null &&
@@ -305,6 +320,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Password != null)
+                    hash = hash * 59 + this.Password.GetHashCode();
                 if (this.AllowReusePageContent != null)
                     hash = hash * 59 + this.AllowReusePageContent.GetHashCode();
                 if (this.CompressImages != null)
