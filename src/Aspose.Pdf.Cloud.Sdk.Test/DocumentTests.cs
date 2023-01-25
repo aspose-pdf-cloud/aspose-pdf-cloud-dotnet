@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="DocumentTests.cs">
-//   Copyright (c) 2022 Aspose.PDF Cloud
+//   Copyright (c) 2023 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -27,6 +27,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Text;
 using Aspose.Pdf.Cloud.Sdk.Model;
 using Newtonsoft.Json;
 using NUnit.Framework;
@@ -52,7 +53,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var result = PdfApi.GetDocument(name, folder: TempFolder);
             Assert.That(result.Code, Is.EqualTo(200));
         }
-        
 
         /// <summary>
         /// Test PostOptimizeDocument
@@ -64,6 +64,27 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(name, name);
 
             var options = new OptimizeOptions(
+                AllowReusePageContent: false,
+                CompressImages: true,
+                ImageQuality: 100,
+                LinkDuplcateStreams: true,
+                RemoveUnusedObjects: true,
+                RemoveUnusedStreams: true,
+                UnembedFonts: true);
+            var response = PdfApi.PostOptimizeDocument(name, options, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+        
+        /// <summary>
+        /// Test PostOptimizeDocument with password
+        /// </summary>
+        [Test]
+        public void PostOptimizeDocumentWithPasswordTest()
+        {
+            const string name = "4pagesEncrypted.pdf";
+            UploadFile(name, name);
+            var options = new OptimizeOptions(
+                Password: Convert.ToBase64String(Encoding.UTF8.GetBytes(@"user $^Password!&")),
                 AllowReusePageContent: false,
                 CompressImages: true,
                 ImageQuality: 100,

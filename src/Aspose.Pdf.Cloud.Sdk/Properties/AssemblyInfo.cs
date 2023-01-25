@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Aspose Pty Ltd")]
 [assembly: AssemblyProduct("Aspose.PDF Cloud")]
-[assembly: AssemblyCopyright("Copyright (c) 2022 Aspose.PDF Cloud")]
+[assembly: AssemblyCopyright("Copyright (c) 2023 Aspose.PDF Cloud")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -28,5 +28,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("22.12.0")]
-[assembly: AssemblyFileVersion("22.12.0")]
+[assembly: AssemblyVersion("23.1.0")]
+[assembly: AssemblyFileVersion("23.1.0")]
