@@ -4,23 +4,21 @@
         <!-- The identifier that must be unique within the hosting gallery -->
         <id>Aspose.Pdf-Cloud</id>
         <title>Aspose.PDF Cloud SDK for .NET</title>
-
         <!-- The package version number that is used when resolving dependencies -->
         <version>$version$</version>
-
         <!-- Authors contain text that appears directly on the gallery -->
-        <authors>Aspose.PDF Cloud team</authors>
-
-        <!-- Owners are typically nuget.org identities that allow gallery
-             users to earily find other packages by the same owners.  -->
-        <owners>asposemarketplace</owners>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <authors>Aspose</authors>
+        <projectUrl>https://products.aspose.cloud/pdf/net/</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <developmentDependency>false</developmentDependency>
-        <license type="file">license\LICENSE.TXT</license>
+        <license type="file">license\LICENSE.txt</license>
         <icon>images\aspose_pdf-for-cloud.png</icon>
+        <readme>README.md</readme>
+        <copyright>© Aspose Pty Ltd 2001-2023. All Rights Reserved.</copyright>
+        <repository>https://github.com/aspose-pdf-cloud/aspose-pdf-cloud-dotnet</repository>
         <tags>Aspose.PDF Aspose.PDF-Cloud Aspose.Total-Cloud Cloud REST API PDF EPUB HTML TEX MHT PCL PS PostScript SVG XML XPS XSLFO MD Markdown XLS XLSX PPTX DOC DOCX EPUB HTML MobiXML SVG JPEG EMF PNG BMP GIF TIFF XML XPS Text FDF XFDF PDFA3 PDF-to-DOC PDF-to-DOCX PDF-to-HTML PDF-to-PDFA PDF-to-TIFF PDF-to-SVG PDF-to-EPUB PDF-to-PPTX PDF-to-TEX PDF-to-MobiXML PDF-to-XFA PDF-to-XML PDF-to-XPS PDF-to-XLS EPUB-to-PDF Web-to-PDF TEX-to-PDF MHT-to-PDF HTML-to-PDF PS-to-PDF PostScript-to-PDF XSIF-to-PDF XPS-to-PDF SVG-to-PDF DOC-to-PDF DOCX-to-PDF PCL-to-PDF XML-to-PDF Markdown-to-PDF MD-to-PDF Annotation Line-Annotation Circle-Annotation Square-Annotation Underline-Annotation Squiggly-Annotation PDF-Bookmark PDF-Link PDF-Attachment PDF-Document PDF-Page PDF-Form-Fields PDF-Text PDF-Image Replace-Text Fetch-Text Replace-Image Extract-Image Convert-PDF Convert Converter PDF-to-Image Create-PDF Convert-PDF Stamp PDF-OCR OCR-Layers .NET C# dotnet CSharp</tags>
-        <!-- The description can be used in package manager UI. Note that the
-             nuget.org gallery uses information you add in the portal. -->
+        <releaseNotes>- A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.</releaseNotes>
+        <!-- The description can be used in package manager UI. Note that the nuget.org gallery uses information you add in the portal. -->
         <description>New version of Aspose.PDF Cloud is a REST API for creating and editing PDF files. It can also be used to convert PDF files to different formats like DOC, HTML, XPS, TIFF and many more. Aspose.PDF Cloud gives you control: create PDFs from scratch or from HTML, XML, template, database, XPS or an image. Render PDFs to image formats such as JPEG, PNG, GIF, BMP, TIFF and many others.
 
 Aspose.PDF Cloud helps you manipulate elements of a PDF file like text, annotations, watermarks, signatures, bookmarks, stamps and so on. Its REST API also allows you to manage PDF pages by using features like merging, splitting, and inserting. Add images to a PDF file or convert PDF pages to images.
@@ -59,10 +57,14 @@ https://stackoverflow.com/questions/tagged/aspose.pdf</description>
     </metadata>
     <files>
         <file src="..\..\thirdpartylicenses-Aspose.PDF Cloud SDK for .NET.txt" target="license\" />
-        <file src="..\..\LICENSE.TXT" target="license\" />
+        <file src="..\..\LICENSE.txt" target="license\" />
         <file src="aspose_pdf-for-cloud.png" target="images\" />
         <file src="..\..\README.md" target="" />
         <file src="bin\Release\Aspose.Pdf.Cloud.Sdk.dll" target="lib\net4.5" />
+        <file src="bin\Release\Aspose.Pdf.Cloud.Sdk.pdb" target="lib\net4.5" />
+        <file src="bin\Release\Aspose.Pdf.Cloud.Sdk.xml" target="lib\net4.5" />
         <file src="..\..\build-out\bin\release\netstandard2.0\Aspose.Pdf.Cloud.Sdk.dll" target="lib\netstandard2.0" />
+        <file src="..\..\build-out\bin\Release\netstandard2.0\Aspose.Pdf.Cloud.Sdk.pdb" target="lib\netstandard2.0" />
+        <file src="..\..\build-out\bin\Release\netstandard2.0\Aspose.Pdf.Cloud.Sdk.xml" target="lib\netstandard2.0" />
     </files>
 </package>

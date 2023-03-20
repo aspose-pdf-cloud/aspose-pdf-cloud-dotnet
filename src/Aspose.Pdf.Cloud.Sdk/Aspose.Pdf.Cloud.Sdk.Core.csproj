@@ -11,6 +11,7 @@
     <GenerateAssemblyKeyFile>false</GenerateAssemblyKeyFile>
     <Configurations>Debug;Release</Configurations>
     <PackageTags>QWERTY asdfgh</PackageTags>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
