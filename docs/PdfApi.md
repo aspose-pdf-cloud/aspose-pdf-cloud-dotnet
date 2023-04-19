@@ -214,6 +214,8 @@ Method | HTTP request | Description
 [**PostListBoxFields**](PdfApi.md#postlistboxfields) | **POST** /pdf/\{name}/fields/listbox | Add document listbox fields.
 [**PostMovePage**](PdfApi.md#postmovepage) | **POST** /pdf/\{name}/pages/\{pageNumber}/movePage | Move page to new position.
 [**PostOptimizeDocument**](PdfApi.md#postoptimizedocument) | **POST** /pdf/\{name}/optimize | Optimize document.
+[**PostOrganizeDocument**](PdfApi.md#postorganizedocument) | **POST** /pdf/\{name}/organize | Merge selected pages of a document.
+[**PostOrganizeDocuments**](PdfApi.md#postorganizedocuments) | **POST** /pdf/organize | Merge selected pages of different documents.
 [**PostPageCaretAnnotations**](PdfApi.md#postpagecaretannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/caret | Add document page caret annotations.
 [**PostPageCertify**](PdfApi.md#postpagecertify) | **POST** /pdf/\{name}/pages/\{pageNumber}/certify | Certify document page.
 [**PostPageCircleAnnotations**](PdfApi.md#postpagecircleannotations) | **POST** /pdf/\{name}/pages/\{pageNumber}/annotations/circle | Add document page circle annotations.
@@ -6085,6 +6087,60 @@ Name | Type | Description  | Notes
  **options** | [**OptimizeOptions**](OptimizeOptions.md)| The optimization options. | 
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postorganizedocument"></a>
+# **PostOrganizeDocument**
+> AsposeResponse PostOrganizeDocument (string name, string pages, string outPath, string storage = null, string folder = null)
+
+Merge selected pages of a document.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The original document name. | 
+ **pages** | **string**| 1-based page numbers of the source document that make up the resulting document. | 
+ **outPath** | **string**| Full filename of the resulting document. | 
+ **storage** | **string**| The documents storage. | [optional] 
+ **folder** | **string**| The source document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postorganizedocuments"></a>
+# **PostOrganizeDocuments**
+> AsposeResponse PostOrganizeDocuments (OrganizeDocumentRequest organizeDocuments, string outPath, string storage = null)
+
+Merge selected pages of different documents.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizeDocuments** | [**OrganizeDocumentRequest**](OrganizeDocumentRequest.md)| Array of OrganizeDocumentData to make up the resulting document. | 
+ **outPath** | **string**| Full filename of the resulting document. | 
+ **storage** | **string**| The documents storage. | [optional] 
 
 ### Return type
 
