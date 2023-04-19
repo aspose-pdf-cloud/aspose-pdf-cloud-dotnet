@@ -217,5 +217,47 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
 
             Assert.That(result.Code, Is.EqualTo(200));
         }
+
+        /// <summary>
+        /// Test PostOrganizeDocument
+        /// </summary>
+        [Test]
+        public void PostOrganizeDocumentTest()
+        {
+            const string name = "4pages.pdf";
+            UploadFile(name, name);
+            var response = PdfApi.PostOrganizeDocument(
+                name: name,
+                pages: "1,4-2",
+                outPath: Path.Combine(TempFolder, name),
+                folder: TempFolder
+            );
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PostOrganizeDocuments
+        /// </summary>
+        [Test]
+        public void PostOrganizeDocumentsTest()
+        {
+            const string name1 = "4pages.pdf";
+            UploadFile(name1, name1);
+            const string name2 = "marketing.pdf";
+            UploadFile(name2, name2);
+            var request = new OrganizeDocumentRequest(
+                List: new List<OrganizeDocumentData>
+                {
+                    new OrganizeDocumentData(Path: Path.Combine(TempFolder, name1), Pages: "4-2"),
+                    new OrganizeDocumentData(Path: Path.Combine(TempFolder, name2), Pages: "2"),
+                    new OrganizeDocumentData(Path: Path.Combine(TempFolder, name1), Pages: "3,1")
+                }
+            );
+            var response = PdfApi.PostOrganizeDocuments(
+                organizeDocuments: request,
+                outPath: Path.Combine(TempFolder, "OrganizeMany.pdf")
+            );
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
     }
 }
