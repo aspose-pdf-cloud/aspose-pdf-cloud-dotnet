@@ -60,13 +60,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <summary>
         /// Gets or Sets From
         /// </summary>
-        [DataMember(Name="from", EmitDefaultValue=false)]
+        [DataMember(Name="From", EmitDefaultValue=false)]
         public int? From { get; set; }
 
         /// <summary>
         /// Gets or Sets To
         /// </summary>
-        [DataMember(Name="to", EmitDefaultValue=false)]
+        [DataMember(Name="To", EmitDefaultValue=false)]
         public int? To { get; set; }
 
         /// <summary>

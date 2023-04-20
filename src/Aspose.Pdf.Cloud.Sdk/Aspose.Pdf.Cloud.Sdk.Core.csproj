@@ -189,11 +189,14 @@
     <Compile Include="Model\ObjectExist.cs" />
     <Compile Include="Model\OptimizeOptions.cs" />
     <Compile Include="Model\Option.cs" />
+    <Compile Include="Model\OrganizeDocumentData.cs" />
+    <Compile Include="Model\OrganizeDocumentRequest.cs" />
     <Compile Include="Model\OutputFormat.cs" />
     <Compile Include="Model\Page.cs" />
     <Compile Include="Model\PageLayout.cs" />
     <Compile Include="Model\PageMode.cs" />
     <Compile Include="Model\PageNumberStamp.cs" />
+    <Compile Include="Model\PageRange.cs" />
     <Compile Include="Model\Pages.cs" />
     <Compile Include="Model\PageWordCount.cs" />
     <Compile Include="Model\Paragraph.cs" />
@@ -252,7 +255,6 @@
     <Compile Include="Model\SoundAnnotationsResponse.cs" />
     <Compile Include="Model\SoundEncoding.cs" />
     <Compile Include="Model\SoundIcon.cs" />
-    <Compile Include="Model\PageRange.cs" />
     <Compile Include="Model\SplitRangePdfOptions.cs" />
     <Compile Include="Model\SplitResult.cs" />
     <Compile Include="Model\SplitResultDocument.cs" />
