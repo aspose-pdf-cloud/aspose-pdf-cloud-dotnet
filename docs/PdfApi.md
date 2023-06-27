@@ -4320,7 +4320,7 @@ Name | Type | Description  | Notes
 
 <a name="getpdfinstoragetopptx"></a>
 # **GetPdfInStorageToPptx**
-> System.IO.Stream GetPdfInStorageToPptx (string name, bool? separateImages = null, bool? slidesAsImages = null, string folder = null, string storage = null)
+> System.IO.Stream GetPdfInStorageToPptx (string name, bool? separateImages = null, bool? slidesAsImages = null, string folder = null, string storage = null, string password = null)
 
 Converts PDF document (located on storage) to PPTX format and returns resulting file in response content
 
@@ -4334,6 +4334,7 @@ Name | Type | Description  | Notes
  **slidesAsImages** | **bool?**| Slides as images. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| Base64 encoded password. | [optional] 
 
 ### Return type
 
@@ -8758,7 +8759,7 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinrequesttopptx"></a>
 # **PutPdfInRequestToPptx**
-> AsposeResponse PutPdfInRequestToPptx (string outPath, bool? separateImages = null, bool? slidesAsImages = null, string storage = null, System.IO.Stream file = null)
+> AsposeResponse PutPdfInRequestToPptx (string outPath, bool? separateImages = null, bool? slidesAsImages = null, string storage = null, string password = null, System.IO.Stream file = null)
 
 Converts PDF document (in request content) to PPTX format and uploads resulting file to storage.
 
@@ -8771,6 +8772,7 @@ Name | Type | Description  | Notes
  **separateImages** | **bool?**| Separate images. | [optional] 
  **slidesAsImages** | **bool?**| Slides as images. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| Base64 encoded password. | [optional] 
  **file** | **System.IO.Stream**| A file to be converted. | [optional] 
 
 ### Return type
@@ -9167,7 +9169,7 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinstoragetopptx"></a>
 # **PutPdfInStorageToPptx**
-> AsposeResponse PutPdfInStorageToPptx (string name, string outPath, bool? separateImages = null, bool? slidesAsImages = null, string folder = null, string storage = null)
+> AsposeResponse PutPdfInStorageToPptx (string name, string outPath, bool? separateImages = null, bool? slidesAsImages = null, string folder = null, string storage = null, string password = null)
 
 Converts PDF document (located on storage) to PPTX format and uploads resulting file to storage
 
@@ -9182,6 +9184,7 @@ Name | Type | Description  | Notes
  **slidesAsImages** | **bool?**| Slides as images. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| Base64 encoded password. | [optional] 
 
 ### Return type
 
