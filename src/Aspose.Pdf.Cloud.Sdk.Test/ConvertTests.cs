@@ -23,8 +23,10 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.IO;
 using System.Net;
+using System.Text;
 using Aspose.Pdf.Cloud.Sdk.Model;
 using NUnit.Framework;
 
@@ -399,6 +401,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         }
 
         /// <summary>
+        /// Test GetPdfInStorageToPptxWithPassword
+        /// </summary>
+        [Test]
+        public void GetPdfInStorageToPptxTestWithPassword()
+        {
+            string name = "4pagesEncrypted.pdf";
+            UploadFile(name, name);
+            Stream response = PdfApi.GetPdfInStorageToPptx(name, folder: TempFolder, 
+                password: Convert.ToBase64String(Encoding.UTF8.GetBytes(@"user $^Password!&")));
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
+
+        /// <summary>
         /// Test PutPdfInStorageToPptx
         /// </summary>
         [Test]
@@ -409,6 +424,20 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string resFileName = "result.pptx";
 
             var response = PdfApi.PutPdfInStorageToPptx(name, Path.Combine(TempFolder, resFileName), folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PutPdfInStorageToPptxWithPassword
+        /// </summary>
+        [Test]
+        public void PutPdfInStorageToPptxTestWithPassword()
+        {
+            string name = "4pagesEncrypted.pdf";
+            UploadFile(name, name);
+            string resFileName = "result.pptx";
+            var response = PdfApi.PutPdfInStorageToPptx(name, Path.Combine(TempFolder, resFileName), folder: TempFolder,
+                password: Convert.ToBase64String(Encoding.UTF8.GetBytes(@"user $^Password!&")));
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
@@ -428,6 +457,21 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             }
         }
 
+        /// <summary>
+        /// Test PutPdfInRequestToPptxWithPassword
+        /// </summary>
+        [Test]
+        public void PutPdfInRequestToPptxTestWithPassword()
+        {
+            string name = "4pagesEncrypted.pdf";
+            using (Stream stream = System.IO.File.OpenRead(Path.Combine(TestDataFolder, name)))
+            {
+                string resFileName = "result.pptx";
+                var response = PdfApi.PutPdfInRequestToPptx(Path.Combine(TempFolder, resFileName), file: stream,
+                    password: Convert.ToBase64String(Encoding.UTF8.GetBytes(@"user $^Password!&")));
+                Assert.That(response.Code, Is.EqualTo(200));
+            }
+        }
 
         /// <summary>
         /// Test GetPdfInStorageToTeX
