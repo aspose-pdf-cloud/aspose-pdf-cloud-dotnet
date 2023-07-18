@@ -56,11 +56,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Links">Link to the document.</param>
         /// <param name="Name">Field name.</param>
+        /// <param name="MappingName">Mapping name.</param>
         /// <param name="SelectedItems">Selected items.</param>
         /// <param name="Type">Field type.</param>
         /// <param name="Rect">Field rectangle.</param>
         /// <param name="Values">Field values. (required)</param>
-        public Field(List<Link> Links = default(List<Link>), string Name = default(string), List<int?> SelectedItems = default(List<int?>), FieldType Type = default(FieldType), Rectangle Rect = default(Rectangle), List<string> Values = default(List<string>))
+        public Field(List<Link> Links = default(List<Link>), string Name = default(string), string MappingName = default(string), List<int?> SelectedItems = default(List<int?>), FieldType Type = default(FieldType), Rectangle Rect = default(Rectangle), List<string> Values = default(List<string>))
         {
             // to ensure "Values" is required (not null)
             if (Values == null)
@@ -73,6 +74,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             }
             this.Links = Links;
             this.Name = Name;
+            this.MappingName = MappingName;
             this.SelectedItems = SelectedItems;
             this.Type = Type;
             this.Rect = Rect;
@@ -91,6 +93,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <value>Field name.</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// Mapping name.
+        /// </summary>
+        /// <value>Mapping name.</value>
+        [DataMember(Name="MappingName", EmitDefaultValue=false)]
+        public string MappingName { get; set; }
 
         /// <summary>
         /// Selected items.
@@ -130,6 +139,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("class Field {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  MappingName: ").Append(MappingName).Append("\n");
             sb.Append("  SelectedItems: ").Append(SelectedItems).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Rect: ").Append(Rect).Append("\n");
@@ -181,6 +191,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Name.Equals(other.Name)
                 ) && 
                 (
+                    this.MappingName == other.MappingName ||
+                    this.MappingName != null &&
+                    this.MappingName.Equals(other.MappingName)
+                ) && 
+                (
                     this.SelectedItems == other.SelectedItems ||
                     this.SelectedItems != null &&
                     this.SelectedItems.SequenceEqual(other.SelectedItems)
@@ -217,6 +232,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Links.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                if (this.MappingName != null)
+                    hash = hash * 59 + this.MappingName.GetHashCode();
                 if (this.SelectedItems != null)
                     hash = hash * 59 + this.SelectedItems.GetHashCode();
                 if (this.Type != null)

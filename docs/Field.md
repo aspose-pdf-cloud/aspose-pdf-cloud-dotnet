@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Links** | [**List&lt;Link&gt;**](Link.md) | Link to the document. | [optional] 
 **Name** | **string** | Field name. | [optional] 
+**MappingName** | **string** | Mapping name. | [optional] 
 **SelectedItems** | **List&lt;int?&gt;** | Selected items. | [optional] 
 **Type** | [**FieldType**](FieldType.md) | Field type. | [optional] 
 **Rect** | [**Rectangle**](Rectangle.md) | Field rectangle. | [optional] 
