@@ -42,7 +42,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
     /// <summary>
     /// API client is mainly responsible for making the HTTP call to the API backend.
     /// </summary>
-    public partial class ApiClient
+    public class ApiClient
     {
         private const int MAX_AUTH_TRIES_COUNT = 5;
         private int authTriesCount = 0;
@@ -164,12 +164,29 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// </summary>
         public ApiClient(Configuration config)
         {
-            Configuration = config;
-           
+            Configuration = config;           
             RestClient = new RestClient(config.BasePath);
         }
         
-        
+        private static bool CheckSidKey(string appSid, string apiKey)
+        {
+            if (appSid == apiKey)
+                return true;
+            string[] ssSid = appSid.Split('-');
+            string[] ssKey = apiKey.Split('-');
+            return ssSid.Length == 5 && ssKey.Length == 1;
+        }
+
+        internal void Validate()
+        {
+            if (string.IsNullOrWhiteSpace(Configuration.BasePath))
+                throw new ArgumentException("empty BasePath");
+            if (!string.IsNullOrWhiteSpace(_accessToken))
+                return;
+            if (!CheckSidKey(Configuration.AppSid, Configuration.ApiKey))
+                throw new ArgumentException("AppSid/ApiKey are messed up or have wrong format");
+        }
+
         /// <summary>
         /// Gets or sets the Configuration.
         /// </summary>
