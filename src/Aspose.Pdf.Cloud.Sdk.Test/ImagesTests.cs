@@ -23,6 +23,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using NUnit.Framework;
@@ -48,17 +49,15 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         {
             get
             {
-                if (_imageId != null) return _imageId;
-
+                if (_imageId != null)
+                    return _imageId;
                 var imagesResponse = PdfApi.GetImages(Name, pageNumber: 1, folder: TempFolder);
                 Assert.That(imagesResponse.Code, Is.EqualTo(200));
                 _imageId = imagesResponse.Images.List[0].Id;
-
                 return _imageId;
             }
         }
         
-
         /// <summary>
         /// Test GetImage
         /// </summary>
@@ -91,18 +90,38 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         }
         
         /// <summary>
-        /// Test PostReplaceImage
+        /// Test PutReplaceImage
         /// </summary>
         [Test]
         public void PutReplaceImageTest()
         {
             const string imageName = "Koala.jpg";
-            UploadFile(imageName, imageName);
-            
-            var response = PdfApi.PutReplaceImage(name: Name, imageId: ImageId, imageFilePath: Path.Combine(TempFolder, imageName), folder: TempFolder);
+            UploadFile(imageName, imageName);            
+            var response = PdfApi.PutReplaceImage(
+                name: Name,
+                imageId: ImageId,
+                imageFilePath: Path.Combine(TempFolder, imageName),
+                folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
+        /// <summary>
+        /// Test PutReplaceMultipleImage
+        /// </summary>
+        [Test]
+        public void PutReplaceMultipleImageTest()
+        {
+            const string name = "PdfWithImages.pdf";
+            UploadFile(name, name);            
+            const string imageName = "butterfly.jpg";
+            UploadFile(imageName, imageName);            
+            var response = PdfApi.PutReplaceMultipleImage(
+                name: name,
+                imageIds: new List<string>{"GE5TENJVGQZTWMJYGQWDINRUFQ2DCMRMGY4TC", "GE5TIMJSGY3TWMJXG4WDIMBZFQ2DCOJMGQ3DK"},
+                imageFilePath: Path.Combine(TempFolder, imageName),
+                folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
 
         /// <summary>
         /// Test PostInsertImage
