@@ -336,6 +336,7 @@ Method | HTTP request | Description
 [**PutRadioButtonField**](PdfApi.md#putradiobuttonfield) | **PUT** /pdf/\{name}/fields/radiobutton/\{fieldName} | Replace document RadioButton field
 [**PutRedactionAnnotation**](PdfApi.md#putredactionannotation) | **PUT** /pdf/\{name}/annotations/redaction/\{annotationId} | Replace document redaction annotation
 [**PutReplaceImage**](PdfApi.md#putreplaceimage) | **PUT** /pdf/\{name}/images/\{imageId} | Replace document image.
+[**PutReplaceMultipleImage**](PdfApi.md#putreplacemultipleimage) | **PUT** /pdf/\{name}/images/replace | Replace document multiple image.
 [**PutScreenAnnotation**](PdfApi.md#putscreenannotation) | **PUT** /pdf/\{name}/annotations/screen/\{annotationId} | Replace document screen annotation
 [**PutScreenAnnotationDataExtract**](PdfApi.md#putscreenannotationdataextract) | **PUT** /pdf/\{name}/annotations/screen/\{annotationId}/data/extract | Extract document screen annotation content to storage
 [**PutSearchableDocument**](PdfApi.md#putsearchabledocument) | **PUT** /pdf/\{name}/ocr | Create searchable PDF document. Generate OCR layer for images in input PDF document.
@@ -4443,7 +4444,7 @@ Name | Type | Description  | Notes
 
 <a name="getpdfinstoragetoxls"></a>
 # **GetPdfInStorageToXls**
-> System.IO.Stream GetPdfInStorageToXls (string name, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null, string storage = null)
+> System.IO.Stream GetPdfInStorageToXls (string name, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null, string storage = null, string password = null)
 
 Converts PDF document (located on storage) to XLS format and returns resulting file in response content
 
@@ -4459,6 +4460,7 @@ Name | Type | Description  | Notes
  **uniformWorksheets** | **bool?**| Uniform worksheets | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -4473,7 +4475,7 @@ Name | Type | Description  | Notes
 
 <a name="getpdfinstoragetoxlsx"></a>
 # **GetPdfInStorageToXlsx**
-> System.IO.Stream GetPdfInStorageToXlsx (string name, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null, string storage = null)
+> System.IO.Stream GetPdfInStorageToXlsx (string name, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null, string storage = null, string password = null)
 
 Converts PDF document (located on storage) to XLSX format and returns resulting file in response content
 
@@ -4489,6 +4491,7 @@ Name | Type | Description  | Notes
  **uniformWorksheets** | **bool?**| Uniform worksheets | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -7023,7 +7026,7 @@ Name | Type | Description  | Notes
 
 <a name="postsplitdocument"></a>
 # **PostSplitDocument**
-> SplitResultResponse PostSplitDocument (string name, string format = null, int? from = null, int? to = null, string storage = null, string folder = null)
+> SplitResultResponse PostSplitDocument (string name, string format = null, int? from = null, int? to = null, string storage = null, string folder = null, string password = null)
 
 Split document to parts.
 
@@ -7038,6 +7041,7 @@ Name | Type | Description  | Notes
  **to** | **int?**| End page if defined. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
+ **password** | **string**| Base64 encoded password. | [optional] 
 
 ### Return type
 
@@ -7052,7 +7056,7 @@ Name | Type | Description  | Notes
 
 <a name="postsplitrangepdfdocument"></a>
 # **PostSplitRangePdfDocument**
-> SplitResultResponse PostSplitRangePdfDocument (string name, SplitRangePdfOptions options, string storage = null, string folder = null)
+> SplitResultResponse PostSplitRangePdfDocument (string name, SplitRangePdfOptions options, string storage = null, string folder = null, string password = null)
 
 Split document into ranges.
 
@@ -7065,6 +7069,7 @@ Name | Type | Description  | Notes
  **options** | [**SplitRangePdfOptions**](SplitRangePdfOptions.md)| The splitting options. | 
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
+ **password** | **string**| Base64 encoded password. | [optional] 
 
 ### Return type
 
@@ -8881,7 +8886,7 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinrequesttoxls"></a>
 # **PutPdfInRequestToXls**
-> AsposeResponse PutPdfInRequestToXls (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string storage = null, System.IO.Stream file = null)
+> AsposeResponse PutPdfInRequestToXls (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string storage = null, string password = null, System.IO.Stream file = null)
 
 Converts PDF document (in request content) to XLS format and uploads resulting file to storage.
 
@@ -8896,6 +8901,7 @@ Name | Type | Description  | Notes
  **scaleFactor** | **double?**| Scale factor (Obsolete) | [optional] 
  **uniformWorksheets** | **bool?**| Uniform worksheets | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
  **file** | **System.IO.Stream**| A file to be converted. | [optional] 
 
 ### Return type
@@ -8911,7 +8917,7 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinrequesttoxlsx"></a>
 # **PutPdfInRequestToXlsx**
-> AsposeResponse PutPdfInRequestToXlsx (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string storage = null, System.IO.Stream file = null)
+> AsposeResponse PutPdfInRequestToXlsx (string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string storage = null, string password = null, System.IO.Stream file = null)
 
 Converts PDF document (in request content) to XLSX format and uploads resulting file to storage.
 
@@ -8926,6 +8932,7 @@ Name | Type | Description  | Notes
  **scaleFactor** | **double?**| Scale factor (Obsolete) | [optional] 
  **uniformWorksheets** | **bool?**| Uniform worksheets | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
  **file** | **System.IO.Stream**| A file to be converted. | [optional] 
 
 ### Return type
@@ -9295,7 +9302,7 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinstoragetoxls"></a>
 # **PutPdfInStorageToXls**
-> AsposeResponse PutPdfInStorageToXls (string name, string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null, string storage = null)
+> AsposeResponse PutPdfInStorageToXls (string name, string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null, string storage = null, string password = null)
 
 Converts PDF document (located on storage) to XLS format and uploads resulting file to storage
 
@@ -9312,6 +9319,7 @@ Name | Type | Description  | Notes
  **uniformWorksheets** | **bool?**| Uniform worksheets | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -9326,7 +9334,7 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinstoragetoxlsx"></a>
 # **PutPdfInStorageToXlsx**
-> AsposeResponse PutPdfInStorageToXlsx (string name, string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null, string storage = null)
+> AsposeResponse PutPdfInStorageToXlsx (string name, string outPath, bool? insertBlankColumnAtFirst = null, bool? minimizeTheNumberOfWorksheets = null, double? scaleFactor = null, bool? uniformWorksheets = null, string folder = null, string storage = null, string password = null)
 
 Converts PDF document (located on storage) to XLSX format and uploads resulting file to storage
 
@@ -9343,6 +9351,7 @@ Name | Type | Description  | Notes
  **uniformWorksheets** | **bool?**| Uniform worksheets | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -9625,6 +9634,35 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ImageResponse**](ImageResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putreplacemultipleimage"></a>
+# **PutReplaceMultipleImage**
+> ImagesResponse PutReplaceMultipleImage (string name, List<string> imageIds, string imageFilePath = null, string storage = null, string folder = null, System.IO.Stream image = null)
+
+Replace document multiple image.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **imageIds** | **List&lt;string&gt;**| The image IDs. | 
+ **imageFilePath** | **string**| Path to image file if specified. Request content is used otherwise. | [optional] 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+ **image** | **System.IO.Stream**| Image file. | [optional] 
+
+### Return type
+
+[**ImagesResponse**](ImagesResponse.md)
 
 ### HTTP request headers
 
