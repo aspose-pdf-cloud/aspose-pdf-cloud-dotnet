@@ -4294,7 +4294,7 @@ Name | Type | Description  | Notes
 
 <a name="getpdfinstoragetopdfa"></a>
 # **GetPdfInStorageToPdfA**
-> System.IO.Stream GetPdfInStorageToPdfA (string name, string type, string folder = null, string storage = null)
+> System.IO.Stream GetPdfInStorageToPdfA (string name, string type, string folder = null, string storage = null, string password = null)
 
 Converts PDF document (located on storage) to PdfA format and returns resulting file in response content
 
@@ -4307,6 +4307,7 @@ Name | Type | Description  | Notes
  **type** | **string**| Type of PdfA format. | 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -8737,7 +8738,7 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinrequesttopdfa"></a>
 # **PutPdfInRequestToPdfA**
-> AsposeResponse PutPdfInRequestToPdfA (string outPath, string type, string storage = null, System.IO.Stream file = null)
+> AsposeResponse PutPdfInRequestToPdfA (string outPath, string type, string storage = null, string password = null, System.IO.Stream file = null)
 
 Converts PDF document (in request content) to PdfA format and uploads resulting file to storage.
 
@@ -8749,6 +8750,7 @@ Name | Type | Description  | Notes
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.pdf) | 
  **type** | **string**| Type of PdfA format. | 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
  **file** | **System.IO.Stream**| A file to be converted. | [optional] 
 
 ### Return type
@@ -9148,7 +9150,7 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinstoragetopdfa"></a>
 # **PutPdfInStorageToPdfA**
-> AsposeResponse PutPdfInStorageToPdfA (string name, string outPath, string type, string folder = null, string storage = null)
+> AsposeResponse PutPdfInStorageToPdfA (string name, string outPath, string type, string folder = null, string storage = null, string password = null)
 
 Converts PDF document (located on storage) to PdfA format and uploads resulting file to storage
 
@@ -9162,6 +9164,7 @@ Name | Type | Description  | Notes
  **type** | **string**| Type of PdfA format. | 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
