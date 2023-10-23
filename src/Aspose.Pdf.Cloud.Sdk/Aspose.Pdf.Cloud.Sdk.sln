@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspose.Pdf.Cloud.Sdk.Core", "Aspose.Pdf.Cloud.Sdk.Core.csproj", "{F91B78AA-98F8-4988-A5BF-E48D43DAE7C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aspose.Pdf.Cloud.Sdk", "Aspose.Pdf.Cloud.Sdk.csproj", "{5578603F-D47F-4876-95D6-2108E48C13F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F91B78AA-98F8-4988-A5BF-E48D43DAE7C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91B78AA-98F8-4988-A5BF-E48D43DAE7C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91B78AA-98F8-4988-A5BF-E48D43DAE7C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91B78AA-98F8-4988-A5BF-E48D43DAE7C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5578603F-D47F-4876-95D6-2108E48C13F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5578603F-D47F-4876-95D6-2108E48C13F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5578603F-D47F-4876-95D6-2108E48C13F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5578603F-D47F-4876-95D6-2108E48C13F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C4327D3-C6E2-4087-8B8B-D3E58E513A2C}
+	EndGlobalSection
+EndGlobal

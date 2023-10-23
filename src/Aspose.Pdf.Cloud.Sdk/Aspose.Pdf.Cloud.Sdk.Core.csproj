@@ -47,6 +47,7 @@
     <Compile Include="Model\AntialiasingProcessingType.cs" />
     <Compile Include="Model\AsposeResponse.cs" />
     <Compile Include="Model\Attachment.cs" />
+    <Compile Include="Model\AttachmentInfo.cs" />
     <Compile Include="Model\AttachmentResponse.cs" />
     <Compile Include="Model\Attachments.cs" />
     <Compile Include="Model\AttachmentsResponse.cs" />

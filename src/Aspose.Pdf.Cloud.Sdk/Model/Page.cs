@@ -56,9 +56,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// </summary>
         /// <param name="Links">Link to the document.</param>
         /// <param name="Id">Page&#39;s id. (required)</param>
-        /// <param name="Images">Page&#39;s images</param>
         /// <param name="Rectangle">Page&#39;s rectangle</param>
-        public Page(List<Link> Links = default(List<Link>), int? Id = default(int?), Images Images = default(Images), Rectangle Rectangle = default(Rectangle))
+        public Page(List<Link> Links = default(List<Link>), int? Id = default(int?), Rectangle Rectangle = default(Rectangle))
         {
             // to ensure "Id" is required (not null)
             if (Id == null)
@@ -70,7 +69,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                 this.Id = Id;
             }
             this.Links = Links;
-            this.Images = Images;
             this.Rectangle = Rectangle;
         }
         
@@ -89,13 +87,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public int? Id { get; set; }
 
         /// <summary>
-        /// Page&#39;s images
-        /// </summary>
-        /// <value>Page&#39;s images</value>
-        [DataMember(Name="Images", EmitDefaultValue=false)]
-        public Images Images { get; set; }
-
-        /// <summary>
         /// Page&#39;s rectangle
         /// </summary>
         /// <value>Page&#39;s rectangle</value>
@@ -112,7 +103,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("class Page {\n");
             sb.Append("  Links: ").Append(Links).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Images: ").Append(Images).Append("\n");
             sb.Append("  Rectangle: ").Append(Rectangle).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -161,11 +151,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.Id.Equals(other.Id)
                 ) && 
                 (
-                    this.Images == other.Images ||
-                    this.Images != null &&
-                    this.Images.Equals(other.Images)
-                ) && 
-                (
                     this.Rectangle == other.Rectangle ||
                     this.Rectangle != null &&
                     this.Rectangle.Equals(other.Rectangle)
@@ -187,8 +172,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.Links.GetHashCode();
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                if (this.Images != null)
-                    hash = hash * 59 + this.Images.GetHashCode();
                 if (this.Rectangle != null)
                     hash = hash * 59 + this.Rectangle.GetHashCode();
                 return hash;
