@@ -4366,7 +4366,7 @@ Name | Type | Description  | Notes
 
 <a name="getpdfinstoragetosvg"></a>
 # **GetPdfInStorageToSvg**
-> System.IO.Stream GetPdfInStorageToSvg (string name, bool? compressOutputToZipArchive = null, string folder = null, string storage = null)
+> System.IO.Stream GetPdfInStorageToSvg (string name, bool? compressOutputToZipArchive = null, string folder = null, string storage = null, string password = null)
 
 Converts PDF document (located on storage) to SVG format and returns resulting file in response content
 
@@ -4379,6 +4379,7 @@ Name | Type | Description  | Notes
  **compressOutputToZipArchive** | **bool?**| Specifies whether output will be created as one zip-archive. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
@@ -8843,7 +8844,7 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinrequesttosvg"></a>
 # **PutPdfInRequestToSvg**
-> AsposeResponse PutPdfInRequestToSvg (string outPath, string storage = null, System.IO.Stream file = null)
+> AsposeResponse PutPdfInRequestToSvg (string outPath, string storage = null, string password = null, System.IO.Stream file = null)
 
 Converts PDF document (in request content) to SVG format and uploads resulting file to storage.
 
@@ -8854,6 +8855,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.svg) | 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
  **file** | **System.IO.Stream**| A file to be converted. | [optional] 
 
 ### Return type
@@ -9257,7 +9259,7 @@ Name | Type | Description  | Notes
 
 <a name="putpdfinstoragetosvg"></a>
 # **PutPdfInStorageToSvg**
-> AsposeResponse PutPdfInStorageToSvg (string name, string outPath, string folder = null, string storage = null)
+> AsposeResponse PutPdfInStorageToSvg (string name, string outPath, string folder = null, string storage = null, string password = null)
 
 Converts PDF document (located on storage) to SVG format and uploads resulting file to storage
 
@@ -9270,6 +9272,7 @@ Name | Type | Description  | Notes
  **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.svg) | 
  **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
+ **password** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 
