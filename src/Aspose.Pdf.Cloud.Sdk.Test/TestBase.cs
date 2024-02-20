@@ -39,12 +39,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Test {
     private const string ServerCredsFile = @"Settings\servercreds.json";
     protected const string TempFolder = "TempPdfCloud";
 
-    private class Keys {
+    private class Creds {
       public string AppSID { get; set; }
       public string AppKey { get; set; }
+      public bool SelfHost { get; set; }
+      public string ProductUri { get; set; }
     }
 
-    private Keys keys;
+    private Creds _creds;
 
     private string _GetServercredsJson() {
       DirectoryInfo di = Directory.GetParent(Directory.GetCurrentDirectory());
@@ -58,20 +60,25 @@ namespace Aspose.Pdf.Cloud.Sdk.Test {
       throw new FileNotFoundException("servercreds.json not found");
     }
 
-    private Keys _GetKeys() {
-      return JsonConvert.DeserializeObject<Keys>(File.ReadAllText(_GetServercredsJson()));
+    private Creds _GetCreds() {
+      return JsonConvert.DeserializeObject<Creds>(File.ReadAllText(_GetServercredsJson()));
     }
 
     [SetUp]
     public virtual void SetUp() {
       Console.WriteLine(TestContext.CurrentContext.Test.Name);
       // To run tests with your own credentials please uncomment following line of code
-      // this.keys = new Keys { AppKey = "your app key", AppSID = "your app sid" };
-      if (keys == null)
-        keys = _GetKeys();
-      if (string.IsNullOrEmpty(keys.AppKey) || string.IsNullOrEmpty(keys.AppSID))
-        throw new FileNotFoundException("servercreds.json doesn't contain AppSID and/or AppKey");
-      Configuration = new Configuration(keys.AppKey, keys.AppSID, BaseProductUri);
+      // this._creds = new Creds { AppKey = "your app key", AppSID = "your app sid" };
+      if (_creds == null)
+        _creds = _GetCreds();
+      if (_creds.SelfHost) {
+        if (string.IsNullOrEmpty(_creds.ProductUri))
+          throw new FileNotFoundException("servercreds.json doesn't contain ProductUri");
+      } else {
+        if (string.IsNullOrEmpty(_creds.AppKey) || string.IsNullOrEmpty(_creds.AppSID))
+          throw new FileNotFoundException("servercreds.json doesn't contain AppSID and/or AppKey");
+      }
+      Configuration = new Configuration(_creds.SelfHost, _creds.AppKey, _creds.AppSID, _creds.ProductUri);
       PdfApi = new PdfApi(Configuration);
     }
 

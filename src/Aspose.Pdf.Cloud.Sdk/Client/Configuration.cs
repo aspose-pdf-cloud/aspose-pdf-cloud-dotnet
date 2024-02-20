@@ -39,24 +39,28 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <summary>
         /// Initializes a new instance of the Configuration class with different settings
         /// </summary>
+        /// <param name="selfHost">The self-host flag.</param>
         /// <param name="apiKey">The api key.</param>
         /// <param name="appSid">The app SID.</param>
         /// <param name="basePath">The base path.</param>
-        /// <param name="defaultHeader">Dictionary of default HTTP header</param>
-        /// <param name="tempFolderPath">Temp folder path</param>
-        /// <param name="dateTimeFormat">DateTime format string</param>
-        /// <param name="timeout">HTTP connection timeout (in milliseconds)</param>
-        /// <param name="userAgent">HTTP user agent</param>
-        public Configuration(string apiKey,
-                             string appSid,
-                             string basePath = "https://api.aspose.cloud",
-                             Dictionary<string, string> defaultHeader = null,
-                             string tempFolderPath = null,
-                             string dateTimeFormat = null,
-                             int timeout = 5 * 60 * 1000,
-                             string userAgent = "aspose pdf cloud sdk"
-                            )
-        {            
+        /// <param name="defaultHeader">Dictionary of default HTTP header.</param>
+        /// <param name="tempFolderPath">Temp folder path.</param>
+        /// <param name="dateTimeFormat">DateTime format string.</param>
+        /// <param name="timeout">HTTP connection timeout (in milliseconds).</param>
+        /// <param name="userAgent">HTTP user agent.</param>
+        public Configuration(
+            bool selfHost,
+            string apiKey,
+            string appSid,
+            string basePath = "https://api.aspose.cloud",
+            Dictionary<string, string> defaultHeader = null,
+            string tempFolderPath = null,
+            string dateTimeFormat = null,
+            int timeout = 5 * 60 * 1000,
+            string userAgent = "aspose pdf cloud sdk"
+        )
+        {
+            SelfHost = selfHost;
             ApiKey = apiKey;
             AppSid = appSid;
             BasePath = basePath;
@@ -74,8 +78,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         public static readonly ExceptionFactory DefaultExceptionFactory = (methodName, response) =>
         {
             int status = (int) response.StatusCode;
-            if (status >= 400) return new ApiException(status, string.Format("Error calling {0}: {1}", methodName, response.Content), response.Content);
-            if (status == 0) return new ApiException(status, string.Format("Error calling {0}: {1}", methodName, response.ErrorMessage), response.ErrorMessage);
+            if (status >= 400)
+                return new ApiException(status, string.Format("Error calling {0}: {1}", methodName, response.Content), response.Content);
+            if (status == 0)
+                return new ApiException(status, string.Format("Error calling {0}: {1}", methodName, response.ErrorMessage), response.ErrorMessage);
             return null;
         };
 
@@ -85,20 +91,25 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <value>Timeout.</value>
         public int Timeout { get; set; }
 
-        /// Gets or sets the api key.
         /// <summary>
+        /// Gets or sets the SelfHost flag.
+        /// </summary>
+        public bool SelfHost { get; set; }
+
+        /// <summary>
+        /// Gets or sets the api key.
         /// </summary>
         public string ApiKey { get; set; }
-
-        /// Gets or sets the base path.
-        /// <summary>
-        /// </summary>
-        public string BasePath { get; set; }
 
         /// <summary>
         /// Gets or sets the app sid.
         /// </summary>
         public string AppSid { get; set; }
+
+        /// <summary>
+        /// Gets or sets the base path.
+        /// </summary>
+        public string BasePath { get; set; }
 
         private Dictionary<string, string> _defaultHeaderMap = new Dictionary<string, string>();
 
@@ -108,7 +119,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         public Dictionary<string, string> DefaultHeader
         {
             get { return _defaultHeaderMap; }
-
             set
             {
                 _defaultHeaderMap = value;
@@ -215,7 +225,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: 3.0\n";
-            report += "    SDK Package Version: 24.1.0\n";
+            report += "    SDK Package Version: 24.2.0\n";
 
             return report;
         }

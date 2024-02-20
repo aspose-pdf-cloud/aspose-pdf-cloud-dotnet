@@ -29,9 +29,8 @@ XLS, XLSX, PPTX, DOC, DOCX, MobiXML, JPEG, EMF, PNG, BMP, GIF, TIFF, Text
 ## Read PDF Formats
 MHT, PCL, PS, XSLFO, MD
 
-## Enhancements in Version 24.1
-- Add support to convert password protected PDF to SVG in PutPdfInRequestToSvg API.
-- Add support to convert password protected PDF to SVG in PutPdfInStorageToSvg API.
+## Enhancements in Version 24.2
+- Memory leak when converting PDF to DOCX.
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
 
 ## Unit Tests
@@ -50,7 +49,7 @@ Install-Package RestSharp
 Install-Package Newtonsoft.Json
 ```
 
-## Convert PDF to Epub in Dotnet
+## Convert PDF to Epub in .NET
 
 ```csharp
 	// Get your ClientId and ClientSecret from https://dashboard.aspose.cloud (free registration required).
@@ -72,3 +71,6 @@ Install-Package Newtonsoft.Json
 ```
 
 NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploads to fail. See [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)
+
+## SelfHost Aspose.PDF Cloud
+Create Configuration object with SelfHost = true.
