@@ -68,10 +68,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="request">The RestSharp request object</param>
         private async System.Threading.Tasks.Task InterceptRequestAsync(IRestRequest request)
         {
-            if (null == _accessToken)
-            {
+            if (Configuration.SelfHost)
+                return;
+            if (_accessToken == null)
                 await RequestTokenAsync();
-            }
             AddOAuthToken(request);
         }
         
@@ -81,10 +81,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="request">The RestSharp request object</param>
         private void InterceptRequest(IRestRequest request)
         {
-            if (null == _accessToken)
-            {
+            if (Configuration.SelfHost)
+                return;
+            if (_accessToken == null)
                 RequestToken();
-            }
             AddOAuthToken(request);
         }
 
@@ -95,35 +95,29 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
         private void RequestToken()
         {
-            var requestUrl = "/connect/token";
-
             var postData = "grant_type=client_credentials";
             postData += "&client_id=" + Configuration.AppSid;
             postData += "&client_secret=" + Configuration.ApiKey;
-
-            var request = new RestRequest(requestUrl, Method.POST);
+            var request = new RestRequest(
+                new Uri(RestClient.BaseUrl.AbsoluteUri.Replace("v3.0", "connect/token")),
+                Method.POST);
             request.AddParameter("application/x-www-form-urlencoded", postData, ParameterType.RequestBody);
             var responce = RestClient.Execute(request);
-
             var result = (GetAccessTokenResult)Deserialize(responce, typeof(GetAccessTokenResult));
-
             _accessToken = result.AccessToken;
         }
         
         private async System.Threading.Tasks.Task RequestTokenAsync()
         {
-            var requestUrl = "/connect/token";
-
             var postData = "grant_type=client_credentials";
             postData += "&client_id=" + Configuration.AppSid;
             postData += "&client_secret=" + Configuration.ApiKey;
-
-            var request = new RestRequest(requestUrl, Method.POST);
+            var request = new RestRequest(
+                new Uri(RestClient.BaseUrl.AbsoluteUri.Replace("v3.0", "connect/token")),
+                Method.POST);
             request.AddParameter("application/x-www-form-urlencoded", postData, ParameterType.RequestBody);
             var responce = await RestClient.ExecuteTaskAsync(request);
-
             var result = (GetAccessTokenResult)Deserialize(responce, typeof(GetAccessTokenResult));
-
             _accessToken = result.AccessToken;
         }
         
@@ -134,12 +128,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="response">The RestSharp response object</param>
         private bool InterceptResponse(IRestRequest request, IRestResponse response)
         {
-            if (response.StatusCode == HttpStatusCode.Unauthorized)
-            {
+            if (Configuration.SelfHost)
+                return true;
+            if (response.StatusCode == HttpStatusCode.Unauthorized) {
                 RequestToken();
                 return false;
             }
-
             return true;
         }
 
@@ -150,12 +144,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="response">The RestSharp response object</param>
         private async System.Threading.Tasks.Task<bool> InterceptResponseAsync(IRestRequest request, IRestResponse response)
         {
-            if (response.StatusCode == HttpStatusCode.Unauthorized)
-            {
+            if (Configuration.SelfHost)
+                return true;
+            if (response.StatusCode == HttpStatusCode.Unauthorized) {
                 await RequestTokenAsync();
                 return false;
             }
-
             return true;
         }
 
@@ -181,6 +175,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         {
             if (string.IsNullOrWhiteSpace(Configuration.BasePath))
                 throw new ArgumentException("empty BasePath");
+            if (Configuration.SelfHost)
+                return;
             if (!string.IsNullOrWhiteSpace(_accessToken))
                 return;
             if (!CheckSidKey(Configuration.AppSid, Configuration.ApiKey))
@@ -206,7 +202,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
             String contentType)
         {
-            path = "/v3.0" + path;
+            // path = "/v3.0" + path;
             
             // add path parameter, if any
             foreach (var param in pathParams)
@@ -222,7 +218,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
             // add custom header
             request.AddHeader(AsposeClientHeaderName, ".net sdk");
-            request.AddHeader(AsposeClientVersionHeaderName, "24.1.0");
+            request.AddHeader(AsposeClientVersionHeaderName, "24.2.0");
 
             // add header parameter, if any
             foreach(var param in headerParams)
