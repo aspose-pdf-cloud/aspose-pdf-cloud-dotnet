@@ -46,8 +46,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         public void GetPdfInStorageToDocTest()
         {
             string name = "4pages.pdf";
-            UploadFile(name, name);
-         
+            UploadFile(name, name);         
             var response = PdfApi.GetPdfInStorageToDoc(name, folder: TempFolder);
             Assert.That(response.Length, Is.GreaterThan(0));
         }
@@ -516,7 +515,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             }
         }
 
-
         /// <summary>
         /// Test GetPdfInStorageToMobiXml
         /// </summary>
@@ -559,7 +557,6 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
                 Assert.That(response.Code, Is.EqualTo(200));
             }
         }
-
 
         /// <summary>
         /// Test GetXfaPdfInStorageToAcroForm
@@ -691,5 +688,29 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             }
         }
 
+        /// <summary>
+        /// Test PostPdfToXlsx
+        /// </summary>
+        [Test]
+        public void PostPdfToXlsxTest()
+        {
+            using (Stream stream = File.OpenRead(Path.Combine(TestDataFolder, "4pages.pdf")))
+            {
+                Stream response = PdfApi.PostPdfToXlsx(file: stream);
+                Assert.That(response.Length, Is.GreaterThan(0));
+            }            
+        }
+
+        /// <summary>
+        /// Test GetPdfInStorageToText
+        /// </summary>
+        [Test]
+        public void GetPdfInStorageToTextTest()
+        {
+            string name = "4pages.pdf";
+            UploadFile(name, name);         
+            var response = PdfApi.GetPdfInStorageToText(name, folder: TempFolder);
+            Assert.That(response.Length, Is.GreaterThan(0));
+        }
     }
 }

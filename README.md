@@ -29,7 +29,9 @@ XLS, XLSX, PPTX, DOC, DOCX, MobiXML, JPEG, EMF, PNG, BMP, GIF, TIFF, Text
 ## Read PDF Formats
 MHT, PCL, PS, XSLFO, MD
 
-## Enhancements in Version 24.3
+## Enhancements in Version 24.4
+- Convert PDF to optimized Text.
+- Convert PDF to EXCEL without Cloud Storage.
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
 
 ## Unit Tests
@@ -72,4 +74,4 @@ Install-Package Newtonsoft.Json
 NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploads to fail. See [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)
 
 ## SelfHost Aspose.PDF Cloud
-Create Configuration object with SelfHost = true.
+Create Configuration object with SelfHost = true and without ClientId and ClientSecret.
