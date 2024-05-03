@@ -34,6 +34,9 @@ MHT, PCL, PS, XSLFO, MD
 - Convert PDF to EXCEL without Cloud Storage.
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
 
+## Bugs fixed in Version 24.4.1
+- Processing of cloud service default URL.
+
 ## Unit Tests
 Aspose PDF SDK includes a suite of unit tests. These Unit Tests also serves as examples of how to use the Aspose PDF SDK.
 

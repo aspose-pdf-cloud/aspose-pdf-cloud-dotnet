@@ -52,7 +52,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             bool selfHost,
             string apiKey,
             string appSid,
-            string basePath = "https://api.aspose.cloud",
+            string basePath = "https://api.aspose.cloud/v3.0",
             Dictionary<string, string> defaultHeader = null,
             string tempFolderPath = null,
             string dateTimeFormat = null,
@@ -225,7 +225,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: 3.0\n";
-            report += "    SDK Package Version: 24.4.0\n";
+            report += "    SDK Package Version: 24.4.1\n";
 
             return report;
         }
