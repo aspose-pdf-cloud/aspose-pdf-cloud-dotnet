@@ -218,7 +218,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
             // add custom header
             request.AddHeader(AsposeClientHeaderName, ".net sdk");
-            request.AddHeader(AsposeClientVersionHeaderName, "24.4.1");
+            request.AddHeader(AsposeClientVersionHeaderName, "24.5.0");
 
             // add header parameter, if any
             foreach(var param in headerParams)

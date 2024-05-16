@@ -209,6 +209,7 @@ Method | HTTP request | Description
 [**PostDocumentTextReplace**](PdfApi.md#postdocumenttextreplace) | **POST** /pdf/\{name}/text/replace | Document&#39;s replace text method.
 [**PostEncryptDocumentInStorage**](PdfApi.md#postencryptdocumentinstorage) | **POST** /pdf/\{name}/encrypt | Encrypt document in storage.
 [**PostFlattenDocument**](PdfApi.md#postflattendocument) | **POST** /pdf/\{name}/flatten | Flatten the document.
+[**PostHtmlToPdf**](PdfApi.md#posthtmltopdf) | **POST** /pdf/create/html | Convert HTML file (zip archive in request content) to PDF format and return resulting file in response. 
 [**PostImportFieldsFromFdf**](PdfApi.md#postimportfieldsfromfdf) | **POST** /pdf/\{name}/import/fdf | Update fields from FDF file in request.
 [**PostImportFieldsFromXfdf**](PdfApi.md#postimportfieldsfromxfdf) | **POST** /pdf/\{name}/import/xfdf | Update fields from XFDF file in request.
 [**PostImportFieldsFromXml**](PdfApi.md#postimportfieldsfromxml) | **POST** /pdf/\{name}/import/xml | Update fields from XML file in request.
@@ -5978,6 +5979,37 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="posthtmltopdf"></a>
+# **PostHtmlToPdf**
+> System.IO.Stream PostHtmlToPdf (string htmlFileName = null, double? height = null, double? width = null, bool? isLandscape = null, double? marginLeft = null, double? marginBottom = null, double? marginRight = null, double? marginTop = null)
+
+Convert HTML file (zip archive in request content) to PDF format and return resulting file in response. 
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **htmlFileName** | **string**| Name of HTML file in ZIP. | [optional] 
+ **height** | **double?**| Page height | [optional] 
+ **width** | **double?**| Page width | [optional] 
+ **isLandscape** | **bool?**| Is page landscaped | [optional] 
+ **marginLeft** | **double?**| Page margin left | [optional] 
+ **marginBottom** | **double?**| Page margin bottom | [optional] 
+ **marginRight** | **double?**| Page margin right | [optional] 
+ **marginTop** | **double?**| Page margin top | [optional] 
+
+### Return type
+
+**System.IO.Stream**
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: multipart/form-data
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
