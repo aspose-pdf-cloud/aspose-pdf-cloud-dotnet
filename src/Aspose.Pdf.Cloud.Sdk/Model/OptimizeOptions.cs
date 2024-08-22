@@ -50,16 +50,16 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="OptimizeOptions" /> class.
         /// </summary>
         /// <param name="Password">Specifies document password (if any) encoded with base-64.</param>
-        /// <param name="AllowReusePageContent">If true page contents will be reused when document is optimized for equal pages.</param>
+        /// <param name="AllowReusePageContent">If true page contents will be reused when document is optimized for equal pages. LinkDuplcateStreams option must be set to true.</param>
         /// <param name="CompressImages">If this flag is set to true images will be compressed in the document. Compression level is specified with ImageQuality property.</param>
         /// <param name="ImageQuality">Specifies level of image compression when CompressImages flag is used.</param>
         /// <param name="LinkDuplcateStreams">If this flag is set to true, Resource streams will be analyzed. If duplicate streams are found (i.e. if stream contents is equal), then thees streams will be stored as one object.  This allows to decrease document size in some cases (for example, when same document was concatenated multiple times).</param>
         /// <param name="RemoveUnusedObjects">If this flag is set to true, all document objects will be checked and unused objects (i.e. objects which does not have any reference) are removed from document.</param>
         /// <param name="RemoveUnusedStreams">If this flag set to true, every resource is checked on it&#39;s usage. If resource is never used, then resources is removed. This may decrease document size for example when pages were extracted from document. </param>
-        /// <param name="UnembedFonts">Make fonts not embedded if set to true. </param>
+        /// <param name="UnembedFonts">Make fonts not embedded if set to true. Unembedding a font means removing the embedded byte stream data of the font included in a PDF document.</param>
         /// <param name="ResizeImages">If this flag set to true and CompressImages is true images will be resized if image resolution is greater then specified MaxResolution parameter.</param>
         /// <param name="MaxResolution">Specifies maximum resolution of images. If image has higher resolution it will be scaled.</param>
-        /// <param name="SubsetFonts">Fonts will be converted into subsets if set to true.</param>
+        /// <param name="SubsetFonts">Fonts will be converted into subsets if set to true. Only those characters that are actually used in the layout are stored in the PDF. </param>
         /// <param name="RemovePrivateInfo">Remove private information (page piece info).</param>
         /// <param name="ImageEncoding">Image encode which will be used.</param>
         /// <param name="ImageCompressionVersion">Version of compression algorithm. Possible values are: \&quot;Standard\&quot; - standard compression, \&quot;Fast\&quot; - fast (improved compression which is faster then standard but may be applicable not for all images), \&quot;Mixed\&quot; - mixed (standard compression is applied to images which can not be compressed by  faster algorithm, this may give best compression but more slow then \&quot;Fast\&quot; algorithm. Version \&quot;Fast\&quot; is not applicable for resizing images (standard method will be used). Default is \&quot;Standard\&quot;.</param>
@@ -89,9 +89,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string Password { get; set; }
 
         /// <summary>
-        /// If true page contents will be reused when document is optimized for equal pages.
+        /// If true page contents will be reused when document is optimized for equal pages. LinkDuplcateStreams option must be set to true.
         /// </summary>
-        /// <value>If true page contents will be reused when document is optimized for equal pages.</value>
+        /// <value>If true page contents will be reused when document is optimized for equal pages. LinkDuplcateStreams option must be set to true.</value>
         [DataMember(Name="AllowReusePageContent", EmitDefaultValue=false)]
         public bool? AllowReusePageContent { get; set; }
 
@@ -131,9 +131,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public bool? RemoveUnusedStreams { get; set; }
 
         /// <summary>
-        /// Make fonts not embedded if set to true. 
+        /// Make fonts not embedded if set to true. Unembedding a font means removing the embedded byte stream data of the font included in a PDF document.
         /// </summary>
-        /// <value>Make fonts not embedded if set to true. </value>
+        /// <value>Make fonts not embedded if set to true. Unembedding a font means removing the embedded byte stream data of the font included in a PDF document.</value>
         [DataMember(Name="UnembedFonts", EmitDefaultValue=false)]
         public bool? UnembedFonts { get; set; }
 
@@ -152,9 +152,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public int? MaxResolution { get; set; }
 
         /// <summary>
-        /// Fonts will be converted into subsets if set to true.
+        /// Fonts will be converted into subsets if set to true. Only those characters that are actually used in the layout are stored in the PDF. 
         /// </summary>
-        /// <value>Fonts will be converted into subsets if set to true.</value>
+        /// <value>Fonts will be converted into subsets if set to true. Only those characters that are actually used in the layout are stored in the PDF. </value>
         [DataMember(Name="SubsetFonts", EmitDefaultValue=false)]
         public bool? SubsetFonts { get; set; }
 
