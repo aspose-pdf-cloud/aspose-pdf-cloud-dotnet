@@ -102,11 +102,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
                 new Uri(RestClient.BaseUrl.AbsoluteUri.Replace("v3.0", "connect/token")),
                 Method.POST);
             request.AddParameter("application/x-www-form-urlencoded", postData, ParameterType.RequestBody);
-            var responce = RestClient.Execute(request);
-            var result = (GetAccessTokenResult)Deserialize(responce, typeof(GetAccessTokenResult));
-            _accessToken = result.AccessToken;
+            var response = RestClient.Execute(request);
+            HandleTokenResponse(response);
         }
-        
+
         private async System.Threading.Tasks.Task RequestTokenAsync()
         {
             var postData = "grant_type=client_credentials";
@@ -116,11 +115,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
                 new Uri(RestClient.BaseUrl.AbsoluteUri.Replace("v3.0", "connect/token")),
                 Method.POST);
             request.AddParameter("application/x-www-form-urlencoded", postData, ParameterType.RequestBody);
-            var responce = await RestClient.ExecuteTaskAsync(request);
-            var result = (GetAccessTokenResult)Deserialize(responce, typeof(GetAccessTokenResult));
-            _accessToken = result.AccessToken;
+            var response = await RestClient.ExecuteTaskAsync(request);
+            HandleTokenResponse(response);
         }
-        
+
+        private void HandleTokenResponse(IRestResponse response)
+        {
+            try
+            {
+                var result = (GetAccessTokenResult)JsonConvert.DeserializeObject(response.Content, typeof(GetAccessTokenResult), serializerSettings);
+                if (string.IsNullOrEmpty(result.AccessToken) || string.IsNullOrEmpty(result.AccessToken.Trim()))
+                {
+                    throw new ApiException((int)response.StatusCode, $"empty token ({response.Content})");
+                }
+
+                _accessToken = result.AccessToken;
+            }
+            catch (JsonSerializationException)
+            {
+                if (response.Content != null && !string.IsNullOrEmpty(response.Content.Trim(' ', '"')))
+                {
+                    throw new ApiException((int)response.StatusCode, response.Content);
+                }
+                else
+                {
+                    throw new ApiException((int)response.StatusCode, $"empty token ({response.Content})");
+                }
+            }
+        }
+
         /// <summary>
         /// Allows for extending response processing for <see cref="ApiClient"/> generated code.
         /// </summary>
@@ -218,7 +241,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
             // add custom header
             request.AddHeader(AsposeClientHeaderName, ".net sdk");
-            request.AddHeader(AsposeClientVersionHeaderName, "24.7.0");
+            request.AddHeader(AsposeClientVersionHeaderName, "24.8.0");
 
             // add header parameter, if any
             foreach(var param in headerParams)

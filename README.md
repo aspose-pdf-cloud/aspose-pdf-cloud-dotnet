@@ -29,12 +29,10 @@ XLS, XLSX, PPTX, DOC, DOCX, MobiXML, JPEG, EMF, PNG, BMP, GIF, TIFF, Text
 ## Read PDF Formats
 MHT, PCL, PS, XSLFO, MD
 
-## Enhancements in Version 24.7
+## Enhancements in Version 24.8
+- Adding Text stamps to multiple pages.
+- Adding Image stamps to multiple pages.
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
-
-## Bugs fixed in Version 24.7
-- PutPsInStorageToPdf throws: Cannot find resource ???Aspose.PDF.dependencies.ZapfDingbats.ttf.
-- Ocr method is not working.
 
 ## Unit Tests
 Aspose PDF SDK includes a suite of unit tests. These Unit Tests also serves as examples of how to use the Aspose PDF SDK.
