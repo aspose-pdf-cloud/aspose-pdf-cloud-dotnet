@@ -130,6 +130,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\DocRecognitionMode.cs" />
     <Compile Include="Model\Document.cs" />
     <Compile Include="Model\DocumentConfig.cs" />
+    <Compile Include="Model\DocumentLayers.cs" />
     <Compile Include="Model\DocumentPageResponse.cs" />
     <Compile Include="Model\DocumentPagesResponse.cs" />
     <Compile Include="Model\DocumentPrivilege.cs" />
@@ -190,6 +191,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\InkAnnotations.cs" />
     <Compile Include="Model\InkAnnotationsResponse.cs" />
     <Compile Include="Model\Justification.cs" />
+    <Compile Include="Model\LayerInfo.cs" />
     <Compile Include="Model\LettersPositioningMethods.cs" />
     <Compile Include="Model\LineAnnotation.cs" />
     <Compile Include="Model\LineAnnotationResponse.cs" />
