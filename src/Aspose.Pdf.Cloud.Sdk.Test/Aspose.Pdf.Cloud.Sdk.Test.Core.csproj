@@ -52,6 +52,7 @@
     <Compile Include="ImagesTests.cs" />
     <Compile Include="ImportExportTests.cs" />
     <Compile Include="InkAnnotationsTests.cs" />
+    <Compile Include="LayersTests.cs" />
     <Compile Include="LineAnnotationsTests.cs" />
     <Compile Include="LinkAnnotationsTests.cs" />
     <Compile Include="MergeTests.cs" />
