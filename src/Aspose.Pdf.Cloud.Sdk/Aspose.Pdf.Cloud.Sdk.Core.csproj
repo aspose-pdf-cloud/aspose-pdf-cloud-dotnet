@@ -37,6 +37,7 @@
     <Compile Include="Client\ExceptionFactory.cs" />
     <Compile Include="Client\IApiAccessor.cs" />
     <Compile Include="Client\SwaggerDateConverter.cs" />
+    <Compile Include="Extensions/ListExtensions.cs" />
     <Compile Include="Model\Annotation.cs" />
     <Compile Include="Model\AnnotationFlags.cs" />
     <Compile Include="Model\AnnotationInfo.cs" />
