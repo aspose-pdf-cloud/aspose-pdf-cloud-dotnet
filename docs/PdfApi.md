@@ -1,4 +1,4 @@
-# Aspose.Pdf.Cloud.Sdk.Api.PdfApi
+﻿# Aspose.Pdf.Cloud.Sdk.Api.PdfApi
 
 All URIs are relative to *https://api.aspose.cloud/v3.0*
 
