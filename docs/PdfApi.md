@@ -189,6 +189,8 @@ Method | HTTP request | Description
 [**GetWordsPerPage**](PdfApi.md#getwordsperpage) | **GET** /pdf/\{name}/pages/wordCount | Get number of words per document page.
 [**GetXfaPdfInStorageToAcroForm**](PdfApi.md#getxfapdfinstoragetoacroform) | **GET** /pdf/\{name}/convert/xfatoacroform | Converts PDF document which contains XFA form (located on storage) to PDF with AcroForm and returns resulting file response content
 [**GetXmlInStorageToPdf**](PdfApi.md#getxmlinstoragetopdf) | **GET** /pdf/create/xml | Convert XML file (located on storage) to PDF format and return resulting file in response. 
+[**GetXmpMetadataJson**](PdfApi.md#getxmpmetadatajson) | **GET** /pdf/\{name}/xmpmetadata/json | Gets document XMP Metadata as JSON.
+[**GetXmpMetadataXml**](PdfApi.md#getxmpmetadataxml) | **GET** /pdf/\{name}/xmpmetadata/xml | Gets document XMP Metadata as XML file.
 [**GetXpsInStorageToPdf**](PdfApi.md#getxpsinstoragetopdf) | **GET** /pdf/create/xps | Convert XPS file (located on storage) to PDF format and return resulting file in response. 
 [**GetXslFoInStorageToPdf**](PdfApi.md#getxslfoinstoragetopdf) | **GET** /pdf/create/xslfo | Convert XslFo file (located on storage) to PDF format and return resulting file in response. 
 [**MoveFile**](PdfApi.md#movefile) | **PUT** /pdf/storage/file/move/\{srcPath} | Move file
@@ -258,6 +260,7 @@ Method | HTTP request | Description
 [**PostSplitDocument**](PdfApi.md#postsplitdocument) | **POST** /pdf/\{name}/split | Split document to parts.
 [**PostSplitRangePdfDocument**](PdfApi.md#postsplitrangepdfdocument) | **POST** /pdf/\{name}/splitrangepdf | Split document into ranges.
 [**PostTextBoxFields**](PdfApi.md#posttextboxfields) | **POST** /pdf/\{name}/fields/textbox | Add document text box fields.
+[**PostXmpMetadata**](PdfApi.md#postxmpmetadata) | **POST** /pdf/\{name}/xmpmetadata | Add or remove XMP Metadata properties.
 [**PutAddNewPage**](PdfApi.md#putaddnewpage) | **PUT** /pdf/\{name}/pages | Add new page to end of the document.
 [**PutAddText**](PdfApi.md#putaddtext) | **PUT** /pdf/\{name}/pages/\{pageNumber}/text | Add text to PDF document page.
 [**PutAnnotationsFlatten**](PdfApi.md#putannotationsflatten) | **PUT** /pdf/\{name}/annotations/flatten | Flattens the annotations of the specified types
@@ -5429,6 +5432,60 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="getxmpmetadatajson"></a>
+# **GetXmpMetadataJson**
+> XmpMetadata GetXmpMetadataJson (string name, string folder = null, string storage = null, string passBase64 = null)
+
+Gets document XMP Metadata as JSON.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **folder** | **string**| The document folder. | [optional] 
+ **storage** | **string**| The document storage. | [optional] 
+ **passBase64** | **string**| The password (Base64). | [optional] 
+
+### Return type
+
+[**XmpMetadata**](XmpMetadata.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getxmpmetadataxml"></a>
+# **GetXmpMetadataXml**
+> System.IO.Stream GetXmpMetadataXml (string name, string folder = null, string storage = null, string passBase64 = null)
+
+Gets document XMP Metadata as XML file.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **folder** | **string**| The document folder. | [optional] 
+ **storage** | **string**| The document storage. | [optional] 
+ **passBase64** | **string**| The password (Base64). | [optional] 
+
+### Return type
+
+**System.IO.Stream**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="getxpsinstoragetopdf"></a>
 # **GetXpsInStorageToPdf**
 > System.IO.Stream GetXpsInStorageToPdf (string srcPath, string storage = null)
@@ -7351,6 +7408,34 @@ Name | Type | Description  | Notes
  **fields** | [**List&lt;TextBoxField&gt;**](TextBoxField.md)| The array of field. | 
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postxmpmetadata"></a>
+# **PostXmpMetadata**
+> AsposeResponse PostXmpMetadata (string name, XmpMetadata metadata, string folder = null, string storage = null, string passBase64 = null)
+
+Add or remove XMP Metadata properties.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **metadata** | [**XmpMetadata**](XmpMetadata.md)| XmpMetadata instance. | 
+ **folder** | **string**| The document folder. | [optional] 
+ **storage** | **string**| The document storage. | [optional] 
+ **passBase64** | **string**| The password (Base64). | [optional] 
 
 ### Return type
 

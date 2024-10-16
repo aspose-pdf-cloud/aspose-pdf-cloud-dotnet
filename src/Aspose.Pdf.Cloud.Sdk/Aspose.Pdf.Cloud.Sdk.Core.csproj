@@ -37,6 +37,7 @@
     <Compile Include="Client\ExceptionFactory.cs" />
     <Compile Include="Client\IApiAccessor.cs" />
     <Compile Include="Client\SwaggerDateConverter.cs" />
+    <Compile Include="Extensions/ListExtensions.cs" />
     <Compile Include="Model\Annotation.cs" />
     <Compile Include="Model\AnnotationFlags.cs" />
     <Compile Include="Model\AnnotationInfo.cs" />
@@ -324,6 +325,8 @@
     <Compile Include="Model\WordCount.cs" />
     <Compile Include="Model\WordCountResponse.cs" />
     <Compile Include="Model\WrapMode.cs" />
+    <Compile Include="Model\XmpMetadata.cs" />
+    <Compile Include="Model\XmpMetadataProperty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
 

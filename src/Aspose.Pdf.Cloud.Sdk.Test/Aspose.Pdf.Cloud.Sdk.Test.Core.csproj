@@ -80,6 +80,7 @@
     <Compile Include="SignTests.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="UnderlineAnnotationsTests.cs" />
+    <Compile Include="XmpMetadataTests.cs" />
     <Compile Include="StorageTests.cs" />
   </ItemGroup>
 
