@@ -58,7 +58,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Enum Flow for "Flow"
         /// </summary>
         [EnumMember(Value = "Flow")]
-        Flow
+        Flow,
+        
+        /// <summary>
+        /// Enum EnhancedFlow for "EnhancedFlow"
+        /// </summary>
+        [EnumMember(Value = "EnhancedFlow")]
+        EnhancedFlow
     }
 
 }
