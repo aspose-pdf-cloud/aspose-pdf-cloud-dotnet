@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -288,6 +288,7 @@
     <Compile Include="Model\StrikeOutAnnotationResponse.cs" />
     <Compile Include="Model\StrikeOutAnnotations.cs" />
     <Compile Include="Model\StrikeOutAnnotationsResponse.cs" />
+    <Compile Include="Model\SvgImages.cs" />
     <Compile Include="Model\Table.cs" />
     <Compile Include="Model\TableBroken.cs" />
     <Compile Include="Model\TableRecognized.cs" />

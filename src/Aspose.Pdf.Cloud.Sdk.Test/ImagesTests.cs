@@ -276,5 +276,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.GetImageExtractAsPng(Name, ImageId, folder: TempFolder);
             Assert.That(response.Length, Is.GreaterThan(0));
         }
+
+        /// <summary>
+        /// Test GetImageExtractAsSvg
+        /// </summary>
+        [Test]
+        public void GetImageExtractAsSvgTest()
+        {
+            const string FileName = "Alfa.pdf";
+
+            UploadFile(FileName, FileName);
+
+            var response = PdfApi.GetImagesExtractSvg(FileName, 1, folder: TempFolder);
+            Assert.That(response.List.Count, Is.GreaterThan(0));
+        }
     }
 }
