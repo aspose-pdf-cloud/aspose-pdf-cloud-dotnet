@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="Configuration.cs">
-//   Copyright (c) 2024 Aspose.PDF Cloud
+//   Copyright (c) 2025 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //   Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -225,7 +225,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: 3.0\n";
-            report += "    SDK Package Version: 24.12.0\n";
+            report += "    SDK Package Version: 25.1.0\n";
 
             return report;
         }

@@ -1,6 +1,6 @@
 // --------------------------------------------------------------------------------------------------------------------
 // <copyright company="Aspose" file="ApiClient.cs">
-//   Copyright (c) 2024 Aspose.PDF Cloud
+//   Copyright (c) 2025 Aspose.PDF Cloud
 // </copyright>
 // <summary>
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -241,7 +241,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
             // add custom header
             request.AddHeader(AsposeClientHeaderName, ".net sdk");
-            request.AddHeader(AsposeClientVersionHeaderName, "24.12.0");
+            request.AddHeader(AsposeClientVersionHeaderName, "25.1.0");
 
             // add header parameter, if any
             foreach(var param in headerParams)
