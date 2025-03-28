@@ -35,8 +35,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Test {
   public abstract class TestsBase {
 
     private const string BaseProductUri = @"https://api.aspose.cloud";
-    protected const string TestDataFolder = @"..\..\..\..\testData";
-    private const string ServerCredsFile = @"Settings\servercreds.json";
+    protected const string TestDataFolder = @"../../../../../testData";
+    private const string ServerCredsFile = @"Settings/servercreds.json";
     protected const string TempFolder = "TempPdfCloud";
 
     private class Creds {

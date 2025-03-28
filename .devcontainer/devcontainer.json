@@ -1,0 +1,19 @@
+{
+	"name": "C# (.NET)",
+	"image": "mcr.microsoft.com/devcontainers/dotnet:6.0-bookworm",
+	"workspaceFolder": "/SDKs/NET",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/SDKs/NET,type=bind,consistency=cached",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"dotnet.defaultSolution": "Aspose.Pdf.Cloud.Sdk.Core.sln"
+			},
+			"extensions": [
+				"ms-dotnettools.csdevkit"
+			]
+		}
+	},
+	"mounts": [
+		"source=${localWorkspaceFolder}/../../Settings,target=/Settings,type=bind,consistency=cached"
+	]
+}

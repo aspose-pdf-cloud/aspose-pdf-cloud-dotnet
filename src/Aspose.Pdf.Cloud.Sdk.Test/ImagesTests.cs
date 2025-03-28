@@ -283,7 +283,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         [Test]
         public void GetImageExtractAsSvgTest()
         {
-            const string FileName = "Alfa.pdf";
+            const string FileName = "alfa.pdf";
 
             UploadFile(FileName, FileName);
 
