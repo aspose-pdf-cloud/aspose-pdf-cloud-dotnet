@@ -209,11 +209,13 @@ Method | HTTP request | Description
 [**PostDocumentImageFooter**](PdfApi.md#postdocumentimagefooter) | **POST** /pdf/\{name}/footer/image | Add document image footer.
 [**PostDocumentImageHeader**](PdfApi.md#postdocumentimageheader) | **POST** /pdf/\{name}/header/image | Add document image header.
 [**PostDocumentImageStamps**](PdfApi.md#postdocumentimagestamps) | **POST** /pdf/\{name}/stamps/image | Add document pages image stamps.
+[**PostDocumentImageStampsPageSpecified**](PdfApi.md#postdocumentimagestampspagespecified) | **POST** /pdf/\{name}/stamps/image/pagespecified | Add document image stamps to specified pages.
 [**PostDocumentPageNumberStamps**](PdfApi.md#postdocumentpagenumberstamps) | **POST** /pdf/\{name}/stamps/pagenumber | Add document page number stamps.
 [**PostDocumentTextFooter**](PdfApi.md#postdocumenttextfooter) | **POST** /pdf/\{name}/footer/text | Add document text footer.
 [**PostDocumentTextHeader**](PdfApi.md#postdocumenttextheader) | **POST** /pdf/\{name}/header/text | Add document text header.
 [**PostDocumentTextReplace**](PdfApi.md#postdocumenttextreplace) | **POST** /pdf/\{name}/text/replace | Document&#39;s replace text method.
 [**PostDocumentTextStamps**](PdfApi.md#postdocumenttextstamps) | **POST** /pdf/\{name}/stamps/text | Add document pages text stamps.
+[**PostDocumentTextStampsPageSpecified**](PdfApi.md#postdocumenttextstampspagespecified) | **POST** /pdf/\{name}/stamps/text/pagespecified | Add document text stamps to specified pages.
 [**PostEncryptDocumentInStorage**](PdfApi.md#postencryptdocumentinstorage) | **POST** /pdf/\{name}/encrypt | Encrypt document in storage.
 [**PostFlattenDocument**](PdfApi.md#postflattendocument) | **POST** /pdf/\{name}/flatten | Flatten the document.
 [**PostHtmlToPdf**](PdfApi.md#posthtmltopdf) | **POST** /pdf/create/html | Convert HTML file (zip archive in request content) to PDF format and return resulting file in response. 
@@ -5982,6 +5984,34 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="postdocumentimagestampspagespecified"></a>
+# **PostDocumentImageStampsPageSpecified**
+> AsposeResponse PostDocumentImageStampsPageSpecified (string name, List<ImageStampPageSpecified> stamps, string storage = null, string folder = null, string password = null)
+
+Add document image stamps to specified pages.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **stamps** | [**List&lt;ImageStampPageSpecified&gt;**](ImageStampPageSpecified.md)| The array of stamps. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+ **password** | **string**| Base64 encoded password. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="postdocumentpagenumberstamps"></a>
 # **PostDocumentPageNumberStamps**
 > AsposeResponse PostDocumentPageNumberStamps (string name, PageNumberStamp stamp, int? startPageNumber = null, int? endPageNumber = null, string storage = null, string folder = null, string password = null)
@@ -6110,6 +6140,34 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The document name. | 
  **stamps** | [**List&lt;TextStamp&gt;**](TextStamp.md)| The array of stamp. | 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+ **password** | **string**| Base64 encoded password. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postdocumenttextstampspagespecified"></a>
+# **PostDocumentTextStampsPageSpecified**
+> AsposeResponse PostDocumentTextStampsPageSpecified (string name, List<TextStampPageSpecified> stamps, string storage = null, string folder = null, string password = null)
+
+Add document text stamps to specified pages.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **stamps** | [**List&lt;TextStampPageSpecified&gt;**](TextStampPageSpecified.md)| The array of stamps. | 
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **password** | **string**| Base64 encoded password. | [optional] 
