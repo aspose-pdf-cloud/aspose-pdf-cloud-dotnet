@@ -185,6 +185,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\ImageSrcType.cs" />
     <Compile Include="Model\ImagesResponse.cs" />
     <Compile Include="Model\ImageStamp.cs" />
+    <Compile Include="Model\ImageStampPageSpecified.cs" />
     <Compile Include="Model\ImageTemplate.cs" />
     <Compile Include="Model\ImageTemplatesRequest.cs" />
     <Compile Include="Model\InkAnnotation.cs" />
@@ -345,6 +346,7 @@ OpenAPI spec version: 1.1
     <Compile Include="Model\TextReplaceListRequest.cs" />
     <Compile Include="Model\TextReplaceResponse.cs" />
     <Compile Include="Model\TextStamp.cs" />
+    <Compile Include="Model\TextStampPageSpecified.cs" />
     <Compile Include="Model\TextState.cs" />
     <Compile Include="Model\TextStyle.cs" />
     <Compile Include="Model\TimestampSettings.cs" />

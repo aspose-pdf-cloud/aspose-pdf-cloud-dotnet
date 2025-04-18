@@ -153,6 +153,59 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
         }
 
         /// <summary>
+        /// Test PostDocumentTextStampsPageSpecified
+        /// </summary>
+        [Test]
+        public void PostDocumentTextStampsPageSpecifiedTest()
+        {
+            List<TextStampPageSpecified> stamps = new List<TextStampPageSpecified>
+            {
+                new TextStampPageSpecified(PageNumber: 2)
+                {
+                    Background = true,
+                    LeftMargin = 1,
+                    RightMargin = 2,
+                    TopMargin = 3,
+                    BottomMargin = 4,
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center,
+                    Opacity = 1,
+                    Rotate = Rotation.None,
+                    RotateAngle = 0,
+                    XIndent = 0,
+                    YIndent = 0,
+                    Zoom = 1,
+                    TextAlignment = HorizontalAlignment.Center,
+                    Value = "Text Stamp 1",
+                    TextState = new TextState(FontSize: 14D, Font: "Arial")
+                },
+                new TextStampPageSpecified(PageNumber: 4)
+                {
+                    PageNumber = 4,
+                    Background = true,
+                    LeftMargin = 1,
+                    RightMargin = 2,
+                    TopMargin = 3,
+                    BottomMargin = 4,
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center,
+                    Opacity = 1,
+                    Rotate = Rotation.None,
+                    RotateAngle = 0,
+                    XIndent = 0,
+                    YIndent = 0,
+                    Zoom = 1,
+                    TextAlignment = HorizontalAlignment.Center,
+                    Value = "Text Stamp 2",
+                    TextState = new TextState(FontSize: 14D, Font: "Arial")
+                }
+            };
+
+            var response = PdfApi.PostDocumentTextStampsPageSpecified(Name, stamps, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
         /// Test PostPageImageStamps
         /// </summary>
         [Test]
@@ -215,6 +268,58 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             };
 
             var response = PdfApi.PostDocumentImageStamps(Name, stamps, folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
+        /// <summary>
+        /// Test PostDocumentImageStampsPageSpecified
+        /// </summary>
+        [Test]
+        public void PostDocumentImageStampsPageSpecifiedTest()
+        {
+            string imageFileName = "Koala.jpg";
+            UploadFile(imageFileName, imageFileName);
+            List<ImageStampPageSpecified> stamps = new List<ImageStampPageSpecified>
+            {
+                new ImageStampPageSpecified(PageNumber: 2)
+                {
+                    PageNumber = 2,
+                    Background = true,
+                    LeftMargin = 1,
+                    RightMargin = 2,
+                    TopMargin = 3,
+                    BottomMargin = 4,
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center,
+                    Opacity = 1,
+                    Rotate = Rotation.None,
+                    RotateAngle = 0,
+                    XIndent = 0,
+                    YIndent = 0,
+                    Zoom = 1,
+                    FileName = Path.Combine(TempFolder, imageFileName)
+                },
+                new ImageStampPageSpecified(PageNumber: 4)
+                {
+                    PageNumber = 4,
+                    Background = true,
+                    LeftMargin = 1,
+                    RightMargin = 2,
+                    TopMargin = 3,
+                    BottomMargin = 4,
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center,
+                    Opacity = 1,
+                    Rotate = Rotation.None,
+                    RotateAngle = 0,
+                    XIndent = 0,
+                    YIndent = 0,
+                    Zoom = 1,
+                    FileName = Path.Combine(TempFolder, imageFileName)
+                }
+            };
+
+            var response = PdfApi.PostDocumentImageStampsPageSpecified(Name, stamps, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
