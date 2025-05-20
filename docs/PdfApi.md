@@ -203,6 +203,7 @@ Method | HTTP request | Description
 [**PostChangePasswordDocumentInStorage**](PdfApi.md#postchangepassworddocumentinstorage) | **POST** /pdf/\{name}/changepassword | Change document password in storage.
 [**PostCheckBoxFields**](PdfApi.md#postcheckboxfields) | **POST** /pdf/\{name}/fields/checkbox | Add document checkbox fields.
 [**PostComboBoxFields**](PdfApi.md#postcomboboxfields) | **POST** /pdf/\{name}/fields/combobox | Add document combobox fields.
+[**PostComparePdf**](PdfApi.md#postcomparepdf) | **POST** /pdf/compare | Compare two PDF documents.
 [**PostCreateDocument**](PdfApi.md#postcreatedocument) | **POST** /pdf/\{name} | Create empty document.
 [**PostCreateField**](PdfApi.md#postcreatefield) | **POST** /pdf/\{name}/fields | Create field.
 [**PostDecryptDocumentInStorage**](PdfApi.md#postdecryptdocumentinstorage) | **POST** /pdf/\{name}/decrypt | Decrypt document in storage.
@@ -3055,7 +3056,7 @@ Name | Type | Description  | Notes
 
 <a name="getmhtinstoragetopdf"></a>
 # **GetMhtInStorageToPdf**
-> System.IO.Stream GetMhtInStorageToPdf (string srcPath, string storage = null)
+> System.IO.Stream GetMhtInStorageToPdf (string srcPath, double? height, double? width, double? marginLeft, double? marginBottom, double? marginRight, double? marginTop, string storage = null)
 
 Convert MHT file (located on storage) to PDF format and return resulting file in response. 
 
@@ -3065,6 +3066,12 @@ Convert MHT file (located on storage) to PDF format and return resulting file in
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **srcPath** | **string**| Full source filename (ex. /folder1/folder2/template.mht) | 
+ **height** | **double?**| Page height | 
+ **width** | **double?**| Page width | 
+ **marginLeft** | **double?**| Page margin left | 
+ **marginBottom** | **double?**| Page margin bottom | 
+ **marginRight** | **double?**| Page margin right | 
+ **marginTop** | **double?**| Page margin top | 
  **storage** | **string**| The document storage. | [optional] 
 
 ### Return type
@@ -5804,6 +5811,33 @@ Name | Type | Description  | Notes
  **fields** | [**List&lt;ComboBoxField&gt;**](ComboBoxField.md)| The array of field. | 
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postcomparepdf"></a>
+# **PostComparePdf**
+> AsposeResponse PostComparePdf (string path1, string path2, string outPath, string storage = null)
+
+Compare two PDF documents.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **path1** | **string**| Path to first PDF document. | 
+ **path2** | **string**| Path to second PDF document. | 
+ **outPath** | **string**| Full filename of the resulting document. | 
+ **storage** | **string**| The documents storage. | [optional] 
 
 ### Return type
 
@@ -8726,7 +8760,7 @@ Name | Type | Description  | Notes
 
 <a name="putmhtinstoragetopdf"></a>
 # **PutMhtInStorageToPdf**
-> AsposeResponse PutMhtInStorageToPdf (string name, string srcPath, string dstFolder = null, string storage = null)
+> AsposeResponse PutMhtInStorageToPdf (string name, string srcPath, double? height, double? width, double? marginLeft, double? marginBottom, double? marginRight, double? marginTop, string dstFolder = null, string storage = null)
 
 Convert MHT file (located on storage) to PDF format and upload resulting file to storage. 
 
@@ -8737,6 +8771,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The document name. | 
  **srcPath** | **string**| Full source filename (ex. /folder1/folder2/template.mht) | 
+ **height** | **double?**| Page height | 
+ **width** | **double?**| Page width | 
+ **marginLeft** | **double?**| Page margin left | 
+ **marginBottom** | **double?**| Page margin bottom | 
+ **marginRight** | **double?**| Page margin right | 
+ **marginTop** | **double?**| Page margin top | 
  **dstFolder** | **string**| The destination document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
 
