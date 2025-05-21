@@ -3056,7 +3056,7 @@ Name | Type | Description  | Notes
 
 <a name="getmhtinstoragetopdf"></a>
 # **GetMhtInStorageToPdf**
-> System.IO.Stream GetMhtInStorageToPdf (string srcPath, double? height, double? width, double? marginLeft, double? marginBottom, double? marginRight, double? marginTop, string storage = null)
+> System.IO.Stream GetMhtInStorageToPdf (string srcPath, double? height = null, double? width = null, double? marginLeft = null, double? marginBottom = null, double? marginRight = null, double? marginTop = null, string storage = null)
 
 Convert MHT file (located on storage) to PDF format and return resulting file in response. 
 
@@ -3066,12 +3066,12 @@ Convert MHT file (located on storage) to PDF format and return resulting file in
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **srcPath** | **string**| Full source filename (ex. /folder1/folder2/template.mht) | 
- **height** | **double?**| Page height | 
- **width** | **double?**| Page width | 
- **marginLeft** | **double?**| Page margin left | 
- **marginBottom** | **double?**| Page margin bottom | 
- **marginRight** | **double?**| Page margin right | 
- **marginTop** | **double?**| Page margin top | 
+ **height** | **double?**| Page height | [optional] 
+ **width** | **double?**| Page width | [optional] 
+ **marginLeft** | **double?**| Page margin left | [optional] 
+ **marginBottom** | **double?**| Page margin bottom | [optional] 
+ **marginRight** | **double?**| Page margin right | [optional] 
+ **marginTop** | **double?**| Page margin top | [optional] 
  **storage** | **string**| The document storage. | [optional] 
 
 ### Return type
@@ -8760,7 +8760,7 @@ Name | Type | Description  | Notes
 
 <a name="putmhtinstoragetopdf"></a>
 # **PutMhtInStorageToPdf**
-> AsposeResponse PutMhtInStorageToPdf (string name, string srcPath, double? height, double? width, double? marginLeft, double? marginBottom, double? marginRight, double? marginTop, string dstFolder = null, string storage = null)
+> AsposeResponse PutMhtInStorageToPdf (string name, string srcPath, double? height = null, double? width = null, double? marginLeft = null, double? marginBottom = null, double? marginRight = null, double? marginTop = null, string dstFolder = null, string storage = null)
 
 Convert MHT file (located on storage) to PDF format and upload resulting file to storage. 
 
@@ -8771,12 +8771,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**| The document name. | 
  **srcPath** | **string**| Full source filename (ex. /folder1/folder2/template.mht) | 
- **height** | **double?**| Page height | 
- **width** | **double?**| Page width | 
- **marginLeft** | **double?**| Page margin left | 
- **marginBottom** | **double?**| Page margin bottom | 
- **marginRight** | **double?**| Page margin right | 
- **marginTop** | **double?**| Page margin top | 
+ **height** | **double?**| Page height | [optional] 
+ **width** | **double?**| Page width | [optional] 
+ **marginLeft** | **double?**| Page margin left | [optional] 
+ **marginBottom** | **double?**| Page margin bottom | [optional] 
+ **marginRight** | **double?**| Page margin right | [optional] 
+ **marginTop** | **double?**| Page margin top | [optional] 
  **dstFolder** | **string**| The destination document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
 

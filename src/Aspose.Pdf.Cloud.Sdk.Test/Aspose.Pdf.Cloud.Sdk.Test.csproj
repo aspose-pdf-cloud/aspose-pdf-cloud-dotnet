@@ -82,6 +82,7 @@ OpenAPI spec version: 1.1
     <Compile Include="LinkAnnotationsTests.cs" />
     <Compile Include="MergeTests.cs" />
     <Compile Include="MovieAnnotationsTests.cs" />
+    <Compile Include="OrganizeTests.cs" />
     <Compile Include="PageConvertToImageTests.cs" />
     <Compile Include="PolygonAnnotationsTests.cs" />
     <Compile Include="PolyLineAnnotationsTests.cs" />

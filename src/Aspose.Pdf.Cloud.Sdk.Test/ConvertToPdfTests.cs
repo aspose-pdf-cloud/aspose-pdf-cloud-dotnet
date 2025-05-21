@@ -133,7 +133,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             string name = "MhtExample.mht";
             UploadFile(name, name);
 
-            using (var response = PdfApi.GetMhtInStorageToPdf(Path.Combine(TempFolder, name)))
+            using (var response = PdfApi.GetMhtInStorageToPdf(Path.Combine(TempFolder, name), null, null, null, null, null, null))
             {
                 Assert.That(response.Length, Is.GreaterThan(0));
             }
@@ -149,7 +149,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(name, name);
             string resultName = "fromMht.pdf";
 
-            var response = PdfApi.PutMhtInStorageToPdf(resultName, Path.Combine(TempFolder, name), TempFolder);
+            var response = PdfApi.PutMhtInStorageToPdf(resultName, Path.Combine(TempFolder, name), null, null, null, null, null, null, TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
