@@ -25,6 +25,7 @@
 
 using System;
 using System.IO;
+using System.Net;
 using Aspose.Pdf.Cloud.Sdk.Api;
 using Aspose.Pdf.Cloud.Sdk.Client;
 using Newtonsoft.Json;
@@ -35,9 +36,28 @@ namespace Aspose.Pdf.Cloud.Sdk.Test {
   public abstract class TestsBase {
 
     private const string BaseProductUri = @"https://api.aspose.cloud";
-    protected const string TestDataFolder = @"../../../../../testData";
     private const string ServerCredsFile = @"Settings/servercreds.json";
     protected const string TempFolder = "TempPdfCloud";
+    
+    protected string TestDataFolder
+    {
+        get
+        {
+            string path = Directory.GetCurrentDirectory();
+            while(Directory.GetParent(path) != null)
+            {
+                string testdataPath = Path.Combine(path, "testData");
+                if (Directory.Exists(testdataPath))
+                {
+                    return testdataPath;
+                }
+
+                path = Directory.GetParent(path).FullName;
+            }
+
+            throw new DirectoryNotFoundException();
+        }
+    }
 
     private class Creds {
       public string AppSID { get; set; }
@@ -66,6 +86,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test {
 
     [SetUp]
     public virtual void SetUp() {
+      ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
       Console.WriteLine(TestContext.CurrentContext.Test.Name);
       // To run tests with your own credentials please uncomment following line of code
       // this._creds = new Creds { AppKey = "your app key", AppSID = "your app sid" };
