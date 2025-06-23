@@ -114,10 +114,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             const string name = "PdfWithImages.pdf";
             UploadFile(name, name);            
             const string imageName = "butterfly.jpg";
-            UploadFile(imageName, imageName);            
+            UploadFile(imageName, imageName);
+
+            var imagesResponse1 = PdfApi.GetImages(name, pageNumber: 1, folder: TempFolder);
+            Assert.That(imagesResponse1.Code, Is.EqualTo(200));
+            var imageId1 = imagesResponse1.Images.List[0].Id;
+
+            var imagesResponse2 = PdfApi.GetImages(name, pageNumber: 16, folder: TempFolder);
+            Assert.That(imagesResponse2.Code, Is.EqualTo(200));
+            var imageId2 = imagesResponse2.Images.List[0].Id;
+
             var response = PdfApi.PutReplaceMultipleImage(
                 name: name,
-                imageIds: new List<string>{"GE5TENJVGQZTWMJYGQWDINRUFQ2DCMRMGY4TC", "GE5TIMJSGY3TWMJXG4WDIMBZFQ2DCOJMGQ3DK"},
+                imageIds: new List<string>{imageId1, imageId2},
                 imageFilePath: Path.Combine(TempFolder, imageName),
                 folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));

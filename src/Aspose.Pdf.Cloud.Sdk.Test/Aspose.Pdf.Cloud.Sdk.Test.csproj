@@ -2,8 +2,9 @@
   <PropertyGroup>
     <TargetFrameworks>net452;net8.0</TargetFrameworks>
     <OutputType>Library</OutputType>
-	<AssemblyName>Aspose.Pdf.Cloud.Sdk.Test</AssemblyName>
-	<RootNamespace>Aspose.Pdf.Cloud.Sdk.Test</RootNamespace>
+	  <AssemblyName>Aspose.Pdf.Cloud.Sdk.Test</AssemblyName>
+	  <RootNamespace>Aspose.Pdf.Cloud.Sdk.Test</RootNamespace>
+    <OutDir>bin\$(Configuration)\$(TargetFramework)</OutDir>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aspose.Pdf.Cloud.Sdk\Aspose.Pdf.Cloud.Sdk.csproj" />
