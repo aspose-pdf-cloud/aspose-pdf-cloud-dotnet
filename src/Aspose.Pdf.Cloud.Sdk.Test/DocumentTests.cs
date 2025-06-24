@@ -259,5 +259,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             );
             Assert.That(response.Code, Is.EqualTo(200));
         }
+
+        /// <summary>
+        /// Test PostDocumentPagesRotate
+        /// </summary>
+        [Test]
+
+        public void PostDocumentPagesRotateTest()
+        {
+            const string name1 = "4pages.pdf";
+            UploadFile(name1, name1);
+
+            var response = PdfApi.PostDocumentPagesRotate(name1, Rotation.On90.ToString(), "2-3", folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
     }
 }
