@@ -6,7 +6,7 @@ namespace ChangeLayout
 {
     public class ConfigParams
     {
-        public string CrdentialPath { get; } = "c:\\Projects\\ASPOSE\\Pdf.Cloud\\Credentials\\credentials.json ";
+        public string CrdentialPath { get; } = "..\\credentials.json ";
         public string LOCAL_FOLDER { get; } = "C:\\Samples";
         public string REMOTE_TEMP_FOLDER { get; } = "TempPdfCloud";
         public string PDF_DOCUMENT { get; } = "sample.pdf";
