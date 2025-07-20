@@ -12,8 +12,8 @@ namespace CreateDocument
             string PDF_DOCUMENT = "output_created_simple.pdf";
             string REMOTE_FOLDER = "TempPdfCloud";
 
-            string AppSID = "5ad16ee3-abef-40da-912e-0d5cf0beaabc";
-            string AppKey = "bc529468758ebc938e4c29a1569a6bd2";
+            string AppSID = "******************";
+            string AppKey = "******************";
 
             PdfApi pdfApi = new PdfApi(AppKey, AppSID);
 
