@@ -5,7 +5,7 @@ namespace CreateDocument
 {
     public class ConfigParams
     {
-        public string CrdentialPath { get; } = "c:\\Projects\\ASPOSE\\Pdf.Cloud\\Credentials\\credentials.json";
+        public string CrdentialPath { get; } = ".\\credentials.json";
         public string LOCAL_FOLDER { get; } = "C:\\Samples";
         public string TEMP_FOLDER { get; } = "TempPdfCloud";
         public string LOCAL_RESULT_DOCUMENT_NAME { get; } = "output_sample.pdf";
