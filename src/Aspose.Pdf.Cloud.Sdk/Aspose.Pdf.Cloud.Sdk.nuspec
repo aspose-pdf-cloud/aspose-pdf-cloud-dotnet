@@ -14,7 +14,7 @@
         <license type="file">license\LICENSE.txt</license>
         <icon>images\aspose_pdf-for-cloud.png</icon>
         <readme>README.md</readme>
-        <copyright>  Aspose Pty Ltd 2001-2025. All Rights Reserved.</copyright>
+        <copyright>� Aspose Pty Ltd 2001-2025. All Rights Reserved.</copyright>
         <repository type="git" url="https://github.com/aspose-pdf-cloud/aspose-pdf-cloud-dotnet.git" branch="master" />
         <tags>Aspose.PDF Aspose.PDF-Cloud Aspose.Total-Cloud Cloud REST API PDF EPUB HTML TEX MHT PCL PS PostScript SVG XML XPS XSLFO MD Markdown XLS XLSX PPTX DOC DOCX EPUB HTML MobiXML SVG JPEG EMF PNG BMP GIF TIFF XML XPS Text FDF XFDF PDFA3 PDF-to-DOC PDF-to-DOCX PDF-to-HTML PDF-to-PDFA PDF-to-TIFF PDF-to-SVG PDF-to-EPUB PDF-to-PPTX PDF-to-TEX PDF-to-MobiXML PDF-to-XFA PDF-to-XML PDF-to-XPS PDF-to-XLS EPUB-to-PDF Web-to-PDF TEX-to-PDF MHT-to-PDF HTML-to-PDF PS-to-PDF PostScript-to-PDF XSIF-to-PDF XPS-to-PDF SVG-to-PDF DOC-to-PDF DOCX-to-PDF PCL-to-PDF XML-to-PDF Markdown-to-PDF MD-to-PDF Annotation Line-Annotation Circle-Annotation Square-Annotation Underline-Annotation Squiggly-Annotation PDF-Bookmark PDF-Link PDF-Attachment PDF-Document PDF-Page PDF-Form-Fields PDF-Text PDF-Image Replace-Text Fetch-Text Replace-Image Extract-Image Convert-PDF Convert Converter PDF-to-Image Create-PDF Convert-PDF Stamp PDF-OCR OCR-Layers .NET C# dotnet CSharp</tags>
         <releaseNotes>- A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.</releaseNotes>
@@ -60,11 +60,11 @@ https://stackoverflow.com/questions/tagged/aspose.pdf</description>
         <file src="..\..\LICENSE.txt" target="license\" />
         <file src="aspose_pdf-for-cloud.png" target="images\" />
         <file src="..\..\README.md" target="" />
-        <file src="bin\Release\net452\Aspose.Pdf.Cloud.Sdk.dll" target="lib\net4.5" />
-        <file src="bin\Release\net452\Aspose.Pdf.Cloud.Sdk.pdb" target="lib\net4.5" />
-        <file src="bin\Release\net452\Aspose.Pdf.Cloud.Sdk.xml" target="lib\net4.5" />
-        <file src="bin\release\netstandard2.0\Aspose.Pdf.Cloud.Sdk.dll" target="lib\netstandard2.0" />
-        <file src="bin\Release\netstandard2.0\Aspose.Pdf.Cloud.Sdk.pdb" target="lib\netstandard2.0" />
-        <file src="bin\Release\netstandard2.0\Aspose.Pdf.Cloud.Sdk.xml" target="lib\netstandard2.0" />
+        <file src="bin\Release\Aspose.Pdf.Cloud.Sdk.dll" target="lib\net4.5" />
+        <file src="bin\Release\Aspose.Pdf.Cloud.Sdk.pdb" target="lib\net4.5" />
+        <file src="bin\Release\Aspose.Pdf.Cloud.Sdk.xml" target="lib\net4.5" />
+        <file src="..\..\build-out\bin\release\netstandard2.0\Aspose.Pdf.Cloud.Sdk.dll" target="lib\netstandard2.0" />
+        <file src="..\..\build-out\bin\Release\netstandard2.0\Aspose.Pdf.Cloud.Sdk.pdb" target="lib\netstandard2.0" />
+        <file src="..\..\build-out\bin\Release\netstandard2.0\Aspose.Pdf.Cloud.Sdk.xml" target="lib\netstandard2.0" />
     </files>
 </package>

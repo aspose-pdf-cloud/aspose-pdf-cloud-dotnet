@@ -55,7 +55,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// Initializes a new instance of the <see cref="SignatureCustomAppearance" /> class.
         /// </summary>
         /// <param name="FontFamilyName">Gets/sets font family name. It should be existed in the document. Default value: Arial.</param>
-        /// <param name="FontSize">Gets/sets font size. Default value: 10. (required)</param>
+        /// <param name="FontSize">Gets/sets font size. Default value: 10.</param>
+        /// <param name="Rotation">Gets or sets signature rotation. (required)</param>
         /// <param name="ShowContactInfo">Gets/sets contact info visibility. Default value: true. (required)</param>
         /// <param name="ShowReason">Gets/sets reason visibility. Default value: true. (required)</param>
         /// <param name="ShowLocation">Gets/sets location visibility. Default value: true. (required)</param>
@@ -66,16 +67,20 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <param name="DateSignedAtLabel">Gets/sets date signed label. Default value: \&quot;Date\&quot;.</param>
         /// <param name="DateTimeLocalFormat">Gets/sets datetime local format. Default value: \&quot;yyyy.MM.dd HH:mm:ss zzz\&quot;.</param>
         /// <param name="DateTimeFormat">Gets/sets datetime format. Default value: \&quot;yyyy.MM.dd HH:mm:ss\&quot;.</param>
-        public SignatureCustomAppearance(string FontFamilyName = default(string), double? FontSize = default(double?), bool? ShowContactInfo = default(bool?), bool? ShowReason = default(bool?), bool? ShowLocation = default(bool?), string ContactInfoLabel = default(string), string ReasonLabel = default(string), string LocationLabel = default(string), string DigitalSignedLabel = default(string), string DateSignedAtLabel = default(string), string DateTimeLocalFormat = default(string), string DateTimeFormat = default(string))
+        /// <param name="BackgroundColor">Gets/sets background color.</param>
+        /// <param name="ForegroundColor">Gets/sets foreground color.</param>
+        /// <param name="UseDigitalSubjectFormat">Gets/sets subject format usage. (required)</param>
+        /// <param name="DigitalSubjectFormat">Gets/sets subject format.</param>
+        public SignatureCustomAppearance(string FontFamilyName = default(string), double? FontSize = default(double?), Rotation Rotation = default(Rotation), bool? ShowContactInfo = default(bool?), bool? ShowReason = default(bool?), bool? ShowLocation = default(bool?), string ContactInfoLabel = default(string), string ReasonLabel = default(string), string LocationLabel = default(string), string DigitalSignedLabel = default(string), string DateSignedAtLabel = default(string), string DateTimeLocalFormat = default(string), string DateTimeFormat = default(string), Color BackgroundColor = default(Color), Color ForegroundColor = default(Color), bool? UseDigitalSubjectFormat = default(bool?), List<SignatureSubjectNameElements> DigitalSubjectFormat = default(List<SignatureSubjectNameElements>))
         {
-            // to ensure "FontSize" is required (not null)
-            if (FontSize == null)
+            // to ensure "Rotation" is required (not null)
+            if (Rotation == null)
             {
-                throw new InvalidDataException("FontSize is a required property for SignatureCustomAppearance and cannot be null");
+                throw new InvalidDataException("Rotation is a required property for SignatureCustomAppearance and cannot be null");
             }
             else
             {
-                this.FontSize = FontSize;
+                this.Rotation = Rotation;
             }
             // to ensure "ShowContactInfo" is required (not null)
             if (ShowContactInfo == null)
@@ -104,7 +109,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             {
                 this.ShowLocation = ShowLocation;
             }
+            // to ensure "UseDigitalSubjectFormat" is required (not null)
+            if (UseDigitalSubjectFormat == null)
+            {
+                throw new InvalidDataException("UseDigitalSubjectFormat is a required property for SignatureCustomAppearance and cannot be null");
+            }
+            else
+            {
+                this.UseDigitalSubjectFormat = UseDigitalSubjectFormat;
+            }
             this.FontFamilyName = FontFamilyName;
+            this.FontSize = FontSize;
             this.ContactInfoLabel = ContactInfoLabel;
             this.ReasonLabel = ReasonLabel;
             this.LocationLabel = LocationLabel;
@@ -112,6 +127,9 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             this.DateSignedAtLabel = DateSignedAtLabel;
             this.DateTimeLocalFormat = DateTimeLocalFormat;
             this.DateTimeFormat = DateTimeFormat;
+            this.BackgroundColor = BackgroundColor;
+            this.ForegroundColor = ForegroundColor;
+            this.DigitalSubjectFormat = DigitalSubjectFormat;
         }
         
         /// <summary>
@@ -127,6 +145,13 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         /// <value>Gets/sets font size. Default value: 10.</value>
         [DataMember(Name="FontSize", EmitDefaultValue=false)]
         public double? FontSize { get; set; }
+
+        /// <summary>
+        /// Gets or sets signature rotation.
+        /// </summary>
+        /// <value>Gets or sets signature rotation.</value>
+        [DataMember(Name="Rotation", EmitDefaultValue=true)]
+        public Rotation Rotation { get; set; }
 
         /// <summary>
         /// Gets/sets contact info visibility. Default value: true.
@@ -199,6 +224,34 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
         public string DateTimeFormat { get; set; }
 
         /// <summary>
+        /// Gets/sets background color.
+        /// </summary>
+        /// <value>Gets/sets background color.</value>
+        [DataMember(Name="BackgroundColor", EmitDefaultValue=false)]
+        public Color BackgroundColor { get; set; }
+
+        /// <summary>
+        /// Gets/sets foreground color.
+        /// </summary>
+        /// <value>Gets/sets foreground color.</value>
+        [DataMember(Name="ForegroundColor", EmitDefaultValue=false)]
+        public Color ForegroundColor { get; set; }
+
+        /// <summary>
+        /// Gets/sets subject format usage.
+        /// </summary>
+        /// <value>Gets/sets subject format usage.</value>
+        [DataMember(Name="UseDigitalSubjectFormat", EmitDefaultValue=false)]
+        public bool? UseDigitalSubjectFormat { get; set; }
+
+        /// <summary>
+        /// Gets/sets subject format.
+        /// </summary>
+        /// <value>Gets/sets subject format.</value>
+        [DataMember(Name="DigitalSubjectFormat", EmitDefaultValue=false)]
+        public List<SignatureSubjectNameElements> DigitalSubjectFormat { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -208,6 +261,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("class SignatureCustomAppearance {\n");
             sb.Append("  FontFamilyName: ").Append(FontFamilyName).Append("\n");
             sb.Append("  FontSize: ").Append(FontSize).Append("\n");
+            sb.Append("  Rotation: ").Append(Rotation).Append("\n");
             sb.Append("  ShowContactInfo: ").Append(ShowContactInfo).Append("\n");
             sb.Append("  ShowReason: ").Append(ShowReason).Append("\n");
             sb.Append("  ShowLocation: ").Append(ShowLocation).Append("\n");
@@ -218,6 +272,10 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
             sb.Append("  DateSignedAtLabel: ").Append(DateSignedAtLabel).Append("\n");
             sb.Append("  DateTimeLocalFormat: ").Append(DateTimeLocalFormat).Append("\n");
             sb.Append("  DateTimeFormat: ").Append(DateTimeFormat).Append("\n");
+            sb.Append("  BackgroundColor: ").Append(BackgroundColor).Append("\n");
+            sb.Append("  ForegroundColor: ").Append(ForegroundColor).Append("\n");
+            sb.Append("  UseDigitalSubjectFormat: ").Append(UseDigitalSubjectFormat).Append("\n");
+            sb.Append("  DigitalSubjectFormat: ").Append(DigitalSubjectFormat).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -263,6 +321,11 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.FontSize == other.FontSize ||
                     this.FontSize != null &&
                     this.FontSize.Equals(other.FontSize)
+                ) && 
+                (
+                    this.Rotation == other.Rotation ||
+                    this.Rotation != null &&
+                    this.Rotation.Equals(other.Rotation)
                 ) && 
                 (
                     this.ShowContactInfo == other.ShowContactInfo ||
@@ -313,6 +376,26 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     this.DateTimeFormat == other.DateTimeFormat ||
                     this.DateTimeFormat != null &&
                     this.DateTimeFormat.Equals(other.DateTimeFormat)
+                ) && 
+                (
+                    this.BackgroundColor == other.BackgroundColor ||
+                    this.BackgroundColor != null &&
+                    this.BackgroundColor.Equals(other.BackgroundColor)
+                ) && 
+                (
+                    this.ForegroundColor == other.ForegroundColor ||
+                    this.ForegroundColor != null &&
+                    this.ForegroundColor.Equals(other.ForegroundColor)
+                ) && 
+                (
+                    this.UseDigitalSubjectFormat == other.UseDigitalSubjectFormat ||
+                    this.UseDigitalSubjectFormat != null &&
+                    this.UseDigitalSubjectFormat.Equals(other.UseDigitalSubjectFormat)
+                ) && 
+                (
+                    this.DigitalSubjectFormat == other.DigitalSubjectFormat ||
+                    this.DigitalSubjectFormat != null &&
+                    this.DigitalSubjectFormat.SequenceEqual(other.DigitalSubjectFormat)
                 );
         }
 
@@ -331,6 +414,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.FontFamilyName.GetHashCode();
                 if (this.FontSize != null)
                     hash = hash * 59 + this.FontSize.GetHashCode();
+                if (this.Rotation != null)
+                    hash = hash * 59 + this.Rotation.GetHashCode();
                 if (this.ShowContactInfo != null)
                     hash = hash * 59 + this.ShowContactInfo.GetHashCode();
                 if (this.ShowReason != null)
@@ -351,6 +436,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Model
                     hash = hash * 59 + this.DateTimeLocalFormat.GetHashCode();
                 if (this.DateTimeFormat != null)
                     hash = hash * 59 + this.DateTimeFormat.GetHashCode();
+                if (this.BackgroundColor != null)
+                    hash = hash * 59 + this.BackgroundColor.GetHashCode();
+                if (this.ForegroundColor != null)
+                    hash = hash * 59 + this.ForegroundColor.GetHashCode();
+                if (this.UseDigitalSubjectFormat != null)
+                    hash = hash * 59 + this.UseDigitalSubjectFormat.GetHashCode();
+                if (this.DigitalSubjectFormat != null)
+                    hash = hash * 59 + this.DigitalSubjectFormat.GetHashCode();
                 return hash;
             }
         }
