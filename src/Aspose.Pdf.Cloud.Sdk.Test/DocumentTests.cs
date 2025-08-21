@@ -40,7 +40,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
     [TestFixture]
     public class DocumentTests : TestsBase
     {
-        
+
         /// <summary>
         /// Test GetDocument
         /// </summary>
@@ -74,7 +74,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.PostOptimizeDocument(name, options, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
-        
+
         /// <summary>
         /// Test PostOptimizeDocument with password
         /// </summary>
@@ -95,7 +95,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.PostOptimizeDocument(name, options, folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
-        
+
         /// <summary>
         /// Test PostSplitDocument
         /// </summary>
@@ -118,7 +118,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(name, name);
             SplitRangePdfOptions options = new SplitRangePdfOptions
             {
-              PageRanges = new List<PageRange>
+                PageRanges = new List<PageRange>
               {
                 new PageRange { To = 2 },
                 new PageRange { From = 3 },
@@ -271,6 +271,19 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             UploadFile(name1, name1);
 
             var response = PdfApi.PostDocumentPagesRotate(name1, Rotation.On90.ToString(), "2-3", folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+        
+        /// <summary>
+        /// Test PostDocumentPagesResize
+        /// </summary>
+        [Test]
+        public void PostDocumentPagesResizeTest()
+        {
+            const string name1 = "4pages.pdf";
+            UploadFile(name1, name1);
+
+            var response = PdfApi.PostDocumentPagesResize(name1, 100, 200, "2-3", folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
     }
