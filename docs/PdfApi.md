@@ -212,6 +212,7 @@ Method | HTTP request | Description
 [**PostDocumentImageStamps**](PdfApi.md#postdocumentimagestamps) | **POST** /pdf/\{name}/stamps/image | Add document pages image stamps.
 [**PostDocumentImageStampsPageSpecified**](PdfApi.md#postdocumentimagestampspagespecified) | **POST** /pdf/\{name}/stamps/image/pagespecified | Add document image stamps to specified pages.
 [**PostDocumentPageNumberStamps**](PdfApi.md#postdocumentpagenumberstamps) | **POST** /pdf/\{name}/stamps/pagenumber | Add document page number stamps.
+[**PostDocumentPagesResize**](PdfApi.md#postdocumentpagesresize) | **POST** /pdf/\{name}/resize | Rsize PDF document.
 [**PostDocumentPagesRotate**](PdfApi.md#postdocumentpagesrotate) | **POST** /pdf/\{name}/rotate | Rotate PDF document.
 [**PostDocumentTextFooter**](PdfApi.md#postdocumenttextfooter) | **POST** /pdf/\{name}/footer/text | Add document text footer.
 [**PostDocumentTextHeader**](PdfApi.md#postdocumenttextheader) | **POST** /pdf/\{name}/header/text | Add document text header.
@@ -6062,6 +6063,36 @@ Name | Type | Description  | Notes
  **stamp** | [**PageNumberStamp**](PageNumberStamp.md)| The stamp. | 
  **startPageNumber** | **int?**| The start page number. | [optional] 
  **endPageNumber** | **int?**| The end page number. | [optional] 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+ **password** | **string**| Base64 encoded password. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postdocumentpagesresize"></a>
+# **PostDocumentPagesResize**
+> AsposeResponse PostDocumentPagesResize (string name, double? height, double? width, string pages, string storage = null, string folder = null, string password = null)
+
+Rsize PDF document.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **height** | **double?**| Page Height | 
+ **width** | **double?**| Page width | 
+ **pages** | **string**| Comma separated list of pages and page ranges. (Example: 1,3-5,8) | 
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **password** | **string**| Base64 encoded password. | [optional] 
