@@ -8,7 +8,6 @@ namespace Parser
         {
             await helper.UploadFile(documentName);
 
-            //helper.pdfApi.PostTextBoxFieldsAsync
             TextBoxFieldResponse response = await helper.pdfApi.GetTextBoxFieldAsync(documentName, fieldName, folder: remoteFolder);
             
             if (response == null)
@@ -25,3 +24,4 @@ namespace Parser
         }
     }
 }
+
