@@ -1,10 +1,11 @@
 ﻿using Aspose.Pdf.Cloud.Sdk.Model;
+using Newtonsoft.Json;
 
 namespace Parser
 {
     public class GetImages
     {
-        public static async Task Extract(ParserHelper helper, string documentName, int pageNumber, string remoteFolder)
+        public static async Task Extract(ParserHelper helper, string documentName, int pageNumber, string localFolder, string remoteFolder)
         {
             await helper.UploadFile(documentName);
 
@@ -21,7 +22,17 @@ namespace Parser
                 Console.WriteLine("GetImages(): Images successfully received from the document '{0}.", documentName);
                 foreach (var image in response.Images.List)
                 {
-                    Console.WriteLine(image.ToString());
+                    using (var respImage = await helper.pdfApi.GetImageExtractAsPngAsync(documentName, image.Id, folder: remoteFolder))
+                    {
+                        Console.WriteLine(image.ToString());
+
+                        string fileName = Path.Combine(localFolder, image.Id + ".png");
+                        using (var file = File.Create(fileName)) {
+                            respImage.Seek(0, SeekOrigin.Begin);
+                            await respImage.CopyToAsync(file);
+                            Console.WriteLine("GetImages(): File '{0}' successfully downloaded.", fileName);
+                        }
+                    }
                 }
             }
         }

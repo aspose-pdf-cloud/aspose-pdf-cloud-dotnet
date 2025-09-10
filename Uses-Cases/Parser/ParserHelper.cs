@@ -6,7 +6,7 @@ namespace Parser
 {
     public class ConfigParams
     {
-        public string CrdentialPath { get; } = "..\\credentials.json";
+        public string CrdentialPath { get; } = "c:\\Projects\\ASPOSE\\Pdf.Cloud\\Credentials\\credentials.json";
         public string LOCAL_FOLDER { get; } = "C:\\Samples";
         public string REMOTE_TEMP_FOLDER { get; } = "TempPdfCloud";
         public string PDF_DOCUMENT { get; } = "sample.pdf";
@@ -15,7 +15,7 @@ namespace Parser
         public string FDF_OUTPUT { get; } = "output_sample.fdf";
         public string XML_OUTPUT { get; } = "output_sample.xml";
 
-        public int PAGE_NUMBER { get; } = 2;
+        public int PAGE_NUMBER { get; } = 1;
 
         public string TEXT_BOX_FIELD_NAME { get; } = "Signature_1";
         public string TABLE_ID { get; } = "GE5TCOZTHAZCYMRUGMWDKOBXFQZDMNY";
