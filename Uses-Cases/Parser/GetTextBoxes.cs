@@ -1,10 +1,11 @@
 ﻿using Aspose.Pdf.Cloud.Sdk.Model;
+using Newtonsoft.Json;
 
 namespace Parser
 {
     public class GetTextBoxes
     {
-        public static async Task Extract(ParserHelper helper, string documentName, string remoteFolder)
+        public static async Task Extract(ParserHelper helper, string documentName, string localFolder, string remoteFolder)
         {
             await helper.UploadFile(documentName);
 
@@ -19,10 +20,19 @@ namespace Parser
             else
             {
                 Console.WriteLine("GetTextBoxes(): TextBox fields successfully received from the document '{0}.", documentName);
-                foreach (TextBoxField textBox in response.Fields.List)
+                string jsonResult = "[\n";
+                foreach (var textBox in response.Fields.List)
                 {
-                    Console.WriteLine(textBox.ToString());
+                    var respTextBox = await helper.pdfApi.GetTextBoxFieldAsync(documentName, textBox.FullName, folder: remoteFolder);
+
+                    Console.WriteLine(respTextBox.Field);
+
+                    jsonResult += JsonConvert.SerializeObject(respTextBox.Field) + ",\n\n";
                 }
+                jsonResult += "]";
+                string fileName = Path.Combine(localFolder, "parsed_text_boxes_output.json");
+                File.WriteAllText(fileName, jsonResult);
+                Console.WriteLine("GetTextBoxes(): File '{0}' successfully downloaded.", fileName);
             }
         }
     }
