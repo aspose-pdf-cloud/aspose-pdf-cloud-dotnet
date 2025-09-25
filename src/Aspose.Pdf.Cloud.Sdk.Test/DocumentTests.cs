@@ -286,5 +286,18 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             var response = PdfApi.PostDocumentPagesResize(name1, 100, 200, "2-3", folder: TempFolder);
             Assert.That(response.Code, Is.EqualTo(200));
         }
+        
+        /// <summary>
+        /// Test PostDocumentPagesCrop
+        /// </summary>
+        [Test]
+        public void PostDocumentPagesCropTest()
+        {
+            const string name1 = "4pages.pdf";
+            UploadFile(name1, name1);
+
+            var response = PdfApi.PostDocumentPagesCrop(name1, "2-3", new Rectangle(0, 0, 800, 400), folder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
     }
 }
