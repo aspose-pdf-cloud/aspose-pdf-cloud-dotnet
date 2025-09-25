@@ -29,12 +29,9 @@ XLS, XLSX, PPTX, DOC, DOCX, MobiXML, JPEG, EMF, PNG, BMP, GIF, TIFF, Text
 ## Read PDF Formats
 MHT, PCL, PS, XSLFO, MD
 
-## Enhancements in Version 25.8
-- Implement document page resize functionality using the Pdf.Cloud API library.
+## Enhancements in Version 25.9
+- Implement PDF document page crop functionality using the Pdf.Cloud API library.
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
-
-## Bugs fixed in Version 25.8
-- Implement delete watermark from PDF document using the Pdf.Cloud API library.
 
 ## Unit Tests
 Aspose PDF SDK includes a suite of unit tests. These Unit Tests also serves as examples of how to use the Aspose PDF SDK.

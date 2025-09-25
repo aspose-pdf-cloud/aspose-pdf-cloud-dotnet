@@ -212,6 +212,7 @@ Method | HTTP request | Description
 [**PostDocumentImageStamps**](PdfApi.md#postdocumentimagestamps) | **POST** /pdf/\{name}/stamps/image | Add document pages image stamps.
 [**PostDocumentImageStampsPageSpecified**](PdfApi.md#postdocumentimagestampspagespecified) | **POST** /pdf/\{name}/stamps/image/pagespecified | Add document image stamps to specified pages.
 [**PostDocumentPageNumberStamps**](PdfApi.md#postdocumentpagenumberstamps) | **POST** /pdf/\{name}/stamps/pagenumber | Add document page number stamps.
+[**PostDocumentPagesCrop**](PdfApi.md#postdocumentpagescrop) | **POST** /pdf/\{name}/crop | Crop PDF document pages.
 [**PostDocumentPagesResize**](PdfApi.md#postdocumentpagesresize) | **POST** /pdf/\{name}/resize | Rsize PDF document.
 [**PostDocumentPagesRotate**](PdfApi.md#postdocumentpagesrotate) | **POST** /pdf/\{name}/rotate | Rotate PDF document.
 [**PostDocumentTextFooter**](PdfApi.md#postdocumenttextfooter) | **POST** /pdf/\{name}/footer/text | Add document text footer.
@@ -6063,6 +6064,35 @@ Name | Type | Description  | Notes
  **stamp** | [**PageNumberStamp**](PageNumberStamp.md)| The stamp. | 
  **startPageNumber** | **int?**| The start page number. | [optional] 
  **endPageNumber** | **int?**| The end page number. | [optional] 
+ **storage** | **string**| The document storage. | [optional] 
+ **folder** | **string**| The document folder. | [optional] 
+ **password** | **string**| Base64 encoded password. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postdocumentpagescrop"></a>
+# **PostDocumentPagesCrop**
+> AsposeResponse PostDocumentPagesCrop (string name, string pages, Rectangle rect, string storage = null, string folder = null, string password = null)
+
+Crop PDF document pages.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **pages** | **string**| Comma separated list of pages and page ranges. (Example: 1,3-5,8) | 
+ **rect** | [**Rectangle**](Rectangle.md)| Rectangle of document area. | 
  **storage** | **string**| The document storage. | [optional] 
  **folder** | **string**| The document folder. | [optional] 
  **password** | **string**| Base64 encoded password. | [optional] 
