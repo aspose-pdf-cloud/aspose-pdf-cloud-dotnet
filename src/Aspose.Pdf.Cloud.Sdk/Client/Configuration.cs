@@ -225,7 +225,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: 3.0\n";
-            report += "    SDK Package Version: 25.9.0\n";
+            report += "    SDK Package Version: 25.10.0\n";
 
             return report;
         }
