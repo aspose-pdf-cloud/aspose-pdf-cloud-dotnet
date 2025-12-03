@@ -8,14 +8,15 @@ namespace CreateDocument
     {
         public ClreatePdfDocumentSimple()
         {
-            string LOCAL_FOLDER = "c:\\Samples";
+            string LOCAL_FOLDER = "testData";
             string PDF_DOCUMENT = "output_created_simple.pdf";
             string REMOTE_FOLDER = "TempPdfCloud";
 
-            string AppSID = "*************";
-            string AppKey = "*************";
+            string clientId = "*************";
+            string clientSecret = "*************";
 
-            PdfApi pdfApi = new PdfApi(AppKey, AppSID);
+            PdfApi pdfApi = new PdfApi(clientSecret, clientId);
+            pdfApi = new PdfApi(new Aspose.Pdf.Cloud.Sdk.Client.Configuration(true, "", "","http://localhost:5000/v3.0"));
 
             DocumentResponse response = pdfApi.PutCreateDocument(PDF_DOCUMENT, folder: REMOTE_FOLDER);
             if (response.Code != 200)

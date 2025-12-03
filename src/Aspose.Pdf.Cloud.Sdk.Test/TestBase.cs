@@ -36,7 +36,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Test {
   public abstract class TestsBase {
 
     private const string BaseProductUri = @"https://api.aspose.cloud";
-    private const string ServerCredsFile = @"Settings/servercreds.json";
+    private const string ServerCredsFile = @"settings/credentials.json";
     protected const string TempFolder = "TempPdfCloud";
     
     protected string TestDataFolder
@@ -60,28 +60,20 @@ namespace Aspose.Pdf.Cloud.Sdk.Test {
     }
 
     private class Creds {
-      public string AppSID { get; set; }
-      public string AppKey { get; set; }
+      [JsonProperty("client_id")]
+      public string ClientId { get; set; }
+      [JsonProperty("client_secret")]
+      public string ClientSecret { get; set; }
+      [JsonProperty("self_host")]
       public bool SelfHost { get; set; }
+      [JsonProperty("api_url")]
       public string ProductUri { get; set; }
     }
 
     private Creds _creds;
 
-    private string _GetServercredsJson() {
-      DirectoryInfo di = Directory.GetParent(Directory.GetCurrentDirectory());
-      while (di != null) {
-        string servercreds_json = Path.Combine(di.FullName, ServerCredsFile);
-        if (File.Exists(servercreds_json)) {
-          return servercreds_json;
-        }
-        di = Directory.GetParent(di.FullName);
-      }
-      throw new FileNotFoundException("servercreds.json not found");
-    }
-
     private Creds _GetCreds() {
-      return JsonConvert.DeserializeObject<Creds>(File.ReadAllText(_GetServercredsJson()));
+      return JsonConvert.DeserializeObject<Creds>(File.ReadAllText(ServerCredsFile));
     }
 
     [SetUp]
@@ -89,17 +81,17 @@ namespace Aspose.Pdf.Cloud.Sdk.Test {
       ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
       Console.WriteLine(TestContext.CurrentContext.Test.Name);
       // To run tests with your own credentials please uncomment following line of code
-      // this._creds = new Creds { AppKey = "your app key", AppSID = "your app sid" };
+      // this._creds = new Creds { clientSecret = "your client_secret", clientId = "your client_id" };
       if (_creds == null)
         _creds = _GetCreds();
       if (_creds.SelfHost) {
         if (string.IsNullOrEmpty(_creds.ProductUri))
           throw new FileNotFoundException("servercreds.json doesn't contain ProductUri");
       } else {
-        if (string.IsNullOrEmpty(_creds.AppKey) || string.IsNullOrEmpty(_creds.AppSID))
-          throw new FileNotFoundException("servercreds.json doesn't contain AppSID and/or AppKey");
+        if (string.IsNullOrEmpty(_creds.ClientSecret) || string.IsNullOrEmpty(_creds.ClientId))
+          throw new FileNotFoundException("servercreds.json doesn't contain clientId and/or clientSecret");
       }
-      Configuration = new Configuration(_creds.SelfHost, _creds.AppKey, _creds.AppSID, _creds.ProductUri);
+      Configuration = new Configuration(_creds.SelfHost, _creds.ClientSecret, _creds.ClientId, _creds.ProductUri);
       PdfApi = new PdfApi(Configuration);
     }
 

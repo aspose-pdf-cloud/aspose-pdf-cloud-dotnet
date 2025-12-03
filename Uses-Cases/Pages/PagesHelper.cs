@@ -6,8 +6,8 @@ namespace Pages
 {
     public class ConfigParams
     {
-        public string CrdentialPath { get; } = "..\\credentials.json";
-        public string LOCAL_FOLDER { get; } = "C:\\Samples";
+        public string CrdentialPath { get; } = "settings/credentials.json";
+        public string LOCAL_FOLDER { get; } = "testData";
         public string REMOTE_TEMP_FOLDER { get; } = "TempPdfCloud";
         public string PDF_DOCUMENT { get; } = "sample.pdf";
         public string PDF_OUTPUT { get; } = "output_sample.pdf";
@@ -16,7 +16,7 @@ namespace Pages
 
         public string IMAGE_STAMP_FILE { get; } = "sample.png";
 
-        public int PAGE_NUMBER { get; } = 3;
+        public int PAGE_NUMBER { get; } = 2;
         public string STAMP_TEXT { get; } = "NEW TEXT STAMP";
         public int IMAGE_STAMP_LLY { get; } = 800;
         public int IMAGE_STAMP_WIDTH { get; } = 24;
@@ -25,7 +25,9 @@ namespace Pages
 
     public class Credentials
     {
+        [JsonProperty("client_id")]
         public string Id { get; set; }
+        [JsonProperty("client_secret")]
         public string Key { get; set; }
     }
 

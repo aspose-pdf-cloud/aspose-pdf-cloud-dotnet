@@ -10,15 +10,18 @@
     <ProjectReference Include="..\Aspose.Pdf.Cloud.Sdk\Aspose.Pdf.Cloud.Sdk.csproj" />
   </ItemGroup>
   <ItemGroup>
-	<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.3" />
-	<PackageReference Include="NUnit" Version="3.14.0" />
-	<PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.3" />
+    <PackageReference Include="NUnit" Version="3.14.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
     <PackageReference Include="NUnit.ConsoleRunner" Version="3.20.1" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="../../settings/credentials.json" Link="settings/credentials.json" CopyToOutputDirectory="Always" />
+  </ItemGroup>
   <Target Name="CopyNUnitConsole" AfterTargets="Build">
-	<ItemGroup>
-	  <NUnitConsoleFiles Include="$(NuGetPackageRoot)\nunit.consolerunner\3.20.1\tools\**\*" />
-	</ItemGroup>
-	<Copy SourceFiles="@(NUnitConsoleFiles)" DestinationFiles="@(NUnitConsoleFiles->'$(OutDir)\nunit\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <ItemGroup>
+      <NUnitConsoleFiles Include="$(NuGetPackageRoot)\nunit.consolerunner\3.20.1\tools\**\*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(NUnitConsoleFiles)" DestinationFiles="@(NUnitConsoleFiles->'$(OutDir)\nunit\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
   </Target>
 </Project>

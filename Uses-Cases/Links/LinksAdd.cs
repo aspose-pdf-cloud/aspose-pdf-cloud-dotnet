@@ -8,7 +8,7 @@ namespace Links
         {
             await helper.UploadFile(documentName);
 
-            Rectangle rectangle = new Rectangle(LLX: 238, LLY: 488.622, URX: 305, URY: 498.588);
+            Rectangle rectangle = new Rectangle(LLX: 70, LLY: 731.229, URX: 90, URY: 745.185);
 
             Link link = new Link(LinkAction);
 

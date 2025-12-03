@@ -5,8 +5,8 @@ namespace CreateDocument
 {
     public class ConfigParams
     {
-        public string CrdentialPath { get; } = ".\\credentials.json";
-        public string LOCAL_FOLDER { get; } = "C:\\Samples";
+        public string CrdentialPath { get; } = "settings/credentials.json";
+        public string LOCAL_FOLDER { get; } = "testData";
         public string TEMP_FOLDER { get; } = "TempPdfCloud";
         public string LOCAL_RESULT_DOCUMENT_NAME { get; } = "output_sample.pdf";
         public int PAGE_WIDTH { get; } = 590;
@@ -16,7 +16,9 @@ namespace CreateDocument
 
     public class Credentials
     {
+        [JsonProperty("client_id")]
         public string Id { get; set; }
+        [JsonProperty("client_secret")]
         public string Key { get; set; }
     }
 

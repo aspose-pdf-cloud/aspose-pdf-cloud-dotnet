@@ -6,19 +6,21 @@ namespace Bookmarks
 {
     public class ConfigParams
     {
-        public string CrdentialPath { get; } = "c:\\Projects\\ASPOSE\\Pdf.Cloud\\Credentials\\credentials.json";
-        public string LOCAL_FOLDER { get; } = "C:\\Samples";
+        public string CredentialPath { get; } = "settings/credentials.json";
+        public string LOCAL_FOLDER { get; } = "testData";
         public string REMOTE_TEMP_FOLDER { get; } = "TempPdfCloud";
-        public string PDF_DOCUMENT { get; } = "sample.pdf";
+        public string PDF_DOCUMENT { get; } = "PdfWithBookmarks.pdf";
         public string PDF_OUTPUT { get; } = "output_sample.pdf";
 
         public string BOOKMARK_TITLE { get; } = "NEW Bookmark Title XYZ";
-        public string BOOKMARK_PATH { get; } = "/1";
+        public string BOOKMARK_PATH { get; } = "/5";
     }
 
     public class Credentials
     {
+        [JsonProperty("client_id")]
         public string Id { get; set; }
+        [JsonProperty("client_secret")]
         public string Key { get; set; }
     }
 
@@ -30,7 +32,7 @@ namespace Bookmarks
         public BookmarksHelper()
         {
             config = new ConfigParams();
-            string jsCredText = File.ReadAllText(config.CrdentialPath);
+            string jsCredText = File.ReadAllText(config.CredentialPath);
             Credentials cred = JsonConvert.DeserializeObject<Credentials>(jsCredText);
             pdfApi = new PdfApi(cred.Key, cred.Id);
         }
