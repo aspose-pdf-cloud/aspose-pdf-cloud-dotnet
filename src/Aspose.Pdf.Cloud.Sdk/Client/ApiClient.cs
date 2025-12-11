@@ -96,8 +96,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         private void RequestToken()
         {
             var postData = "grant_type=client_credentials";
-            postData += "&client_id=" + Configuration.AppSid;
-            postData += "&client_secret=" + Configuration.ApiKey;
+            postData += "&client_id=" + Configuration.ClientId;
+            postData += "&client_secret=" + Configuration.ClientSecret;
             var request = new RestRequest(
                 new Uri(RestClient.BaseUrl.AbsoluteUri.Replace("v3.0", "connect/token")),
                 Method.POST);
@@ -109,8 +109,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         private async System.Threading.Tasks.Task RequestTokenAsync()
         {
             var postData = "grant_type=client_credentials";
-            postData += "&client_id=" + Configuration.AppSid;
-            postData += "&client_secret=" + Configuration.ApiKey;
+            postData += "&client_id=" + Configuration.ClientId;
+            postData += "&client_secret=" + Configuration.ClientSecret;
             var request = new RestRequest(
                 new Uri(RestClient.BaseUrl.AbsoluteUri.Replace("v3.0", "connect/token")),
                 Method.POST);
@@ -185,12 +185,12 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
             RestClient = new RestClient(config.BasePath);
         }
         
-        private static bool CheckSidKey(string appSid, string apiKey)
+        private static bool CheckSidKey(string clientId, string clientSecret)
         {
-            if (appSid == apiKey)
+            if (clientId == clientSecret)
                 return true;
-            string[] ssSid = appSid.Split('-');
-            string[] ssKey = apiKey.Split('-');
+            string[] ssSid = clientId.Split('-');
+            string[] ssKey = clientSecret.Split('-');
             return ssSid.Length == 5 && ssKey.Length == 1;
         }
 
@@ -202,8 +202,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
                 return;
             if (!string.IsNullOrWhiteSpace(_accessToken))
                 return;
-            if (!CheckSidKey(Configuration.AppSid, Configuration.ApiKey))
-                throw new ArgumentException("AppSid/ApiKey are messed up or have wrong format");
+            if (!CheckSidKey(Configuration.ClientId, Configuration.ClientSecret))
+                throw new ArgumentException("client_id/client_secret are messed up or have wrong format");
         }
 
         /// <summary>
@@ -241,7 +241,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
 
             // add custom header
             request.AddHeader(AsposeClientHeaderName, ".net sdk");
-            request.AddHeader(AsposeClientVersionHeaderName, "25.9.0");
+            request.AddHeader(AsposeClientVersionHeaderName, "25.10.0");
 
             // add header parameter, if any
             foreach(var param in headerParams)

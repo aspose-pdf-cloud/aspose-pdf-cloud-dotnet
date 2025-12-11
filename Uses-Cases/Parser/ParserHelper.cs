@@ -6,25 +6,23 @@ namespace Parser
 {
     public class ConfigParams
     {
-        public string CrdentialPath { get; } = "..\\credentials.json";
-        public string LOCAL_FOLDER { get; } = "C:\\Samples";
+        public string CrdentialPath { get; } = "settings/credentials.json";
+        public string LOCAL_FOLDER { get; } = "testData";
         public string REMOTE_TEMP_FOLDER { get; } = "TempPdfCloud";
-        public string PDF_DOCUMENT { get; } = "sample.pdf";
+        public string PDF_DOCUMENT { get; } = "FormData.pdf";
 
         public string PDF_OUTPUT { get; } = "output_sample.pdf";
         public string FDF_OUTPUT { get; } = "output_sample.fdf";
         public string XML_OUTPUT { get; } = "output_sample.xml";
 
         public int PAGE_NUMBER { get; } = 1;
-
-        public string TEXT_BOX_FIELD_NAME { get; } = "Signature_1";
-        public string TABLE_ID { get; } = "GE5TCOZTHAZCYMRUGMWDKOBXFQZDMNY";
-        public string IMAGE_ID { get; } = "GI5TCNJTGU3TWMRRHEWDIOBMGI3DELBWGM";
     }
 
     public class Credentials
     {
+        [JsonProperty("client_id")]
         public string Id { get; set; }
+        [JsonProperty("client_secret")]
         public string Key { get; set; }
     }
 

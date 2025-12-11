@@ -6,19 +6,19 @@ namespace ChangeLayout
 {
     public class ConfigParams
     {
-        public string CrdentialPath { get; } = "..\\credentials.json ";
-        public string LOCAL_FOLDER { get; } = "C:\\Samples";
+        public string CrdentialPath { get; } = "settings/credentials.json";
+        public string LOCAL_FOLDER { get; } = "testData";
         public string REMOTE_TEMP_FOLDER { get; } = "TempPdfCloud";
-        public string PDF_DOCUMENT { get; } = "sample.pdf";
+        public string PDF_DOCUMENT { get; } = "PdfWithScreenAnnotations.pdf";
         public string PDF_OUTPUT { get; } = "output_sample.pdf";
 
         public Rotation ROTATE_PAGES_ANGLE = Rotation.On90;
-        public string ROTATE_PAGES { get; } = "1-3";
+        public string ROTATE_PAGES { get; } = "1-2";
 
 
         public string CROP_PAGE_TEMP_FILE { get; } = "sample_temp_file.png";
         public string CROP_LOCAL_RESULT_DOCUMENT_NAME { get; } = "output_sample.pdf";
-        public int CROP_PAGE_NUMBER { get; } = 3;
+        public int CROP_PAGE_NUMBER { get; } = 2;
         public int CROP_HEIGHT { get; } = 400;
         public int CROP_WIDTH { get; } = 300;
         public int CROP_LLX { get; } = 100;
@@ -36,7 +36,9 @@ namespace ChangeLayout
 
     public class Credentials
     {
+        [JsonProperty("client_id")]
         public string Id { get; set; }
+        [JsonProperty("client_secret")]
         public string Key { get; set; }
     }
 
@@ -49,6 +51,7 @@ namespace ChangeLayout
         {
             config = new ConfigParams();
             string jsCredText = File.ReadAllText(config.CrdentialPath);
+            System.Console.WriteLine(jsCredText);
             Credentials cred = JsonConvert.DeserializeObject<Credentials>(jsCredText);
             pdfApi = new PdfApi(cred.Key, cred.Id);
         }
@@ -98,12 +101,14 @@ namespace ChangeLayout
         public async Task<string> ExtractPdfPage(string document, int pageNumber, int width, int height)
         {
             string imageFile = document + ".png";
-            Stream stream = await pdfApi.GetPageConvertToPngAsync(document, pageNumber, width, height, config.REMOTE_TEMP_FOLDER);
-            using var fileStream = File.Create(Path.Combine(config.LOCAL_FOLDER, imageFile));
-            stream.Position = 0;
-            await stream.CopyToAsync(fileStream);
+            using Stream stream = await pdfApi.GetPageConvertToPngAsync(document, pageNumber, width, height, config.REMOTE_TEMP_FOLDER);
+            using (var fileStream = File.Create(Path.Combine(config.LOCAL_FOLDER, imageFile)))
+            {
+                stream.Position = 0;
+                await stream.CopyToAsync(fileStream);
+            }
 
-            UploadFile(imageFile);
+            await UploadFile(imageFile);
             Console.WriteLine("ExtractPdfPage(): Page #{0} extracted as image {1}.", [pageNumber, imageFile]);
 
             return imageFile;

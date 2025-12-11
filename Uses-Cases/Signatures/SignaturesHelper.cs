@@ -6,30 +6,32 @@ namespace Signatures
 {
     public class ConfigParams
     {
-        public string CrdentialPath { get; } = "..\\credentials.json";
-        public string LOCAL_FOLDER { get; } = "C:\\Samples";
+        public string CrdentialPath { get; } = "settings/credentials.json";
+        public string LOCAL_FOLDER { get; } = "testData";
         public string REMOTE_TEMP_FOLDER { get; } = "TempPdfCloud";
         
         public string PDF_DOCUMENT { get; } = "sample.pdf";
-        public string PDF_SIGNED_DOCUMENT { get; } = "sample-signed.pdf";
+        public string PDF_SIGNED_DOCUMENT { get; } = "adbe.x509.rsa_sha1.valid.pdf";
 
         public string PDF_OUTPUT { get; } = "output_sample.pdf";
 
-        public string LOCAL_SIGNATURE_PATH { get; } = "C:\\Samples\\Signatures";
-        public string SIGNATURE_PFX { get; } = "Signatures.pfx";
-        public string SIGNATURE_FORM_FIELD { get; } = "Signature_1";
-        public string SIGNATURE_PASSWORD { get; } = YOUR_PASSWORD;
-        public string SIGNATURE_CONTACT { get; } = CERTIFICATE_CONTACT;
-        public string SIGNATURE_LOCATION { get; } = CERTIFICATE_LOCATION;
-        public string SIGNATURE_AUTHORITY { get; } = CERTIFICATE_ISSUER;
-        public string SIGNATURE_DATE { get; } = "08/25/2025 12:15:00.000 PM";
+        public string LOCAL_SIGNATURE_PATH { get; } = "testData";
+        public string SIGNATURE_PFX { get; } = "33226.p12";
+        public string SIGNATURE_FORM_FIELD { get; } = "Signature1";
+        public string SIGNATURE_PASSWORD { get; } = "sIikZSmz";
+        public string SIGNATURE_CONTACT { get; } = "Contact";
+        public string SIGNATURE_LOCATION { get; } = "Location";
+        public string SIGNATURE_AUTHORITY { get; } = "Sergey Smal";
+        public string SIGNATURE_DATE { get; } = "04/19/2025 12:15:00.000 PM";
         public Rectangle SIGNATURE_RECT { get; } = new Rectangle(100, 100, 500, 500);
 
     }
 
     public class Credentials
     {
+        [JsonProperty("client_id")]
         public string Id { get; set; }
+        [JsonProperty("client_secret")]
         public string Key { get; set; }
     }
 

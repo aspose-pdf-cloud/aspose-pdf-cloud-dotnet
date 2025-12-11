@@ -9,7 +9,7 @@ namespace EnryptDecrypt
         {
             await helper.UploadFile(documentName);
 
-            string ownerPassword = "Owner-Password";
+            string ownerPassword = "user $^Password!&";
 
             string newOwnerPassword = "NEW-Owner-Password";
             string newUserPassword = "NEW-User-Password";

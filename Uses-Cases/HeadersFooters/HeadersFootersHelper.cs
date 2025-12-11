@@ -6,13 +6,13 @@ namespace HeadersFooters
 {
     public class ConfigParams
     {
-        public string CrdentialPath { get; } = "..\\credentials.json";
-        public string LOCAL_FOLDER { get; } = "C:\\Samples";
+        public string CrdentialPath { get; } = "settings/credentials.json";
+        public string LOCAL_FOLDER { get; } = "testData";
         public string REMOTE_TEMP_FOLDER { get; } = "TempPdfCloud";
         public string PDF_DOCUMENT { get; } = "sample.pdf";
         public string PDF_OUTPUT { get; } = "output_sample.pdf";
 
-        public int PAGE_NUMBER { get; } = 2;
+        public int PAGE_NUMBER { get; } = 1;
 
         public string IMAGE_FILE { get; } = "sample.png";
 
@@ -22,7 +22,9 @@ namespace HeadersFooters
 
     public class Credentials
     {
+        [JsonProperty("client_id")]
         public string Id { get; set; }
+        [JsonProperty("client_secret")]
         public string Key { get; set; }
     }
 

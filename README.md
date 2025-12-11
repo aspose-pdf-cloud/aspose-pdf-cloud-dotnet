@@ -29,16 +29,19 @@ XLS, XLSX, PPTX, DOC, DOCX, MobiXML, JPEG, EMF, PNG, BMP, GIF, TIFF, Text
 ## Read PDF Formats
 MHT, PCL, PS, XSLFO, MD
 
-## Enhancements in Version 25.9
-- Implement PDF document page crop functionality using the Pdf.Cloud API library.
+## Breaking Changes in Version 25.10
+**Authentication Parameter Changes**:
+
+    AppId → ClientId
+
+    AppSecret → ClientSecret
+
+## Enhancements in Version 25.10
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
 
-## Unit Tests
-Aspose PDF SDK includes a suite of unit tests. These Unit Tests also serves as examples of how to use the Aspose PDF SDK.
-
-## Licensing
-All Aspose.Pdf for Cloud SDKs are licensed under [MIT License](LICENSE).
-
+## Bugs fixed in Version 25.10
+- Method PutBookmark does not change bookmark color.
+- TextReplace shows hidden text in the output file.
 ## Dependencies
 - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 12.0.3
 - [RestSharp](https://www.nuget.org/packages/RestSharp) - 106.12.0
@@ -74,3 +77,25 @@ NOTE: RestSharp versions greater than 105.1.0 have a bug which causes file uploa
 
 ## SelfHost Aspose.PDF Cloud
 Create Configuration object with SelfHost = true and without ClientId and ClientSecret.
+
+## Use cases
+
+The Aspose.PDF Cloud SDK includes a set of ready-to-run use cases in the "[Uses-Cases](Uses-Cases)" directory. These examples illustrate common operations such as managing annotations, attachments, text, and more.
+
+1. Add your API credentials **client_id** and **client_secret** into [settings/credentials.json](settings/credentials.json):
+
+```
+{
+  "client_secret": "YOUR_CLIENT_SECRET",
+  "client_id": "YOUR_CLIENT_ID"
+}
+```
+2. Launch use case:
+```
+dotnet run --project Uses-Cases/Bookmarks/Bookmarks.csproj
+```
+## Unit Tests
+Aspose PDF SDK includes a suite of unit tests. These Unit Tests also serves as examples of how to use the Aspose PDF SDK.
+
+## Licensing
+All Aspose.Pdf for Cloud SDKs are licensed under [MIT License](LICENSE).

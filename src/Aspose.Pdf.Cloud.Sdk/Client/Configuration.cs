@@ -40,8 +40,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// Initializes a new instance of the Configuration class with different settings
         /// </summary>
         /// <param name="selfHost">The self-host flag.</param>
-        /// <param name="apiKey">The api key.</param>
-        /// <param name="appSid">The app SID.</param>
+        /// <param name="clientSecret">The api client_secret.</param>
+        /// <param name="clientId">The api client_id.</param>
         /// <param name="basePath">The base path.</param>
         /// <param name="defaultHeader">Dictionary of default HTTP header.</param>
         /// <param name="tempFolderPath">Temp folder path.</param>
@@ -50,8 +50,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         /// <param name="userAgent">HTTP user agent.</param>
         public Configuration(
             bool selfHost,
-            string apiKey,
-            string appSid,
+            string clientSecret,
+            string clientId,
             string basePath = "https://api.aspose.cloud/v3.0",
             Dictionary<string, string> defaultHeader = null,
             string tempFolderPath = null,
@@ -61,8 +61,8 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         )
         {
             SelfHost = selfHost;
-            ApiKey = apiKey;
-            AppSid = appSid;
+            ClientSecret = clientSecret;
+            ClientId = clientId;
             BasePath = basePath;
             UserAgent = userAgent;
             if (defaultHeader != null)
@@ -97,14 +97,14 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
         public bool SelfHost { get; set; }
 
         /// <summary>
-        /// Gets or sets the api key.
+        /// Gets or sets the client_secret.
         /// </summary>
-        public string ApiKey { get; set; }
+        public string ClientSecret { get; set; }
 
         /// <summary>
-        /// Gets or sets the app sid.
+        /// Gets or sets the client_id.
         /// </summary>
-        public string AppSid { get; set; }
+        public string ClientId { get; set; }
 
         /// <summary>
         /// Gets or sets the base path.
@@ -225,7 +225,7 @@ namespace Aspose.Pdf.Cloud.Sdk.Client
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: 3.0\n";
-            report += "    SDK Package Version: 25.9.0\n";
+            report += "    SDK Package Version: 25.10.0\n";
 
             return report;
         }

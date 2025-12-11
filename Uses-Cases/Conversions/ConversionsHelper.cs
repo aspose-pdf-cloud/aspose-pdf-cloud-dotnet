@@ -6,12 +6,12 @@ namespace Conversions
 {
     public class ConfigParams
     {
-        public string CrdentialPath { get; } = "c:\\Projects\\ASPOSE\\Pdf.Cloud\\Credentials\\credentials.json";
-        public string LOCAL_FOLDER { get; } = "C:\\Samples";
+        public string CrdentialPath { get; } = "settings/credentials.json";
+        public string LOCAL_FOLDER { get; } = "testData";
         public string REMOTE_TEMP_FOLDER { get; } = "TempPdfCloud";
         public string PDF_DOCUMENT { get; } = "sample.pdf";
 
-        public string JPEG_FILE_NAME { get; } = "sample.jpg";
+        public string JPEG_FILE_NAME { get; } = "Koala.jpg";
         public string BMP_FILE_NAME { get; } = "sample.bmp";
         public string PNG_FILE_NAME { get; } = "sample.png";
         public string GIF_FILE_NAME { get; } = "sample.gif";
@@ -21,21 +21,21 @@ namespace Conversions
         public string PDF_PNG_OUTPUT { get; } = "output_png.pdf";
         public string PDF_GIF_OUTPUT { get; } = "output_gif.pdf";
 
-        public string HTML_FILE_NAME { get; } = "sample.html";
+        public string HTML_FILE_NAME { get; } = "HtmlExample1.html";
         public double PDF_HTML_WIDTH { get; } = 600;
         public double PDF_HTML_HEIGHT { get; } = 850;
         public string PDF_HTML_OUTPUT { get; } = "output_html.pdf";
 
-        public string MHTML_FILE_NAME { get; } = "sample.mht";
+        public string MHTML_FILE_NAME { get; } = "MhtExample.mht";
         public string PDF_MHTML_OUTPUT { get; } = "output_mht.pdf";
 
         public string MD_FILE_NAME { get; } = "sample.md";
         public string PDF_MD_OUTPUT { get; } = "output_md.pdf";
 
-        public string EPUB_FILE_NAME { get; } = "sample.epub";
+        public string EPUB_FILE_NAME { get; } = "4pages.epub";
         public string PDF_EPUB_OUTPUT { get; } = "output_epub.pdf";
 
-        public string PCL_FILE_NAME { get; } = "sample.pcl";
+        public string PCL_FILE_NAME { get; } = "template.pcl";
         public string PDF_PCL_OUTPUT { get; } = "output_pcl.pdf";
 
         public string PS_FILE_NAME { get; } = "sample.ps";
@@ -59,7 +59,9 @@ namespace Conversions
 
     public class Credentials
     {
+        [JsonProperty("client_id")]
         public string Id { get; set; }
+        [JsonProperty("client_secret")]
         public string Key { get; set; }
     }
 

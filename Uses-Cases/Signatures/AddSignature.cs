@@ -9,7 +9,7 @@ namespace Signatures
             await helper.UploadFile(documentName);
 
             Signature signature = new Signature(
-                SignaturePath: config.SIGNATURE_PFX,
+                SignaturePath: Path.Combine(remoteFolder, config.SIGNATURE_PFX),
                 SignatureType: SignatureType.PKCS7,
                 Password: config.SIGNATURE_PASSWORD,
                 Contact: config.SIGNATURE_CONTACT,
@@ -19,7 +19,7 @@ namespace Signatures
                 FormFieldName: config.SIGNATURE_FORM_FIELD,
                 Authority: config.SIGNATURE_AUTHORITY,
                 Date: config.SIGNATURE_DATE,
-                ShowProperties: false);
+                ShowProperties: true);
 
             SignatureField field = new SignatureField(
                 PageIndex: 1,

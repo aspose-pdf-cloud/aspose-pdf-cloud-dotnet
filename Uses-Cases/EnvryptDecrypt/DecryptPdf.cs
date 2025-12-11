@@ -9,7 +9,7 @@ namespace EnryptDecrypt
         {
             await helper.UploadFile(documentName);
 
-            string ownerPassword = "Owner-Password";
+            string ownerPassword = "user $^Password!&";
 
             AsposeResponse response = await helper.pdfApi.PostDecryptDocumentInStorageAsync(
                 documentName,
