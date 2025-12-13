@@ -31,6 +31,7 @@ MHT, PCL, PS, XSLFO, MD
 
 ## Enhancements in Version 25.11
 - A new version of Aspose.PDF Cloud was prepared using the latest version of Aspose.PDF for .NET.
+
 ## Dependencies
 - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 12.0.3
 - [RestSharp](https://www.nuget.org/packages/RestSharp) - 106.12.0
