@@ -30,6 +30,7 @@ Method | HTTP request | Description
 [**DeleteStamp**](PdfApi.md#deletestamp) | **DELETE** /pdf/\{name}/stamps/\{stampId} | Delete document stamp by ID
 [**DeleteTable**](PdfApi.md#deletetable) | **DELETE** /pdf/\{name}/tables/\{tableId} | Delete document table by ID
 [**DownloadFile**](PdfApi.md#downloadfile) | **GET** /pdf/storage/file/\{path} | Download file
+[**GetApsInStorageToPdf**](PdfApi.md#getapsinstoragetopdf) | **GET** /pdf/create/aps | Convert APS file (located on storage) to PDF format and return resulting file in response. 
 [**GetBookmark**](PdfApi.md#getbookmark) | **GET** /pdf/\{name}/bookmarks/bookmark/\{bookmarkPath} | Read document bookmark.
 [**GetBookmarks**](PdfApi.md#getbookmarks) | **GET** /pdf/\{name}/bookmarks/list/\{bookmarkPath} | Read document bookmarks node list.
 [**GetCaretAnnotation**](PdfApi.md#getcaretannotation) | **GET** /pdf/\{name}/annotations/caret/\{annotationId} | Read document page caret annotation by ID.
@@ -148,6 +149,7 @@ Method | HTTP request | Description
 [**GetPages**](PdfApi.md#getpages) | **GET** /pdf/\{name}/pages | Read document pages info.
 [**GetPclInStorageToPdf**](PdfApi.md#getpclinstoragetopdf) | **GET** /pdf/create/pcl | Convert PCL file (located on storage) to PDF format and return resulting file in response. 
 [**GetPdfAInStorageToPdf**](PdfApi.md#getpdfainstoragetopdf) | **GET** /pdf/create/pdfa | Convert PDFA file (located on storage) to PDF format and return resulting file in response. 
+[**GetPdfInStorageToAps**](PdfApi.md#getpdfinstoragetoaps) | **GET** /pdf/\{name}/convert/aps | Converts PDF document (located on storage) to APS format and returns resulting file in response content
 [**GetPdfInStorageToDoc**](PdfApi.md#getpdfinstoragetodoc) | **GET** /pdf/\{name}/convert/doc | Converts PDF document (located on storage) to DOC format and returns resulting file in response content.
 [**GetPdfInStorageToEpub**](PdfApi.md#getpdfinstoragetoepub) | **GET** /pdf/\{name}/convert/epub | Converts PDF document (located on storage) to EPUB format and returns resulting file in response content
 [**GetPdfInStorageToHtml**](PdfApi.md#getpdfinstoragetohtml) | **GET** /pdf/\{name}/convert/html | Converts PDF document (located on storage) to Html format and returns resulting file in response content
@@ -271,6 +273,7 @@ Method | HTTP request | Description
 [**PutAddNewPage**](PdfApi.md#putaddnewpage) | **PUT** /pdf/\{name}/pages | Add new page to end of the document.
 [**PutAddText**](PdfApi.md#putaddtext) | **PUT** /pdf/\{name}/pages/\{pageNumber}/text | Add text to PDF document page.
 [**PutAnnotationsFlatten**](PdfApi.md#putannotationsflatten) | **PUT** /pdf/\{name}/annotations/flatten | Flattens the annotations of the specified types
+[**PutApsInStorageToPdf**](PdfApi.md#putapsinstoragetopdf) | **PUT** /pdf/\{name}/create/aps | Convert APS file (located on storage) to PDF format and upload resulting file to storage. 
 [**PutBookmark**](PdfApi.md#putbookmark) | **PUT** /pdf/\{name}/bookmarks/bookmark/\{bookmarkPath} | Update document bookmark.
 [**PutCaretAnnotation**](PdfApi.md#putcaretannotation) | **PUT** /pdf/\{name}/annotations/caret/\{annotationId} | Replace document caret annotation
 [**PutChangePasswordDocument**](PdfApi.md#putchangepassworddocument) | **PUT** /pdf/changepassword | Change document password from content.
@@ -321,6 +324,7 @@ Method | HTTP request | Description
 [**PutPageConvertToTiff**](PdfApi.md#putpageconverttotiff) | **PUT** /pdf/\{name}/pages/\{pageNumber}/convert/tiff | Convert document page to Tiff image and upload resulting file to storage.
 [**PutPclInStorageToPdf**](PdfApi.md#putpclinstoragetopdf) | **PUT** /pdf/\{name}/create/pcl | Convert PCL file (located on storage) to PDF format and upload resulting file to storage. 
 [**PutPdfAInStorageToPdf**](PdfApi.md#putpdfainstoragetopdf) | **PUT** /pdf/\{name}/create/pdfa | Convert PDFA file (located on storage) to PDF format and upload resulting file to storage. 
+[**PutPdfInRequestToAps**](PdfApi.md#putpdfinrequesttoaps) | **PUT** /pdf/convert/aps | Converts PDF document (in request content) to APS format and uploads resulting file to storage.
 [**PutPdfInRequestToDoc**](PdfApi.md#putpdfinrequesttodoc) | **PUT** /pdf/convert/doc | Converts PDF document (in request content) to DOC format and uploads resulting file to storage.
 [**PutPdfInRequestToEpub**](PdfApi.md#putpdfinrequesttoepub) | **PUT** /pdf/convert/epub | Converts PDF document (in request content) to EPUB format and uploads resulting file to storage.
 [**PutPdfInRequestToHtml**](PdfApi.md#putpdfinrequesttohtml) | **PUT** /pdf/convert/html | Converts PDF document (in request content) to Html format and uploads resulting file to storage.
@@ -334,6 +338,7 @@ Method | HTTP request | Description
 [**PutPdfInRequestToXlsx**](PdfApi.md#putpdfinrequesttoxlsx) | **PUT** /pdf/convert/xlsx | Converts PDF document (in request content) to XLSX format and uploads resulting file to storage.
 [**PutPdfInRequestToXml**](PdfApi.md#putpdfinrequesttoxml) | **PUT** /pdf/convert/xml | Converts PDF document (in request content) to XML format and uploads resulting file to storage.
 [**PutPdfInRequestToXps**](PdfApi.md#putpdfinrequesttoxps) | **PUT** /pdf/convert/xps | Converts PDF document (in request content) to XPS format and uploads resulting file to storage.
+[**PutPdfInStorageToAps**](PdfApi.md#putpdfinstoragetoaps) | **PUT** /pdf/\{name}/convert/aps | Converts PDF document (located on storage) to APS format and uploads resulting file to storage
 [**PutPdfInStorageToDoc**](PdfApi.md#putpdfinstoragetodoc) | **PUT** /pdf/\{name}/convert/doc | Converts PDF document (located on storage) to DOC format and uploads resulting file to storage.
 [**PutPdfInStorageToEpub**](PdfApi.md#putpdfinstoragetoepub) | **PUT** /pdf/\{name}/convert/epub | Converts PDF document (located on storage) to EPUB format and uploads resulting file to storage
 [**PutPdfInStorageToHtml**](PdfApi.md#putpdfinstoragetohtml) | **PUT** /pdf/\{name}/convert/html | Converts PDF document (located on storage) to Html format and uploads resulting file to storage
@@ -1075,6 +1080,31 @@ Name | Type | Description  | Notes
  **path** | **string**| File path e.g. &#39;/folder/file.ext&#39; | 
  **storageName** | **string**| Storage name | [optional] 
  **versionId** | **string**| File version ID to download | [optional] 
+
+### Return type
+
+**System.IO.Stream**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getapsinstoragetopdf"></a>
+# **GetApsInStorageToPdf**
+> System.IO.Stream GetApsInStorageToPdf (string srcPath, string storage = null)
+
+Convert APS file (located on storage) to PDF format and return resulting file in response. 
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **srcPath** | **string**| Full source filename (ex. /folder1/folder2/template.xps) | 
+ **storage** | **string**| The document storage. | [optional] 
 
 ### Return type
 
@@ -4259,6 +4289,32 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **srcPath** | **string**| Full source filename (ex. /folder1/folder2/template.pdf) | 
  **dontOptimize** | **bool?**| If set, document resources will not be optimized. | [optional] 
+ **storage** | **string**| The document storage. | [optional] 
+
+### Return type
+
+**System.IO.Stream**
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getpdfinstoragetoaps"></a>
+# **GetPdfInStorageToAps**
+> System.IO.Stream GetPdfInStorageToAps (string name, string folder = null, string storage = null)
+
+Converts PDF document (located on storage) to APS format and returns resulting file in response content
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **folder** | **string**| The document folder. | [optional] 
  **storage** | **string**| The document storage. | [optional] 
 
 ### Return type
@@ -7743,6 +7799,33 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="putapsinstoragetopdf"></a>
+# **PutApsInStorageToPdf**
+> AsposeResponse PutApsInStorageToPdf (string name, string srcPath, string dstFolder = null, string storage = null)
+
+Convert APS file (located on storage) to PDF format and upload resulting file to storage. 
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **srcPath** | **string**| Full source filename (ex. /folder1/folder2/template.xps) | 
+ **dstFolder** | **string**| The destination document folder. | [optional] 
+ **storage** | **string**| The document storage. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="putbookmark"></a>
 # **PutBookmark**
 > BookmarkResponse PutBookmark (string name, string bookmarkPath, Bookmark bookmark, string folder = null, string storage = null, string password = null)
@@ -9179,6 +9262,32 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="putpdfinrequesttoaps"></a>
+# **PutPdfInRequestToAps**
+> AsposeResponse PutPdfInRequestToAps (string outPath, string storage = null, System.IO.Stream file = null)
+
+Converts PDF document (in request content) to APS format and uploads resulting file to storage.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.aps) | 
+ **storage** | **string**| The document storage. | [optional] 
+ **file** | **System.IO.Stream**| A file to be converted. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="putpdfinrequesttodoc"></a>
 # **PutPdfInRequestToDoc**
 > AsposeResponse PutPdfInRequestToDoc (string outPath, bool? addReturnToLineEnd = null, string format = null, int? imageResolutionX = null, int? imageResolutionY = null, double? maxDistanceBetweenTextLines = null, string mode = null, bool? recognizeBullets = null, double? relativeHorizontalProximity = null, string storage = null, string password = null, System.IO.Stream file = null)
@@ -9584,6 +9693,33 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="putpdfinstoragetoaps"></a>
+# **PutPdfInStorageToAps**
+> AsposeResponse PutPdfInStorageToAps (string name, string outPath, string folder = null, string storage = null)
+
+Converts PDF document (located on storage) to APS format and uploads resulting file to storage
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**| The document name. | 
+ **outPath** | **string**| Full resulting filename (ex. /folder1/folder2/result.aps) | 
+ **folder** | **string**| The document folder. | [optional] 
+ **storage** | **string**| The document storage. | [optional] 
+
+### Return type
+
+[**AsposeResponse**](AsposeResponse.md)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
