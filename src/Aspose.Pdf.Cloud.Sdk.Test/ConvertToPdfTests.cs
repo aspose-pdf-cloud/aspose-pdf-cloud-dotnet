@@ -335,6 +335,35 @@ namespace Aspose.Pdf.Cloud.Sdk.Test
             Assert.That(response.Code, Is.EqualTo(200));
         }
 
+        /// <summary>
+        /// Test GetApsInStorageToPdf
+        /// </summary>
+        [Test]
+        public void GetApsInStorageToPdfTest()
+        {
+            string name = "5pages.aps";
+            UploadFile(name, name);
+
+            using (var response = PdfApi.GetApsInStorageToPdf(Path.Combine(TempFolder, name)))
+            {
+                Assert.That(response.Length, Is.GreaterThan(0));
+            }
+        }
+
+        /// <summary>
+        /// Test PutApsInStorageToPdf
+        /// </summary>
+        [Test]
+        public void PutApsInStorageToPdfTest()
+        {
+            string name = "5pages.aps";
+            UploadFile(name, name);
+            string resultName = "fromXml.pdf";
+
+            var response = PdfApi.PutApsInStorageToPdf(resultName, Path.Combine(TempFolder, name), dstFolder: TempFolder);
+            Assert.That(response.Code, Is.EqualTo(200));
+        }
+
 
         /// <summary>
         /// Test GetPsInStorageToPdf
