@@ -1,7 +1,7 @@
 # Aspose.PDF Cloud SDK for .NET — Agent Analysis
 
 > **Repository:** [aspose-pdf-cloud/aspose-pdf-cloud-dotnet](https://github.com/aspose-pdf-cloud/aspose-pdf-cloud-dotnet)  
-> **Version:** 26.4 | **NuGet:** `Aspose.Pdf.Cloud`  
+> **Version:** 26.7 | **NuGet:** `Aspose.Pdf.Cloud`  
 > **License:** MIT | **.NET Targets:** `net452`, `netstandard2.0`  
 > **API Version:** v3.0
 
